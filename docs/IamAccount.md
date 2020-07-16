@@ -1,0 +1,79 @@
+# IamAccount
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**AccountMoid** | **String** | The Account ID for this managed object. | [optional] [readonly] 
+**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
+**CreateTime** | **System.DateTime** | The time when this managed object was created. | [optional] [readonly] 
+**DomainGroupMoid** | **String** | The DomainGroup ID for this managed object. | [optional] [readonly] 
+**ModTime** | **System.DateTime** | The time when this managed object was last modified. | [optional] [readonly] 
+**Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
+**ObjectType** | **String** | The fully-qualified type of this managed object, i.e. the class name. This property is optional. The ObjectType is implied from the URL path. If specified, the value of objectType must match the class name specified in the URL path. | [readonly] 
+**Owners** | **String[]** |  | [optional] 
+**SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
+**Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
+**VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
+**Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
+**PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | a map of display names for a resource. | [optional] [readonly] 
+**Name** | **String** | Name of the Intersight account. By default, name is same as the MoID of the account. | [optional] 
+**Status** | **String** | Status of the account. To activate the Intersight account, claim a device to the account. | [optional] [readonly] 
+**Var0LicenseReservationOp** | [**LicenseLicenseReservationOpRelationship**](LicenseLicenseReservationOpRelationship.md) |  | [optional] 
+**AppRegistrations** | [**IamAppRegistrationRelationship[]**](IamAppRegistrationRelationship.md) | An array of relationships to iamAppRegistration resources. | [optional] [readonly] 
+**DomainGroups** | [**IamDomainGroupRelationship[]**](IamDomainGroupRelationship.md) | An array of relationships to iamDomainGroup resources. | [optional] [readonly] 
+**EndPointRoles** | [**IamEndPointRoleRelationship[]**](IamEndPointRoleRelationship.md) | An array of relationships to iamEndPointRole resources. | [optional] [readonly] 
+**Idpreferences** | [**IamIdpReferenceRelationship[]**](IamIdpReferenceRelationship.md) | An array of relationships to iamIdpReference resources. | [optional] [readonly] 
+**Idps** | [**IamIdpRelationship[]**](IamIdpRelationship.md) | An array of relationships to iamIdp resources. | [optional] [readonly] 
+**Permissions** | [**IamPermissionRelationship[]**](IamPermissionRelationship.md) | An array of relationships to iamPermission resources. | [optional] [readonly] 
+**PrivilegeSets** | [**IamPrivilegeSetRelationship[]**](IamPrivilegeSetRelationship.md) | An array of relationships to iamPrivilegeSet resources. | [optional] [readonly] 
+**Privileges** | [**IamPrivilegeRelationship[]**](IamPrivilegeRelationship.md) | An array of relationships to iamPrivilege resources. | [optional] [readonly] 
+**ResourceLimits** | [**IamResourceLimitsRelationship**](IamResourceLimitsRelationship.md) |  | [optional] 
+**Roles** | [**IamRoleRelationship[]**](IamRoleRelationship.md) | An array of relationships to iamRole resources. | [optional] [readonly] 
+**SecurityHolder** | [**IamSecurityHolderRelationship**](IamSecurityHolderRelationship.md) |  | [optional] 
+**SessionLimits** | [**IamSessionLimitsRelationship**](IamSessionLimitsRelationship.md) |  | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+Initialize-IntersightIamAccount  -AccountMoid null `
+ -ClassId null `
+ -CreateTime null `
+ -DomainGroupMoid null `
+ -ModTime null `
+ -Moid null `
+ -ObjectType null `
+ -Owners null `
+ -SharedScope null `
+ -Tags null `
+ -VersionContext null `
+ -Ancestors null `
+ -Parent null `
+ -PermissionResources null `
+ -DisplayNames null `
+ -Name null `
+ -Status null `
+ -Var0LicenseReservationOp null `
+ -AppRegistrations null `
+ -DomainGroups null `
+ -EndPointRoles null `
+ -Idpreferences null `
+ -Idps null `
+ -Permissions null `
+ -PrivilegeSets null `
+ -Privileges null `
+ -ResourceLimits null `
+ -Roles null `
+ -SecurityHolder null `
+ -SessionLimits null
+```
+
+- Convert the resource to JSON
+```powershell
+$ | Convert-ToJSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
