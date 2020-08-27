@@ -106,6 +106,7 @@ function Get-IntersightHttpSignedHeader {
     }
     #Concatinate headers value separated by new line
     $headerValuesString = $headerValuesList -join "`n"
+    Write-Warning $headerValuesString
     
     #Gets the hash of the headers value
     $signatureHashString = Get-IntersightStringHash -String $headerValuesString -HashName $httpSigningConfiguration.HashAlgorithm
@@ -144,7 +145,7 @@ function Get-IntersightHttpSignedHeader {
     
     $authorizationHeaderValue += [string]::Format(",headers=""{0}"",signature=""{1}""", 
         $headersKeysString , $headerSignatureStr)
-    
+    Write-Warning $authorizationHeaderValue
     $HttpSignedRequestHeader[$HEADER_AUTHORIZATION] = $authorizationHeaderValue
     return $HttpSignedRequestHeader
 }
@@ -189,7 +190,8 @@ function Get-IntersightRSASignature {
             $keyStr = Get-Content -Path $PrivateKeyFilePath -Raw
             $ecKeyBase64String = $keyStr.Replace($ecKeyHeader, "").Replace($ecKeyFooter, "").Trim()
             $keyBytes = [System.Convert]::FromBase64String($ecKeyBase64String)
-            $rsa = [System.Security.Cryptography.RSACng]::new()
+            # Not supported on Linux/Mac: $rsa = [System.Security.Cryptography.RSACng]::new()
+            $rsa = [System.Security.Cryptography.RSA]::Create()
             [int]$bytCount = 0
             $rsa.ImportRSAPrivateKey($keyBytes, [ref] $bytCount)
 
@@ -266,25 +268,26 @@ function Get-IntersightECDSASignature {
     $ecKeyBase64String = $keyStr.Replace($ecKeyHeader, "").Replace($ecKeyFooter, "").Trim()
     $keyBytes = [System.Convert]::FromBase64String($ecKeyBase64String)
 
-    #$cngKey = [System.Security.Cryptography.CngKey]::Import($keyBytes,[System.Security.Cryptography.CngKeyBlobFormat]::Pkcs8PrivateBlob)
-    #$ecdsa = [System.Security.Cryptography.ECDsaCng]::New($cngKey)
-    $ecdsa = [System.Security.Cryptography.ECDsaCng]::New()
+    # Not supported on Linux/Mac: $ecdsa = [System.Security.Cryptography.ECDsaCng]::New()
+    $ecdsa = [System.Security.Cryptography.ECDsa]::Create()
     [int]$bytCount =0
     if(![string]::IsNullOrEmpty($KeyPassPhrase)){
         $ecdsa.ImportEncryptedPkcs8PrivateKey($KeyPassPhrase,$keyBytes,[ref]$bytCount)
     }
     else{
-    $ecdsa.ImportPkcs8PrivateKey($keyBytes,[ref]$bytCount)
+        $ecdsa.ImportPkcs8PrivateKey($keyBytes,[ref]$bytCount)
     }
     
     if ($HashAlgorithmName -eq "sha512") {
-        $ecdsa.HashAlgorithm = [System.Security.Cryptography.CngAlgorithm]::Sha512
+        # $ecdsa.HashAlgorithm = [System.Security.Cryptography.HashAlgorithm]::Sha512
+        $signedBytes = $ecdsa.SignData($DataToSign, [System.Security.Cryptography.HashAlgorithmName]::New('SHA512'))
     }
     else {
-        $ecdsa.HashAlgorithm = [System.Security.Cryptography.CngAlgorithm]::Sha256
+        $ecdsa.HashAlgorithm = [System.Security.Cryptography.HashAlgorithm]::Sha256
+        $signedBytes = $ecdsa.SignData($DataToSign, [System.Security.Cryptography.HashAlgorithmName]::New('SHA256'))
     }
 
-    $signedBytes = $ecdsa.SignHash($DataToSign)
+    # $signedBytes = $ecdsa.SignHash($DataToSign)
     $signedString = [System.Convert]::ToBase64String($signedBytes)
     return $signedString
 
