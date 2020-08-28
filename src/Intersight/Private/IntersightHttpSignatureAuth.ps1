@@ -106,7 +106,6 @@ function Get-IntersightHttpSignedHeader {
     }
     #Concatinate headers value separated by new line
     $headerValuesString = $headerValuesList -join "`n"
-    Write-Warning $headerValuesString
     
     #Gets the hash of the headers value
     $signatureHashString = Get-IntersightStringHash -String $headerValuesString -HashName $httpSigningConfiguration.HashAlgorithm
@@ -145,7 +144,6 @@ function Get-IntersightHttpSignedHeader {
     
     $authorizationHeaderValue += [string]::Format(",headers=""{0}"",signature=""{1}""", 
         $headersKeysString , $headerSignatureStr)
-    Write-Warning $authorizationHeaderValue
     $HttpSignedRequestHeader[$HEADER_AUTHORIZATION] = $authorizationHeaderValue
     return $HttpSignedRequestHeader
 }
