@@ -144,6 +144,7 @@ function Get-IntersightHttpSignedHeader {
     
     $authorizationHeaderValue += [string]::Format(",headers=""{0}"",signature=""{1}""", 
         $headersKeysString , $headerSignatureStr)
+
     $HttpSignedRequestHeader[$HEADER_AUTHORIZATION] = $authorizationHeaderValue
     return $HttpSignedRequestHeader
 }
@@ -277,10 +278,10 @@ function Get-IntersightECDSASignature {
     }
     
     if ($HashAlgorithmName -eq "sha512") {
-        $ecdsa.HashAlgorithm = [System.Security.Cryptography.HashAlgorithm]::Sha512
+        $ecdsa.HashAlgorithm = [System.Security.Cryptography.CngAlgorithm]::Sha512
     }
     else {
-        $ecdsa.HashAlgorithm = [System.Security.Cryptography.HashAlgorithm]::Sha256
+        $ecdsa.HashAlgorithm = [System.Security.Cryptography.CngAlgorithm]::Sha256
     }
 
     $signedBytes = $ecdsa.SignHash($DataToSign)
