@@ -1,6 +1,6 @@
 name: PowerShell
 
-# events but only for the master branch
+# events only for the master branch
 on:
   push:
     branches: [master]
@@ -15,7 +15,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out the repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out the repository under $GITHUB_WORKSPACE, so the job can access it
       - name: "Checkout the code to build it."
         uses: actions/checkout@v2
 
