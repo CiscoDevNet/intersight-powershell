@@ -1,0 +1,31 @@
+name: PowerShell
+
+# events but only for the master branch
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  
+  build:
+    # the job will run on ubuntu-latest
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out the repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: "Checkout the code to build it."
+        uses: actions/checkout@v2
+
+      # Runs build.ps1 to build the Intersight module
+      - name: Build the Intersight module
+        run: .\Build.ps1
+        shell: pwsh
+
+      - name: Archive Providers
+        uses: actions/upload-artifact@v1
+        with:
+         name: intersight_powerShell
+         path: src
