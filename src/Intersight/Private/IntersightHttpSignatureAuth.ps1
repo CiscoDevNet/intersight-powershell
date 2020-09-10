@@ -258,7 +258,7 @@ function Get-IntersightECDSASignature {
     }
 
     if($PSVersionTable.PSVersion.Major -lt 7){
-        throw "ECDSA key is not supported on $($PSVersionTable.PSVersion), Use PSVersion 7.0 and above"
+        throw "ECDSA key is not supported on PowerShell version $($PSVersionTable.PSVersion), Use PowerShell v7.0 and above"
     }
 
     $ecKeyHeader = "-----BEGIN EC PRIVATE KEY-----"
@@ -267,8 +267,7 @@ function Get-IntersightECDSASignature {
     $ecKeyBase64String = $keyStr.Replace($ecKeyHeader, "").Replace($ecKeyFooter, "").Trim()
     $keyBytes = [System.Convert]::FromBase64String($ecKeyBase64String)
 
-    # Not supported on Linux/Mac:
-    $ecdsa = [System.Security.Cryptography.ECDsaCng]::New()
+    $ecdsa = [System.Security.Cryptography.ECDsa]::Create()
     [int]$bytCount =0
     if(![string]::IsNullOrEmpty($KeyPassPhrase)){
         $ecdsa.ImportEncryptedPkcs8PrivateKey($KeyPassPhrase,$keyBytes,[ref]$bytCount)
@@ -277,15 +276,9 @@ function Get-IntersightECDSASignature {
         $ecdsa.ImportPkcs8PrivateKey($keyBytes,[ref]$bytCount)
     }
     
-    if ($HashAlgorithmName -eq "sha512") {
-        $ecdsa.HashAlgorithm = [System.Security.Cryptography.CngAlgorithm]::Sha512
-    }
-    else {
-        $ecdsa.HashAlgorithm = [System.Security.Cryptography.CngAlgorithm]::Sha256
-    }
-
     $signedBytes = $ecdsa.SignHash($DataToSign)
-    $signedString = [System.Convert]::ToBase64String($signedBytes)
+	$derBytes =  ConvertTo-ECDSAANS1Format -RawBytes $signedBytes
+    $signedString = [System.Convert]::ToBase64String($derBytes)
     return $signedString
 
 }
@@ -413,4 +406,54 @@ function Get-IntersightKeyTypeFromFile {
         throw "Either the key is invalid or key is not supported"
     }
     return $keyType   
+}
+
+
+<#
+.Synopsis
+    Converts sequence of R and S bytes to ANS1 format for ECDSASIgnature.
+.Description
+    Converts sequence of R and S bytes to ANS1 format for ECDSASIgnature.
+.Parameter RawBytes[]
+    Specifies the R and S bytes of ECDSA signature.
+.Outputs
+    Byte[]
+#>
+function ConvertTo-ECDSAANS1Format{
+    Param(
+        [Parameter(Mandatory = $true)]
+        [byte[]]$RawBytes
+    )
+
+    $derLength = 68 #default lenght for ECDSA code signinged bit 0x44
+    $rbytesLength = 32 #R length 0x20 
+    $sbytesLength = 32 #S length 0x20
+    [byte[]]$rBytes = $signedBytes[0..31]
+    [byte[]]$sBytes = $signedBytes[32..63]
+
+    if($rBytes[0] -gt 0x7F){
+        $derLength++
+        $rbytesLength++
+        $rBytes = [byte[]]@(0x00) + $rBytes
+    }
+
+    if($sBytes[0] -gt 0x7F){
+        $derLength++
+        $sbytesLength++
+        $sBytes = [byte[]]@(0x00) + $sBytes
+    }
+
+    [byte[]]$derBytes = @()
+
+    $derBytes += 48  # start of the sequence x30
+    $derBytes += $derLength  # total length r lenth, type and r bytes
+    
+    $derBytes += 2 # tag for integer
+    $derBytes += $rbytesLength # length of r
+    $derBytes += $rBytes
+    
+    $derBytes += 2 #tag for integer
+    $derBytes += $sbytesLength #length of s
+    $derBytes += $sBytes
+    return $derBytes
 }
