@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.FlexFlashPhysicalDrive"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.FlexFlashPhysicalDrive"]
 **CardStatus** | **String** | The status of the flex flash physical drive. | [optional] 
 **CardType** | **String** | The card type of the flex flash physical drive. | [optional] 
 **OemId** | **String** | The OEM Identifier of the flex flash physical drive. | [optional] 
@@ -15,7 +17,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageFlexFlashPhysicalDriveAllOf  -CardStatus null `
+$StorageFlexFlashPhysicalDriveAllOf = Initialize-IntersightStorageFlexFlashPhysicalDriveAllOf  -ClassId null `
+ -ObjectType null `
+ -CardStatus null `
  -CardType null `
  -OemId null `
  -PdStatus null `
@@ -26,7 +30,7 @@ Initialize-IntersightStorageFlexFlashPhysicalDriveAllOf  -CardStatus null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageFlexFlashPhysicalDriveAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

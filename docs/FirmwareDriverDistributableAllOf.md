@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "firmware.DriverDistributable"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "firmware.DriverDistributable"]
 **Category** | **String** | The device type on which the driver is installable. | [optional] 
 **Directory** | **String** | Indicates in which directory path this driver will be added. | [optional] 
 **Osname** | **String** | The operating system name to which this driver is compatible. | [optional] 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFirmwareDriverDistributableAllOf  -Category null `
+$FirmwareDriverDistributableAllOf = Initialize-IntersightFirmwareDriverDistributableAllOf  -ClassId null `
+ -ObjectType null `
+ -Category null `
  -Directory null `
  -Osname null `
  -Osversion null `
@@ -22,7 +26,7 @@ Initialize-IntersightFirmwareDriverDistributableAllOf  -Category null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FirmwareDriverDistributableAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

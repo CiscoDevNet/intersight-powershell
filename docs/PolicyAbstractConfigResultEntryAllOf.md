@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
 **CompletedTime** | **String** | The completed time of the task in installer. | [optional] 
 **Context** | [**PolicyConfigResultContext**](PolicyConfigResultContext.md) |  | [optional] 
 **Message** | **String** | Localized message based on the locale setting of the user&#39;s context. | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightPolicyAbstractConfigResultEntryAllOf  -CompletedTime null `
+$PolicyAbstractConfigResultEntryAllOf = Initialize-IntersightPolicyAbstractConfigResultEntryAllOf  -ClassId null `
+ -ObjectType null `
+ -CompletedTime null `
  -Context null `
  -Message null `
  -OwnerId null `
@@ -24,7 +28,7 @@ Initialize-IntersightPolicyAbstractConfigResultEntryAllOf  -CompletedTime null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PolicyAbstractConfigResultEntryAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

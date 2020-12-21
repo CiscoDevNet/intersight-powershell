@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "workflow.PrimitiveDataProperty"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "workflow.PrimitiveDataProperty"]
 **Constraints** | [**WorkflowConstraints**](WorkflowConstraints.md) |  | [optional] 
 **InventorySelector** | [**WorkflowMoReferenceProperty[]**](WorkflowMoReferenceProperty.md) |  | [optional] 
 **Secure** | **Boolean** | Intersight supports secure properties as task input/output. The values of these properties are encrypted and stored in Intersight. This flag marks the property to be secure when it is set to true. | [optional] 
-**Type** | **String** | Specify the enum type for primitive data type. | [optional] [default to "string"]
+**Type** | **String** | Specify the enum type for primitive data type. * &#x60;string&#x60; - Enum to specify a string data type. * &#x60;integer&#x60; - Enum to specify an integer32 data type. * &#x60;float&#x60; - Enum to specify a float64 data type. * &#x60;boolean&#x60; - Enum to specify a boolean data type. * &#x60;json&#x60; - Enum to specify a json data type. * &#x60;enum&#x60; - Enum to specify a enum data type which is a list of pre-defined strings. | [optional] [default to "string"]
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightWorkflowPrimitiveDataProperty  -ClassId null `
+$WorkflowPrimitiveDataProperty = Initialize-IntersightWorkflowPrimitiveDataProperty  -ClassId null `
  -ObjectType null `
  -Constraints null `
  -InventorySelector null `
@@ -24,7 +24,7 @@ Initialize-IntersightWorkflowPrimitiveDataProperty  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkflowPrimitiveDataProperty | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

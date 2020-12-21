@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**New-IntersightCapabilityAdapterUnitDescriptor**](IntersightCapabilityApi.md#New-IntersightCapabilityAdapterUnitDescriptor) | **POST** /api/v1/capability/AdapterUnitDescriptors | Create a &#39;capability.AdapterUnitDescriptor&#39; resource.
 [**New-IntersightCapabilityChassisDescriptor**](IntersightCapabilityApi.md#New-IntersightCapabilityChassisDescriptor) | **POST** /api/v1/capability/ChassisDescriptors | Create a &#39;capability.ChassisDescriptor&#39; resource.
 [**New-IntersightCapabilityChassisManufacturingDef**](IntersightCapabilityApi.md#New-IntersightCapabilityChassisManufacturingDef) | **POST** /api/v1/capability/ChassisManufacturingDefs | Create a &#39;capability.ChassisManufacturingDef&#39; resource.
+[**New-IntersightCapabilityCimcFirmwareDescriptor**](IntersightCapabilityApi.md#New-IntersightCapabilityCimcFirmwareDescriptor) | **POST** /api/v1/capability/CimcFirmwareDescriptors | Create a &#39;capability.CimcFirmwareDescriptor&#39; resource.
 [**New-IntersightCapabilityEquipmentPhysicalDef**](IntersightCapabilityApi.md#New-IntersightCapabilityEquipmentPhysicalDef) | **POST** /api/v1/capability/EquipmentPhysicalDefs | Create a &#39;capability.EquipmentPhysicalDef&#39; resource.
 [**New-IntersightCapabilityEquipmentSlotArray**](IntersightCapabilityApi.md#New-IntersightCapabilityEquipmentSlotArray) | **POST** /api/v1/capability/EquipmentSlotArrays | Create a &#39;capability.EquipmentSlotArray&#39; resource.
 [**New-IntersightCapabilityFanModuleDescriptor**](IntersightCapabilityApi.md#New-IntersightCapabilityFanModuleDescriptor) | **POST** /api/v1/capability/FanModuleDescriptors | Create a &#39;capability.FanModuleDescriptor&#39; resource.
@@ -17,7 +18,6 @@ Method | HTTP request | Description
 [**New-IntersightCapabilityPortGroupAggregationDef**](IntersightCapabilityApi.md#New-IntersightCapabilityPortGroupAggregationDef) | **POST** /api/v1/capability/PortGroupAggregationDefs | Create a &#39;capability.PortGroupAggregationDef&#39; resource.
 [**New-IntersightCapabilityPsuDescriptor**](IntersightCapabilityApi.md#New-IntersightCapabilityPsuDescriptor) | **POST** /api/v1/capability/PsuDescriptors | Create a &#39;capability.PsuDescriptor&#39; resource.
 [**New-IntersightCapabilityPsuManufacturingDef**](IntersightCapabilityApi.md#New-IntersightCapabilityPsuManufacturingDef) | **POST** /api/v1/capability/PsuManufacturingDefs | Create a &#39;capability.PsuManufacturingDef&#39; resource.
-[**New-IntersightCapabilitySection**](IntersightCapabilityApi.md#New-IntersightCapabilitySection) | **POST** /api/v1/capability/Sections | Create a &#39;capability.Section&#39; resource.
 [**New-IntersightCapabilitySiocModuleCapabilityDef**](IntersightCapabilityApi.md#New-IntersightCapabilitySiocModuleCapabilityDef) | **POST** /api/v1/capability/SiocModuleCapabilityDefs | Create a &#39;capability.SiocModuleCapabilityDef&#39; resource.
 [**New-IntersightCapabilitySiocModuleDescriptor**](IntersightCapabilityApi.md#New-IntersightCapabilitySiocModuleDescriptor) | **POST** /api/v1/capability/SiocModuleDescriptors | Create a &#39;capability.SiocModuleDescriptor&#39; resource.
 [**New-IntersightCapabilitySiocModuleManufacturingDef**](IntersightCapabilityApi.md#New-IntersightCapabilitySiocModuleManufacturingDef) | **POST** /api/v1/capability/SiocModuleManufacturingDefs | Create a &#39;capability.SiocModuleManufacturingDef&#39; resource.
@@ -27,6 +27,7 @@ Method | HTTP request | Description
 [**Remove-IntersightCapabilityAdapterUnitDescriptor**](IntersightCapabilityApi.md#Remove-IntersightCapabilityAdapterUnitDescriptor) | **DELETE** /api/v1/capability/AdapterUnitDescriptors/{Moid} | Delete a &#39;capability.AdapterUnitDescriptor&#39; resource.
 [**Remove-IntersightCapabilityChassisDescriptor**](IntersightCapabilityApi.md#Remove-IntersightCapabilityChassisDescriptor) | **DELETE** /api/v1/capability/ChassisDescriptors/{Moid} | Delete a &#39;capability.ChassisDescriptor&#39; resource.
 [**Remove-IntersightCapabilityChassisManufacturingDef**](IntersightCapabilityApi.md#Remove-IntersightCapabilityChassisManufacturingDef) | **DELETE** /api/v1/capability/ChassisManufacturingDefs/{Moid} | Delete a &#39;capability.ChassisManufacturingDef&#39; resource.
+[**Remove-IntersightCapabilityCimcFirmwareDescriptor**](IntersightCapabilityApi.md#Remove-IntersightCapabilityCimcFirmwareDescriptor) | **DELETE** /api/v1/capability/CimcFirmwareDescriptors/{Moid} | Delete a &#39;capability.CimcFirmwareDescriptor&#39; resource.
 [**Remove-IntersightCapabilityEquipmentPhysicalDef**](IntersightCapabilityApi.md#Remove-IntersightCapabilityEquipmentPhysicalDef) | **DELETE** /api/v1/capability/EquipmentPhysicalDefs/{Moid} | Delete a &#39;capability.EquipmentPhysicalDef&#39; resource.
 [**Remove-IntersightCapabilityEquipmentSlotArray**](IntersightCapabilityApi.md#Remove-IntersightCapabilityEquipmentSlotArray) | **DELETE** /api/v1/capability/EquipmentSlotArrays/{Moid} | Delete a &#39;capability.EquipmentSlotArray&#39; resource.
 [**Remove-IntersightCapabilityFanModuleDescriptor**](IntersightCapabilityApi.md#Remove-IntersightCapabilityFanModuleDescriptor) | **DELETE** /api/v1/capability/FanModuleDescriptors/{Moid} | Delete a &#39;capability.FanModuleDescriptor&#39; resource.
@@ -51,6 +52,8 @@ Method | HTTP request | Description
 [**Get-IntersightCapabilityChassisDescriptorList**](IntersightCapabilityApi.md#Get-IntersightCapabilityChassisDescriptorList) | **GET** /api/v1/capability/ChassisDescriptors | Read a &#39;capability.ChassisDescriptor&#39; resource.
 [**Get-IntersightCapabilityChassisManufacturingDefByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilityChassisManufacturingDefByMoid) | **GET** /api/v1/capability/ChassisManufacturingDefs/{Moid} | Read a &#39;capability.ChassisManufacturingDef&#39; resource.
 [**Get-IntersightCapabilityChassisManufacturingDefList**](IntersightCapabilityApi.md#Get-IntersightCapabilityChassisManufacturingDefList) | **GET** /api/v1/capability/ChassisManufacturingDefs | Read a &#39;capability.ChassisManufacturingDef&#39; resource.
+[**Get-IntersightCapabilityCimcFirmwareDescriptorByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilityCimcFirmwareDescriptorByMoid) | **GET** /api/v1/capability/CimcFirmwareDescriptors/{Moid} | Read a &#39;capability.CimcFirmwareDescriptor&#39; resource.
+[**Get-IntersightCapabilityCimcFirmwareDescriptorList**](IntersightCapabilityApi.md#Get-IntersightCapabilityCimcFirmwareDescriptorList) | **GET** /api/v1/capability/CimcFirmwareDescriptors | Read a &#39;capability.CimcFirmwareDescriptor&#39; resource.
 [**Get-IntersightCapabilityEquipmentPhysicalDefByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilityEquipmentPhysicalDefByMoid) | **GET** /api/v1/capability/EquipmentPhysicalDefs/{Moid} | Read a &#39;capability.EquipmentPhysicalDef&#39; resource.
 [**Get-IntersightCapabilityEquipmentPhysicalDefList**](IntersightCapabilityApi.md#Get-IntersightCapabilityEquipmentPhysicalDefList) | **GET** /api/v1/capability/EquipmentPhysicalDefs | Read a &#39;capability.EquipmentPhysicalDef&#39; resource.
 [**Get-IntersightCapabilityEquipmentSlotArrayByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilityEquipmentSlotArrayByMoid) | **GET** /api/v1/capability/EquipmentSlotArrays/{Moid} | Read a &#39;capability.EquipmentSlotArray&#39; resource.
@@ -71,8 +74,6 @@ Method | HTTP request | Description
 [**Get-IntersightCapabilityPsuDescriptorList**](IntersightCapabilityApi.md#Get-IntersightCapabilityPsuDescriptorList) | **GET** /api/v1/capability/PsuDescriptors | Read a &#39;capability.PsuDescriptor&#39; resource.
 [**Get-IntersightCapabilityPsuManufacturingDefByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilityPsuManufacturingDefByMoid) | **GET** /api/v1/capability/PsuManufacturingDefs/{Moid} | Read a &#39;capability.PsuManufacturingDef&#39; resource.
 [**Get-IntersightCapabilityPsuManufacturingDefList**](IntersightCapabilityApi.md#Get-IntersightCapabilityPsuManufacturingDefList) | **GET** /api/v1/capability/PsuManufacturingDefs | Read a &#39;capability.PsuManufacturingDef&#39; resource.
-[**Get-IntersightCapabilitySectionByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilitySectionByMoid) | **GET** /api/v1/capability/Sections/{Moid} | Read a &#39;capability.Section&#39; resource.
-[**Get-IntersightCapabilitySectionList**](IntersightCapabilityApi.md#Get-IntersightCapabilitySectionList) | **GET** /api/v1/capability/Sections | Read a &#39;capability.Section&#39; resource.
 [**Get-IntersightCapabilitySiocModuleCapabilityDefByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilitySiocModuleCapabilityDefByMoid) | **GET** /api/v1/capability/SiocModuleCapabilityDefs/{Moid} | Read a &#39;capability.SiocModuleCapabilityDef&#39; resource.
 [**Get-IntersightCapabilitySiocModuleCapabilityDefList**](IntersightCapabilityApi.md#Get-IntersightCapabilitySiocModuleCapabilityDefList) | **GET** /api/v1/capability/SiocModuleCapabilityDefs | Read a &#39;capability.SiocModuleCapabilityDef&#39; resource.
 [**Get-IntersightCapabilitySiocModuleDescriptorByMoid**](IntersightCapabilityApi.md#Get-IntersightCapabilitySiocModuleDescriptorByMoid) | **GET** /api/v1/capability/SiocModuleDescriptors/{Moid} | Read a &#39;capability.SiocModuleDescriptor&#39; resource.
@@ -89,6 +90,7 @@ Method | HTTP request | Description
 [**Set-IntersightCapabilityCatalog**](IntersightCapabilityApi.md#Set-IntersightCapabilityCatalog) | **PATCH** /api/v1/capability/Catalogs/{Moid} | Update a &#39;capability.Catalog&#39; resource.
 [**Set-IntersightCapabilityChassisDescriptor**](IntersightCapabilityApi.md#Set-IntersightCapabilityChassisDescriptor) | **PATCH** /api/v1/capability/ChassisDescriptors/{Moid} | Update a &#39;capability.ChassisDescriptor&#39; resource.
 [**Set-IntersightCapabilityChassisManufacturingDef**](IntersightCapabilityApi.md#Set-IntersightCapabilityChassisManufacturingDef) | **PATCH** /api/v1/capability/ChassisManufacturingDefs/{Moid} | Update a &#39;capability.ChassisManufacturingDef&#39; resource.
+[**Set-IntersightCapabilityCimcFirmwareDescriptor**](IntersightCapabilityApi.md#Set-IntersightCapabilityCimcFirmwareDescriptor) | **PATCH** /api/v1/capability/CimcFirmwareDescriptors/{Moid} | Update a &#39;capability.CimcFirmwareDescriptor&#39; resource.
 [**Set-IntersightCapabilityEquipmentPhysicalDef**](IntersightCapabilityApi.md#Set-IntersightCapabilityEquipmentPhysicalDef) | **PATCH** /api/v1/capability/EquipmentPhysicalDefs/{Moid} | Update a &#39;capability.EquipmentPhysicalDef&#39; resource.
 [**Set-IntersightCapabilityEquipmentSlotArray**](IntersightCapabilityApi.md#Set-IntersightCapabilityEquipmentSlotArray) | **PATCH** /api/v1/capability/EquipmentSlotArrays/{Moid} | Update a &#39;capability.EquipmentSlotArray&#39; resource.
 [**Set-IntersightCapabilityFanModuleDescriptor**](IntersightCapabilityApi.md#Set-IntersightCapabilityFanModuleDescriptor) | **PATCH** /api/v1/capability/FanModuleDescriptors/{Moid} | Update a &#39;capability.FanModuleDescriptor&#39; resource.
@@ -99,7 +101,6 @@ Method | HTTP request | Description
 [**Set-IntersightCapabilityPortGroupAggregationDef**](IntersightCapabilityApi.md#Set-IntersightCapabilityPortGroupAggregationDef) | **PATCH** /api/v1/capability/PortGroupAggregationDefs/{Moid} | Update a &#39;capability.PortGroupAggregationDef&#39; resource.
 [**Set-IntersightCapabilityPsuDescriptor**](IntersightCapabilityApi.md#Set-IntersightCapabilityPsuDescriptor) | **PATCH** /api/v1/capability/PsuDescriptors/{Moid} | Update a &#39;capability.PsuDescriptor&#39; resource.
 [**Set-IntersightCapabilityPsuManufacturingDef**](IntersightCapabilityApi.md#Set-IntersightCapabilityPsuManufacturingDef) | **PATCH** /api/v1/capability/PsuManufacturingDefs/{Moid} | Update a &#39;capability.PsuManufacturingDef&#39; resource.
-[**Set-IntersightCapabilitySection**](IntersightCapabilityApi.md#Set-IntersightCapabilitySection) | **PATCH** /api/v1/capability/Sections/{Moid} | Update a &#39;capability.Section&#39; resource.
 [**Set-IntersightCapabilitySiocModuleCapabilityDef**](IntersightCapabilityApi.md#Set-IntersightCapabilitySiocModuleCapabilityDef) | **PATCH** /api/v1/capability/SiocModuleCapabilityDefs/{Moid} | Update a &#39;capability.SiocModuleCapabilityDef&#39; resource.
 [**Set-IntersightCapabilitySiocModuleDescriptor**](IntersightCapabilityApi.md#Set-IntersightCapabilitySiocModuleDescriptor) | **PATCH** /api/v1/capability/SiocModuleDescriptors/{Moid} | Update a &#39;capability.SiocModuleDescriptor&#39; resource.
 [**Set-IntersightCapabilitySiocModuleManufacturingDef**](IntersightCapabilityApi.md#Set-IntersightCapabilitySiocModuleManufacturingDef) | **PATCH** /api/v1/capability/SiocModuleManufacturingDefs/{Moid} | Update a &#39;capability.SiocModuleManufacturingDef&#39; resource.
@@ -110,6 +111,7 @@ Method | HTTP request | Description
 [**Update-IntersightCapabilityCatalog**](IntersightCapabilityApi.md#Update-IntersightCapabilityCatalog) | **POST** /api/v1/capability/Catalogs/{Moid} | Update a &#39;capability.Catalog&#39; resource.
 [**Update-IntersightCapabilityChassisDescriptor**](IntersightCapabilityApi.md#Update-IntersightCapabilityChassisDescriptor) | **POST** /api/v1/capability/ChassisDescriptors/{Moid} | Update a &#39;capability.ChassisDescriptor&#39; resource.
 [**Update-IntersightCapabilityChassisManufacturingDef**](IntersightCapabilityApi.md#Update-IntersightCapabilityChassisManufacturingDef) | **POST** /api/v1/capability/ChassisManufacturingDefs/{Moid} | Update a &#39;capability.ChassisManufacturingDef&#39; resource.
+[**Update-IntersightCapabilityCimcFirmwareDescriptor**](IntersightCapabilityApi.md#Update-IntersightCapabilityCimcFirmwareDescriptor) | **POST** /api/v1/capability/CimcFirmwareDescriptors/{Moid} | Update a &#39;capability.CimcFirmwareDescriptor&#39; resource.
 [**Update-IntersightCapabilityEquipmentPhysicalDef**](IntersightCapabilityApi.md#Update-IntersightCapabilityEquipmentPhysicalDef) | **POST** /api/v1/capability/EquipmentPhysicalDefs/{Moid} | Update a &#39;capability.EquipmentPhysicalDef&#39; resource.
 [**Update-IntersightCapabilityEquipmentSlotArray**](IntersightCapabilityApi.md#Update-IntersightCapabilityEquipmentSlotArray) | **POST** /api/v1/capability/EquipmentSlotArrays/{Moid} | Update a &#39;capability.EquipmentSlotArray&#39; resource.
 [**Update-IntersightCapabilityFanModuleDescriptor**](IntersightCapabilityApi.md#Update-IntersightCapabilityFanModuleDescriptor) | **POST** /api/v1/capability/FanModuleDescriptors/{Moid} | Update a &#39;capability.FanModuleDescriptor&#39; resource.
@@ -120,7 +122,6 @@ Method | HTTP request | Description
 [**Update-IntersightCapabilityPortGroupAggregationDef**](IntersightCapabilityApi.md#Update-IntersightCapabilityPortGroupAggregationDef) | **POST** /api/v1/capability/PortGroupAggregationDefs/{Moid} | Update a &#39;capability.PortGroupAggregationDef&#39; resource.
 [**Update-IntersightCapabilityPsuDescriptor**](IntersightCapabilityApi.md#Update-IntersightCapabilityPsuDescriptor) | **POST** /api/v1/capability/PsuDescriptors/{Moid} | Update a &#39;capability.PsuDescriptor&#39; resource.
 [**Update-IntersightCapabilityPsuManufacturingDef**](IntersightCapabilityApi.md#Update-IntersightCapabilityPsuManufacturingDef) | **POST** /api/v1/capability/PsuManufacturingDefs/{Moid} | Update a &#39;capability.PsuManufacturingDef&#39; resource.
-[**Update-IntersightCapabilitySection**](IntersightCapabilityApi.md#Update-IntersightCapabilitySection) | **POST** /api/v1/capability/Sections/{Moid} | Update a &#39;capability.Section&#39; resource.
 [**Update-IntersightCapabilitySiocModuleCapabilityDef**](IntersightCapabilityApi.md#Update-IntersightCapabilitySiocModuleCapabilityDef) | **POST** /api/v1/capability/SiocModuleCapabilityDefs/{Moid} | Update a &#39;capability.SiocModuleCapabilityDef&#39; resource.
 [**Update-IntersightCapabilitySiocModuleDescriptor**](IntersightCapabilityApi.md#Update-IntersightCapabilitySiocModuleDescriptor) | **POST** /api/v1/capability/SiocModuleDescriptors/{Moid} | Update a &#39;capability.SiocModuleDescriptor&#39; resource.
 [**Update-IntersightCapabilitySiocModuleManufacturingDef**](IntersightCapabilityApi.md#Update-IntersightCapabilitySiocModuleManufacturingDef) | **POST** /api/v1/capability/SiocModuleManufacturingDefs/{Moid} | Update a &#39;capability.SiocModuleManufacturingDef&#39; resource.
@@ -147,19 +148,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityAdapterUnitDescriptor = (Initialize-capability.AdapterUnitDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @((Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example")) -RefMo (Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example") -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @() -RefMo  -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @((Initialize-capability.Capability.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section (Initialize-capability.Section.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Action "Action_example" -CatalogName "CatalogName_example" -Name "Name_example" -Source "Source_example" -Version "Version_example" -Catalog (Initialize-capability.Catalog.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Organization (Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -Var0LicenseReservationOp (Initialize-license.LicenseReservationOp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AuthCode "AuthCode_example" -AuthCodeInstalled $false -ConfirmCode "ConfirmCode_example" -GenerateRequestCode $false -GenerateReturnCode $false -RequestCode "RequestCode_example" -ReturnCode "ReturnCode_example" -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -Var0LicenseReservationOp (Initialize-license.LicenseReservationOp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AuthCode "AuthCode_example" -AuthCodeInstalled $false -ConfirmCode "ConfirmCode_example" -GenerateRequestCode $false -GenerateReturnCode $false -RequestCode "RequestCode_example" -ReturnCode "ReturnCode_example" -Account ) -AppRegistrations @((Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account  -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration (Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account  -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration  -Permission (Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @() -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @() -System )) -Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp  -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization (Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @()))) -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate )) -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @() -Usergroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @((Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @() -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -Resource  -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @() -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -System )))) -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @() -System )) -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @() -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @((Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User (Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User )) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @() -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User ))))) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @() -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User )))))) -Users @())) -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @())) -Users @()))) -Usergroups @() -Users @()))) -Usergroups @() -Users @()) -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization  -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate  -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @() -Usergroups @() -Users @()) -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -EndPointRoles @() -Idp  -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -System )) -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -Resource  -Roles @())) -Roles @() -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @() -Users @()) -User )) -Permission  -Roles @() -User ) -Permission  -User )) -Permission  -Roles @() -User )) -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission (Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example") -Roles @((Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example")))) -TargetApp "TargetApp_example" -Holder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission  -Roles @())) -TargetApp "TargetApp_example" -Holder  -Resource ))) -Resource ))) -SessionLimits )) -AppRegistrations @() -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder  -SessionLimits ) -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @()))) -Sections @((Initialize-capability.Section.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Action "Action_example" -CatalogName "CatalogName_example" -Name "Name_example" -Source "Source_example" -Version "Version_example" -Catalog (Initialize-capability.Catalog.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Organization  -Sections @()))))))) -Section  -ConnectivityOrder "ConnectivityOrder_example" -EthernetPortSpeed 123 -FibreChannelPortSpeed 123 -NumDcePorts 123 -PromCardType "PromCardType_example") # CapabilityAdapterUnitDescriptor | The 'capability.AdapterUnitDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityAdapterUnitDescriptor = (Initialize-capability.AdapterUnitDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @((Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example")) -RefMo (Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example") -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @() -RefMo  -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @((Initialize-capability.Capability.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example")) -ConnectivityOrder "ConnectivityOrder_example" -EthernetPortSpeed 123 -FibreChannelPortSpeed 123 -NumDcePorts 123 -PromCardType "PromCardType_example") # CapabilityAdapterUnitDescriptor | The 'capability.AdapterUnitDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.AdapterUnitDescriptor' resource.
 try {
-    CapabilityAdapterUnitDescriptor $Result = New-IntersightCapabilityAdapterUnitDescriptor -CapabilityAdapterUnitDescriptor $CapabilityAdapterUnitDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityAdapterUnitDescriptor -CapabilityAdapterUnitDescriptor $CapabilityAdapterUnitDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityAdapterUnitDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -175,12 +191,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityAdapterUnitDescriptor**](CapabilityAdapterUnitDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -207,19 +223,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityChassisDescriptor = (Initialize-capability.ChassisDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @((Initialize-capability.Capability.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section )) -Section  -Revision "Revision_example") # CapabilityChassisDescriptor | The 'capability.ChassisDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityChassisDescriptor = (Initialize-capability.ChassisDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @((Initialize-capability.Capability.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example")) -Revision "Revision_example") # CapabilityChassisDescriptor | The 'capability.ChassisDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.ChassisDescriptor' resource.
 try {
-    CapabilityChassisDescriptor $Result = New-IntersightCapabilityChassisDescriptor -CapabilityChassisDescriptor $CapabilityChassisDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityChassisDescriptor -CapabilityChassisDescriptor $CapabilityChassisDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityChassisDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -235,12 +266,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisDescriptor**](CapabilityChassisDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -267,19 +298,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityChassisManufacturingDef = (Initialize-capability.ChassisManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -ChassisCodeName "ChassisCodeName_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityChassisManufacturingDef | The 'capability.ChassisManufacturingDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityChassisManufacturingDef = (Initialize-capability.ChassisManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -ChassisCodeName "ChassisCodeName_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityChassisManufacturingDef | The 'capability.ChassisManufacturingDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.ChassisManufacturingDef' resource.
 try {
-    CapabilityChassisManufacturingDef $Result = New-IntersightCapabilityChassisManufacturingDef -CapabilityChassisManufacturingDef $CapabilityChassisManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityChassisManufacturingDef -CapabilityChassisManufacturingDef $CapabilityChassisManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityChassisManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -295,12 +341,87 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisManufacturingDef**](CapabilityChassisManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="New-IntersightCapabilityCimcFirmwareDescriptor"></a>
+# **New-IntersightCapabilityCimcFirmwareDescriptor**
+> CapabilityCimcFirmwareDescriptor New-IntersightCapabilityCimcFirmwareDescriptor<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CapabilityCimcFirmwareDescriptor] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfNoneMatch] <String><br>
+
+Create a 'capability.CimcFirmwareDescriptor' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityCimcFirmwareDescriptor = (Initialize-capability.CimcFirmwareDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityCimcFirmwareDescriptor | The 'capability.CimcFirmwareDescriptor' resource to create.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+$IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
+
+# Create a 'capability.CimcFirmwareDescriptor' resource.
+try {
+     $Result = New-IntersightCapabilityCimcFirmwareDescriptor -CapabilityCimcFirmwareDescriptor $CapabilityCimcFirmwareDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+} catch {
+    Write-Host ("Exception occured when calling New-IntersightCapabilityCimcFirmwareDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **CapabilityCimcFirmwareDescriptor** | [**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)| The &#39;capability.CimcFirmwareDescriptor&#39; resource to create. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+ **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -327,19 +448,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityEquipmentPhysicalDef = (Initialize-capability.EquipmentPhysicalDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Depth 123 -Height 123 -MaxPower 123 -MinPower 123 -NominalPower 123 -Weight 123 -Width 123) # CapabilityEquipmentPhysicalDef | The 'capability.EquipmentPhysicalDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityEquipmentPhysicalDef = (Initialize-capability.EquipmentPhysicalDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Depth 123 -Height 123 -MaxPower 123 -MinPower 123 -NominalPower 123 -Weight 123 -Width 123) # CapabilityEquipmentPhysicalDef | The 'capability.EquipmentPhysicalDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.EquipmentPhysicalDef' resource.
 try {
-    CapabilityEquipmentPhysicalDef $Result = New-IntersightCapabilityEquipmentPhysicalDef -CapabilityEquipmentPhysicalDef $CapabilityEquipmentPhysicalDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityEquipmentPhysicalDef -CapabilityEquipmentPhysicalDef $CapabilityEquipmentPhysicalDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityEquipmentPhysicalDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -355,12 +491,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentPhysicalDef**](CapabilityEquipmentPhysicalDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -387,19 +523,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityEquipmentSlotArray = (Initialize-capability.EquipmentSlotArray-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -FirstIndex 123 -Height 123 -HorizontalStartOffset 123 -InlineGroupSeparation 123 -InlineGroupSize 123 -InlineOffset 123 -Location "Location_example" -NumberOfSlots 123 -Orientation "Orientation_example" -Selector "Selector_example" -SlotsPerLine 123 -TransverseGroupSeparation 123 -TransverseGroupSize 123 -TransverseOffset 123 -VerticalStartOffset 123 -Width 123) # CapabilityEquipmentSlotArray | The 'capability.EquipmentSlotArray' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityEquipmentSlotArray = (Initialize-capability.EquipmentSlotArray-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -FirstIndex 123 -Height 123 -HorizontalStartOffset 123 -InlineGroupSeparation 123 -InlineGroupSize 123 -InlineOffset 123 -Location "Location_example" -NumberOfSlots 123 -Orientation "Orientation_example" -Selector "Selector_example" -SlotsPerLine 123 -TransverseGroupSeparation 123 -TransverseGroupSize 123 -TransverseOffset 123 -VerticalStartOffset 123 -Width 123) # CapabilityEquipmentSlotArray | The 'capability.EquipmentSlotArray' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.EquipmentSlotArray' resource.
 try {
-    CapabilityEquipmentSlotArray $Result = New-IntersightCapabilityEquipmentSlotArray -CapabilityEquipmentSlotArray $CapabilityEquipmentSlotArray -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityEquipmentSlotArray -CapabilityEquipmentSlotArray $CapabilityEquipmentSlotArray -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityEquipmentSlotArray: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -415,12 +566,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentSlotArray**](CapabilityEquipmentSlotArray.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -447,19 +598,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityFanModuleDescriptor = (Initialize-capability.FanModuleDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilityFanModuleDescriptor | The 'capability.FanModuleDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityFanModuleDescriptor = (Initialize-capability.FanModuleDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityFanModuleDescriptor | The 'capability.FanModuleDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.FanModuleDescriptor' resource.
 try {
-    CapabilityFanModuleDescriptor $Result = New-IntersightCapabilityFanModuleDescriptor -CapabilityFanModuleDescriptor $CapabilityFanModuleDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityFanModuleDescriptor -CapabilityFanModuleDescriptor $CapabilityFanModuleDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityFanModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -475,12 +641,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleDescriptor**](CapabilityFanModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -507,19 +673,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityFanModuleManufacturingDef = (Initialize-capability.FanModuleManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityFanModuleManufacturingDef | The 'capability.FanModuleManufacturingDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityFanModuleManufacturingDef = (Initialize-capability.FanModuleManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityFanModuleManufacturingDef | The 'capability.FanModuleManufacturingDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.FanModuleManufacturingDef' resource.
 try {
-    CapabilityFanModuleManufacturingDef $Result = New-IntersightCapabilityFanModuleManufacturingDef -CapabilityFanModuleManufacturingDef $CapabilityFanModuleManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityFanModuleManufacturingDef -CapabilityFanModuleManufacturingDef $CapabilityFanModuleManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityFanModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -535,12 +716,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleManufacturingDef**](CapabilityFanModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -567,19 +748,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityIoCardCapabilityDef = (Initialize-capability.IoCardCapabilityDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -DcSupported $false) # CapabilityIoCardCapabilityDef | The 'capability.IoCardCapabilityDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityIoCardCapabilityDef = (Initialize-capability.IoCardCapabilityDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -DcSupported $false) # CapabilityIoCardCapabilityDef | The 'capability.IoCardCapabilityDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.IoCardCapabilityDef' resource.
 try {
-    CapabilityIoCardCapabilityDef $Result = New-IntersightCapabilityIoCardCapabilityDef -CapabilityIoCardCapabilityDef $CapabilityIoCardCapabilityDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityIoCardCapabilityDef -CapabilityIoCardCapabilityDef $CapabilityIoCardCapabilityDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityIoCardCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -595,12 +791,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardCapabilityDef**](CapabilityIoCardCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -627,19 +823,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityIoCardDescriptor = (Initialize-capability.IoCardDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -NumHifPorts 123 -Revision "Revision_example") # CapabilityIoCardDescriptor | The 'capability.IoCardDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityIoCardDescriptor = (Initialize-capability.IoCardDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -NumHifPorts 123 -Revision "Revision_example") # CapabilityIoCardDescriptor | The 'capability.IoCardDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.IoCardDescriptor' resource.
 try {
-    CapabilityIoCardDescriptor $Result = New-IntersightCapabilityIoCardDescriptor -CapabilityIoCardDescriptor $CapabilityIoCardDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityIoCardDescriptor -CapabilityIoCardDescriptor $CapabilityIoCardDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityIoCardDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -655,12 +866,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardDescriptor**](CapabilityIoCardDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -687,19 +898,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityIoCardManufacturingDef = (Initialize-capability.IoCardManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityIoCardManufacturingDef | The 'capability.IoCardManufacturingDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityIoCardManufacturingDef = (Initialize-capability.IoCardManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityIoCardManufacturingDef | The 'capability.IoCardManufacturingDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.IoCardManufacturingDef' resource.
 try {
-    CapabilityIoCardManufacturingDef $Result = New-IntersightCapabilityIoCardManufacturingDef -CapabilityIoCardManufacturingDef $CapabilityIoCardManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityIoCardManufacturingDef -CapabilityIoCardManufacturingDef $CapabilityIoCardManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityIoCardManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -715,12 +941,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardManufacturingDef**](CapabilityIoCardManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -747,19 +973,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityPortGroupAggregationDef = (Initialize-capability.PortGroupAggregationDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -AggregationCap "AggregationCap_example" -Hw40GPortGroupCap $false -Pgtype "Pgtype_example") # CapabilityPortGroupAggregationDef | The 'capability.PortGroupAggregationDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityPortGroupAggregationDef = (Initialize-capability.PortGroupAggregationDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -AggregationCap "AggregationCap_example" -Hw40GPortGroupCap $false -Pgtype "Pgtype_example") # CapabilityPortGroupAggregationDef | The 'capability.PortGroupAggregationDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.PortGroupAggregationDef' resource.
 try {
-    CapabilityPortGroupAggregationDef $Result = New-IntersightCapabilityPortGroupAggregationDef -CapabilityPortGroupAggregationDef $CapabilityPortGroupAggregationDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityPortGroupAggregationDef -CapabilityPortGroupAggregationDef $CapabilityPortGroupAggregationDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityPortGroupAggregationDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -775,12 +1016,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPortGroupAggregationDef**](CapabilityPortGroupAggregationDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -807,19 +1048,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityPsuDescriptor = (Initialize-capability.PsuDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilityPsuDescriptor | The 'capability.PsuDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityPsuDescriptor = (Initialize-capability.PsuDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityPsuDescriptor | The 'capability.PsuDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.PsuDescriptor' resource.
 try {
-    CapabilityPsuDescriptor $Result = New-IntersightCapabilityPsuDescriptor -CapabilityPsuDescriptor $CapabilityPsuDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityPsuDescriptor -CapabilityPsuDescriptor $CapabilityPsuDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityPsuDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -835,12 +1091,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuDescriptor**](CapabilityPsuDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -867,19 +1123,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilityPsuManufacturingDef = (Initialize-capability.PsuManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityPsuManufacturingDef | The 'capability.PsuManufacturingDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilityPsuManufacturingDef = (Initialize-capability.PsuManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityPsuManufacturingDef | The 'capability.PsuManufacturingDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.PsuManufacturingDef' resource.
 try {
-    CapabilityPsuManufacturingDef $Result = New-IntersightCapabilityPsuManufacturingDef -CapabilityPsuManufacturingDef $CapabilityPsuManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilityPsuManufacturingDef -CapabilityPsuManufacturingDef $CapabilityPsuManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilityPsuManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -895,72 +1166,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuManufacturingDef**](CapabilityPsuManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="New-IntersightCapabilitySection"></a>
-# **New-IntersightCapabilitySection**
-> CapabilitySection New-IntersightCapabilitySection<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CapabilitySection] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfNoneMatch] <String><br>
-
-Create a 'capability.Section' resource.
-
-### Example
-```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
-# Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
-# Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-# Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
-
-$CapabilitySection = (Initialize-capability.Section-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Action "Action_example" -CatalogName "CatalogName_example" -Name "Name_example" -Source "Source_example" -Version "Version_example" -Catalog ) # CapabilitySection | The 'capability.Section' resource to create.
-$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
-$IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
-
-# Create a 'capability.Section' resource.
-try {
-    CapabilitySection $Result = New-IntersightCapabilitySection -CapabilitySection $CapabilitySection -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
-} catch {
-    Write-Host ("Exception occured when calling New-IntersightCapabilitySection: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **CapabilitySection** | [**CapabilitySection**](CapabilitySection.md)| The &#39;capability.Section&#39; resource to create. | 
- **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
- **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
-
-### Return type
-
-[**CapabilitySection**](CapabilitySection.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -987,19 +1198,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilitySiocModuleCapabilityDef = (Initialize-capability.SiocModuleCapabilityDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -DcSupported $false) # CapabilitySiocModuleCapabilityDef | The 'capability.SiocModuleCapabilityDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilitySiocModuleCapabilityDef = (Initialize-capability.SiocModuleCapabilityDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -DcSupported $false) # CapabilitySiocModuleCapabilityDef | The 'capability.SiocModuleCapabilityDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.SiocModuleCapabilityDef' resource.
 try {
-    CapabilitySiocModuleCapabilityDef $Result = New-IntersightCapabilitySiocModuleCapabilityDef -CapabilitySiocModuleCapabilityDef $CapabilitySiocModuleCapabilityDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilitySiocModuleCapabilityDef -CapabilitySiocModuleCapabilityDef $CapabilitySiocModuleCapabilityDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilitySiocModuleCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1015,12 +1241,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleCapabilityDef**](CapabilitySiocModuleCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1047,19 +1273,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilitySiocModuleDescriptor = (Initialize-capability.SiocModuleDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilitySiocModuleDescriptor | The 'capability.SiocModuleDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilitySiocModuleDescriptor = (Initialize-capability.SiocModuleDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilitySiocModuleDescriptor | The 'capability.SiocModuleDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.SiocModuleDescriptor' resource.
 try {
-    CapabilitySiocModuleDescriptor $Result = New-IntersightCapabilitySiocModuleDescriptor -CapabilitySiocModuleDescriptor $CapabilitySiocModuleDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilitySiocModuleDescriptor -CapabilitySiocModuleDescriptor $CapabilitySiocModuleDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilitySiocModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1075,12 +1316,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleDescriptor**](CapabilitySiocModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1107,19 +1348,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilitySiocModuleManufacturingDef = (Initialize-capability.SiocModuleManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilitySiocModuleManufacturingDef | The 'capability.SiocModuleManufacturingDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilitySiocModuleManufacturingDef = (Initialize-capability.SiocModuleManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilitySiocModuleManufacturingDef | The 'capability.SiocModuleManufacturingDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.SiocModuleManufacturingDef' resource.
 try {
-    CapabilitySiocModuleManufacturingDef $Result = New-IntersightCapabilitySiocModuleManufacturingDef -CapabilitySiocModuleManufacturingDef $CapabilitySiocModuleManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilitySiocModuleManufacturingDef -CapabilitySiocModuleManufacturingDef $CapabilitySiocModuleManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilitySiocModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1135,12 +1391,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleManufacturingDef**](CapabilitySiocModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1167,19 +1423,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilitySwitchCapability = (Initialize-capability.SwitchCapability-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -DefaultFcoeVlan 123 -DynamicVifsSupported $false -FanModulesSupported $false -FcEndHostModeReservedVsans @((Initialize-capability.PortRange-ClassId "ClassId_example" -ObjectType "ObjectType_example" -EndPortId 123 -EndSlotId 123 -StartPortId 123 -StartSlotId 123)) -FcUplinkPortsAutoNegotiationSupported $false -LocatorBeaconSupported $false -MaxActiveSpanSessions 123 -MaxEthernetPortChannelMembers 123 -MaxEthernetPortChannels 123 -MaxEthernetUplinkPorts 123 -MaxFcFcoePortChannels 123 -MaxFcPortChannelMembers 123 -MaxFcoePortChannelMembers 123 -MaxPorts 123 -MaxSlots 123 -MaxVsansSupported 123 -MinActiveFans 123 -PortsSupporting100gSpeed @((Initialize-capability.PortRange-ClassId "ClassId_example" -ObjectType "ObjectType_example" -EndPortId 123 -EndSlotId 123 -StartPortId 123 -StartSlotId 123)) -PortsSupporting10gSpeed @() -PortsSupporting1gSpeed @() -PortsSupporting25gSpeed @() -PortsSupporting40gSpeed @() -PortsSupportingBreakout @() -PortsSupportingFcoe @() -PortsSupportingServerRole @() -ReservedVsans @() -SerenoNetflowSupported $false -UnifiedPorts @() -UnifiedRule "UnifiedRule_example" -VpCompressionSupported $false) # CapabilitySwitchCapability | The 'capability.SwitchCapability' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilitySwitchCapability = (Initialize-capability.SwitchCapability-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -DefaultFcoeVlan 123 -DynamicVifsSupported $false -FanModulesSupported $false -FcEndHostModeReservedVsans @((Initialize-capability.PortRange-ClassId "ClassId_example" -ObjectType "ObjectType_example" -EndPortId 123 -EndSlotId 123 -StartPortId 123 -StartSlotId 123)) -FcUplinkPortsAutoNegotiationSupported $false -LocatorBeaconSupported $false -MaxPorts 123 -MaxSlots 123 -NetworkLimits (Initialize-capability.SwitchNetworkLimits-ClassId "ClassId_example" -ObjectType "ObjectType_example" -MaxCompressedPortVlanCount 123 -MaxUncompressedPortVlanCount 123 -MaximumActiveTrafficMonitoringSessions 123 -MaximumEthernetPortChannels 123 -MaximumEthernetUplinkPorts 123 -MaximumFcPortChannelMembers 123 -MaximumFcPortChannels 123 -MaximumIgmpGroups 123 -MaximumPortChannelMembers 123 -MaximumPrimaryVlan 123 -MaximumSecondaryVlan 123 -MaximumSecondaryVlanPerPrimary 123 -MaximumVifs 123 -MaximumVlans 123 -MinimumActiveFans 123) -PortsSupporting100gSpeed @((Initialize-capability.PortRange-ClassId "ClassId_example" -ObjectType "ObjectType_example" -EndPortId 123 -EndSlotId 123 -StartPortId 123 -StartSlotId 123)) -PortsSupporting10gSpeed @() -PortsSupporting1gSpeed @() -PortsSupporting25gSpeed @() -PortsSupporting40gSpeed @() -PortsSupportingBreakout @() -PortsSupportingFcoe @() -PortsSupportingServerRole @() -ReservedVsans @() -SerenoNetflowSupported $false -StorageLimits (Initialize-capability.SwitchStorageLimits-ClassId "ClassId_example" -ObjectType "ObjectType_example" -MaximumUserZoneCount 123 -MaximumVirtualFcInterfaces 123 -MaximumVirtualFcInterfacesPerBladeServer 123 -MaximumVsans 123 -MaximumZoneCount 123) -SwitchingModeCapabilities @((Initialize-capability.SwitchingModeCapability-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SwitchingMode "SwitchingMode_example" -VpCompressionSupported $false)) -SystemLimits (Initialize-capability.SwitchSystemLimits-ClassId "ClassId_example" -ObjectType "ObjectType_example" -MaximumChassisCount 123 -MaximumFexPerDomain 123 -MaximumServersPerDomain 123) -UnifiedPorts @() -UnifiedRule "UnifiedRule_example") # CapabilitySwitchCapability | The 'capability.SwitchCapability' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.SwitchCapability' resource.
 try {
-    CapabilitySwitchCapability $Result = New-IntersightCapabilitySwitchCapability -CapabilitySwitchCapability $CapabilitySwitchCapability -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilitySwitchCapability -CapabilitySwitchCapability $CapabilitySwitchCapability -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilitySwitchCapability: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1195,12 +1466,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchCapability**](CapabilitySwitchCapability.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1227,19 +1498,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilitySwitchDescriptor = (Initialize-capability.SwitchDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -ExpectedMemory 123 -Revision "Revision_example") # CapabilitySwitchDescriptor | The 'capability.SwitchDescriptor' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilitySwitchDescriptor = (Initialize-capability.SwitchDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -ExpectedMemory 123 -Revision "Revision_example") # CapabilitySwitchDescriptor | The 'capability.SwitchDescriptor' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.SwitchDescriptor' resource.
 try {
-    CapabilitySwitchDescriptor $Result = New-IntersightCapabilitySwitchDescriptor -CapabilitySwitchDescriptor $CapabilitySwitchDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilitySwitchDescriptor -CapabilitySwitchDescriptor $CapabilitySwitchDescriptor -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilitySwitchDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1255,12 +1541,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchDescriptor**](CapabilitySwitchDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1287,19 +1573,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$CapabilitySwitchManufacturingDef = (Initialize-capability.SwitchManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Caption "Caption_example" -Description "Description_example" -PartNumber "PartNumber_example" -ProductName "ProductName_example") # CapabilitySwitchManufacturingDef | The 'capability.SwitchManufacturingDef' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$CapabilitySwitchManufacturingDef = (Initialize-capability.SwitchManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Caption "Caption_example" -Description "Description_example" -PartNumber "PartNumber_example" -ProductName "ProductName_example") # CapabilitySwitchManufacturingDef | The 'capability.SwitchManufacturingDef' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'capability.SwitchManufacturingDef' resource.
 try {
-    CapabilitySwitchManufacturingDef $Result = New-IntersightCapabilitySwitchManufacturingDef -CapabilitySwitchManufacturingDef $CapabilitySwitchManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightCapabilitySwitchManufacturingDef -CapabilitySwitchManufacturingDef $CapabilitySwitchManufacturingDef -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightCapabilitySwitchManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1315,12 +1616,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchManufacturingDef**](CapabilitySwitchManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1345,17 +1646,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.AdapterUnitDescriptor' resource.
 try {
-    Remove-IntersightCapabilityAdapterUnitDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilityAdapterUnitDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityAdapterUnitDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1369,12 +1685,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1399,17 +1715,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.ChassisDescriptor' resource.
 try {
-    Remove-IntersightCapabilityChassisDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilityChassisDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityChassisDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1423,12 +1754,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1453,17 +1784,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.ChassisManufacturingDef' resource.
 try {
-    Remove-IntersightCapabilityChassisManufacturingDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityChassisManufacturingDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityChassisManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1477,12 +1823,81 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Remove-IntersightCapabilityCimcFirmwareDescriptor"></a>
+# **Remove-IntersightCapabilityCimcFirmwareDescriptor**
+> void Remove-IntersightCapabilityCimcFirmwareDescriptor<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Delete a 'capability.CimcFirmwareDescriptor' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Delete a 'capability.CimcFirmwareDescriptor' resource.
+try {
+     $Result = Remove-IntersightCapabilityCimcFirmwareDescriptor -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Remove-IntersightCapabilityCimcFirmwareDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1507,17 +1922,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.EquipmentPhysicalDef' resource.
 try {
-    Remove-IntersightCapabilityEquipmentPhysicalDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityEquipmentPhysicalDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityEquipmentPhysicalDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1531,12 +1961,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1561,17 +1991,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.EquipmentSlotArray' resource.
 try {
-    Remove-IntersightCapabilityEquipmentSlotArray -Moid $Moid
+     $Result = Remove-IntersightCapabilityEquipmentSlotArray -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityEquipmentSlotArray: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1585,12 +2030,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1615,17 +2060,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.FanModuleDescriptor' resource.
 try {
-    Remove-IntersightCapabilityFanModuleDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilityFanModuleDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityFanModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1639,12 +2099,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1669,17 +2129,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.FanModuleManufacturingDef' resource.
 try {
-    Remove-IntersightCapabilityFanModuleManufacturingDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityFanModuleManufacturingDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityFanModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1693,12 +2168,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1723,17 +2198,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.IoCardCapabilityDef' resource.
 try {
-    Remove-IntersightCapabilityIoCardCapabilityDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityIoCardCapabilityDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityIoCardCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1747,12 +2237,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1777,17 +2267,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.IoCardDescriptor' resource.
 try {
-    Remove-IntersightCapabilityIoCardDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilityIoCardDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityIoCardDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1801,12 +2306,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1831,17 +2336,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.IoCardManufacturingDef' resource.
 try {
-    Remove-IntersightCapabilityIoCardManufacturingDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityIoCardManufacturingDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityIoCardManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1855,12 +2375,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1885,17 +2405,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.PortGroupAggregationDef' resource.
 try {
-    Remove-IntersightCapabilityPortGroupAggregationDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityPortGroupAggregationDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityPortGroupAggregationDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1909,12 +2444,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1939,17 +2474,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.PsuDescriptor' resource.
 try {
-    Remove-IntersightCapabilityPsuDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilityPsuDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityPsuDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1963,12 +2513,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1993,17 +2543,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.PsuManufacturingDef' resource.
 try {
-    Remove-IntersightCapabilityPsuManufacturingDef -Moid $Moid
+     $Result = Remove-IntersightCapabilityPsuManufacturingDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilityPsuManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2017,12 +2582,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2047,17 +2612,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.SiocModuleCapabilityDef' resource.
 try {
-    Remove-IntersightCapabilitySiocModuleCapabilityDef -Moid $Moid
+     $Result = Remove-IntersightCapabilitySiocModuleCapabilityDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilitySiocModuleCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2071,12 +2651,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2101,17 +2681,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.SiocModuleDescriptor' resource.
 try {
-    Remove-IntersightCapabilitySiocModuleDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilitySiocModuleDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilitySiocModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2125,12 +2720,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2155,17 +2750,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.SiocModuleManufacturingDef' resource.
 try {
-    Remove-IntersightCapabilitySiocModuleManufacturingDef -Moid $Moid
+     $Result = Remove-IntersightCapabilitySiocModuleManufacturingDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilitySiocModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2179,12 +2789,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2209,17 +2819,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.SwitchCapability' resource.
 try {
-    Remove-IntersightCapabilitySwitchCapability -Moid $Moid
+     $Result = Remove-IntersightCapabilitySwitchCapability -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilitySwitchCapability: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2233,12 +2858,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2263,17 +2888,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.SwitchDescriptor' resource.
 try {
-    Remove-IntersightCapabilitySwitchDescriptor -Moid $Moid
+     $Result = Remove-IntersightCapabilitySwitchDescriptor -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilitySwitchDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2287,12 +2927,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2317,17 +2957,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'capability.SwitchManufacturingDef' resource.
 try {
-    Remove-IntersightCapabilitySwitchManufacturingDef -Moid $Moid
+     $Result = Remove-IntersightCapabilitySwitchManufacturingDef -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightCapabilitySwitchManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2341,12 +2996,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2371,17 +3026,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.AdapterUnitDescriptor' resource.
 try {
-    CapabilityAdapterUnitDescriptor $Result = Get-IntersightCapabilityAdapterUnitDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityAdapterUnitDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityAdapterUnitDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2395,12 +3065,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityAdapterUnitDescriptor**](CapabilityAdapterUnitDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2435,11 +3105,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2455,7 +3140,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.AdapterUnitDescriptor' resource.
 try {
-    CapabilityAdapterUnitDescriptorResponse $Result = Get-IntersightCapabilityAdapterUnitDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityAdapterUnitDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityAdapterUnitDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2479,12 +3164,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityAdapterUnitDescriptorResponse**](CapabilityAdapterUnitDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2509,17 +3194,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.Catalog' resource.
 try {
-    CapabilityCatalog $Result = Get-IntersightCapabilityCatalogByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityCatalogByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityCatalogByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2533,12 +3233,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityCatalog**](CapabilityCatalog.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2573,11 +3273,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2593,7 +3308,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.Catalog' resource.
 try {
-    CapabilityCatalogResponse $Result = Get-IntersightCapabilityCatalogList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityCatalogList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityCatalogList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2617,12 +3332,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityCatalogResponse**](CapabilityCatalogResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2647,17 +3362,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.ChassisDescriptor' resource.
 try {
-    CapabilityChassisDescriptor $Result = Get-IntersightCapabilityChassisDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityChassisDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityChassisDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2671,12 +3401,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisDescriptor**](CapabilityChassisDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2711,11 +3441,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2731,7 +3476,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.ChassisDescriptor' resource.
 try {
-    CapabilityChassisDescriptorResponse $Result = Get-IntersightCapabilityChassisDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityChassisDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityChassisDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2755,12 +3500,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisDescriptorResponse**](CapabilityChassisDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2785,17 +3530,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.ChassisManufacturingDef' resource.
 try {
-    CapabilityChassisManufacturingDef $Result = Get-IntersightCapabilityChassisManufacturingDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityChassisManufacturingDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityChassisManufacturingDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2809,12 +3569,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisManufacturingDef**](CapabilityChassisManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2849,11 +3609,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2869,7 +3644,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.ChassisManufacturingDef' resource.
 try {
-    CapabilityChassisManufacturingDefResponse $Result = Get-IntersightCapabilityChassisManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityChassisManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityChassisManufacturingDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2893,12 +3668,180 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisManufacturingDefResponse**](CapabilityChassisManufacturingDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightCapabilityCimcFirmwareDescriptorByMoid"></a>
+# **Get-IntersightCapabilityCimcFirmwareDescriptorByMoid**
+> CapabilityCimcFirmwareDescriptor Get-IntersightCapabilityCimcFirmwareDescriptorByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'capability.CimcFirmwareDescriptor' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'capability.CimcFirmwareDescriptor' resource.
+try {
+     $Result = Get-IntersightCapabilityCimcFirmwareDescriptorByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightCapabilityCimcFirmwareDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightCapabilityCimcFirmwareDescriptorList"></a>
+# **Get-IntersightCapabilityCimcFirmwareDescriptorList**
+> CapabilityCimcFirmwareDescriptorResponse Get-IntersightCapabilityCimcFirmwareDescriptorList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'capability.CimcFirmwareDescriptor' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'capability.CimcFirmwareDescriptor' resource.
+try {
+     $Result = Get-IntersightCapabilityCimcFirmwareDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightCapabilityCimcFirmwareDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CapabilityCimcFirmwareDescriptorResponse**](CapabilityCimcFirmwareDescriptorResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2923,17 +3866,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.EquipmentPhysicalDef' resource.
 try {
-    CapabilityEquipmentPhysicalDef $Result = Get-IntersightCapabilityEquipmentPhysicalDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityEquipmentPhysicalDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityEquipmentPhysicalDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2947,12 +3905,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentPhysicalDef**](CapabilityEquipmentPhysicalDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2987,11 +3945,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3007,7 +3980,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.EquipmentPhysicalDef' resource.
 try {
-    CapabilityEquipmentPhysicalDefResponse $Result = Get-IntersightCapabilityEquipmentPhysicalDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityEquipmentPhysicalDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityEquipmentPhysicalDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3031,12 +4004,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentPhysicalDefResponse**](CapabilityEquipmentPhysicalDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3061,17 +4034,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.EquipmentSlotArray' resource.
 try {
-    CapabilityEquipmentSlotArray $Result = Get-IntersightCapabilityEquipmentSlotArrayByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityEquipmentSlotArrayByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityEquipmentSlotArrayByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3085,12 +4073,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentSlotArray**](CapabilityEquipmentSlotArray.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3125,11 +4113,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3145,7 +4148,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.EquipmentSlotArray' resource.
 try {
-    CapabilityEquipmentSlotArrayResponse $Result = Get-IntersightCapabilityEquipmentSlotArrayList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityEquipmentSlotArrayList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityEquipmentSlotArrayList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3169,12 +4172,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentSlotArrayResponse**](CapabilityEquipmentSlotArrayResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3199,17 +4202,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.FanModuleDescriptor' resource.
 try {
-    CapabilityFanModuleDescriptor $Result = Get-IntersightCapabilityFanModuleDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityFanModuleDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityFanModuleDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3223,12 +4241,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleDescriptor**](CapabilityFanModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3263,11 +4281,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3283,7 +4316,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.FanModuleDescriptor' resource.
 try {
-    CapabilityFanModuleDescriptorResponse $Result = Get-IntersightCapabilityFanModuleDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityFanModuleDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityFanModuleDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3307,12 +4340,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleDescriptorResponse**](CapabilityFanModuleDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3337,17 +4370,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.FanModuleManufacturingDef' resource.
 try {
-    CapabilityFanModuleManufacturingDef $Result = Get-IntersightCapabilityFanModuleManufacturingDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityFanModuleManufacturingDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityFanModuleManufacturingDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3361,12 +4409,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleManufacturingDef**](CapabilityFanModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3401,11 +4449,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3421,7 +4484,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.FanModuleManufacturingDef' resource.
 try {
-    CapabilityFanModuleManufacturingDefResponse $Result = Get-IntersightCapabilityFanModuleManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityFanModuleManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityFanModuleManufacturingDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3445,12 +4508,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleManufacturingDefResponse**](CapabilityFanModuleManufacturingDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3475,17 +4538,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.IoCardCapabilityDef' resource.
 try {
-    CapabilityIoCardCapabilityDef $Result = Get-IntersightCapabilityIoCardCapabilityDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityIoCardCapabilityDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityIoCardCapabilityDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3499,12 +4577,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardCapabilityDef**](CapabilityIoCardCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3539,11 +4617,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3559,7 +4652,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.IoCardCapabilityDef' resource.
 try {
-    CapabilityIoCardCapabilityDefResponse $Result = Get-IntersightCapabilityIoCardCapabilityDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityIoCardCapabilityDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityIoCardCapabilityDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3583,12 +4676,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardCapabilityDefResponse**](CapabilityIoCardCapabilityDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3613,17 +4706,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.IoCardDescriptor' resource.
 try {
-    CapabilityIoCardDescriptor $Result = Get-IntersightCapabilityIoCardDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityIoCardDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityIoCardDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3637,12 +4745,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardDescriptor**](CapabilityIoCardDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3677,11 +4785,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3697,7 +4820,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.IoCardDescriptor' resource.
 try {
-    CapabilityIoCardDescriptorResponse $Result = Get-IntersightCapabilityIoCardDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityIoCardDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityIoCardDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3721,12 +4844,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardDescriptorResponse**](CapabilityIoCardDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3751,17 +4874,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.IoCardManufacturingDef' resource.
 try {
-    CapabilityIoCardManufacturingDef $Result = Get-IntersightCapabilityIoCardManufacturingDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityIoCardManufacturingDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityIoCardManufacturingDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3775,12 +4913,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardManufacturingDef**](CapabilityIoCardManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3815,11 +4953,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3835,7 +4988,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.IoCardManufacturingDef' resource.
 try {
-    CapabilityIoCardManufacturingDefResponse $Result = Get-IntersightCapabilityIoCardManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityIoCardManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityIoCardManufacturingDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3859,12 +5012,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardManufacturingDefResponse**](CapabilityIoCardManufacturingDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3889,17 +5042,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.PortGroupAggregationDef' resource.
 try {
-    CapabilityPortGroupAggregationDef $Result = Get-IntersightCapabilityPortGroupAggregationDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityPortGroupAggregationDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityPortGroupAggregationDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3913,12 +5081,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPortGroupAggregationDef**](CapabilityPortGroupAggregationDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3953,11 +5121,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -3973,7 +5156,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.PortGroupAggregationDef' resource.
 try {
-    CapabilityPortGroupAggregationDefResponse $Result = Get-IntersightCapabilityPortGroupAggregationDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityPortGroupAggregationDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityPortGroupAggregationDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3997,12 +5180,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPortGroupAggregationDefResponse**](CapabilityPortGroupAggregationDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4027,17 +5210,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.PsuDescriptor' resource.
 try {
-    CapabilityPsuDescriptor $Result = Get-IntersightCapabilityPsuDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityPsuDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityPsuDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4051,12 +5249,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuDescriptor**](CapabilityPsuDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4091,11 +5289,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -4111,7 +5324,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.PsuDescriptor' resource.
 try {
-    CapabilityPsuDescriptorResponse $Result = Get-IntersightCapabilityPsuDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityPsuDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityPsuDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4135,12 +5348,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuDescriptorResponse**](CapabilityPsuDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4165,17 +5378,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.PsuManufacturingDef' resource.
 try {
-    CapabilityPsuManufacturingDef $Result = Get-IntersightCapabilityPsuManufacturingDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilityPsuManufacturingDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityPsuManufacturingDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4189,12 +5417,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuManufacturingDef**](CapabilityPsuManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4229,11 +5457,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -4249,7 +5492,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.PsuManufacturingDef' resource.
 try {
-    CapabilityPsuManufacturingDefResponse $Result = Get-IntersightCapabilityPsuManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilityPsuManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilityPsuManufacturingDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4273,150 +5516,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuManufacturingDefResponse**](CapabilityPsuManufacturingDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-IntersightCapabilitySectionByMoid"></a>
-# **Get-IntersightCapabilitySectionByMoid**
-> CapabilitySection Get-IntersightCapabilitySectionByMoid<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
-
-Read a 'capability.Section' resource.
-
-### Example
-```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
-# Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
-# Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-# Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
-
-$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-
-# Read a 'capability.Section' resource.
-try {
-    CapabilitySection $Result = Get-IntersightCapabilitySectionByMoid -Moid $Moid
-} catch {
-    Write-Host ("Exception occured when calling Get-IntersightCapabilitySectionByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Moid** | **String**| The unique Moid identifier of a resource instance. | 
-
-### Return type
-
-[**CapabilitySection**](CapabilitySection.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-IntersightCapabilitySectionList"></a>
-# **Get-IntersightCapabilitySectionList**
-> CapabilitySectionResponse Get-IntersightCapabilitySectionList<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
-
-Read a 'capability.Section' resource.
-
-### Example
-```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
-# Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
-# Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-# Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
-
-$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
-$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
-$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
-$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
-$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
-$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
-$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
-$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
-$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
-$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
-$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
-
-# Read a 'capability.Section' resource.
-try {
-    CapabilitySectionResponse $Result = Get-IntersightCapabilitySectionList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
-} catch {
-    Write-Host ("Exception occured when calling Get-IntersightCapabilitySectionList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
- **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
- **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
- **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
- **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
- **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
- **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
- **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
- **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
- **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
- **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
-
-### Return type
-
-[**CapabilitySectionResponse**](CapabilitySectionResponse.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4441,17 +5546,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.SiocModuleCapabilityDef' resource.
 try {
-    CapabilitySiocModuleCapabilityDef $Result = Get-IntersightCapabilitySiocModuleCapabilityDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilitySiocModuleCapabilityDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySiocModuleCapabilityDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4465,12 +5585,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleCapabilityDef**](CapabilitySiocModuleCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4505,11 +5625,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -4525,7 +5660,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.SiocModuleCapabilityDef' resource.
 try {
-    CapabilitySiocModuleCapabilityDefResponse $Result = Get-IntersightCapabilitySiocModuleCapabilityDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilitySiocModuleCapabilityDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySiocModuleCapabilityDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4549,12 +5684,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleCapabilityDefResponse**](CapabilitySiocModuleCapabilityDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4579,17 +5714,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.SiocModuleDescriptor' resource.
 try {
-    CapabilitySiocModuleDescriptor $Result = Get-IntersightCapabilitySiocModuleDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilitySiocModuleDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySiocModuleDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4603,12 +5753,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleDescriptor**](CapabilitySiocModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4643,11 +5793,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -4663,7 +5828,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.SiocModuleDescriptor' resource.
 try {
-    CapabilitySiocModuleDescriptorResponse $Result = Get-IntersightCapabilitySiocModuleDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilitySiocModuleDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySiocModuleDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4687,12 +5852,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleDescriptorResponse**](CapabilitySiocModuleDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4717,17 +5882,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.SiocModuleManufacturingDef' resource.
 try {
-    CapabilitySiocModuleManufacturingDef $Result = Get-IntersightCapabilitySiocModuleManufacturingDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilitySiocModuleManufacturingDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySiocModuleManufacturingDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4741,12 +5921,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleManufacturingDef**](CapabilitySiocModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4781,11 +5961,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -4801,7 +5996,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.SiocModuleManufacturingDef' resource.
 try {
-    CapabilitySiocModuleManufacturingDefResponse $Result = Get-IntersightCapabilitySiocModuleManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilitySiocModuleManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySiocModuleManufacturingDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4825,12 +6020,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleManufacturingDefResponse**](CapabilitySiocModuleManufacturingDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4855,17 +6050,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.SwitchCapability' resource.
 try {
-    CapabilitySwitchCapability $Result = Get-IntersightCapabilitySwitchCapabilityByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilitySwitchCapabilityByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySwitchCapabilityByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4879,12 +6089,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchCapability**](CapabilitySwitchCapability.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4919,11 +6129,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -4939,7 +6164,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.SwitchCapability' resource.
 try {
-    CapabilitySwitchCapabilityResponse $Result = Get-IntersightCapabilitySwitchCapabilityList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilitySwitchCapabilityList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySwitchCapabilityList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -4963,12 +6188,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchCapabilityResponse**](CapabilitySwitchCapabilityResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -4993,17 +6218,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.SwitchDescriptor' resource.
 try {
-    CapabilitySwitchDescriptor $Result = Get-IntersightCapabilitySwitchDescriptorByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilitySwitchDescriptorByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySwitchDescriptorByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5017,12 +6257,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchDescriptor**](CapabilitySwitchDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5057,11 +6297,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -5077,7 +6332,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.SwitchDescriptor' resource.
 try {
-    CapabilitySwitchDescriptorResponse $Result = Get-IntersightCapabilitySwitchDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilitySwitchDescriptorList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySwitchDescriptorList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5101,12 +6356,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchDescriptorResponse**](CapabilitySwitchDescriptorResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5131,17 +6386,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'capability.SwitchManufacturingDef' resource.
 try {
-    CapabilitySwitchManufacturingDef $Result = Get-IntersightCapabilitySwitchManufacturingDefByMoid -Moid $Moid
+     $Result = Get-IntersightCapabilitySwitchManufacturingDefByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySwitchManufacturingDefByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5155,12 +6425,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchManufacturingDef**](CapabilitySwitchManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5195,11 +6465,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -5215,7 +6500,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'capability.SwitchManufacturingDef' resource.
 try {
-    CapabilitySwitchManufacturingDefResponse $Result = Get-IntersightCapabilitySwitchManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightCapabilitySwitchManufacturingDefList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightCapabilitySwitchManufacturingDefList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5239,12 +6524,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchManufacturingDefResponse**](CapabilitySwitchManufacturingDefResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5271,19 +6556,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityAdapterUnitDescriptor = (Initialize-capability.AdapterUnitDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -ConnectivityOrder "ConnectivityOrder_example" -EthernetPortSpeed 123 -FibreChannelPortSpeed 123 -NumDcePorts 123 -PromCardType "PromCardType_example") # CapabilityAdapterUnitDescriptor | The 'capability.AdapterUnitDescriptor' resource to update.
+$CapabilityAdapterUnitDescriptor = (Initialize-capability.AdapterUnitDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -ConnectivityOrder "ConnectivityOrder_example" -EthernetPortSpeed 123 -FibreChannelPortSpeed 123 -NumDcePorts 123 -PromCardType "PromCardType_example") # CapabilityAdapterUnitDescriptor | The 'capability.AdapterUnitDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.AdapterUnitDescriptor' resource.
 try {
-    CapabilityAdapterUnitDescriptor $Result = Set-IntersightCapabilityAdapterUnitDescriptor -Moid $Moid -CapabilityAdapterUnitDescriptor $CapabilityAdapterUnitDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityAdapterUnitDescriptor -Moid $Moid -CapabilityAdapterUnitDescriptor $CapabilityAdapterUnitDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityAdapterUnitDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5299,12 +6599,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityAdapterUnitDescriptor**](CapabilityAdapterUnitDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5331,19 +6631,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityCatalog = (Initialize-capability.Catalog-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Organization  -Sections @()) # CapabilityCatalog | The 'capability.Catalog' resource to update.
+$CapabilityCatalog = (Initialize-capability.Catalog-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Organization (Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -AppRegistrations @((Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -AppRegistrations @((Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account  -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration  -Permission (Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @() -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @() -System )) -Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -EnableSingleLogout $false -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -EnableSingleLogout $false -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp  -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization (Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @()))) -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate )) -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @() -Usergroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @((Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @() -PrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @() -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -PrivilegeSets @() -Resource  -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @() -System )))) -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @() -System )) -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @() -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @((Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User (Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User )) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -IsCurrentPasswordSet $false -IsNewPasswordSet $false -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration  -Permission  -User )) -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User ))))) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -IsCurrentPasswordSet $false -IsNewPasswordSet $false -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @() -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User )))))) -Users @())) -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @())) -Users @()))) -Usergroups @() -Users @()))) -Usergroups @() -Users @()) -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization  -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate  -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @() -Usergroups @() -Users @()) -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -EndPointRoles @() -Idp  -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -System )) -PrivilegeSets @() -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -PrivilegeSets @() -Resource  -Roles @())) -Roles @() -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @() -Users @()) -User )) -Permission  -Roles @() -User )) -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -IpRulesConfiguration (Initialize-iam.IpAccessManagement.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -LastRecoveryTime Get-Date -Holder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -IpRulesConfiguration (Initialize-iam.IpAccessManagement.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -LastRecoveryTime Get-Date -Holder  -IpAddresses @((Initialize-iam.IpAddress.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Address "Address_example" -Description "Description_example" -IpAccessManagement ))) -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission (Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example") -Roles @((Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example")))) -TargetApp "TargetApp_example" -Holder  -Resource ))) -IpAddresses @((Initialize-iam.IpAddress.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Address "Address_example" -Description "Description_example" -IpAccessManagement ))) -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission  -Roles @())) -TargetApp "TargetApp_example" -Holder  -Resource ))) -SessionLimits ) -OauthTokens @() -Permission  -Roles @() -User )) -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder  -SessionLimits ) -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @())))) # CapabilityCatalog | The 'capability.Catalog' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.Catalog' resource.
 try {
-    CapabilityCatalog $Result = Set-IntersightCapabilityCatalog -Moid $Moid -CapabilityCatalog $CapabilityCatalog -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityCatalog -Moid $Moid -CapabilityCatalog $CapabilityCatalog -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityCatalog: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5359,12 +6674,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityCatalog**](CapabilityCatalog.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5391,19 +6706,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityChassisDescriptor = (Initialize-capability.ChassisDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilityChassisDescriptor | The 'capability.ChassisDescriptor' resource to update.
+$CapabilityChassisDescriptor = (Initialize-capability.ChassisDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityChassisDescriptor | The 'capability.ChassisDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.ChassisDescriptor' resource.
 try {
-    CapabilityChassisDescriptor $Result = Set-IntersightCapabilityChassisDescriptor -Moid $Moid -CapabilityChassisDescriptor $CapabilityChassisDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityChassisDescriptor -Moid $Moid -CapabilityChassisDescriptor $CapabilityChassisDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityChassisDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5419,12 +6749,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisDescriptor**](CapabilityChassisDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5451,19 +6781,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityChassisManufacturingDef = (Initialize-capability.ChassisManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -ChassisCodeName "ChassisCodeName_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityChassisManufacturingDef | The 'capability.ChassisManufacturingDef' resource to update.
+$CapabilityChassisManufacturingDef = (Initialize-capability.ChassisManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -ChassisCodeName "ChassisCodeName_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityChassisManufacturingDef | The 'capability.ChassisManufacturingDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.ChassisManufacturingDef' resource.
 try {
-    CapabilityChassisManufacturingDef $Result = Set-IntersightCapabilityChassisManufacturingDef -Moid $Moid -CapabilityChassisManufacturingDef $CapabilityChassisManufacturingDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityChassisManufacturingDef -Moid $Moid -CapabilityChassisManufacturingDef $CapabilityChassisManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityChassisManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5479,12 +6824,87 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisManufacturingDef**](CapabilityChassisManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/json-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Set-IntersightCapabilityCimcFirmwareDescriptor"></a>
+# **Set-IntersightCapabilityCimcFirmwareDescriptor**
+> CapabilityCimcFirmwareDescriptor Set-IntersightCapabilityCimcFirmwareDescriptor<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CapabilityCimcFirmwareDescriptor] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+
+Update a 'capability.CimcFirmwareDescriptor' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+$CapabilityCimcFirmwareDescriptor = (Initialize-capability.CimcFirmwareDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityCimcFirmwareDescriptor | The 'capability.CimcFirmwareDescriptor' resource to update.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+
+# Update a 'capability.CimcFirmwareDescriptor' resource.
+try {
+     $Result = Set-IntersightCapabilityCimcFirmwareDescriptor -Moid $Moid -CapabilityCimcFirmwareDescriptor $CapabilityCimcFirmwareDescriptor -IfMatch $IfMatch
+} catch {
+    Write-Host ("Exception occured when calling Set-IntersightCapabilityCimcFirmwareDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+ **CapabilityCimcFirmwareDescriptor** | [**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)| The &#39;capability.CimcFirmwareDescriptor&#39; resource to update. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5511,19 +6931,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityEquipmentPhysicalDef = (Initialize-capability.EquipmentPhysicalDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Depth 123 -Height 123 -MaxPower 123 -MinPower 123 -NominalPower 123 -Weight 123 -Width 123) # CapabilityEquipmentPhysicalDef | The 'capability.EquipmentPhysicalDef' resource to update.
+$CapabilityEquipmentPhysicalDef = (Initialize-capability.EquipmentPhysicalDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Depth 123 -Height 123 -MaxPower 123 -MinPower 123 -NominalPower 123 -Weight 123 -Width 123) # CapabilityEquipmentPhysicalDef | The 'capability.EquipmentPhysicalDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.EquipmentPhysicalDef' resource.
 try {
-    CapabilityEquipmentPhysicalDef $Result = Set-IntersightCapabilityEquipmentPhysicalDef -Moid $Moid -CapabilityEquipmentPhysicalDef $CapabilityEquipmentPhysicalDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityEquipmentPhysicalDef -Moid $Moid -CapabilityEquipmentPhysicalDef $CapabilityEquipmentPhysicalDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityEquipmentPhysicalDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5539,12 +6974,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentPhysicalDef**](CapabilityEquipmentPhysicalDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5571,19 +7006,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityEquipmentSlotArray = (Initialize-capability.EquipmentSlotArray-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -FirstIndex 123 -Height 123 -HorizontalStartOffset 123 -InlineGroupSeparation 123 -InlineGroupSize 123 -InlineOffset 123 -Location "Location_example" -NumberOfSlots 123 -Orientation "Orientation_example" -Selector "Selector_example" -SlotsPerLine 123 -TransverseGroupSeparation 123 -TransverseGroupSize 123 -TransverseOffset 123 -VerticalStartOffset 123 -Width 123) # CapabilityEquipmentSlotArray | The 'capability.EquipmentSlotArray' resource to update.
+$CapabilityEquipmentSlotArray = (Initialize-capability.EquipmentSlotArray-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -FirstIndex 123 -Height 123 -HorizontalStartOffset 123 -InlineGroupSeparation 123 -InlineGroupSize 123 -InlineOffset 123 -Location "Location_example" -NumberOfSlots 123 -Orientation "Orientation_example" -Selector "Selector_example" -SlotsPerLine 123 -TransverseGroupSeparation 123 -TransverseGroupSize 123 -TransverseOffset 123 -VerticalStartOffset 123 -Width 123) # CapabilityEquipmentSlotArray | The 'capability.EquipmentSlotArray' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.EquipmentSlotArray' resource.
 try {
-    CapabilityEquipmentSlotArray $Result = Set-IntersightCapabilityEquipmentSlotArray -Moid $Moid -CapabilityEquipmentSlotArray $CapabilityEquipmentSlotArray -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityEquipmentSlotArray -Moid $Moid -CapabilityEquipmentSlotArray $CapabilityEquipmentSlotArray -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityEquipmentSlotArray: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5599,12 +7049,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentSlotArray**](CapabilityEquipmentSlotArray.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5631,19 +7081,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityFanModuleDescriptor = (Initialize-capability.FanModuleDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilityFanModuleDescriptor | The 'capability.FanModuleDescriptor' resource to update.
+$CapabilityFanModuleDescriptor = (Initialize-capability.FanModuleDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityFanModuleDescriptor | The 'capability.FanModuleDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.FanModuleDescriptor' resource.
 try {
-    CapabilityFanModuleDescriptor $Result = Set-IntersightCapabilityFanModuleDescriptor -Moid $Moid -CapabilityFanModuleDescriptor $CapabilityFanModuleDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityFanModuleDescriptor -Moid $Moid -CapabilityFanModuleDescriptor $CapabilityFanModuleDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityFanModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5659,12 +7124,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleDescriptor**](CapabilityFanModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5691,19 +7156,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityFanModuleManufacturingDef = (Initialize-capability.FanModuleManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityFanModuleManufacturingDef | The 'capability.FanModuleManufacturingDef' resource to update.
+$CapabilityFanModuleManufacturingDef = (Initialize-capability.FanModuleManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityFanModuleManufacturingDef | The 'capability.FanModuleManufacturingDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.FanModuleManufacturingDef' resource.
 try {
-    CapabilityFanModuleManufacturingDef $Result = Set-IntersightCapabilityFanModuleManufacturingDef -Moid $Moid -CapabilityFanModuleManufacturingDef $CapabilityFanModuleManufacturingDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityFanModuleManufacturingDef -Moid $Moid -CapabilityFanModuleManufacturingDef $CapabilityFanModuleManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityFanModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5719,12 +7199,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleManufacturingDef**](CapabilityFanModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5751,19 +7231,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityIoCardCapabilityDef = (Initialize-capability.IoCardCapabilityDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -DcSupported $false) # CapabilityIoCardCapabilityDef | The 'capability.IoCardCapabilityDef' resource to update.
+$CapabilityIoCardCapabilityDef = (Initialize-capability.IoCardCapabilityDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -DcSupported $false) # CapabilityIoCardCapabilityDef | The 'capability.IoCardCapabilityDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.IoCardCapabilityDef' resource.
 try {
-    CapabilityIoCardCapabilityDef $Result = Set-IntersightCapabilityIoCardCapabilityDef -Moid $Moid -CapabilityIoCardCapabilityDef $CapabilityIoCardCapabilityDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityIoCardCapabilityDef -Moid $Moid -CapabilityIoCardCapabilityDef $CapabilityIoCardCapabilityDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityIoCardCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5779,12 +7274,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardCapabilityDef**](CapabilityIoCardCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5811,19 +7306,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityIoCardDescriptor = (Initialize-capability.IoCardDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -NumHifPorts 123 -Revision "Revision_example") # CapabilityIoCardDescriptor | The 'capability.IoCardDescriptor' resource to update.
+$CapabilityIoCardDescriptor = (Initialize-capability.IoCardDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -NumHifPorts 123 -Revision "Revision_example") # CapabilityIoCardDescriptor | The 'capability.IoCardDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.IoCardDescriptor' resource.
 try {
-    CapabilityIoCardDescriptor $Result = Set-IntersightCapabilityIoCardDescriptor -Moid $Moid -CapabilityIoCardDescriptor $CapabilityIoCardDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityIoCardDescriptor -Moid $Moid -CapabilityIoCardDescriptor $CapabilityIoCardDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityIoCardDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5839,12 +7349,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardDescriptor**](CapabilityIoCardDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5871,19 +7381,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityIoCardManufacturingDef = (Initialize-capability.IoCardManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityIoCardManufacturingDef | The 'capability.IoCardManufacturingDef' resource to update.
+$CapabilityIoCardManufacturingDef = (Initialize-capability.IoCardManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityIoCardManufacturingDef | The 'capability.IoCardManufacturingDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.IoCardManufacturingDef' resource.
 try {
-    CapabilityIoCardManufacturingDef $Result = Set-IntersightCapabilityIoCardManufacturingDef -Moid $Moid -CapabilityIoCardManufacturingDef $CapabilityIoCardManufacturingDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityIoCardManufacturingDef -Moid $Moid -CapabilityIoCardManufacturingDef $CapabilityIoCardManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityIoCardManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5899,12 +7424,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardManufacturingDef**](CapabilityIoCardManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5931,19 +7456,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityPortGroupAggregationDef = (Initialize-capability.PortGroupAggregationDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -AggregationCap "AggregationCap_example" -Hw40GPortGroupCap $false -Pgtype "Pgtype_example") # CapabilityPortGroupAggregationDef | The 'capability.PortGroupAggregationDef' resource to update.
+$CapabilityPortGroupAggregationDef = (Initialize-capability.PortGroupAggregationDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -AggregationCap "AggregationCap_example" -Hw40GPortGroupCap $false -Pgtype "Pgtype_example") # CapabilityPortGroupAggregationDef | The 'capability.PortGroupAggregationDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.PortGroupAggregationDef' resource.
 try {
-    CapabilityPortGroupAggregationDef $Result = Set-IntersightCapabilityPortGroupAggregationDef -Moid $Moid -CapabilityPortGroupAggregationDef $CapabilityPortGroupAggregationDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityPortGroupAggregationDef -Moid $Moid -CapabilityPortGroupAggregationDef $CapabilityPortGroupAggregationDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityPortGroupAggregationDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -5959,12 +7499,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPortGroupAggregationDef**](CapabilityPortGroupAggregationDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -5991,19 +7531,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityPsuDescriptor = (Initialize-capability.PsuDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilityPsuDescriptor | The 'capability.PsuDescriptor' resource to update.
+$CapabilityPsuDescriptor = (Initialize-capability.PsuDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilityPsuDescriptor | The 'capability.PsuDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.PsuDescriptor' resource.
 try {
-    CapabilityPsuDescriptor $Result = Set-IntersightCapabilityPsuDescriptor -Moid $Moid -CapabilityPsuDescriptor $CapabilityPsuDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityPsuDescriptor -Moid $Moid -CapabilityPsuDescriptor $CapabilityPsuDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityPsuDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6019,12 +7574,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuDescriptor**](CapabilityPsuDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6051,19 +7606,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityPsuManufacturingDef = (Initialize-capability.PsuManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityPsuManufacturingDef | The 'capability.PsuManufacturingDef' resource to update.
+$CapabilityPsuManufacturingDef = (Initialize-capability.PsuManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilityPsuManufacturingDef | The 'capability.PsuManufacturingDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.PsuManufacturingDef' resource.
 try {
-    CapabilityPsuManufacturingDef $Result = Set-IntersightCapabilityPsuManufacturingDef -Moid $Moid -CapabilityPsuManufacturingDef $CapabilityPsuManufacturingDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilityPsuManufacturingDef -Moid $Moid -CapabilityPsuManufacturingDef $CapabilityPsuManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilityPsuManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6079,72 +7649,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuManufacturingDef**](CapabilityPsuManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/json-patch+json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Set-IntersightCapabilitySection"></a>
-# **Set-IntersightCapabilitySection**
-> CapabilitySection Set-IntersightCapabilitySection<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CapabilitySection] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
-
-Update a 'capability.Section' resource.
-
-### Example
-```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
-# Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
-# Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-# Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
-
-$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySection = (Initialize-capability.Section-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Action "Action_example" -CatalogName "CatalogName_example" -Name "Name_example" -Source "Source_example" -Version "Version_example" -Catalog ) # CapabilitySection | The 'capability.Section' resource to update.
-$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
-
-# Update a 'capability.Section' resource.
-try {
-    CapabilitySection $Result = Set-IntersightCapabilitySection -Moid $Moid -CapabilitySection $CapabilitySection -IfMatch $IfMatch
-} catch {
-    Write-Host ("Exception occured when calling Set-IntersightCapabilitySection: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Moid** | **String**| The unique Moid identifier of a resource instance. | 
- **CapabilitySection** | [**CapabilitySection**](CapabilitySection.md)| The &#39;capability.Section&#39; resource to update. | 
- **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
-
-### Return type
-
-[**CapabilitySection**](CapabilitySection.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6171,19 +7681,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySiocModuleCapabilityDef = (Initialize-capability.SiocModuleCapabilityDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -DcSupported $false) # CapabilitySiocModuleCapabilityDef | The 'capability.SiocModuleCapabilityDef' resource to update.
+$CapabilitySiocModuleCapabilityDef = (Initialize-capability.SiocModuleCapabilityDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -DcSupported $false) # CapabilitySiocModuleCapabilityDef | The 'capability.SiocModuleCapabilityDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.SiocModuleCapabilityDef' resource.
 try {
-    CapabilitySiocModuleCapabilityDef $Result = Set-IntersightCapabilitySiocModuleCapabilityDef -Moid $Moid -CapabilitySiocModuleCapabilityDef $CapabilitySiocModuleCapabilityDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilitySiocModuleCapabilityDef -Moid $Moid -CapabilitySiocModuleCapabilityDef $CapabilitySiocModuleCapabilityDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilitySiocModuleCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6199,12 +7724,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleCapabilityDef**](CapabilitySiocModuleCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6231,19 +7756,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySiocModuleDescriptor = (Initialize-capability.SiocModuleDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -Revision "Revision_example") # CapabilitySiocModuleDescriptor | The 'capability.SiocModuleDescriptor' resource to update.
+$CapabilitySiocModuleDescriptor = (Initialize-capability.SiocModuleDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Revision "Revision_example") # CapabilitySiocModuleDescriptor | The 'capability.SiocModuleDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.SiocModuleDescriptor' resource.
 try {
-    CapabilitySiocModuleDescriptor $Result = Set-IntersightCapabilitySiocModuleDescriptor -Moid $Moid -CapabilitySiocModuleDescriptor $CapabilitySiocModuleDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilitySiocModuleDescriptor -Moid $Moid -CapabilitySiocModuleDescriptor $CapabilitySiocModuleDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilitySiocModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6259,12 +7799,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleDescriptor**](CapabilitySiocModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6291,19 +7831,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySiocModuleManufacturingDef = (Initialize-capability.SiocModuleManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilitySiocModuleManufacturingDef | The 'capability.SiocModuleManufacturingDef' resource to update.
+$CapabilitySiocModuleManufacturingDef = (Initialize-capability.SiocModuleManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Caption "Caption_example" -Description "Description_example" -VarPid "VarPid_example" -ProductName "ProductName_example" -Sku "Sku_example" -Vid "Vid_example") # CapabilitySiocModuleManufacturingDef | The 'capability.SiocModuleManufacturingDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.SiocModuleManufacturingDef' resource.
 try {
-    CapabilitySiocModuleManufacturingDef $Result = Set-IntersightCapabilitySiocModuleManufacturingDef -Moid $Moid -CapabilitySiocModuleManufacturingDef $CapabilitySiocModuleManufacturingDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilitySiocModuleManufacturingDef -Moid $Moid -CapabilitySiocModuleManufacturingDef $CapabilitySiocModuleManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilitySiocModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6319,12 +7874,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleManufacturingDef**](CapabilitySiocModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6351,19 +7906,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySwitchCapability = (Initialize-capability.SwitchCapability-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -DefaultFcoeVlan 123 -DynamicVifsSupported $false -FanModulesSupported $false -FcEndHostModeReservedVsans @() -FcUplinkPortsAutoNegotiationSupported $false -LocatorBeaconSupported $false -MaxActiveSpanSessions 123 -MaxEthernetPortChannelMembers 123 -MaxEthernetPortChannels 123 -MaxEthernetUplinkPorts 123 -MaxFcFcoePortChannels 123 -MaxFcPortChannelMembers 123 -MaxFcoePortChannelMembers 123 -MaxPorts 123 -MaxSlots 123 -MaxVsansSupported 123 -MinActiveFans 123 -PortsSupporting100gSpeed @() -PortsSupporting10gSpeed @() -PortsSupporting1gSpeed @() -PortsSupporting25gSpeed @() -PortsSupporting40gSpeed @() -PortsSupportingBreakout @() -PortsSupportingFcoe @() -PortsSupportingServerRole @() -ReservedVsans @() -SerenoNetflowSupported $false -UnifiedPorts @() -UnifiedRule "UnifiedRule_example" -VpCompressionSupported $false) # CapabilitySwitchCapability | The 'capability.SwitchCapability' resource to update.
+$CapabilitySwitchCapability = (Initialize-capability.SwitchCapability-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -DefaultFcoeVlan 123 -DynamicVifsSupported $false -FanModulesSupported $false -FcEndHostModeReservedVsans @() -FcUplinkPortsAutoNegotiationSupported $false -LocatorBeaconSupported $false -MaxPorts 123 -MaxSlots 123 -NetworkLimits (Initialize-capability.SwitchNetworkLimits-ClassId "ClassId_example" -ObjectType "ObjectType_example" -MaxCompressedPortVlanCount 123 -MaxUncompressedPortVlanCount 123 -MaximumActiveTrafficMonitoringSessions 123 -MaximumEthernetPortChannels 123 -MaximumEthernetUplinkPorts 123 -MaximumFcPortChannelMembers 123 -MaximumFcPortChannels 123 -MaximumIgmpGroups 123 -MaximumPortChannelMembers 123 -MaximumPrimaryVlan 123 -MaximumSecondaryVlan 123 -MaximumSecondaryVlanPerPrimary 123 -MaximumVifs 123 -MaximumVlans 123 -MinimumActiveFans 123) -PortsSupporting100gSpeed @() -PortsSupporting10gSpeed @() -PortsSupporting1gSpeed @() -PortsSupporting25gSpeed @() -PortsSupporting40gSpeed @() -PortsSupportingBreakout @() -PortsSupportingFcoe @() -PortsSupportingServerRole @() -ReservedVsans @() -SerenoNetflowSupported $false -StorageLimits (Initialize-capability.SwitchStorageLimits-ClassId "ClassId_example" -ObjectType "ObjectType_example" -MaximumUserZoneCount 123 -MaximumVirtualFcInterfaces 123 -MaximumVirtualFcInterfacesPerBladeServer 123 -MaximumVsans 123 -MaximumZoneCount 123) -SwitchingModeCapabilities @((Initialize-capability.SwitchingModeCapability-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SwitchingMode "SwitchingMode_example" -VpCompressionSupported $false)) -SystemLimits (Initialize-capability.SwitchSystemLimits-ClassId "ClassId_example" -ObjectType "ObjectType_example" -MaximumChassisCount 123 -MaximumFexPerDomain 123 -MaximumServersPerDomain 123) -UnifiedPorts @() -UnifiedRule "UnifiedRule_example") # CapabilitySwitchCapability | The 'capability.SwitchCapability' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.SwitchCapability' resource.
 try {
-    CapabilitySwitchCapability $Result = Set-IntersightCapabilitySwitchCapability -Moid $Moid -CapabilitySwitchCapability $CapabilitySwitchCapability -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilitySwitchCapability -Moid $Moid -CapabilitySwitchCapability $CapabilitySwitchCapability -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilitySwitchCapability: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6379,12 +7949,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchCapability**](CapabilitySwitchCapability.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6411,19 +7981,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySwitchDescriptor = (Initialize-capability.SwitchDescriptor-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -Section  -ExpectedMemory 123 -Revision "Revision_example") # CapabilitySwitchDescriptor | The 'capability.SwitchDescriptor' resource to update.
+$CapabilitySwitchDescriptor = (Initialize-capability.SwitchDescriptor-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Model "Model_example" -Vendor "Vendor_example" -Version "Version_example" -Capabilities @() -ExpectedMemory 123 -Revision "Revision_example") # CapabilitySwitchDescriptor | The 'capability.SwitchDescriptor' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.SwitchDescriptor' resource.
 try {
-    CapabilitySwitchDescriptor $Result = Set-IntersightCapabilitySwitchDescriptor -Moid $Moid -CapabilitySwitchDescriptor $CapabilitySwitchDescriptor -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilitySwitchDescriptor -Moid $Moid -CapabilitySwitchDescriptor $CapabilitySwitchDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilitySwitchDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6439,12 +8024,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchDescriptor**](CapabilitySwitchDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6471,19 +8056,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySwitchManufacturingDef = (Initialize-capability.SwitchManufacturingDef-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Section  -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Caption "Caption_example" -Description "Description_example" -PartNumber "PartNumber_example" -ProductName "ProductName_example") # CapabilitySwitchManufacturingDef | The 'capability.SwitchManufacturingDef' resource to update.
+$CapabilitySwitchManufacturingDef = (Initialize-capability.SwitchManufacturingDef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -VarPid "VarPid_example" -Sku "Sku_example" -Vid "Vid_example" -Caption "Caption_example" -Description "Description_example" -PartNumber "PartNumber_example" -ProductName "ProductName_example") # CapabilitySwitchManufacturingDef | The 'capability.SwitchManufacturingDef' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.SwitchManufacturingDef' resource.
 try {
-    CapabilitySwitchManufacturingDef $Result = Set-IntersightCapabilitySwitchManufacturingDef -Moid $Moid -CapabilitySwitchManufacturingDef $CapabilitySwitchManufacturingDef -IfMatch $IfMatch
+     $Result = Set-IntersightCapabilitySwitchManufacturingDef -Moid $Moid -CapabilitySwitchManufacturingDef $CapabilitySwitchManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightCapabilitySwitchManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6499,12 +8099,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchManufacturingDef**](CapabilitySwitchManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6531,11 +8131,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityAdapterUnitDescriptor =  # CapabilityAdapterUnitDescriptor | The 'capability.AdapterUnitDescriptor' resource to update.
@@ -6543,7 +8158,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.AdapterUnitDescriptor' resource.
 try {
-    CapabilityAdapterUnitDescriptor $Result = Update-IntersightCapabilityAdapterUnitDescriptor -Moid $Moid -CapabilityAdapterUnitDescriptor $CapabilityAdapterUnitDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityAdapterUnitDescriptor -Moid $Moid -CapabilityAdapterUnitDescriptor $CapabilityAdapterUnitDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityAdapterUnitDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6559,12 +8174,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityAdapterUnitDescriptor**](CapabilityAdapterUnitDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6591,19 +8206,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilityCatalog = (Initialize-capability.Catalog-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Organization  -Sections @()) # CapabilityCatalog | The 'capability.Catalog' resource to update.
+$CapabilityCatalog = (Initialize-capability.Catalog-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Organization ) # CapabilityCatalog | The 'capability.Catalog' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'capability.Catalog' resource.
 try {
-    CapabilityCatalog $Result = Update-IntersightCapabilityCatalog -Moid $Moid -CapabilityCatalog $CapabilityCatalog -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityCatalog -Moid $Moid -CapabilityCatalog $CapabilityCatalog -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityCatalog: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6619,12 +8249,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityCatalog**](CapabilityCatalog.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6651,11 +8281,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityChassisDescriptor =  # CapabilityChassisDescriptor | The 'capability.ChassisDescriptor' resource to update.
@@ -6663,7 +8308,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.ChassisDescriptor' resource.
 try {
-    CapabilityChassisDescriptor $Result = Update-IntersightCapabilityChassisDescriptor -Moid $Moid -CapabilityChassisDescriptor $CapabilityChassisDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityChassisDescriptor -Moid $Moid -CapabilityChassisDescriptor $CapabilityChassisDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityChassisDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6679,12 +8324,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisDescriptor**](CapabilityChassisDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6711,11 +8356,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityChassisManufacturingDef =  # CapabilityChassisManufacturingDef | The 'capability.ChassisManufacturingDef' resource to update.
@@ -6723,7 +8383,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.ChassisManufacturingDef' resource.
 try {
-    CapabilityChassisManufacturingDef $Result = Update-IntersightCapabilityChassisManufacturingDef -Moid $Moid -CapabilityChassisManufacturingDef $CapabilityChassisManufacturingDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityChassisManufacturingDef -Moid $Moid -CapabilityChassisManufacturingDef $CapabilityChassisManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityChassisManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6739,12 +8399,87 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityChassisManufacturingDef**](CapabilityChassisManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/json-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Update-IntersightCapabilityCimcFirmwareDescriptor"></a>
+# **Update-IntersightCapabilityCimcFirmwareDescriptor**
+> CapabilityCimcFirmwareDescriptor Update-IntersightCapabilityCimcFirmwareDescriptor<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CapabilityCimcFirmwareDescriptor] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+
+Update a 'capability.CimcFirmwareDescriptor' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+$CapabilityCimcFirmwareDescriptor =  # CapabilityCimcFirmwareDescriptor | The 'capability.CimcFirmwareDescriptor' resource to update.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+
+# Update a 'capability.CimcFirmwareDescriptor' resource.
+try {
+     $Result = Update-IntersightCapabilityCimcFirmwareDescriptor -Moid $Moid -CapabilityCimcFirmwareDescriptor $CapabilityCimcFirmwareDescriptor -IfMatch $IfMatch
+} catch {
+    Write-Host ("Exception occured when calling Update-IntersightCapabilityCimcFirmwareDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+ **CapabilityCimcFirmwareDescriptor** | [**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)| The &#39;capability.CimcFirmwareDescriptor&#39; resource to update. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CapabilityCimcFirmwareDescriptor**](CapabilityCimcFirmwareDescriptor.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6771,11 +8506,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityEquipmentPhysicalDef =  # CapabilityEquipmentPhysicalDef | The 'capability.EquipmentPhysicalDef' resource to update.
@@ -6783,7 +8533,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.EquipmentPhysicalDef' resource.
 try {
-    CapabilityEquipmentPhysicalDef $Result = Update-IntersightCapabilityEquipmentPhysicalDef -Moid $Moid -CapabilityEquipmentPhysicalDef $CapabilityEquipmentPhysicalDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityEquipmentPhysicalDef -Moid $Moid -CapabilityEquipmentPhysicalDef $CapabilityEquipmentPhysicalDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityEquipmentPhysicalDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6799,12 +8549,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentPhysicalDef**](CapabilityEquipmentPhysicalDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6831,11 +8581,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityEquipmentSlotArray =  # CapabilityEquipmentSlotArray | The 'capability.EquipmentSlotArray' resource to update.
@@ -6843,7 +8608,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.EquipmentSlotArray' resource.
 try {
-    CapabilityEquipmentSlotArray $Result = Update-IntersightCapabilityEquipmentSlotArray -Moid $Moid -CapabilityEquipmentSlotArray $CapabilityEquipmentSlotArray -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityEquipmentSlotArray -Moid $Moid -CapabilityEquipmentSlotArray $CapabilityEquipmentSlotArray -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityEquipmentSlotArray: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6859,12 +8624,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityEquipmentSlotArray**](CapabilityEquipmentSlotArray.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6891,11 +8656,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityFanModuleDescriptor =  # CapabilityFanModuleDescriptor | The 'capability.FanModuleDescriptor' resource to update.
@@ -6903,7 +8683,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.FanModuleDescriptor' resource.
 try {
-    CapabilityFanModuleDescriptor $Result = Update-IntersightCapabilityFanModuleDescriptor -Moid $Moid -CapabilityFanModuleDescriptor $CapabilityFanModuleDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityFanModuleDescriptor -Moid $Moid -CapabilityFanModuleDescriptor $CapabilityFanModuleDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityFanModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6919,12 +8699,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleDescriptor**](CapabilityFanModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -6951,11 +8731,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityFanModuleManufacturingDef =  # CapabilityFanModuleManufacturingDef | The 'capability.FanModuleManufacturingDef' resource to update.
@@ -6963,7 +8758,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.FanModuleManufacturingDef' resource.
 try {
-    CapabilityFanModuleManufacturingDef $Result = Update-IntersightCapabilityFanModuleManufacturingDef -Moid $Moid -CapabilityFanModuleManufacturingDef $CapabilityFanModuleManufacturingDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityFanModuleManufacturingDef -Moid $Moid -CapabilityFanModuleManufacturingDef $CapabilityFanModuleManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityFanModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -6979,12 +8774,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityFanModuleManufacturingDef**](CapabilityFanModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7011,11 +8806,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityIoCardCapabilityDef =  # CapabilityIoCardCapabilityDef | The 'capability.IoCardCapabilityDef' resource to update.
@@ -7023,7 +8833,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.IoCardCapabilityDef' resource.
 try {
-    CapabilityIoCardCapabilityDef $Result = Update-IntersightCapabilityIoCardCapabilityDef -Moid $Moid -CapabilityIoCardCapabilityDef $CapabilityIoCardCapabilityDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityIoCardCapabilityDef -Moid $Moid -CapabilityIoCardCapabilityDef $CapabilityIoCardCapabilityDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityIoCardCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7039,12 +8849,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardCapabilityDef**](CapabilityIoCardCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7071,11 +8881,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityIoCardDescriptor =  # CapabilityIoCardDescriptor | The 'capability.IoCardDescriptor' resource to update.
@@ -7083,7 +8908,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.IoCardDescriptor' resource.
 try {
-    CapabilityIoCardDescriptor $Result = Update-IntersightCapabilityIoCardDescriptor -Moid $Moid -CapabilityIoCardDescriptor $CapabilityIoCardDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityIoCardDescriptor -Moid $Moid -CapabilityIoCardDescriptor $CapabilityIoCardDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityIoCardDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7099,12 +8924,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardDescriptor**](CapabilityIoCardDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7131,11 +8956,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityIoCardManufacturingDef =  # CapabilityIoCardManufacturingDef | The 'capability.IoCardManufacturingDef' resource to update.
@@ -7143,7 +8983,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.IoCardManufacturingDef' resource.
 try {
-    CapabilityIoCardManufacturingDef $Result = Update-IntersightCapabilityIoCardManufacturingDef -Moid $Moid -CapabilityIoCardManufacturingDef $CapabilityIoCardManufacturingDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityIoCardManufacturingDef -Moid $Moid -CapabilityIoCardManufacturingDef $CapabilityIoCardManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityIoCardManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7159,12 +8999,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityIoCardManufacturingDef**](CapabilityIoCardManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7191,11 +9031,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityPortGroupAggregationDef =  # CapabilityPortGroupAggregationDef | The 'capability.PortGroupAggregationDef' resource to update.
@@ -7203,7 +9058,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.PortGroupAggregationDef' resource.
 try {
-    CapabilityPortGroupAggregationDef $Result = Update-IntersightCapabilityPortGroupAggregationDef -Moid $Moid -CapabilityPortGroupAggregationDef $CapabilityPortGroupAggregationDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityPortGroupAggregationDef -Moid $Moid -CapabilityPortGroupAggregationDef $CapabilityPortGroupAggregationDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityPortGroupAggregationDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7219,12 +9074,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPortGroupAggregationDef**](CapabilityPortGroupAggregationDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7251,11 +9106,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityPsuDescriptor =  # CapabilityPsuDescriptor | The 'capability.PsuDescriptor' resource to update.
@@ -7263,7 +9133,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.PsuDescriptor' resource.
 try {
-    CapabilityPsuDescriptor $Result = Update-IntersightCapabilityPsuDescriptor -Moid $Moid -CapabilityPsuDescriptor $CapabilityPsuDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityPsuDescriptor -Moid $Moid -CapabilityPsuDescriptor $CapabilityPsuDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityPsuDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7279,12 +9149,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuDescriptor**](CapabilityPsuDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7311,11 +9181,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilityPsuManufacturingDef =  # CapabilityPsuManufacturingDef | The 'capability.PsuManufacturingDef' resource to update.
@@ -7323,7 +9208,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.PsuManufacturingDef' resource.
 try {
-    CapabilityPsuManufacturingDef $Result = Update-IntersightCapabilityPsuManufacturingDef -Moid $Moid -CapabilityPsuManufacturingDef $CapabilityPsuManufacturingDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilityPsuManufacturingDef -Moid $Moid -CapabilityPsuManufacturingDef $CapabilityPsuManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilityPsuManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7339,72 +9224,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilityPsuManufacturingDef**](CapabilityPsuManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/json-patch+json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Update-IntersightCapabilitySection"></a>
-# **Update-IntersightCapabilitySection**
-> CapabilitySection Update-IntersightCapabilitySection<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CapabilitySection] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
-
-Update a 'capability.Section' resource.
-
-### Example
-```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
-# Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
-# Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-# Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
-
-$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$CapabilitySection =  # CapabilitySection | The 'capability.Section' resource to update.
-$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
-
-# Update a 'capability.Section' resource.
-try {
-    CapabilitySection $Result = Update-IntersightCapabilitySection -Moid $Moid -CapabilitySection $CapabilitySection -IfMatch $IfMatch
-} catch {
-    Write-Host ("Exception occured when calling Update-IntersightCapabilitySection: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
-    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Moid** | **String**| The unique Moid identifier of a resource instance. | 
- **CapabilitySection** | [**CapabilitySection**](CapabilitySection.md)| The &#39;capability.Section&#39; resource to update. | 
- **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
-
-### Return type
-
-[**CapabilitySection**](CapabilitySection.md)
-
-### Authorization
-
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7431,11 +9256,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilitySiocModuleCapabilityDef =  # CapabilitySiocModuleCapabilityDef | The 'capability.SiocModuleCapabilityDef' resource to update.
@@ -7443,7 +9283,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.SiocModuleCapabilityDef' resource.
 try {
-    CapabilitySiocModuleCapabilityDef $Result = Update-IntersightCapabilitySiocModuleCapabilityDef -Moid $Moid -CapabilitySiocModuleCapabilityDef $CapabilitySiocModuleCapabilityDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilitySiocModuleCapabilityDef -Moid $Moid -CapabilitySiocModuleCapabilityDef $CapabilitySiocModuleCapabilityDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilitySiocModuleCapabilityDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7459,12 +9299,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleCapabilityDef**](CapabilitySiocModuleCapabilityDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7491,11 +9331,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilitySiocModuleDescriptor =  # CapabilitySiocModuleDescriptor | The 'capability.SiocModuleDescriptor' resource to update.
@@ -7503,7 +9358,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.SiocModuleDescriptor' resource.
 try {
-    CapabilitySiocModuleDescriptor $Result = Update-IntersightCapabilitySiocModuleDescriptor -Moid $Moid -CapabilitySiocModuleDescriptor $CapabilitySiocModuleDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilitySiocModuleDescriptor -Moid $Moid -CapabilitySiocModuleDescriptor $CapabilitySiocModuleDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilitySiocModuleDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7519,12 +9374,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleDescriptor**](CapabilitySiocModuleDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7551,11 +9406,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilitySiocModuleManufacturingDef =  # CapabilitySiocModuleManufacturingDef | The 'capability.SiocModuleManufacturingDef' resource to update.
@@ -7563,7 +9433,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.SiocModuleManufacturingDef' resource.
 try {
-    CapabilitySiocModuleManufacturingDef $Result = Update-IntersightCapabilitySiocModuleManufacturingDef -Moid $Moid -CapabilitySiocModuleManufacturingDef $CapabilitySiocModuleManufacturingDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilitySiocModuleManufacturingDef -Moid $Moid -CapabilitySiocModuleManufacturingDef $CapabilitySiocModuleManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilitySiocModuleManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7579,12 +9449,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySiocModuleManufacturingDef**](CapabilitySiocModuleManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7611,11 +9481,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilitySwitchCapability =  # CapabilitySwitchCapability | The 'capability.SwitchCapability' resource to update.
@@ -7623,7 +9508,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.SwitchCapability' resource.
 try {
-    CapabilitySwitchCapability $Result = Update-IntersightCapabilitySwitchCapability -Moid $Moid -CapabilitySwitchCapability $CapabilitySwitchCapability -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilitySwitchCapability -Moid $Moid -CapabilitySwitchCapability $CapabilitySwitchCapability -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilitySwitchCapability: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7639,12 +9524,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchCapability**](CapabilitySwitchCapability.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7671,11 +9556,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilitySwitchDescriptor =  # CapabilitySwitchDescriptor | The 'capability.SwitchDescriptor' resource to update.
@@ -7683,7 +9583,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.SwitchDescriptor' resource.
 try {
-    CapabilitySwitchDescriptor $Result = Update-IntersightCapabilitySwitchDescriptor -Moid $Moid -CapabilitySwitchDescriptor $CapabilitySwitchDescriptor -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilitySwitchDescriptor -Moid $Moid -CapabilitySwitchDescriptor $CapabilitySwitchDescriptor -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilitySwitchDescriptor: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7699,12 +9599,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchDescriptor**](CapabilitySwitchDescriptor.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -7731,11 +9631,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $CapabilitySwitchManufacturingDef =  # CapabilitySwitchManufacturingDef | The 'capability.SwitchManufacturingDef' resource to update.
@@ -7743,7 +9658,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'capability.SwitchManufacturingDef' resource.
 try {
-    CapabilitySwitchManufacturingDef $Result = Update-IntersightCapabilitySwitchManufacturingDef -Moid $Moid -CapabilitySwitchManufacturingDef $CapabilitySwitchManufacturingDef -IfMatch $IfMatch
+     $Result = Update-IntersightCapabilitySwitchManufacturingDef -Moid $Moid -CapabilitySwitchManufacturingDef $CapabilitySwitchManufacturingDef -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightCapabilitySwitchManufacturingDef: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -7759,12 +9674,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CapabilitySwitchManufacturingDef**](CapabilitySwitchManufacturingDef.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

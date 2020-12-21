@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "adapter.HostEthInterface"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "adapter.HostEthInterface"]
 **AdminState** | **String** | Admin state of the Host Ethernet Interface. | [optional] [readonly] 
 **EpDn** | **String** | The Endpoint Config Dn of the Host Ethernet Interface. | [optional] [readonly] 
 **HostEthInterfaceId** | **Int64** | Unique Identifier for an Host Ethernet Interface within the adapter object. | [optional] [readonly] 
@@ -23,7 +25,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAdapterHostEthInterfaceAllOf  -AdminState null `
+$AdapterHostEthInterfaceAllOf = Initialize-IntersightAdapterHostEthInterfaceAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminState null `
  -EpDn null `
  -HostEthInterfaceId null `
  -InterfaceType null `
@@ -42,7 +46,7 @@ Initialize-IntersightAdapterHostEthInterfaceAllOf  -AdminState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AdapterHostEthInterfaceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

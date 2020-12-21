@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "workflow.Constraints"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "workflow.Constraints"]
 **EnumList** | [**WorkflowEnumEntry[]**](WorkflowEnumEntry.md) |  | [optional] 
 **Max** | **Double** | Allowed maximum value of the parameter if parameter is integer/float or maximum length of the parameter if the parameter is string. When max and min are set to 0, then the limits are not checked. | [optional] 
 **Min** | **Double** | Allowed minimum value of the parameter if parameter is integer/float or minimum length of the parameter if the parameter is string. When max and min are set to 0, then the limits are not checked. | [optional] 
@@ -12,7 +14,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightWorkflowConstraintsAllOf  -EnumList null `
+$WorkflowConstraintsAllOf = Initialize-IntersightWorkflowConstraintsAllOf  -ClassId null `
+ -ObjectType null `
+ -EnumList null `
  -Max null `
  -Min null `
  -Regex null
@@ -20,7 +24,7 @@ Initialize-IntersightWorkflowConstraintsAllOf  -EnumList null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkflowConstraintsAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

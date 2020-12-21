@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "capability.PsuManufacturingDef"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "capability.PsuManufacturingDef"]
 **Caption** | **String** | Caption for a power supply unit. | [optional] 
 **Description** | **String** | Description for a power supply unit. | [optional] 
 **VarPid** | **String** | Product Identifier for a power supply unit. | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightCapabilityPsuManufacturingDefAllOf  -Caption null `
+$CapabilityPsuManufacturingDefAllOf = Initialize-IntersightCapabilityPsuManufacturingDefAllOf  -ClassId null `
+ -ObjectType null `
+ -Caption null `
  -Description null `
  -VarPid null `
  -ProductName null `
@@ -24,7 +28,7 @@ Initialize-IntersightCapabilityPsuManufacturingDefAllOf  -Caption null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CapabilityPsuManufacturingDefAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,9 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "vnic.EthIf"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "vnic.EthIf"]
 **Cdn** | [**VnicCdn**](VnicCdn.md) |  | [optional] 
-**FailoverEnabled** | **Boolean** | Setting this to true esnures that the traffic failsover from one uplink to another auotmatically in case of an uplink failure. It is applicable for Cisco VIC adapters only which are connected to Fabric Interconnect cluster. The uplink if specified determines the primary uplink in case of a failover. | [optional] 
-**MacAddress** | **String** | The MAC address that is assigned to the vnic based on the MAC pool that has been assigned to the LAN Connectivity Policy. | [optional] [readonly] 
+**FailoverEnabled** | **Boolean** | Setting this to true esnures that the traffic failsover from one uplink to another auotmatically in case of an uplink failure. It is applicable for Cisco VIC adapters only which are connected to Fabric Interconnect cluster. The uplink if specified determines the primary uplink in case of a failover. | [optional] [default to $false]
+**MacAddress** | **String** | The MAC address that is assigned to the vNIC based on the MAC pool that has been assigned to the LAN Connectivity Policy. | [optional] [readonly] 
 **Name** | **String** | Name of the virtual ethernet interface. | [optional] 
 **Order** | **Int64** | The order in which the virtual interface is brought up. The order assigned to an interface should be unique for all the Ethernet and Fibre-Channel interfaces on each PCI link on a VIC adapter. The maximum value of PCI order is limited by the number of virtual interfaces (Ethernet and Fibre-Channel) on each PCI link on a VIC adapter. All VIC adapters have a single PCI link except VIC 1385 which has two. | [optional] 
 **Placement** | [**VnicPlacementSettings**](VnicPlacementSettings.md) |  | [optional] 
@@ -16,6 +18,8 @@ Name | Type | Description | Notes
 **EthAdapterPolicy** | [**VnicEthAdapterPolicyRelationship**](VnicEthAdapterPolicyRelationship.md) |  | [optional] 
 **EthNetworkPolicy** | [**VnicEthNetworkPolicyRelationship**](VnicEthNetworkPolicyRelationship.md) |  | [optional] 
 **EthQosPolicy** | [**VnicEthQosPolicyRelationship**](VnicEthQosPolicyRelationship.md) |  | [optional] 
+**FabricEthNetworkControlPolicy** | [**FabricEthNetworkControlPolicyRelationship**](FabricEthNetworkControlPolicyRelationship.md) |  | [optional] 
+**FabricEthNetworkGroupPolicy** | [**FabricEthNetworkGroupPolicyRelationship[]**](FabricEthNetworkGroupPolicyRelationship.md) | An array of relationships to fabricEthNetworkGroupPolicy resources. | [optional] 
 **LanConnectivityPolicy** | [**VnicLanConnectivityPolicyRelationship**](VnicLanConnectivityPolicyRelationship.md) |  | [optional] 
 **LcpVnic** | [**VnicEthIfRelationship**](VnicEthIfRelationship.md) |  | [optional] 
 **MacLease** | [**MacpoolLeaseRelationship**](MacpoolLeaseRelationship.md) |  | [optional] 
@@ -27,7 +31,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightVnicEthIfAllOf  -Cdn null `
+$VnicEthIfAllOf = Initialize-IntersightVnicEthIfAllOf  -ClassId null `
+ -ObjectType null `
+ -Cdn null `
  -FailoverEnabled null `
  -MacAddress null `
  -Name null `
@@ -40,6 +46,8 @@ Initialize-IntersightVnicEthIfAllOf  -Cdn null `
  -EthAdapterPolicy null `
  -EthNetworkPolicy null `
  -EthQosPolicy null `
+ -FabricEthNetworkControlPolicy null `
+ -FabricEthNetworkGroupPolicy null `
  -LanConnectivityPolicy null `
  -LcpVnic null `
  -MacLease null `
@@ -50,7 +58,7 @@ Initialize-IntersightVnicEthIfAllOf  -Cdn null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$VnicEthIfAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

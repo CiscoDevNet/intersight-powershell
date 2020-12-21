@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.VirtualDrive"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.VirtualDrive"]
 **AccessPolicy** | **String** | The access policy of the virtual drive. | [optional] [readonly] 
 **ActualWriteCachePolicy** | **String** | The current write cache policy of the virtual drive. | [optional] [readonly] 
 **AvailableSize** | **String** | Available storage capacity of the virtual drive. | [optional] [readonly] 
@@ -34,6 +36,7 @@ Name | Type | Description | Notes
 **PhysicalDiskUsages** | [**StoragePhysicalDiskUsageRelationship[]**](StoragePhysicalDiskUsageRelationship.md) | An array of relationships to storagePhysicalDiskUsage resources. | [optional] 
 **RegisteredDevice** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
 **StorageController** | [**StorageControllerRelationship**](StorageControllerRelationship.md) |  | [optional] 
+**StorageVirtualDriveContainer** | [**StorageVirtualDriveContainerRelationship**](StorageVirtualDriveContainerRelationship.md) |  | [optional] 
 **VdMemberEps** | [**StorageVdMemberEpRelationship[]**](StorageVdMemberEpRelationship.md) | An array of relationships to storageVdMemberEp resources. | [optional] [readonly] 
 **VirtualDriveExtension** | [**StorageVirtualDriveExtensionRelationship**](StorageVirtualDriveExtensionRelationship.md) |  | [optional] 
 
@@ -41,7 +44,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageVirtualDriveAllOf  -AccessPolicy null `
+$StorageVirtualDriveAllOf = Initialize-IntersightStorageVirtualDriveAllOf  -ClassId null `
+ -ObjectType null `
+ -AccessPolicy null `
  -ActualWriteCachePolicy null `
  -AvailableSize null `
  -BlockSize null `
@@ -72,13 +77,14 @@ Initialize-IntersightStorageVirtualDriveAllOf  -AccessPolicy null `
  -PhysicalDiskUsages null `
  -RegisteredDevice null `
  -StorageController null `
+ -StorageVirtualDriveContainer null `
  -VdMemberEps null `
  -VirtualDriveExtension null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageVirtualDriveAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

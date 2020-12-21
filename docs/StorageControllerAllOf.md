@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.Controller"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.Controller"]
 **ControllerFlags** | **String** | The flags for the storage controller. | [optional] [readonly] 
 **ControllerId** | **String** | The Id of the storage controller. | [optional] [readonly] 
 **ControllerStatus** | **String** | The current status of controller. | [optional] [readonly] 
@@ -36,7 +38,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageControllerAllOf  -ControllerFlags null `
+$StorageControllerAllOf = Initialize-IntersightStorageControllerAllOf  -ClassId null `
+ -ObjectType null `
+ -ControllerFlags null `
  -ControllerId null `
  -ControllerStatus null `
  -ForeignConfigPresent null `
@@ -68,7 +72,7 @@ Initialize-IntersightStorageControllerAllOf  -ControllerFlags null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageControllerAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "macpool.PoolMember"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "macpool.PoolMember"]
 **MacAddress** | **String** | MAC Address of this pool member. | [optional] 
 **AssignedToEntity** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **BlockHead** | [**MacpoolIdBlockRelationship**](MacpoolIdBlockRelationship.md) |  | [optional] 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightMacpoolPoolMemberAllOf  -MacAddress null `
+$MacpoolPoolMemberAllOf = Initialize-IntersightMacpoolPoolMemberAllOf  -ClassId null `
+ -ObjectType null `
+ -MacAddress null `
  -AssignedToEntity null `
  -BlockHead null `
  -Peer null `
@@ -22,7 +26,7 @@ Initialize-IntersightMacpoolPoolMemberAllOf  -MacAddress null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MacpoolPoolMemberAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.VirtualDriveExtension"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.VirtualDriveExtension"]
 **Bootable** | **String** | The ability to boot from the virtual drive. | [optional] [readonly] 
 **ContainerId** | **Int64** | The container id of the virtual drive. | [optional] [readonly] 
 **DriveState** | **String** | The state of the virtual drive. | [optional] [readonly] 
@@ -21,7 +23,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageVirtualDriveExtensionAllOf  -Bootable null `
+$StorageVirtualDriveExtensionAllOf = Initialize-IntersightStorageVirtualDriveExtensionAllOf  -ClassId null `
+ -ObjectType null `
+ -Bootable null `
  -ContainerId null `
  -DriveState null `
  -Name null `
@@ -38,7 +42,7 @@ Initialize-IntersightStorageVirtualDriveExtensionAllOf  -Bootable null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageVirtualDriveExtensionAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

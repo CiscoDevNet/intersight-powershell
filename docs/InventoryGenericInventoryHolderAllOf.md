@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "inventory.GenericInventoryHolder"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "inventory.GenericInventoryHolder"]
 **Endpoint** | **String** | The endpoint represented by this holder. | [optional] [readonly] 
 **ComputeBlade** | [**ComputeBladeRelationship**](ComputeBladeRelationship.md) |  | [optional] 
 **ComputeRackUnit** | [**ComputeRackUnitRelationship**](ComputeRackUnitRelationship.md) |  | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightInventoryGenericInventoryHolderAllOf  -Endpoint null `
+$InventoryGenericInventoryHolderAllOf = Initialize-IntersightInventoryGenericInventoryHolderAllOf  -ClassId null `
+ -ObjectType null `
+ -Endpoint null `
  -ComputeBlade null `
  -ComputeRackUnit null `
  -GenericInventory null `
@@ -24,7 +28,7 @@ Initialize-IntersightInventoryGenericInventoryHolderAllOf  -Endpoint null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$InventoryGenericInventoryHolderAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

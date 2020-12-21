@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "policy.ConfigContext"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "policy.ConfigContext"]
 **ConfigState** | **String** | Indicates a profile&#39;s configuration deploying state. Values -- Assigned, Not-assigned, Associated, Pending-changes, Validating, Configuring, Failed. | [optional] [readonly] 
 **ControlAction** | **String** | System action to trigger the appropriate workflow. Values -- No_op, ConfigChange, Deploy, Unbind. | [optional] 
 **ErrorState** | **String** | Indicates a profile&#39;s error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error). | [optional] 
@@ -12,7 +14,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightPolicyConfigContextAllOf  -ConfigState null `
+$PolicyConfigContextAllOf = Initialize-IntersightPolicyConfigContextAllOf  -ClassId null `
+ -ObjectType null `
+ -ConfigState null `
  -ControlAction null `
  -ErrorState null `
  -OperState null
@@ -20,7 +24,7 @@ Initialize-IntersightPolicyConfigContextAllOf  -ConfigState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PolicyConfigContextAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

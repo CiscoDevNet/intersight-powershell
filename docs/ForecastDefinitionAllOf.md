@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "forecast.Definition"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "forecast.Definition"]
 **AlertThresholdInPercentage** | **Int64** | Threshold above which user needs to be indicated through alarm/alert. | [optional] [readonly] 
 **DataSource** | **String** | Data source from where we get the data for the metrics to compute regression model. For example Druid. | [optional] [readonly] 
 **MetricName** | **String** | Metric for which forecast prediction is done. Metrics are defined in the catalog file. Currently its only HyperFlex cluster storage capacity usage. | [optional] [readonly] 
@@ -15,7 +17,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightForecastDefinitionAllOf  -AlertThresholdInPercentage null `
+$ForecastDefinitionAllOf = Initialize-IntersightForecastDefinitionAllOf  -ClassId null `
+ -ObjectType null `
+ -AlertThresholdInPercentage null `
  -DataSource null `
  -MetricName null `
  -MinNumOfDaysOfData null `
@@ -26,7 +30,7 @@ Initialize-IntersightForecastDefinitionAllOf  -AlertThresholdInPercentage null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ForecastDefinitionAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

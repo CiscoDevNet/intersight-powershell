@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "compute.RackUnit"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "compute.RackUnit"]
 **ConnectionStatus** | **String** | Connectivity Status of RackUnit to Switch - A or B or AB. | [optional] [readonly] 
 **ServerId** | **Int64** | RackUnit ID that uniquely identifies the server. | [optional] [readonly] 
 **TopologyScanStatus** | **String** | To maintain the Topology workflow run status. | [optional] 
@@ -27,13 +29,14 @@ Name | Type | Description | Notes
 **StorageControllers** | [**StorageControllerRelationship[]**](StorageControllerRelationship.md) | An array of relationships to storageController resources. | [optional] 
 **StorageEnclosures** | [**StorageEnclosureRelationship[]**](StorageEnclosureRelationship.md) | An array of relationships to storageEnclosure resources. | [optional] [readonly] 
 **TopSystem** | [**TopSystemRelationship**](TopSystemRelationship.md) |  | [optional] 
-**UemConnection** | [**InventoryUemConnectionRelationship**](InventoryUemConnectionRelationship.md) |  | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightComputeRackUnitAllOf  -ConnectionStatus null `
+$ComputeRackUnitAllOf = Initialize-IntersightComputeRackUnitAllOf  -ClassId null `
+ -ObjectType null `
+ -ConnectionStatus null `
  -ServerId null `
  -TopologyScanStatus null `
  -Adapters null `
@@ -56,13 +59,12 @@ Initialize-IntersightComputeRackUnitAllOf  -ConnectionStatus null `
  -SasExpanders null `
  -StorageControllers null `
  -StorageEnclosures null `
- -TopSystem null `
- -UemConnection null
+ -TopSystem null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ComputeRackUnitAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

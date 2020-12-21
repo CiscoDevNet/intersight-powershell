@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "workflow.TargetProperty"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "workflow.TargetProperty"]
 **ConnectorAttribute** | **String** | A singleton value which will contain the path to connector object from the selected object. | [optional] 
 **ConstraintAttributes** | **String[]** |  | [optional] 
 **DisplayAttributes** | **String[]** |  | [optional] 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightWorkflowTargetPropertyAllOf  -ConnectorAttribute null `
+$WorkflowTargetPropertyAllOf = Initialize-IntersightWorkflowTargetPropertyAllOf  -ClassId null `
+ -ObjectType null `
+ -ConnectorAttribute null `
  -ConstraintAttributes null `
  -DisplayAttributes null `
  -Selector null `
@@ -22,7 +26,7 @@ Initialize-IntersightWorkflowTargetPropertyAllOf  -ConnectorAttribute null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkflowTargetPropertyAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
 **AccountMoid** | **String** | The Account ID for this managed object. | [optional] [readonly] 
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
 **CreateTime** | **System.DateTime** | The time when this managed object was created. | [optional] [readonly] 
 **DomainGroupMoid** | **String** | The DomainGroup ID for this managed object. | [optional] [readonly] 
 **ModTime** | **System.DateTime** | The time when this managed object was last modified. | [optional] [readonly] 
 **Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
-**ObjectType** | **String** | The fully-qualified type of this managed object, i.e. the class name. This property is optional. The ObjectType is implied from the URL path. If specified, the value of objectType must match the class name specified in the URL path. | [readonly] 
 **Owners** | **String[]** |  | [optional] 
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
@@ -17,23 +17,23 @@ Name | Type | Description | Notes
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
-**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | a map of display names for a resource. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | A set of display names for the MO resource. These names are calculated based on other properties of the MO and potentially properties of Ancestor MOs. Displaynames are intended as a way to provide a normalized user appropriate name for an MO, especially for MOs which do not have a &#39;Name&#39; property, which is the case for much of the inventory discovered from managed targets. There are a limited number of keys, currently &#39;short&#39; and &#39;hierarchical&#39;. The value is an array and clients should use the first element of the array. | [optional] [readonly] 
 **Description** | **String** | Brief description of the advisory details. | [optional] 
 **Name** | **String** | A user defined name for the Intersight Advisory. | [optional] 
 **Severity** | [**TamSeverity**](TamSeverity.md) |  | [optional] 
-**State** | **String** | Current state of the advisory. | [optional] [default to "ready"]
+**State** | **String** | Current state of the advisory. * &#x60;ready&#x60; - Advisory has been evaluated. The affected devices would be analyzed and corresponding advisory instances would be created. * &#x60;evaluating&#x60; - Advisory is currently under evaluation. The affected devices would be analyzed but no advisory instances wouldbe created. The results of the analysis would be made available to Intersight engineering for evaluation and validation. | [optional] [default to "ready"]
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTamBaseAdvisory  -AccountMoid null `
- -ClassId null `
+$TamBaseAdvisory = Initialize-IntersightTamBaseAdvisory  -ClassId null `
+ -ObjectType null `
+ -AccountMoid null `
  -CreateTime null `
  -DomainGroupMoid null `
  -ModTime null `
  -Moid null `
- -ObjectType null `
  -Owners null `
  -SharedScope null `
  -Tags null `
@@ -50,7 +50,7 @@ Initialize-IntersightTamBaseAdvisory  -AccountMoid null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TamBaseAdvisory | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

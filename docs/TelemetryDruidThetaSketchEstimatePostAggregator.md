@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidThetaSketchEstimatePostAggregator  -Type null `
+$TelemetryDruidThetaSketchEstimatePostAggregator = Initialize-IntersightTelemetryDruidThetaSketchEstimatePostAggregator  -Type null `
  -Name null `
  -Field null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidThetaSketchEstimatePostAggregator | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidPeriodGranularity  -Type null `
+$TelemetryDruidPeriodGranularity = Initialize-IntersightTelemetryDruidPeriodGranularity  -Type null `
  -Period null `
  -TimeZone null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidPeriodGranularity | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

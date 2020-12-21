@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.EnclosureDisk"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.EnclosureDisk"]
 **BlockSize** | **String** | The block size of the physical disk in bytes. | [optional] 
 **DiskId** | **String** | This field represents the disk Id in the storage enclosure. | [optional] 
 **DiskState** | **String** | This field identifies the current disk configuration applied in the physical disk. | [optional] 
@@ -21,7 +23,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageEnclosureDiskAllOf  -BlockSize null `
+$StorageEnclosureDiskAllOf = Initialize-IntersightStorageEnclosureDiskAllOf  -ClassId null `
+ -ObjectType null `
+ -BlockSize null `
  -DiskId null `
  -DiskState null `
  -Health null `
@@ -38,7 +42,7 @@ Initialize-IntersightStorageEnclosureDiskAllOf  -BlockSize null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageEnclosureDiskAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

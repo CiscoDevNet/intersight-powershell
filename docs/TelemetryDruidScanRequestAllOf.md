@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DataSource** | [**TelemetryDruidDataSource**](TelemetryDruidDataSource.md) |  | 
 **Intervals** | **String[]** | A JSON Object representing ISO-8601 Intervals. This defines the time ranges to run the query over. | 
-**ResultFormat** | **String** | How the results are represented, list, compactedList or valueVector. Currently only list and compactedList are supported. | [optional] [default to "list"]
+**ResultFormat** | **String** | How the results are represented, list, compactedList or valueVector. Currently only list is supported. | [optional] [default to "list"]
 **VarFilter** | [**TelemetryDruidFilter**](TelemetryDruidFilter.md) |  | [optional] 
 **Columns** | **String[]** | A String array of dimensions and metrics to scan. If left empty, all dimensions and metrics are returned. | [optional] 
 **BatchSize** | **Int32** | The maximum number of rows buffered before being returned to the client. | [optional] [default to 20480]
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidScanRequestAllOf  -DataSource null `
+$TelemetryDruidScanRequestAllOf = Initialize-IntersightTelemetryDruidScanRequestAllOf  -DataSource null `
  -Intervals [&quot;2020-01-01T00:00:00.000/2020-01-03T00:00:00.000&quot;] `
  -ResultFormat null `
  -VarFilter null `
@@ -32,7 +32,7 @@ Initialize-IntersightTelemetryDruidScanRequestAllOf  -DataSource null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidScanRequestAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

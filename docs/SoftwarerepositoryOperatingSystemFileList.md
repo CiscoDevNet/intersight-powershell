@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightSoftwarerepositoryOperatingSystemFileList  -ObjectType null `
+$SoftwarerepositoryOperatingSystemFileList = Initialize-IntersightSoftwarerepositoryOperatingSystemFileList  -ObjectType null `
  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SoftwarerepositoryOperatingSystemFileList | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

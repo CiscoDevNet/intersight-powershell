@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.SharedIoModule"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.SharedIoModule"]
 **ConfigState** | **String** | This field identifies the configuration state for this SIOM Unit. | [optional] [readonly] 
 **Discovery** | **String** | This field identifies the discovery state of SIOM. | [optional] [readonly] 
 **MacOfSharedIomAside** | **String** | This field identifies the MAC of IOM-A side. | [optional] [readonly] 
@@ -22,7 +24,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentSharedIoModuleAllOf  -ConfigState null `
+$EquipmentSharedIoModuleAllOf = Initialize-IntersightEquipmentSharedIoModuleAllOf  -ClassId null `
+ -ObjectType null `
+ -ConfigState null `
  -Discovery null `
  -MacOfSharedIomAside null `
  -MacOfSharedIomBside null `
@@ -40,7 +44,7 @@ Initialize-IntersightEquipmentSharedIoModuleAllOf  -ConfigState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentSharedIoModuleAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,22 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
 **Options** | [**AssetServiceOptions**](AssetServiceOptions.md) |  | [optional] 
-**Status** | **String** | Status indicates if the respective Service can establish a connection and authenticate with the managed target. Status does not include information about the functional health of the target. | [optional] [default to ""]
-**StatusErrorReason** | **String** | When &#39;Status&#39; is not Connected, statusErrorReason provides further details about why the device is not connected with Intersight. | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAssetServiceAllOf  -Options null `
- -Status null `
- -StatusErrorReason null
+$AssetServiceAllOf = Initialize-IntersightAssetServiceAllOf  -ClassId null `
+ -ObjectType null `
+ -Options null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AssetServiceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

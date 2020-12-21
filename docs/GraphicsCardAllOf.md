@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "graphics.Card"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "graphics.Card"]
 **CardId** | **Int64** | The id of the graphics card. | [optional] [readonly] 
 **DeviceId** | **Int64** | The device id of the graphics card. | [optional] [readonly] 
 **ExpanderSlot** | **String** | The expander slot information of the card. | [optional] [readonly] 
@@ -25,7 +27,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightGraphicsCardAllOf  -CardId null `
+$GraphicsCardAllOf = Initialize-IntersightGraphicsCardAllOf  -ClassId null `
+ -ObjectType null `
+ -CardId null `
  -DeviceId null `
  -ExpanderSlot null `
  -FirmwareVersion null `
@@ -46,7 +50,7 @@ Initialize-IntersightGraphicsCardAllOf  -CardId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GraphicsCardAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

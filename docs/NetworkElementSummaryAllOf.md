@@ -3,20 +3,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "network.ElementSummary"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "network.ElementSummary"]
 **AdminEvacState** | **String** | Administratively configured state of Fabric Evacuation feature, for this switch. | [optional] [readonly] 
 **AdminInbandInterfaceState** | **String** | The administrative state of the network Element inband management interface. | [optional] [readonly] 
+**AlarmSummary** | [**ComputeAlarmSummary**](ComputeAlarmSummary.md) |  | [optional] 
 **AvailableMemory** | **String** | Available memory (un-used) on this switch platform. | [optional] [readonly] 
 **DeviceMoId** | **String** | The database identifier of the registered device of an object. | [optional] [readonly] 
 **Dn** | **String** | The Distinguished Name unambiguously identifies an object in the system. | [optional] [readonly] 
 **EthernetMode** | **String** | The user configured Ethernet operational mode for this switch (End-Host or Switching). | [optional] [readonly] 
+**EthernetSwitchingMode** | **String** | The user configured Ethernet operational mode for this switch (End-Host or Switching). * &#x60;end-host&#x60; - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer. * &#x60;switch&#x60; - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode. | [optional] [readonly] [default to "end-host"]
 **FaultSummary** | **Int64** | The fault summary of the network Element out-of-band management interface. | [optional] [readonly] 
 **FcMode** | **String** | The user configured FC operational mode for this switch (End-Host or Switching). | [optional] [readonly] 
+**FcSwitchingMode** | **String** | The user configured FC operational mode for this switch (End-Host or Switching). * &#x60;end-host&#x60; - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer. * &#x60;switch&#x60; - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode. | [optional] [readonly] [default to "end-host"]
 **Firmware** | **String** | Running firmware information. | [optional] [readonly] 
 **InbandIpAddress** | **String** | The IP address of the network Element inband management interface. | [optional] [readonly] 
 **InbandIpGateway** | **String** | The default gateway of the network Element inband management interface. | [optional] [readonly] 
 **InbandIpMask** | **String** | The network mask of the network Element inband management interface. | [optional] [readonly] 
 **InbandVlan** | **Int64** | The VLAN ID of the network Element inband management interface. | [optional] [readonly] 
 **Ipv4Address** | **String** | IP version 4 address is saved in this property. | [optional] [readonly] 
+**ManagementMode** | **String** | The management mode of the fabric interconnect. * &#x60;IntersightStandalone&#x60; - Intersight Standalone mode of operation. * &#x60;UCSM&#x60; - Unified Computing System Manager mode of operation. * &#x60;Intersight&#x60; - Intersight managed mode of operation. | [optional] [readonly] [default to "IntersightStandalone"]
 **Model** | **String** | This field identifies the model of the given component. | [optional] [readonly] 
 **Name** | **String** | Name of the ElementSummary object is saved in this property. | [optional] [readonly] 
 **NumEtherPorts** | **Int64** | Total number of Ethernet ports. | [optional] [readonly] 
@@ -52,20 +58,26 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightNetworkElementSummaryAllOf  -AdminEvacState null `
+$NetworkElementSummaryAllOf = Initialize-IntersightNetworkElementSummaryAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminEvacState null `
  -AdminInbandInterfaceState null `
+ -AlarmSummary null `
  -AvailableMemory null `
  -DeviceMoId null `
  -Dn null `
  -EthernetMode null `
+ -EthernetSwitchingMode null `
  -FaultSummary null `
  -FcMode null `
+ -FcSwitchingMode null `
  -Firmware null `
  -InbandIpAddress null `
  -InbandIpGateway null `
  -InbandIpMask null `
  -InbandVlan null `
  -Ipv4Address null `
+ -ManagementMode null `
  -Model null `
  -Name null `
  -NumEtherPorts null `
@@ -100,7 +112,7 @@ Initialize-IntersightNetworkElementSummaryAllOf  -AdminEvacState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$NetworkElementSummaryAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

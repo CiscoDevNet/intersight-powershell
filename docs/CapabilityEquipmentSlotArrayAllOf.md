@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "capability.EquipmentSlotArray"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "capability.EquipmentSlotArray"]
 **FirstIndex** | **Double** | First Index information for a Switch/Fabric-Interconnect hardware. | [optional] 
 **Height** | **Double** | Height information for a Switch/Fabric-Interconnect hardware. | [optional] 
 **HorizontalStartOffset** | **Double** | Horizontal Start Offset information for a Switch/Fabric-Interconnect hardware. | [optional] 
@@ -24,7 +26,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightCapabilityEquipmentSlotArrayAllOf  -FirstIndex null `
+$CapabilityEquipmentSlotArrayAllOf = Initialize-IntersightCapabilityEquipmentSlotArrayAllOf  -ClassId null `
+ -ObjectType null `
+ -FirstIndex null `
  -Height null `
  -HorizontalStartOffset null `
  -InlineGroupSeparation null `
@@ -44,7 +48,7 @@ Initialize-IntersightCapabilityEquipmentSlotArrayAllOf  -FirstIndex null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CapabilityEquipmentSlotArrayAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

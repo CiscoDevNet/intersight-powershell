@@ -3,17 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
-**MemoryModePercentage** | **Int32** | Volatile memory percentage. | [optional] 
-**PersistentMemoryType** | **String** | Type of the Persistent Memory configuration where the Persistent Memory Modules are combined in an interleaved set or not. | [optional] [default to "app-direct"]
-**SocketId** | **String** | CPU Socket ID to which this goal will be applied. | [optional] [default to "All Sockets"]
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "memory.PersistentMemoryGoal"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "memory.PersistentMemoryGoal"]
+**MemoryModePercentage** | **Int64** | Volatile memory percentage. | [optional] 
+**PersistentMemoryType** | **String** | Type of the Persistent Memory configuration where the Persistent Memory Modules are combined in an interleaved set or not. * &#x60;app-direct&#x60; - The App Direct interleaved Persistent Memory type. * &#x60;app-direct-non-interleaved&#x60; - The App Direct non-interleaved Persistent Memory type. | [optional] [default to "app-direct"]
+**SocketId** | **String** | CPU Socket ID to which this goal will be applied. * &#x60;All Sockets&#x60; - All the CPU socket IDs in a server. | [optional] [default to "All Sockets"]
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightMemoryPersistentMemoryGoal  -ClassId null `
+$MemoryPersistentMemoryGoal = Initialize-IntersightMemoryPersistentMemoryGoal  -ClassId null `
  -ObjectType null `
  -MemoryModePercentage null `
  -PersistentMemoryType null `
@@ -22,7 +22,7 @@ Initialize-IntersightMemoryPersistentMemoryGoal  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MemoryPersistentMemoryGoal | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

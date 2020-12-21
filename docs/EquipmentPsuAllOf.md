@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.Psu"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.Psu"]
 **Description** | **String** | This field is to provide description for the power supply unit. | [optional] [readonly] 
 **OperState** | **String** | This field identifies the psu operational state. | [optional] [readonly] 
 **PartNumber** | **String** | This field identifies the Part Number for this Power Supply Unit. | [optional] [readonly] 
@@ -28,7 +30,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentPsuAllOf  -Description null `
+$EquipmentPsuAllOf = Initialize-IntersightEquipmentPsuAllOf  -ClassId null `
+ -ObjectType null `
+ -Description null `
  -OperState null `
  -PartNumber null `
  -VarPid null `
@@ -52,7 +56,7 @@ Initialize-IntersightEquipmentPsuAllOf  -Description null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentPsuAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

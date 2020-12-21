@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "capability.SwitchCapability"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "capability.SwitchCapability"]
 **AccountMoid** | **String** | The Account ID for this managed object. | [optional] [readonly] 
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
 **CreateTime** | **System.DateTime** | The time when this managed object was created. | [optional] [readonly] 
 **DomainGroupMoid** | **String** | The DomainGroup ID for this managed object. | [optional] [readonly] 
 **ModTime** | **System.DateTime** | The time when this managed object was last modified. | [optional] [readonly] 
 **Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
-**ObjectType** | **String** | The fully-qualified type of this managed object, i.e. the class name. This property is optional. The ObjectType is implied from the URL path. If specified, the value of objectType must match the class name specified in the URL path. | [readonly] 
 **Owners** | **String[]** |  | [optional] 
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
@@ -17,10 +17,9 @@ Name | Type | Description | Notes
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
-**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | a map of display names for a resource. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | A set of display names for the MO resource. These names are calculated based on other properties of the MO and potentially properties of Ancestor MOs. Displaynames are intended as a way to provide a normalized user appropriate name for an MO, especially for MOs which do not have a &#39;Name&#39; property, which is the case for much of the inventory discovered from managed targets. There are a limited number of keys, currently &#39;short&#39; and &#39;hierarchical&#39;. The value is an array and clients should use the first element of the array. | [optional] [readonly] 
 **Name** | **String** | An unique identifer for a capability descriptor. | [optional] 
-**Section** | [**CapabilitySectionRelationship**](CapabilitySectionRelationship.md) |  | [optional] 
-**VarPid** | **String** | Product Identifier for a Switch/Fabric-Interconnect. | [optional] 
+**VarPid** | **String** | Product Identifier for a Switch/Fabric-Interconnect. * &#x60;UCS-FI-6454&#x60; - The standard 4th generation UCS Fabric Interconnect with 54 ports. * &#x60;UCS-FI-64108&#x60; - The expanded 4th generation UCS Fabric Interconnect with 108 ports. * &#x60;unknown&#x60; - Unknown device type, usage is TBD. | [optional] [default to "UCS-FI-6454"]
 **Sku** | **String** | SKU information for Switch/Fabric-Interconnect. | [optional] 
 **Vid** | **String** | VID information for Switch/Fabric-Interconnect. | [optional] 
 **DefaultFcoeVlan** | **Int64** | Default Fcoe VLAN associated with this switch. | [optional] 
@@ -29,17 +28,9 @@ Name | Type | Description | Notes
 **FcEndHostModeReservedVsans** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
 **FcUplinkPortsAutoNegotiationSupported** | **Boolean** | Fc Uplink ports auto negotiation speed support on this switch. | [optional] 
 **LocatorBeaconSupported** | **Boolean** | Locator Beacon LED support on this switch. | [optional] 
-**MaxActiveSpanSessions** | **Int64** | Maximum allowed Traffic Monitoring (SPAN) sessions on this switch. | [optional] 
-**MaxEthernetPortChannelMembers** | **Int64** | Maximum allowed Ethernet Uplink Port-channel members for each Uplink Port-channel on this switch. | [optional] 
-**MaxEthernetPortChannels** | **Int64** | Maximum allowed Ethernet Uplink Port-channels on this switch. | [optional] 
-**MaxEthernetUplinkPorts** | **Int64** | Maximum allowed Ethernet Uplink Ports on this switch. | [optional] 
-**MaxFcFcoePortChannels** | **Int64** | Total maximum Fc and Fcoe Port-channels allowed on this switch. | [optional] 
-**MaxFcPortChannelMembers** | **Int64** | Maximum allowed FC Uplink Port-channel members for each FCoE Port-channel on this switch. | [optional] 
-**MaxFcoePortChannelMembers** | **Int64** | Maximum allowed FCoE Uplink Port-channel members for each FCoE Port-channel on this switch. | [optional] 
 **MaxPorts** | **Int64** | Maximum allowed physical ports on this switch. | [optional] 
 **MaxSlots** | **Int64** | Maximum allowed physical slots on this switch. | [optional] 
-**MaxVsansSupported** | **Int64** | Maximum number of Vsans supported on this switch. | [optional] 
-**MinActiveFans** | **Int64** | Minimum number of fans needed to be active/running on this switch. | [optional] 
+**NetworkLimits** | [**CapabilitySwitchNetworkLimits**](CapabilitySwitchNetworkLimits.md) |  | [optional] 
 **PortsSupporting100gSpeed** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
 **PortsSupporting10gSpeed** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
 **PortsSupporting1gSpeed** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
@@ -50,21 +41,23 @@ Name | Type | Description | Notes
 **PortsSupportingServerRole** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
 **ReservedVsans** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
 **SerenoNetflowSupported** | **Boolean** | Sereno Adaptor with Netflow support on this switch. | [optional] 
+**StorageLimits** | [**CapabilitySwitchStorageLimits**](CapabilitySwitchStorageLimits.md) |  | [optional] 
+**SwitchingModeCapabilities** | [**CapabilitySwitchingModeCapability[]**](CapabilitySwitchingModeCapability.md) |  | [optional] 
+**SystemLimits** | [**CapabilitySwitchSystemLimits**](CapabilitySwitchSystemLimits.md) |  | [optional] 
 **UnifiedPorts** | [**CapabilityPortRange[]**](CapabilityPortRange.md) |  | [optional] 
 **UnifiedRule** | **String** | The Slider rule for Unified ports on this switch. | [optional] 
-**VpCompressionSupported** | **Boolean** | VP Compression support on this switch. | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightCapabilitySwitchCapability  -AccountMoid null `
- -ClassId null `
+$CapabilitySwitchCapability = Initialize-IntersightCapabilitySwitchCapability  -ClassId null `
+ -ObjectType null `
+ -AccountMoid null `
  -CreateTime null `
  -DomainGroupMoid null `
  -ModTime null `
  -Moid null `
- -ObjectType null `
  -Owners null `
  -SharedScope null `
  -Tags null `
@@ -74,7 +67,6 @@ Initialize-IntersightCapabilitySwitchCapability  -AccountMoid null `
  -PermissionResources null `
  -DisplayNames null `
  -Name null `
- -Section null `
  -VarPid null `
  -Sku null `
  -Vid null `
@@ -84,17 +76,9 @@ Initialize-IntersightCapabilitySwitchCapability  -AccountMoid null `
  -FcEndHostModeReservedVsans null `
  -FcUplinkPortsAutoNegotiationSupported null `
  -LocatorBeaconSupported null `
- -MaxActiveSpanSessions null `
- -MaxEthernetPortChannelMembers null `
- -MaxEthernetPortChannels null `
- -MaxEthernetUplinkPorts null `
- -MaxFcFcoePortChannels null `
- -MaxFcPortChannelMembers null `
- -MaxFcoePortChannelMembers null `
  -MaxPorts null `
  -MaxSlots null `
- -MaxVsansSupported null `
- -MinActiveFans null `
+ -NetworkLimits null `
  -PortsSupporting100gSpeed null `
  -PortsSupporting10gSpeed null `
  -PortsSupporting1gSpeed null `
@@ -105,14 +89,16 @@ Initialize-IntersightCapabilitySwitchCapability  -AccountMoid null `
  -PortsSupportingServerRole null `
  -ReservedVsans null `
  -SerenoNetflowSupported null `
+ -StorageLimits null `
+ -SwitchingModeCapabilities null `
+ -SystemLimits null `
  -UnifiedPorts null `
- -UnifiedRule null `
- -VpCompressionSupported null
+ -UnifiedRule null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CapabilitySwitchCapability | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

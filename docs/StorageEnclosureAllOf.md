@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.Enclosure"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.Enclosure"]
 **ChassisId** | **Int64** | This represent the chassis-ID that houses the storage enclosure. | [optional] [readonly] 
 **Description** | **String** | This represnets the description for the storage enclosure. | [optional] [readonly] 
 **EnclosureId** | **Int64** | This represnets the Identifier for the storage enclosure. | [optional] [readonly] 
@@ -23,7 +25,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageEnclosureAllOf  -ChassisId null `
+$StorageEnclosureAllOf = Initialize-IntersightStorageEnclosureAllOf  -ClassId null `
+ -ObjectType null `
+ -ChassisId null `
  -Description null `
  -EnclosureId null `
  -NumSlots null `
@@ -42,7 +46,7 @@ Initialize-IntersightStorageEnclosureAllOf  -ChassisId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageEnclosureAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

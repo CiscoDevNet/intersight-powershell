@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "ucsd.BackupInfo"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "ucsd.BackupInfo"]
 **BackupFileName** | **String** | Auto generated backup File Name with combination of file prefix given an user input and the timestamp. | [optional] [readonly] 
 **BackupLocation** | **String** | Backup location that contains the backup images for end device which can be used for restore operation. | [optional] [readonly] 
 **BackupServerIp** | **String** | Backup server where backup images are maintained. | [optional] [readonly] 
@@ -24,7 +26,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightUcsdBackupInfoAllOf  -BackupFileName null `
+$UcsdBackupInfoAllOf = Initialize-IntersightUcsdBackupInfoAllOf  -ClassId null `
+ -ObjectType null `
+ -BackupFileName null `
  -BackupLocation null `
  -BackupServerIp null `
  -BackupSize null `
@@ -44,7 +48,7 @@ Initialize-IntersightUcsdBackupInfoAllOf  -BackupFileName null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UcsdBackupInfoAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

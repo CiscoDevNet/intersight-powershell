@@ -10,13 +10,13 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTechsupportmanagementTechSupportStatusListAllOf  -Count null `
+$TechsupportmanagementTechSupportStatusListAllOf = Initialize-IntersightTechsupportmanagementTechSupportStatusListAllOf  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TechsupportmanagementTechSupportStatusListAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

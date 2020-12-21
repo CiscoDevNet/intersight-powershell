@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidJoinDataSourceAllOf  -Left null `
+$TelemetryDruidJoinDataSourceAllOf = Initialize-IntersightTelemetryDruidJoinDataSourceAllOf  -Left null `
  -Right null `
  -RightPrefix null `
  -Condition null `
@@ -22,7 +22,7 @@ Initialize-IntersightTelemetryDruidJoinDataSourceAllOf  -Left null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidJoinDataSourceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

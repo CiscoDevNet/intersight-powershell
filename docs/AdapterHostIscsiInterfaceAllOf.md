@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "adapter.HostIscsiInterface"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "adapter.HostIscsiInterface"]
 **AdminState** | **String** | Admin Configured State of Host ISCSI Interface. | [optional] [readonly] 
 **EpDn** | **String** | The Endpoint Config Dn of the Host ISCSI Interface. | [optional] [readonly] 
 **HostIscsiInterfaceId** | **Int64** | Identifier of the Host ISCSI Interface. | [optional] [readonly] 
@@ -20,7 +22,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAdapterHostIscsiInterfaceAllOf  -AdminState null `
+$AdapterHostIscsiInterfaceAllOf = Initialize-IntersightAdapterHostIscsiInterfaceAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminState null `
  -EpDn null `
  -HostIscsiInterfaceId null `
  -HostVisible null `
@@ -36,7 +40,7 @@ Initialize-IntersightAdapterHostIscsiInterfaceAllOf  -AdminState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AdapterHostIscsiInterfaceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "management.Controller"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "management.Controller"]
 **Model** | **String** | Model of the endpoint that houses the management controller. | [optional] [readonly] 
 **AdapterUnit** | [**AdapterUnitRelationship**](AdapterUnitRelationship.md) |  | [optional] 
 **ComputeBlade** | [**ComputeBladeRelationship**](ComputeBladeRelationship.md) |  | [optional] 
@@ -22,7 +24,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightManagementControllerAllOf  -Model null `
+$ManagementControllerAllOf = Initialize-IntersightManagementControllerAllOf  -ClassId null `
+ -ObjectType null `
+ -Model null `
  -AdapterUnit null `
  -ComputeBlade null `
  -ComputeRackUnit null `
@@ -40,7 +44,7 @@ Initialize-IntersightManagementControllerAllOf  -Model null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagementControllerAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

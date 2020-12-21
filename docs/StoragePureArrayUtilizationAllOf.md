@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.PureArrayUtilization"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.PureArrayUtilization"]
 **DataReduction** | **Double** | Ratio of mapped sectors within a volume versus the amount of physical space the data occupies after data compression and deduplication. The data reduction ratio does not include thin provisioning savings. For example, a data reduction ratio of 5.0 means that for every 5 MB the host writes to the array, 1 MB is stored on the array&#39;s flash modules. | [optional] [readonly] 
 **Parity** | **Double** | Percentage of data that is fully protected. The percentage value will drop below 100% if the data is not fully protected. | [optional] [readonly] 
 **Provisioned** | **Int64** | Total provisioned storage capacity in Pure FlashArray, represented in bytes. | [optional] [readonly] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStoragePureArrayUtilizationAllOf  -DataReduction null `
+$StoragePureArrayUtilizationAllOf = Initialize-IntersightStoragePureArrayUtilizationAllOf  -ClassId null `
+ -ObjectType null `
+ -DataReduction null `
  -Parity null `
  -Provisioned null `
  -Shared null `
@@ -30,7 +34,7 @@ Initialize-IntersightStoragePureArrayUtilizationAllOf  -DataReduction null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StoragePureArrayUtilizationAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

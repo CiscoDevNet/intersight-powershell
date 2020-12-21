@@ -3,15 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "workflow.TargetDataType"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "workflow.TargetDataType"]
 **Default** | [**WorkflowDefaultValue**](WorkflowDefaultValue.md) |  | [optional] 
 **Description** | **String** | Provide a detailed description of the data type. | [optional] 
-**Label** | **String** | Descriptive label for the data type. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), space ( ) or an underscore (_). The first and last character in label must be an alphanumeric character. | [optional] 
+**DisplayMeta** | [**WorkflowDisplayMeta**](WorkflowDisplayMeta.md) |  | [optional] 
+**InputParameters** | [**AnyType**](.md) | JSON formatted mapping from other property of the definition to the current property. Input parameter mapping is supported only for custom data type property in workflow definition and custom data type definition. The format to specify mapping ina workflow definition when source property is of scalar types is &#39;${workflow.input.property}&#39;. The format to specify mapping when the source property is of object reference and mapping needs to be made to the property of the object is &#39;${workflow.input.property.subproperty}&#39;. The format to specify mapping in a custom data type definition is &#39;${datatype.type.property}&#39;. When the current property is of non-scalar type like composite custom data type, then mapping can be provided to the individual property of the custom data type like &#39;cdt_property:${workflow.input.property}&#39;. | [optional] 
+**Label** | **String** | Descriptive label for the data type. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), space ( ) or an underscore (_). The first and last character in label must be an alphanumeric character. | [optional] 
 **Name** | **String** | Descriptive name for the data type. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_). The first and last character in name must be an alphanumeric character. | [optional] 
 **Required** | **Boolean** | Specifies whether this parameter is required. The field is applicable for task and workflow. | [optional] 
 **CustomDataTypeProperties** | [**WorkflowCustomDataProperty**](WorkflowCustomDataProperty.md) |  | [optional] 
-**IsArray** | **Boolean** | When this property is true then an array of targets can be passed as input. | [optional] 
+**IsArray** | **Boolean** | When this property is true then an array of targets can be passed as input. | [optional] [default to $false]
 **Max** | **Int64** | Specify the maximum value of the array. | [optional] 
 **Min** | **Int64** | Specify the minimum value of the array. | [optional] 
 **Properties** | [**WorkflowTargetProperty[]**](WorkflowTargetProperty.md) |  | [optional] 
@@ -20,10 +22,12 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightWorkflowTargetDataType  -ClassId null `
+$WorkflowTargetDataType = Initialize-IntersightWorkflowTargetDataType  -ClassId null `
  -ObjectType null `
  -Default null `
  -Description null `
+ -DisplayMeta null `
+ -InputParameters null `
  -Label null `
  -Name null `
  -Required null `
@@ -36,7 +40,7 @@ Initialize-IntersightWorkflowTargetDataType  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkflowTargetDataType | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "iam.Session"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "iam.Session"]
 **AccountPermissions** | [**IamAccountPermissions[]**](IamAccountPermissions.md) |  | [optional] 
 **ClientIpAddress** | **String** | The user agent IP address from which the session is launched. | [optional] [readonly] 
 **Expiration** | **System.DateTime** | Expiration time for the session. | [optional] [readonly] 
@@ -16,7 +18,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIamSessionAllOf  -AccountPermissions null `
+$IamSessionAllOf = Initialize-IntersightIamSessionAllOf  -ClassId null `
+ -ObjectType null `
+ -AccountPermissions null `
  -ClientIpAddress null `
  -Expiration null `
  -IdleTimeExpiration null `
@@ -28,7 +32,7 @@ Initialize-IntersightIamSessionAllOf  -AccountPermissions null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IamSessionAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

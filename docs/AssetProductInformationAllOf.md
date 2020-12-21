@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "asset.ProductInformation"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "asset.ProductInformation"]
 **BillTo** | [**AssetAddressInformation**](AssetAddressInformation.md) |  | [optional] 
 **Description** | **String** | Short description of the Cisco product that helps identify the product easily. example &quot;&quot;DISTI:UCS 6248UP 1RU Fabric Int/No PSU/32 UP/ 12p LIC&quot;&quot;. | [optional] [readonly] 
 **Family** | **String** | Family that the product belongs to. Example &quot;&quot;UCSB&quot;&quot;. | [optional] [readonly] 
@@ -15,7 +17,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAssetProductInformationAllOf  -BillTo null `
+$AssetProductInformationAllOf = Initialize-IntersightAssetProductInformationAllOf  -ClassId null `
+ -ObjectType null `
+ -BillTo null `
  -Description null `
  -Family null `
  -Group null `
@@ -26,7 +30,7 @@ Initialize-IntersightAssetProductInformationAllOf  -BillTo null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AssetProductInformationAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

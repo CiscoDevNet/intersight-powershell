@@ -3,7 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "compute.PhysicalSummary"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "compute.PhysicalSummary"]
 **AdminPowerState** | **String** | The desired power state of the server. | [optional] [readonly] 
+**AlarmSummary** | [**ComputeAlarmSummary**](ComputeAlarmSummary.md) |  | [optional] 
 **AssetTag** | **String** | The user defined asset tag assigned to the server. | [optional] [readonly] 
 **AvailableMemory** | **Int64** | The amount of memory available on the server. | [optional] [readonly] 
 **BiosPostComplete** | **Boolean** | The BIOS POST completion status of the server. | [optional] [readonly] 
@@ -16,7 +19,7 @@ Name | Type | Description | Notes
 **Firmware** | **String** | The firmware version of the Cisco Integrated Management Controller (CIMC) for this server. | [optional] [readonly] 
 **Ipv4Address** | **String** | The IPv4 address configured on the management interface of the Integrated Management Controller. | [optional] [readonly] 
 **KvmIpAddresses** | [**ComputeIpAddress[]**](ComputeIpAddress.md) |  | [optional] 
-**ManagementMode** | **String** | The management mode of the server. | [optional] [readonly] [default to "IntersightStandalone"]
+**ManagementMode** | **String** | The management mode of the server. * &#x60;IntersightStandalone&#x60; - Intersight Standalone mode of operation. * &#x60;UCSM&#x60; - Unified Computing System Manager mode of operation. * &#x60;Intersight&#x60; - Intersight managed mode of operation. | [optional] [readonly] [default to "IntersightStandalone"]
 **MemorySpeed** | **String** | The maximum memory speed in MHz available on the server. | [optional] [readonly] 
 **MgmtIpAddress** | **String** | Management address of the server. | [optional] [readonly] 
 **Model** | **String** | This field identifies the model of the given component. | [optional] [readonly] 
@@ -46,7 +49,6 @@ Name | Type | Description | Notes
 **UserLabel** | **String** | The user defined label assigned to the server. | [optional] [readonly] 
 **Uuid** | **String** | The universally unique identity of the server. | [optional] [readonly] 
 **Vendor** | **String** | This field identifies the vendor of the given component. | [optional] [readonly] 
-**EquipmentChassis** | [**EquipmentChassisRelationship**](EquipmentChassisRelationship.md) |  | [optional] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
 **RegisteredDevice** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
 
@@ -54,7 +56,10 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightComputePhysicalSummaryAllOf  -AdminPowerState null `
+$ComputePhysicalSummaryAllOf = Initialize-IntersightComputePhysicalSummaryAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminPowerState null `
+ -AlarmSummary null `
  -AssetTag null `
  -AvailableMemory null `
  -BiosPostComplete null `
@@ -97,14 +102,13 @@ Initialize-IntersightComputePhysicalSummaryAllOf  -AdminPowerState null `
  -UserLabel null `
  -Uuid null `
  -Vendor null `
- -EquipmentChassis null `
  -InventoryDeviceInfo null `
  -RegisteredDevice null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ComputePhysicalSummaryAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

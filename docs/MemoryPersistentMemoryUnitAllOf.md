@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "memory.PersistentMemoryUnit"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "memory.PersistentMemoryUnit"]
 **AppDirectCapacity** | **String** | AppDirect capacity in GiB of the Persistent Memory Module on a server. | [optional] [readonly] 
 **CountStatus** | **String** | Count status of the Persistent Memory Module on a server. | [optional] [readonly] 
 **FirmwareVersion** | **String** | Firmware version of the firware running on the Persistent Memory Module on a server. | [optional] [readonly] 
@@ -26,7 +28,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightMemoryPersistentMemoryUnitAllOf  -AppDirectCapacity null `
+$MemoryPersistentMemoryUnitAllOf = Initialize-IntersightMemoryPersistentMemoryUnitAllOf  -ClassId null `
+ -ObjectType null `
+ -AppDirectCapacity null `
  -CountStatus null `
  -FirmwareVersion null `
  -FrozenStatus null `
@@ -48,7 +52,7 @@ Initialize-IntersightMemoryPersistentMemoryUnitAllOf  -AppDirectCapacity null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MemoryPersistentMemoryUnitAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

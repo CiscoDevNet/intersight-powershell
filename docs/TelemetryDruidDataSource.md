@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidDataSource  -Type null `
+$TelemetryDruidDataSource = Initialize-IntersightTelemetryDruidDataSource  -Type null `
  -Name null `
  -DataSources null `
  -Query null `
@@ -36,7 +36,7 @@ Initialize-IntersightTelemetryDruidDataSource  -Type null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidDataSource | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

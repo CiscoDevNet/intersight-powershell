@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "pci.Link"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "pci.Link"]
 **Adapter** | **String** | The name of the PCI device. | [optional] [readonly] 
 **LinkSpeed** | **String** | The upstream link speed of the PCI device. | [optional] [readonly] 
 **LinkStatus** | **String** | The upstream link status of the PCI device. | [optional] [readonly] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightPciLinkAllOf  -Adapter null `
+$PciLinkAllOf = Initialize-IntersightPciLinkAllOf  -ClassId null `
+ -ObjectType null `
+ -Adapter null `
  -LinkSpeed null `
  -LinkStatus null `
  -LinkWidth null `
@@ -30,7 +34,7 @@ Initialize-IntersightPciLinkAllOf  -Adapter null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PciLinkAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

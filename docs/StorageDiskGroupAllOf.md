@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.DiskGroup"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.DiskGroup"]
 **Name** | **String** | Name to identity this disk group in the controller. | [optional] 
 **RaidType** | **String** | Raid level of the virtual drives in this diskgroup. | [optional] 
 **DedicatedHotSpares** | [**StoragePhysicalDiskRelationship[]**](StoragePhysicalDiskRelationship.md) | An array of relationships to storagePhysicalDisk resources. | [optional] 
@@ -15,7 +17,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageDiskGroupAllOf  -Name null `
+$StorageDiskGroupAllOf = Initialize-IntersightStorageDiskGroupAllOf  -ClassId null `
+ -ObjectType null `
+ -Name null `
  -RaidType null `
  -DedicatedHotSpares null `
  -RegisteredDevice null `
@@ -26,7 +30,7 @@ Initialize-IntersightStorageDiskGroupAllOf  -Name null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageDiskGroupAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,20 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
-**EstimatedCompletionTimeInSeconds** | **Int64** |  | [optional] [readonly] 
-**InProgress** | **Boolean** |  | [optional] [readonly] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "hyperflex.StPlatformClusterHealingInfo"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "hyperflex.StPlatformClusterHealingInfo"]
+**EstimatedCompletionTimeInSeconds** | **Int64** | The estimated time in seconds it will take to complete the auto-healing process. | [optional] [readonly] 
+**InProgress** | **Boolean** | The status of the cluster&#39;s auto-healing process. If &#39;true&#39;, auto-healing is in progress for the cluster. | [optional] [readonly] 
 **Messages** | **String[]** |  | [optional] 
-**MessagesIterator** | [**AnyType**](.md) |  | [optional] [readonly] 
-**MessagesSize** | **Int64** |  | [optional] [readonly] 
-**PercentComplete** | **Int64** |  | [optional] [readonly] 
+**MessagesIterator** | [**AnyType**](.md) | The current message describing the auto-healing process of the cluster. | [optional] [readonly] 
+**MessagesSize** | **Int64** | The number of elements in the messages collection. | [optional] [readonly] 
+**PercentComplete** | **Int64** | The progress of the auto-healing process as a percentage. | [optional] [readonly] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightHyperflexStPlatformClusterHealingInfo  -ClassId null `
+$HyperflexStPlatformClusterHealingInfo = Initialize-IntersightHyperflexStPlatformClusterHealingInfo  -ClassId null `
  -ObjectType null `
  -EstimatedCompletionTimeInSeconds null `
  -InProgress null `
@@ -28,7 +28,7 @@ Initialize-IntersightHyperflexStPlatformClusterHealingInfo  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HyperflexStPlatformClusterHealingInfo | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "iam.User"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "iam.User"]
 **ClientIpAddress** | **String** | IP address from which the user last logged in to Intersight. | [optional] [readonly] 
 **Email** | **String** | Email of the user. Users are added to Intersight using the email configured in the IdP. | [optional] 
 **FirstName** | **String** | First name of the user. This field is populated from the IdP attributes received after authentication. | [optional] [readonly] 
@@ -25,7 +27,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIamUserAllOf  -ClientIpAddress null `
+$IamUserAllOf = Initialize-IntersightIamUserAllOf  -ClassId null `
+ -ObjectType null `
+ -ClientIpAddress null `
  -Email null `
  -FirstName null `
  -LastLoginTime null `
@@ -46,7 +50,7 @@ Initialize-IntersightIamUserAllOf  -ClientIpAddress null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IamUserAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

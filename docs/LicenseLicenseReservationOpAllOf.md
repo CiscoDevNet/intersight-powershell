@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "license.LicenseReservationOp"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "license.LicenseReservationOp"]
 **AuthCode** | **String** | Revervation code used to install the license. | [optional] 
 **AuthCodeInstalled** | **Boolean** | Flag to indicate whether authorization code is installed. | [optional] [readonly] 
 **ConfirmCode** | **String** | Confirm code used to complete the license update on smart license account. | [optional] [readonly] 
@@ -16,7 +18,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightLicenseLicenseReservationOpAllOf  -AuthCode null `
+$LicenseLicenseReservationOpAllOf = Initialize-IntersightLicenseLicenseReservationOpAllOf  -ClassId null `
+ -ObjectType null `
+ -AuthCode null `
  -AuthCodeInstalled null `
  -ConfirmCode null `
  -GenerateRequestCode null `
@@ -28,7 +32,7 @@ Initialize-IntersightLicenseLicenseReservationOpAllOf  -AuthCode null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$LicenseLicenseReservationOpAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "iam.System"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "iam.System"]
 **EndPointPrivileges** | [**IamEndPointPrivilegeRelationship[]**](IamEndPointPrivilegeRelationship.md) | An array of relationships to iamEndPointPrivilege resources. | [optional] [readonly] 
 **EndPointRoles** | [**IamEndPointRoleRelationship[]**](IamEndPointRoleRelationship.md) | An array of relationships to iamEndPointRole resources. | [optional] [readonly] 
 **Idp** | [**IamIdpRelationship**](IamIdpRelationship.md) |  | [optional] 
@@ -15,7 +17,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIamSystemAllOf  -EndPointPrivileges null `
+$IamSystemAllOf = Initialize-IntersightIamSystemAllOf  -ClassId null `
+ -ObjectType null `
+ -EndPointPrivileges null `
  -EndPointRoles null `
  -Idp null `
  -PrivilegeSets null `
@@ -26,7 +30,7 @@ Initialize-IntersightIamSystemAllOf  -EndPointPrivileges null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IamSystemAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

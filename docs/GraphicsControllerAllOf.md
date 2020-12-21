@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "graphics.Controller"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "graphics.Controller"]
 **ControllerId** | **Int64** | The id of the graphics controller. | [optional] [readonly] 
 **PciAddr** | **String** | The PCI address of the graphics controller. | [optional] [readonly] 
 **PciSlot** | **String** | The PCI slot information of the graphics controller. | [optional] [readonly] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightGraphicsControllerAllOf  -ControllerId null `
+$GraphicsControllerAllOf = Initialize-IntersightGraphicsControllerAllOf  -ClassId null `
+ -ObjectType null `
+ -ControllerId null `
  -PciAddr null `
  -PciSlot null `
  -GraphicsCard null `
@@ -24,7 +28,7 @@ Initialize-IntersightGraphicsControllerAllOf  -ControllerId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GraphicsControllerAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

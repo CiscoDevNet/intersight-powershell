@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidTimeSeriesRequest  -QueryType null `
+$TelemetryDruidTimeSeriesRequest = Initialize-IntersightTelemetryDruidTimeSeriesRequest  -QueryType null `
  -DataSource null `
  -Descending null `
  -Intervals [&quot;2020-01-01T00:00:00.000/2020-01-03T00:00:00.000&quot;,&quot;2020-01-01T00:00:00.000Z/2020-01-03T00:00:00.000Z&quot;,&quot;2007-03-01T13:00:00Z/2008-05-11T15:30:00Z&quot;,&quot;2007-03-01T13:00:00Z/P1Y2M10DT2H30M&quot;,&quot;P1Y2M10DT2H30M/2008-05-11T15:30:00Z&quot;] `
@@ -32,7 +32,7 @@ Initialize-IntersightTelemetryDruidTimeSeriesRequest  -QueryType null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidTimeSeriesRequest | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

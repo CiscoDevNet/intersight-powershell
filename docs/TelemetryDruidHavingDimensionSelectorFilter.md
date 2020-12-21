@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidHavingDimensionSelectorFilter  -Type null `
+$TelemetryDruidHavingDimensionSelectorFilter = Initialize-IntersightTelemetryDruidHavingDimensionSelectorFilter  -Type null `
  -Dimension null `
  -Value null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidHavingDimensionSelectorFilter | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
