@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidHyperUniquePostAggregator  -Type null `
+$TelemetryDruidHyperUniquePostAggregator = Initialize-IntersightTelemetryDruidHyperUniquePostAggregator  -Type null `
  -Name null `
  -FieldName null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidHyperUniquePostAggregator | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

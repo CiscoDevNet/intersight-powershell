@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "compute.PhysicalSummary"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "compute.PhysicalSummary"]
 **AccountMoid** | **String** | The Account ID for this managed object. | [optional] [readonly] 
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
 **CreateTime** | **System.DateTime** | The time when this managed object was created. | [optional] [readonly] 
 **DomainGroupMoid** | **String** | The DomainGroup ID for this managed object. | [optional] [readonly] 
 **ModTime** | **System.DateTime** | The time when this managed object was last modified. | [optional] [readonly] 
 **Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
-**ObjectType** | **String** | The fully-qualified type of this managed object, i.e. the class name. This property is optional. The ObjectType is implied from the URL path. If specified, the value of objectType must match the class name specified in the URL path. | [readonly] 
 **Owners** | **String[]** |  | [optional] 
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
@@ -17,8 +17,9 @@ Name | Type | Description | Notes
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
-**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | a map of display names for a resource. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | A set of display names for the MO resource. These names are calculated based on other properties of the MO and potentially properties of Ancestor MOs. Displaynames are intended as a way to provide a normalized user appropriate name for an MO, especially for MOs which do not have a &#39;Name&#39; property, which is the case for much of the inventory discovered from managed targets. There are a limited number of keys, currently &#39;short&#39; and &#39;hierarchical&#39;. The value is an array and clients should use the first element of the array. | [optional] [readonly] 
 **AdminPowerState** | **String** | The desired power state of the server. | [optional] [readonly] 
+**AlarmSummary** | [**ComputeAlarmSummary**](ComputeAlarmSummary.md) |  | [optional] 
 **AssetTag** | **String** | The user defined asset tag assigned to the server. | [optional] [readonly] 
 **AvailableMemory** | **Int64** | The amount of memory available on the server. | [optional] [readonly] 
 **BiosPostComplete** | **Boolean** | The BIOS POST completion status of the server. | [optional] [readonly] 
@@ -31,7 +32,7 @@ Name | Type | Description | Notes
 **Firmware** | **String** | The firmware version of the Cisco Integrated Management Controller (CIMC) for this server. | [optional] [readonly] 
 **Ipv4Address** | **String** | The IPv4 address configured on the management interface of the Integrated Management Controller. | [optional] [readonly] 
 **KvmIpAddresses** | [**ComputeIpAddress[]**](ComputeIpAddress.md) |  | [optional] 
-**ManagementMode** | **String** | The management mode of the server. | [optional] [readonly] [default to "IntersightStandalone"]
+**ManagementMode** | **String** | The management mode of the server. * &#x60;IntersightStandalone&#x60; - Intersight Standalone mode of operation. * &#x60;UCSM&#x60; - Unified Computing System Manager mode of operation. * &#x60;Intersight&#x60; - Intersight managed mode of operation. | [optional] [readonly] [default to "IntersightStandalone"]
 **MemorySpeed** | **String** | The maximum memory speed in MHz available on the server. | [optional] [readonly] 
 **MgmtIpAddress** | **String** | Management address of the server. | [optional] [readonly] 
 **Model** | **String** | This field identifies the model of the given component. | [optional] [readonly] 
@@ -61,7 +62,6 @@ Name | Type | Description | Notes
 **UserLabel** | **String** | The user defined label assigned to the server. | [optional] [readonly] 
 **Uuid** | **String** | The universally unique identity of the server. | [optional] [readonly] 
 **Vendor** | **String** | This field identifies the vendor of the given component. | [optional] [readonly] 
-**EquipmentChassis** | [**EquipmentChassisRelationship**](EquipmentChassisRelationship.md) |  | [optional] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
 **RegisteredDevice** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
 
@@ -69,13 +69,13 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightComputePhysicalSummary  -AccountMoid null `
- -ClassId null `
+$ComputePhysicalSummary = Initialize-IntersightComputePhysicalSummary  -ClassId null `
+ -ObjectType null `
+ -AccountMoid null `
  -CreateTime null `
  -DomainGroupMoid null `
  -ModTime null `
  -Moid null `
- -ObjectType null `
  -Owners null `
  -SharedScope null `
  -Tags null `
@@ -85,6 +85,7 @@ Initialize-IntersightComputePhysicalSummary  -AccountMoid null `
  -PermissionResources null `
  -DisplayNames null `
  -AdminPowerState null `
+ -AlarmSummary null `
  -AssetTag null `
  -AvailableMemory null `
  -BiosPostComplete null `
@@ -127,14 +128,13 @@ Initialize-IntersightComputePhysicalSummary  -AccountMoid null `
  -UserLabel null `
  -Uuid null `
  -Vendor null `
- -EquipmentChassis null `
  -InventoryDeviceInfo null `
  -RegisteredDevice null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ComputePhysicalSummary | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

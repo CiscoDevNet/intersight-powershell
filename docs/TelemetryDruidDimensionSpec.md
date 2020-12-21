@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidDimensionSpec  -Type null `
+$TelemetryDruidDimensionSpec = Initialize-IntersightTelemetryDruidDimensionSpec  -Type null `
  -Dimension null `
  -OutputName null `
  -OutputType null `
@@ -22,7 +22,7 @@ Initialize-IntersightTelemetryDruidDimensionSpec  -Type null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidDimensionSpec | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

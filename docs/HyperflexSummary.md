@@ -3,35 +3,35 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
-**ActiveNodes** | **String** |  | [optional] [readonly] 
-**Address** | **String** |  | [optional] [readonly] 
-**Boottime** | **Int64** |  | [optional] [readonly] 
-**ClusterAccessPolicy** | **String** |  | [optional] [readonly] 
-**CompressionSavings** | **Double** |  | [optional] [readonly] 
-**DataReplicationCompliance** | **String** |  | [optional] [readonly] 
-**DataReplicationFactor** | **String** |  | [optional] [readonly] 
-**DeduplicationSavings** | **Double** |  | [optional] [readonly] 
-**Downtime** | **String** |  | [optional] [readonly] 
-**FreeCapacity** | **Int64** |  | [optional] [readonly] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "hyperflex.Summary"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "hyperflex.Summary"]
+**ActiveNodes** | **String** | The number of nodes currently participating in the storage cluster. | [optional] [readonly] 
+**Address** | **String** | The data IP address of the HyperFlex cluster. | [optional] [readonly] 
+**Boottime** | **Int64** | The time taken during last cluster startup in seconds. | [optional] [readonly] 
+**ClusterAccessPolicy** | **String** | The cluster access policy for the HyperFlex cluster. An access policy of &#39;STRICT&#39; means that the cluster becomes readonly once any fragment of data is reduced to one copy. &#39;LENIENT&#39; means that the cluster stays in read-write mode even if any fragment of data is reduced to one copy. | [optional] [readonly] 
+**CompressionSavings** | **Double** | The percentage of storage space saved using data compression. | [optional] [readonly] 
+**DataReplicationCompliance** | **String** | The compliance with the data replication factor set for the HyperFlex cluster. | [optional] [readonly] 
+**DataReplicationFactor** | **String** | The number of data copies retained by the HyperFlex cluster. | [optional] [readonly] 
+**DeduplicationSavings** | **Double** | The percentage of storage space saved using data deduplication. | [optional] [readonly] 
+**Downtime** | **String** | The amount of time the HyperFlex cluster has been offline. | [optional] [readonly] 
+**FreeCapacity** | **Int64** | The amount of storage capacity currently not in use, represented in bytes. | [optional] [readonly] 
 **HealingInfo** | [**HyperflexStPlatformClusterHealingInfo**](HyperflexStPlatformClusterHealingInfo.md) |  | [optional] 
-**Name** | **String** |  | [optional] [readonly] 
-**ResiliencyDetails** | [**SystemCollectionsHashtable**](.md) |  | [optional] [readonly] 
-**ResiliencyDetailsSize** | **Int64** |  | [optional] [readonly] 
+**Name** | **String** | The name of the HyperFlex cluster. | [optional] [readonly] 
+**ResiliencyDetails** | [**SystemCollectionsHashtable**](.md) | The details about the resiliency health of the cluster. Includes information about the cluster healing status and the storage cluster health. | [optional] [readonly] 
+**ResiliencyDetailsSize** | **Int64** | The number of elements in the resiliency details property. | [optional] [readonly] 
 **ResiliencyInfo** | [**HyperflexStPlatformClusterResiliencyInfo**](HyperflexStPlatformClusterResiliencyInfo.md) |  | [optional] 
-**SpaceStatus** | **String** |  | [optional] [readonly] 
-**State** | **String** |  | [optional] [readonly] 
-**TotalCapacity** | **Int64** |  | [optional] [readonly] 
-**TotalSavings** | **Double** |  | [optional] [readonly] 
-**Uptime** | **String** |  | [optional] [readonly] 
-**UsedCapacity** | **Int64** |  | [optional] [readonly] 
+**SpaceStatus** | **String** | The space utilization status of the HyperFlex cluster. | [optional] [readonly] 
+**State** | **String** | The operational state of the HyperFlex cluster. | [optional] [readonly] 
+**TotalCapacity** | **Int64** | The total amount of storage capacity available for the HyperFlex cluster, represented in bytes. | [optional] [readonly] 
+**TotalSavings** | **Double** | The percentage of storage space saved in total. | [optional] [readonly] 
+**Uptime** | **String** | The amount of time the HyperFlex cluster has been running since last startup. | [optional] [readonly] 
+**UsedCapacity** | **Int64** | The amount of storage capacity in use, represented in bytes. | [optional] [readonly] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightHyperflexSummary  -ClassId null `
+$HyperflexSummary = Initialize-IntersightHyperflexSummary  -ClassId null `
  -ObjectType null `
  -ActiveNodes null `
  -Address null `
@@ -58,7 +58,7 @@ Initialize-IntersightHyperflexSummary  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HyperflexSummary | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightWorkflowTaskDefinitionResponse  -ObjectType null `
+$WorkflowTaskDefinitionResponse = Initialize-IntersightWorkflowTaskDefinitionResponse  -ObjectType null `
  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkflowTaskDefinitionResponse | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

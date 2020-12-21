@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "x509.Certificate"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "x509.Certificate"]
 **Issuer** | [**PkixDistinguishedName**](PkixDistinguishedName.md) |  | [optional] 
 **NotAfter** | **System.DateTime** | The date on which the certificate&#39;s validity period ends. | [optional] [readonly] 
 **NotBefore** | **System.DateTime** | The date on which the certificate&#39;s validity period begins. | [optional] [readonly] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightX509Certificate  -ClassId null `
+$X509Certificate = Initialize-IntersightX509Certificate  -ClassId null `
  -ObjectType null `
  -Issuer null `
  -NotAfter null `
@@ -30,7 +30,7 @@ Initialize-IntersightX509Certificate  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$X509Certificate | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

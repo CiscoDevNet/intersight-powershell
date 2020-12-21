@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "connector.StartStream"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "connector.StartStream"]
 **BatchSize** | **Int64** | The number of outputs from a plugin to collect into a single message. Applicable only to streams that involve polling plugins and plugins which support emitting batchable data. Default value of zero indicates no batching. | [optional] 
 **ForceRebuild** | **Boolean** | Flag to force a rebuild of an existing stream. To be used if a stream is unable to recover itself in response to dropped messages. | [optional] 
 **VarInput** | [**SystemByte**](SystemByte.md) | Input to the plugin to start the start the stream or collect stream messages. | [optional] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightConnectorStartStreamAllOf  -BatchSize null `
+$ConnectorStartStreamAllOf = Initialize-IntersightConnectorStartStreamAllOf  -ClassId null `
+ -ObjectType null `
+ -BatchSize null `
  -ForceRebuild null `
  -VarInput null `
  -KeepAliveInterval null `
@@ -30,7 +34,7 @@ Initialize-IntersightConnectorStartStreamAllOf  -BatchSize null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ConnectorStartStreamAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIamApiKeyList  -ObjectType null `
+$IamApiKeyList = Initialize-IntersightIamApiKeyList  -ObjectType null `
  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IamApiKeyList | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**New-IntersightApplianceRestore**](IntersightApplianceApi.md#New-IntersightApplianceRestore) | **POST** /api/v1/appliance/Restores | Create a &#39;appliance.Restore&#39; resource.
 [**Remove-IntersightApplianceBackup**](IntersightApplianceApi.md#Remove-IntersightApplianceBackup) | **DELETE** /api/v1/appliance/Backups/{Moid} | Delete a &#39;appliance.Backup&#39; resource.
 [**Remove-IntersightApplianceRestore**](IntersightApplianceApi.md#Remove-IntersightApplianceRestore) | **DELETE** /api/v1/appliance/Restores/{Moid} | Delete a &#39;appliance.Restore&#39; resource.
+[**Get-IntersightApplianceAppStatusByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceAppStatusByMoid) | **GET** /api/v1/appliance/AppStatuses/{Moid} | Read a &#39;appliance.AppStatus&#39; resource.
+[**Get-IntersightApplianceAppStatusList**](IntersightApplianceApi.md#Get-IntersightApplianceAppStatusList) | **GET** /api/v1/appliance/AppStatuses | Read a &#39;appliance.AppStatus&#39; resource.
 [**Get-IntersightApplianceBackupByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceBackupByMoid) | **GET** /api/v1/appliance/Backups/{Moid} | Read a &#39;appliance.Backup&#39; resource.
 [**Get-IntersightApplianceBackupList**](IntersightApplianceApi.md#Get-IntersightApplianceBackupList) | **GET** /api/v1/appliance/Backups | Read a &#39;appliance.Backup&#39; resource.
 [**Get-IntersightApplianceBackupPolicyByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceBackupPolicyByMoid) | **GET** /api/v1/appliance/BackupPolicies/{Moid} | Read a &#39;appliance.BackupPolicy&#39; resource.
@@ -20,14 +22,24 @@ Method | HTTP request | Description
 [**Get-IntersightApplianceCertificateSettingList**](IntersightApplianceApi.md#Get-IntersightApplianceCertificateSettingList) | **GET** /api/v1/appliance/CertificateSettings | Read a &#39;appliance.CertificateSetting&#39; resource.
 [**Get-IntersightApplianceDataExportPolicyByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceDataExportPolicyByMoid) | **GET** /api/v1/appliance/DataExportPolicies/{Moid} | Read a &#39;appliance.DataExportPolicy&#39; resource.
 [**Get-IntersightApplianceDataExportPolicyList**](IntersightApplianceApi.md#Get-IntersightApplianceDataExportPolicyList) | **GET** /api/v1/appliance/DataExportPolicies | Read a &#39;appliance.DataExportPolicy&#39; resource.
+[**Get-IntersightApplianceDeviceCertificateByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceDeviceCertificateByMoid) | **GET** /api/v1/appliance/DeviceCertificates/{Moid} | Read a &#39;appliance.DeviceCertificate&#39; resource.
+[**Get-IntersightApplianceDeviceCertificateList**](IntersightApplianceApi.md#Get-IntersightApplianceDeviceCertificateList) | **GET** /api/v1/appliance/DeviceCertificates | Read a &#39;appliance.DeviceCertificate&#39; resource.
 [**Get-IntersightApplianceDeviceClaimByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceDeviceClaimByMoid) | **GET** /api/v1/appliance/DeviceClaims/{Moid} | Read a &#39;appliance.DeviceClaim&#39; resource.
 [**Get-IntersightApplianceDeviceClaimList**](IntersightApplianceApi.md#Get-IntersightApplianceDeviceClaimList) | **GET** /api/v1/appliance/DeviceClaims | Read a &#39;appliance.DeviceClaim&#39; resource.
 [**Get-IntersightApplianceDiagSettingByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceDiagSettingByMoid) | **GET** /api/v1/appliance/DiagSettings/{Moid} | Read a &#39;appliance.DiagSetting&#39; resource.
 [**Get-IntersightApplianceDiagSettingList**](IntersightApplianceApi.md#Get-IntersightApplianceDiagSettingList) | **GET** /api/v1/appliance/DiagSettings | Read a &#39;appliance.DiagSetting&#39; resource.
+[**Get-IntersightApplianceExternalSyslogSettingByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceExternalSyslogSettingByMoid) | **GET** /api/v1/appliance/ExternalSyslogSettings/{Moid} | Read a &#39;appliance.ExternalSyslogSetting&#39; resource.
+[**Get-IntersightApplianceExternalSyslogSettingList**](IntersightApplianceApi.md#Get-IntersightApplianceExternalSyslogSettingList) | **GET** /api/v1/appliance/ExternalSyslogSettings | Read a &#39;appliance.ExternalSyslogSetting&#39; resource.
+[**Get-IntersightApplianceFileSystemStatusByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceFileSystemStatusByMoid) | **GET** /api/v1/appliance/FileSystemStatuses/{Moid} | Read a &#39;appliance.FileSystemStatus&#39; resource.
+[**Get-IntersightApplianceFileSystemStatusList**](IntersightApplianceApi.md#Get-IntersightApplianceFileSystemStatusList) | **GET** /api/v1/appliance/FileSystemStatuses | Read a &#39;appliance.FileSystemStatus&#39; resource.
+[**Get-IntersightApplianceGroupStatusByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceGroupStatusByMoid) | **GET** /api/v1/appliance/GroupStatuses/{Moid} | Read a &#39;appliance.GroupStatus&#39; resource.
+[**Get-IntersightApplianceGroupStatusList**](IntersightApplianceApi.md#Get-IntersightApplianceGroupStatusList) | **GET** /api/v1/appliance/GroupStatuses | Read a &#39;appliance.GroupStatus&#39; resource.
 [**Get-IntersightApplianceImageBundleByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceImageBundleByMoid) | **GET** /api/v1/appliance/ImageBundles/{Moid} | Read a &#39;appliance.ImageBundle&#39; resource.
 [**Get-IntersightApplianceImageBundleList**](IntersightApplianceApi.md#Get-IntersightApplianceImageBundleList) | **GET** /api/v1/appliance/ImageBundles | Read a &#39;appliance.ImageBundle&#39; resource.
 [**Get-IntersightApplianceNodeInfoByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceNodeInfoByMoid) | **GET** /api/v1/appliance/NodeInfos/{Moid} | Read a &#39;appliance.NodeInfo&#39; resource.
 [**Get-IntersightApplianceNodeInfoList**](IntersightApplianceApi.md#Get-IntersightApplianceNodeInfoList) | **GET** /api/v1/appliance/NodeInfos | Read a &#39;appliance.NodeInfo&#39; resource.
+[**Get-IntersightApplianceNodeStatusByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceNodeStatusByMoid) | **GET** /api/v1/appliance/NodeStatuses/{Moid} | Read a &#39;appliance.NodeStatus&#39; resource.
+[**Get-IntersightApplianceNodeStatusList**](IntersightApplianceApi.md#Get-IntersightApplianceNodeStatusList) | **GET** /api/v1/appliance/NodeStatuses | Read a &#39;appliance.NodeStatus&#39; resource.
 [**Get-IntersightApplianceReleaseNoteByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceReleaseNoteByMoid) | **GET** /api/v1/appliance/ReleaseNotes/{Moid} | Read a &#39;appliance.ReleaseNote&#39; resource.
 [**Get-IntersightApplianceReleaseNoteList**](IntersightApplianceApi.md#Get-IntersightApplianceReleaseNoteList) | **GET** /api/v1/appliance/ReleaseNotes | Read a &#39;appliance.ReleaseNote&#39; resource.
 [**Get-IntersightApplianceRestoreByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceRestoreByMoid) | **GET** /api/v1/appliance/Restores/{Moid} | Read a &#39;appliance.Restore&#39; resource.
@@ -36,6 +48,8 @@ Method | HTTP request | Description
 [**Get-IntersightApplianceSetupInfoList**](IntersightApplianceApi.md#Get-IntersightApplianceSetupInfoList) | **GET** /api/v1/appliance/SetupInfos | Read a &#39;appliance.SetupInfo&#39; resource.
 [**Get-IntersightApplianceSystemInfoByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceSystemInfoByMoid) | **GET** /api/v1/appliance/SystemInfos/{Moid} | Read a &#39;appliance.SystemInfo&#39; resource.
 [**Get-IntersightApplianceSystemInfoList**](IntersightApplianceApi.md#Get-IntersightApplianceSystemInfoList) | **GET** /api/v1/appliance/SystemInfos | Read a &#39;appliance.SystemInfo&#39; resource.
+[**Get-IntersightApplianceSystemStatusByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceSystemStatusByMoid) | **GET** /api/v1/appliance/SystemStatuses/{Moid} | Read a &#39;appliance.SystemStatus&#39; resource.
+[**Get-IntersightApplianceSystemStatusList**](IntersightApplianceApi.md#Get-IntersightApplianceSystemStatusList) | **GET** /api/v1/appliance/SystemStatuses | Read a &#39;appliance.SystemStatus&#39; resource.
 [**Get-IntersightApplianceUpgradeByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceUpgradeByMoid) | **GET** /api/v1/appliance/Upgrades/{Moid} | Read a &#39;appliance.Upgrade&#39; resource.
 [**Get-IntersightApplianceUpgradeList**](IntersightApplianceApi.md#Get-IntersightApplianceUpgradeList) | **GET** /api/v1/appliance/Upgrades | Read a &#39;appliance.Upgrade&#39; resource.
 [**Get-IntersightApplianceUpgradePolicyByMoid**](IntersightApplianceApi.md#Get-IntersightApplianceUpgradePolicyByMoid) | **GET** /api/v1/appliance/UpgradePolicies/{Moid} | Read a &#39;appliance.UpgradePolicy&#39; resource.
@@ -43,14 +57,18 @@ Method | HTTP request | Description
 [**Set-IntersightApplianceBackupPolicy**](IntersightApplianceApi.md#Set-IntersightApplianceBackupPolicy) | **PATCH** /api/v1/appliance/BackupPolicies/{Moid} | Update a &#39;appliance.BackupPolicy&#39; resource.
 [**Set-IntersightApplianceCertificateSetting**](IntersightApplianceApi.md#Set-IntersightApplianceCertificateSetting) | **PATCH** /api/v1/appliance/CertificateSettings/{Moid} | Update a &#39;appliance.CertificateSetting&#39; resource.
 [**Set-IntersightApplianceDataExportPolicy**](IntersightApplianceApi.md#Set-IntersightApplianceDataExportPolicy) | **PATCH** /api/v1/appliance/DataExportPolicies/{Moid} | Update a &#39;appliance.DataExportPolicy&#39; resource.
+[**Set-IntersightApplianceDeviceClaim**](IntersightApplianceApi.md#Set-IntersightApplianceDeviceClaim) | **PATCH** /api/v1/appliance/DeviceClaims/{Moid} | Update a &#39;appliance.DeviceClaim&#39; resource.
 [**Set-IntersightApplianceDiagSetting**](IntersightApplianceApi.md#Set-IntersightApplianceDiagSetting) | **PATCH** /api/v1/appliance/DiagSettings/{Moid} | Update a &#39;appliance.DiagSetting&#39; resource.
+[**Set-IntersightApplianceExternalSyslogSetting**](IntersightApplianceApi.md#Set-IntersightApplianceExternalSyslogSetting) | **PATCH** /api/v1/appliance/ExternalSyslogSettings/{Moid} | Update a &#39;appliance.ExternalSyslogSetting&#39; resource.
 [**Set-IntersightApplianceSetupInfo**](IntersightApplianceApi.md#Set-IntersightApplianceSetupInfo) | **PATCH** /api/v1/appliance/SetupInfos/{Moid} | Update a &#39;appliance.SetupInfo&#39; resource.
 [**Set-IntersightApplianceUpgrade**](IntersightApplianceApi.md#Set-IntersightApplianceUpgrade) | **PATCH** /api/v1/appliance/Upgrades/{Moid} | Update a &#39;appliance.Upgrade&#39; resource.
 [**Set-IntersightApplianceUpgradePolicy**](IntersightApplianceApi.md#Set-IntersightApplianceUpgradePolicy) | **PATCH** /api/v1/appliance/UpgradePolicies/{Moid} | Update a &#39;appliance.UpgradePolicy&#39; resource.
 [**Update-IntersightApplianceBackupPolicy**](IntersightApplianceApi.md#Update-IntersightApplianceBackupPolicy) | **POST** /api/v1/appliance/BackupPolicies/{Moid} | Update a &#39;appliance.BackupPolicy&#39; resource.
 [**Update-IntersightApplianceCertificateSetting**](IntersightApplianceApi.md#Update-IntersightApplianceCertificateSetting) | **POST** /api/v1/appliance/CertificateSettings/{Moid} | Update a &#39;appliance.CertificateSetting&#39; resource.
 [**Update-IntersightApplianceDataExportPolicy**](IntersightApplianceApi.md#Update-IntersightApplianceDataExportPolicy) | **POST** /api/v1/appliance/DataExportPolicies/{Moid} | Update a &#39;appliance.DataExportPolicy&#39; resource.
+[**Update-IntersightApplianceDeviceClaim**](IntersightApplianceApi.md#Update-IntersightApplianceDeviceClaim) | **POST** /api/v1/appliance/DeviceClaims/{Moid} | Update a &#39;appliance.DeviceClaim&#39; resource.
 [**Update-IntersightApplianceDiagSetting**](IntersightApplianceApi.md#Update-IntersightApplianceDiagSetting) | **POST** /api/v1/appliance/DiagSettings/{Moid} | Update a &#39;appliance.DiagSetting&#39; resource.
+[**Update-IntersightApplianceExternalSyslogSetting**](IntersightApplianceApi.md#Update-IntersightApplianceExternalSyslogSetting) | **POST** /api/v1/appliance/ExternalSyslogSettings/{Moid} | Update a &#39;appliance.ExternalSyslogSetting&#39; resource.
 [**Update-IntersightApplianceSetupInfo**](IntersightApplianceApi.md#Update-IntersightApplianceSetupInfo) | **POST** /api/v1/appliance/SetupInfos/{Moid} | Update a &#39;appliance.SetupInfo&#39; resource.
 [**Update-IntersightApplianceUpgrade**](IntersightApplianceApi.md#Update-IntersightApplianceUpgrade) | **POST** /api/v1/appliance/Upgrades/{Moid} | Update a &#39;appliance.Upgrade&#39; resource.
 [**Update-IntersightApplianceUpgradePolicy**](IntersightApplianceApi.md#Update-IntersightApplianceUpgradePolicy) | **POST** /api/v1/appliance/UpgradePolicies/{Moid} | Update a &#39;appliance.UpgradePolicy&#39; resource.
@@ -74,19 +92,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$ApplianceBackup = (Initialize-appliance.Backup-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @((Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example")) -RefMo (Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example") -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @() -RefMo  -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -ElapsedTime 123 -EndTime Get-Date -IsPasswordSet $false -Messages @("Messages_example") -Password "Password_example" -StartTime Get-Date -Status "Status_example" -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -Var0LicenseReservationOp (Initialize-license.LicenseReservationOp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AuthCode "AuthCode_example" -AuthCodeInstalled $false -ConfirmCode "ConfirmCode_example" -GenerateRequestCode $false -GenerateReturnCode $false -RequestCode "RequestCode_example" -ReturnCode "ReturnCode_example" -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -Var0LicenseReservationOp (Initialize-license.LicenseReservationOp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AuthCode "AuthCode_example" -AuthCodeInstalled $false -ConfirmCode "ConfirmCode_example" -GenerateRequestCode $false -GenerateReturnCode $false -RequestCode "RequestCode_example" -ReturnCode "ReturnCode_example" -Account ) -AppRegistrations @((Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account  -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration (Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account  -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration  -Permission (Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @() -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @() -System )) -Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp  -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization (Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @((Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @()))))))) -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate )) -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @() -Usergroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @((Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @() -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -Resource  -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @() -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -System )))) -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @() -System )) -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @() -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @((Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User (Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User )) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @() -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User ))))) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @() -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User )))))) -Users @())) -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @())) -Users @()))) -Usergroups @() -Users @()))) -Usergroups @() -Users @()) -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization  -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate  -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @() -Usergroups @() -Users @()) -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -EndPointRoles @() -Idp  -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -System )) -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -Resource  -Roles @())) -Roles @() -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @() -Users @()) -User )) -Permission  -Roles @() -User ) -Permission  -User )) -Permission  -Roles @() -User )) -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission (Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example") -Roles @((Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example")))) -TargetApp "TargetApp_example" -Holder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission  -Roles @())) -TargetApp "TargetApp_example" -Holder  -Resource ))) -Resource ))) -SessionLimits )) -AppRegistrations @() -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder  -SessionLimits )) # ApplianceBackup | The 'appliance.Backup' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$ApplianceBackup = (Initialize-appliance.Backup-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @((Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example")) -RefMo (Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example") -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @() -RefMo  -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -ElapsedTime 123 -EndTime Get-Date -IsPasswordSet $false -Messages @("Messages_example") -Password "Password_example" -StartTime Get-Date -Status "Status_example" -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -AppRegistrations @((Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account (Initialize-iam.Account.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Status "Status_example" -AppRegistrations @((Initialize-iam.AppRegistration.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientId "ClientId_example" -ClientName "ClientName_example" -ClientSecret "ClientSecret_example" -ClientType "ClientType_example" -Description "Description_example" -GrantTypes @("GrantTypes_example") -RedirectUris @("RedirectUris_example") -RenewClientSecret $false -ResponseTypes @("ResponseTypes_example") -RevocationTimestamp Get-Date -Revoke $false -Account  -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration  -Permission (Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @((Initialize-iam.EndPointPrivilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -System (Initialize-iam.System.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointPrivileges @() -EndPointRoles @((Initialize-iam.EndPointRole.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -RoleType "RoleType_example" -Type "Type_example" -Account  -EndPointPrivileges @() -System )) -Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -EnableSingleLogout $false -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp (Initialize-iam.Idp.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -EnableSingleLogout $false -IdpEntityId "IdpEntityId_example" -Metadata "Metadata_example" -Name "Name_example" -Type "Type_example" -Account  -LdapPolicy (Initialize-iam.LdapPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -BaseProperties (Initialize-iam.LdapBaseProperties-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Attribute "Attribute_example" -BaseDn "BaseDn_example" -BindDn "BindDn_example" -BindMethod "BindMethod_example" -Domain "Domain_example" -EnableEncryption $false -EnableGroupAuthorization $false -VarFilter "VarFilter_example" -GroupAttribute "GroupAttribute_example" -IsPasswordSet $false -NestedGroupSearchDepth 123 -Password "Password_example" -Timeout 123) -DnsParameters (Initialize-iam.LdapDnsParameters-ClassId "ClassId_example" -ObjectType "ObjectType_example" -SearchDomain "SearchDomain_example" -SearchForest "SearchForest_example" -Source "Source_example") -EnableDns $false -Enabled $false -UserSearchPrecedence "UserSearchPrecedence_example" -Var0Idp  -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization (Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @((Initialize-organization.Organization.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -ResourceGroups @((Initialize-resource.Group.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -PerTypeCombinedSelector @((Initialize-resource.PerTypeCombinedSelector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CombinedSelector "CombinedSelector_example" -EmptyFilter $false -SelectorObjectType "SelectorObjectType_example")) -Qualifier "Qualifier_example" -Selectors @((Initialize-resource.Selector-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Selector "Selector_example")) -Account  -Organizations @()))))))) -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate (Initialize-policy.AbstractProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate )) -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @((Initialize-iam.UserPreference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Preference "TODO" -UserUniqueIdentifier "UserUniqueIdentifier_example" -Idp  -IdpReference (Initialize-iam.IdpReference.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DomainName "DomainName_example" -IdpEntityId "IdpEntityId_example" -MultiFactorAuthentication $false -Name "Name_example" -Account  -Idp  -UserPreferences @() -Usergroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @((Initialize-iam.Permission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Account  -EndPointRoles @() -PrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @((Initialize-iam.PrivilegeSet.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -AssociatedPrivilegeSets @() -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -Privileges @((Initialize-iam.Privilege.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HostnamePrefix "HostnamePrefix_example" -Method "Method_example" -Name "Name_example" -RestPath "RestPath_example" -UrlPrefix "UrlPrefix_example" -Account  -System )) -System )) -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -PrivilegeSets @() -Resource  -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @() -System )))) -Roles @((Initialize-iam.Role.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -PrivilegeNames @("PrivilegeNames_example") -Account  -PrivilegeSets @() -System )) -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @((Initialize-iam.UserGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Idp  -Idpreference  -Permissions @() -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @((Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User (Initialize-iam.User.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -ClientIpAddress "ClientIpAddress_example" -Email "Email_example" -FirstName "FirstName_example" -LastLoginTime Get-Date -LastName "LastName_example" -Name "Name_example" -UserIdOrEmail "UserIdOrEmail_example" -UserType "UserType_example" -UserUniqueIdentifier "UserUniqueIdentifier_example" -ApiKeys @((Initialize-iam.ApiKey.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -HashAlgorithm "HashAlgorithm_example" -KeySpec (Initialize-pkix.KeyGenerationSpec-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Name "Name_example") -PrivateKey "PrivateKey_example" -Purpose "Purpose_example" -SigningAlgorithm "SigningAlgorithm_example" -Permission  -User )) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -IsCurrentPasswordSet $false -IsNewPasswordSet $false -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @((Initialize-iam.OAuthToken.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccessExpirationTime Get-Date -ClientId "ClientId_example" -ClientIpAddress "ClientIpAddress_example" -ClientName "ClientName_example" -ExpirationTime Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -TokenId "TokenId_example" -UserMeta (Initialize-iam.ClientMeta-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DeviceModel "DeviceModel_example" -UserAgent "UserAgent_example") -AppRegistration  -Permission  -User )) -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User ))))) -AppRegistrations @() -Idp  -Idpreference  -LocalUserPassword (Initialize-iam.LocalUserPassword.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -CurrentPassword "CurrentPassword_example" -IsCurrentPasswordSet $false -IsNewPasswordSet $false -NewPassword "NewPassword_example" -Password "TODO" -User ) -OauthTokens @() -Permissions @() -Sessions @((Initialize-iam.Session.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AccountPermissions @((Initialize-iam.AccountPermissions-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountIdentifier "AccountIdentifier_example" -AccountName "AccountName_example" -AccountStatus "AccountStatus_example" -Permissions @((Initialize-iam.PermissionReference-ClassId "ClassId_example" -ObjectType "ObjectType_example" -PermissionIdentifier "PermissionIdentifier_example" -PermissionName "PermissionName_example")))) -ClientIpAddress "ClientIpAddress_example" -Expiration Get-Date -IdleTimeExpiration Get-Date -LastLoginClient "LastLoginClient_example" -LastLoginTime Get-Date -Permission  -User )))))) -Users @())) -Qualifier (Initialize-iam.Qualifier.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Value @("Value_example") -Usergroup ) -Users @())) -Users @()))) -Usergroups @() -Users @()))) -Usergroups @() -Users @()) -ApplianceAccount  -Groups @((Initialize-iam.LdapGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Domain "Domain_example" -Name "Name_example" -EndPointRole @() -LdapPolicy )) -Organization  -Profiles @((Initialize-policy.AbstractConfigProfile.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Description "Description_example" -Name "Name_example" -Type "Type_example" -SrcTemplate  -Action "Action_example" -ConfigContext (Initialize-policy.ConfigContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ConfigState "ConfigState_example" -ControlAction "ControlAction_example" -ErrorState "ErrorState_example" -OperState "OperState_example"))) -Providers @((Initialize-iam.LdapProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Port 123 -Server "Server_example" -LdapPolicy ))) -System  -UserPreferences @() -Usergroups @() -Users @()) -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -EndPointRoles @() -Idp  -PrivilegeSets @() -Privileges @() -Roles @() -ServiceProvider (Initialize-iam.ServiceProvider.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EntityId "EntityId_example" -Metadata "Metadata_example" -Name "Name_example" -System )))) -System )) -PrivilegeSets @() -ResourceRoles @((Initialize-iam.ResourceRoles.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EndPointRoles @() -Permission  -PrivilegeSets @() -Resource  -Roles @())) -Roles @() -SessionLimits (Initialize-iam.SessionLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IdleTimeOut 123 -MaximumLimit 123 -PerUserLimit 123 -SessionTimeOut 123 -Account  -Permission ) -UserGroups @() -Users @()) -User )) -Permission  -Roles @() -User )) -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -IpRulesConfiguration (Initialize-iam.IpAccessManagement.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -LastRecoveryTime Get-Date -Holder (Initialize-iam.SecurityHolder.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -IpRulesConfiguration (Initialize-iam.IpAccessManagement.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -LastRecoveryTime Get-Date -Holder  -IpAddresses @((Initialize-iam.IpAddress.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Address "Address_example" -Description "Description_example" -IpAccessManagement ))) -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission (Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example") -Roles @((Initialize-cmrf.CmRf-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example")))) -TargetApp "TargetApp_example" -Holder  -Resource ))) -IpAddresses @((Initialize-iam.IpAddress.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Address "Address_example" -Description "Description_example" -IpAccessManagement ))) -ResourcePermissions @((Initialize-iam.ResourcePermission.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PermissionRoles @((Initialize-iam.PermissionToRoles-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Permission  -Roles @())) -TargetApp "TargetApp_example" -Holder  -Resource ))) -SessionLimits ) -OauthTokens @() -Permission  -Roles @() -User )) -DomainGroups @((Initialize-iam.DomainGroup.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Name "Name_example" -Partition1 123 -Partition2 123 -Partition3 123 -PartitionKey "PartitionKey_example" -Usage 123 -Account )) -EndPointRoles @() -Idpreferences @() -Idps @() -Permissions @() -PrivilegeSets @() -Privileges @() -ResourceLimits (Initialize-iam.ResourceLimits.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -PerAccountUserLimit 123 -Account ) -Roles @() -SecurityHolder  -SessionLimits )) # ApplianceBackup | The 'appliance.Backup' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'appliance.Backup' resource.
 try {
-    ApplianceBackup $Result = New-IntersightApplianceBackup -ApplianceBackup $ApplianceBackup -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightApplianceBackup -ApplianceBackup $ApplianceBackup -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightApplianceBackup: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -102,12 +135,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackup**](ApplianceBackup.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -134,19 +167,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$ApplianceBackupPolicy = (Initialize-appliance.BackupPolicy-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -BackupTime Get-Date -IsPasswordSet $false -ManualBackup $false -Password "Password_example" -Schedule (Initialize-onprem.Schedule-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DayOfMonth 123 -DayOfWeek 123 -MonthOfYear 123 -RepeatInterval 123 -TimeOfDay 123 -TimeZone "TimeZone_example" -WeekOfMonth 123) -Account ) # ApplianceBackupPolicy | The 'appliance.BackupPolicy' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$ApplianceBackupPolicy = (Initialize-appliance.BackupPolicy-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -BackupTime Get-Date -IsPasswordSet $false -ManualBackup $false -Password "Password_example" -Schedule (Initialize-onprem.Schedule-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DayOfMonth 123 -DayOfWeek 123 -MonthOfYear 123 -RepeatInterval 123 -TimeOfDay 123 -TimeZone "TimeZone_example" -WeekOfMonth 123) -Account ) # ApplianceBackupPolicy | The 'appliance.BackupPolicy' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'appliance.BackupPolicy' resource.
 try {
-    ApplianceBackupPolicy $Result = New-IntersightApplianceBackupPolicy -ApplianceBackupPolicy $ApplianceBackupPolicy -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightApplianceBackupPolicy -ApplianceBackupPolicy $ApplianceBackupPolicy -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightApplianceBackupPolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -162,12 +210,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackupPolicy**](ApplianceBackupPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -194,19 +242,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$ApplianceDataExportPolicy = (Initialize-appliance.DataExportPolicy-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig (Initialize-appliance.DataExportPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig (Initialize-appliance.DataExportPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig  -SubConfigs @()) -SubConfigs @()) -SubConfigs @()) # ApplianceDataExportPolicy | The 'appliance.DataExportPolicy' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$ApplianceDataExportPolicy = (Initialize-appliance.DataExportPolicy-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig (Initialize-appliance.DataExportPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig (Initialize-appliance.DataExportPolicy.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig  -SubConfigs @()) -SubConfigs @()) -SubConfigs @()) # ApplianceDataExportPolicy | The 'appliance.DataExportPolicy' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'appliance.DataExportPolicy' resource.
 try {
-    ApplianceDataExportPolicy $Result = New-IntersightApplianceDataExportPolicy -ApplianceDataExportPolicy $ApplianceDataExportPolicy -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightApplianceDataExportPolicy -ApplianceDataExportPolicy $ApplianceDataExportPolicy -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightApplianceDataExportPolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -222,12 +285,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDataExportPolicy**](ApplianceDataExportPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -254,19 +317,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$ApplianceDeviceClaim = (Initialize-appliance.DeviceClaim-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DeviceId "DeviceId_example" -Hostname "Hostname_example" -IsPasswordSet $false -Message "Message_example" -Password "Password_example" -PlatformType "PlatformType_example" -RequestId "RequestId_example" -SecurityToken "SecurityToken_example" -Status "Status_example" -Username "Username_example" -Account ) # ApplianceDeviceClaim | The 'appliance.DeviceClaim' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$ApplianceDeviceClaim = (Initialize-appliance.DeviceClaim-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DeviceId "DeviceId_example" -Hostname "Hostname_example" -IsPasswordSet $false -IsRenew $false -Message "Message_example" -Password "Password_example" -PlatformType "PlatformType_example" -RequestId "RequestId_example" -SecurityToken "SecurityToken_example" -Status "Status_example" -Username "Username_example" -Account ) # ApplianceDeviceClaim | The 'appliance.DeviceClaim' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'appliance.DeviceClaim' resource.
 try {
-    ApplianceDeviceClaim $Result = New-IntersightApplianceDeviceClaim -ApplianceDeviceClaim $ApplianceDeviceClaim -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightApplianceDeviceClaim -ApplianceDeviceClaim $ApplianceDeviceClaim -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightApplianceDeviceClaim: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -282,12 +360,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDeviceClaim**](ApplianceDeviceClaim.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -314,19 +392,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$ApplianceDiagSetting = (Initialize-appliance.DiagSetting-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IsPasswordSet $false -Message "Message_example" -Password "Password_example" -Account ) # ApplianceDiagSetting | The 'appliance.DiagSetting' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$ApplianceDiagSetting = (Initialize-appliance.DiagSetting-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IsPasswordSet $false -Message "Message_example" -Password "Password_example" -Account ) # ApplianceDiagSetting | The 'appliance.DiagSetting' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'appliance.DiagSetting' resource.
 try {
-    ApplianceDiagSetting $Result = New-IntersightApplianceDiagSetting -ApplianceDiagSetting $ApplianceDiagSetting -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightApplianceDiagSetting -ApplianceDiagSetting $ApplianceDiagSetting -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightApplianceDiagSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -342,12 +435,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDiagSetting**](ApplianceDiagSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -374,19 +467,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$ApplianceRestore = (Initialize-appliance.Restore-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -ElapsedTime 123 -EndTime Get-Date -IsPasswordSet $false -Messages @("Messages_example") -Password "Password_example" -StartTime Get-Date -Status "Status_example" -Account ) # ApplianceRestore | The 'appliance.Restore' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$ApplianceRestore = (Initialize-appliance.Restore-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -ElapsedTime 123 -EndTime Get-Date -IsPasswordSet $false -Messages @("Messages_example") -Password "Password_example" -StartTime Get-Date -Status "Status_example" -Account ) # ApplianceRestore | The 'appliance.Restore' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'appliance.Restore' resource.
 try {
-    ApplianceRestore $Result = New-IntersightApplianceRestore -ApplianceRestore $ApplianceRestore -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightApplianceRestore -ApplianceRestore $ApplianceRestore -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightApplianceRestore: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -402,12 +510,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceRestore**](ApplianceRestore.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -432,17 +540,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'appliance.Backup' resource.
 try {
-    Remove-IntersightApplianceBackup -Moid $Moid
+     $Result = Remove-IntersightApplianceBackup -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightApplianceBackup: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -456,12 +579,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -486,17 +609,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'appliance.Restore' resource.
 try {
-    Remove-IntersightApplianceRestore -Moid $Moid
+     $Result = Remove-IntersightApplianceRestore -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightApplianceRestore: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -510,17 +648,185 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceAppStatusByMoid"></a>
+# **Get-IntersightApplianceAppStatusByMoid**
+> ApplianceAppStatus Get-IntersightApplianceAppStatusByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.AppStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.AppStatus' resource.
+try {
+     $Result = Get-IntersightApplianceAppStatusByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceAppStatusByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceAppStatus**](ApplianceAppStatus.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceAppStatusList"></a>
+# **Get-IntersightApplianceAppStatusList**
+> ApplianceAppStatusResponse Get-IntersightApplianceAppStatusList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.AppStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.AppStatus' resource.
+try {
+     $Result = Get-IntersightApplianceAppStatusList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceAppStatusList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceAppStatusResponse**](ApplianceAppStatusResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -540,17 +846,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.Backup' resource.
 try {
-    ApplianceBackup $Result = Get-IntersightApplianceBackupByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceBackupByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceBackupByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -564,12 +885,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackup**](ApplianceBackup.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -604,11 +925,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -624,7 +960,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.Backup' resource.
 try {
-    ApplianceBackupResponse $Result = Get-IntersightApplianceBackupList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceBackupList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceBackupList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -648,12 +984,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackupResponse**](ApplianceBackupResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -678,17 +1014,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.BackupPolicy' resource.
 try {
-    ApplianceBackupPolicy $Result = Get-IntersightApplianceBackupPolicyByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceBackupPolicyByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceBackupPolicyByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -702,12 +1053,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackupPolicy**](ApplianceBackupPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -742,11 +1093,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -762,7 +1128,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.BackupPolicy' resource.
 try {
-    ApplianceBackupPolicyResponse $Result = Get-IntersightApplianceBackupPolicyList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceBackupPolicyList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceBackupPolicyList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -786,12 +1152,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackupPolicyResponse**](ApplianceBackupPolicyResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -816,17 +1182,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.CertificateSetting' resource.
 try {
-    ApplianceCertificateSetting $Result = Get-IntersightApplianceCertificateSettingByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceCertificateSettingByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceCertificateSettingByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -840,12 +1221,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceCertificateSetting**](ApplianceCertificateSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -880,11 +1261,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -900,7 +1296,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.CertificateSetting' resource.
 try {
-    ApplianceCertificateSettingResponse $Result = Get-IntersightApplianceCertificateSettingList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceCertificateSettingList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceCertificateSettingList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -924,12 +1320,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceCertificateSettingResponse**](ApplianceCertificateSettingResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -954,17 +1350,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.DataExportPolicy' resource.
 try {
-    ApplianceDataExportPolicy $Result = Get-IntersightApplianceDataExportPolicyByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceDataExportPolicyByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceDataExportPolicyByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -978,12 +1389,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDataExportPolicy**](ApplianceDataExportPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1018,11 +1429,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1038,7 +1464,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.DataExportPolicy' resource.
 try {
-    ApplianceDataExportPolicyResponse $Result = Get-IntersightApplianceDataExportPolicyList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceDataExportPolicyList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceDataExportPolicyList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1062,12 +1488,180 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDataExportPolicyResponse**](ApplianceDataExportPolicyResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceDeviceCertificateByMoid"></a>
+# **Get-IntersightApplianceDeviceCertificateByMoid**
+> ApplianceDeviceCertificate Get-IntersightApplianceDeviceCertificateByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.DeviceCertificate' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.DeviceCertificate' resource.
+try {
+     $Result = Get-IntersightApplianceDeviceCertificateByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceDeviceCertificateByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceDeviceCertificate**](ApplianceDeviceCertificate.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceDeviceCertificateList"></a>
+# **Get-IntersightApplianceDeviceCertificateList**
+> ApplianceDeviceCertificateResponse Get-IntersightApplianceDeviceCertificateList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.DeviceCertificate' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.DeviceCertificate' resource.
+try {
+     $Result = Get-IntersightApplianceDeviceCertificateList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceDeviceCertificateList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceDeviceCertificateResponse**](ApplianceDeviceCertificateResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1092,17 +1686,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.DeviceClaim' resource.
 try {
-    ApplianceDeviceClaim $Result = Get-IntersightApplianceDeviceClaimByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceDeviceClaimByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceDeviceClaimByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1116,12 +1725,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDeviceClaim**](ApplianceDeviceClaim.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1156,11 +1765,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1176,7 +1800,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.DeviceClaim' resource.
 try {
-    ApplianceDeviceClaimResponse $Result = Get-IntersightApplianceDeviceClaimList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceDeviceClaimList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceDeviceClaimList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1200,12 +1824,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDeviceClaimResponse**](ApplianceDeviceClaimResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1230,17 +1854,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.DiagSetting' resource.
 try {
-    ApplianceDiagSetting $Result = Get-IntersightApplianceDiagSettingByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceDiagSettingByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceDiagSettingByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1254,12 +1893,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDiagSetting**](ApplianceDiagSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1294,11 +1933,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1314,7 +1968,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.DiagSetting' resource.
 try {
-    ApplianceDiagSettingResponse $Result = Get-IntersightApplianceDiagSettingList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceDiagSettingList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceDiagSettingList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1338,12 +1992,516 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDiagSettingResponse**](ApplianceDiagSettingResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceExternalSyslogSettingByMoid"></a>
+# **Get-IntersightApplianceExternalSyslogSettingByMoid**
+> ApplianceExternalSyslogSetting Get-IntersightApplianceExternalSyslogSettingByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.ExternalSyslogSetting' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.ExternalSyslogSetting' resource.
+try {
+     $Result = Get-IntersightApplianceExternalSyslogSettingByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceExternalSyslogSettingByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceExternalSyslogSetting**](ApplianceExternalSyslogSetting.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceExternalSyslogSettingList"></a>
+# **Get-IntersightApplianceExternalSyslogSettingList**
+> ApplianceExternalSyslogSettingResponse Get-IntersightApplianceExternalSyslogSettingList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.ExternalSyslogSetting' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.ExternalSyslogSetting' resource.
+try {
+     $Result = Get-IntersightApplianceExternalSyslogSettingList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceExternalSyslogSettingList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceExternalSyslogSettingResponse**](ApplianceExternalSyslogSettingResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceFileSystemStatusByMoid"></a>
+# **Get-IntersightApplianceFileSystemStatusByMoid**
+> ApplianceFileSystemStatus Get-IntersightApplianceFileSystemStatusByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.FileSystemStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.FileSystemStatus' resource.
+try {
+     $Result = Get-IntersightApplianceFileSystemStatusByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceFileSystemStatusByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceFileSystemStatus**](ApplianceFileSystemStatus.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceFileSystemStatusList"></a>
+# **Get-IntersightApplianceFileSystemStatusList**
+> ApplianceFileSystemStatusResponse Get-IntersightApplianceFileSystemStatusList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.FileSystemStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.FileSystemStatus' resource.
+try {
+     $Result = Get-IntersightApplianceFileSystemStatusList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceFileSystemStatusList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceFileSystemStatusResponse**](ApplianceFileSystemStatusResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceGroupStatusByMoid"></a>
+# **Get-IntersightApplianceGroupStatusByMoid**
+> ApplianceGroupStatus Get-IntersightApplianceGroupStatusByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.GroupStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.GroupStatus' resource.
+try {
+     $Result = Get-IntersightApplianceGroupStatusByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceGroupStatusByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceGroupStatus**](ApplianceGroupStatus.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceGroupStatusList"></a>
+# **Get-IntersightApplianceGroupStatusList**
+> ApplianceGroupStatusResponse Get-IntersightApplianceGroupStatusList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.GroupStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.GroupStatus' resource.
+try {
+     $Result = Get-IntersightApplianceGroupStatusList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceGroupStatusList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceGroupStatusResponse**](ApplianceGroupStatusResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1368,17 +2526,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.ImageBundle' resource.
 try {
-    ApplianceImageBundle $Result = Get-IntersightApplianceImageBundleByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceImageBundleByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceImageBundleByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1392,12 +2565,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceImageBundle**](ApplianceImageBundle.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1432,11 +2605,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1452,7 +2640,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.ImageBundle' resource.
 try {
-    ApplianceImageBundleResponse $Result = Get-IntersightApplianceImageBundleList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceImageBundleList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceImageBundleList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1476,12 +2664,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceImageBundleResponse**](ApplianceImageBundleResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1506,17 +2694,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.NodeInfo' resource.
 try {
-    ApplianceNodeInfo $Result = Get-IntersightApplianceNodeInfoByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceNodeInfoByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceNodeInfoByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1530,12 +2733,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceNodeInfo**](ApplianceNodeInfo.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1570,11 +2773,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1590,7 +2808,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.NodeInfo' resource.
 try {
-    ApplianceNodeInfoResponse $Result = Get-IntersightApplianceNodeInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceNodeInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceNodeInfoList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1614,12 +2832,180 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceNodeInfoResponse**](ApplianceNodeInfoResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceNodeStatusByMoid"></a>
+# **Get-IntersightApplianceNodeStatusByMoid**
+> ApplianceNodeStatus Get-IntersightApplianceNodeStatusByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.NodeStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.NodeStatus' resource.
+try {
+     $Result = Get-IntersightApplianceNodeStatusByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceNodeStatusByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceNodeStatus**](ApplianceNodeStatus.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceNodeStatusList"></a>
+# **Get-IntersightApplianceNodeStatusList**
+> ApplianceNodeStatusResponse Get-IntersightApplianceNodeStatusList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.NodeStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.NodeStatus' resource.
+try {
+     $Result = Get-IntersightApplianceNodeStatusList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceNodeStatusList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceNodeStatusResponse**](ApplianceNodeStatusResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1644,17 +3030,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.ReleaseNote' resource.
 try {
-    ApplianceReleaseNote $Result = Get-IntersightApplianceReleaseNoteByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceReleaseNoteByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceReleaseNoteByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1668,12 +3069,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceReleaseNote**](ApplianceReleaseNote.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1708,11 +3109,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1728,7 +3144,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.ReleaseNote' resource.
 try {
-    ApplianceReleaseNoteResponse $Result = Get-IntersightApplianceReleaseNoteList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceReleaseNoteList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceReleaseNoteList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1752,12 +3168,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceReleaseNoteResponse**](ApplianceReleaseNoteResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1782,17 +3198,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.Restore' resource.
 try {
-    ApplianceRestore $Result = Get-IntersightApplianceRestoreByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceRestoreByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceRestoreByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1806,12 +3237,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceRestore**](ApplianceRestore.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1846,11 +3277,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -1866,7 +3312,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.Restore' resource.
 try {
-    ApplianceRestoreResponse $Result = Get-IntersightApplianceRestoreList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceRestoreList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceRestoreList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1890,12 +3336,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceRestoreResponse**](ApplianceRestoreResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1920,17 +3366,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.SetupInfo' resource.
 try {
-    ApplianceSetupInfo $Result = Get-IntersightApplianceSetupInfoByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceSetupInfoByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceSetupInfoByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1944,12 +3405,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceSetupInfo**](ApplianceSetupInfo.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -1984,11 +3445,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2004,7 +3480,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.SetupInfo' resource.
 try {
-    ApplianceSetupInfoResponse $Result = Get-IntersightApplianceSetupInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceSetupInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceSetupInfoList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2028,12 +3504,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceSetupInfoResponse**](ApplianceSetupInfoResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2058,17 +3534,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.SystemInfo' resource.
 try {
-    ApplianceSystemInfo $Result = Get-IntersightApplianceSystemInfoByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceSystemInfoByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceSystemInfoByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2082,12 +3573,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceSystemInfo**](ApplianceSystemInfo.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2122,11 +3613,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2142,7 +3648,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.SystemInfo' resource.
 try {
-    ApplianceSystemInfoResponse $Result = Get-IntersightApplianceSystemInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceSystemInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceSystemInfoList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2166,12 +3672,180 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceSystemInfoResponse**](ApplianceSystemInfoResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceSystemStatusByMoid"></a>
+# **Get-IntersightApplianceSystemStatusByMoid**
+> ApplianceSystemStatus Get-IntersightApplianceSystemStatusByMoid<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+
+Read a 'appliance.SystemStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+
+# Read a 'appliance.SystemStatus' resource.
+try {
+     $Result = Get-IntersightApplianceSystemStatusByMoid -Moid $Moid
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceSystemStatusByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceSystemStatus**](ApplianceSystemStatus.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-IntersightApplianceSystemStatusList"></a>
+# **Get-IntersightApplianceSystemStatusList**
+> ApplianceSystemStatusResponse Get-IntersightApplianceSystemStatusList<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Select] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Expand] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Apply] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Count] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Inlinecount] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-At] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tags] <String><br>
+
+Read a 'appliance.SystemStatus' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
+$Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
+$Top = 987 # Int32 | Specifies the maximum number of resources to return in the response. (optional) (default to 100)
+$Skip = 987 # Int32 | Specifies the number of resources to skip in the response. (optional) (default to 0)
+$Select = "Select_example" # String | Specifies a subset of properties to return. (optional) (default to "")
+$Expand = "Expand_example" # String | Specify additional attributes or related resources to return in addition to the primary resources. (optional)
+$Apply = "Apply_example" # String | Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The ""$apply"" query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are ""aggregate"" and ""groupby"". The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. (optional)
+$Count = false # Boolean | The $count query specifies the service should return the count of the matching resources, instead of returning the resources. (optional)
+$Inlinecount = "Inlinecount_example" # String | The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. (optional) (default to "allpages")
+$At = "At_example" # String | Similar to ""$filter"", but ""at"" is specifically used to filter versioning information properties for resources to return. A URI with an ""at"" Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. (optional)
+$Tags = "Tags_example" # String | The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. (optional)
+
+# Read a 'appliance.SystemStatus' resource.
+try {
+     $Result = Get-IntersightApplianceSystemStatusList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+} catch {
+    Write-Host ("Exception occured when calling Get-IntersightApplianceSystemStatusList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **VarFilter** | **String**| Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). | [optional] [default to &quot;&quot;]
+ **Orderby** | **String**| Determines what properties are used to sort the collection of resources. | [optional] 
+ **Top** | **Int32**| Specifies the maximum number of resources to return in the response. | [optional] [default to 100]
+ **Skip** | **Int32**| Specifies the number of resources to skip in the response. | [optional] [default to 0]
+ **Select** | **String**| Specifies a subset of properties to return. | [optional] [default to &quot;&quot;]
+ **Expand** | **String**| Specify additional attributes or related resources to return in addition to the primary resources. | [optional] 
+ **Apply** | **String**| Specify one or more transformation operations to perform aggregation on the resources. The transformations are processed in order with the output from a transformation being used as input for the subsequent transformation. The &quot;&quot;$apply&quot;&quot; query takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. Supported aggregation methods are &quot;&quot;aggregate&quot;&quot; and &quot;&quot;groupby&quot;&quot;. The **aggregate** transformation takes a comma-separated list of one or more aggregate expressions as parameters and returns a result set with a single instance, representing the aggregated value for all instances in the input set. The **groupby** transformation takes one or two parameters and 1. Splits the initial set into subsets where all instances in a subset have the same values for the grouping properties specified in the first parameter, 2. Applies set transformations to each subset according to the second parameter, resulting in a new set of potentially different structure and cardinality, 3. Ensures that the instances in the result set contain all grouping properties with the correct values for the group, 4. Concatenates the intermediate result sets into one result set. A groupby transformation affects the structure of the result set. | [optional] 
+ **Count** | **Boolean**| The $count query specifies the service should return the count of the matching resources, instead of returning the resources. | [optional] 
+ **Inlinecount** | **String**| The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response. | [optional] [default to &quot;allpages&quot;]
+ **At** | **String**| Similar to &quot;&quot;$filter&quot;&quot;, but &quot;&quot;at&quot;&quot; is specifically used to filter versioning information properties for resources to return. A URI with an &quot;&quot;at&quot;&quot; Query Option identifies a subset of the Entries from the Collection of Entries identified by the Resource Path section of the URI. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the query option. The expression language that is used in at operators supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false) or any of the additional literal representations shown in the Abstract Type System section. | [optional] 
+ **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceSystemStatusResponse**](ApplianceSystemStatusResponse.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2196,17 +3870,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.Upgrade' resource.
 try {
-    ApplianceUpgrade $Result = Get-IntersightApplianceUpgradeByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceUpgradeByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceUpgradeByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2220,12 +3909,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgrade**](ApplianceUpgrade.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2260,11 +3949,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2280,7 +3984,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.Upgrade' resource.
 try {
-    ApplianceUpgradeResponse $Result = Get-IntersightApplianceUpgradeList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceUpgradeList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceUpgradeList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2304,12 +4008,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgradeResponse**](ApplianceUpgradeResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2334,17 +4038,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'appliance.UpgradePolicy' resource.
 try {
-    ApplianceUpgradePolicy $Result = Get-IntersightApplianceUpgradePolicyByMoid -Moid $Moid
+     $Result = Get-IntersightApplianceUpgradePolicyByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceUpgradePolicyByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2358,12 +4077,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgradePolicy**](ApplianceUpgradePolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2398,11 +4117,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -2418,7 +4152,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'appliance.UpgradePolicy' resource.
 try {
-    ApplianceUpgradePolicyResponse $Result = Get-IntersightApplianceUpgradePolicyList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightApplianceUpgradePolicyList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightApplianceUpgradePolicyList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2442,12 +4176,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgradePolicyResponse**](ApplianceUpgradePolicyResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2474,19 +4208,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceBackupPolicy = (Initialize-appliance.BackupPolicy-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -BackupTime Get-Date -IsPasswordSet $false -ManualBackup $false -Password "Password_example" -Schedule (Initialize-onprem.Schedule-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DayOfMonth 123 -DayOfWeek 123 -MonthOfYear 123 -RepeatInterval 123 -TimeOfDay 123 -TimeZone "TimeZone_example" -WeekOfMonth 123) -Account ) # ApplianceBackupPolicy | The 'appliance.BackupPolicy' resource to update.
+$ApplianceBackupPolicy = (Initialize-appliance.BackupPolicy-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Filename "Filename_example" -Protocol "Protocol_example" -RemoteHost "RemoteHost_example" -RemotePath "RemotePath_example" -RemotePort 123 -Username "Username_example" -BackupTime Get-Date -IsPasswordSet $false -ManualBackup $false -Password "Password_example" -Schedule (Initialize-onprem.Schedule-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DayOfMonth 123 -DayOfWeek 123 -MonthOfYear 123 -RepeatInterval 123 -TimeOfDay 123 -TimeZone "TimeZone_example" -WeekOfMonth 123) -Account ) # ApplianceBackupPolicy | The 'appliance.BackupPolicy' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.BackupPolicy' resource.
 try {
-    ApplianceBackupPolicy $Result = Set-IntersightApplianceBackupPolicy -Moid $Moid -ApplianceBackupPolicy $ApplianceBackupPolicy -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceBackupPolicy -Moid $Moid -ApplianceBackupPolicy $ApplianceBackupPolicy -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceBackupPolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2502,12 +4251,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackupPolicy**](ApplianceBackupPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2534,19 +4283,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceCertificateSetting = (Initialize-appliance.CertificateSetting-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -Certificate (Initialize-iam.Certificate.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Certificate (Initialize-x509.Certificate-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Issuer (Initialize-pkix.DistinguishedName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CommonName "CommonName_example" -Country @("Country_example") -Locality @("Locality_example") -Organization @("Organization_example") -OrganizationalUnit @("OrganizationalUnit_example") -State @("State_example")) -NotAfter Get-Date -NotBefore Get-Date -PemCertificate "PemCertificate_example" -Sha256Fingerprint "Sha256Fingerprint_example" -SignatureAlgorithm "SignatureAlgorithm_example" -Subject (Initialize-pkix.DistinguishedName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CommonName "CommonName_example" -Country @("Country_example") -Locality @("Locality_example") -Organization @("Organization_example") -OrganizationalUnit @("OrganizationalUnit_example") -State @("State_example"))) -Status "Status_example" -CertificateRequest (Initialize-iam.CertificateRequest.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EmailAddress "EmailAddress_example" -Name "Name_example" -Request "Request_example" -SelfSigned $false -Subject  -SubjectAlternateName (Initialize-pkix.SubjectAlternateName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DnsName @("DnsName_example") -EmailAddress @("EmailAddress_example") -IpAddress @("IpAddress_example") -Uri @("Uri_example")) -Account  -Certificate (Initialize-iam.Certificate.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Certificate (Initialize-x509.Certificate-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Issuer  -NotAfter Get-Date -NotBefore Get-Date -PemCertificate "PemCertificate_example" -Sha256Fingerprint "Sha256Fingerprint_example" -SignatureAlgorithm "SignatureAlgorithm_example" -Subject ) -Status "Status_example" -CertificateRequest (Initialize-iam.CertificateRequest.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EmailAddress "EmailAddress_example" -Name "Name_example" -Request "Request_example" -SelfSigned $false -Subject  -SubjectAlternateName (Initialize-pkix.SubjectAlternateName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DnsName @("DnsName_example") -EmailAddress @("EmailAddress_example") -IpAddress @("IpAddress_example") -Uri @("Uri_example")) -Account  -Certificate  -PrivateKeySpec (Initialize-iam.PrivateKeySpec.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Algorithm  -CertificateRequest ))) -PrivateKeySpec (Initialize-iam.PrivateKeySpec.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Algorithm  -CertificateRequest )))) # ApplianceCertificateSetting | The 'appliance.CertificateSetting' resource to update.
+$ApplianceCertificateSetting = (Initialize-appliance.CertificateSetting-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -Certificate (Initialize-iam.Certificate.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Certificate (Initialize-x509.Certificate-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Issuer (Initialize-pkix.DistinguishedName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CommonName "CommonName_example" -Country @("Country_example") -Locality @("Locality_example") -Organization @("Organization_example") -OrganizationalUnit @("OrganizationalUnit_example") -State @("State_example")) -NotAfter Get-Date -NotBefore Get-Date -PemCertificate "PemCertificate_example" -Sha256Fingerprint "Sha256Fingerprint_example" -SignatureAlgorithm "SignatureAlgorithm_example" -Subject (Initialize-pkix.DistinguishedName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -CommonName "CommonName_example" -Country @("Country_example") -Locality @("Locality_example") -Organization @("Organization_example") -OrganizationalUnit @("OrganizationalUnit_example") -State @("State_example"))) -Status "Status_example" -CertificateRequest (Initialize-iam.CertificateRequest.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EmailAddress "EmailAddress_example" -Name "Name_example" -Request "Request_example" -SelfSigned $false -Subject  -SubjectAlternateName (Initialize-pkix.SubjectAlternateName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DnsName @("DnsName_example") -EmailAddress @("EmailAddress_example") -IpAddress @("IpAddress_example") -Uri @("Uri_example")) -Account  -Certificate (Initialize-iam.Certificate.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Certificate (Initialize-x509.Certificate-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Issuer  -NotAfter Get-Date -NotBefore Get-Date -PemCertificate "PemCertificate_example" -Sha256Fingerprint "Sha256Fingerprint_example" -SignatureAlgorithm "SignatureAlgorithm_example" -Subject ) -Status "Status_example" -CertificateRequest (Initialize-iam.CertificateRequest.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -EmailAddress "EmailAddress_example" -Name "Name_example" -Request "Request_example" -SelfSigned $false -Subject  -SubjectAlternateName (Initialize-pkix.SubjectAlternateName-ClassId "ClassId_example" -ObjectType "ObjectType_example" -DnsName @("DnsName_example") -EmailAddress @("EmailAddress_example") -IpAddress @("IpAddress_example") -Uri @("Uri_example")) -Account  -Certificate  -PrivateKeySpec (Initialize-iam.PrivateKeySpec.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Algorithm  -CertificateRequest ))) -PrivateKeySpec (Initialize-iam.PrivateKeySpec.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Algorithm  -CertificateRequest )))) # ApplianceCertificateSetting | The 'appliance.CertificateSetting' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.CertificateSetting' resource.
 try {
-    ApplianceCertificateSetting $Result = Set-IntersightApplianceCertificateSetting -Moid $Moid -ApplianceCertificateSetting $ApplianceCertificateSetting -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceCertificateSetting -Moid $Moid -ApplianceCertificateSetting $ApplianceCertificateSetting -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceCertificateSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2562,12 +4326,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceCertificateSetting**](ApplianceCertificateSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2594,19 +4358,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceDataExportPolicy = (Initialize-appliance.DataExportPolicy-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig  -SubConfigs @()) # ApplianceDataExportPolicy | The 'appliance.DataExportPolicy' resource to update.
+$ApplianceDataExportPolicy = (Initialize-appliance.DataExportPolicy-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enable $false -Name "Name_example" -Account  -ParentConfig  -SubConfigs @()) # ApplianceDataExportPolicy | The 'appliance.DataExportPolicy' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.DataExportPolicy' resource.
 try {
-    ApplianceDataExportPolicy $Result = Set-IntersightApplianceDataExportPolicy -Moid $Moid -ApplianceDataExportPolicy $ApplianceDataExportPolicy -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceDataExportPolicy -Moid $Moid -ApplianceDataExportPolicy $ApplianceDataExportPolicy -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceDataExportPolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2622,12 +4401,87 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDataExportPolicy**](ApplianceDataExportPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/json-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Set-IntersightApplianceDeviceClaim"></a>
+# **Set-IntersightApplianceDeviceClaim**
+> ApplianceDeviceClaim Set-IntersightApplianceDeviceClaim<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplianceDeviceClaim] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+
+Update a 'appliance.DeviceClaim' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+$ApplianceDeviceClaim = (Initialize-appliance.DeviceClaim-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -DeviceId "DeviceId_example" -Hostname "Hostname_example" -IsPasswordSet $false -IsRenew $false -Message "Message_example" -Password "Password_example" -PlatformType "PlatformType_example" -RequestId "RequestId_example" -SecurityToken "SecurityToken_example" -Status "Status_example" -Username "Username_example" -Account ) # ApplianceDeviceClaim | The 'appliance.DeviceClaim' resource to update.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+
+# Update a 'appliance.DeviceClaim' resource.
+try {
+     $Result = Set-IntersightApplianceDeviceClaim -Moid $Moid -ApplianceDeviceClaim $ApplianceDeviceClaim -IfMatch $IfMatch
+} catch {
+    Write-Host ("Exception occured when calling Set-IntersightApplianceDeviceClaim: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+ **ApplianceDeviceClaim** | [**ApplianceDeviceClaim**](ApplianceDeviceClaim.md)| The &#39;appliance.DeviceClaim&#39; resource to update. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceDeviceClaim**](ApplianceDeviceClaim.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2654,19 +4508,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceDiagSetting = (Initialize-appliance.DiagSetting-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IsPasswordSet $false -Message "Message_example" -Password "Password_example" -Account ) # ApplianceDiagSetting | The 'appliance.DiagSetting' resource to update.
+$ApplianceDiagSetting = (Initialize-appliance.DiagSetting-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -IsPasswordSet $false -Message "Message_example" -Password "Password_example" -Account ) # ApplianceDiagSetting | The 'appliance.DiagSetting' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.DiagSetting' resource.
 try {
-    ApplianceDiagSetting $Result = Set-IntersightApplianceDiagSetting -Moid $Moid -ApplianceDiagSetting $ApplianceDiagSetting -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceDiagSetting -Moid $Moid -ApplianceDiagSetting $ApplianceDiagSetting -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceDiagSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2682,12 +4551,87 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDiagSetting**](ApplianceDiagSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/json-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Set-IntersightApplianceExternalSyslogSetting"></a>
+# **Set-IntersightApplianceExternalSyslogSetting**
+> ApplianceExternalSyslogSetting Set-IntersightApplianceExternalSyslogSetting<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplianceExternalSyslogSetting] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+
+Update a 'appliance.ExternalSyslogSetting' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+$ApplianceExternalSyslogSetting = (Initialize-appliance.ExternalSyslogSetting-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enabled $false -Port 123 -Server "Server_example" -Account ) # ApplianceExternalSyslogSetting | The 'appliance.ExternalSyslogSetting' resource to update.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+
+# Update a 'appliance.ExternalSyslogSetting' resource.
+try {
+     $Result = Set-IntersightApplianceExternalSyslogSetting -Moid $Moid -ApplianceExternalSyslogSetting $ApplianceExternalSyslogSetting -IfMatch $IfMatch
+} catch {
+    Write-Host ("Exception occured when calling Set-IntersightApplianceExternalSyslogSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+ **ApplianceExternalSyslogSetting** | [**ApplianceExternalSyslogSetting**](ApplianceExternalSyslogSetting.md)| The &#39;appliance.ExternalSyslogSetting&#39; resource to update. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceExternalSyslogSetting**](ApplianceExternalSyslogSetting.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2714,19 +4658,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceSetupInfo = (Initialize-appliance.SetupInfo-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -BuildType "BuildType_example" -Capabilities @((Initialize-appliance.KeyValuePair-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Key "Key_example" -Value "Value_example")) -CloudUrl "CloudUrl_example" -DeploymentMode "DeploymentMode_example" -EndTime Get-Date -SetupStates @("SetupStates_example") -StartTime Get-Date -Account ) # ApplianceSetupInfo | The 'appliance.SetupInfo' resource to update.
+$ApplianceSetupInfo = (Initialize-appliance.SetupInfo-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -BuildType "BuildType_example" -Capabilities @((Initialize-appliance.KeyValuePair-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Key "Key_example" -Value "Value_example")) -CloudUrl "CloudUrl_example" -DeploymentMode "DeploymentMode_example" -EndTime Get-Date -SetupStates @("SetupStates_example") -StartTime Get-Date -Account ) # ApplianceSetupInfo | The 'appliance.SetupInfo' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.SetupInfo' resource.
 try {
-    ApplianceSetupInfo $Result = Set-IntersightApplianceSetupInfo -Moid $Moid -ApplianceSetupInfo $ApplianceSetupInfo -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceSetupInfo -Moid $Moid -ApplianceSetupInfo $ApplianceSetupInfo -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceSetupInfo: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2742,12 +4701,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceSetupInfo**](ApplianceSetupInfo.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2774,19 +4733,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceUpgrade = (Initialize-appliance.Upgrade-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Active $false -AutoCreated $false -CompletedPhases @((Initialize-onprem.UpgradePhase-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ElapsedTime 123 -EndTime Get-Date -Failed $false -Message "Message_example" -Name "Name_example" -StartTime Get-Date)) -CurrentPhase (Initialize-onprem.UpgradePhase-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ElapsedTime 123 -EndTime Get-Date -Failed $false -Message "Message_example" -Name "Name_example" -StartTime Get-Date) -Description "Description_example" -ElapsedTime 123 -EndTime Get-Date -ErrorCode 123 -Fingerprint "Fingerprint_example" -IsRollingBack $false -Messages @("Messages_example") -RollbackNeeded $false -RollbackPhases @() -RollbackStatus "RollbackStatus_example" -Services @("Services_example") -StartTime Get-Date -Status "Status_example" -TotalPhases 123 -UiPackages @("UiPackages_example") -Version "Version_example" -Account  -ImageBundle (Initialize-appliance.ImageBundle.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AnsiblePackages @((Initialize-onprem.ImagePackage-ClassId "ClassId_example" -ObjectType "ObjectType_example" -FilePath "FilePath_example" -FileSha "FileSha_example" -FileSize 123 -FileTime Get-Date -Filename "Filename_example" -Name "Name_example" -PackageType "PackageType_example" -Version "Version_example")) -AutoUpgrade $false -DcPackages @((Initialize-onprem.ImagePackage-ClassId "ClassId_example" -ObjectType "ObjectType_example" -FilePath "FilePath_example" -FileSha "FileSha_example" -FileSize 123 -FileTime Get-Date -Filename "Filename_example" -Name "Name_example" -PackageType "PackageType_example" -Version "Version_example")) -DebugPackages @() -Description "Description_example" -EndpointPackages @() -Fingerprint "Fingerprint_example" -HasError $false -InfraPackages @() -InitPackages @() -Name "Name_example" -Notes "Notes_example" -Priority "Priority_example" -ReleaseTime Get-Date -ServicePackages @() -StatusMessage "StatusMessage_example" -SystemPackages @() -UiPackages @() -UpgradeEndTime Get-Date -UpgradeGracePeriod 123 -UpgradeImpactDuration 123 -UpgradeImpactEnum "UpgradeImpactEnum_example" -UpgradeStartTime Get-Date -Version "Version_example")) # ApplianceUpgrade | The 'appliance.Upgrade' resource to update.
+$ApplianceUpgrade = (Initialize-appliance.Upgrade-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Active $false -AutoCreated $false -CompletedPhases @((Initialize-onprem.UpgradePhase-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ElapsedTime 123 -EndTime Get-Date -Failed $false -Message "Message_example" -Name "Name_example" -StartTime Get-Date)) -CurrentPhase (Initialize-onprem.UpgradePhase-ClassId "ClassId_example" -ObjectType "ObjectType_example" -ElapsedTime 123 -EndTime Get-Date -Failed $false -Message "Message_example" -Name "Name_example" -StartTime Get-Date) -Description "Description_example" -ElapsedTime 123 -EndTime Get-Date -ErrorCode 123 -Fingerprint "Fingerprint_example" -IsRollingBack $false -IsUserTriggered $false -Messages @("Messages_example") -RollbackNeeded $false -RollbackPhases @() -RollbackStatus "RollbackStatus_example" -Services @("Services_example") -StartTime Get-Date -Status "Status_example" -TotalPhases 123 -UiPackages @("UiPackages_example") -Version "Version_example" -Account  -ImageBundle (Initialize-appliance.ImageBundle.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AnsiblePackages @((Initialize-onprem.ImagePackage-ClassId "ClassId_example" -ObjectType "ObjectType_example" -FilePath "FilePath_example" -FileSha "FileSha_example" -FileSize 123 -FileTime Get-Date -Filename "Filename_example" -Name "Name_example" -PackageType "PackageType_example" -Version "Version_example")) -AutoUpgrade $false -DcPackages @((Initialize-onprem.ImagePackage-ClassId "ClassId_example" -ObjectType "ObjectType_example" -FilePath "FilePath_example" -FileSha "FileSha_example" -FileSize 123 -FileTime Get-Date -Filename "Filename_example" -Name "Name_example" -PackageType "PackageType_example" -Version "Version_example")) -DebugPackages @() -Description "Description_example" -EndpointPackages @() -Fingerprint "Fingerprint_example" -HasError $false -InfraPackages @() -InitPackages @() -Name "Name_example" -Notes "Notes_example" -Priority "Priority_example" -ReleaseTime Get-Date -ServicePackages @() -StatusMessage "StatusMessage_example" -SystemPackages @() -UiPackages @() -UpgradeEndTime Get-Date -UpgradeGracePeriod 123 -UpgradeImpactDuration 123 -UpgradeImpactEnum "UpgradeImpactEnum_example" -UpgradeStartTime Get-Date -Version "Version_example")) # ApplianceUpgrade | The 'appliance.Upgrade' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.Upgrade' resource.
 try {
-    ApplianceUpgrade $Result = Set-IntersightApplianceUpgrade -Moid $Moid -ApplianceUpgrade $ApplianceUpgrade -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceUpgrade -Moid $Moid -ApplianceUpgrade $ApplianceUpgrade -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceUpgrade: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2802,12 +4776,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgrade**](ApplianceUpgrade.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2834,19 +4808,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceUpgradePolicy = (Initialize-appliance.UpgradePolicy-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AutoUpgrade $false -BlackoutDatesEnabled $false -BlackoutEndDate Get-Date -BlackoutStartDate Get-Date -Schedule  -Account ) # ApplianceUpgradePolicy | The 'appliance.UpgradePolicy' resource to update.
+$ApplianceUpgradePolicy = (Initialize-appliance.UpgradePolicy-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AutoUpgrade $false -BlackoutDatesEnabled $false -BlackoutEndDate Get-Date -BlackoutStartDate Get-Date -Schedule  -Account ) # ApplianceUpgradePolicy | The 'appliance.UpgradePolicy' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.UpgradePolicy' resource.
 try {
-    ApplianceUpgradePolicy $Result = Set-IntersightApplianceUpgradePolicy -Moid $Moid -ApplianceUpgradePolicy $ApplianceUpgradePolicy -IfMatch $IfMatch
+     $Result = Set-IntersightApplianceUpgradePolicy -Moid $Moid -ApplianceUpgradePolicy $ApplianceUpgradePolicy -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Set-IntersightApplianceUpgradePolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2862,12 +4851,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgradePolicy**](ApplianceUpgradePolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2894,11 +4883,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $ApplianceBackupPolicy =  # ApplianceBackupPolicy | The 'appliance.BackupPolicy' resource to update.
@@ -2906,7 +4910,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'appliance.BackupPolicy' resource.
 try {
-    ApplianceBackupPolicy $Result = Update-IntersightApplianceBackupPolicy -Moid $Moid -ApplianceBackupPolicy $ApplianceBackupPolicy -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceBackupPolicy -Moid $Moid -ApplianceBackupPolicy $ApplianceBackupPolicy -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceBackupPolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2922,12 +4926,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceBackupPolicy**](ApplianceBackupPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -2954,19 +4958,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceCertificateSetting = (Initialize-appliance.CertificateSetting-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -Certificate ) # ApplianceCertificateSetting | The 'appliance.CertificateSetting' resource to update.
+$ApplianceCertificateSetting = (Initialize-appliance.CertificateSetting-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Account  -Certificate ) # ApplianceCertificateSetting | The 'appliance.CertificateSetting' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.CertificateSetting' resource.
 try {
-    ApplianceCertificateSetting $Result = Update-IntersightApplianceCertificateSetting -Moid $Moid -ApplianceCertificateSetting $ApplianceCertificateSetting -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceCertificateSetting -Moid $Moid -ApplianceCertificateSetting $ApplianceCertificateSetting -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceCertificateSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2982,12 +5001,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceCertificateSetting**](ApplianceCertificateSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3014,11 +5033,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $ApplianceDataExportPolicy =  # ApplianceDataExportPolicy | The 'appliance.DataExportPolicy' resource to update.
@@ -3026,7 +5060,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'appliance.DataExportPolicy' resource.
 try {
-    ApplianceDataExportPolicy $Result = Update-IntersightApplianceDataExportPolicy -Moid $Moid -ApplianceDataExportPolicy $ApplianceDataExportPolicy -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceDataExportPolicy -Moid $Moid -ApplianceDataExportPolicy $ApplianceDataExportPolicy -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceDataExportPolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3042,12 +5076,87 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDataExportPolicy**](ApplianceDataExportPolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/json-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Update-IntersightApplianceDeviceClaim"></a>
+# **Update-IntersightApplianceDeviceClaim**
+> ApplianceDeviceClaim Update-IntersightApplianceDeviceClaim<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplianceDeviceClaim] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+
+Update a 'appliance.DeviceClaim' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+$ApplianceDeviceClaim =  # ApplianceDeviceClaim | The 'appliance.DeviceClaim' resource to update.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+
+# Update a 'appliance.DeviceClaim' resource.
+try {
+     $Result = Update-IntersightApplianceDeviceClaim -Moid $Moid -ApplianceDeviceClaim $ApplianceDeviceClaim -IfMatch $IfMatch
+} catch {
+    Write-Host ("Exception occured when calling Update-IntersightApplianceDeviceClaim: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+ **ApplianceDeviceClaim** | [**ApplianceDeviceClaim**](ApplianceDeviceClaim.md)| The &#39;appliance.DeviceClaim&#39; resource to update. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceDeviceClaim**](ApplianceDeviceClaim.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3074,11 +5183,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 $ApplianceDiagSetting =  # ApplianceDiagSetting | The 'appliance.DiagSetting' resource to update.
@@ -3086,7 +5210,7 @@ $IfMatch = "IfMatch_example" # String | For methods that apply server-side chang
 
 # Update a 'appliance.DiagSetting' resource.
 try {
-    ApplianceDiagSetting $Result = Update-IntersightApplianceDiagSetting -Moid $Moid -ApplianceDiagSetting $ApplianceDiagSetting -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceDiagSetting -Moid $Moid -ApplianceDiagSetting $ApplianceDiagSetting -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceDiagSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3102,12 +5226,87 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceDiagSetting**](ApplianceDiagSetting.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/json-patch+json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Update-IntersightApplianceExternalSyslogSetting"></a>
+# **Update-IntersightApplianceExternalSyslogSetting**
+> ApplianceExternalSyslogSetting Update-IntersightApplianceExternalSyslogSetting<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Moid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplianceExternalSyslogSetting] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IfMatch] <String><br>
+
+Update a 'appliance.ExternalSyslogSetting' resource.
+
+### Example
+```powershell
+Import-Module -Name Intersight
+
+$Configuration = Get-IntersightConfiguration
+# Configure API key authorization: cookieAuth
+$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
+# Configure HTTP basic authorization: http_signature
+$Configuration["Username"] = "YOUR_USERNAME";
+$Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
+$ApplianceExternalSyslogSetting = (Initialize-appliance.ExternalSyslogSetting-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Enabled $false -Port 123 -Server "Server_example" -Account ) # ApplianceExternalSyslogSetting | The 'appliance.ExternalSyslogSetting' resource to update.
+$IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
+
+# Update a 'appliance.ExternalSyslogSetting' resource.
+try {
+     $Result = Update-IntersightApplianceExternalSyslogSetting -Moid $Moid -ApplianceExternalSyslogSetting $ApplianceExternalSyslogSetting -IfMatch $IfMatch
+} catch {
+    Write-Host ("Exception occured when calling Update-IntersightApplianceExternalSyslogSetting: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Moid** | **String**| The unique Moid identifier of a resource instance. | 
+ **ApplianceExternalSyslogSetting** | [**ApplianceExternalSyslogSetting**](ApplianceExternalSyslogSetting.md)| The &#39;appliance.ExternalSyslogSetting&#39; resource to update. | 
+ **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApplianceExternalSyslogSetting**](ApplianceExternalSyslogSetting.md)
+
+### Authorization
+
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3134,19 +5333,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceSetupInfo = (Initialize-appliance.SetupInfo-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -BuildType "BuildType_example" -Capabilities @((Initialize-appliance.KeyValuePair-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Key "Key_example" -Value "Value_example")) -CloudUrl "CloudUrl_example" -DeploymentMode "DeploymentMode_example" -EndTime Get-Date -SetupStates @("SetupStates_example") -StartTime Get-Date -Account ) # ApplianceSetupInfo | The 'appliance.SetupInfo' resource to update.
+$ApplianceSetupInfo = (Initialize-appliance.SetupInfo-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -BuildType "BuildType_example" -Capabilities @((Initialize-appliance.KeyValuePair-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Key "Key_example" -Value "Value_example")) -CloudUrl "CloudUrl_example" -DeploymentMode "DeploymentMode_example" -EndTime Get-Date -SetupStates @("SetupStates_example") -StartTime Get-Date -Account ) # ApplianceSetupInfo | The 'appliance.SetupInfo' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.SetupInfo' resource.
 try {
-    ApplianceSetupInfo $Result = Update-IntersightApplianceSetupInfo -Moid $Moid -ApplianceSetupInfo $ApplianceSetupInfo -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceSetupInfo -Moid $Moid -ApplianceSetupInfo $ApplianceSetupInfo -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceSetupInfo: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3162,12 +5376,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceSetupInfo**](ApplianceSetupInfo.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3194,19 +5408,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceUpgrade = (Initialize-appliance.Upgrade-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Active $false -AutoCreated $false -CompletedPhases @() -CurrentPhase  -Description "Description_example" -ElapsedTime 123 -EndTime Get-Date -ErrorCode 123 -Fingerprint "Fingerprint_example" -IsRollingBack $false -Messages @("Messages_example") -RollbackNeeded $false -RollbackPhases @() -RollbackStatus "RollbackStatus_example" -Services @("Services_example") -StartTime Get-Date -Status "Status_example" -TotalPhases 123 -UiPackages @("UiPackages_example") -Version "Version_example" -Account  -ImageBundle (Initialize-appliance.ImageBundle.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AnsiblePackages @() -AutoUpgrade $false -DcPackages @() -DebugPackages @() -Description "Description_example" -EndpointPackages @() -Fingerprint "Fingerprint_example" -HasError $false -InfraPackages @() -InitPackages @() -Name "Name_example" -Notes "Notes_example" -Priority "Priority_example" -ReleaseTime Get-Date -ServicePackages @() -StatusMessage "StatusMessage_example" -SystemPackages @() -UiPackages @() -UpgradeEndTime Get-Date -UpgradeGracePeriod 123 -UpgradeImpactDuration 123 -UpgradeImpactEnum "UpgradeImpactEnum_example" -UpgradeStartTime Get-Date -Version "Version_example")) # ApplianceUpgrade | The 'appliance.Upgrade' resource to update.
+$ApplianceUpgrade = (Initialize-appliance.Upgrade-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -Active $false -AutoCreated $false -CompletedPhases @() -CurrentPhase  -Description "Description_example" -ElapsedTime 123 -EndTime Get-Date -ErrorCode 123 -Fingerprint "Fingerprint_example" -IsRollingBack $false -IsUserTriggered $false -Messages @("Messages_example") -RollbackNeeded $false -RollbackPhases @() -RollbackStatus "RollbackStatus_example" -Services @("Services_example") -StartTime Get-Date -Status "Status_example" -TotalPhases 123 -UiPackages @("UiPackages_example") -Version "Version_example" -Account  -ImageBundle (Initialize-appliance.ImageBundle.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AnsiblePackages @() -AutoUpgrade $false -DcPackages @() -DebugPackages @() -Description "Description_example" -EndpointPackages @() -Fingerprint "Fingerprint_example" -HasError $false -InfraPackages @() -InitPackages @() -Name "Name_example" -Notes "Notes_example" -Priority "Priority_example" -ReleaseTime Get-Date -ServicePackages @() -StatusMessage "StatusMessage_example" -SystemPackages @() -UiPackages @() -UpgradeEndTime Get-Date -UpgradeGracePeriod 123 -UpgradeImpactDuration 123 -UpgradeImpactEnum "UpgradeImpactEnum_example" -UpgradeStartTime Get-Date -Version "Version_example")) # ApplianceUpgrade | The 'appliance.Upgrade' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.Upgrade' resource.
 try {
-    ApplianceUpgrade $Result = Update-IntersightApplianceUpgrade -Moid $Moid -ApplianceUpgrade $ApplianceUpgrade -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceUpgrade -Moid $Moid -ApplianceUpgrade $ApplianceUpgrade -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceUpgrade: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3222,12 +5451,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgrade**](ApplianceUpgrade.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -3254,19 +5483,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
-$ApplianceUpgradePolicy = (Initialize-appliance.UpgradePolicy-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AutoUpgrade $false -BlackoutDatesEnabled $false -BlackoutEndDate Get-Date -BlackoutStartDate Get-Date -Schedule  -Account ) # ApplianceUpgradePolicy | The 'appliance.UpgradePolicy' resource to update.
+$ApplianceUpgradePolicy = (Initialize-appliance.UpgradePolicy-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO" -AutoUpgrade $false -BlackoutDatesEnabled $false -BlackoutEndDate Get-Date -BlackoutStartDate Get-Date -Schedule  -Account ) # ApplianceUpgradePolicy | The 'appliance.UpgradePolicy' resource to update.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 
 # Update a 'appliance.UpgradePolicy' resource.
 try {
-    ApplianceUpgradePolicy $Result = Update-IntersightApplianceUpgradePolicy -Moid $Moid -ApplianceUpgradePolicy $ApplianceUpgradePolicy -IfMatch $IfMatch
+     $Result = Update-IntersightApplianceUpgradePolicy -Moid $Moid -ApplianceUpgradePolicy $ApplianceUpgradePolicy -IfMatch $IfMatch
 } catch {
     Write-Host ("Exception occured when calling Update-IntersightApplianceUpgradePolicy: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -3282,12 +5526,12 @@ Name | Type | Description  | Notes
  **IfMatch** | **String**| For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApplianceUpgradePolicy**](ApplianceUpgradePolicy.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

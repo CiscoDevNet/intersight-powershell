@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "firmware.RunningFirmware"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "firmware.RunningFirmware"]
 **Component** | **String** | Kind of the firmware - boot-booloader/system/kernel. | [optional] [readonly] 
 **PackageVersion** | **String** | Package version which the firmware belongs to. | [optional] [readonly] 
 **Type** | **String** | The type of the firmware. | [optional] [readonly] 
@@ -22,7 +24,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFirmwareRunningFirmwareAllOf  -Component null `
+$FirmwareRunningFirmwareAllOf = Initialize-IntersightFirmwareRunningFirmwareAllOf  -ClassId null `
+ -ObjectType null `
+ -Component null `
  -PackageVersion null `
  -Type null `
  -Version null `
@@ -40,7 +44,7 @@ Initialize-IntersightFirmwareRunningFirmwareAllOf  -Component null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FirmwareRunningFirmwareAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

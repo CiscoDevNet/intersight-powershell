@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.Fan"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.Fan"]
 **Description** | **String** | This field is to provide description for the fan. | [optional] [readonly] 
 **FanId** | **Int64** | This field acts as the identifier for this particular Fan, within the Fabric Interconnect. | [optional] [readonly] 
 **FanModuleId** | **Int64** | This field is used to identify the Fan Module to which this Fan belongs. | [optional] [readonly] 
@@ -23,7 +25,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentFanAllOf  -Description null `
+$EquipmentFanAllOf = Initialize-IntersightEquipmentFanAllOf  -ClassId null `
+ -ObjectType null `
+ -Description null `
  -FanId null `
  -FanModuleId null `
  -ModuleId null `
@@ -42,7 +46,7 @@ Initialize-IntersightEquipmentFanAllOf  -Description null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentFanAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

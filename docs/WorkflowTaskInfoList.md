@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightWorkflowTaskInfoList  -ObjectType null `
+$WorkflowTaskInfoList = Initialize-IntersightWorkflowTaskInfoList  -ObjectType null `
  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkflowTaskInfoList | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,28 +3,54 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The concrete type of this complex type. The ObjectType property must be set explicitly by API clients when the type is ambiguous. In all other cases, the  ObjectType is optional.  The type is ambiguous when a managed object contains an array of nested documents, and the documents in the array are heterogeneous, i.e. the array can contain nested documents of different types. | 
-**Name** | **String** | The application setting identifier. | [optional] 
-**Value** | **String** | The application setting value. | [optional] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "hyperflex.ServerFirmwareVersionEntry"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "hyperflex.ServerFirmwareVersionEntry"]
+**AccountMoid** | **String** | The Account ID for this managed object. | [optional] [readonly] 
+**CreateTime** | **System.DateTime** | The time when this managed object was created. | [optional] [readonly] 
+**DomainGroupMoid** | **String** | The DomainGroup ID for this managed object. | [optional] [readonly] 
+**ModTime** | **System.DateTime** | The time when this managed object was last modified. | [optional] [readonly] 
+**Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
+**Owners** | **String[]** |  | [optional] 
+**SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
+**Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
+**VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
+**Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
+**PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | A set of display names for the MO resource. These names are calculated based on other properties of the MO and potentially properties of Ancestor MOs. Displaynames are intended as a way to provide a normalized user appropriate name for an MO, especially for MOs which do not have a &#39;Name&#39; property, which is the case for much of the inventory discovered from managed targets. There are a limited number of keys, currently &#39;short&#39; and &#39;hierarchical&#39;. The value is an array and clients should use the first element of the array. | [optional] [readonly] 
 **Constraint** | [**HyperflexAppSettingConstraint**](HyperflexAppSettingConstraint.md) |  | [optional] 
-**Label** | **String** | The display name for server firmware bundle version in UI. | [optional] 
+**ServerPlatform** | **String** | The server platform type that is applicable for the server firmware bundle version. * &#x60;M5&#x60; - M5 generation of UCS server. * &#x60;M4&#x60; - M4 generation of UCS server. | [optional] [default to "M5"]
+**Version** | **String** | The server firmware bundle version. | [optional] 
+**ServerFirmwareVersion** | [**HyperflexServerFirmwareVersionRelationship**](HyperflexServerFirmwareVersionRelationship.md) |  | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightHyperflexServerFirmwareVersionEntry  -ClassId null `
+$HyperflexServerFirmwareVersionEntry = Initialize-IntersightHyperflexServerFirmwareVersionEntry  -ClassId null `
  -ObjectType null `
- -Name null `
- -Value null `
+ -AccountMoid null `
+ -CreateTime null `
+ -DomainGroupMoid null `
+ -ModTime null `
+ -Moid null `
+ -Owners null `
+ -SharedScope null `
+ -Tags null `
+ -VersionContext null `
+ -Ancestors null `
+ -Parent null `
+ -PermissionResources null `
+ -DisplayNames null `
  -Constraint null `
- -Label null
+ -ServerPlatform null `
+ -Version null `
+ -ServerFirmwareVersion null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HyperflexServerFirmwareVersionEntry | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "firmware.FirmwareInventory"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "firmware.FirmwareInventory"]
 **Category** | **String** | Component category. For example, MRAID is under storage controller, CIMC is under management controller. | [optional] 
 **Label** | **String** | The name of the component to reflect on UI. | [optional] 
 **Model** | **String** | Model deatils of component. | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFirmwareFirmwareInventoryAllOf  -Category null `
+$FirmwareFirmwareInventoryAllOf = Initialize-IntersightFirmwareFirmwareInventoryAllOf  -ClassId null `
+ -ObjectType null `
+ -Category null `
  -Label null `
  -Model null `
  -UpdateUri null `
@@ -24,7 +28,7 @@ Initialize-IntersightFirmwareFirmwareInventoryAllOf  -Category null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FirmwareFirmwareInventoryAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

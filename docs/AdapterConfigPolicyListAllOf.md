@@ -10,13 +10,13 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAdapterConfigPolicyListAllOf  -Count null `
+$AdapterConfigPolicyListAllOf = Initialize-IntersightAdapterConfigPolicyListAllOf  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AdapterConfigPolicyListAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

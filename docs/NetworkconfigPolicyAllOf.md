@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "networkconfig.Policy"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "networkconfig.Policy"]
 **AlternateIpv4dnsServer** | **String** | IP address of the secondary DNS server. | [optional] 
 **AlternateIpv6dnsServer** | **String** | IP address of the secondary DNS server. | [optional] 
 **DynamicDnsDomain** | **String** | The domain name appended to a hostname for a Dynamic DNS (DDNS) update. If left blank, only a hostname is sent to the DDNS update request. | [optional] 
@@ -20,7 +22,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightNetworkconfigPolicyAllOf  -AlternateIpv4dnsServer null `
+$NetworkconfigPolicyAllOf = Initialize-IntersightNetworkconfigPolicyAllOf  -ClassId null `
+ -ObjectType null `
+ -AlternateIpv4dnsServer null `
  -AlternateIpv6dnsServer null `
  -DynamicDnsDomain null `
  -EnableDynamicDns null `
@@ -36,7 +40,7 @@ Initialize-IntersightNetworkconfigPolicyAllOf  -AlternateIpv4dnsServer null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$NetworkconfigPolicyAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

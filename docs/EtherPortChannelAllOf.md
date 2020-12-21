@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "ether.PortChannel"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "ether.PortChannel"]
 **AccessVlan** | **String** | Access VLANs for this port-channel, on this FI. | [optional] 
 **AdminState** | **String** | Administratively configured state (enabled/disabled) for this port-channel. | [optional] 
 **AllowedVlans** | **String** | Allowed VLANs on this port-channel, on this FI. | [optional] 
@@ -21,7 +23,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEtherPortChannelAllOf  -AccessVlan null `
+$EtherPortChannelAllOf = Initialize-IntersightEtherPortChannelAllOf  -ClassId null `
+ -ObjectType null `
+ -AccessVlan null `
  -AdminState null `
  -AllowedVlans null `
  -Mode null `
@@ -38,7 +42,7 @@ Initialize-IntersightEtherPortChannelAllOf  -AccessVlan null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EtherPortChannelAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

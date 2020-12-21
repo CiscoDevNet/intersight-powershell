@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidArithmeticPostAggregatorAllOf  -Name null `
+$TelemetryDruidArithmeticPostAggregatorAllOf = Initialize-IntersightTelemetryDruidArithmeticPostAggregatorAllOf  -Name null `
  -Fn null `
  -Fields null `
  -Ordering null
@@ -20,7 +20,7 @@ Initialize-IntersightTelemetryDruidArithmeticPostAggregatorAllOf  -Name null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidArithmeticPostAggregatorAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

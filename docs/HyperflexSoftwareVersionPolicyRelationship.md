@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The fully-qualified type of this managed object, i.e. the class name. This property is optional. The ObjectType is implied from the URL path. If specified, the value of objectType must match the class name specified in the URL path. | [readonly] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "hyperflex.SoftwareVersionPolicy"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "hyperflex.SoftwareVersionPolicy"]
 **Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
 **Selector** | **String** | An OData $filter expression which describes the REST resource to be referenced. This field may be set instead of &#39;moid&#39; by clients. 1. If &#39;moid&#39; is set this field is ignored. 1. If &#39;selector&#39; is set and &#39;moid&#39; is empty/absent from the request, Intersight determines the Moid of the resource matching the filter expression and populates it in the MoRef that is part of the object instance being inserted/updated to fulfill the REST request. An error is returned if the filter matches zero or more than one REST resource. An example filter string is: Serial eq &#39;3AA8B7T11&#39;. | [optional] [readonly] 
 **Link** | **String** | A URL to an instance of the &#39;mo.MoRef&#39; class. | [optional] 
@@ -19,12 +19,13 @@ Name | Type | Description | Notes
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
-**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | a map of display names for a resource. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | A set of display names for the MO resource. These names are calculated based on other properties of the MO and potentially properties of Ancestor MOs. Displaynames are intended as a way to provide a normalized user appropriate name for an MO, especially for MOs which do not have a &#39;Name&#39; property, which is the case for much of the inventory discovered from managed targets. There are a limited number of keys, currently &#39;short&#39; and &#39;hierarchical&#39;. The value is an array and clients should use the first element of the array. | [optional] [readonly] 
 **Description** | **String** | Description of the policy. | [optional] 
 **Name** | **String** | Name of the concrete policy. | [optional] 
 **HxdpVersion** | **String** | Desired HyperFlex Data Platform software version to apply on the HyperFlex cluster. | [optional] 
 **HypervisorVersion** | **String** | Desired  hypervisor version to apply for all the nodes on the HyperFlex cluster. | [optional] 
 **ServerFirmwareVersion** | **String** | Desired server firmware version to apply on the HyperFlex Cluster. | [optional] 
+**ServerFirmwareVersions** | [**HyperflexServerFirmwareVersionInfo[]**](HyperflexServerFirmwareVersionInfo.md) |  | [optional] 
 **UpgradeTypes** | **String[]** |  | [optional] 
 **ClusterProfiles** | [**HyperflexClusterProfileRelationship[]**](HyperflexClusterProfileRelationship.md) | An array of relationships to hyperflexClusterProfile resources. | [optional] 
 **HxdpVersionInfo** | [**SoftwareHyperflexDistributableRelationship**](SoftwareHyperflexDistributableRelationship.md) |  | [optional] 
@@ -36,7 +37,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightHyperflexSoftwareVersionPolicyRelationship  -ClassId null `
+$HyperflexSoftwareVersionPolicyRelationship = Initialize-IntersightHyperflexSoftwareVersionPolicyRelationship  -ClassId null `
  -ObjectType null `
  -Moid null `
  -Selector null `
@@ -58,6 +59,7 @@ Initialize-IntersightHyperflexSoftwareVersionPolicyRelationship  -ClassId null `
  -HxdpVersion null `
  -HypervisorVersion null `
  -ServerFirmwareVersion null `
+ -ServerFirmwareVersions null `
  -UpgradeTypes null `
  -ClusterProfiles null `
  -HxdpVersionInfo null `
@@ -68,7 +70,7 @@ Initialize-IntersightHyperflexSoftwareVersionPolicyRelationship  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HyperflexSoftwareVersionPolicyRelationship | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

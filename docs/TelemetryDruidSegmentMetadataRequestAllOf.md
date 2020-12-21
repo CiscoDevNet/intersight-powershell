@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidSegmentMetadataRequestAllOf  -DataSource null `
+$TelemetryDruidSegmentMetadataRequestAllOf = Initialize-IntersightTelemetryDruidSegmentMetadataRequestAllOf  -DataSource null `
  -Intervals null `
  -ToInclude null `
  -Merge null `
@@ -26,7 +26,7 @@ Initialize-IntersightTelemetryDruidSegmentMetadataRequestAllOf  -DataSource null
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidSegmentMetadataRequestAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

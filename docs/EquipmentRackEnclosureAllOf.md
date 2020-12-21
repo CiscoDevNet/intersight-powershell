@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.RackEnclosure"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.RackEnclosure"]
 **EnclosureId** | **Int64** | This represents the Enclosure Identifier for Rack servers. | [optional] [readonly] 
 **Fanmodules** | [**EquipmentFanModuleRelationship[]**](EquipmentFanModuleRelationship.md) | An array of relationships to equipmentFanModule resources. | [optional] [readonly] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentRackEnclosureAllOf  -EnclosureId null `
+$EquipmentRackEnclosureAllOf = Initialize-IntersightEquipmentRackEnclosureAllOf  -ClassId null `
+ -ObjectType null `
+ -EnclosureId null `
  -Fanmodules null `
  -InventoryDeviceInfo null `
  -Psus null `
@@ -24,7 +28,7 @@ Initialize-IntersightEquipmentRackEnclosureAllOf  -EnclosureId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentRackEnclosureAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

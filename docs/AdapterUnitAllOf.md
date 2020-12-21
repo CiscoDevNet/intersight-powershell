@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "adapter.Unit"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "adapter.Unit"]
 **AdapterId** | **String** | Unique Identifier of an adapter Unit within a Rack Interface. | [optional] [readonly] 
 **BaseMacAddress** | **String** | Original Base Mac address of an adapter unit. | [optional] [readonly] 
 **ConnectionStatus** | **String** | Connectivity Status of adapter - A or B or AB. | [optional] [readonly] 
@@ -29,7 +31,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAdapterUnitAllOf  -AdapterId null `
+$AdapterUnitAllOf = Initialize-IntersightAdapterUnitAllOf  -ClassId null `
+ -ObjectType null `
+ -AdapterId null `
  -BaseMacAddress null `
  -ConnectionStatus null `
  -Integrated null `
@@ -54,7 +58,7 @@ Initialize-IntersightAdapterUnitAllOf  -AdapterId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AdapterUnitAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

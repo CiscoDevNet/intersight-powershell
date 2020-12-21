@@ -3,13 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
 **AdminPowerState** | **String** | The desired power state of the server. | [optional] [readonly] 
+**AlarmSummary** | [**ComputeAlarmSummary**](ComputeAlarmSummary.md) |  | [optional] 
 **AssetTag** | **String** | The user defined asset tag assigned to the server. | [optional] [readonly] 
 **AvailableMemory** | **Int64** | The amount of memory available on the server. | [optional] [readonly] 
 **BiosPostComplete** | **Boolean** | The BIOS POST completion status of the server. | [optional] 
 **FaultSummary** | **Int64** | The fault summary for the server. | [optional] 
 **KvmIpAddresses** | [**ComputeIpAddress[]**](ComputeIpAddress.md) |  | [optional] 
-**ManagementMode** | **String** | The management mode of the server. | [optional] [default to "IntersightStandalone"]
+**ManagementMode** | **String** | The management mode of the server. * &#x60;IntersightStandalone&#x60; - Intersight Standalone mode of operation. * &#x60;UCSM&#x60; - Unified Computing System Manager mode of operation. * &#x60;Intersight&#x60; - Intersight managed mode of operation. | [optional] [default to "IntersightStandalone"]
 **MemorySpeed** | **String** | The maximum memory speed in MHz available on the server. | [optional] [readonly] 
 **MgmtIpAddress** | **String** | Management address of the server. | [optional] 
 **NumAdaptors** | **Int64** | The total number of network adapters present on the server. | [optional] [readonly] 
@@ -28,13 +31,27 @@ Name | Type | Description | Notes
 **TotalMemory** | **Int64** | The total memory available on the server. | [optional] [readonly] 
 **UserLabel** | **String** | The user defined label assigned to the server. | [optional] [readonly] 
 **Uuid** | **String** | The universally unique identity of the server. | [optional] [readonly] 
+**BootCddDevices** | [**BootCddDeviceRelationship[]**](BootCddDeviceRelationship.md) | An array of relationships to bootCddDevice resources. | [optional] 
+**BootHddDevices** | [**BootHddDeviceRelationship[]**](BootHddDeviceRelationship.md) | An array of relationships to bootHddDevice resources. | [optional] 
+**BootIscsiDevices** | [**BootIscsiDeviceRelationship[]**](BootIscsiDeviceRelationship.md) | An array of relationships to bootIscsiDevice resources. | [optional] 
+**BootNvmeDevices** | [**BootNvmeDeviceRelationship[]**](BootNvmeDeviceRelationship.md) | An array of relationships to bootNvmeDevice resources. | [optional] 
+**BootPchStorageDevices** | [**BootPchStorageDeviceRelationship[]**](BootPchStorageDeviceRelationship.md) | An array of relationships to bootPchStorageDevice resources. | [optional] 
+**BootPxeDevices** | [**BootPxeDeviceRelationship[]**](BootPxeDeviceRelationship.md) | An array of relationships to bootPxeDevice resources. | [optional] 
+**BootSanDevices** | [**BootSanDeviceRelationship[]**](BootSanDeviceRelationship.md) | An array of relationships to bootSanDevice resources. | [optional] 
+**BootSdDevices** | [**BootSdDeviceRelationship[]**](BootSdDeviceRelationship.md) | An array of relationships to bootSdDevice resources. | [optional] 
+**BootUefiShellDevices** | [**BootUefiShellDeviceRelationship[]**](BootUefiShellDeviceRelationship.md) | An array of relationships to bootUefiShellDevice resources. | [optional] 
+**BootUsbDevices** | [**BootUsbDeviceRelationship[]**](BootUsbDeviceRelationship.md) | An array of relationships to bootUsbDevice resources. | [optional] 
+**BootVmediaDevices** | [**BootVmediaDeviceRelationship[]**](BootVmediaDeviceRelationship.md) | An array of relationships to bootVmediaDevice resources. | [optional] 
 **MgmtIdentity** | [**EquipmentPhysicalIdentityRelationship**](EquipmentPhysicalIdentityRelationship.md) |  | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightComputePhysicalAllOf  -AdminPowerState null `
+$ComputePhysicalAllOf = Initialize-IntersightComputePhysicalAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminPowerState null `
+ -AlarmSummary null `
  -AssetTag null `
  -AvailableMemory null `
  -BiosPostComplete null `
@@ -59,12 +76,23 @@ Initialize-IntersightComputePhysicalAllOf  -AdminPowerState null `
  -TotalMemory null `
  -UserLabel null `
  -Uuid null `
+ -BootCddDevices null `
+ -BootHddDevices null `
+ -BootIscsiDevices null `
+ -BootNvmeDevices null `
+ -BootPchStorageDevices null `
+ -BootPxeDevices null `
+ -BootSanDevices null `
+ -BootSdDevices null `
+ -BootUefiShellDevices null `
+ -BootUsbDevices null `
+ -BootVmediaDevices null `
  -MgmtIdentity null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ComputePhysicalAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

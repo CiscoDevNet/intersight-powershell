@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidGranularity  -Type null `
+$TelemetryDruidGranularity = Initialize-IntersightTelemetryDruidGranularity  -Type null `
  -Duration null `
  -Origin null `
  -Period null `
@@ -22,7 +22,7 @@ Initialize-IntersightTelemetryDruidGranularity  -Type null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidGranularity | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

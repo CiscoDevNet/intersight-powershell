@@ -3,10 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "meta.Definition"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "meta.Definition"]
 **AccessPrivileges** | [**MetaAccessPrivilege[]**](MetaAccessPrivilege.md) |  | [optional] 
 **AncestorClasses** | **String[]** |  | [optional] 
+**DisplayNameMetas** | [**MetaDisplayNameDefinition[]**](MetaDisplayNameDefinition.md) |  | [optional] 
 **IsConcrete** | **Boolean** | Boolean flag to specify whether the meta class is a concrete class or not. | [optional] [readonly] 
-**MetaType** | **String** | Indicates whether the meta class is a complex type or managed object. | [optional] [readonly] [default to "ManagedObject"]
+**MetaType** | **String** | Indicates whether the meta class is a complex type or managed object. * &#x60;ManagedObject&#x60; - The meta.Definition object describes a managed object. * &#x60;ComplexType&#x60; - The meta.Definition object describes a nested complex type within a managed object. | [optional] [readonly] [default to "ManagedObject"]
 **Name** | **String** | The fully-qualified class name of the Managed Object or complex type. For example, &quot;&quot;compute:Blade&quot;&quot; where the Managed Object is &quot;&quot;Blade&quot;&quot; and the package is &#39;compute&#39;. | [optional] [readonly] 
 **Namespace** | **String** | The namespace of the meta. | [optional] [readonly] 
 **ParentClass** | **String** | The fully-qualified name of the parent metaclass in the class inheritance hierarchy. | [optional] [readonly] 
@@ -21,8 +24,11 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightMetaDefinitionAllOf  -AccessPrivileges null `
+$MetaDefinitionAllOf = Initialize-IntersightMetaDefinitionAllOf  -ClassId null `
+ -ObjectType null `
+ -AccessPrivileges null `
  -AncestorClasses null `
+ -DisplayNameMetas null `
  -IsConcrete null `
  -MetaType null `
  -Name null `
@@ -38,7 +44,7 @@ Initialize-IntersightMetaDefinitionAllOf  -AccessPrivileges null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MetaDefinitionAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

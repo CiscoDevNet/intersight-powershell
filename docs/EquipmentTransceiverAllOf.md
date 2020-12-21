@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.Transceiver"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.Transceiver"]
 **OperSpeed** | **String** | Operational speed of the transceiver. | [optional] [readonly] 
 **OperState** | **String** | Operational state of the transceiver. | [optional] [readonly] 
 **OperStateQual** | **String** | Reason for this transceiver&#39;s operational state. | [optional] [readonly] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentTransceiverAllOf  -OperSpeed null `
+$EquipmentTransceiverAllOf = Initialize-IntersightEquipmentTransceiverAllOf  -ClassId null `
+ -ObjectType null `
+ -OperSpeed null `
  -OperState null `
  -OperStateQual null `
  -PortId null `
@@ -30,7 +34,7 @@ Initialize-IntersightEquipmentTransceiverAllOf  -OperSpeed null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentTransceiverAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

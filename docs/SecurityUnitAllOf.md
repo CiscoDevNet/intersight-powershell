@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "security.Unit"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "security.Unit"]
 **OperState** | **String** | Operational state of the security unit. | [optional] [readonly] 
 **Operability** | **String** | Operability state of the security unit. | [optional] [readonly] 
 **PartNumber** | **String** | The part number of the security unit. | [optional] [readonly] 
@@ -21,7 +23,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightSecurityUnitAllOf  -OperState null `
+$SecurityUnitAllOf = Initialize-IntersightSecurityUnitAllOf  -ClassId null `
+ -ObjectType null `
+ -OperState null `
  -Operability null `
  -PartNumber null `
  -PciSlot null `
@@ -38,7 +42,7 @@ Initialize-IntersightSecurityUnitAllOf  -OperState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SecurityUnitAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

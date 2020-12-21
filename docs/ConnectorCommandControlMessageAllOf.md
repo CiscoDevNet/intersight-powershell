@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "connector.CommandControlMessage"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "connector.CommandControlMessage"]
 **Dir** | **String** | The working directory of the command. If empty command is executed in the same directory the device connector process was called. | [optional] 
 **MsgType** | **String** | Message carrying the operation to perform. | [optional] 
 **Stream** | [**SystemByte**](SystemByte.md) | The command to execute. Commands must be whitelisted by platform implementation, if a command does not match any whitelisted command patterns an error will be returned to the requesting service on command start. | [optional] 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightConnectorCommandControlMessageAllOf  -Dir null `
+$ConnectorCommandControlMessageAllOf = Initialize-IntersightConnectorCommandControlMessageAllOf  -ClassId null `
+ -ObjectType null `
+ -Dir null `
  -MsgType null `
  -Stream null `
  -Terminal null `
@@ -22,7 +26,7 @@ Initialize-IntersightConnectorCommandControlMessageAllOf  -Dir null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ConnectorCommandControlMessageAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

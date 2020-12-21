@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidStringAnyAggregator  -Type null `
+$TelemetryDruidStringAnyAggregator = Initialize-IntersightTelemetryDruidStringAnyAggregator  -Type null `
  -Name null `
  -FieldName null `
  -MaxStringBytes null
@@ -20,7 +20,7 @@ Initialize-IntersightTelemetryDruidStringAnyAggregator  -Type null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidStringAnyAggregator | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

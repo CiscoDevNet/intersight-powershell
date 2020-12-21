@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.FlexFlashControllerProps"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.FlexFlashControllerProps"]
 **CardsManageable** | **String** | Manageable card on the flex flash controller. | [optional] 
 **ConfiguredMode** | **String** | Mode configured on the flex flash controller. | [optional] 
 **ControllerName** | **String** | The current name of the flex flash controller. | [optional] 
@@ -22,7 +24,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageFlexFlashControllerPropsAllOf  -CardsManageable null `
+$StorageFlexFlashControllerPropsAllOf = Initialize-IntersightStorageFlexFlashControllerPropsAllOf  -ClassId null `
+ -ObjectType null `
+ -CardsManageable null `
  -ConfiguredMode null `
  -ControllerName null `
  -ControllerStatus null `
@@ -40,7 +44,7 @@ Initialize-IntersightStorageFlexFlashControllerPropsAllOf  -CardsManageable null
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageFlexFlashControllerPropsAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

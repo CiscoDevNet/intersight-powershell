@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.Tpm"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.Tpm"]
 **ActivationStatus** | **String** | Identifies the activation status of the TPM. | [optional] [readonly] 
 **AdminState** | **String** | Identifies the admin configured state of the TPM. | [optional] [readonly] 
 **Ownership** | **String** | Identifies the ownership information of the TPM. | [optional] [readonly] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentTpmAllOf  -ActivationStatus null `
+$EquipmentTpmAllOf = Initialize-IntersightEquipmentTpmAllOf  -ClassId null `
+ -ObjectType null `
+ -ActivationStatus null `
  -AdminState null `
  -Ownership null `
  -Presence null `
@@ -30,7 +34,7 @@ Initialize-IntersightEquipmentTpmAllOf  -ActivationStatus null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentTpmAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

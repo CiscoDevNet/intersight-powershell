@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.FlexUtilPhysicalDrive"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.FlexUtilPhysicalDrive"]
 **BlockSize** | **String** | Block size of the FlexUtil Physical drive. | [optional] 
 **Capacity** | **String** | Capacity of the FlexUtil Physical drive. | [optional] 
 **Controller** | **String** | Type of the Physical Drive Controller. | [optional] 
@@ -29,7 +31,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageFlexUtilPhysicalDriveAllOf  -BlockSize null `
+$StorageFlexUtilPhysicalDriveAllOf = Initialize-IntersightStorageFlexUtilPhysicalDriveAllOf  -ClassId null `
+ -ObjectType null `
+ -BlockSize null `
  -Capacity null `
  -Controller null `
  -DrivesEnabled null `
@@ -54,7 +58,7 @@ Initialize-IntersightStorageFlexUtilPhysicalDriveAllOf  -BlockSize null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageFlexUtilPhysicalDriveAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

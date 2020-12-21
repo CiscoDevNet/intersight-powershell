@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "virtualization.VmwareVirtualMachine"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "virtualization.VmwareVirtualMachine"]
 **Annotation** | **String** | List of annotations provided to this VM by user. Can be long. | [optional] 
 **BootTime** | **System.DateTime** | Time when this VM booted up. | [optional] 
 **ConfigName** | **String** | The configuration name for this VM. This maybe the same as the guest hostname. | [optional] 
@@ -17,8 +19,9 @@ Name | Type | Description | Notes
 **DnsServerList** | **String[]** |  | [optional] 
 **DnsSuffixList** | **String[]** |  | [optional] 
 **Folder** | **String** | The folder name associated with this VM. | [optional] 
-**GuestState** | **String** | The state of the guest OS running on this VM. Could be running, not running etc. | [optional] [default to "Unknown"]
+**GuestState** | **String** | The state of the guest OS running on this VM. Could be running, not running etc. * &#x60;Unknown&#x60; - Indicates that the guest OS state cannot be determined. * &#x60;NotRunning&#x60; - Indicates that the guest OS is not running. * &#x60;Resetting&#x60; - Indicates that the guest OS is resetting. * &#x60;Running&#x60; - Indicates that the guest OS is running normally. * &#x60;ShuttingDown&#x60; - Indicates that the guest OS is shutting down. * &#x60;Standby&#x60; - Indicates that the guest OS is in standby mode. | [optional] [default to "Unknown"]
 **InstanceUuid** | **String** | UUID assigned by vCenter to every VM. | [optional] 
+**InventoryPath** | **String** | Inventory path to the VM. Example - /DC/vm/folder/VMName. | [optional] 
 **IsTemplate** | **Boolean** | If true, indicates that the entity refers to a template of a virtual machine and not a real virtual machine. | [optional] 
 **MacAddress** | **String[]** |  | [optional] 
 **MemShares** | [**VirtualizationVmwareVmMemoryShareInfo**](VirtualizationVmwareVmMemoryShareInfo.md) |  | [optional] 
@@ -48,7 +51,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightVirtualizationVmwareVirtualMachineAllOf  -Annotation null `
+$VirtualizationVmwareVirtualMachineAllOf = Initialize-IntersightVirtualizationVmwareVirtualMachineAllOf  -ClassId null `
+ -ObjectType null `
+ -Annotation null `
  -BootTime null `
  -ConfigName null `
  -ConnectionState null `
@@ -64,6 +69,7 @@ Initialize-IntersightVirtualizationVmwareVirtualMachineAllOf  -Annotation null `
  -Folder null `
  -GuestState null `
  -InstanceUuid null `
+ -InventoryPath null `
  -IsTemplate null `
  -MacAddress null `
  -MemShares null `
@@ -92,7 +98,7 @@ Initialize-IntersightVirtualizationVmwareVirtualMachineAllOf  -Annotation null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$VirtualizationVmwareVirtualMachineAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

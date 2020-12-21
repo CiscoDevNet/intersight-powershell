@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "firmware.UpgradeImpact"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "firmware.UpgradeImpact"]
 **Chassis** | [**EquipmentChassisRelationship[]**](EquipmentChassisRelationship.md) | An array of relationships to equipmentChassis resources. | [optional] 
 **Device** | [**AssetDeviceRegistrationRelationship[]**](AssetDeviceRegistrationRelationship.md) | An array of relationships to assetDeviceRegistration resources. | [optional] [readonly] 
 **Distributable** | [**FirmwareDistributableRelationship**](FirmwareDistributableRelationship.md) |  | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFirmwareUpgradeImpactAllOf  -Chassis null `
+$FirmwareUpgradeImpactAllOf = Initialize-IntersightFirmwareUpgradeImpactAllOf  -ClassId null `
+ -ObjectType null `
+ -Chassis null `
  -Device null `
  -Distributable null `
  -NetworkElements null `
@@ -24,7 +28,7 @@ Initialize-IntersightFirmwareUpgradeImpactAllOf  -Chassis null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FirmwareUpgradeImpactAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

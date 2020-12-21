@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "fault.Instance"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "fault.Instance"]
 **Acknowledged** | **String** | The user acknowledgement state of the fault. | [optional] [readonly] 
 **AffectedDn** | **String** | The Distinguished Name of the Managed object which was affected. | [optional] [readonly] 
 **AffectedMoId** | **String** | Managed object Id which was affected. | [optional] [readonly] 
@@ -25,7 +27,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFaultInstanceAllOf  -Acknowledged null `
+$FaultInstanceAllOf = Initialize-IntersightFaultInstanceAllOf  -ClassId null `
+ -ObjectType null `
+ -Acknowledged null `
  -AffectedDn null `
  -AffectedMoId null `
  -AffectedMoType null `
@@ -46,7 +50,7 @@ Initialize-IntersightFaultInstanceAllOf  -Acknowledged null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FaultInstanceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

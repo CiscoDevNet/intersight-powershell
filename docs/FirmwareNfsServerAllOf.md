@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "firmware.NfsServer"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "firmware.NfsServer"]
 **FileLocation** | **String** | The location to the image file. The accepted format is IP-or-hostname/folder1/folder2/.../imageFile. | [optional] 
 **MountOptions** | **String** | Mount option as configured on the NFS Server. For example:nolock. | [optional] 
 **RemoteFile** | **String** | Filename of the image in the remote share location. For example:ucs-c220m5-huu-3.1.2c.iso. | [optional] [readonly] 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFirmwareNfsServerAllOf  -FileLocation null `
+$FirmwareNfsServerAllOf = Initialize-IntersightFirmwareNfsServerAllOf  -ClassId null `
+ -ObjectType null `
+ -FileLocation null `
  -MountOptions null `
  -RemoteFile null `
  -RemoteIp null `
@@ -22,7 +26,7 @@ Initialize-IntersightFirmwareNfsServerAllOf  -FileLocation null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FirmwareNfsServerAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

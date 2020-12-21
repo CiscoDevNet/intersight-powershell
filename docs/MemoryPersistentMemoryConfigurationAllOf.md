@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "memory.PersistentMemoryConfiguration"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "memory.PersistentMemoryConfiguration"]
 **MemoryCapacity** | **String** | Memory capacity in GiB of a Persistent Memory configuration on a server. | [optional] [readonly] 
 **NumOfModules** | **String** | Number of Persistent Memory Modules on a server. | [optional] [readonly] 
 **NumOfRegions** | **String** | Number of Persistent Memory Regions on a server. | [optional] [readonly] 
@@ -20,7 +22,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightMemoryPersistentMemoryConfigurationAllOf  -MemoryCapacity null `
+$MemoryPersistentMemoryConfigurationAllOf = Initialize-IntersightMemoryPersistentMemoryConfigurationAllOf  -ClassId null `
+ -ObjectType null `
+ -MemoryCapacity null `
  -NumOfModules null `
  -NumOfRegions null `
  -PersistentMemoryCapacity null `
@@ -36,7 +40,7 @@ Initialize-IntersightMemoryPersistentMemoryConfigurationAllOf  -MemoryCapacity n
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MemoryPersistentMemoryConfigurationAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

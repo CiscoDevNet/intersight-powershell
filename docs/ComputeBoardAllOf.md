@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "compute.Board"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "compute.Board"]
 **BoardId** | **Int64** | The identity of the motherboard. | [optional] [readonly] 
 **CpuTypeController** | **String** | The type of central processing unit on the mother board. | [optional] [readonly] 
 **OperPowerState** | **String** | Current power state of the mother board of the server. | [optional] [readonly] 
@@ -27,7 +29,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightComputeBoardAllOf  -BoardId null `
+$ComputeBoardAllOf = Initialize-IntersightComputeBoardAllOf  -ClassId null `
+ -ObjectType null `
+ -BoardId null `
  -CpuTypeController null `
  -OperPowerState null `
  -Presence null `
@@ -50,7 +54,7 @@ Initialize-IntersightComputeBoardAllOf  -BoardId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ComputeBoardAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

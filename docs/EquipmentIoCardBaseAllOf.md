@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
 **ConnectionStatus** | **String** | Connectivity Status of FEX/IOM to Switch - A or B or AB. | [optional] 
 **Description** | **String** | This field is to provide description for the iocard module model. | [optional] [readonly] 
 **ModuleId** | **Int64** | Module Identifier for the IO module. | [optional] [readonly] 
@@ -22,7 +24,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentIoCardBaseAllOf  -ConnectionStatus null `
+$EquipmentIoCardBaseAllOf = Initialize-IntersightEquipmentIoCardBaseAllOf  -ClassId null `
+ -ObjectType null `
+ -ConnectionStatus null `
  -Description null `
  -ModuleId null `
  -OperState null `
@@ -40,7 +44,7 @@ Initialize-IntersightEquipmentIoCardBaseAllOf  -ConnectionStatus null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentIoCardBaseAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

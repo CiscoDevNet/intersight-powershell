@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.PhysicalDisk"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.PhysicalDisk"]
 **BlockSize** | **String** | The block size of the physical disk in bytes. | [optional] [readonly] 
 **Bootable** | **String** | This field identifies the disk drive as bootable if set to true. | [optional] [readonly] 
 **ConfigurationCheckpoint** | **String** | The current configuration checkpoint of the physical disk. | [optional] [readonly] 
@@ -43,7 +45,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStoragePhysicalDiskAllOf  -BlockSize null `
+$StoragePhysicalDiskAllOf = Initialize-IntersightStoragePhysicalDiskAllOf  -ClassId null `
+ -ObjectType null `
+ -BlockSize null `
  -Bootable null `
  -ConfigurationCheckpoint null `
  -ConfigurationState null `
@@ -82,7 +86,7 @@ Initialize-IntersightStoragePhysicalDiskAllOf  -BlockSize null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StoragePhysicalDiskAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.FlexFlashController"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.FlexFlashController"]
 **ControllerState** | **String** | State of the Flex Flash Storage Controller. | [optional] [readonly] 
 **FfControllerId** | **String** | Identifier for the Flex Flash Storage Controller. | [optional] [readonly] 
 **ComputeBoard** | [**ComputeBoardRelationship**](ComputeBoardRelationship.md) |  | [optional] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageFlexFlashControllerAllOf  -ControllerState null `
+$StorageFlexFlashControllerAllOf = Initialize-IntersightStorageFlexFlashControllerAllOf  -ClassId null `
+ -ObjectType null `
+ -ControllerState null `
  -FfControllerId null `
  -ComputeBoard null `
  -FlexFlashControllerProps null `
@@ -30,7 +34,7 @@ Initialize-IntersightStorageFlexFlashControllerAllOf  -ControllerState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageFlexFlashControllerAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

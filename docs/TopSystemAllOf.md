@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "top.System"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "top.System"]
 **Ipv4Address** | **String** | The IPv4 address of system. | [optional] [readonly] 
 **Ipv6Address** | **String** | The IPv6 address of system. | [optional] [readonly] 
 **Mode** | **String** | The current mode of the system. | [optional] [readonly] 
@@ -19,7 +21,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTopSystemAllOf  -Ipv4Address null `
+$TopSystemAllOf = Initialize-IntersightTopSystemAllOf  -ClassId null `
+ -ObjectType null `
+ -Ipv4Address null `
  -Ipv6Address null `
  -Mode null `
  -Name null `
@@ -34,7 +38,7 @@ Initialize-IntersightTopSystemAllOf  -Ipv4Address null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TopSystemAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

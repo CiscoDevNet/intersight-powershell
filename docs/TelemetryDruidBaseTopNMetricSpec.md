@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightTelemetryDruidBaseTopNMetricSpec  -Type null
+$TelemetryDruidBaseTopNMetricSpec = Initialize-IntersightTelemetryDruidBaseTopNMetricSpec  -Type null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TelemetryDruidBaseTopNMetricSpec | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

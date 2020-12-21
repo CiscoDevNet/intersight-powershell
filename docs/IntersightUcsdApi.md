@@ -25,17 +25,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Delete a 'ucsd.BackupInfo' resource.
 try {
-    Remove-IntersightUcsdBackupInfo -Moid $Moid
+     $Result = Remove-IntersightUcsdBackupInfo -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Remove-IntersightUcsdBackupInfo: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -49,12 +64,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 void (empty response body)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -79,17 +94,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'ucsd.BackupInfo' resource.
 try {
-    UcsdBackupInfo $Result = Get-IntersightUcsdBackupInfoByMoid -Moid $Moid
+     $Result = Get-IntersightUcsdBackupInfoByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightUcsdBackupInfoByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -103,12 +133,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**UcsdBackupInfo**](UcsdBackupInfo.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -143,11 +173,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -163,7 +208,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'ucsd.BackupInfo' resource.
 try {
-    UcsdBackupInfoResponse $Result = Get-IntersightUcsdBackupInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightUcsdBackupInfoList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightUcsdBackupInfoList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -187,12 +232,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**UcsdBackupInfoResponse**](UcsdBackupInfoResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

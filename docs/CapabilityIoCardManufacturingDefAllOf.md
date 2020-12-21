@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "capability.IoCardManufacturingDef"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "capability.IoCardManufacturingDef"]
 **Caption** | **String** | Caption for a chassis Iocard module. | [optional] 
 **Description** | **String** | Description for a chassis Iocard module. | [optional] 
 **VarPid** | **String** | Product Identifier for a chassis Iocard module. | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightCapabilityIoCardManufacturingDefAllOf  -Caption null `
+$CapabilityIoCardManufacturingDefAllOf = Initialize-IntersightCapabilityIoCardManufacturingDefAllOf  -ClassId null `
+ -ObjectType null `
+ -Caption null `
  -Description null `
  -VarPid null `
  -ProductName null `
@@ -24,7 +28,7 @@ Initialize-IntersightCapabilityIoCardManufacturingDefAllOf  -Caption null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CapabilityIoCardManufacturingDefAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

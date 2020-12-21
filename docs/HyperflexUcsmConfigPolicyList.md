@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightHyperflexUcsmConfigPolicyList  -ObjectType null `
+$HyperflexUcsmConfigPolicyList = Initialize-IntersightHyperflexUcsmConfigPolicyList  -ObjectType null `
  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HyperflexUcsmConfigPolicyList | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

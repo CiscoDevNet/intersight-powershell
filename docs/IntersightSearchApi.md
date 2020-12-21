@@ -29,19 +29,34 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
 
-$SearchSuggestItem = (Initialize-search.SuggestItem-AccountMoid "AccountMoid_example" -ClassId "ClassId_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -ObjectType "ObjectType_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @((Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example")) -RefMo (Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example") -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @() -RefMo  -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO" -CompleteMo $false -Rawquery "Rawquery_example" -Skip 123 -SuggestTerm "SuggestTerm_example" -Top 123 -Type "Type_example") # SearchSuggestItem | The 'search.SuggestItem' resource to create.
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+
+$SearchSuggestItem = (Initialize-search.SuggestItem-ClassId "ClassId_example" -ObjectType "ObjectType_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Moid "Moid_example" -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @((Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example")) -RefMo (Initialize-mo.MoRef-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example") -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @((Initialize-mo.Tag-Key "Key_example" -Value "Value_example")) -VersionContext (Initialize-mo.VersionContext-ClassId "ClassId_example" -ObjectType "ObjectType_example" -InterestedMos @() -RefMo  -Timestamp Get-Date -Version "Version_example" -VersionType "VersionType_example") -Ancestors @((Initialize-mo.BaseMo.Relationship-ClassId "ClassId_example" -ObjectType "ObjectType_example" -Moid "Moid_example" -Selector "Selector_example" -Link "Link_example" -AccountMoid "AccountMoid_example" -CreateTime Get-Date -DomainGroupMoid "DomainGroupMoid_example" -ModTime Get-Date -Owners @("Owners_example") -SharedScope "SharedScope_example" -Tags @() -VersionContext  -Ancestors @() -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO")) -Parent  -PermissionResources @() -DisplayNames "TODO" -CompleteMo $false -Rawquery "Rawquery_example" -Skip 123 -SuggestTerm "SuggestTerm_example" -Top 123 -Type "Type_example") # SearchSuggestItem | The 'search.SuggestItem' resource to create.
 $IfMatch = "IfMatch_example" # String | For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request. (optional)
 $IfNoneMatch = "IfNoneMatch_example" # String | For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte. (optional)
 
 # Create a 'search.SuggestItem' resource.
 try {
-    SearchSuggestItem $Result = New-IntersightSearchSuggestItem -SearchSuggestItem $SearchSuggestItem -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
+     $Result = New-IntersightSearchSuggestItem -SearchSuggestItem $SearchSuggestItem -IfMatch $IfMatch -IfNoneMatch $IfNoneMatch
 } catch {
     Write-Host ("Exception occured when calling New-IntersightSearchSuggestItem: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -57,12 +72,12 @@ Name | Type | Description  | Notes
  **IfNoneMatch** | **String**| For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn&#39;t happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource&#39;s ETag doesn&#39;t match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don&#39;t have to be identical byte for byte. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SearchSuggestItem**](SearchSuggestItem.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -87,17 +102,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'search.SearchItem' resource.
 try {
-    SearchSearchItem $Result = Get-IntersightSearchSearchItemByMoid -Moid $Moid
+     $Result = Get-IntersightSearchSearchItemByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightSearchSearchItemByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -111,12 +141,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SearchSearchItem**](SearchSearchItem.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -151,11 +181,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -171,7 +216,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'search.SearchItem' resource.
 try {
-    SearchSearchItemResponse $Result = Get-IntersightSearchSearchItemList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightSearchSearchItemList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightSearchSearchItemList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -195,12 +240,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SearchSearchItemResponse**](SearchSearchItemResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -225,17 +270,32 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $Moid = "Moid_example" # String | The unique Moid identifier of a resource instance.
 
 # Read a 'search.TagItem' resource.
 try {
-    SearchTagItem $Result = Get-IntersightSearchTagItemByMoid -Moid $Moid
+     $Result = Get-IntersightSearchTagItemByMoid -Moid $Moid
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightSearchTagItemByMoid: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -249,12 +309,12 @@ Name | Type | Description  | Notes
  **Moid** | **String**| The unique Moid identifier of a resource instance. | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SearchTagItem**](SearchTagItem.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 
@@ -289,11 +349,26 @@ $Configuration = Get-IntersightConfiguration
 $Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+
 # Configure HTTP basic authorization: http_signature
 $Configuration["Username"] = "YOUR_USERNAME";
 $Configuration["Password"] = "YOUR_PASSWORD";
+
+# Configure HttpSignature for authorization :http_signature
+$httpSigningParams = @{
+    KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
+    KeyFilePath = "C:\SecretKey.txt"
+    HttpSigningHeader = @("(request-target)","Host","Date","Digest")
+    HashAlgorithm = "sha256"
+}
+Set-IntersightConfigurationHttpSigning @httpSigningParams
+
 # Configure OAuth2 access token for authorization: oAuth2
 $Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
+# Configure OAuth2 access token for authorization: oAuth2
+$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+
 
 $VarFilter = "VarFilter_example" # String | Filter criteria for the resources to return. A URI with a $filter query option identifies a subset of the entries from the Collection of Entries. The subset is determined by selecting only the Entries that satisfy the predicate expression specified by the $filter option. The expression language that is used in $filter queries supports references to properties and literals. The literal values can be strings enclosed in single quotes, numbers and boolean values (true or false). (optional) (default to "")
 $Orderby = "Orderby_example" # String | Determines what properties are used to sort the collection of resources. (optional)
@@ -309,7 +384,7 @@ $Tags = "Tags_example" # String | The 'tags' parameter is used to request a summ
 
 # Read a 'search.TagItem' resource.
 try {
-    SearchTagItemResponse $Result = Get-IntersightSearchTagItemList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
+     $Result = Get-IntersightSearchTagItemList -VarFilter $VarFilter -Orderby $Orderby -Top $Top -Skip $Skip -Select $Select -Expand $Expand -Apply $Apply -Count $Count -Inlinecount $Inlinecount -At $At -Tags $Tags
 } catch {
     Write-Host ("Exception occured when calling Get-IntersightSearchTagItemList: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -333,12 +408,12 @@ Name | Type | Description  | Notes
  **Tags** | **String**| The &#39;tags&#39; parameter is used to request a summary of the Tag utilization for this resource. When the &#39;tags&#39; parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key. | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SearchTagItemResponse**](SearchTagItemResponse.md)
 
 ### Authorization
 
-[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2)
+[cookieAuth](../README.md#cookieAuth), [http_signature](../README.md#http_signature), [oAuth2](../README.md#oAuth2), [oAuth2](../README.md#oAuth2)
 
 ### HTTP request headers
 

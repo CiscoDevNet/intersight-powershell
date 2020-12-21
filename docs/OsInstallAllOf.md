@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "os.Install"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "os.Install"]
 **Name** | **String** | The name of the OS install configuration. | [optional] 
 **ConfigurationFile** | [**OsConfigurationFileRelationship**](OsConfigurationFileRelationship.md) |  | [optional] 
 **Image** | [**SoftwarerepositoryOperatingSystemFileRelationship**](SoftwarerepositoryOperatingSystemFileRelationship.md) |  | [optional] 
@@ -15,7 +17,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightOsInstallAllOf  -Name null `
+$OsInstallAllOf = Initialize-IntersightOsInstallAllOf  -ClassId null `
+ -ObjectType null `
+ -Name null `
  -ConfigurationFile null `
  -Image null `
  -Organization null `
@@ -26,7 +30,7 @@ Initialize-IntersightOsInstallAllOf  -Name null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$OsInstallAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

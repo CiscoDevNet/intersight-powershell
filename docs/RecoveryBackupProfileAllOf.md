@@ -3,7 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** | Enables/Disables the schedule on the endpoint. | [optional] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "recovery.BackupProfile"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "recovery.BackupProfile"]
+**Enabled** | **Boolean** | Enables/Disables the schedule on the endpoint. | [optional] [default to $true]
 **BackupConfig** | [**RecoveryBackupConfigPolicyRelationship**](RecoveryBackupConfigPolicyRelationship.md) |  | [optional] 
 **ConfigResult** | [**RecoveryConfigResultRelationship**](RecoveryConfigResultRelationship.md) |  | [optional] 
 **DeviceId** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightRecoveryBackupProfileAllOf  -Enabled null `
+$RecoveryBackupProfileAllOf = Initialize-IntersightRecoveryBackupProfileAllOf  -ClassId null `
+ -ObjectType null `
+ -Enabled null `
  -BackupConfig null `
  -ConfigResult null `
  -DeviceId null `
@@ -24,7 +28,7 @@ Initialize-IntersightRecoveryBackupProfileAllOf  -Enabled null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$RecoveryBackupProfileAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

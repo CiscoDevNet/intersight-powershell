@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "onprem.ImagePackage"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "onprem.ImagePackage"]
 **FilePath** | **String** | Optional file path of the image package. | [optional] [readonly] 
 **FileSha** | **String** | Image file&#39;s fingerprint. Fingerprint is calculated using SHA256 algorithm. | [optional] [readonly] 
 **FileSize** | **Int64** | Image file size in bytes. | [optional] [readonly] 
@@ -16,7 +18,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightOnpremImagePackageAllOf  -FilePath null `
+$OnpremImagePackageAllOf = Initialize-IntersightOnpremImagePackageAllOf  -ClassId null `
+ -ObjectType null `
+ -FilePath null `
  -FileSha null `
  -FileSize null `
  -FileTime null `
@@ -28,7 +32,7 @@ Initialize-IntersightOnpremImagePackageAllOf  -FilePath null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$OnpremImagePackageAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

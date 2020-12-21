@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.SasPort"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.SasPort"]
 **Address** | **String** | The SAS Address assigned to storage port. | [optional] [readonly] 
 **DiskId** | **Int64** | The unique disk identifier. | [optional] [readonly] 
 **EndPointId** | **Int64** | The end-point Id assigned to storage port. | [optional] [readonly] 
@@ -16,7 +18,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStorageSasPortAllOf  -Address null `
+$StorageSasPortAllOf = Initialize-IntersightStorageSasPortAllOf  -ClassId null `
+ -ObjectType null `
+ -Address null `
  -DiskId null `
  -EndPointId null `
  -LinkDescription null `
@@ -28,7 +32,7 @@ Initialize-IntersightStorageSasPortAllOf  -Address null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StorageSasPortAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

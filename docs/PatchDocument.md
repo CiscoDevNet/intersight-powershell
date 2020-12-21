@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightPatchDocument  -Op null `
+$PatchDocument = Initialize-IntersightPatchDocument  -Op null `
  -Path null `
  -Value null `
  -VarFrom null
@@ -20,7 +20,7 @@ Initialize-IntersightPatchDocument  -Op null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PatchDocument | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

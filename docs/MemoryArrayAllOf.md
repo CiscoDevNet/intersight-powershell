@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "memory.Array"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "memory.Array"]
 **ArrayId** | **Int64** | The instance number of the memory array. | [optional] [readonly] 
 **CpuId** | **Int64** | ID of the CPU that access this memory array. | [optional] [readonly] 
 **CurrentCapacity** | **String** | Current capacity of all the memory units on a server. | [optional] [readonly] 
@@ -23,7 +25,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightMemoryArrayAllOf  -ArrayId null `
+$MemoryArrayAllOf = Initialize-IntersightMemoryArrayAllOf  -ClassId null `
+ -ObjectType null `
+ -ArrayId null `
  -CpuId null `
  -CurrentCapacity null `
  -ErrorCorrection null `
@@ -42,7 +46,7 @@ Initialize-IntersightMemoryArrayAllOf  -ArrayId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MemoryArrayAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

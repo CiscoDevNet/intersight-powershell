@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.PsuControl"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.PsuControl"]
 **ClusterState** | **String** | This field identifies the cluster state of the psu redundancy. | [optional] [readonly] 
 **InputPowerState** | **String** | This field identifies the input power state of the psus. | [optional] [readonly] 
 **Name** | **String** | This field identifies the name of psu control object. | [optional] [readonly] 
@@ -18,7 +20,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightEquipmentPsuControlAllOf  -ClusterState null `
+$EquipmentPsuControlAllOf = Initialize-IntersightEquipmentPsuControlAllOf  -ClassId null `
+ -ObjectType null `
+ -ClusterState null `
  -InputPowerState null `
  -Name null `
  -OperQualifier null `
@@ -32,7 +36,7 @@ Initialize-IntersightEquipmentPsuControlAllOf  -ClusterState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$EquipmentPsuControlAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

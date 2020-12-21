@@ -3,9 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "iam.Account"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "iam.Account"]
 **Name** | **String** | Name of the Intersight account. By default, name is same as the MoID of the account. | [optional] 
 **Status** | **String** | Status of the account. To activate the Intersight account, claim a device to the account. | [optional] [readonly] 
-**Var0LicenseReservationOp** | [**LicenseLicenseReservationOpRelationship**](LicenseLicenseReservationOpRelationship.md) |  | [optional] 
 **AppRegistrations** | [**IamAppRegistrationRelationship[]**](IamAppRegistrationRelationship.md) | An array of relationships to iamAppRegistration resources. | [optional] [readonly] 
 **DomainGroups** | [**IamDomainGroupRelationship[]**](IamDomainGroupRelationship.md) | An array of relationships to iamDomainGroup resources. | [optional] [readonly] 
 **EndPointRoles** | [**IamEndPointRoleRelationship[]**](IamEndPointRoleRelationship.md) | An array of relationships to iamEndPointRole resources. | [optional] [readonly] 
@@ -23,9 +24,10 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIamAccountAllOf  -Name null `
+$IamAccountAllOf = Initialize-IntersightIamAccountAllOf  -ClassId null `
+ -ObjectType null `
+ -Name null `
  -Status null `
- -Var0LicenseReservationOp null `
  -AppRegistrations null `
  -DomainGroups null `
  -EndPointRoles null `
@@ -42,7 +44,7 @@ Initialize-IntersightIamAccountAllOf  -Name null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IamAccountAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

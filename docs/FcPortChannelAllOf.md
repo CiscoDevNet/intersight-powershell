@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "fc.PortChannel"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "fc.PortChannel"]
 **AdminSpeed** | **String** | Administrator configured Speed applied on the port channel. | [optional] 
 **AdminState** | **String** | Administratively configured state (enabled/disabled) for this portchannel. | [optional] [readonly] 
 **Mode** | **String** | Mode information N_proxy, F or E associated to the Fibre Channel portchannel. | [optional] 
@@ -20,7 +22,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightFcPortChannelAllOf  -AdminSpeed null `
+$FcPortChannelAllOf = Initialize-IntersightFcPortChannelAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminSpeed null `
  -AdminState null `
  -Mode null `
  -OperSpeed null `
@@ -36,7 +40,7 @@ Initialize-IntersightFcPortChannelAllOf  -AdminSpeed null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$FcPortChannelAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

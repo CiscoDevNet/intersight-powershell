@@ -3,22 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The Object Type of the referenced REST resource. | [readonly] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. The enum values provides the list of concrete types that can be instantiated from this abstract type. | 
 **Moid** | **String** | The Moid of the referenced REST resource. | [optional] [readonly] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightCmrfCmRf  -ClassId null `
+$CmrfCmRf = Initialize-IntersightCmrfCmRf  -ClassId null `
  -ObjectType null `
  -Moid null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CmrfCmRf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,14 +11,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightCapabilityFanModuleManufacturingDefResponse  -ObjectType null `
+$CapabilityFanModuleManufacturingDefResponse = Initialize-IntersightCapabilityFanModuleManufacturingDefResponse  -ObjectType null `
  -Count null `
  -Results null
 ```
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CapabilityFanModuleManufacturingDefResponse | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

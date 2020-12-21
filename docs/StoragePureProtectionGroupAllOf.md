@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "storage.PureProtectionGroup"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "storage.PureProtectionGroup"]
 **Size** | **Int64** | Overall size of all snapshots in the protection group, represented in bytes. | [optional] 
 **Source** | **String** | Name of PureStorage array name on which the protection group is created. | [optional] [readonly] 
 **Targets** | **String[]** |  | [optional] 
@@ -16,7 +18,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightStoragePureProtectionGroupAllOf  -Size null `
+$StoragePureProtectionGroupAllOf = Initialize-IntersightStoragePureProtectionGroupAllOf  -ClassId null `
+ -ObjectType null `
+ -Size null `
  -Source null `
  -Targets null `
  -Array null `
@@ -28,7 +32,7 @@ Initialize-IntersightStoragePureProtectionGroupAllOf  -Size null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StoragePureProtectionGroupAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

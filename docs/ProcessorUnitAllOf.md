@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "processor.Unit"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "processor.Unit"]
 **Architecture** | **String** | The architecture of the installed processor. | [optional] [readonly] 
 **NumCores** | **Int64** | The number of cores present in a given processor. | [optional] [readonly] 
 **NumCoresEnabled** | **String** | The number of enabled cores in the installed processor. | [optional] [readonly] 
@@ -26,7 +28,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightProcessorUnitAllOf  -Architecture null `
+$ProcessorUnitAllOf = Initialize-IntersightProcessorUnitAllOf  -ClassId null `
+ -ObjectType null `
+ -Architecture null `
  -NumCores null `
  -NumCoresEnabled null `
  -NumThreads null `
@@ -48,7 +52,7 @@ Initialize-IntersightProcessorUnitAllOf  -Architecture null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ProcessorUnitAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

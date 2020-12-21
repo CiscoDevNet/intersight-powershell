@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "appliance.UpgradePolicy"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "appliance.UpgradePolicy"]
 **AutoUpgrade** | **Boolean** | Indicates if the upgrade service is set to automatically start the software upgrade or not. If autoUpgrade is true, then the value of the schedule field is ignored. | [optional] 
 **BlackoutDatesEnabled** | **Boolean** | If enabled, allows the user to define a blackout period during which the appliance will not be upgraded. | [optional] 
 **BlackoutEndDate** | **System.DateTime** | End date of the black out period. | [optional] 
@@ -14,7 +16,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightApplianceUpgradePolicyAllOf  -AutoUpgrade null `
+$ApplianceUpgradePolicyAllOf = Initialize-IntersightApplianceUpgradePolicyAllOf  -ClassId null `
+ -ObjectType null `
+ -AutoUpgrade null `
  -BlackoutDatesEnabled null `
  -BlackoutEndDate null `
  -BlackoutStartDate null `
@@ -24,7 +28,7 @@ Initialize-IntersightApplianceUpgradePolicyAllOf  -AutoUpgrade null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ApplianceUpgradePolicyAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

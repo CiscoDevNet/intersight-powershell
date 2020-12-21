@@ -3,9 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "iam.IdpReference"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "iam.IdpReference"]
 **DomainName** | **String** | The email domain name for this IdP of the user. When a user enters an email during login in the Intersight home page, the IdP is picked by matching this domain name with the email domain name for authentication. | [optional] [readonly] 
 **IdpEntityId** | **String** | Entity ID of the IdP. In SAML, the entity ID uniquely identifies the IdP/Service Provider. | [optional] [readonly] 
-**MultiFactorAuthentication** | **Boolean** | The flag represents if the second factor of authentication is required for Cisco IdP users. | [optional] 
+**MultiFactorAuthentication** | **Boolean** | The flag represents if the second factor of authentication is required for Cisco IdP users. | [optional] [default to $false]
 **Name** | **String** | Cisco IdP reference in an account. | [optional] [readonly] 
 **Account** | [**IamAccountRelationship**](IamAccountRelationship.md) |  | [optional] 
 **Idp** | [**IamIdpRelationship**](IamIdpRelationship.md) |  | [optional] 
@@ -17,7 +19,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIamIdpReferenceAllOf  -DomainName null `
+$IamIdpReferenceAllOf = Initialize-IntersightIamIdpReferenceAllOf  -ClassId null `
+ -ObjectType null `
+ -DomainName null `
  -IdpEntityId null `
  -MultiFactorAuthentication null `
  -Name null `
@@ -30,7 +34,7 @@ Initialize-IntersightIamIdpReferenceAllOf  -DomainName null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IamIdpReferenceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

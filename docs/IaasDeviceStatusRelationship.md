@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClassId** | **String** | The concrete type of this complex type. Its value must be the same as the &#39;objectType&#39; property. The OpenAPI document references this property as a discriminator value. | [readonly] 
-**ObjectType** | **String** | The fully-qualified type of this managed object, i.e. the class name. This property is optional. The ObjectType is implied from the URL path. If specified, the value of objectType must match the class name specified in the URL path. | [readonly] 
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "iaas.DeviceStatus"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "iaas.DeviceStatus"]
 **Moid** | **String** | The unique identifier of this Managed Object instance. | [optional] 
 **Selector** | **String** | An OData $filter expression which describes the REST resource to be referenced. This field may be set instead of &#39;moid&#39; by clients. 1. If &#39;moid&#39; is set this field is ignored. 1. If &#39;selector&#39; is set and &#39;moid&#39; is empty/absent from the request, Intersight determines the Moid of the resource matching the filter expression and populates it in the MoRef that is part of the object instance being inserted/updated to fulfill the REST request. An error is returned if the filter matches zero or more than one REST resource. An example filter string is: Serial eq &#39;3AA8B7T11&#39;. | [optional] [readonly] 
 **Link** | **String** | A URL to an instance of the &#39;mo.MoRef&#39; class. | [optional] 
@@ -19,10 +19,11 @@ Name | Type | Description | Notes
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
-**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | a map of display names for a resource. | [optional] [readonly] 
+**DisplayNames** | [**System.Collections.Hashtable**](Array.md) | A set of display names for the MO resource. These names are calculated based on other properties of the MO and potentially properties of Ancestor MOs. Displaynames are intended as a way to provide a normalized user appropriate name for an MO, especially for MOs which do not have a &#39;Name&#39; property, which is the case for much of the inventory discovered from managed targets. There are a limited number of keys, currently &#39;short&#39; and &#39;hierarchical&#39;. The value is an array and clients should use the first element of the array. | [optional] [readonly] 
 **AccountName** | **String** | The UCSD infra account name. Account Name is created when UCSD admin adds any new infra account (Physical/Virtual/Compute/Network) to be managed by UCSD. | [optional] [readonly] 
 **AccountType** | **String** | The UCSD Infra Account type. | [optional] [readonly] 
-**ClaimStatus** | **String** | Describes if the device is claimed in Intersight or not. | [optional] [readonly] [default to "Unknown"]
+**Category** | **String** | The UCSD Infra Account category. | [optional] [readonly] 
+**ClaimStatus** | **String** | Describes if the device is claimed in Intersight or not. * &#x60;Unknown&#x60; - If UCS Director managed account claim status information is unknown. * &#x60;Yes&#x60; - If UCS Director managed account is claimed in Intersight. * &#x60;No&#x60; - If UCS Director managed account is not claimed in Intersight. * &#x60;Not Applicable&#x60; - If UCS Director managed account is not capable of providing claim status information. | [optional] [readonly] [default to "Unknown"]
 **ConnectionStatus** | **String** | Describes about the connection status between the UCSD and the actual end device. | [optional] [readonly] 
 **DeviceModel** | **String** | Describes about the device model. | [optional] [readonly] 
 **DeviceVendor** | **String** | Describes about the device vendor/manufacturer of the device. | [optional] [readonly] 
@@ -36,7 +37,7 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightIaasDeviceStatusRelationship  -ClassId null `
+$IaasDeviceStatusRelationship = Initialize-IntersightIaasDeviceStatusRelationship  -ClassId null `
  -ObjectType null `
  -Moid null `
  -Selector null `
@@ -55,6 +56,7 @@ Initialize-IntersightIaasDeviceStatusRelationship  -ClassId null `
  -DisplayNames null `
  -AccountName null `
  -AccountType null `
+ -Category null `
  -ClaimStatus null `
  -ConnectionStatus null `
  -DeviceModel null `
@@ -68,7 +70,7 @@ Initialize-IntersightIaasDeviceStatusRelationship  -ClassId null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$IaasDeviceStatusRelationship | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

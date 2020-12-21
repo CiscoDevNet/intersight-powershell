@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "adapter.HostFcInterface"]
+**ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "adapter.HostFcInterface"]
 **AdminState** | **String** | Admin Configured State of Host Fibre Channel Interface. | [optional] [readonly] 
 **EpDn** | **String** | The Endpoint Config Dn of the Host Fibre Channel Interface. | [optional] [readonly] 
 **HostFcInterfaceId** | **Int64** | Identifier of Host Fibre Channel Interface. | [optional] [readonly] 
@@ -22,7 +24,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-Initialize-IntersightAdapterHostFcInterfaceAllOf  -AdminState null `
+$AdapterHostFcInterfaceAllOf = Initialize-IntersightAdapterHostFcInterfaceAllOf  -ClassId null `
+ -ObjectType null `
+ -AdminState null `
  -EpDn null `
  -HostFcInterfaceId null `
  -Name null `
@@ -40,7 +44,7 @@ Initialize-IntersightAdapterHostFcInterfaceAllOf  -AdminState null `
 
 - Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AdapterHostFcInterfaceAllOf | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
