@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **NumFcHostInterfaces** | **Int64** | The total number of vHBAs which are visible to a host on the server. | [optional] [readonly] 
 **NumThreads** | **Int64** | The total number of threads the server is capable of handling. | [optional] [readonly] 
 **OperPowerState** | **String** | The actual power state of the server. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | The operational state of the server. | [optional] [readonly] 
 **Operability** | **String** | The operability of the server. | [optional] [readonly] 
 **PlatformType** | **String** | The platform type of the registered device - whether managed by UCSM or operating in standalone mode. | [optional] [readonly] 
@@ -85,6 +86,7 @@ $ComputePhysicalSummaryAllOf = Initialize-IntersightComputePhysicalSummaryAllOf 
  -NumFcHostInterfaces null `
  -NumThreads null `
  -OperPowerState null `
+ -OperReason null `
  -OperState null `
  -Operability null `
  -PlatformType null `

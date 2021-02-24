@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **IgmpAccessListCount** | **Int64** | IGMP Access List feature usage. This determines the total number of IGMP access lists configured across the fabric. | [optional] 
 **IgmpSnoop** | **String** | IGMP Snooping feature usage. This determines if this feature is enabled or disabled. | [optional] 
 **IpEpgCount** | **Int64** | Number of IP based End Point Groups. This determines the total number of IP End Point Groups across the fabric. | [optional] 
+**IsTechSupportCollected** | **String** | Status of techsupport collection. | [optional] 
 **IsisCount** | **Int64** | Isis feature usage. This determines the total number of ISIS sessions across the fabric. | [optional] 
 **L2Multicast** | **String** | L2Multicast feature usage. This determines if this Layer 2 Multicast feature is being enabled / disabled on the fabric. | [optional] 
 **LeafCount** | **Int64** | Number of Leafs. This determines the total number of Leaf switches in the fabric. | [optional] 
@@ -53,6 +54,8 @@ Name | Type | Description | Notes
 **SharedL3OutCount** | **Int64** | SharedL3Out feature usage. This determines the total number of Shared L3 out configured across the fabric. | [optional] 
 **SiteName** | **String** | The Site name represents an APIC cluster. Service Engine can onboard multiple APIC clusters / sites. There will be a feature usage object per site in Multi site scenario. In multi-site scenario the site name is available in all the requests being made. | [optional] 
 **SmartCallHome** | **String** | Smart callhome feature usage. This determines if this feature is being enabled or disabled. | [optional] 
+**SmartLicense** | [**NiatelemetrySmartLicense**](NiatelemetrySmartLicense.md) |  | [optional] 
+**SnapshotCount** | **Int64** | Returns count of snapshots. | [optional] 
 **Snmp** | **String** | SNMP feature usage. This determines if this feature is enabled or disabled. | [optional] 
 **SnmpGroupCount** | **Int64** | Number of SNMP monitoring policies on the fabric. | [optional] 
 **SpanCount** | **Int64** | Number of Span Sources and Destinations. | [optional] 
@@ -106,6 +109,7 @@ $NiatelemetryNiaFeatureUsageAllOf = Initialize-IntersightNiatelemetryNiaFeatureU
  -IgmpAccessListCount null `
  -IgmpSnoop null `
  -IpEpgCount null `
+ -IsTechSupportCollected null `
  -IsisCount null `
  -L2Multicast null `
  -LeafCount null `
@@ -129,6 +133,8 @@ $NiatelemetryNiaFeatureUsageAllOf = Initialize-IntersightNiatelemetryNiaFeatureU
  -SharedL3OutCount null `
  -SiteName null `
  -SmartCallHome null `
+ -SmartLicense null `
+ -SnapshotCount null `
  -Snmp null `
  -SnmpGroupCount null `
  -SpanCount null `

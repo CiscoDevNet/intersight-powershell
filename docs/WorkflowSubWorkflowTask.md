@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **OnFailure** | **String** | This specifies the name of the next task to run if Task fails.  This is the unique name given to the task instance within the workflow. In a graph model, denotes an edge to another Task Node. | [optional] 
 **OnSuccess** | **String** | This specifies the name of the next task to run if Task succeeds.  This is the unique name given to the task instance within the workflow. In a graph model, denotes an edge to another Task Node. | [optional] 
 **RollbackDisabled** | **Boolean** | The task is disabled/enabled for rollback operation in this workflow if the task has rollback support. | [optional] [default to $false]
+**UseDefault** | **Boolean** | UseDefault when set to true, means the default version of the task or workflow will be used at the time of execution. When this property is set then version for task or subworkflow cannot be set. When workflow is created or updated the default version of task or subworkflow will be used for validation, but when the workflow is executed the default version that that time will be used for validation and subsequent execution. | [optional] [default to $false]
 **CatalogMoid** | **String** | Specify the catalog moid that this task belongs. | [optional] 
 **Version** | **Int64** | The workflow definition version to use as subworkflow. When no version is specified then the default version of the workflow at the time of creating or updating this workflow is used. | [optional] 
 **WorkflowDefinitionId** | **String** | The resolved referenced workflow definition managed object. | [optional] [readonly] 
@@ -30,6 +31,7 @@ $WorkflowSubWorkflowTask = Initialize-IntersightWorkflowSubWorkflowTask  -ClassI
  -OnFailure null `
  -OnSuccess null `
  -RollbackDisabled null `
+ -UseDefault null `
  -CatalogMoid null `
  -Version null `
  -WorkflowDefinitionId null `

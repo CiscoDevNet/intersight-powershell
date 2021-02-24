@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **FaultSummary** | **Int64** | This field summarizes the faults on the chassis enclosure. | [optional] 
 **ManagementMode** | **String** | The management mode of the blade server chassis. * &#x60;IntersightStandalone&#x60; - Intersight Standalone mode of operation. * &#x60;UCSM&#x60; - Unified Computing System Manager mode of operation. * &#x60;Intersight&#x60; - Intersight managed mode of operation. | [optional] [readonly] [default to "IntersightStandalone"]
 **Name** | **String** | This field identifies the name for the chassis enclosure. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field identifies the Chassis Operational State. | [optional] [readonly] 
 **PartNumber** | **String** | Part Number identifier for the chassis enclosure. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the chassis enclosure. | [optional] [readonly] 
@@ -47,6 +48,7 @@ $EquipmentChassisAllOf = Initialize-IntersightEquipmentChassisAllOf  -ClassId nu
  -FaultSummary null `
  -ManagementMode null `
  -Name null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

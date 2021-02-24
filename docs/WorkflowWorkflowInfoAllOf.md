@@ -34,9 +34,11 @@ Name | Type | Description | Notes
 **WorkflowCtx** | [**WorkflowWorkflowCtx**](WorkflowWorkflowCtx.md) |  | [optional] 
 **WorkflowMetaType** | **String** | The type of workflow meta. Derived from the workflow meta that is used to launch this workflow instance. * &#x60;SystemDefined&#x60; - System defined workflow definition. * &#x60;UserDefined&#x60; - User defined workflow definition. * &#x60;Dynamic&#x60; - Dynamically defined workflow definition. | [optional] [default to "SystemDefined"]
 **WorkflowTaskCount** | **Int64** | Total number of workflow tasks in this workflow. | [optional] [readonly] 
+**WorkflowWorkerTaskCount** | **Int64** | Total number of worker tasks in this workflow. This count doesn&#39;t include the control tasks in the workflow. | [optional] [readonly] 
 **Var0RollbackWorkflow** | [**WorkflowRollbackWorkflowRelationship**](WorkflowRollbackWorkflowRelationship.md) |  | [optional] 
-**Var1SwitchProfile** | [**FabricSwitchProfileRelationship**](FabricSwitchProfileRelationship.md) |  | [optional] 
+**Var1Profile** | [**ChassisProfileRelationship**](ChassisProfileRelationship.md) |  | [optional] 
 **Var2ClusterProfile** | [**HyperflexClusterProfileRelationship**](HyperflexClusterProfileRelationship.md) |  | [optional] 
+**Var3SwitchProfile** | [**FabricSwitchProfileRelationship**](FabricSwitchProfileRelationship.md) |  | [optional] 
 **Account** | [**IamAccountRelationship**](IamAccountRelationship.md) |  | [optional] 
 **AssociatedObject** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **Organization** | [**OrganizationOrganizationRelationship**](OrganizationOrganizationRelationship.md) |  | [optional] 
@@ -81,9 +83,11 @@ $WorkflowWorkflowInfoAllOf = Initialize-IntersightWorkflowWorkflowInfoAllOf  -Cl
  -WorkflowCtx null `
  -WorkflowMetaType null `
  -WorkflowTaskCount null `
+ -WorkflowWorkerTaskCount null `
  -Var0RollbackWorkflow null `
- -Var1SwitchProfile null `
+ -Var1Profile null `
  -Var2ClusterProfile null `
+ -Var3SwitchProfile null `
  -Account null `
  -AssociatedObject null `
  -Organization null `

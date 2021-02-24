@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -43,6 +44,7 @@ Name | Type | Description | Notes
 **NumFcHostInterfaces** | **Int64** | The total number of vHBAs which are visible to a host on the server. | [optional] [readonly] 
 **NumThreads** | **Int64** | The total number of threads the server is capable of handling. | [optional] [readonly] 
 **OperPowerState** | **String** | The actual power state of the server. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | The operational state of the server. | [optional] [readonly] 
 **Operability** | **String** | The operability of the server. | [optional] [readonly] 
 **PlatformType** | **String** | The platform type of the registered device - whether managed by UCSM or operating in standalone mode. | [optional] 
@@ -52,6 +54,7 @@ Name | Type | Description | Notes
 **UserLabel** | **String** | The user defined label assigned to the server. | [optional] [readonly] 
 **Uuid** | **String** | The universally unique identity of the server. | [optional] [readonly] 
 **BootCddDevices** | [**BootCddDeviceRelationship[]**](BootCddDeviceRelationship.md) | An array of relationships to bootCddDevice resources. | [optional] 
+**BootDeviceBootSecurity** | [**BootDeviceBootSecurityRelationship**](BootDeviceBootSecurityRelationship.md) |  | [optional] 
 **BootHddDevices** | [**BootHddDeviceRelationship[]**](BootHddDeviceRelationship.md) | An array of relationships to bootHddDevice resources. | [optional] 
 **BootIscsiDevices** | [**BootIscsiDeviceRelationship[]**](BootIscsiDeviceRelationship.md) | An array of relationships to bootIscsiDevice resources. | [optional] 
 **BootNvmeDevices** | [**BootNvmeDeviceRelationship[]**](BootNvmeDeviceRelationship.md) | An array of relationships to bootNvmeDevice resources. | [optional] 
@@ -63,6 +66,7 @@ Name | Type | Description | Notes
 **BootUsbDevices** | [**BootUsbDeviceRelationship[]**](BootUsbDeviceRelationship.md) | An array of relationships to bootUsbDevice resources. | [optional] 
 **BootVmediaDevices** | [**BootVmediaDeviceRelationship[]**](BootVmediaDeviceRelationship.md) | An array of relationships to bootVmediaDevice resources. | [optional] 
 **MgmtIdentity** | [**EquipmentPhysicalIdentityRelationship**](EquipmentPhysicalIdentityRelationship.md) |  | [optional] 
+**Vmedia** | [**ComputeVmediaRelationship**](ComputeVmediaRelationship.md) |  | [optional] 
 
 ## Examples
 
@@ -79,6 +83,7 @@ $ComputePhysical = Initialize-IntersightComputePhysical  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -108,6 +113,7 @@ $ComputePhysical = Initialize-IntersightComputePhysical  -ClassId null `
  -NumFcHostInterfaces null `
  -NumThreads null `
  -OperPowerState null `
+ -OperReason null `
  -OperState null `
  -Operability null `
  -PlatformType null `
@@ -117,6 +123,7 @@ $ComputePhysical = Initialize-IntersightComputePhysical  -ClassId null `
  -UserLabel null `
  -Uuid null `
  -BootCddDevices null `
+ -BootDeviceBootSecurity null `
  -BootHddDevices null `
  -BootIscsiDevices null `
  -BootNvmeDevices null `
@@ -127,7 +134,8 @@ $ComputePhysical = Initialize-IntersightComputePhysical  -ClassId null `
  -BootUefiShellDevices null `
  -BootUsbDevices null `
  -BootVmediaDevices null `
- -MgmtIdentity null
+ -MgmtIdentity null `
+ -Vmedia null
 ```
 
 - Convert the resource to JSON

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **NumCoresEnabled** | **String** | The number of enabled cores in the installed processor. | [optional] [readonly] 
 **NumThreads** | **String** | The maximum number of threads available in the installed processor. | [optional] [readonly] 
 **OperPowerState** | **String** | The power state of the processor. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | The health indicator of the processor, &#39;OK&#39; indicates the processor is operatinal. | [optional] [readonly] 
 **Operability** | **String** | Operability state of the central processing unit. | [optional] [readonly] 
 **Presence** | **String** | The valid values are &#39;equipped&#39; and &#39;absent&#39;. | [optional] [readonly] 
@@ -35,6 +36,7 @@ $ProcessorUnitAllOf = Initialize-IntersightProcessorUnitAllOf  -ClassId null `
  -NumCoresEnabled null `
  -NumThreads null `
  -OperPowerState null `
+ -OperReason null `
  -OperState null `
  -Operability null `
  -Presence null `

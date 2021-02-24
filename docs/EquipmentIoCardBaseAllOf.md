@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ConnectionStatus** | **String** | Connectivity Status of FEX/IOM to Switch - A or B or AB. | [optional] 
 **Description** | **String** | This field is to provide description for the iocard module model. | [optional] [readonly] 
 **ModuleId** | **Int64** | Module Identifier for the IO module. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | Operational state of IO card or fabric extender. | [optional] [readonly] 
 **PartNumber** | **String** | Part Number identifier for the IO module. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the IO module. | [optional] [readonly] 
@@ -29,6 +30,7 @@ $EquipmentIoCardBaseAllOf = Initialize-IntersightEquipmentIoCardBaseAllOf  -Clas
  -ConnectionStatus null `
  -Description null `
  -ModuleId null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

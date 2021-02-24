@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.FanModule"]
 **Description** | **String** | This field is to provide description for the fan module. | [optional] [readonly] 
 **ModuleId** | **Int64** | This field acts as the identifier for this particular Module, within the Fabric Interconnect. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field is used to indicate this fan module&#39;s operational state. | [optional] [readonly] 
 **PartNumber** | **String** | This field identifies the Part Number for this Fan Module. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the fan module. | [optional] [readonly] 
@@ -30,6 +31,7 @@ $EquipmentFanModuleAllOf = Initialize-IntersightEquipmentFanModuleAllOf  -ClassI
  -ObjectType null `
  -Description null `
  -ModuleId null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

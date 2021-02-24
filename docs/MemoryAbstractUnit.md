@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -34,6 +35,7 @@ Name | Type | Description | Notes
 **Latency** | **String** | This represents the latency of the memory unit on a server. | [optional] [readonly] 
 **Location** | **String** | This represents the location of the memory unit on a server. | [optional] [readonly] 
 **OperPowerState** | **String** | This represents the operational power state of the memory unit on a server. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This represents the operational state of the memory unit on a server. | [optional] [readonly] 
 **Operability** | **String** | This represents the operability of the memory unit on a server. | [optional] [readonly] 
 **Presence** | **String** | This represents the presence state of the memory unit on a server. | [optional] [readonly] 
@@ -59,6 +61,7 @@ $MemoryAbstractUnit = Initialize-IntersightMemoryAbstractUnit  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -79,6 +82,7 @@ $MemoryAbstractUnit = Initialize-IntersightMemoryAbstractUnit  -ClassId null `
  -Latency null `
  -Location null `
  -OperPowerState null `
+ -OperReason null `
  -OperState null `
  -Operability null `
  -Presence null `

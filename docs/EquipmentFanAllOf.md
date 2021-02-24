@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **FanId** | **Int64** | This field acts as the identifier for this particular Fan, within the Fabric Interconnect. | [optional] [readonly] 
 **FanModuleId** | **Int64** | This field is used to identify the Fan Module to which this Fan belongs. | [optional] [readonly] 
 **ModuleId** | **Int64** | Fan module Identifier for the fan. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field is used to indicate this fan unit&#39;s operational state. | [optional] [readonly] 
 **PartNumber** | **String** | This field identifies the Part Number for this Fan Unit. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the fans. | [optional] [readonly] 
@@ -31,6 +32,7 @@ $EquipmentFanAllOf = Initialize-IntersightEquipmentFanAllOf  -ClassId null `
  -FanId null `
  -FanModuleId null `
  -ModuleId null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

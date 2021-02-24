@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **SwitchId** | **String** | Switch Id connected to the interface. | [optional] 
 **UemConnStatus** | **String** | The event channel connection status for the interface. | [optional] 
 **VirtualHostName** | **String** | Virtual hostname configured for the interface in case of clustered environment. | [optional] 
+**VlanId** | **Int64** | VlanId configured for the interface. | [optional] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
 **ManagementController** | [**ManagementControllerRelationship**](ManagementControllerRelationship.md) |  | [optional] 
 **RegisteredDevice** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
@@ -43,6 +44,7 @@ $ManagementInterfaceAllOf = Initialize-IntersightManagementInterfaceAllOf  -Clas
  -SwitchId null `
  -UemConnStatus null `
  -VirtualHostName null `
+ -VlanId null `
  -InventoryDeviceInfo null `
  -ManagementController null `
  -RegisteredDevice null

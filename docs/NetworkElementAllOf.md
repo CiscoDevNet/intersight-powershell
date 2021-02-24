@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **OutOfBandIpv6Prefix** | **String** | The network mask of the network Element out-of-band management interface. | [optional] 
 **OutOfBandMac** | **String** | The MAC address of the network Element out-of-band management interface. | [optional] [readonly] 
 **SwitchId** | **String** | The Switch Id of the network Element. | [optional] [readonly] 
+**Thermal** | **String** | The Thermal status of the fabric interconnect. * &#x60;unknown&#x60; - The default state of the sensor (in case no data is received). * &#x60;ok&#x60; - State of the sensor indicating the sensor&#39;s temperature range is okay. * &#x60;upper-non-recoverable&#x60; - State of the sensor indicating that the temperature is extremely high above normal range. * &#x60;upper-critical&#x60; - State of the sensor indicating that the temperature is above normal range. * &#x60;upper-non-critical&#x60; - State of the sensor indicating that the temperature is a little above the normal range. * &#x60;lower-non-critical&#x60; - State of the sensor indicating that the temperature is a little below the normal range. * &#x60;lower-critical&#x60; - State of the sensor indicating that the temperature is below normal range. * &#x60;lower-non-recoverable&#x60; - State of the sensor indicating that the temperature is extremely below normal range. | [optional] [default to "unknown"]
 **TotalMemory** | **Int64** | Total available memory on this switch platform. | [optional] [readonly] 
 **Cards** | [**EquipmentSwitchCardRelationship[]**](EquipmentSwitchCardRelationship.md) | An array of relationships to equipmentSwitchCard resources. | [optional] [readonly] 
 **Fanmodules** | [**EquipmentFanModuleRelationship[]**](EquipmentFanModuleRelationship.md) | An array of relationships to equipmentFanModule resources. | [optional] [readonly] 
@@ -80,6 +81,7 @@ $NetworkElementAllOf = Initialize-IntersightNetworkElementAllOf  -ClassId null `
  -OutOfBandIpv6Prefix null `
  -OutOfBandMac null `
  -SwitchId null `
+ -Thermal null `
  -TotalMemory null `
  -Cards null `
  -Fanmodules null `
