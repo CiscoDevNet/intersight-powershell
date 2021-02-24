@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **Model** | **String** | The model information of the Network Element. | [optional] [readonly] 
 **Serial** | **String** | The serial number for the Network Element. | [optional] [readonly] 
 **SourceObjectType** | **String** | The source object type of this view MO. | [optional] [readonly] 
-**ComputeBlade** | [**ComputeBladeRelationship**](ComputeBladeRelationship.md) |  | [optional] 
 **ComputeRackUnit** | [**ComputeRackUnitRelationship**](ComputeRackUnitRelationship.md) |  | [optional] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
 **RegisteredDevice** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
@@ -24,7 +23,6 @@ $EquipmentDeviceSummaryAllOf = Initialize-IntersightEquipmentDeviceSummaryAllOf 
  -Model null `
  -Serial null `
  -SourceObjectType null `
- -ComputeBlade null `
  -ComputeRackUnit null `
  -InventoryDeviceInfo null `
  -RegisteredDevice null

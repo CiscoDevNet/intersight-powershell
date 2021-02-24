@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -24,6 +25,7 @@ Name | Type | Description | Notes
 **AdminLocatorLedState** | **String** | User configured state of the locator LED for the server. * &#x60;None&#x60; - No operation property for locator led. * &#x60;On&#x60; - The Locator Led is turned on. * &#x60;Off&#x60; - The Locator Led is turned off. | [optional] [default to "None"]
 **AdminPowerState** | **String** | User configured power state of the server. * &#x60;Policy&#x60; - Power state is set to the default value in the policy. * &#x60;PowerOn&#x60; - Power state of the server is set to On. * &#x60;PowerOff&#x60; - Power state is the server set to Off. * &#x60;PowerCycle&#x60; - Power state the server is reset. * &#x60;HardReset&#x60; - Power state the server is hard reset. * &#x60;Shutdown&#x60; - Operating system on the server is shut down. * &#x60;Reboot&#x60; - Power state of IMC is rebooted. | [optional] [default to "Policy"]
 **ConfigState** | **String** | The configured state of these settings in the target server. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the settings are applied successfully in the target server. Applying - This state denotes that the settings are being applied in the target server. Failed - This state denotes that the settings could not be applied in the target server. * &#x60;Applied&#x60; - User configured settings are in applied state. * &#x60;Applying&#x60; - User settings are being applied on the target server. * &#x60;Failed&#x60; - User configured settings could not be applied. | [optional] [readonly] [default to "Applied"]
+**Name** | **String** | The property used to identify the name of the server it is associated with. | [optional] [readonly] 
 **OneTimeBootDevice** | **String** | The name of the device chosen by user for configuring One-Time Boot device. | [optional] 
 **PersistentMemoryOperation** | [**ComputePersistentMemoryOperation**](ComputePersistentMemoryOperation.md) |  | [optional] 
 **ServerConfig** | [**ComputeServerConfig**](ComputeServerConfig.md) |  | [optional] 
@@ -47,6 +49,7 @@ $ComputeServerSetting = Initialize-IntersightComputeServerSetting  -ClassId null
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -57,6 +60,7 @@ $ComputeServerSetting = Initialize-IntersightComputeServerSetting  -ClassId null
  -AdminLocatorLedState null `
  -AdminPowerState null `
  -ConfigState null `
+ -Name null `
  -OneTimeBootDevice null `
  -PersistentMemoryOperation null `
  -ServerConfig null `

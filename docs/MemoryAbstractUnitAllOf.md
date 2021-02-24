@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **Latency** | **String** | This represents the latency of the memory unit on a server. | [optional] [readonly] 
 **Location** | **String** | This represents the location of the memory unit on a server. | [optional] [readonly] 
 **OperPowerState** | **String** | This represents the operational power state of the memory unit on a server. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This represents the operational state of the memory unit on a server. | [optional] [readonly] 
 **Operability** | **String** | This represents the operability of the memory unit on a server. | [optional] [readonly] 
 **Presence** | **String** | This represents the presence state of the memory unit on a server. | [optional] [readonly] 
@@ -39,6 +40,7 @@ $MemoryAbstractUnitAllOf = Initialize-IntersightMemoryAbstractUnitAllOf  -ClassI
  -Latency null `
  -Location null `
  -OperPowerState null `
+ -OperReason null `
  -OperState null `
  -Operability null `
  -Presence null `

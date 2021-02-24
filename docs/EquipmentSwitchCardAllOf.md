@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **SlotId** | **Int64** | Slot identifier of the local Switch slot Interface. | [optional] [readonly] 
 **State** | **String** | Operational state of the switch hardware. | [optional] [readonly] 
 **SwitchId** | **String** | Switch Identifier that is local to a cluster. | [optional] [readonly] 
+**Thermal** | **String** | The Thermal status of the fabric interconnect. * &#x60;unknown&#x60; - The default state of the sensor (in case no data is received). * &#x60;ok&#x60; - State of the sensor indicating the sensor&#39;s temperature range is okay. * &#x60;upper-non-recoverable&#x60; - State of the sensor indicating that the temperature is extremely high above normal range. * &#x60;upper-critical&#x60; - State of the sensor indicating that the temperature is above normal range. * &#x60;upper-non-critical&#x60; - State of the sensor indicating that the temperature is a little above the normal range. * &#x60;lower-non-critical&#x60; - State of the sensor indicating that the temperature is a little below the normal range. * &#x60;lower-critical&#x60; - State of the sensor indicating that the temperature is below normal range. * &#x60;lower-non-recoverable&#x60; - State of the sensor indicating that the temperature is extremely below normal range. | [optional] [default to "unknown"]
 **FcPortChannels** | [**FcPortChannelRelationship[]**](FcPortChannelRelationship.md) | An array of relationships to fcPortChannel resources. | [optional] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
 **NetworkElement** | [**NetworkElementRelationship**](NetworkElementRelationship.md) |  | [optional] 
@@ -38,6 +39,7 @@ $EquipmentSwitchCardAllOf = Initialize-IntersightEquipmentSwitchCardAllOf  -Clas
  -SlotId null `
  -State null `
  -SwitchId null `
+ -Thermal null `
  -FcPortChannels null `
  -InventoryDeviceInfo null `
  -NetworkElement null `

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -28,6 +29,7 @@ Name | Type | Description | Notes
 **ConnectionStatus** | **String** | Connectivity Status of FEX/IOM to Switch - A or B or AB. | [optional] 
 **Description** | **String** | This field is to provide description for the iocard module model. | [optional] [readonly] 
 **ModuleId** | **Int64** | Module Identifier for the IO module. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | Operational state of IO card or fabric extender. | [optional] [readonly] 
 **PartNumber** | **String** | Part Number identifier for the IO module. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the IO module. | [optional] [readonly] 
@@ -55,6 +57,7 @@ $EquipmentIoCardBase = Initialize-IntersightEquipmentIoCardBase  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -69,6 +72,7 @@ $EquipmentIoCardBase = Initialize-IntersightEquipmentIoCardBase  -ClassId null `
  -ConnectionStatus null `
  -Description null `
  -ModuleId null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

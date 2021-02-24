@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -43,6 +44,7 @@ Name | Type | Description | Notes
 **IgmpAccessListCount** | **Int64** | IGMP Access List feature usage. This determines the total number of IGMP access lists configured across the fabric. | [optional] 
 **IgmpSnoop** | **String** | IGMP Snooping feature usage. This determines if this feature is enabled or disabled. | [optional] 
 **IpEpgCount** | **Int64** | Number of IP based End Point Groups. This determines the total number of IP End Point Groups across the fabric. | [optional] 
+**IsTechSupportCollected** | **String** | Status of techsupport collection. | [optional] 
 **IsisCount** | **Int64** | Isis feature usage. This determines the total number of ISIS sessions across the fabric. | [optional] 
 **L2Multicast** | **String** | L2Multicast feature usage. This determines if this Layer 2 Multicast feature is being enabled / disabled on the fabric. | [optional] 
 **LeafCount** | **Int64** | Number of Leafs. This determines the total number of Leaf switches in the fabric. | [optional] 
@@ -66,6 +68,8 @@ Name | Type | Description | Notes
 **SharedL3OutCount** | **Int64** | SharedL3Out feature usage. This determines the total number of Shared L3 out configured across the fabric. | [optional] 
 **SiteName** | **String** | The Site name represents an APIC cluster. Service Engine can onboard multiple APIC clusters / sites. There will be a feature usage object per site in Multi site scenario. In multi-site scenario the site name is available in all the requests being made. | [optional] 
 **SmartCallHome** | **String** | Smart callhome feature usage. This determines if this feature is being enabled or disabled. | [optional] 
+**SmartLicense** | [**NiatelemetrySmartLicense**](NiatelemetrySmartLicense.md) |  | [optional] 
+**SnapshotCount** | **Int64** | Returns count of snapshots. | [optional] 
 **Snmp** | **String** | SNMP feature usage. This determines if this feature is enabled or disabled. | [optional] 
 **SnmpGroupCount** | **Int64** | Number of SNMP monitoring policies on the fabric. | [optional] 
 **SpanCount** | **Int64** | Number of Span Sources and Destinations. | [optional] 
@@ -103,6 +107,7 @@ $NiatelemetryNiaFeatureUsage = Initialize-IntersightNiatelemetryNiaFeatureUsage 
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -132,6 +137,7 @@ $NiatelemetryNiaFeatureUsage = Initialize-IntersightNiatelemetryNiaFeatureUsage 
  -IgmpAccessListCount null `
  -IgmpSnoop null `
  -IpEpgCount null `
+ -IsTechSupportCollected null `
  -IsisCount null `
  -L2Multicast null `
  -LeafCount null `
@@ -155,6 +161,8 @@ $NiatelemetryNiaFeatureUsage = Initialize-IntersightNiatelemetryNiaFeatureUsage 
  -SharedL3OutCount null `
  -SiteName null `
  -SmartCallHome null `
+ -SmartLicense null `
+ -SnapshotCount null `
  -Snmp null `
  -SnmpGroupCount null `
  -SpanCount null `

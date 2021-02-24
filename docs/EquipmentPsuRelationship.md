@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -28,6 +29,7 @@ Name | Type | Description | Notes
 **Serial** | **String** | This field identifies the serial of the given component. | [optional] [readonly] 
 **Vendor** | **String** | This field identifies the vendor of the given component. | [optional] [readonly] 
 **Description** | **String** | This field is to provide description for the power supply unit. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field identifies the psu operational state. | [optional] [readonly] 
 **PartNumber** | **String** | This field identifies the Part Number for this Power Supply Unit. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the Power Supply. | [optional] [readonly] 
@@ -39,7 +41,7 @@ Name | Type | Description | Notes
 **PsuWattage** | **String** | This field identifies the Wattage of the Power Supply. | [optional] [readonly] 
 **Sku** | **String** | This field identifies the Stockkeeping Unit for this Power Supply. | [optional] [readonly] 
 **Vid** | **String** | This field identifies the Vendor ID for this Power Supply Unit. | [optional] [readonly] 
-**Voltage** | **String** | This field is used to indicate the Voltage for this Power Supply. | [optional] [readonly] 
+**Voltage** | **String** | This field is used to indicate the voltage state for this Power Supply. | [optional] [readonly] 
 **ComputeRackUnit** | [**ComputeRackUnitRelationship**](ComputeRackUnitRelationship.md) |  | [optional] 
 **EquipmentChassis** | [**EquipmentChassisRelationship**](EquipmentChassisRelationship.md) |  | [optional] 
 **EquipmentFex** | [**EquipmentFexRelationship**](EquipmentFexRelationship.md) |  | [optional] 
@@ -65,6 +67,7 @@ $EquipmentPsuRelationship = Initialize-IntersightEquipmentPsuRelationship  -Clas
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -77,6 +80,7 @@ $EquipmentPsuRelationship = Initialize-IntersightEquipmentPsuRelationship  -Clas
  -Serial null `
  -Vendor null `
  -Description null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

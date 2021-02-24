@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **InputPowerState** | **String** | This field identifies the input power state of the psus. | [optional] [readonly] 
 **Name** | **String** | This field identifies the name of psu control object. | [optional] [readonly] 
 **OperQualifier** | **String** | This field identifies the operational qualifier for the psu redundancy. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field identifies the operational state of the psu redundancy. | [optional] [readonly] 
 **OutputPowerState** | **String** | This field identifies the output power state of the psus. | [optional] [readonly] 
 **Redundancy** | **String** | This field identifies the redundancy state of the psus. | [optional] [readonly] 
@@ -26,6 +27,7 @@ $EquipmentPsuControlAllOf = Initialize-IntersightEquipmentPsuControlAllOf  -Clas
  -InputPowerState null `
  -Name null `
  -OperQualifier null `
+ -OperReason null `
  -OperState null `
  -OutputPowerState null `
  -Redundancy null `

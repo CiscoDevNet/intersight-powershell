@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "vnic.EthQosPolicy"]
 **ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "vnic.EthQosPolicy"]
+**Burst** | **Int64** | The burst traffic, in bytes, allowed on the vNIC. | [optional] [default to 1024]
 **Cos** | **Int64** | Class of Service to be associated to the traffic on the virtual interface. | [optional] [default to 0]
 **Mtu** | **Int64** | The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts. | [optional] [default to 1500]
 **Priority** | **String** | The priortity matching the System QoS specified in the fabric profile. * &#x60;Best Effort&#x60; - QoS Priority for Best-effort traffic. * &#x60;FC&#x60; - QoS Priority for FC traffic. * &#x60;Platinum&#x60; - QoS Priority for Platinum traffic. * &#x60;Gold&#x60; - QoS Priority for Gold traffic. * &#x60;Silver&#x60; - QoS Priority for Silver traffic. * &#x60;Bronze&#x60; - QoS Priority for Bronze traffic. | [optional] [default to "Best Effort"]
@@ -18,6 +19,7 @@ Name | Type | Description | Notes
 ```powershell
 $VnicEthQosPolicyAllOf = Initialize-IntersightVnicEthQosPolicyAllOf  -ClassId null `
  -ObjectType null `
+ -Burst null `
  -Cos null `
  -Mtu null `
  -Priority null `

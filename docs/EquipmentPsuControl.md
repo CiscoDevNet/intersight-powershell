@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -29,6 +30,7 @@ Name | Type | Description | Notes
 **InputPowerState** | **String** | This field identifies the input power state of the psus. | [optional] [readonly] 
 **Name** | **String** | This field identifies the name of psu control object. | [optional] [readonly] 
 **OperQualifier** | **String** | This field identifies the operational qualifier for the psu redundancy. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field identifies the operational state of the psu redundancy. | [optional] [readonly] 
 **OutputPowerState** | **String** | This field identifies the output power state of the psus. | [optional] [readonly] 
 **Redundancy** | **String** | This field identifies the redundancy state of the psus. | [optional] [readonly] 
@@ -51,6 +53,7 @@ $EquipmentPsuControl = Initialize-IntersightEquipmentPsuControl  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -66,6 +69,7 @@ $EquipmentPsuControl = Initialize-IntersightEquipmentPsuControl  -ClassId null `
  -InputPowerState null `
  -Name null `
  -OperQualifier null `
+ -OperReason null `
  -OperState null `
  -OutputPowerState null `
  -Redundancy null `

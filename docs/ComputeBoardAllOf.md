@@ -5,9 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "compute.Board"]
 **ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "compute.Board"]
-**BoardId** | **Int64** | The identity of the motherboard. | [optional] [readonly] 
+**BoardId** | **Int64** | Unique identifier of the mother board present in the server. | [optional] [readonly] 
 **CpuTypeController** | **String** | The type of central processing unit on the mother board. | [optional] [readonly] 
 **OperPowerState** | **String** | Current power state of the mother board of the server. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **Presence** | **String** | Identifies the presence of the mother board of the server. | [optional] [readonly] 
 **ComputeBlade** | [**ComputeBladeRelationship**](ComputeBladeRelationship.md) |  | [optional] 
 **ComputeRackUnit** | [**ComputeRackUnitRelationship**](ComputeRackUnitRelationship.md) |  | [optional] 
@@ -34,6 +35,7 @@ $ComputeBoardAllOf = Initialize-IntersightComputeBoardAllOf  -ClassId null `
  -BoardId null `
  -CpuTypeController null `
  -OperPowerState null `
+ -OperReason null `
  -Presence null `
  -ComputeBlade null `
  -ComputeRackUnit null `

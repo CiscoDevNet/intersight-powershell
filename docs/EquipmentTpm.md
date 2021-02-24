@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -27,10 +28,11 @@ Name | Type | Description | Notes
 **Vendor** | **String** | This field identifies the vendor of the given component. | [optional] [readonly] 
 **ActivationStatus** | **String** | Identifies the activation status of the TPM. | [optional] [readonly] 
 **AdminState** | **String** | Identifies the admin configured state of the TPM. | [optional] [readonly] 
+**FirmwareVersion** | **String** | Firmware Version of the Trusted Platform Module. | [optional] 
 **Ownership** | **String** | Identifies the ownership information of the TPM. | [optional] [readonly] 
 **Presence** | **String** | Identifies the presence of the trusted platform module. | [optional] [readonly] 
 **TpmId** | **Int64** | Enter  the ID of the trusted platform module. | [optional] [readonly] 
-**Version** | **String** | Identifies the revision of the Trusted Platform Module. | [optional] [readonly] 
+**Version** | **String** | Identifies the version of the Trusted Platform Module. | [optional] [readonly] 
 **ComputeBoard** | [**ComputeBoardRelationship**](ComputeBoardRelationship.md) |  | [optional] 
 **InventoryDeviceInfo** | [**InventoryDeviceInfoRelationship**](InventoryDeviceInfoRelationship.md) |  | [optional] 
 **RegisteredDevice** | [**AssetDeviceRegistrationRelationship**](AssetDeviceRegistrationRelationship.md) |  | [optional] 
@@ -50,6 +52,7 @@ $EquipmentTpm = Initialize-IntersightEquipmentTpm  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -63,6 +66,7 @@ $EquipmentTpm = Initialize-IntersightEquipmentTpm  -ClassId null `
  -Vendor null `
  -ActivationStatus null `
  -AdminState null `
+ -FirmwareVersion null `
  -Ownership null `
  -Presence null `
  -TpmId null `

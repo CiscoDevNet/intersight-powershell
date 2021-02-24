@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -25,9 +26,10 @@ Name | Type | Description | Notes
 **Revision** | **String** | This field identifies the revision of the given component. | [optional] [readonly] 
 **Serial** | **String** | This field identifies the serial of the given component. | [optional] [readonly] 
 **Vendor** | **String** | This field identifies the vendor of the given component. | [optional] [readonly] 
-**BoardId** | **Int64** | The identity of the motherboard. | [optional] [readonly] 
+**BoardId** | **Int64** | Unique identifier of the mother board present in the server. | [optional] [readonly] 
 **CpuTypeController** | **String** | The type of central processing unit on the mother board. | [optional] [readonly] 
 **OperPowerState** | **String** | Current power state of the mother board of the server. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **Presence** | **String** | Identifies the presence of the mother board of the server. | [optional] [readonly] 
 **ComputeBlade** | [**ComputeBladeRelationship**](ComputeBladeRelationship.md) |  | [optional] 
 **ComputeRackUnit** | [**ComputeRackUnitRelationship**](ComputeRackUnitRelationship.md) |  | [optional] 
@@ -60,6 +62,7 @@ $ComputeBoard = Initialize-IntersightComputeBoard  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -74,6 +77,7 @@ $ComputeBoard = Initialize-IntersightComputeBoard  -ClassId null `
  -BoardId null `
  -CpuTypeController null `
  -OperPowerState null `
+ -OperReason null `
  -Presence null `
  -ComputeBlade null `
  -ComputeRackUnit null `

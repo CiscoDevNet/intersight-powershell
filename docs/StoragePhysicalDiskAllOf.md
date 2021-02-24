@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **LinkState** | **String** | The current link state of the physical disk. | [optional] [readonly] 
 **NumBlocks** | **String** | The number of blocks present on the physical disk. | [optional] [readonly] 
 **OperPowerState** | **String** | Operational power of the physical disk. | [optional] [readonly] 
-**OperQualifierReason** | **String** | This reason for the operational status of the disk. | [optional] [readonly] 
+**OperQualifierReason** | **String** | For certain states, indicates the reason why the operState is in that state. | [optional] [readonly] 
 **Operability** | **String** | This field identifies the disk operability of the disk. | [optional] [readonly] 
 **PhysicalBlockSize** | **String** | The block size of the installed physical disk. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for physicalDisk. | [optional] [readonly] 

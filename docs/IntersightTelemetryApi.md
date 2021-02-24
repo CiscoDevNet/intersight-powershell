@@ -25,18 +25,16 @@ Endpoint that exposes Druid DatasourceMetadata requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -44,16 +42,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidDataSourceMetadataRequest = (Initialize-telemetry.DruidDataSourceMetadataRequest-QueryType "QueryType_example" -DataSource (Initialize-telemetry.DruidDataSource-Type "Type_example" -Name "Name_example" -DataSources @("DataSources_example") -Query (Initialize-telemetry.DruidGroupByRequest-QueryType "QueryType_example" -DataSource (Initialize-telemetry.DruidDataSource-Type "Type_example" -Name "Name_example" -DataSources @("DataSources_example") -Query (Initialize-telemetry.DruidGroupByRequest-QueryType "QueryType_example" -DataSource  -Dimensions @((Initialize-telemetry.DruidDimensionSpec-Type "Type_example" -Dimension "Dimension_example" -OutputName "OutputName_example" -OutputType "OutputType_example" -ExtractionFn "TODO")) -LimitSpec (Initialize-telemetry.DruidDefaultLimitSpec-Type "Type_example" -Limit 123 -Columns @((Initialize-telemetry.DruidOrderByColumnSpec-Dimension "Dimension_example" -Direction "Direction_example" -DimensionOrder "DimensionOrder_example"))) -Having (Initialize-telemetry.DruidHavingFilter-Type "Type_example" -VarFilter (Initialize-telemetry.DruidFilter-Type "Type_example" -ExtractionFn "TODO" -Dimension "Dimension_example" -Value "Value_example" -Dimensions @((Initialize-telemetry.DruidDimensionSpec-Type "Type_example" -Dimension "Dimension_example" -OutputName "OutputName_example" -OutputType "OutputType_example" -ExtractionFn "TODO")) -Pattern "Pattern_example" -Fields @((Initialize-telemetry.DruidFilter-Type "Type_example" -ExtractionFn "TODO" -Dimension "Dimension_example" -Value "Value_example" -Dimensions @() -Pattern "Pattern_example" -Fields @() -Field )) -Field ) -Aggregation "Aggregation_example" -Value 123 -Dimension "Dimension_example") -Granularity (Initialize-telemetry.DruidGranularity-Type "Type_example" -Duration 123 -Origin Get-Date -Period "Period_example" -TimeZone "TimeZone_example") -VarFilter  -Aggregations @((Initialize-telemetry.DruidAggregator-Type "Type_example" -Name "Name_example" -FieldName "FieldName_example" -MaxStringBytes 123 -Size 123 -VarFilter  -Aggregator (Initialize-telemetry.DruidAggregator-Type "Type_example" -Name "Name_example" -FieldName "FieldName_example" -MaxStringBytes 123 -Size 123 -VarFilter  -Aggregator ))) -PostAggregations @((Initialize-telemetry.DruidPostAggregator-Type "Type_example" -Name "Name_example" -Fn "Fn_example" -Fields @("Fields_example") -Ordering "Ordering_example" -FieldName "FieldName_example" -Value 123 -Field "Field_example" -Func "Func_example" -Size 123)) -Intervals @("Intervals_example") -SubtotalsSpec "TODO" -Context (Initialize-telemetry.DruidQueryContext-GrandTotal $false -SkipEmptyBuckets $false -Timeout 123 -Priority 123 -QueryId "QueryId_example" -UseCache $false -PopulateCache $false -UseResultLevelCache $false -PopulateResultLevelCache $false -BySegment $false -Finalize $false -ChunkPeriod "ChunkPeriod_example" -MaxScatterGatherBytes 123 -MaxQueuedBytes 123 -SerializeDateTimeAsLong $false -SerializeDateTimeAsLongInner $false -EnableParallelMerge $false -ParallelMergeParallelism 123 -ParallelMergeInitialYieldRows 123 -ParallelMergeSmallBatchRows 123)) -Lookup "Lookup_example" -Left "Left_example" -Right "Right_example" -RightPrefix "RightPrefix_example" -Condition "Condition_example" -JoinType "JoinType_example" -ColumnNames @("ColumnNames_example") -Rows @(@("Rows_example"))) -Dimensions @() -LimitSpec (Initialize-telemetry.DruidDefaultLimitSpec-Type "Type_example" -Limit 123 -Columns @((Initialize-telemetry.DruidOrderByColumnSpec-Dimension "Dimension_example" -Direction "Direction_example" -DimensionOrder "DimensionOrder_example"))) -Having (Initialize-telemetry.DruidHavingFilter-Type "Type_example" -VarFilter  -Aggregation "Aggregation_example" -Value 123 -Dimension "Dimension_example") -Granularity (Initialize-telemetry.DruidGranularity-Type "Type_example" -Duration 123 -Origin Get-Date -Period "Period_example" -TimeZone "TimeZone_example") -VarFilter  -Aggregations @() -PostAggregations @((Initialize-telemetry.DruidPostAggregator-Type "Type_example" -Name "Name_example" -Fn "Fn_example" -Fields @("Fields_example") -Ordering "Ordering_example" -FieldName "FieldName_example" -Value 123 -Field "Field_example" -Func "Func_example" -Size 123)) -Intervals @("Intervals_example") -SubtotalsSpec "TODO" -Context (Initialize-telemetry.DruidQueryContext-GrandTotal $false -SkipEmptyBuckets $false -Timeout 123 -Priority 123 -QueryId "QueryId_example" -UseCache $false -PopulateCache $false -UseResultLevelCache $false -PopulateResultLevelCache $false -BySegment $false -Finalize $false -ChunkPeriod "ChunkPeriod_example" -MaxScatterGatherBytes 123 -MaxQueuedBytes 123 -SerializeDateTimeAsLong $false -SerializeDateTimeAsLongInner $false -EnableParallelMerge $false -ParallelMergeParallelism 123 -ParallelMergeInitialYieldRows 123 -ParallelMergeSmallBatchRows 123)) -Lookup "Lookup_example" -Left "Left_example" -Right "Right_example" -RightPrefix "RightPrefix_example" -Condition "Condition_example" -JoinType "JoinType_example" -ColumnNames @("ColumnNames_example") -Rows @(@("Rows_example"))) -Context ) # TelemetryDruidDataSourceMetadataRequest | The Druid request schema for time series queries.
+$TelemetryDruidDataSourceMetadataRequest = (Initialize-telemetry.DruidDataSourceMetadataRequest -QueryType "timeseries" -DataSource (Initialize-telemetry.DruidDataSource -Type "table" -Name "Name_example" -DataSources @("DataSources_example") -Query (Initialize-telemetry.DruidGroupByRequest -QueryType "timeseries" -DataSource (Initialize-telemetry.DruidDataSource -Type "table" -Name "Name_example" -DataSources @("DataSources_example") -Query (Initialize-telemetry.DruidGroupByRequest -QueryType "timeseries" -DataSource  -Dimensions @((Initialize-telemetry.DruidDimensionSpec -Type "default" -Dimension "Dimension_example" -OutputName "OutputName_example" -OutputType "STRING" -ExtractionFn "TODO")) -LimitSpec (Initialize-telemetry.DruidDefaultLimitSpec -Type "default" -Limit 123 -Columns @((Initialize-telemetry.DruidOrderByColumnSpec -Dimension "Dimension_example" -Direction "ascending" -DimensionOrder "lexicographic"))) -Having (Initialize-telemetry.DruidHavingFilter -Type "filter" -VarFilter (Initialize-telemetry.DruidFilter -Type "selector" -ExtractionFn "TODO" -Dimension "Dimension_example" -Value "Value_example" -Dimensions @((Initialize-telemetry.DruidDimensionSpec -Type "default" -Dimension "Dimension_example" -OutputName "OutputName_example" -OutputType "STRING" -ExtractionFn "TODO")) -Pattern "Pattern_example" -Fields @((Initialize-telemetry.DruidFilter -Type "selector" -ExtractionFn "TODO" -Dimension "Dimension_example" -Value "Value_example" -Dimensions @() -Pattern "Pattern_example" -Fields @() -Field )) -Field ) -Aggregation "Aggregation_example" -Value 123 -Dimension "Dimension_example") -Granularity (Initialize-telemetry.DruidGranularity -Type "duration" -Duration 123 -Origin Get-Date -Period "Period_example" -TimeZone "TimeZone_example") -VarFilter  -Aggregations @((Initialize-telemetry.DruidAggregator -Type "count" -Name "Name_example" -FieldName "FieldName_example" -MaxStringBytes 123 -Size 123 -VarFilter  -Aggregator (Initialize-telemetry.DruidAggregator -Type "count" -Name "Name_example" -FieldName "FieldName_example" -MaxStringBytes 123 -Size 123 -VarFilter  -Aggregator ))) -PostAggregations @((Initialize-telemetry.DruidPostAggregator -Type "arithmetic" -Name "Name_example" -Fn "+" -Fields @("Fields_example") -Ordering "Ordering_example" -FieldName "FieldName_example" -Value 123 -Field "Field_example" -Func "UNION" -Size 123)) -Intervals @("Intervals_example") -SubtotalsSpec "TODO" -Context (Initialize-telemetry.DruidQueryContext -GrandTotal $false -SkipEmptyBuckets $false -Timeout 123 -Priority 123 -QueryId "QueryId_example" -UseCache $false -PopulateCache $false -UseResultLevelCache $false -PopulateResultLevelCache $false -BySegment $false -Finalize $false -ChunkPeriod "ChunkPeriod_example" -MaxScatterGatherBytes 123 -MaxQueuedBytes 123 -SerializeDateTimeAsLong $false -SerializeDateTimeAsLongInner $false -EnableParallelMerge $false -ParallelMergeParallelism 123 -ParallelMergeInitialYieldRows 123 -ParallelMergeSmallBatchRows 123)) -Lookup "Lookup_example" -Left "Left_example" -Right "Right_example" -RightPrefix "RightPrefix_example" -Condition "Condition_example" -JoinType "INNER" -ColumnNames @("ColumnNames_example") -Rows @(@("Rows_example"))) -Dimensions @() -LimitSpec (Initialize-telemetry.DruidDefaultLimitSpec -Type "default" -Limit 123 -Columns @((Initialize-telemetry.DruidOrderByColumnSpec -Dimension "Dimension_example" -Direction "ascending" -DimensionOrder "lexicographic"))) -Having (Initialize-telemetry.DruidHavingFilter -Type "filter" -VarFilter  -Aggregation "Aggregation_example" -Value 123 -Dimension "Dimension_example") -Granularity (Initialize-telemetry.DruidGranularity -Type "duration" -Duration 123 -Origin Get-Date -Period "Period_example" -TimeZone "TimeZone_example") -VarFilter  -Aggregations @() -PostAggregations @((Initialize-telemetry.DruidPostAggregator -Type "arithmetic" -Name "Name_example" -Fn "+" -Fields @("Fields_example") -Ordering "Ordering_example" -FieldName "FieldName_example" -Value 123 -Field "Field_example" -Func "UNION" -Size 123)) -Intervals @("Intervals_example") -SubtotalsSpec "TODO" -Context (Initialize-telemetry.DruidQueryContext -GrandTotal $false -SkipEmptyBuckets $false -Timeout 123 -Priority 123 -QueryId "QueryId_example" -UseCache $false -PopulateCache $false -UseResultLevelCache $false -PopulateResultLevelCache $false -BySegment $false -Finalize $false -ChunkPeriod "ChunkPeriod_example" -MaxScatterGatherBytes 123 -MaxQueuedBytes 123 -SerializeDateTimeAsLong $false -SerializeDateTimeAsLongInner $false -EnableParallelMerge $false -ParallelMergeParallelism 123 -ParallelMergeInitialYieldRows 123 -ParallelMergeSmallBatchRows 123)) -Lookup "Lookup_example" -Left "Left_example" -Right "Right_example" -RightPrefix "RightPrefix_example" -Condition "Condition_example" -JoinType "INNER" -ColumnNames @("ColumnNames_example") -Rows @(@("Rows_example"))) -Context ) # TelemetryDruidDataSourceMetadataRequest | The Druid request schema for time series queries.
 
 # Perform a Druid DatasourceMetadata request.
 try {
@@ -96,18 +93,16 @@ Endpoint that exposes Druid GroupBy requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -115,14 +110,13 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
-
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 $TelemetryDruidGroupByRequest =  # TelemetryDruidGroupByRequest | The Druid request schema for time series queries.
 
@@ -167,18 +161,16 @@ Endpoint that exposes Druid Scan requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -186,16 +178,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidScanRequest = (Initialize-telemetry.DruidScanRequest-QueryType "QueryType_example" -DataSource  -Intervals @("Intervals_example") -ResultFormat "ResultFormat_example" -VarFilter  -Columns @("Columns_example") -BatchSize 123 -Limit 123 -Order "Order_example" -Legacy $false -Context ) # TelemetryDruidScanRequest | The Druid request schema for time series queries.
+$TelemetryDruidScanRequest = (Initialize-telemetry.DruidScanRequest -QueryType "timeseries" -DataSource  -Intervals @("Intervals_example") -ResultFormat "list" -VarFilter  -Columns @("Columns_example") -BatchSize 123 -Limit 123 -Order "none" -Legacy $false -Context ) # TelemetryDruidScanRequest | The Druid request schema for time series queries.
 
 # Perform a Druid Scan request.
 try {
@@ -238,18 +229,16 @@ Endpoint that exposes Druid Search requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -257,16 +246,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidSearchRequest = (Initialize-telemetry.DruidSearchRequest-QueryType "QueryType_example" -DataSource  -Intervals @("Intervals_example") -Granularity  -VarFilter  -Aggregations @() -SearchDimensions @("SearchDimensions_example") -Query (Initialize-telemetry.DruidAggregateSearchSpec-Type "Type_example" -Value "Value_example" -Values @("Values_example") -CaseSensitive $false -Regex "Regex_example") -Limit 123 -Context ) # TelemetryDruidSearchRequest | The Druid request schema for time series queries.
+$TelemetryDruidSearchRequest = (Initialize-telemetry.DruidSearchRequest -QueryType "timeseries" -DataSource  -Intervals @("Intervals_example") -Granularity  -VarFilter  -Aggregations @() -SearchDimensions @("SearchDimensions_example") -Query (Initialize-telemetry.DruidAggregateSearchSpec -Type "insensitive_contains" -Value "Value_example" -Values @("Values_example") -CaseSensitive $false -Regex "Regex_example") -Limit 123 -Context ) # TelemetryDruidSearchRequest | The Druid request schema for time series queries.
 
 # Perform a Druid Search request.
 try {
@@ -309,18 +297,16 @@ Endpoint that exposes Druid SegmentMetadata requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -328,16 +314,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidSegmentMetadataRequest = (Initialize-telemetry.DruidSegmentMetadataRequest-QueryType "QueryType_example" -DataSource  -Intervals @("Intervals_example") -ToInclude "TODO" -Merge $false -Context  -AnalysisTypes @("AnalysisTypes_example") -LenientAggregatorMerge $false) # TelemetryDruidSegmentMetadataRequest | The Druid request schema for time series queries.
+$TelemetryDruidSegmentMetadataRequest = (Initialize-telemetry.DruidSegmentMetadataRequest -QueryType "timeseries" -DataSource  -Intervals @("Intervals_example") -ToInclude "TODO" -Merge $false -Context  -AnalysisTypes @("AnalysisTypes_example") -LenientAggregatorMerge $false) # TelemetryDruidSegmentMetadataRequest | The Druid request schema for time series queries.
 
 # Perform a Druid SegmentMetadata request.
 try {
@@ -380,18 +365,16 @@ Endpoint that exposes Druid TimeBoundary requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -399,16 +382,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidTimeBoundaryRequest = (Initialize-telemetry.DruidTimeBoundaryRequest-QueryType "QueryType_example" -DataSource  -Bound "Bound_example" -VarFilter  -Context ) # TelemetryDruidTimeBoundaryRequest | The Druid request schema for time series queries.
+$TelemetryDruidTimeBoundaryRequest = (Initialize-telemetry.DruidTimeBoundaryRequest -QueryType "timeseries" -DataSource  -Bound "maxTime" -VarFilter  -Context ) # TelemetryDruidTimeBoundaryRequest | The Druid request schema for time series queries.
 
 # Perform a Druid TimeBoundary request.
 try {
@@ -451,18 +433,16 @@ Endpoint that exposes Druid requests for time series data. This endpoint exposes
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -470,16 +450,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidTimeSeriesRequest = (Initialize-telemetry.DruidTimeSeriesRequest-QueryType "QueryType_example" -DataSource  -Descending $false -Intervals @("Intervals_example") -Granularity  -VarFilter  -Aggregations @() -PostAggregations @() -Limit 123 -Context ) # TelemetryDruidTimeSeriesRequest | The Druid request schema for time series queries.
+$TelemetryDruidTimeSeriesRequest = (Initialize-telemetry.DruidTimeSeriesRequest -QueryType "timeseries" -DataSource  -Descending $false -Intervals @("Intervals_example") -Granularity  -VarFilter  -Aggregations @() -PostAggregations @() -Limit 123 -Context ) # TelemetryDruidTimeSeriesRequest | The Druid request schema for time series queries.
 
 # Perform a Druid TimeSeries request.
 try {
@@ -522,18 +501,16 @@ Endpoint that exposes Druid TopN requests for time series data.
 
 ### Example
 ```powershell
-Import-Module -Name Intersight
-
-$Configuration = Get-IntersightConfiguration
+# general setting of the PowerShell module, e.g. base URL, authentication, etc
+$Configuration = Get-Configuration
 # Configure API key authorization: cookieAuth
-$Configuration["ApiKey"]["X-Starship-Token"] = "YOUR_API_KEY"
+$Configuration.ApiKey.X-Starship-Token = "YOUR_API_KEY"
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$Configuration["ApiKeyPrefix"]["X-Starship-Token"] = "Bearer"
+#$Configuration.ApiKeyPrefix.X-Starship-Token = "Bearer"
 
 # Configure HTTP basic authorization: http_signature
-$Configuration["Username"] = "YOUR_USERNAME";
-$Configuration["Password"] = "YOUR_PASSWORD";
-
+$Configuration.Username = "YOUR_USERNAME"
+$Configuration.Password = "YOUR_PASSWORD"
 # Configure HttpSignature for authorization :http_signature
 $httpSigningParams = @{
     KeyId = "xxxxxx1776876789ac747/xxxxxxx564612d31a62c01/xxxxxxxa1d7564612d31a66ee8"
@@ -541,16 +518,15 @@ $httpSigningParams = @{
     HttpSigningHeader = @("(request-target)","Host","Date","Digest")
     HashAlgorithm = "sha256"
 }
-Set-IntersightConfigurationHttpSigning @httpSigningParams
+Set-ConfigurationHttpSigning $httpSigningParams
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
 # Configure OAuth2 access token for authorization: oAuth2
-$Configuration["AccessToken"] = "YOUR_ACCESS_TOKEN";
+$Configuration.AccessToken = "YOUR_ACCESS_TOKEN"
 
-
-$TelemetryDruidTopNRequest = (Initialize-telemetry.DruidTopNRequest-QueryType "QueryType_example" -DataSource  -Intervals @("Intervals_example") -Granularity  -VarFilter  -Aggregations @() -PostAggregations @() -Dimension  -Threshold 123 -Metric (Initialize-telemetry.DruidTopNMetricSpec-Type "Type_example" -Metric (Initialize-telemetry.DruidTopNMetricSpec-Type "Type_example" -Metric  -Ordering "Ordering_example" -PreviousStop "PreviousStop_example") -Ordering "Ordering_example" -PreviousStop "PreviousStop_example") -Context ) # TelemetryDruidTopNRequest | The Druid request schema for time series queries.
+$TelemetryDruidTopNRequest = (Initialize-telemetry.DruidTopNRequest -QueryType "timeseries" -DataSource  -Intervals @("Intervals_example") -Granularity  -VarFilter  -Aggregations @() -PostAggregations @() -Dimension  -Threshold 123 -Metric (Initialize-telemetry.DruidTopNMetricSpec -Type "numeric" -Metric (Initialize-telemetry.DruidTopNMetricSpec -Type "numeric" -Metric  -Ordering "lexicographic" -PreviousStop "PreviousStop_example") -Ordering "lexicographic" -PreviousStop "PreviousStop_example") -Context ) # TelemetryDruidTopNRequest | The Druid request schema for time series queries.
 
 # Perform a Druid TopN request.
 try {

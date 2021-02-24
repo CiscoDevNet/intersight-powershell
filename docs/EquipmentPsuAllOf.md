@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **ClassId** | **String** | The fully-qualified name of the instantiated, concrete type. This property is used as a discriminator to identify the type of the payload when marshaling and unmarshaling data. | [default to "equipment.Psu"]
 **ObjectType** | **String** | The fully-qualified name of the instantiated, concrete type. The value should be the same as the &#39;ClassId&#39; property. | [default to "equipment.Psu"]
 **Description** | **String** | This field is to provide description for the power supply unit. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field identifies the psu operational state. | [optional] [readonly] 
 **PartNumber** | **String** | This field identifies the Part Number for this Power Supply Unit. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the Power Supply. | [optional] [readonly] 
@@ -17,7 +18,7 @@ Name | Type | Description | Notes
 **PsuWattage** | **String** | This field identifies the Wattage of the Power Supply. | [optional] [readonly] 
 **Sku** | **String** | This field identifies the Stockkeeping Unit for this Power Supply. | [optional] [readonly] 
 **Vid** | **String** | This field identifies the Vendor ID for this Power Supply Unit. | [optional] [readonly] 
-**Voltage** | **String** | This field is used to indicate the Voltage for this Power Supply. | [optional] [readonly] 
+**Voltage** | **String** | This field is used to indicate the voltage state for this Power Supply. | [optional] [readonly] 
 **ComputeRackUnit** | [**ComputeRackUnitRelationship**](ComputeRackUnitRelationship.md) |  | [optional] 
 **EquipmentChassis** | [**EquipmentChassisRelationship**](EquipmentChassisRelationship.md) |  | [optional] 
 **EquipmentFex** | [**EquipmentFexRelationship**](EquipmentFexRelationship.md) |  | [optional] 
@@ -33,6 +34,7 @@ Name | Type | Description | Notes
 $EquipmentPsuAllOf = Initialize-IntersightEquipmentPsuAllOf  -ClassId null `
  -ObjectType null `
  -Description null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -32,6 +33,7 @@ Name | Type | Description | Notes
 **NumCoresEnabled** | **String** | The number of enabled cores in the installed processor. | [optional] [readonly] 
 **NumThreads** | **String** | The maximum number of threads available in the installed processor. | [optional] [readonly] 
 **OperPowerState** | **String** | The power state of the processor. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | The health indicator of the processor, &#39;OK&#39; indicates the processor is operatinal. | [optional] [readonly] 
 **Operability** | **String** | Operability state of the central processing unit. | [optional] [readonly] 
 **Presence** | **String** | The valid values are &#39;equipped&#39; and &#39;absent&#39;. | [optional] [readonly] 
@@ -63,6 +65,7 @@ $ProcessorUnitRelationship = Initialize-IntersightProcessorUnitRelationship  -Cl
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -79,6 +82,7 @@ $ProcessorUnitRelationship = Initialize-IntersightProcessorUnitRelationship  -Cl
  -NumCoresEnabled null `
  -NumThreads null `
  -OperPowerState null `
+ -OperReason null `
  -OperState null `
  -Operability null `
  -Presence null `

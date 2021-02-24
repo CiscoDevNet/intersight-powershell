@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **SharedScope** | **String** | Intersight provides pre-built workflows, tasks and policies to end users through global catalogs. Objects that are made available through global catalogs are said to have a &#39;shared&#39; ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs. | [optional] [readonly] 
 **Tags** | [**MoTag[]**](MoTag.md) |  | [optional] 
 **VersionContext** | [**MoVersionContext**](MoVersionContext.md) |  | [optional] 
+**Var0ClusterReplicationNetworkPolicy** | [**HyperflexClusterReplicationNetworkPolicyRelationship**](HyperflexClusterReplicationNetworkPolicyRelationship.md) |  | [optional] 
 **Ancestors** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
 **Parent** | [**MoBaseMoRelationship**](MoBaseMoRelationship.md) |  | [optional] 
 **PermissionResources** | [**MoBaseMoRelationship[]**](MoBaseMoRelationship.md) | An array of relationships to moBaseMo resources. | [optional] [readonly] 
@@ -33,6 +34,7 @@ Name | Type | Description | Notes
 **FaultSummary** | **Int64** | This field summarizes the faults on the chassis enclosure. | [optional] 
 **ManagementMode** | **String** | The management mode of the blade server chassis. * &#x60;IntersightStandalone&#x60; - Intersight Standalone mode of operation. * &#x60;UCSM&#x60; - Unified Computing System Manager mode of operation. * &#x60;Intersight&#x60; - Intersight managed mode of operation. | [optional] [readonly] [default to "IntersightStandalone"]
 **Name** | **String** | This field identifies the name for the chassis enclosure. | [optional] [readonly] 
+**OperReason** | **String[]** |  | [optional] 
 **OperState** | **String** | This field identifies the Chassis Operational State. | [optional] [readonly] 
 **PartNumber** | **String** | Part Number identifier for the chassis enclosure. | [optional] [readonly] 
 **VarPid** | **String** | This field identifies the Product ID for the chassis enclosure. | [optional] [readonly] 
@@ -68,6 +70,7 @@ $EquipmentChassis = Initialize-IntersightEquipmentChassis  -ClassId null `
  -SharedScope null `
  -Tags null `
  -VersionContext null `
+ -Var0ClusterReplicationNetworkPolicy null `
  -Ancestors null `
  -Parent null `
  -PermissionResources null `
@@ -87,6 +90,7 @@ $EquipmentChassis = Initialize-IntersightEquipmentChassis  -ClassId null `
  -FaultSummary null `
  -ManagementMode null `
  -Name null `
+ -OperReason null `
  -OperState null `
  -PartNumber null `
  -VarPid null `

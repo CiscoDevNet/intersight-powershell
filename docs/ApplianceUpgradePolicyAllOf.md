@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **BlackoutDatesEnabled** | **Boolean** | If enabled, allows the user to define a blackout period during which the appliance will not be upgraded. | [optional] 
 **BlackoutEndDate** | **System.DateTime** | End date of the black out period. | [optional] 
 **BlackoutStartDate** | **System.DateTime** | Start date of the black out period. The appliance will not be upgraded during this period. | [optional] 
+**EnableMetaDataSync** | **Boolean** | Indicates if the updated metadata files should be synced immediately or at the next upgrade. | [optional] [default to $true]
 **Schedule** | [**OnpremSchedule**](OnpremSchedule.md) |  | [optional] 
 **Account** | [**IamAccountRelationship**](IamAccountRelationship.md) |  | [optional] 
 
@@ -22,6 +23,7 @@ $ApplianceUpgradePolicyAllOf = Initialize-IntersightApplianceUpgradePolicyAllOf 
  -BlackoutDatesEnabled null `
  -BlackoutEndDate null `
  -BlackoutStartDate null `
+ -EnableMetaDataSync null `
  -Schedule null `
  -Account null
 ```
