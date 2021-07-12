@@ -1,0 +1,7 @@
+
+#Get the HyperflexClusterReplicationNetworkPolicyDeployment to delete
+$HyperflexClusterReplicationNetworkPolicyDeployment = Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Name HyperflexClusterReplicationNetworkPolicyDeploymentName
+$HyperflexClusterReplicationNetworkPolicyDeployment | Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
+
+#Remove the server profile by Moid.
+Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Moid 123bc2222287wee

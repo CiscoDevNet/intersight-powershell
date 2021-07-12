@@ -1,0 +1,7 @@
+
+#Get the TechsupportmanagementCollectionControlPolicy to delete
+$TechsupportmanagementCollectionControlPolicy = Remove-IntersightTechsupportmanagementCollectionControlPolicy -Name TechsupportmanagementCollectionControlPolicyName
+$TechsupportmanagementCollectionControlPolicy | Remove-IntersightTechsupportmanagementCollectionControlPolicy
+
+#Remove the server profile by Moid.
+Remove-IntersightTechsupportmanagementCollectionControlPolicy -Moid 123bc2222287wee

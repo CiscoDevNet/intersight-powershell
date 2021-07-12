@@ -1,0 +1,7 @@
+
+#Get the KubernetesVirtualMachineNodeProfile to delete
+$KubernetesVirtualMachineNodeProfile = Remove-IntersightKubernetesVirtualMachineNodeProfile -Name KubernetesVirtualMachineNodeProfileName
+$KubernetesVirtualMachineNodeProfile | Remove-IntersightKubernetesVirtualMachineNodeProfile
+
+#Remove the server profile by Moid.
+Remove-IntersightKubernetesVirtualMachineNodeProfile -Moid 123bc2222287wee

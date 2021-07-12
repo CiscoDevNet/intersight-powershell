@@ -1,0 +1,15 @@
+#Get the HyperflexClusterReplicationNetworkPolicyDeployment by Name
+$HyperflexClusterReplicationNetworkPolicyDeploymentByName = Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Name HyperflexClusterReplicationNetworkPolicyDeploymentName
+
+#Get the List of ServerProfiles
+$HyperflexClusterReplicationNetworkPolicyDeploymentList = Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
+
+#Get the list of HyperflexClusterReplicationNetworkPolicyDeployment under particular organization.
+$org = Get-IntersightOrganizationOrganization -Name myOrg
+
+$HyperflexClusterReplicationNetworkPolicyDeploymentByOrg = Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Organization $org
+
+#Get the HyperflexClusterReplicationNetworkPolicyDeployment based on query Parameter
+$HyperflexClusterReplicationNetworkPolicyDeploymentByQueryParam = Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Filter Name eq HyperflexClusterReplicationNetworkPolicyDeploymentName
+
+#Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet due to different property structure .

@@ -1,0 +1,7 @@
+
+#Get the SoftwarerepositoryCategoryMapper to delete
+$SoftwarerepositoryCategoryMapper = Remove-IntersightSoftwarerepositoryCategoryMapper -Name SoftwarerepositoryCategoryMapperName
+$SoftwarerepositoryCategoryMapper | Remove-IntersightSoftwarerepositoryCategoryMapper
+
+#Remove the server profile by Moid.
+Remove-IntersightSoftwarerepositoryCategoryMapper -Moid 123bc2222287wee

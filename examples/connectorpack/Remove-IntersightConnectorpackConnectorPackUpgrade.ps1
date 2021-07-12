@@ -1,0 +1,7 @@
+
+#Get the ConnectorpackConnectorPackUpgrade to delete
+$ConnectorpackConnectorPackUpgrade = Remove-IntersightConnectorpackConnectorPackUpgrade -Name ConnectorpackConnectorPackUpgradeName
+$ConnectorpackConnectorPackUpgrade | Remove-IntersightConnectorpackConnectorPackUpgrade
+
+#Remove the server profile by Moid.
+Remove-IntersightConnectorpackConnectorPackUpgrade -Moid 123bc2222287wee

@@ -1,0 +1,7 @@
+
+#Get the CapabilityEquipmentPhysicalDef to delete
+$CapabilityEquipmentPhysicalDef = Remove-IntersightCapabilityEquipmentPhysicalDef -Name CapabilityEquipmentPhysicalDefName
+$CapabilityEquipmentPhysicalDef | Remove-IntersightCapabilityEquipmentPhysicalDef
+
+#Remove the server profile by Moid.
+Remove-IntersightCapabilityEquipmentPhysicalDef -Moid 123bc2222287wee

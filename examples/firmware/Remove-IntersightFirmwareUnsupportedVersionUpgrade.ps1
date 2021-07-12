@@ -1,0 +1,7 @@
+
+#Get the FirmwareUnsupportedVersionUpgrade to delete
+$FirmwareUnsupportedVersionUpgrade = Remove-IntersightFirmwareUnsupportedVersionUpgrade -Name FirmwareUnsupportedVersionUpgradeName
+$FirmwareUnsupportedVersionUpgrade | Remove-IntersightFirmwareUnsupportedVersionUpgrade
+
+#Remove the server profile by Moid.
+Remove-IntersightFirmwareUnsupportedVersionUpgrade -Moid 123bc2222287wee
