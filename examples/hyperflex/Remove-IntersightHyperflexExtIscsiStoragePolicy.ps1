@@ -1,0 +1,7 @@
+
+#Get the HyperflexExtIscsiStoragePolicy to delete
+$HyperflexExtIscsiStoragePolicy = Remove-IntersightHyperflexExtIscsiStoragePolicy -Name HyperflexExtIscsiStoragePolicyName
+$HyperflexExtIscsiStoragePolicy | Remove-IntersightHyperflexExtIscsiStoragePolicy
+
+#Remove the server profile by Moid.
+Remove-IntersightHyperflexExtIscsiStoragePolicy -Moid 123bc2222287wee

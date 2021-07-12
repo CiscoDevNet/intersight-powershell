@@ -1,0 +1,7 @@
+
+#Get the HyperflexServerFirmwareVersionEntry to delete
+$HyperflexServerFirmwareVersionEntry = Remove-IntersightHyperflexServerFirmwareVersionEntry -Name HyperflexServerFirmwareVersionEntryName
+$HyperflexServerFirmwareVersionEntry | Remove-IntersightHyperflexServerFirmwareVersionEntry
+
+#Remove the server profile by Moid.
+Remove-IntersightHyperflexServerFirmwareVersionEntry -Moid 123bc2222287wee

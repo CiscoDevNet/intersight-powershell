@@ -1,0 +1,7 @@
+
+#Get the CapabilityFanModuleManufacturingDef to delete
+$CapabilityFanModuleManufacturingDef = Remove-IntersightCapabilityFanModuleManufacturingDef -Name CapabilityFanModuleManufacturingDefName
+$CapabilityFanModuleManufacturingDef | Remove-IntersightCapabilityFanModuleManufacturingDef
+
+#Remove the server profile by Moid.
+Remove-IntersightCapabilityFanModuleManufacturingDef -Moid 123bc2222287wee

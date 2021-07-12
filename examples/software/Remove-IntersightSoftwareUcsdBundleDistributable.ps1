@@ -1,0 +1,7 @@
+
+#Get the SoftwareUcsdBundleDistributable to delete
+$SoftwareUcsdBundleDistributable = Remove-IntersightSoftwareUcsdBundleDistributable -Name SoftwareUcsdBundleDistributableName
+$SoftwareUcsdBundleDistributable | Remove-IntersightSoftwareUcsdBundleDistributable
+
+#Remove the server profile by Moid.
+Remove-IntersightSoftwareUcsdBundleDistributable -Moid 123bc2222287wee

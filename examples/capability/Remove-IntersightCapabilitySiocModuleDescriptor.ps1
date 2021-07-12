@@ -1,0 +1,7 @@
+
+#Get the CapabilitySiocModuleDescriptor to delete
+$CapabilitySiocModuleDescriptor = Remove-IntersightCapabilitySiocModuleDescriptor -Name CapabilitySiocModuleDescriptorName
+$CapabilitySiocModuleDescriptor | Remove-IntersightCapabilitySiocModuleDescriptor
+
+#Remove the server profile by Moid.
+Remove-IntersightCapabilitySiocModuleDescriptor -Moid 123bc2222287wee

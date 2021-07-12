@@ -1,0 +1,7 @@
+
+#Get the CapabilityChassisManufacturingDef to delete
+$CapabilityChassisManufacturingDef = Remove-IntersightCapabilityChassisManufacturingDef -Name CapabilityChassisManufacturingDefName
+$CapabilityChassisManufacturingDef | Remove-IntersightCapabilityChassisManufacturingDef
+
+#Remove the server profile by Moid.
+Remove-IntersightCapabilityChassisManufacturingDef -Moid 123bc2222287wee

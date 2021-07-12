@@ -1,0 +1,7 @@
+
+#Get the CapabilityPortGroupAggregationDef to delete
+$CapabilityPortGroupAggregationDef = Remove-IntersightCapabilityPortGroupAggregationDef -Name CapabilityPortGroupAggregationDefName
+$CapabilityPortGroupAggregationDef | Remove-IntersightCapabilityPortGroupAggregationDef
+
+#Remove the server profile by Moid.
+Remove-IntersightCapabilityPortGroupAggregationDef -Moid 123bc2222287wee

@@ -1,0 +1,7 @@
+
+#Get the HyperflexHealthCheckDefinition to delete
+$HyperflexHealthCheckDefinition = Remove-IntersightHyperflexHealthCheckDefinition -Name HyperflexHealthCheckDefinitionName
+$HyperflexHealthCheckDefinition | Remove-IntersightHyperflexHealthCheckDefinition
+
+#Remove the server profile by Moid.
+Remove-IntersightHyperflexHealthCheckDefinition -Moid 123bc2222287wee

@@ -1,0 +1,7 @@
+
+#Get the KubernetesVirtualMachineInstanceType to delete
+$KubernetesVirtualMachineInstanceType = Remove-IntersightKubernetesVirtualMachineInstanceType -Name KubernetesVirtualMachineInstanceTypeName
+$KubernetesVirtualMachineInstanceType | Remove-IntersightKubernetesVirtualMachineInstanceType
+
+#Remove the server profile by Moid.
+Remove-IntersightKubernetesVirtualMachineInstanceType -Moid 123bc2222287wee
