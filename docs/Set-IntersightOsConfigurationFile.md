@@ -1,0 +1,219 @@
+---
+external help file: Intersight.PowerShell.dll-Help.xml
+Module Name: Intersight.PowerShell
+online version:
+schema: 2.0.0
+---
+
+# Set-IntersightOsConfigurationFile
+
+## SYNOPSIS
+Fill in the Synopsis
+
+## SYNTAX
+
+```
+
+Set-IntersightOsConfigurationFile [-AdditionalProperties< Dictionary<string,object>>][-Catalog< OsCatalogRelationship>][-Description< string>][-Distributions< List<HclOperatingSystemRelationship>>][-FileContent< string>][-Internal< bool>][[-Moid]< string>][-Name< string>][-Placeholders< List<OsPlaceHolder>>][-Tags< List<MoTag>>]
+
+```
+
+## DESCRIPTION
+Update a &apos;OsConfigurationFile&apos; resource.
+
+## PARAMETERS
+
+### -AdditionalProperties
+
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Catalog
+A reference to a osCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: OsCatalogRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+Description of the OS ConfigurationFile.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Distributions
+An array of relationships to hclOperatingSystem resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[HclOperatingSystemRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FileContent
+The content of the entire configuration file is stored as value. The content\ncan either be a static file content or a template content.\nThe template is expected to conform to the golang template syntax. The values\nfrom os.Answers properties will be used to populate this template.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Internal
+The internal flag is set to true when configuration file is uploaded from OS Install wizard. Internal Configuration files will not be displayed in Answer Management Page.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name of the OS ConfigurationFile that uniquely identifies the configuration file.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Placeholders
+
+
+Note :- Use Initialize-IntersightOsPlaceHolder to create the object of complex type OsPlaceHolder
+
+```yaml
+Type: System.Collections.Generic.List`1[OsPlaceHolder]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Set-IntersightOsConfigurationFile
+```
+
+{ Add example description here }
+
+## INPUTS
+
+### System.Int32
+
+### System.String
+
+## OUTPUTS
+
+### TestModule.FavoriteStuff
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
+
+[New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
+
+[Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
+
+[Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)
