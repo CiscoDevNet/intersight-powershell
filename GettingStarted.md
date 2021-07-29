@@ -85,6 +85,13 @@ SignatureValidityPeriod : 0
 
 ```
 
+
+---
+
+For sample and solution scripts refer to [intersight-powershell-utils](https://github.com/CiscoDevNet/intersight-powershell-utils/) repository
+
+---
+
 ## Create the Organization
 The cmdlet ```New-IntersightOrganizationOrganization``` is used to create the Organization MO.
 

@@ -18,14 +18,20 @@ jobs:
       # Checks-out the repository under $GITHUB_WORKSPACE, so the job can access it
       - name: "Checkout the code to build it."
         uses: actions/checkout@v2
+      
+      #set dotnet environment
+      - name: "set the dotnet environment"
+        uses: actions/setup-dotnet@v1
+        with:
+            dotnet-version: '3.1.x'
 
       # Runs build.ps1 to build the Intersight module
       - name: Build the Intersight module
-        run: .\Build.ps1
+        run: .\build.ps1
         shell: pwsh
 
       - name: Archive Providers
         uses: actions/upload-artifact@v1
         with:
-         name: intersight_powerShell
-         path: src
+         name: Intersight.PowerShell
+         path: Intersight.PowerShell

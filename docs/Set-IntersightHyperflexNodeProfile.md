@@ -1,0 +1,278 @@
+---
+external help file: Intersight.PowerShell.dll-Help.xml
+Module Name: Intersight.PowerShell
+online version:
+schema: 2.0.0
+---
+
+# Set-IntersightHyperflexNodeProfile
+
+## SYNOPSIS
+Fill in the Synopsis
+
+## SYNTAX
+
+```
+
+Set-IntersightHyperflexNodeProfile [-AdditionalProperties< Dictionary<string,object>>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][[-Moid]< string>][-Name< string>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-Type< HyperflexNodeProfile.TypeEnum>]
+
+```
+
+## DESCRIPTION
+Update a &apos;HyperflexNodeProfile&apos; resource.
+
+## PARAMETERS
+
+### -AdditionalProperties
+
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedServer
+A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: ComputePhysicalRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterProfile
+A reference to a hyperflexClusterProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: HyperflexClusterProfileRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+Description of the profile.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HxdpDataIp
+IP address for storage data network (Controller VM interface).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HxdpMgmtIp
+IP address for HyperFlex management network.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HypervisorControlIp
+IP address for hypervisor control such as VM migration or pod management.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HypervisorDataIp
+IP address for storage data network (Hypervisor interface).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HypervisorMgmtIp
+IP address for Hypervisor management network.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the profile instance or profile template.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SrcTemplate
+A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: PolicyAbstractProfileRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Type
+Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target.
+
+```yaml
+Type: HyperflexNodeProfile.TypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Set-IntersightHyperflexNodeProfile
+```
+
+{ Add example description here }
+
+## INPUTS
+
+### System.Int32
+
+### System.String
+
+## OUTPUTS
+
+### TestModule.FavoriteStuff
+
+## NOTES
+
+## RELATED LINKS
+
+[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
+
+[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+
+[Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)

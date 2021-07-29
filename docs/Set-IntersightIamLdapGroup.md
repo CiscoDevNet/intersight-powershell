@@ -1,0 +1,170 @@
+---
+external help file: Intersight.PowerShell.dll-Help.xml
+Module Name: Intersight.PowerShell
+online version:
+schema: 2.0.0
+---
+
+# Set-IntersightIamLdapGroup
+
+## SYNOPSIS
+Fill in the Synopsis
+
+## SYNTAX
+
+```
+
+Set-IntersightIamLdapGroup [-AdditionalProperties< Dictionary<string,object>>][-Domain< string>][-EndPointRole< List<IamEndPointRoleRelationship>>][-LdapPolicy< IamLdapPolicyRelationship>][[-Moid]< string>][-Name< string>][-Tags< List<MoTag>>]
+
+```
+
+## DESCRIPTION
+Update a &apos;IamLdapGroup&apos; resource.
+
+## PARAMETERS
+
+### -AdditionalProperties
+
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Domain
+LDAP server domain the Group resides in.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EndPointRole
+An array of relationships to iamEndPointRole resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[IamEndPointRoleRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LdapPolicy
+A reference to a iamLdapPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamLdapPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+LDAP Group name in the LDAP server database.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Set-IntersightIamLdapGroup
+```
+
+{ Add example description here }
+
+## INPUTS
+
+### System.Int32
+
+### System.String
+
+## OUTPUTS
+
+### TestModule.FavoriteStuff
+
+## NOTES
+
+## RELATED LINKS
+
+[New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
+
+[Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
+
+[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
