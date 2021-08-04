@@ -19,7 +19,7 @@ Set-IntersightCommHttpProxyPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &apos;CommHttpProxyPolicy&apos; resource.
+Update a &amp;apos;CommHttpProxyPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,8 +223,8 @@ PS C:\> Set-IntersightCommHttpProxyPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightCommHttpProxyPolicy](./Remove-IntersightCommHttpProxyPolicy.md)
+
 [Get-IntersightCommHttpProxyPolicy](./Get-IntersightCommHttpProxyPolicy.md)
 
 [New-IntersightCommHttpProxyPolicy](./New-IntersightCommHttpProxyPolicy.md)
-
-[Remove-IntersightCommHttpProxyPolicy](./Remove-IntersightCommHttpProxyPolicy.md)

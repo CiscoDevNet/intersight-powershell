@@ -199,6 +199,6 @@ PS C:\> New-IntersightHyperflexVmRestoreOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
-
 [Get-IntersightHyperflexVmRestoreOperation](./Get-IntersightHyperflexVmRestoreOperation.md)
+
+[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)

@@ -19,7 +19,7 @@ Set-IntersightFirmwareRunningFirmware [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareRunningFirmware&apos; resource.
+Update a &amp;apos;FirmwareRunningFirmware&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -397,8 +397,8 @@ PS C:\> New-IntersightCapabilityEquipmentSlotArray
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
-
 [Set-IntersightCapabilityEquipmentSlotArray](./Set-IntersightCapabilityEquipmentSlotArray.md)
 
 [Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
+
+[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)

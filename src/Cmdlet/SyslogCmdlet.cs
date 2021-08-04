@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SyslogApi(Config);
             ModelObject = new SyslogPolicy();
-            MethodName = "CreateSyslogPolicy";
+            MethodName = "CreateSyslogPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -110,7 +110,7 @@ namespace Intersight.PowerShell
 		public GetIntersightSyslogPolicy()
 		{
 			ApiInstance = new SyslogApi(Config);
-            MethodName = "GetSyslogPolicyList";
+            MethodName = "GetSyslogPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -123,7 +123,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SyslogApi(Config);
             ModelObject = new SyslogPolicy();
-            MethodName = "UpdateSyslogPolicy";
+            MethodName = "PatchSyslogPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -216,7 +216,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightSyslogPolicy()
 		{
 			ApiInstance = new SyslogApi(Config);
-            MethodName = "DeleteSyslogPolicy";
+            MethodName = "DeleteSyslogPolicyWithHttpInfo";
 		}
     }
 }

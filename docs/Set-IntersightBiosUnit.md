@@ -19,7 +19,7 @@ Set-IntersightBiosUnit [-AdditionalProperties< Dictionary<string,object>>][[-Moi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BiosUnit&amp;apos; resource.
+Update a &apos;BiosUnit&apos; resource.
 
 ## PARAMETERS
 

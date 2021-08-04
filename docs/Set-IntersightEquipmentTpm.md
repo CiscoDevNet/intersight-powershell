@@ -19,7 +19,7 @@ Set-IntersightEquipmentTpm [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentTpm&amp;apos; resource.
+Update a &apos;EquipmentTpm&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightFabricPcOperation [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricPcOperation&amp;apos; resource.
+Create a &apos;FabricPcOperation&apos; resource.
 
 ## PARAMETERS
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)
+
 [New-IntersightSoftwarerepositoryOperatingSystemFile](./New-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
 [Get-IntersightSoftwarerepositoryOperatingSystemFile](./Get-IntersightSoftwarerepositoryOperatingSystemFile.md)
-
-[Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)
 

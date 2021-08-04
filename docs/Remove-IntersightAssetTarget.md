@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightAssetTarget](./Set-IntersightAssetTarget.md)
+
 [Get-IntersightAssetTarget](./Get-IntersightAssetTarget.md)
 
 [New-IntersightAssetTarget](./New-IntersightAssetTarget.md)
-
-[Set-IntersightAssetTarget](./Set-IntersightAssetTarget.md)
 

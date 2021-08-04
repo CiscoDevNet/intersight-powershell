@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new BulkApi(Config);
             ModelObject = new BulkMoCloner();
-            MethodName = "CreateBulkMoCloner";
+            MethodName = "CreateBulkMoClonerWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -93,7 +93,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new BulkApi(Config);
             ModelObject = new BulkRequest();
-            MethodName = "CreateBulkRequest";
+            MethodName = "CreateBulkRequestWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -178,7 +178,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new BulkApi(Config);
             ModelObject = new BulkMoMerger();
-            MethodName = "CreateBulkMoMerger";
+            MethodName = "CreateBulkMoMergerWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

@@ -19,7 +19,7 @@ New-IntersightVnicEthNetworkPolicy [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicEthNetworkPolicy&apos; resource.
+Create a &amp;apos;VnicEthNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -177,10 +177,10 @@ PS C:\> New-IntersightVnicEthNetworkPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
+[Set-IntersightVnicEthNetworkPolicy](./Set-IntersightVnicEthNetworkPolicy.md)
 
 [Remove-IntersightVnicEthNetworkPolicy](./Remove-IntersightVnicEthNetworkPolicy.md)
 
-[Set-IntersightVnicEthNetworkPolicy](./Set-IntersightVnicEthNetworkPolicy.md)
+[Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
 
 [Initialize-IntersightVnicVlanSettings](./Initialize-IntersightVnicVlanSettings.md)

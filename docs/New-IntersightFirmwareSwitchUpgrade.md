@@ -19,7 +19,7 @@ New-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareSwitchUpgrade&apos; resource.
+Create a &amp;apos;FirmwareSwitchUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -262,9 +262,9 @@ PS C:\> New-IntersightFirmwareSwitchUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareSwitchUpgrade](./Remove-IntersightFirmwareSwitchUpgrade.md)
-
 [Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
+
+[Remove-IntersightFirmwareSwitchUpgrade](./Remove-IntersightFirmwareSwitchUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 

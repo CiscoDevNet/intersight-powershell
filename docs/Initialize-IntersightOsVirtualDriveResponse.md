@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsVirtualDriveResponse [-AdditionalProperties< Dictionary<string,object>>][-Bootable< string>][-ClassId< OsVirtualDriveResponse.ClassIdEnum>][-Id< string>][-Name< string>][-ObjectType< OsVirtualDriveResponse.ObjectTypeEnum>][-StorageControllerSlotId< string>]
+Initialize-IntersightOsVirtualDriveResponse [-AdditionalProperties< Dictionary<string,object>>][-Bootable< string>][-ClassId< OsVirtualDriveResponse.ClassIdEnum>][-Id< string>][-Name< string>][-ObjectType< OsVirtualDriveResponse.ObjectTypeEnum>][-SourceMo< Model.MoMoRef>][-StorageControllerSlotId< string>]
 
 ```
 
@@ -100,10 +100,27 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: OsVirtualDriveResponse.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SourceMo
+Mo Reference of the LUN in CmRf format.
+
+Note :- Use Initialize-IntersightMoMoRef to create the object of complex type MoMoRef
+
+```yaml
+Type: Model.MoMoRef
 Parameter Sets: (All)
 Aliases:
 
@@ -155,3 +172,5 @@ PS C:\> Initialize-IntersightOsVirtualDriveResponse
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)

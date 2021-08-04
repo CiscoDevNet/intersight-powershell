@@ -25,7 +25,7 @@ Get-IntersightOsCatalog [-Count <Boolean>] [-InlineCount <String>] [-Select <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;OsCatalog&amp;apos; resource.,
+Read a &apos;OsCatalog&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

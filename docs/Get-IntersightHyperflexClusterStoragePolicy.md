@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexClusterStoragePolicy](./New-IntersightHyperflexClusterStoragePolicy.md)
 
-[Set-IntersightHyperflexClusterStoragePolicy](./Set-IntersightHyperflexClusterStoragePolicy.md)
-
 [Remove-IntersightHyperflexClusterStoragePolicy](./Remove-IntersightHyperflexClusterStoragePolicy.md)
+
+[Set-IntersightHyperflexClusterStoragePolicy](./Set-IntersightHyperflexClusterStoragePolicy.md)
 

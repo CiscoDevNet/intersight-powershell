@@ -19,7 +19,7 @@ Set-IntersightSoftwareApplianceDistributable [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwareApplianceDistributable&apos; resource.
+Update a &amp;apos;SoftwareApplianceDistributable&amp;apos; resource.
 
 ## PARAMETERS
 

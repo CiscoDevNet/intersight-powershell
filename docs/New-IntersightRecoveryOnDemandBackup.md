@@ -19,7 +19,7 @@ New-IntersightRecoveryOnDemandBackup [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
+Create a &apos;RecoveryOnDemandBackup&apos; resource.
 
 ## PARAMETERS
 
@@ -268,8 +268,8 @@ PS C:\> New-IntersightRecoveryOnDemandBackup
 
 ## RELATED LINKS
 
-[Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
-
 [Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
 
 [Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
+
+[Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)

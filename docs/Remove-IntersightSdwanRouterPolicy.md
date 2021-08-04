@@ -17,7 +17,7 @@ Remove-IntersightSdwanRouterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SdwanRouterPolicy&apos; resource.
+Delete a &amp;apos;SdwanRouterPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSdwanRouterPolicy](./Set-IntersightSdwanRouterPolicy.md)
-
 [Get-IntersightSdwanRouterPolicy](./Get-IntersightSdwanRouterPolicy.md)
 
 [New-IntersightSdwanRouterPolicy](./New-IntersightSdwanRouterPolicy.md)
+
+[Set-IntersightSdwanRouterPolicy](./Set-IntersightSdwanRouterPolicy.md)
 

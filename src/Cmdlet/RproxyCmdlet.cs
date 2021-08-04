@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new RproxyApi(Config);
             ModelObject = new RproxyReverseProxy();
-            MethodName = "CreateRproxyReverseProxy";
+            MethodName = "CreateRproxyReverseProxyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>

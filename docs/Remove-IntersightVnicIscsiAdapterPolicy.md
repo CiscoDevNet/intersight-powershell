@@ -17,7 +17,7 @@ Remove-IntersightVnicIscsiAdapterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicIscsiAdapterPolicy&apos; resource.
+Delete a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

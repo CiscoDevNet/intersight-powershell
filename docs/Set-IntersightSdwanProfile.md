@@ -284,8 +284,8 @@ PS C:\> Set-IntersightSdwanProfile
 
 [Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
 
-[New-IntersightSdwanProfile](./New-IntersightSdwanProfile.md)
-
 [Get-IntersightSdwanProfile](./Get-IntersightSdwanProfile.md)
+
+[New-IntersightSdwanProfile](./New-IntersightSdwanProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)

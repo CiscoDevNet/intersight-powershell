@@ -19,7 +19,7 @@ Set-IntersightHyperflexLocalCredentialPolicy [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexLocalCredentialPolicy&amp;apos; resource.
+Update a &apos;HyperflexLocalCredentialPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorAdminPwd
-The ESXi root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \&amp;quot;Cisco123\&amp;quot; for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment.
+The ESXi root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \&quot;Cisco123\&quot; for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment.
 
 ```yaml
 Type: string

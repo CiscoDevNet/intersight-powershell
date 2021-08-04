@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new TopApi(Config);
             ModelObject = new TopSystem();
-            MethodName = "UpdateTopSystem";
+            MethodName = "UpdateTopSystemWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -83,7 +83,7 @@ namespace Intersight.PowerShell
 		public GetIntersightTopSystem()
 		{
 			ApiInstance = new TopApi(Config);
-            MethodName = "GetTopSystemList";
+            MethodName = "GetTopSystemListWithHttpInfo";
 		}
     }
 }

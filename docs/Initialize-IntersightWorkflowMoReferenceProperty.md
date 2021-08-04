@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowMoReferenceProperty [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowMoReferenceProperty.ClassIdEnum>][-DisplayAttributes< List<string>>][-ObjectType< WorkflowMoReferenceProperty.ObjectTypeEnum>][-Selector< string>][-ValueAttribute< string>]
+Initialize-IntersightWorkflowMoReferenceProperty [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowMoReferenceProperty.ClassIdEnum>][-DisplayAttributes< List<string>>][-ObjectType< WorkflowMoReferenceProperty.ObjectTypeEnum>][-Selector< string>][-SelectorProperty< Model.WorkflowSelectorProperty>][-ValueAttribute< string>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowMoReferenceProperty.ObjectTypeEnum
@@ -89,6 +89,23 @@ Field to hold an Intersight API along with an optional filter to narrow down the
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SelectorProperty
+Selector properties to define HTTP method and &apos;body&apos; in case of upsert operation.
+
+Note :- Use Initialize-IntersightWorkflowSelectorProperty to create the object of complex type WorkflowSelectorProperty
+
+```yaml
+Type: Model.WorkflowSelectorProperty
 Parameter Sets: (All)
 Aliases:
 
@@ -140,3 +157,5 @@ PS C:\> Initialize-IntersightWorkflowMoReferenceProperty
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightWorkflowSelectorProperty](./Initialize-IntersightWorkflowSelectorProperty.md)

@@ -17,7 +17,7 @@ Remove-IntersightFabricFcUplinkPcRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricFcUplinkPcRole&apos; resource.
+Delete a &amp;apos;FabricFcUplinkPcRole&amp;apos; resource.
 
 ## EXAMPLES
 

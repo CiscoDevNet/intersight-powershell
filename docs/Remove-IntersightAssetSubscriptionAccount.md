@@ -17,7 +17,7 @@ Remove-IntersightAssetSubscriptionAccount -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;AssetSubscriptionAccount&amp;apos; resource.
+Delete a &apos;AssetSubscriptionAccount&apos; resource.
 
 ## EXAMPLES
 

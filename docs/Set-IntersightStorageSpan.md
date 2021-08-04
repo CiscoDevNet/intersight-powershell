@@ -19,7 +19,7 @@ Set-IntersightStorageSpan [-AdditionalProperties< Dictionary<string,object>>][-D
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageSpan&amp;apos; resource.
+Update a &apos;StorageSpan&apos; resource.
 
 ## PARAMETERS
 

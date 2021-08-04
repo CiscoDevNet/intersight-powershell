@@ -17,7 +17,7 @@ Remove-IntersightFabricVsan -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricVsan&amp;apos; resource.
+Delete a &apos;FabricVsan&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
+[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
 
 [New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
 
-[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
+[Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
 

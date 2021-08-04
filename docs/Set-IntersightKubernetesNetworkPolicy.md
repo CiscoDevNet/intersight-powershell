@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -PodNetworkCidr
-CIDR block to allocate pod network IP addresses from.
+CIDR block to allocate Pod network IP addresses from.
 
 ```yaml
 Type: string

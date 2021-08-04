@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentChassis [-AdditionalProperties< Dictionary<string,object>>][-AlarmSummary< ComputeAlarmSummary>][-FaultSummary< long>][[-Moid]< string>][-OperReason< List<string>>][-PlatformType< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< List<MoTag>>][-VirtualDriveContainer< List<StorageVirtualDriveContainerRelationship>>]
+Set-IntersightEquipmentChassis [-AdditionalProperties< Dictionary<string,object>>][-AlarmSummary< ComputeAlarmSummary>][-FanControl< EquipmentFanControlRelationship>][-FaultSummary< long>][[-Moid]< string>][-OperReason< List<string>>][-PlatformType< string>][-PowerControlState< PowerControlStateRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< List<MoTag>>][-VirtualDriveContainer< List<StorageVirtualDriveContainerRelationship>>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentChassis&apos; resource.
+Update a &amp;apos;EquipmentChassis&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -45,6 +45,24 @@ Note :- Use Initialize-IntersightComputeAlarmSummary to create the object of com
 
 ```yaml
 Type: ComputeAlarmSummary
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FanControl
+A reference to a equipmentFanControl resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: EquipmentFanControlRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -105,6 +123,24 @@ The platform type that the chassis is a part of.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PowerControlState
+A reference to a powerControlState resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: PowerControlStateRelationship
 Parameter Sets: (All)
 Aliases:
 

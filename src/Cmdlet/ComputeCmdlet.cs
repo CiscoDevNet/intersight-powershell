@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightComputeRackUnit()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeRackUnitList";
+            MethodName = "GetComputeRackUnitListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ComputeApi(Config);
             ModelObject = new ComputeMapping();
-            MethodName = "UpdateComputeMapping";
+            MethodName = "PatchComputeMappingWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -78,28 +78,143 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeMapping.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeServerSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeMapping", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeMapping:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeServerSetting")]
+    public class SetIntersightComputeServerSetting:SetCmdletBase
 	{
-		public GetIntersightComputeMapping()
+		public SetIntersightComputeServerSetting()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeMappingList";
+            ModelObject = new ComputeServerSetting();
+            MethodName = "UpdateComputeServerSettingWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeBoard.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBoard", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeBoard:GetCmdletBase
-	{
-		public GetIntersightComputeBoard()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeBoardList";
-		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured state of the locator LED for the server.\n* `None` - No operation property for locator led.\n* `On` - The Locator Led is turned on.\n* `Off` - The Locator Led is turned off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeServerSetting.AdminLocatorLedStateEnum AdminLocatorLedState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured power state of the server.\n* `Policy` - Power state is set to the default value in the policy.\n* `PowerOn` - Power state of the server is set to On.\n* `PowerOff` - Power state is the server set to Off.\n* `PowerCycle` - Power state the server is reset.\n* `HardReset` - Power state the server is hard reset.\n* `Shutdown` - Operating system on the server is shut down.\n* `Reboot` - Power state of IMC is rebooted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeServerSetting.AdminPowerStateEnum AdminPowerState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Certificates Action configures the Certificate and PrivateKey at the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CertificatemanagementCertificateBase CertificatesAction {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The allowed actions on the CMOS Reset.\n* `Ready` - CMOS Reset operation is allowed to be done on the server in this state.\n* `Pending` - This indicates that the previous CMOS Reset operation on this server has not completed due to a pending power cycle. CMOS Reset operation cannot be done on the server when in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a CMOS Reset operation on a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeServerSetting.CmosResetEnum CmosReset {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The allowed actions on the Front Panel Lock.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeServerSetting.FrontPanelLockStateEnum FrontPanelLockState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the device chosen by user for configuring One-Time Boot device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OneTimeBootDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Persistent Memory Modules operation properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePersistentMemoryOperation PersistentMemoryOperation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The common server configurable properties between a server and a server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeServerConfig ServerConfig {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Storage Controller operation properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeStorageControllerOperation StorageControllerOperation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Storage Physical Drives operation properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeStoragePhysicalDriveOperation StoragePhysicalDriveOperation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Storage Virtual Drives operation properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeStorageVirtualDriveOperation StorageVirtualDriveOperation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnitIdentity.</para>
@@ -110,159 +225,19 @@ namespace Intersight.PowerShell
 		public GetIntersightComputeRackUnitIdentity()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeRackUnitIdentityList";
+            MethodName = "GetComputeRackUnitIdentityListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeBladeIdentity.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeServerSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBladeIdentity")]
-    public class SetIntersightComputeBladeIdentity:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerSetting", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeServerSetting:GetCmdletBase
 	{
-		public SetIntersightComputeBladeIdentity()
+		public GetIntersightComputeServerSetting()
 		{
 			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeBladeIdentity();
-            MethodName = "UpdateComputeBladeIdentity";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeBladeIdentity.AdminActionEnum AdminAction {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship PhysicalDeviceRegistration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ComputeBladeIdentity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeBladeIdentity")]
-    public class RemoveIntersightComputeBladeIdentity:RemoveCmdletBase
-	{
-		public RemoveIntersightComputeBladeIdentity()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "DeleteComputeBladeIdentity";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeBladeIdentity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBladeIdentity", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeBladeIdentity:GetCmdletBase
-	{
-		public GetIntersightComputeBladeIdentity()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeBladeIdentityList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeBoard.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBoard")]
-    public class SetIntersightComputeBoard:SetCmdletBase
-	{
-		public SetIntersightComputeBoard()
-		{
-			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeBoard();
-            MethodName = "UpdateComputeBoard";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> OperReason {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputePhysicalSummary.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputePhysicalSummary", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputePhysicalSummary:GetCmdletBase
-	{
-		public GetIntersightComputePhysicalSummary()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputePhysicalSummaryList";
+            MethodName = "GetComputeServerSettingListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -275,7 +250,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ComputeApi(Config);
             ModelObject = new ComputeRackUnitIdentity();
-            MethodName = "UpdateComputeRackUnitIdentity";
+            MethodName = "PatchComputeRackUnitIdentityWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -332,7 +307,89 @@ namespace Intersight.PowerShell
 		public RemoveIntersightComputeRackUnitIdentity()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "DeleteComputeRackUnitIdentity";
+            MethodName = "DeleteComputeRackUnitIdentityWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeMapping.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeMapping", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeMapping:GetCmdletBase
+	{
+		public GetIntersightComputeMapping()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeMappingListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeBladeIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBladeIdentity")]
+    public class SetIntersightComputeBladeIdentity:SetCmdletBase
+	{
+		public SetIntersightComputeBladeIdentity()
+		{
+			ApiInstance = new ComputeApi(Config);
+            ModelObject = new ComputeBladeIdentity();
+            MethodName = "UpdateComputeBladeIdentityWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeBladeIdentity.AdminActionEnum AdminAction {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship PhysicalDeviceRegistration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ComputeBladeIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeBladeIdentity")]
+    public class RemoveIntersightComputeBladeIdentity:RemoveCmdletBase
+	{
+		public RemoveIntersightComputeBladeIdentity()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "DeleteComputeBladeIdentityWithHttpInfo";
 		}
     }
     /// <summary>
@@ -345,7 +402,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ComputeApi(Config);
             ModelObject = new ComputeRackUnit();
-            MethodName = "UpdateComputeRackUnit";
+            MethodName = "UpdateComputeRackUnitWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -664,28 +721,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeBlade.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeBoard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBlade", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeBlade:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBoard", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeBoard:GetCmdletBase
 	{
-		public GetIntersightComputeBlade()
+		public GetIntersightComputeBoard()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeBladeList";
+            MethodName = "GetComputeBoardListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeServerSetting.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeBoard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeServerSetting")]
-    public class SetIntersightComputeServerSetting:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBoard")]
+    public class SetIntersightComputeBoard:SetCmdletBase
 	{
-		public SetIntersightComputeServerSetting()
+		public SetIntersightComputeBoard()
 		{
 			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeServerSetting();
-            MethodName = "PatchComputeServerSetting";
+            ModelObject = new ComputeBoard();
+            MethodName = "UpdateComputeBoardWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -693,24 +750,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User configured state of the locator LED for the server.\n* `None` - No operation property for locator led.\n* `On` - The Locator Led is turned on.\n* `Off` - The Locator Led is turned off."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeServerSetting.AdminLocatorLedStateEnum AdminLocatorLedState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User configured power state of the server.\n* `Policy` - Power state is set to the default value in the policy.\n* `PowerOn` - Power state of the server is set to On.\n* `PowerOff` - Power state is the server set to Off.\n* `PowerCycle` - Power state the server is reset.\n* `HardReset` - Power state the server is hard reset.\n* `Shutdown` - Operating system on the server is shut down.\n* `Reboot` - Power state of IMC is rebooted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeServerSetting.AdminPowerStateEnum AdminPowerState {
             get;
             set;
         }
@@ -724,56 +763,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The name of the device chosen by user for configuring One-Time Boot device."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string OneTimeBootDevice {
+        public List<string> OperReason {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The Persistent Memory Modules operation properties."</para>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ComputePersistentMemoryOperation PersistentMemoryOperation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The common server configurable properties between a server and a server profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeServerConfig ServerConfig {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Storage Controller operation properties."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeStorageControllerOperation StorageControllerOperation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Storage Physical Drives operation properties."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeStoragePhysicalDriveOperation StoragePhysicalDriveOperation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Storage Virtual Drives operation properties."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeStorageVirtualDriveOperation StorageVirtualDriveOperation {
+        public EquipmentFruRelationship PreviousFru {
             get;
             set;
         }
@@ -788,6 +791,30 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeBlade.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBlade", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeBlade:GetCmdletBase
+	{
+		public GetIntersightComputeBlade()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeBladeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeVmedia.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeVmedia", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeVmedia:GetCmdletBase
+	{
+		public GetIntersightComputeVmedia()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeVmediaListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeBlade.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightComputeBlade")]
@@ -797,7 +824,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ComputeApi(Config);
             ModelObject = new ComputeBlade();
-            MethodName = "UpdateComputeBlade";
+            MethodName = "UpdateComputeBladeWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -1107,27 +1134,27 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeVmedia.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeBladeIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeVmedia", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeVmedia:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBladeIdentity", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeBladeIdentity:GetCmdletBase
 	{
-		public GetIntersightComputeVmedia()
+		public GetIntersightComputeBladeIdentity()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeVmediaList";
+            MethodName = "GetComputeBladeIdentityListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeServerSetting.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputePhysicalSummary.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerSetting", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeServerSetting:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePhysicalSummary", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputePhysicalSummary:GetCmdletBase
 	{
-		public GetIntersightComputeServerSetting()
+		public GetIntersightComputePhysicalSummary()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeServerSettingList";
+            MethodName = "GetComputePhysicalSummaryListWithHttpInfo";
 		}
     }
 }

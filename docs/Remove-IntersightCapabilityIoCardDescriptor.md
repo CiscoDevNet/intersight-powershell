@@ -17,7 +17,7 @@ Remove-IntersightCapabilityIoCardDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityIoCardDescriptor&apos; resource.
+Delete a &amp;apos;CapabilityIoCardDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

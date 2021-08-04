@@ -17,7 +17,7 @@ Remove-IntersightFabricSwitchProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricSwitchProfile&apos; resource.
+Delete a &amp;apos;FabricSwitchProfile&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
+
 [Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
 [New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
-
-[Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
 

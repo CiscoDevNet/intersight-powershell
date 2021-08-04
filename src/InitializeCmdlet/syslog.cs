@@ -75,6 +75,73 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SyslogLocalFileLoggingClient.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSyslogLocalFileLoggingClient")]
+    public class InitializeIntersightSyslogLocalFileLoggingClient:PSCmdlet
+	{
+		public InitializeIntersightSyslogLocalFileLoggingClient()
+		{
+            ClassId = SyslogLocalFileLoggingClient.ClassIdEnum.SyslogLocalFileLoggingClient;
+            MinSeverity = SyslogLocalFileLoggingClient.MinSeverityEnum.Warning;
+            ObjectType = SyslogLocalFileLoggingClient.ObjectTypeEnum.SyslogLocalFileLoggingClient;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SyslogLocalFileLoggingClient.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Lowest level of messages to be included in the local log.\n* `warning` - Use logging level warning for logs classified as warning.\n* `emergency` - Use logging level emergency for logs classified as emergency.\n* `alert` - Use logging level alert for logs classified as alert.\n* `critical` - Use logging level critical for logs classified as critical.\n* `error` - Use logging level error for logs classified as error.\n* `notice` - Use logging level notice for logs classified as notice.\n* `informational` - Use logging level informational for logs classified as informational.\n* `debug` - Use logging level debug for logs classified as debug."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SyslogLocalFileLoggingClient.MinSeverityEnum MinSeverity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SyslogLocalFileLoggingClient.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SyslogLocalFileLoggingClient initObject = new Intersight.Model.SyslogLocalFileLoggingClient();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MinSeverity"))
+            {
+                initObject.MinSeverity = this.MinSeverity;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SyslogRemoteLoggingClient.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSyslogRemoteLoggingClient")]
@@ -310,73 +377,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Protocol = this.Protocol;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SyslogLocalFileLoggingClient.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSyslogLocalFileLoggingClient")]
-    public class InitializeIntersightSyslogLocalFileLoggingClient:PSCmdlet
-	{
-		public InitializeIntersightSyslogLocalFileLoggingClient()
-		{
-            ClassId = SyslogLocalFileLoggingClient.ClassIdEnum.SyslogLocalFileLoggingClient;
-            MinSeverity = SyslogLocalFileLoggingClient.MinSeverityEnum.Warning;
-            ObjectType = SyslogLocalFileLoggingClient.ObjectTypeEnum.SyslogLocalFileLoggingClient;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SyslogLocalFileLoggingClient.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Lowest level of messages to be included in the local log.\n* `warning` - Use logging level warning for logs classified as warning.\n* `emergency` - Use logging level emergency for logs classified as emergency.\n* `alert` - Use logging level alert for logs classified as alert.\n* `critical` - Use logging level critical for logs classified as critical.\n* `error` - Use logging level error for logs classified as error.\n* `notice` - Use logging level notice for logs classified as notice.\n* `informational` - Use logging level informational for logs classified as informational.\n* `debug` - Use logging level debug for logs classified as debug."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SyslogLocalFileLoggingClient.MinSeverityEnum MinSeverity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SyslogLocalFileLoggingClient.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SyslogLocalFileLoggingClient initObject = new Intersight.Model.SyslogLocalFileLoggingClient();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MinSeverity"))
-            {
-                initObject.MinSeverity = this.MinSeverity;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

@@ -19,7 +19,7 @@ Set-IntersightFirmwareMswitchDescriptor [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
+Update a &apos;FirmwareMswitchDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> Set-IntersightFirmwareMswitchDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
-
 [Get-IntersightFirmwareMswitchDescriptor](./Get-IntersightFirmwareMswitchDescriptor.md)
 
 [New-IntersightFirmwareMswitchDescriptor](./New-IntersightFirmwareMswitchDescriptor.md)
+
+[Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)

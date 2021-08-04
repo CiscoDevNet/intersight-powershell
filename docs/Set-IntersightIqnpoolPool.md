@@ -19,7 +19,7 @@ Set-IntersightIqnpoolPool [-AdditionalProperties< Dictionary<string,object>>][-A
 ```
 
 ## DESCRIPTION
-Update a &apos;IqnpoolPool&apos; resource.
+Update a &amp;apos;IqnpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -192,10 +192,10 @@ PS C:\> Set-IntersightIqnpoolPool
 
 ## RELATED LINKS
 
-[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
+[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
 
 [New-IntersightIqnpoolPool](./New-IntersightIqnpoolPool.md)
 
-[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
+[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)

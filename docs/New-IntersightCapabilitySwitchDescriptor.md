@@ -19,7 +19,7 @@ New-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilitySwitchDescriptor&amp;apos; resource.
+Create a &apos;CapabilitySwitchDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -205,8 +205,8 @@ PS C:\> New-IntersightCapabilitySwitchDescriptor
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)
+
 [Set-IntersightCapabilitySwitchDescriptor](./Set-IntersightCapabilitySwitchDescriptor.md)
 
 [Remove-IntersightCapabilitySwitchDescriptor](./Remove-IntersightCapabilitySwitchDescriptor.md)
-
-[Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)

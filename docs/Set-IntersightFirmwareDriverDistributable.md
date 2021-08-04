@@ -19,7 +19,7 @@ Set-IntersightFirmwareDriverDistributable [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareDriverDistributable&amp;apos; resource.
+Update a &apos;FirmwareDriverDistributable&apos; resource.
 
 ## PARAMETERS
 
@@ -485,11 +485,11 @@ PS C:\> Set-IntersightFirmwareDriverDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareDriverDistributable](./Remove-IntersightFirmwareDriverDistributable.md)
-
 [New-IntersightFirmwareDriverDistributable](./New-IntersightFirmwareDriverDistributable.md)
 
 [Get-IntersightFirmwareDriverDistributable](./Get-IntersightFirmwareDriverDistributable.md)
+
+[Remove-IntersightFirmwareDriverDistributable](./Remove-IntersightFirmwareDriverDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

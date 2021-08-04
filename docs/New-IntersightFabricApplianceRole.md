@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &amp;apos;Auto&amp;apos;.\n* `Cl91` - Forward error correction option &amp;apos;cl91&amp;apos;.\n* `Cl74` - Forward error correction option &amp;apos;cl74&amp;apos;.
 
 ```yaml
 Type: FabricApplianceRole.FecEnum
@@ -294,6 +294,6 @@ PS C:\> New-IntersightFabricApplianceRole
 
 [Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 
-[Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
-
 [Set-IntersightFabricApplianceRole](./Set-IntersightFabricApplianceRole.md)
+
+[Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)

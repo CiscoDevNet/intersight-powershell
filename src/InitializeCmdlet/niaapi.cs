@@ -8,295 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiVersionRegexPlatform.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiVersionRegexPlatform")]
-    public class InitializeIntersightNiaapiVersionRegexPlatform:PSCmdlet
-	{
-		public InitializeIntersightNiaapiVersionRegexPlatform()
-		{
-            ClassId = NiaapiVersionRegexPlatform.ClassIdEnum.NiaapiVersionRegexPlatform;
-            ObjectType = NiaapiVersionRegexPlatform.ObjectTypeEnum.NiaapiVersionRegexPlatform;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"All long live version Regex pattern."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Anyllregex {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiVersionRegexPlatform.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Current long live version Regex pattern."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.NiaapiSoftwareRegex Currentlltrain {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Latest short live version Regex pattern."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.NiaapiSoftwareRegex Latestsltrain {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiVersionRegexPlatform.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.NiaapiSoftwareRegex> Sltrain {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Upcoming short live version Regex pattern."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.NiaapiSoftwareRegex Upcominglltrain {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.NiaapiVersionRegexPlatform initObject = new Intersight.Model.NiaapiVersionRegexPlatform();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Anyllregex"))
-            {
-                initObject.Anyllregex = this.Anyllregex;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Currentlltrain"))
-            {
-                initObject.Currentlltrain = this.Currentlltrain;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Latestsltrain"))
-            {
-                initObject.Latestsltrain = this.Latestsltrain;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sltrain"))
-            {
-                initObject.Sltrain = this.Sltrain;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Upcominglltrain"))
-            {
-                initObject.Upcominglltrain = this.Upcominglltrain;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiSoftwareRegex.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiSoftwareRegex")]
-    public class InitializeIntersightNiaapiSoftwareRegex:PSCmdlet
-	{
-		public InitializeIntersightNiaapiSoftwareRegex()
-		{
-            ClassId = NiaapiSoftwareRegex.ClassIdEnum.NiaapiSoftwareRegex;
-            ObjectType = NiaapiSoftwareRegex.ObjectTypeEnum.NiaapiSoftwareRegex;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiSoftwareRegex.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiSoftwareRegex.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Regular Expression pattern used to reconginze the version string."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Regex {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Software release. A set of Software releases seperated by comma which can be recongized by according Regex pattern."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SoftwareVersion {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.NiaapiSoftwareRegex initObject = new Intersight.Model.NiaapiSoftwareRegex();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Regex"))
-            {
-                initObject.Regex = this.Regex;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareVersion"))
-            {
-                initObject.SoftwareVersion = this.SoftwareVersion;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiRevisionInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiRevisionInfo")]
-    public class InitializeIntersightNiaapiRevisionInfo:PSCmdlet
-	{
-		public InitializeIntersightNiaapiRevisionInfo()
-		{
-            ClassId = NiaapiRevisionInfo.ClassIdEnum.NiaapiRevisionInfo;
-            ObjectType = NiaapiRevisionInfo.ObjectTypeEnum.NiaapiRevisionInfo;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiRevisionInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The date the revision is made."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime DatePublished {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiRevisionInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The changes made in this revision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RevisionComment {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Revision No. of this revision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RevisionNo {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.NiaapiRevisionInfo initObject = new Intersight.Model.NiaapiRevisionInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DatePublished"))
-            {
-                initObject.DatePublished = this.DatePublished;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionComment"))
-            {
-                initObject.RevisionComment = this.RevisionComment;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionNo"))
-            {
-                initObject.RevisionNo = this.RevisionNo;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiaapiNewReleaseDetail.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiaapiNewReleaseDetail")]
@@ -541,6 +252,295 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiSoftwareRegex.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiSoftwareRegex")]
+    public class InitializeIntersightNiaapiSoftwareRegex:PSCmdlet
+	{
+		public InitializeIntersightNiaapiSoftwareRegex()
+		{
+            ClassId = NiaapiSoftwareRegex.ClassIdEnum.NiaapiSoftwareRegex;
+            ObjectType = NiaapiSoftwareRegex.ObjectTypeEnum.NiaapiSoftwareRegex;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiSoftwareRegex.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiSoftwareRegex.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Regular Expression pattern used to reconginze the version string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Regex {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Software release. A set of Software releases seperated by comma which can be recongized by according Regex pattern."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SoftwareVersion {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.NiaapiSoftwareRegex initObject = new Intersight.Model.NiaapiSoftwareRegex();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Regex"))
+            {
+                initObject.Regex = this.Regex;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareVersion"))
+            {
+                initObject.SoftwareVersion = this.SoftwareVersion;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiRevisionInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiRevisionInfo")]
+    public class InitializeIntersightNiaapiRevisionInfo:PSCmdlet
+	{
+		public InitializeIntersightNiaapiRevisionInfo()
+		{
+            ClassId = NiaapiRevisionInfo.ClassIdEnum.NiaapiRevisionInfo;
+            ObjectType = NiaapiRevisionInfo.ObjectTypeEnum.NiaapiRevisionInfo;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiRevisionInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The date the revision is made."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public DateTime DatePublished {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiRevisionInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The changes made in this revision."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string RevisionComment {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Revision No. of this revision."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string RevisionNo {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.NiaapiRevisionInfo initObject = new Intersight.Model.NiaapiRevisionInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DatePublished"))
+            {
+                initObject.DatePublished = this.DatePublished;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionComment"))
+            {
+                initObject.RevisionComment = this.RevisionComment;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionNo"))
+            {
+                initObject.RevisionNo = this.RevisionNo;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiVersionRegexPlatform.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiVersionRegexPlatform")]
+    public class InitializeIntersightNiaapiVersionRegexPlatform:PSCmdlet
+	{
+		public InitializeIntersightNiaapiVersionRegexPlatform()
+		{
+            ClassId = NiaapiVersionRegexPlatform.ClassIdEnum.NiaapiVersionRegexPlatform;
+            ObjectType = NiaapiVersionRegexPlatform.ObjectTypeEnum.NiaapiVersionRegexPlatform;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"All long live version Regex pattern."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Anyllregex {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiVersionRegexPlatform.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Current long live version Regex pattern."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NiaapiSoftwareRegex Currentlltrain {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Latest short live version Regex pattern."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NiaapiSoftwareRegex Latestsltrain {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiVersionRegexPlatform.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.NiaapiSoftwareRegex> Sltrain {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Upcoming short live version Regex pattern."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NiaapiSoftwareRegex Upcominglltrain {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.NiaapiVersionRegexPlatform initObject = new Intersight.Model.NiaapiVersionRegexPlatform();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Anyllregex"))
+            {
+                initObject.Anyllregex = this.Anyllregex;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Currentlltrain"))
+            {
+                initObject.Currentlltrain = this.Currentlltrain;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Latestsltrain"))
+            {
+                initObject.Latestsltrain = this.Latestsltrain;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sltrain"))
+            {
+                initObject.Sltrain = this.Sltrain;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Upcominglltrain"))
+            {
+                initObject.Upcominglltrain = this.Upcominglltrain;
+            }
             WriteObject(initObject);
         }
 

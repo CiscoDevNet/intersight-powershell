@@ -680,11 +680,11 @@ PS C:\> New-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
+
 [Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
 
 [Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
-
-[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

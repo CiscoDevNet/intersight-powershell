@@ -180,10 +180,10 @@ PS C:\> New-IntersightAdapterConfigPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
+
 [Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
 
 [Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
-
-[Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
 
 [Initialize-IntersightAdapterAdapterConfig](./Initialize-IntersightAdapterAdapterConfig.md)

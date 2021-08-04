@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get SearchSearchItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightSearchSearchItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightSearchSearchItem:GetCmdletBase
+	{
+		public GetIntersightSearchSearchItem()
+		{
+			ApiInstance = new SearchApi(Config);
+            MethodName = "GetSearchSearchItemListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SearchSuggestItem.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightSearchSuggestItem")]
@@ -17,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SearchApi(Config);
             ModelObject = new SearchSuggestItem();
-            MethodName = "CreateSearchSuggestItem";
+            MethodName = "CreateSearchSuggestItemWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -30,18 +42,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get SearchSearchItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSearchSearchItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightSearchSearchItem:GetCmdletBase
-	{
-		public GetIntersightSearchSearchItem()
-		{
-			ApiInstance = new SearchApi(Config);
-            MethodName = "GetSearchSearchItemList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SearchTagItem.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightSearchTagItem", DefaultParameterSetName = "CmdletParam")]
@@ -50,7 +50,7 @@ namespace Intersight.PowerShell
 		public GetIntersightSearchTagItem()
 		{
 			ApiInstance = new SearchApi(Config);
-            MethodName = "GetSearchTagItemList";
+            MethodName = "GetSearchTagItemListWithHttpInfo";
 		}
     }
 }

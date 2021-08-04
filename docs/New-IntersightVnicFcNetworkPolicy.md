@@ -19,7 +19,7 @@ New-IntersightVnicFcNetworkPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicFcNetworkPolicy&apos; resource.
+Create a &amp;apos;VnicFcNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

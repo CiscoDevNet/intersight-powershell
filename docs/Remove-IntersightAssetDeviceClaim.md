@@ -17,7 +17,7 @@ Remove-IntersightAssetDeviceClaim -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;AssetDeviceClaim&apos; resource.
+Delete a &amp;apos;AssetDeviceClaim&amp;apos; resource.
 
 ## EXAMPLES
 

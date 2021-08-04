@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightOsValidInstallTarget [-AdditionalProperties< Dictionary<string,object>>][-M2Jbod< List<OsPhysicalDiskResponse>>][-M2VirtualDrives< List<OsVirtualDriveResponse>>][-Moid< string>][-MraidJbod< List<OsPhysicalDiskResponse>>][-MraidVirtualDrives< List<OsVirtualDriveResponse>>][-Servers< List<ComputePhysicalRelationship>>][-Tags< List<MoTag>>]
+New-IntersightOsValidInstallTarget [-AdditionalProperties< Dictionary<string,object>>][-InstallTargets< List<OsInstallTargetResponse>>][-M2Jbod< List<OsPhysicalDiskResponse>>][-M2VirtualDrives< List<OsVirtualDriveResponse>>][-Moid< string>][-MraidJbod< List<OsPhysicalDiskResponse>>][-MraidVirtualDrives< List<OsVirtualDriveResponse>>][-Servers< List<ComputePhysicalRelationship>>][-Src< string>][-Tags< List<MoTag>>]
 
 ```
 
@@ -28,6 +28,23 @@ Create a &apos;OsValidInstallTarget&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InstallTargets
+
+
+Note :- Use Initialize-IntersightOsInstallTargetResponse to create the object of complex type OsInstallTargetResponse
+
+```yaml
+Type: System.Collections.Generic.List`1[OsInstallTargetResponse]
 Parameter Sets: (All)
 Aliases:
 
@@ -139,6 +156,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Src
+Flag to denote the source of the request.\nIf the call is from Orchestration UI, only the flat list of Install targets can be sent as response.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -182,6 +214,8 @@ PS C:\> New-IntersightOsValidInstallTarget
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightOsInstallTargetResponse](./Initialize-IntersightOsInstallTargetResponse.md)
 
 [Initialize-IntersightOsPhysicalDiskResponse](./Initialize-IntersightOsPhysicalDiskResponse.md)
 

@@ -365,11 +365,11 @@ PS C:\> New-IntersightTamAdvisoryDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
+
 [Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
 [Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
-
-[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

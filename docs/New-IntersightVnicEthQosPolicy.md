@@ -19,7 +19,7 @@ New-IntersightVnicEthQosPolicy [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicEthQosPolicy&amp;apos; resource.
+Create a &apos;VnicEthQosPolicy&apos; resource.
 
 ## PARAMETERS
 

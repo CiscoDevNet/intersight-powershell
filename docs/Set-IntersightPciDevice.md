@@ -19,7 +19,7 @@ Set-IntersightPciDevice [-AdditionalProperties< Dictionary<string,object>>][-Fir
 ```
 
 ## DESCRIPTION
-Update a &apos;PciDevice&apos; resource.
+Update a &amp;apos;PciDevice&amp;apos; resource.
 
 ## PARAMETERS
 

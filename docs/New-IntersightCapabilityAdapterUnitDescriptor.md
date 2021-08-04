@@ -19,7 +19,7 @@ New-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
+Create a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -295,8 +295,8 @@ PS C:\> New-IntersightCapabilityAdapterUnitDescriptor
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
+
 [Set-IntersightCapabilityAdapterUnitDescriptor](./Set-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
-
-[Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)

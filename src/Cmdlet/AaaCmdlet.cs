@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightAaaAuditRecord()
 		{
 			ApiInstance = new AaaApi(Config);
-            MethodName = "GetAaaAuditRecordList";
+            MethodName = "GetAaaAuditRecordListWithHttpInfo";
 		}
     }
 }

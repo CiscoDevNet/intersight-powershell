@@ -19,7 +19,7 @@ New-IntersightFabricPortOperation [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricPortOperation&apos; resource.
+Create a &amp;apos;FabricPortOperation&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ PS C:\> New-IntersightFabricPortOperation
 
 ## RELATED LINKS
 
-[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
-
 [Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
 
 [Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
+
+[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)

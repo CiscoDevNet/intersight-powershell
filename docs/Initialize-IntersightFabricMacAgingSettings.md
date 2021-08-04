@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -MacAgingTime
-Define the MAC address aging time in seconds. This field is valid when the \&amp;quot;Custom\&amp;quot; MAC address aging option is selected.
+Define the MAC address aging time in seconds. This field is valid when the \&quot;Custom\&quot; MAC address aging option is selected.
 
 ```yaml
 Type: int
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: FabricMacAgingSettings.ObjectTypeEnum

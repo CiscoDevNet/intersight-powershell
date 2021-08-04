@@ -19,7 +19,7 @@ Set-IntersightBootVmediaDevice [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Update a &apos;BootVmediaDevice&apos; resource.
+Update a &amp;apos;BootVmediaDevice&amp;apos; resource.
 
 ## PARAMETERS
 

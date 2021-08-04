@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareStorageControllerDescriptor](./Set-IntersightFirmwareStorageControllerDescriptor.md)
-
 [Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)
 
 [New-IntersightFirmwareStorageControllerDescriptor](./New-IntersightFirmwareStorageControllerDescriptor.md)
+
+[Set-IntersightFirmwareStorageControllerDescriptor](./Set-IntersightFirmwareStorageControllerDescriptor.md)
 

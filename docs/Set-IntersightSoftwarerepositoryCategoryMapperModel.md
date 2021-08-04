@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryCategoryMapperModel [-AdditionalProperties< Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryCategoryMapperModel&apos; resource.
+Update a &amp;apos;SoftwarerepositoryCategoryMapperModel&amp;apos; resource.
 
 ## PARAMETERS
 

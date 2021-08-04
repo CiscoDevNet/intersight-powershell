@@ -19,7 +19,7 @@ Set-IntersightEquipmentLocatorLed [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentLocatorLed&amp;apos; resource.
+Update a &apos;EquipmentLocatorLed&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightCapabilityServerSchemaDescriptor [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityServerSchemaDescriptor&apos; resource.
+Update a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

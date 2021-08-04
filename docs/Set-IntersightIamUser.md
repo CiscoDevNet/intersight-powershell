@@ -19,7 +19,7 @@ Set-IntersightIamUser [-AdditionalProperties< Dictionary<string,object>>][-Email
 ```
 
 ## DESCRIPTION
-Update a &apos;IamUser&apos; resource.
+Update a &amp;apos;IamUser&amp;apos; resource.
 
 ## PARAMETERS
 

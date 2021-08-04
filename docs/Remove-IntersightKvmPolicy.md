@@ -17,7 +17,7 @@ Remove-IntersightKvmPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KvmPolicy&amp;apos; resource.
+Delete a &apos;KvmPolicy&apos; resource.
 
 ## EXAMPLES
 

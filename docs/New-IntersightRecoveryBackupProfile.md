@@ -19,7 +19,7 @@ New-IntersightRecoveryBackupProfile [-Action< string>][-AdditionalProperties< Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
+Create a &apos;RecoveryBackupProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -297,9 +297,9 @@ PS C:\> New-IntersightRecoveryBackupProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
-
 [Set-IntersightRecoveryBackupProfile](./Set-IntersightRecoveryBackupProfile.md)
+
+[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
 
 [Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
 

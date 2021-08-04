@@ -19,7 +19,7 @@ New-IntersightFabricPortMode [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricPortMode&amp;apos; resource.
+Create a &apos;FabricPortMode&apos; resource.
 
 ## PARAMETERS
 
@@ -175,8 +175,8 @@ PS C:\> New-IntersightFabricPortMode
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)
+[Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)
 
 [Set-IntersightFabricPortMode](./Set-IntersightFabricPortMode.md)
 
-[Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)
+[Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)

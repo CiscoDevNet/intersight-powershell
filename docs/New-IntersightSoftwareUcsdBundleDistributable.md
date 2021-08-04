@@ -19,7 +19,7 @@ New-IntersightSoftwareUcsdBundleDistributable [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Create a &apos;SoftwareUcsdBundleDistributable&apos; resource.
+Create a &amp;apos;SoftwareUcsdBundleDistributable&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -425,11 +425,11 @@ PS C:\> New-IntersightSoftwareUcsdBundleDistributable
 
 ## RELATED LINKS
 
+[Get-IntersightSoftwareUcsdBundleDistributable](./Get-IntersightSoftwareUcsdBundleDistributable.md)
+
 [Set-IntersightSoftwareUcsdBundleDistributable](./Set-IntersightSoftwareUcsdBundleDistributable.md)
 
 [Remove-IntersightSoftwareUcsdBundleDistributable](./Remove-IntersightSoftwareUcsdBundleDistributable.md)
-
-[Get-IntersightSoftwareUcsdBundleDistributable](./Get-IntersightSoftwareUcsdBundleDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

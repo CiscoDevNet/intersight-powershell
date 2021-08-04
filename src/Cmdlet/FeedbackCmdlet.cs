@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new FeedbackApi(Config);
             ModelObject = new FeedbackFeedbackPost();
-            MethodName = "CreateFeedbackFeedbackPost";
+            MethodName = "CreateFeedbackFeedbackPostWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

@@ -235,6 +235,6 @@ PS C:\> New-IntersightApplianceRestore
 
 ## RELATED LINKS
 
-[Remove-IntersightApplianceRestore](./Remove-IntersightApplianceRestore.md)
-
 [Get-IntersightApplianceRestore](./Get-IntersightApplianceRestore.md)
+
+[Remove-IntersightApplianceRestore](./Remove-IntersightApplianceRestore.md)

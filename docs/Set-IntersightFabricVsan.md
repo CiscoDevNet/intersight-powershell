@@ -190,8 +190,8 @@ PS C:\> Set-IntersightFabricVsan
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
+[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
 
 [New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
 
-[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
+[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)

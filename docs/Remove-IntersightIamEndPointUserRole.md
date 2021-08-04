@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightIamEndPointUserRole](./Set-IntersightIamEndPointUserRole.md)
+
 [Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)
 
 [New-IntersightIamEndPointUserRole](./New-IntersightIamEndPointUserRole.md)
-
-[Set-IntersightIamEndPointUserRole](./Set-IntersightIamEndPointUserRole.md)
 

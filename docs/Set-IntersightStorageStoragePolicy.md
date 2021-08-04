@@ -19,7 +19,7 @@ Set-IntersightStorageStoragePolicy [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageStoragePolicy&amp;apos; resource.
+Update a &apos;StorageStoragePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -245,11 +245,11 @@ PS C:\> Set-IntersightStorageStoragePolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
-
 [Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
 
 [New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
+
+[Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
 
 [Initialize-IntersightStorageLocalDisk](./Initialize-IntersightStorageLocalDisk.md)
 

@@ -263,11 +263,11 @@ PS C:\> Set-IntersightFabricSwitchProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
+
 [Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
 [New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
-
-[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
 
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 

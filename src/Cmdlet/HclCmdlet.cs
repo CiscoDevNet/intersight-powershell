@@ -8,155 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HclCompatibilityStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHclCompatibilityStatus")]
-    public class NewIntersightHclCompatibilityStatus:NewCmdletBase
-	{
-		public NewIntersightHclCompatibilityStatus()
-		{
-			ApiInstance = new HclApi(Config);
-            ModelObject = new HclCompatibilityStatus();
-            MethodName = "CreateHclCompatibilityStatus";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclHardwareCompatibilityProfile> ProfileList {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of the request to be served.\n* `FillSupportedVersions` - Responds with the supported firmware and driver versions. The API doesn't expect firmware and driver versions to be passed in the request and ignores if passed.\n* `CheckCompatibility` - Checks the compatibility for the given firmware and driver versions. This request type expects the firmware and driver versions to filled and the service validates the values and responds back with the error codes.\n* `GetRecommendedDrivers` - Responds with the supported drivers. The API expects firmware version to be filled. The API populates driver ISO url for the given server model. Today the link is same for all servers managed by UCSM whereas it depends on the model for Standalone servers."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HclCompatibilityStatus.RequestTypeEnum RequestType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HclOperatingSystemVendor.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystemVendor", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHclOperatingSystemVendor:GetCmdletBase
-	{
-		public GetIntersightHclOperatingSystemVendor()
-		{
-			ApiInstance = new HclApi(Config);
-            MethodName = "GetHclOperatingSystemVendorList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HclSupportedDriverName.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHclSupportedDriverName")]
-    public class NewIntersightHclSupportedDriverName:NewCmdletBase
-	{
-		public NewIntersightHclSupportedDriverName()
-		{
-			ApiInstance = new HclApi(Config);
-            ModelObject = new HclSupportedDriverName();
-            MethodName = "CreateHclSupportedDriverName";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Vendor distributing the Operating System."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OsVendor {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Version of the Operating System."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OsVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclProduct> ProductList {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HclOperatingSystem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHclOperatingSystem:GetCmdletBase
-	{
-		public GetIntersightHclOperatingSystem()
-		{
-			ApiInstance = new HclApi(Config);
-            MethodName = "GetHclOperatingSystemList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclDriverImage.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightHclDriverImage", DefaultParameterSetName = "CmdletParam")]
@@ -165,19 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightHclDriverImage()
 		{
 			ApiInstance = new HclApi(Config);
-            MethodName = "GetHclDriverImageList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HclExemptedCatalog.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclExemptedCatalog", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHclExemptedCatalog:GetCmdletBase
-	{
-		public GetIntersightHclExemptedCatalog()
-		{
-			ApiInstance = new HclApi(Config);
-            MethodName = "GetHclExemptedCatalogList";
+            MethodName = "GetHclDriverImageListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -190,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new HclApi(Config);
             ModelObject = new HclHyperflexSoftwareCompatibilityInfo();
-            MethodName = "UpdateHclHyperflexSoftwareCompatibilityInfo";
+            MethodName = "UpdateHclHyperflexSoftwareCompatibilityInfoWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -283,7 +122,77 @@ namespace Intersight.PowerShell
 		public RemoveIntersightHclHyperflexSoftwareCompatibilityInfo()
 		{
 			ApiInstance = new HclApi(Config);
-            MethodName = "DeleteHclHyperflexSoftwareCompatibilityInfo";
+            MethodName = "DeleteHclHyperflexSoftwareCompatibilityInfoWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HclCompatibilityStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHclCompatibilityStatus")]
+    public class NewIntersightHclCompatibilityStatus:NewCmdletBase
+	{
+		public NewIntersightHclCompatibilityStatus()
+		{
+			ApiInstance = new HclApi(Config);
+            ModelObject = new HclCompatibilityStatus();
+            MethodName = "CreateHclCompatibilityStatusWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HclHardwareCompatibilityProfile> ProfileList {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the request to be served.\n* `FillSupportedVersions` - Responds with the supported firmware and driver versions. The API doesn't expect firmware and driver versions to be passed in the request and ignores if passed.\n* `CheckCompatibility` - Checks the compatibility for the given firmware and driver versions. This request type expects the firmware and driver versions to filled and the service validates the values and responds back with the error codes.\n* `GetRecommendedDrivers` - Responds with the supported drivers. The API expects firmware version to be filled. The API populates driver ISO url for the given server model. Today the link is same for all servers managed by UCSM whereas it depends on the model for Standalone servers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HclCompatibilityStatus.RequestTypeEnum RequestType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HclHyperflexSoftwareCompatibilityInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHclHyperflexSoftwareCompatibilityInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHclHyperflexSoftwareCompatibilityInfo:GetCmdletBase
+	{
+		public GetIntersightHclHyperflexSoftwareCompatibilityInfo()
+		{
+			ApiInstance = new HclApi(Config);
+            MethodName = "GetHclHyperflexSoftwareCompatibilityInfoListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -296,7 +205,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new HclApi(Config);
             ModelObject = new HclHyperflexSoftwareCompatibilityInfo();
-            MethodName = "CreateHclHyperflexSoftwareCompatibilityInfo";
+            MethodName = "CreateHclHyperflexSoftwareCompatibilityInfoWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -381,15 +290,106 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HclHyperflexSoftwareCompatibilityInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HclExemptedCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclHyperflexSoftwareCompatibilityInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHclHyperflexSoftwareCompatibilityInfo:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHclExemptedCatalog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHclExemptedCatalog:GetCmdletBase
 	{
-		public GetIntersightHclHyperflexSoftwareCompatibilityInfo()
+		public GetIntersightHclExemptedCatalog()
 		{
 			ApiInstance = new HclApi(Config);
-            MethodName = "GetHclHyperflexSoftwareCompatibilityInfoList";
+            MethodName = "GetHclExemptedCatalogListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HclOperatingSystemVendor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystemVendor", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHclOperatingSystemVendor:GetCmdletBase
+	{
+		public GetIntersightHclOperatingSystemVendor()
+		{
+			ApiInstance = new HclApi(Config);
+            MethodName = "GetHclOperatingSystemVendorListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HclOperatingSystem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHclOperatingSystem:GetCmdletBase
+	{
+		public GetIntersightHclOperatingSystem()
+		{
+			ApiInstance = new HclApi(Config);
+            MethodName = "GetHclOperatingSystemListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HclSupportedDriverName.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHclSupportedDriverName")]
+    public class NewIntersightHclSupportedDriverName:NewCmdletBase
+	{
+		public NewIntersightHclSupportedDriverName()
+		{
+			ApiInstance = new HclApi(Config);
+            ModelObject = new HclSupportedDriverName();
+            MethodName = "CreateHclSupportedDriverNameWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Vendor distributing the Operating System."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OsVendor {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of the Operating System."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OsVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HclProduct> ProductList {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
     }
 }

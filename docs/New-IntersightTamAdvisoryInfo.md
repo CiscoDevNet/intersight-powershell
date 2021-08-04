@@ -130,8 +130,8 @@ PS C:\> New-IntersightTamAdvisoryInfo
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)
+
 [Set-IntersightTamAdvisoryInfo](./Set-IntersightTamAdvisoryInfo.md)
 
 [Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)
-
-[Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)

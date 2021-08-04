@@ -19,7 +19,7 @@ New-IntersightFirmwareMswitchDescriptor [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareMswitchDescriptor&apos; resource.
+Create a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareMswitchDescriptor
 
 ## RELATED LINKS
 
+[Get-IntersightFirmwareMswitchDescriptor](./Get-IntersightFirmwareMswitchDescriptor.md)
+
 [Set-IntersightFirmwareMswitchDescriptor](./Set-IntersightFirmwareMswitchDescriptor.md)
 
 [Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
-
-[Get-IntersightFirmwareMswitchDescriptor](./Get-IntersightFirmwareMswitchDescriptor.md)

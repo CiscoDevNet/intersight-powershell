@@ -19,7 +19,7 @@ New-IntersightKubernetesVersion [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesVersion&apos; resource.
+Create a &amp;apos;KubernetesVersion&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -43,10 +43,22 @@ namespace Intersight.PowerShell
 					}
 				}
 
+				if (Json.IsPresent)
+				{
+					WriteRequestJson();
+				}
+
 				var methodInfo = GetMethodInfo(MethodName);
 				Object[] argList = new[] { ModelObject,default(string),default(string) };
 				var result = methodInfo.Invoke(ApiInstance, argList);
-				WriteObject(result);
+				if (Json.IsPresent)
+				{
+					WriteResponseJson(result);
+				}
+				else
+				{
+					WriteResponseData(result);
+				}
 			}
 			catch(Exception ex)
 			{

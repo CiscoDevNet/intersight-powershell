@@ -19,7 +19,7 @@ New-IntersightVnicEthIf [-AdditionalProperties< Dictionary<string,object>>][-Cdn
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicEthIf&apos; resource.
+Create a &amp;apos;VnicEthIf&amp;apos; resource.
 
 ## PARAMETERS
 

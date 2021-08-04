@@ -271,8 +271,8 @@ PS C:\> New-IntersightHyperflexNodeProfile
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)
-
 [Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
+
+[Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)
 
 [Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)

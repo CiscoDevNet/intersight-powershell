@@ -19,7 +19,7 @@ Set-IntersightBootDeviceBootMode [-AdditionalProperties< Dictionary<string,objec
 ```
 
 ## DESCRIPTION
-Update a &apos;BootDeviceBootMode&apos; resource.
+Update a &amp;apos;BootDeviceBootMode&amp;apos; resource.
 
 ## PARAMETERS
 

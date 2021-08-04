@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasWorkflowSteps.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseKeysInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasWorkflowSteps")]
-    public class InitializeIntersightIaasWorkflowSteps:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseKeysInfo")]
+    public class InitializeIntersightIaasLicenseKeysInfo:PSCmdlet
 	{
-		public InitializeIntersightIaasWorkflowSteps()
+		public InitializeIntersightIaasLicenseKeysInfo()
 		{
-            ClassId = IaasWorkflowSteps.ClassIdEnum.IaasWorkflowSteps;
-            ObjectType = IaasWorkflowSteps.ObjectTypeEnum.IaasWorkflowSteps;
+            ClassId = IaasLicenseKeysInfo.ClassIdEnum.IaasLicenseKeysInfo;
+            ObjectType = IaasLicenseKeysInfo.ObjectTypeEnum.IaasLicenseKeysInfo;
             
 		}
         // <summary>
@@ -33,7 +33,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasWorkflowSteps.ClassIdEnum ClassId {
+        public IaasLicenseKeysInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -42,14 +42,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasWorkflowSteps.ObjectTypeEnum ObjectType {
+        public IaasLicenseKeysInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IaasWorkflowSteps initObject = new Intersight.Model.IaasWorkflowSteps();
+             Intersight.Model.IaasLicenseKeysInfo initObject = new Intersight.Model.IaasLicenseKeysInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -114,15 +114,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseKeysInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasWorkflowSteps.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseKeysInfo")]
-    public class InitializeIntersightIaasLicenseKeysInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasWorkflowSteps")]
+    public class InitializeIntersightIaasWorkflowSteps:PSCmdlet
 	{
-		public InitializeIntersightIaasLicenseKeysInfo()
+		public InitializeIntersightIaasWorkflowSteps()
 		{
-            ClassId = IaasLicenseKeysInfo.ClassIdEnum.IaasLicenseKeysInfo;
-            ObjectType = IaasLicenseKeysInfo.ObjectTypeEnum.IaasLicenseKeysInfo;
+            ClassId = IaasWorkflowSteps.ClassIdEnum.IaasWorkflowSteps;
+            ObjectType = IaasWorkflowSteps.ObjectTypeEnum.IaasWorkflowSteps;
             
 		}
         // <summary>
@@ -139,7 +139,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasLicenseKeysInfo.ClassIdEnum ClassId {
+        public IaasWorkflowSteps.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -148,14 +148,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasLicenseKeysInfo.ObjectTypeEnum ObjectType {
+        public IaasWorkflowSteps.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IaasLicenseKeysInfo initObject = new Intersight.Model.IaasLicenseKeysInfo();
+             Intersight.Model.IaasWorkflowSteps initObject = new Intersight.Model.IaasWorkflowSteps();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

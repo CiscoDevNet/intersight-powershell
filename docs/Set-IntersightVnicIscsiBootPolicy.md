@@ -19,7 +19,7 @@ Set-IntersightVnicIscsiBootPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicIscsiBootPolicy&apos; resource.
+Update a &amp;apos;VnicIscsiBootPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -328,11 +328,11 @@ PS C:\> Set-IntersightVnicIscsiBootPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
+[New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
 
 [Get-IntersightVnicIscsiBootPolicy](./Get-IntersightVnicIscsiBootPolicy.md)
 
-[New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
+[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
 
 [Initialize-IntersightVnicIscsiAuthProfile](./Initialize-IntersightVnicIscsiAuthProfile.md)
 

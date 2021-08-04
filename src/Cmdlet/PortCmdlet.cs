@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PortSubGroup.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PortMacBinding.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortSubGroup", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPortSubGroup:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPortMacBinding", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPortMacBinding:GetCmdletBase
 	{
-		public GetIntersightPortSubGroup()
+		public GetIntersightPortMacBinding()
 		{
 			ApiInstance = new PortApi(Config);
-            MethodName = "GetPortSubGroupList";
+            MethodName = "GetPortMacBindingListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new PortApi(Config);
             ModelObject = new PortGroup();
-            MethodName = "UpdatePortGroup";
+            MethodName = "UpdatePortGroupWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -69,7 +69,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new PortApi(Config);
             ModelObject = new PortSubGroup();
-            MethodName = "UpdatePortSubGroup";
+            MethodName = "UpdatePortSubGroupWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -100,15 +100,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PortGroup.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PortSubGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortGroup", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPortGroup:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPortSubGroup", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPortSubGroup:GetCmdletBase
 	{
-		public GetIntersightPortGroup()
+		public GetIntersightPortSubGroup()
 		{
 			ApiInstance = new PortApi(Config);
-            MethodName = "GetPortGroupList";
+            MethodName = "GetPortSubGroupListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -121,7 +121,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new PortApi(Config);
             ModelObject = new PortMacBinding();
-            MethodName = "PatchPortMacBinding";
+            MethodName = "PatchPortMacBindingWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -151,11 +151,101 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Chassis/Rack Model that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ChassisModel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chassis/Rack Serial that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ChassisSerial {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chassis/Rack Vendor that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ChassisVendor {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Device ID value that is advertised and available as a part of LLDP TLV."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string DeviceMac {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IOM/SIOC/Adapter Mode that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ModuleMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IOM/SIOC/Adapter Model that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ModuleModel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Uplink port identifier of the VIC that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ModulePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IOM/SIOC/Adapter Serial that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ModuleSerial {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IOM/SIOC/Adapter Side that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ModuleSide {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IOM/SIOC/Adapter Slot that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ModuleSlot {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IOM/SIOC/Adapter Vendor that is associated with the Switch/FEX interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ModuleVendor {
             get;
             set;
         }
@@ -224,15 +314,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PortMacBinding.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PortGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortMacBinding", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPortMacBinding:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPortGroup", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPortGroup:GetCmdletBase
 	{
-		public GetIntersightPortMacBinding()
+		public GetIntersightPortGroup()
 		{
 			ApiInstance = new PortApi(Config);
-            MethodName = "GetPortMacBindingList";
+            MethodName = "GetPortGroupListWithHttpInfo";
 		}
     }
 }

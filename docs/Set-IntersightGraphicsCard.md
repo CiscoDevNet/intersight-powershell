@@ -19,7 +19,7 @@ Set-IntersightGraphicsCard [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &apos;GraphicsCard&apos; resource.
+Update a &amp;apos;GraphicsCard&amp;apos; resource.
 
 ## PARAMETERS
 

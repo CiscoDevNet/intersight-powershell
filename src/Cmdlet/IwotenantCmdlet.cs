@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightIwotenantTenantStatus()
 		{
 			ApiInstance = new IwotenantApi(Config);
-            MethodName = "GetIwotenantTenantStatusList";
+            MethodName = "GetIwotenantTenantStatusListWithHttpInfo";
 		}
     }
 }

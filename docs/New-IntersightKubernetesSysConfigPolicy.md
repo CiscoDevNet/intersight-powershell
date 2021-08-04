@@ -19,7 +19,7 @@ New-IntersightKubernetesSysConfigPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesSysConfigPolicy&apos; resource.
+Create a &amp;apos;KubernetesSysConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,8 +223,8 @@ PS C:\> New-IntersightKubernetesSysConfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesSysConfigPolicy](./Get-IntersightKubernetesSysConfigPolicy.md)
+[Set-IntersightKubernetesSysConfigPolicy](./Set-IntersightKubernetesSysConfigPolicy.md)
 
 [Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
 
-[Set-IntersightKubernetesSysConfigPolicy](./Set-IntersightKubernetesSysConfigPolicy.md)
+[Get-IntersightKubernetesSysConfigPolicy](./Get-IntersightKubernetesSysConfigPolicy.md)

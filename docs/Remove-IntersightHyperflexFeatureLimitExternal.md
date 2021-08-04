@@ -17,7 +17,7 @@ Remove-IntersightHyperflexFeatureLimitExternal -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexFeatureLimitExternal&apos; resource.
+Delete a &amp;apos;HyperflexFeatureLimitExternal&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
+
 [Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
 
 [New-IntersightHyperflexFeatureLimitExternal](./New-IntersightHyperflexFeatureLimitExternal.md)
-
-[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
 

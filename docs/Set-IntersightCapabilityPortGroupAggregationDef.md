@@ -19,7 +19,7 @@ Set-IntersightCapabilityPortGroupAggregationDef [-AdditionalProperties< Dictiona
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityPortGroupAggregationDef&apos; resource.
+Update a &amp;apos;CapabilityPortGroupAggregationDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -157,8 +157,8 @@ PS C:\> Set-IntersightCapabilityPortGroupAggregationDef
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityPortGroupAggregationDef](./Remove-IntersightCapabilityPortGroupAggregationDef.md)
+
 [Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
 
 [New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
-
-[Remove-IntersightCapabilityPortGroupAggregationDef](./Remove-IntersightCapabilityPortGroupAggregationDef.md)

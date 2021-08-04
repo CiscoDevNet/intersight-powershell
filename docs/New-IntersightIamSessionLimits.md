@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamSessionLimits [-AdditionalProperties< Dictionary<string,object>>][-IdleTimeOut< long>][-Moid< string>][-PerUserLimit< long>][-Permission< IamPermissionRelationship>][-SessionTimeOut< long>][-Tags< List<MoTag>>]
+New-IntersightIamSessionLimits [-AdditionalProperties< Dictionary<string,object>>][-IdleTimeOut< long>][-MaximumLimit< long>][-Moid< string>][-PerUserLimit< long>][-Permission< IamPermissionRelationship>][-SessionTimeOut< long>][-Tags< List<MoTag>>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamSessionLimits&amp;apos; resource.
+Create a &apos;IamSessionLimits&apos; resource.
 
 ## PARAMETERS
 
@@ -40,6 +40,21 @@ Accept wildcard characters: False
 
 ### -IdleTimeOut
 The idle timeout interval for the web session in seconds. When a session is not refreshed for this duration, the session is marked as idle and removed. The minimum value is 300 seconds and the maximum value is 18000 seconds (5 hours). The system default value is 1800 seconds.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaximumLimit
+The maximum number of sessions allowed in an account or permission. The default value is 128.
 
 ```yaml
 Type: long
@@ -160,8 +175,8 @@ PS C:\> New-IntersightIamSessionLimits
 
 ## RELATED LINKS
 
-[Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
+[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
 
 [Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
 
-[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
+[Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)

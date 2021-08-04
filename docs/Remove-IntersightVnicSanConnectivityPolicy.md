@@ -17,7 +17,7 @@ Remove-IntersightVnicSanConnectivityPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VnicSanConnectivityPolicy&amp;apos; resource.
+Delete a &apos;VnicSanConnectivityPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
-
 [Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
 
 [New-IntersightVnicSanConnectivityPolicy](./New-IntersightVnicSanConnectivityPolicy.md)
+
+[Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
 

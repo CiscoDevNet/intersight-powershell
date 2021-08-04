@@ -19,7 +19,7 @@ Set-IntersightIamQualifier [-AdditionalProperties< Dictionary<string,object>>][[
 ```
 
 ## DESCRIPTION
-Update a &apos;IamQualifier&apos; resource.
+Update a &amp;apos;IamQualifier&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -130,8 +130,8 @@ PS C:\> Set-IntersightIamQualifier
 
 ## RELATED LINKS
 
-[New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
-
 [Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
+
+[New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
 
 [Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)

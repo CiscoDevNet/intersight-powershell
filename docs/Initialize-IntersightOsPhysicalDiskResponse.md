@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsPhysicalDiskResponse [-AdditionalProperties< Dictionary<string,object>>][-Bootable< string>][-ClassId< OsPhysicalDiskResponse.ClassIdEnum>][-Name< string>][-ObjectType< OsPhysicalDiskResponse.ObjectTypeEnum>][-SerialNumber< string>][-StorageControllerSlotId< string>]
+Initialize-IntersightOsPhysicalDiskResponse [-AdditionalProperties< Dictionary<string,object>>][-Bootable< string>][-ClassId< OsPhysicalDiskResponse.ClassIdEnum>][-Name< string>][-ObjectType< OsPhysicalDiskResponse.ObjectTypeEnum>][-SerialNumber< string>][-SourceMo< Model.MoMoRef>][-StorageControllerSlotId< string>]
 
 ```
 
@@ -114,6 +114,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SourceMo
+Mo Reference of the LUN in CmRf format.
+
+Note :- Use Initialize-IntersightMoMoRef to create the object of complex type MoMoRef
+
+```yaml
+Type: Model.MoMoRef
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StorageControllerSlotId
 The Storage Controller associated to the physical disk.
 
@@ -155,3 +172,5 @@ PS C:\> Initialize-IntersightOsPhysicalDiskResponse
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)

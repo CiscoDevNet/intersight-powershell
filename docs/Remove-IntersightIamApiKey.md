@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
+[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
 
 [New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
 
-[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
+[Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
 

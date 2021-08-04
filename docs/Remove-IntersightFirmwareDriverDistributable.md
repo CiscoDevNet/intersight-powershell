@@ -17,7 +17,7 @@ Remove-IntersightFirmwareDriverDistributable -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareDriverDistributable&apos; resource.
+Delete a &amp;apos;FirmwareDriverDistributable&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareDriverDistributable](./Set-IntersightFirmwareDriverDistributable.md)
-
 [New-IntersightFirmwareDriverDistributable](./New-IntersightFirmwareDriverDistributable.md)
 
 [Get-IntersightFirmwareDriverDistributable](./Get-IntersightFirmwareDriverDistributable.md)
+
+[Set-IntersightFirmwareDriverDistributable](./Set-IntersightFirmwareDriverDistributable.md)
 

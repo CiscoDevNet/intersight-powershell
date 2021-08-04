@@ -19,7 +19,7 @@ Set-IntersightStorageFlexFlashControllerProps [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageFlexFlashControllerProps&amp;apos; resource.
+Update a &apos;StorageFlexFlashControllerProps&apos; resource.
 
 ## PARAMETERS
 

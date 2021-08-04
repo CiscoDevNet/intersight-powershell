@@ -19,7 +19,7 @@ Set-IntersightPciLink [-AdditionalProperties< Dictionary<string,object>>][[-Moid
 ```
 
 ## DESCRIPTION
-Update a &apos;PciLink&apos; resource.
+Update a &amp;apos;PciLink&amp;apos; resource.
 
 ## PARAMETERS
 

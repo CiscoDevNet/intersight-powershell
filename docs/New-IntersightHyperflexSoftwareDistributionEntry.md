@@ -19,7 +19,7 @@ New-IntersightHyperflexSoftwareDistributionEntry [-AdditionalProperties< Diction
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexSoftwareDistributionEntry&amp;apos; resource.
+Create a &apos;HyperflexSoftwareDistributionEntry&apos; resource.
 
 ## PARAMETERS
 
@@ -148,8 +148,8 @@ PS C:\> New-IntersightHyperflexSoftwareDistributionEntry
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexSoftwareDistributionEntry](./Get-IntersightHyperflexSoftwareDistributionEntry.md)
-
 [Set-IntersightHyperflexSoftwareDistributionEntry](./Set-IntersightHyperflexSoftwareDistributionEntry.md)
 
 [Remove-IntersightHyperflexSoftwareDistributionEntry](./Remove-IntersightHyperflexSoftwareDistributionEntry.md)
+
+[Get-IntersightHyperflexSoftwareDistributionEntry](./Get-IntersightHyperflexSoftwareDistributionEntry.md)

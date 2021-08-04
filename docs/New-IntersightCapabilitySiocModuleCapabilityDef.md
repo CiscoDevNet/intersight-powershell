@@ -19,7 +19,7 @@ New-IntersightCapabilitySiocModuleCapabilityDef [-AdditionalProperties< Dictiona
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilitySiocModuleCapabilityDef&amp;apos; resource.
+Create a &apos;CapabilitySiocModuleCapabilityDef&apos; resource.
 
 ## PARAMETERS
 
@@ -127,8 +127,8 @@ PS C:\> New-IntersightCapabilitySiocModuleCapabilityDef
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilitySiocModuleCapabilityDef](./Set-IntersightCapabilitySiocModuleCapabilityDef.md)
+[Get-IntersightCapabilitySiocModuleCapabilityDef](./Get-IntersightCapabilitySiocModuleCapabilityDef.md)
 
 [Remove-IntersightCapabilitySiocModuleCapabilityDef](./Remove-IntersightCapabilitySiocModuleCapabilityDef.md)
 
-[Get-IntersightCapabilitySiocModuleCapabilityDef](./Get-IntersightCapabilitySiocModuleCapabilityDef.md)
+[Set-IntersightCapabilitySiocModuleCapabilityDef](./Set-IntersightCapabilitySiocModuleCapabilityDef.md)

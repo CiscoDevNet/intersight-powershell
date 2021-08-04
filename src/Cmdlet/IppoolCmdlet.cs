@@ -8,39 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IppoolShadowBlock.</para>
+    /// <para type="synopsis">This is the cmdlet to Get IppoolPoolMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIppoolShadowBlock", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIppoolShadowBlock:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightIppoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIppoolPoolMember:GetCmdletBase
 	{
-		public GetIntersightIppoolShadowBlock()
+		public GetIntersightIppoolPoolMember()
 		{
 			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolShadowBlockList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IppoolShadowPool.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIppoolShadowPool", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIppoolShadowPool:GetCmdletBase
-	{
-		public GetIntersightIppoolShadowPool()
-		{
-			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolShadowPoolList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove IppoolIpLease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIppoolIpLease")]
-    public class RemoveIntersightIppoolIpLease:RemoveCmdletBase
-	{
-		public RemoveIntersightIppoolIpLease()
-		{
-			ApiInstance = new IppoolApi(Config);
-            MethodName = "DeleteIppoolIpLease";
+            MethodName = "GetIppoolPoolMemberListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -52,43 +28,7 @@ namespace Intersight.PowerShell
 		public GetIntersightIppoolUniverse()
 		{
 			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolUniverseList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IppoolIpLease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIppoolIpLease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIppoolIpLease:GetCmdletBase
-	{
-		public GetIntersightIppoolIpLease()
-		{
-			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolIpLeaseList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IppoolPoolMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIppoolPoolMember", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIppoolPoolMember:GetCmdletBase
-	{
-		public GetIntersightIppoolPoolMember()
-		{
-			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolPoolMemberList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove IppoolPool.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIppoolPool")]
-    public class RemoveIntersightIppoolPool:RemoveCmdletBase
-	{
-		public RemoveIntersightIppoolPool()
-		{
-			ApiInstance = new IppoolApi(Config);
-            MethodName = "DeleteIppoolPool";
+            MethodName = "GetIppoolUniverseListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -101,7 +41,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new IppoolApi(Config);
             ModelObject = new IppoolPool();
-            MethodName = "UpdateIppoolPool";
+            MethodName = "UpdateIppoolPoolWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -204,6 +144,30 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove IppoolPool.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightIppoolPool")]
+    public class RemoveIntersightIppoolPool:RemoveCmdletBase
+	{
+		public RemoveIntersightIppoolPool()
+		{
+			ApiInstance = new IppoolApi(Config);
+            MethodName = "DeleteIppoolPoolWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IppoolBlockLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIppoolBlockLease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIppoolBlockLease:GetCmdletBase
+	{
+		public GetIntersightIppoolBlockLease()
+		{
+			ApiInstance = new IppoolApi(Config);
+            MethodName = "GetIppoolBlockLeaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IppoolPool.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightIppoolPool", DefaultParameterSetName = "CmdletParam")]
@@ -212,7 +176,7 @@ namespace Intersight.PowerShell
 		public GetIntersightIppoolPool()
 		{
 			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolPoolList";
+            MethodName = "GetIppoolPoolListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -225,7 +189,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new IppoolApi(Config);
             ModelObject = new IppoolPool();
-            MethodName = "CreateIppoolPool";
+            MethodName = "CreateIppoolPoolWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -328,15 +292,51 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IppoolBlockLease.</para>
+    /// <para type="synopsis">This is the cmdlet to Get IppoolShadowPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIppoolBlockLease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIppoolBlockLease:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightIppoolShadowPool", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIppoolShadowPool:GetCmdletBase
 	{
-		public GetIntersightIppoolBlockLease()
+		public GetIntersightIppoolShadowPool()
 		{
 			ApiInstance = new IppoolApi(Config);
-            MethodName = "GetIppoolBlockLeaseList";
+            MethodName = "GetIppoolShadowPoolListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove IppoolIpLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightIppoolIpLease")]
+    public class RemoveIntersightIppoolIpLease:RemoveCmdletBase
+	{
+		public RemoveIntersightIppoolIpLease()
+		{
+			ApiInstance = new IppoolApi(Config);
+            MethodName = "DeleteIppoolIpLeaseWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IppoolIpLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIppoolIpLease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIppoolIpLease:GetCmdletBase
+	{
+		public GetIntersightIppoolIpLease()
+		{
+			ApiInstance = new IppoolApi(Config);
+            MethodName = "GetIppoolIpLeaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IppoolShadowBlock.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIppoolShadowBlock", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIppoolShadowBlock:GetCmdletBase
+	{
+		public GetIntersightIppoolShadowBlock()
+		{
+			ApiInstance = new IppoolApi(Config);
+            MethodName = "GetIppoolShadowBlockListWithHttpInfo";
 		}
     }
 }

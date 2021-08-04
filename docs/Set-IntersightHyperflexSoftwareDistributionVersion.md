@@ -19,7 +19,7 @@ Set-IntersightHyperflexSoftwareDistributionVersion [-AdditionalProperties< Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexSoftwareDistributionVersion&apos; resource.
+Update a &amp;apos;HyperflexSoftwareDistributionVersion&amp;apos; resource.
 
 ## PARAMETERS
 

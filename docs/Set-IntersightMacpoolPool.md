@@ -19,7 +19,7 @@ Set-IntersightMacpoolPool [-AdditionalProperties< Dictionary<string,object>>][-A
 ```
 
 ## DESCRIPTION
-Update a &apos;MacpoolPool&apos; resource.
+Update a &amp;apos;MacpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

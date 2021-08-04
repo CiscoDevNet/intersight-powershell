@@ -8,16 +8,28 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootSanDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Get BootSanDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootSanDevice")]
-    public class SetIntersightBootSanDevice:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightBootSanDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootSanDevice:GetCmdletBase
 	{
-		public SetIntersightBootSanDevice()
+		public GetIntersightBootSanDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            ModelObject = new BootSanDevice();
-            MethodName = "UpdateBootSanDevice";
+            MethodName = "GetBootSanDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootIscsiDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootIscsiDevice")]
+    public class SetIntersightBootIscsiDevice:SetCmdletBase
+	{
+		public SetIntersightBootIscsiDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootIscsiDevice();
+            MethodName = "UpdateBootIscsiDeviceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -102,30 +114,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootVmediaDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootVmediaDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootVmediaDevice:GetCmdletBase
-	{
-		public GetIntersightBootVmediaDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootVmediaDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootPchStorageDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootPchStorageDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootPchStorageDevice:GetCmdletBase
-	{
-		public GetIntersightBootPchStorageDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootPchStorageDeviceList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootDeviceBootSecurity.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootSecurity", DefaultParameterSetName = "CmdletParam")]
@@ -134,8 +122,114 @@ namespace Intersight.PowerShell
 		public GetIntersightBootDeviceBootSecurity()
 		{
 			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootDeviceBootSecurityList";
+            MethodName = "GetBootDeviceBootSecurityListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootUefiShellDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootUefiShellDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootUefiShellDevice:GetCmdletBase
+	{
+		public GetIntersightBootUefiShellDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootUefiShellDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootSanDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootSanDevice")]
+    public class SetIntersightBootSanDevice:SetCmdletBase
+	{
+		public SetIntersightBootSanDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootSanDevice();
+            MethodName = "UpdateBootSanDeviceWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship ComputePhysical {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Order {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootPrecisionPolicy.</para>
@@ -146,7 +240,7 @@ namespace Intersight.PowerShell
 		public GetIntersightBootPrecisionPolicy()
 		{
 			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootPrecisionPolicyList";
+            MethodName = "GetBootPrecisionPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -159,7 +253,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new BootApi(Config);
             ModelObject = new BootPrecisionPolicy();
-            MethodName = "CreateBootPrecisionPolicy";
+            MethodName = "CreateBootPrecisionPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -253,16 +347,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootVmediaDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Get BootHddDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootVmediaDevice")]
-    public class SetIntersightBootVmediaDevice:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightBootHddDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootHddDevice:GetCmdletBase
 	{
-		public SetIntersightBootVmediaDevice()
+		public GetIntersightBootHddDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            ModelObject = new BootVmediaDevice();
-            MethodName = "UpdateBootVmediaDevice";
+            MethodName = "GetBootHddDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootUefiShellDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootUefiShellDevice")]
+    public class SetIntersightBootUefiShellDevice:SetCmdletBase
+	{
+		public SetIntersightBootUefiShellDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootUefiShellDevice();
+            MethodName = "UpdateBootUefiShellDeviceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -347,159 +453,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootSdDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Set BootUsbDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootSdDevice")]
-    public class SetIntersightBootSdDevice:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightBootUsbDevice")]
+    public class SetIntersightBootUsbDevice:SetCmdletBase
 	{
-		public SetIntersightBootSdDevice()
+		public SetIntersightBootUsbDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            ModelObject = new BootSdDevice();
-            MethodName = "UpdateBootSdDevice";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship ComputePhysical {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Order {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string State {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootDeviceBootSecurity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootDeviceBootSecurity")]
-    public class SetIntersightBootDeviceBootSecurity:SetCmdletBase
-	{
-		public SetIntersightBootDeviceBootSecurity()
-		{
-			ApiInstance = new BootApi(Config);
-            ModelObject = new BootDeviceBootSecurity();
-            MethodName = "UpdateBootDeviceBootSecurity";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship ComputePhysical {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootPxeDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootPxeDevice")]
-    public class SetIntersightBootPxeDevice:SetCmdletBase
-	{
-		public SetIntersightBootPxeDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            ModelObject = new BootPxeDevice();
-            MethodName = "PatchBootPxeDevice";
+            ModelObject = new BootUsbDevice();
+            MethodName = "PatchBootUsbDeviceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -593,7 +556,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new BootApi(Config);
             ModelObject = new BootPrecisionPolicy();
-            MethodName = "UpdateBootPrecisionPolicy";
+            MethodName = "UpdateBootPrecisionPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -695,20 +658,20 @@ namespace Intersight.PowerShell
 		public RemoveIntersightBootPrecisionPolicy()
 		{
 			ApiInstance = new BootApi(Config);
-            MethodName = "DeleteBootPrecisionPolicy";
+            MethodName = "DeleteBootPrecisionPolicyWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootPchStorageDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Set BootNvmeDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootPchStorageDevice")]
-    public class SetIntersightBootPchStorageDevice:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightBootNvmeDevice")]
+    public class SetIntersightBootNvmeDevice:SetCmdletBase
 	{
-		public SetIntersightBootPchStorageDevice()
+		public SetIntersightBootNvmeDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            ModelObject = new BootPchStorageDevice();
-            MethodName = "UpdateBootPchStorageDevice";
+            ModelObject = new BootNvmeDevice();
+            MethodName = "UpdateBootNvmeDeviceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -791,278 +754,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootUefiShellDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootUefiShellDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootUefiShellDevice:GetCmdletBase
-	{
-		public GetIntersightBootUefiShellDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootUefiShellDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootHddDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootHddDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootHddDevice:GetCmdletBase
-	{
-		public GetIntersightBootHddDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootHddDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootUsbDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootUsbDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootUsbDevice:GetCmdletBase
-	{
-		public GetIntersightBootUsbDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootUsbDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootCddDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootCddDevice")]
-    public class SetIntersightBootCddDevice:SetCmdletBase
-	{
-		public SetIntersightBootCddDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            ModelObject = new BootCddDevice();
-            MethodName = "UpdateBootCddDevice";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship ComputePhysical {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Order {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string State {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootPxeDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootPxeDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootPxeDevice:GetCmdletBase
-	{
-		public GetIntersightBootPxeDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootPxeDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootSanDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootSanDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootSanDevice:GetCmdletBase
-	{
-		public GetIntersightBootSanDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootSanDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootNvmeDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootNvmeDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootNvmeDevice:GetCmdletBase
-	{
-		public GetIntersightBootNvmeDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootNvmeDeviceList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootHddDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootHddDevice")]
-    public class SetIntersightBootHddDevice:SetCmdletBase
-	{
-		public SetIntersightBootHddDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            ModelObject = new BootHddDevice();
-            MethodName = "UpdateBootHddDevice";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship ComputePhysical {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Order {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string State {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootDeviceBootMode.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootMode", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootDeviceBootMode:GetCmdletBase
-	{
-		public GetIntersightBootDeviceBootMode()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootDeviceBootModeList";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootDeviceBootMode.</para>
@@ -1074,7 +765,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new BootApi(Config);
             ModelObject = new BootDeviceBootMode();
-            MethodName = "UpdateBootDeviceBootMode";
+            MethodName = "UpdateBootDeviceBootModeWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -1114,16 +805,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootUefiShellDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Set BootSdDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootUefiShellDevice")]
-    public class SetIntersightBootUefiShellDevice:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightBootSdDevice")]
+    public class SetIntersightBootSdDevice:SetCmdletBase
 	{
-		public SetIntersightBootUefiShellDevice()
+		public SetIntersightBootSdDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            ModelObject = new BootUefiShellDevice();
-            MethodName = "UpdateBootUefiShellDevice";
+            ModelObject = new BootSdDevice();
+            MethodName = "PatchBootSdDeviceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -1206,206 +897,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootUsbDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootUsbDevice")]
-    public class SetIntersightBootUsbDevice:SetCmdletBase
-	{
-		public SetIntersightBootUsbDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            ModelObject = new BootUsbDevice();
-            MethodName = "UpdateBootUsbDevice";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship ComputePhysical {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Order {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string State {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootIscsiDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootIscsiDevice")]
-    public class SetIntersightBootIscsiDevice:SetCmdletBase
-	{
-		public SetIntersightBootIscsiDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            ModelObject = new BootIscsiDevice();
-            MethodName = "UpdateBootIscsiDevice";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship ComputePhysical {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Order {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string State {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BootCddDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootCddDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBootCddDevice:GetCmdletBase
-	{
-		public GetIntersightBootCddDevice()
-		{
-			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootCddDeviceList";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootIscsiDevice.</para>
@@ -1416,20 +907,163 @@ namespace Intersight.PowerShell
 		public GetIntersightBootIscsiDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootIscsiDeviceList";
+            MethodName = "GetBootIscsiDeviceListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BootNvmeDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Set BootDeviceBootSecurity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootNvmeDevice")]
-    public class SetIntersightBootNvmeDevice:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightBootDeviceBootSecurity")]
+    public class SetIntersightBootDeviceBootSecurity:SetCmdletBase
 	{
-		public SetIntersightBootNvmeDevice()
+		public SetIntersightBootDeviceBootSecurity()
 		{
 			ApiInstance = new BootApi(Config);
-            ModelObject = new BootNvmeDevice();
-            MethodName = "UpdateBootNvmeDevice";
+            ModelObject = new BootDeviceBootSecurity();
+            MethodName = "UpdateBootDeviceBootSecurityWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship ComputePhysical {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootPxeDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootPxeDevice")]
+    public class SetIntersightBootPxeDevice:SetCmdletBase
+	{
+		public SetIntersightBootPxeDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootPxeDevice();
+            MethodName = "UpdateBootPxeDeviceWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship ComputePhysical {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Order {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootHddDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootHddDevice")]
+    public class SetIntersightBootHddDevice:SetCmdletBase
+	{
+		public SetIntersightBootHddDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootHddDevice();
+            MethodName = "UpdateBootHddDeviceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -1522,7 +1156,373 @@ namespace Intersight.PowerShell
 		public GetIntersightBootSdDevice()
 		{
 			ApiInstance = new BootApi(Config);
-            MethodName = "GetBootSdDeviceList";
+            MethodName = "GetBootSdDeviceListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootCddDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootCddDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootCddDevice:GetCmdletBase
+	{
+		public GetIntersightBootCddDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootCddDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootPxeDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootPxeDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootPxeDevice:GetCmdletBase
+	{
+		public GetIntersightBootPxeDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootPxeDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootUsbDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootUsbDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootUsbDevice:GetCmdletBase
+	{
+		public GetIntersightBootUsbDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootUsbDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootNvmeDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootNvmeDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootNvmeDevice:GetCmdletBase
+	{
+		public GetIntersightBootNvmeDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootNvmeDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootPchStorageDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootPchStorageDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootPchStorageDevice:GetCmdletBase
+	{
+		public GetIntersightBootPchStorageDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootPchStorageDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootDeviceBootMode.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootMode", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootDeviceBootMode:GetCmdletBase
+	{
+		public GetIntersightBootDeviceBootMode()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootDeviceBootModeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BootVmediaDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBootVmediaDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBootVmediaDevice:GetCmdletBase
+	{
+		public GetIntersightBootVmediaDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            MethodName = "GetBootVmediaDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootVmediaDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootVmediaDevice")]
+    public class SetIntersightBootVmediaDevice:SetCmdletBase
+	{
+		public SetIntersightBootVmediaDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootVmediaDevice();
+            MethodName = "UpdateBootVmediaDeviceWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship ComputePhysical {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Order {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootPchStorageDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootPchStorageDevice")]
+    public class SetIntersightBootPchStorageDevice:SetCmdletBase
+	{
+		public SetIntersightBootPchStorageDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootPchStorageDevice();
+            MethodName = "UpdateBootPchStorageDeviceWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship ComputePhysical {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Order {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BootCddDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBootCddDevice")]
+    public class SetIntersightBootCddDevice:SetCmdletBase
+	{
+		public SetIntersightBootCddDevice()
+		{
+			ApiInstance = new BootApi(Config);
+            ModelObject = new BootCddDevice();
+            MethodName = "UpdateBootCddDeviceWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship ComputePhysical {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The order of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Order {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the boot device configured in the boot policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
     }
 }

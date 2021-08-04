@@ -25,7 +25,7 @@ Get-IntersightFabricVsan [-Count <Boolean>] [-InlineCount <String>] [-Select <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FabricVsan&apos; resource.,
+Read a &amp;apos;FabricVsan&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
+[New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
 
 [Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
 
-[New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
+[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
 

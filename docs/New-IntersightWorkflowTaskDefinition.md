@@ -293,11 +293,11 @@ PS C:\> New-IntersightWorkflowTaskDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightWorkflowTaskDefinition](./Get-IntersightWorkflowTaskDefinition.md)
+
 [Set-IntersightWorkflowTaskDefinition](./Set-IntersightWorkflowTaskDefinition.md)
 
 [Remove-IntersightWorkflowTaskDefinition](./Remove-IntersightWorkflowTaskDefinition.md)
-
-[Get-IntersightWorkflowTaskDefinition](./Get-IntersightWorkflowTaskDefinition.md)
 
 [Initialize-IntersightWorkflowProperties](./Initialize-IntersightWorkflowProperties.md)
 

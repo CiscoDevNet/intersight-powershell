@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ResourceSourceToPermissionResources.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcePerTypeCombinedSelector.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightResourceSourceToPermissionResources")]
-    public class InitializeIntersightResourceSourceToPermissionResources:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcePerTypeCombinedSelector")]
+    public class InitializeIntersightResourcePerTypeCombinedSelector:PSCmdlet
 	{
-		public InitializeIntersightResourceSourceToPermissionResources()
+		public InitializeIntersightResourcePerTypeCombinedSelector()
 		{
-            ClassId = ResourceSourceToPermissionResources.ClassIdEnum.ResourceSourceToPermissionResources;
-            ObjectType = ResourceSourceToPermissionResources.ObjectTypeEnum.ResourceSourceToPermissionResources;
+            ClassId = ResourcePerTypeCombinedSelector.ClassIdEnum.ResourcePerTypeCombinedSelector;
+            ObjectType = ResourcePerTypeCombinedSelector.ObjectTypeEnum.ResourcePerTypeCombinedSelector;
             
 		}
         // <summary>
@@ -33,7 +33,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ResourceSourceToPermissionResources.ClassIdEnum ClassId {
+        public ResourcePerTypeCombinedSelector.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -42,14 +42,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ResourceSourceToPermissionResources.ObjectTypeEnum ObjectType {
+        public ResourcePerTypeCombinedSelector.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ResourceSourceToPermissionResources initObject = new Intersight.Model.ResourceSourceToPermissionResources();
+             Intersight.Model.ResourcePerTypeCombinedSelector initObject = new Intersight.Model.ResourcePerTypeCombinedSelector();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -127,15 +127,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ResourcePerTypeCombinedSelector.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourceSourceToPermissionResources.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightResourcePerTypeCombinedSelector")]
-    public class InitializeIntersightResourcePerTypeCombinedSelector:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightResourceSourceToPermissionResources")]
+    public class InitializeIntersightResourceSourceToPermissionResources:PSCmdlet
 	{
-		public InitializeIntersightResourcePerTypeCombinedSelector()
+		public InitializeIntersightResourceSourceToPermissionResources()
 		{
-            ClassId = ResourcePerTypeCombinedSelector.ClassIdEnum.ResourcePerTypeCombinedSelector;
-            ObjectType = ResourcePerTypeCombinedSelector.ObjectTypeEnum.ResourcePerTypeCombinedSelector;
+            ClassId = ResourceSourceToPermissionResources.ClassIdEnum.ResourceSourceToPermissionResources;
+            ObjectType = ResourceSourceToPermissionResources.ObjectTypeEnum.ResourceSourceToPermissionResources;
             
 		}
         // <summary>
@@ -152,7 +152,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ResourcePerTypeCombinedSelector.ClassIdEnum ClassId {
+        public ResourceSourceToPermissionResources.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -161,14 +161,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ResourcePerTypeCombinedSelector.ObjectTypeEnum ObjectType {
+        public ResourceSourceToPermissionResources.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ResourcePerTypeCombinedSelector initObject = new Intersight.Model.ResourcePerTypeCombinedSelector();
+             Intersight.Model.ResourceSourceToPermissionResources initObject = new Intersight.Model.ResourceSourceToPermissionResources();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

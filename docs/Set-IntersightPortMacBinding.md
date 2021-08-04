@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPortMacBinding [-AdditionalProperties< Dictionary<string,object>>][-AggregatePortId< long>][-ChassisId< long>][-DeviceMac< string>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< List<MoTag>>]
+Set-IntersightPortMacBinding [-AdditionalProperties< Dictionary<string,object>>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< List<MoTag>>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;PortMacBinding&apos; resource.
+Update a &amp;apos;PortMacBinding&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -68,8 +68,158 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ChassisModel
+Chassis/Rack Model that is associated with the Switch/FEX interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisSerial
+Chassis/Rack Serial that is associated with the Switch/FEX interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisVendor
+Chassis/Rack Vendor that is associated with the Switch/FEX interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DeviceMac
 Device ID value that is advertised and available as a part of LLDP TLV.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModuleMode
+IOM/SIOC/Adapter Mode that is associated with the Switch/FEX interface.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModuleModel
+IOM/SIOC/Adapter Model that is associated with the Switch/FEX interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModulePortId
+Uplink port identifier of the VIC that is associated with the Switch/FEX interface.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModuleSerial
+IOM/SIOC/Adapter Serial that is associated with the Switch/FEX interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModuleSide
+IOM/SIOC/Adapter Side that is associated with the Switch/FEX interface.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModuleSlot
+IOM/SIOC/Adapter Slot that is associated with the Switch/FEX interface.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ModuleVendor
+IOM/SIOC/Adapter Vendor that is associated with the Switch/FEX interface.
 
 ```yaml
 Type: string

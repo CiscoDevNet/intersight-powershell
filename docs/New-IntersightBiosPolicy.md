@@ -19,7 +19,7 @@ New-IntersightBiosPolicy [-AcsControlGpu1state< BiosPolicy.AcsControlGpu1stateEn
 ```
 
 ## DESCRIPTION
-Create a &apos;BiosPolicy&apos; resource.
+Create a &amp;apos;BiosPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -5848,8 +5848,8 @@ PS C:\> New-IntersightBiosPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)
+
 [Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
 
 [Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
-
-[Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)

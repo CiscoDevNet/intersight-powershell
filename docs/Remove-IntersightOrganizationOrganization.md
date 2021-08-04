@@ -17,7 +17,7 @@ Remove-IntersightOrganizationOrganization -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;OrganizationOrganization&amp;apos; resource.
+Delete a &apos;OrganizationOrganization&apos; resource.
 
 ## EXAMPLES
 

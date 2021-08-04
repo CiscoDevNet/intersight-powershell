@@ -19,7 +19,7 @@ Set-IntersightFirmwareBiosDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareBiosDescriptor&apos; resource.
+Update a &amp;apos;FirmwareBiosDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

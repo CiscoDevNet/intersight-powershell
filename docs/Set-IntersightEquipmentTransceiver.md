@@ -19,7 +19,7 @@ Set-IntersightEquipmentTransceiver [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentTransceiver&apos; resource.
+Update a &amp;apos;EquipmentTransceiver&amp;apos; resource.
 
 ## PARAMETERS
 

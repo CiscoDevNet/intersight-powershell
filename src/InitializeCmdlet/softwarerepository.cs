@@ -8,123 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryNfsServer.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryNfsServer")]
-    public class InitializeIntersightSoftwarerepositoryNfsServer:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryNfsServer()
-		{
-            ClassId = SoftwarerepositoryNfsServer.ClassIdEnum.SoftwarerepositoryNfsServer;
-            ObjectType = SoftwarerepositoryNfsServer.ObjectTypeEnum.SoftwarerepositoryNfsServer;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryNfsServer.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The location to the image file. The accepted format is IP-or-hostname/folder1/folder2/.../imageFile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FileLocation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryNfsServer.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryNfsServer initObject = new Intersight.Model.SoftwarerepositoryNfsServer();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("FileLocation"))
-            {
-                initObject.FileLocation = this.FileLocation;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryFileServer.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryFileServer")]
-    public class InitializeIntersightSoftwarerepositoryFileServer:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryFileServer()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryFileServer.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryFileServer.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryFileServer initObject = new Intersight.Model.SoftwarerepositoryFileServer();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryLocalMachine.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryLocalMachine")]
@@ -217,66 +100,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryApplianceUpload.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryImportResult.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryApplianceUpload")]
-    public class InitializeIntersightSoftwarerepositoryApplianceUpload:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryImportResult")]
+    public class InitializeIntersightSoftwarerepositoryImportResult:PSCmdlet
 	{
-		public InitializeIntersightSoftwarerepositoryApplianceUpload()
+		public InitializeIntersightSoftwarerepositoryImportResult()
 		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryApplianceUpload.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryApplianceUpload.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryApplianceUpload initObject = new Intersight.Model.SoftwarerepositoryApplianceUpload();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryHttpServer.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryHttpServer")]
-    public class InitializeIntersightSoftwarerepositoryHttpServer:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryHttpServer()
-		{
-            ClassId = SoftwarerepositoryHttpServer.ClassIdEnum.SoftwarerepositoryHttpServer;
-            ObjectType = SoftwarerepositoryHttpServer.ObjectTypeEnum.SoftwarerepositoryHttpServer;
+            ClassId = SoftwarerepositoryImportResult.ClassIdEnum.SoftwarerepositoryImportResult;
+            ObjectType = SoftwarerepositoryImportResult.ObjectTypeEnum.SoftwarerepositoryImportResult;
             
 		}
         // <summary>
@@ -293,16 +125,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SoftwarerepositoryHttpServer.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HTTP/HTTPS link to the image. Accepted formats are HTTP[s]://server-hostname/share/image or HTTP[s]://serverip/share/image."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string LocationLink {
+        public SoftwarerepositoryImportResult.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -311,12 +134,149 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SoftwarerepositoryHttpServer.ObjectTypeEnum ObjectType {
+        public SoftwarerepositoryImportResult.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryImportResult initObject = new Intersight.Model.SoftwarerepositoryImportResult();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryNfsServer.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryNfsServer")]
+    public class InitializeIntersightSoftwarerepositoryNfsServer:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryNfsServer()
+		{
+            ClassId = SoftwarerepositoryNfsServer.ClassIdEnum.SoftwarerepositoryNfsServer;
+            ObjectType = SoftwarerepositoryNfsServer.ObjectTypeEnum.SoftwarerepositoryNfsServer;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Password as configured on the HTTP[S] server for user authentication. It is generally required to authenticate user provided HTTP[S] based software repositories."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryNfsServer.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The location to the image file. The accepted format is IP-or-hostname/folder1/folder2/.../imageFile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FileLocation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryNfsServer.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryNfsServer initObject = new Intersight.Model.SoftwarerepositoryNfsServer();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FileLocation"))
+            {
+                initObject.FileLocation = this.FileLocation;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryCifsServer.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryCifsServer")]
+    public class InitializeIntersightSoftwarerepositoryCifsServer:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryCifsServer()
+		{
+            ClassId = SoftwarerepositoryCifsServer.ClassIdEnum.SoftwarerepositoryCifsServer;
+            ObjectType = SoftwarerepositoryCifsServer.ObjectTypeEnum.SoftwarerepositoryCifsServer;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryCifsServer.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The location to the image file. The accepted format is IP-or-hostname/folder1/folder2/.../imageFile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FileLocation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"For CIFS, leave the field blank or enter one or more comma seperated options from the following. For Example, \" \" , \" soft \" , \" soft , nounix \" .\n* soft.\n* nounix.\n* noserviceino.\n* guest.\n* USERNAME=VALUE.\n* PASSWORD=VALUE.\n* sec=VALUE (VALUE could be None, Ntlm, Ntlmi, Ntlmssp, Ntlmsspi, Ntlmv2, Ntlmv2i)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string MountOption {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryCifsServer.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Password configured on the CIFS server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -325,7 +285,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Username as configured on the HTTP[S] server for user authentication. It is generally required to authenticate user provided HTTP[S] based software repositories."</para>
+        /// <para type="description">"Username configured on the CIFS server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -336,15 +296,19 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.SoftwarerepositoryHttpServer initObject = new Intersight.Model.SoftwarerepositoryHttpServer();
+             Intersight.Model.SoftwarerepositoryCifsServer initObject = new Intersight.Model.SoftwarerepositoryCifsServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LocationLink"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("FileLocation"))
             {
-                initObject.LocationLink = this.LocationLink;
+                initObject.FileLocation = this.FileLocation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MountOption"))
+            {
+                initObject.MountOption = this.MountOption;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
@@ -465,15 +429,66 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryCifsServer.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryFileServer.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryCifsServer")]
-    public class InitializeIntersightSoftwarerepositoryCifsServer:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryFileServer")]
+    public class InitializeIntersightSoftwarerepositoryFileServer:PSCmdlet
 	{
-		public InitializeIntersightSoftwarerepositoryCifsServer()
+		public InitializeIntersightSoftwarerepositoryFileServer()
 		{
-            ClassId = SoftwarerepositoryCifsServer.ClassIdEnum.SoftwarerepositoryCifsServer;
-            ObjectType = SoftwarerepositoryCifsServer.ObjectTypeEnum.SoftwarerepositoryCifsServer;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryFileServer.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryFileServer.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryFileServer initObject = new Intersight.Model.SoftwarerepositoryFileServer();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryHttpServer.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryHttpServer")]
+    public class InitializeIntersightSoftwarerepositoryHttpServer:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryHttpServer()
+		{
+            ClassId = SoftwarerepositoryHttpServer.ClassIdEnum.SoftwarerepositoryHttpServer;
+            ObjectType = SoftwarerepositoryHttpServer.ObjectTypeEnum.SoftwarerepositoryHttpServer;
             
 		}
         // <summary>
@@ -490,25 +505,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SoftwarerepositoryCifsServer.ClassIdEnum ClassId {
+        public SoftwarerepositoryHttpServer.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The location to the image file. The accepted format is IP-or-hostname/folder1/folder2/.../imageFile."</para>
+        /// <para type="description">"HTTP/HTTPS link to the image. Accepted formats are HTTP[s]://server-hostname/share/image or HTTP[s]://serverip/share/image."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string FileLocation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"For CIFS, leave the field blank or enter one or more comma seperated options from the following. For Example, \" \" , \" soft \" , \" soft , nounix \" .\n* soft.\n* nounix.\n* noserviceino.\n* guest.\n* USERNAME=VALUE.\n* PASSWORD=VALUE.\n* sec=VALUE (VALUE could be None, Ntlm, Ntlmi, Ntlmssp, Ntlmsspi, Ntlmv2, Ntlmv2i)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string MountOption {
+        public string LocationLink {
             get;
             set;
         }
@@ -517,12 +523,12 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SoftwarerepositoryCifsServer.ObjectTypeEnum ObjectType {
+        public SoftwarerepositoryHttpServer.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Password configured on the CIFS server."</para>
+        /// <para type="description">"Password as configured on the HTTP[S] server for user authentication. It is generally required to authenticate user provided HTTP[S] based software repositories."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -531,7 +537,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Username configured on the CIFS server."</para>
+        /// <para type="description">"Username as configured on the HTTP[S] server for user authentication. It is generally required to authenticate user provided HTTP[S] based software repositories."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -542,19 +548,15 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.SoftwarerepositoryCifsServer initObject = new Intersight.Model.SoftwarerepositoryCifsServer();
+             Intersight.Model.SoftwarerepositoryHttpServer initObject = new Intersight.Model.SoftwarerepositoryHttpServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("FileLocation"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("LocationLink"))
             {
-                initObject.FileLocation = this.FileLocation;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MountOption"))
-            {
-                initObject.MountOption = this.MountOption;
+                initObject.LocationLink = this.LocationLink;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
@@ -570,15 +572,13 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryImportResult.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryApplianceUpload.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryImportResult")]
-    public class InitializeIntersightSoftwarerepositoryImportResult:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryApplianceUpload")]
+    public class InitializeIntersightSoftwarerepositoryApplianceUpload:PSCmdlet
 	{
-		public InitializeIntersightSoftwarerepositoryImportResult()
+		public InitializeIntersightSoftwarerepositoryApplianceUpload()
 		{
-            ClassId = SoftwarerepositoryImportResult.ClassIdEnum.SoftwarerepositoryImportResult;
-            ObjectType = SoftwarerepositoryImportResult.ObjectTypeEnum.SoftwarerepositoryImportResult;
             
 		}
         // <summary>
@@ -591,27 +591,27 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SoftwarerepositoryImportResult.ClassIdEnum ClassId {
+        public SoftwarerepositoryApplianceUpload.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SoftwarerepositoryImportResult.ObjectTypeEnum ObjectType {
+        public SoftwarerepositoryApplianceUpload.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.SoftwarerepositoryImportResult initObject = new Intersight.Model.SoftwarerepositoryImportResult();
+             Intersight.Model.SoftwarerepositoryApplianceUpload initObject = new Intersight.Model.SoftwarerepositoryApplianceUpload();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

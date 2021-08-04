@@ -25,7 +25,7 @@ Get-IntersightCapabilitySwitchCapability [-Count <Boolean>] [-InlineCount <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CapabilitySwitchCapability&apos; resource.,
+Read a &amp;apos;CapabilitySwitchCapability&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
-
 [Set-IntersightCapabilitySwitchCapability](./Set-IntersightCapabilitySwitchCapability.md)
 
 [Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
+
+[New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
 

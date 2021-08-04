@@ -25,7 +25,7 @@ Get-IntersightIamResourceRoles [-Count <Boolean>] [-InlineCount <String>] [-Sele
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamResourceRoles&amp;apos; resource.,
+Read a &apos;IamResourceRoles&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
-
 [Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)
 
 [Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
+
+[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
 

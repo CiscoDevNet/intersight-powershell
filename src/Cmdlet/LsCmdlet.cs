@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new LsApi(Config);
             ModelObject = new LsServiceProfile();
-            MethodName = "UpdateLsServiceProfile";
+            MethodName = "UpdateLsServiceProfileWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -56,7 +56,7 @@ namespace Intersight.PowerShell
 		public GetIntersightLsServiceProfile()
 		{
 			ApiInstance = new LsApi(Config);
-            MethodName = "GetLsServiceProfileList";
+            MethodName = "GetLsServiceProfileListWithHttpInfo";
 		}
     }
 }

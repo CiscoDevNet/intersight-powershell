@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightAccessPolicy()
 		{
 			ApiInstance = new AccessApi(Config);
-            MethodName = "GetAccessPolicyList";
+            MethodName = "GetAccessPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new AccessApi(Config);
             ModelObject = new AccessPolicy();
-            MethodName = "CreateAccessPolicy";
+            MethodName = "CreateAccessPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -141,7 +141,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new AccessApi(Config);
             ModelObject = new AccessPolicy();
-            MethodName = "UpdateAccessPolicy";
+            MethodName = "UpdateAccessPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -252,7 +252,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightAccessPolicy()
 		{
 			ApiInstance = new AccessApi(Config);
-            MethodName = "DeleteAccessPolicy";
+            MethodName = "DeleteAccessPolicyWithHttpInfo";
 		}
     }
 }

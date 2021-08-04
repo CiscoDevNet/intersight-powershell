@@ -17,7 +17,7 @@ Remove-IntersightFabricFlowControlPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricFlowControlPolicy&amp;apos; resource.
+Delete a &apos;FabricFlowControlPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricFlowControlPolicy](./Set-IntersightFabricFlowControlPolicy.md)
-
 [Get-IntersightFabricFlowControlPolicy](./Get-IntersightFabricFlowControlPolicy.md)
 
 [New-IntersightFabricFlowControlPolicy](./New-IntersightFabricFlowControlPolicy.md)
+
+[Set-IntersightFabricFlowControlPolicy](./Set-IntersightFabricFlowControlPolicy.md)
 

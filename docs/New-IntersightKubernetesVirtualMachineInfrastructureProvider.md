@@ -19,7 +19,7 @@ New-IntersightKubernetesVirtualMachineInfrastructureProvider [-AdditionalPropert
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesVirtualMachineInfrastructureProvider&amp;apos; resource.
+Create a &apos;KubernetesVirtualMachineInfrastructureProvider&apos; resource.
 
 ## PARAMETERS
 

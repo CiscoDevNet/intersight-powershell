@@ -204,10 +204,10 @@ PS C:\> Set-IntersightSoftwarerepositoryCategorySupportConstraint
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
 [Get-IntersightSoftwarerepositoryCategorySupportConstraint](./Get-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
-[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
 [Initialize-IntersightSoftwarerepositoryConstraintModels](./Initialize-IntersightSoftwarerepositoryConstraintModels.md)

@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexExtFcStoragePolicy](./Set-IntersightHyperflexExtFcStoragePolicy.md)
 
-[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
-
 [Get-IntersightHyperflexExtFcStoragePolicy](./Get-IntersightHyperflexExtFcStoragePolicy.md)
+
+[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
 

@@ -133,8 +133,8 @@ PS C:\> Set-IntersightIamResourceRoles
 
 ## RELATED LINKS
 
+[Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
+
 [New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
 
 [Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
-
-[Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)

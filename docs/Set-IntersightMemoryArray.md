@@ -19,7 +19,7 @@ Set-IntersightMemoryArray [-AdditionalProperties< Dictionary<string,object>>][-C
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryArray&amp;apos; resource.
+Update a &apos;MemoryArray&apos; resource.
 
 ## PARAMETERS
 

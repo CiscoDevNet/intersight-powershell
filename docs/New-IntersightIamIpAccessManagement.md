@@ -19,7 +19,7 @@ New-IntersightIamIpAccessManagement [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamIpAccessManagement&amp;apos; resource.
+Create a &apos;IamIpAccessManagement&apos; resource.
 
 ## PARAMETERS
 
@@ -112,6 +112,6 @@ PS C:\> New-IntersightIamIpAccessManagement
 
 ## RELATED LINKS
 
-[Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)
-
 [Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
+
+[Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)

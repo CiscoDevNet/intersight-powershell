@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightRecommendationPhysicalItem()
 		{
 			ApiInstance = new RecommendationApi(Config);
-            MethodName = "GetRecommendationPhysicalItemList";
+            MethodName = "GetRecommendationPhysicalItemListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -28,7 +28,7 @@ namespace Intersight.PowerShell
 		public GetIntersightRecommendationCapacityRunway()
 		{
 			ApiInstance = new RecommendationApi(Config);
-            MethodName = "GetRecommendationCapacityRunwayList";
+            MethodName = "GetRecommendationCapacityRunwayListWithHttpInfo";
 		}
     }
 }

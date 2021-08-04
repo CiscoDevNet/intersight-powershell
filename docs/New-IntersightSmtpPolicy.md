@@ -19,7 +19,7 @@ New-IntersightSmtpPolicy [-AdditionalProperties< Dictionary<string,object>>][-De
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SmtpPolicy&amp;apos; resource.
+Create a &apos;SmtpPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -253,8 +253,8 @@ PS C:\> New-IntersightSmtpPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
+[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
 
 [Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
 
-[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)

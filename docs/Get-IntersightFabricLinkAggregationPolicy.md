@@ -25,7 +25,7 @@ Get-IntersightFabricLinkAggregationPolicy [-Count <Boolean>] [-InlineCount <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FabricLinkAggregationPolicy&apos; resource.,
+Read a &amp;apos;FabricLinkAggregationPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFabricLinkAggregationPolicy](./New-IntersightFabricLinkAggregationPolicy.md)
+
 [Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
 
 [Remove-IntersightFabricLinkAggregationPolicy](./Remove-IntersightFabricLinkAggregationPolicy.md)
-
-[New-IntersightFabricLinkAggregationPolicy](./New-IntersightFabricLinkAggregationPolicy.md)
 

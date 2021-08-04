@@ -19,7 +19,7 @@ Set-IntersightKubernetesAciCniProfile [-AaepName< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesAciCniProfile&apos; resource.
+Update a &amp;apos;KubernetesAciCniProfile&amp;apos; resource.
 
 ## PARAMETERS
 

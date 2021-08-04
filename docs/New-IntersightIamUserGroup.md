@@ -19,7 +19,7 @@ New-IntersightIamUserGroup [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamUserGroup&amp;apos; resource.
+Create a &apos;IamUserGroup&apos; resource.
 
 ## PARAMETERS
 

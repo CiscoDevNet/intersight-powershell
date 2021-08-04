@@ -19,7 +19,7 @@ New-IntersightApplianceDataExportPolicy [-Account< IamAccountRelationship>][-Add
 ```
 
 ## DESCRIPTION
-Create a &apos;ApplianceDataExportPolicy&apos; resource.
+Create a &amp;apos;ApplianceDataExportPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Status of the data collection mode. If the value is &apos;true&apos;, then data collection is enabled.
+Status of the data collection mode. If the value is &amp;apos;true&amp;apos;, then data collection is enabled.
 
 ```yaml
 Type: bool
@@ -130,6 +130,6 @@ PS C:\> New-IntersightApplianceDataExportPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceDataExportPolicy](./Get-IntersightApplianceDataExportPolicy.md)
-
 [Set-IntersightApplianceDataExportPolicy](./Set-IntersightApplianceDataExportPolicy.md)
+
+[Get-IntersightApplianceDataExportPolicy](./Get-IntersightApplianceDataExportPolicy.md)

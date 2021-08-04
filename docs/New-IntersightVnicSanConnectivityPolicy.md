@@ -19,7 +19,7 @@ New-IntersightVnicSanConnectivityPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicSanConnectivityPolicy&apos; resource.
+Create a &amp;apos;VnicSanConnectivityPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -259,8 +259,8 @@ PS C:\> New-IntersightVnicSanConnectivityPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
+
 [Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
 
 [Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
-
-[Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)

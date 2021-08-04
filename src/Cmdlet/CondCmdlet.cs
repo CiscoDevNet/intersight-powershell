@@ -8,66 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondAlarmAggregation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmAggregation", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondAlarmAggregation:GetCmdletBase
-	{
-		public GetIntersightCondAlarmAggregation()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondAlarmAggregationList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondHclStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatus", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondHclStatus:GetCmdletBase
-	{
-		public GetIntersightCondHclStatus()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondHclStatusList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondAlarm.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarm", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondAlarm:GetCmdletBase
-	{
-		public GetIntersightCondAlarm()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondAlarmList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondHclStatusDetail.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusDetail", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondHclStatusDetail:GetCmdletBase
-	{
-		public GetIntersightCondHclStatusDetail()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondHclStatusDetailList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondHclStatusJob.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusJob", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondHclStatusJob:GetCmdletBase
-	{
-		public GetIntersightCondHclStatusJob()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondHclStatusJobList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CondAlarm.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightCondAlarm")]
@@ -77,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CondApi(Config);
             ModelObject = new CondAlarm();
-            MethodName = "UpdateCondAlarm";
+            MethodName = "UpdateCondAlarmWithHttpInfo";
 		}
         // <summary>
         /// <para type="description">"Alarm acknowledgment state. Default value is None.\n* `None` - The Enum value None represents that the alarm is not acknowledged and is included as part of health status and overall alarm count.\n* `Acknowledge` - The Enum value Acknowledge represents that the alarm is acknowledged by user. The alarm will be ignored from the health status and overall alarm count."</para>
@@ -133,5 +73,65 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondAlarm.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarm", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondAlarm:GetCmdletBase
+	{
+		public GetIntersightCondAlarm()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondAlarmListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondAlarmAggregation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmAggregation", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondAlarmAggregation:GetCmdletBase
+	{
+		public GetIntersightCondAlarmAggregation()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondAlarmAggregationListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondHclStatusJob.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusJob", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondHclStatusJob:GetCmdletBase
+	{
+		public GetIntersightCondHclStatusJob()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondHclStatusJobListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondHclStatusDetail.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusDetail", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondHclStatusDetail:GetCmdletBase
+	{
+		public GetIntersightCondHclStatusDetail()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondHclStatusDetailListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondHclStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatus", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondHclStatus:GetCmdletBase
+	{
+		public GetIntersightCondHclStatus()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondHclStatusListWithHttpInfo";
+		}
     }
 }

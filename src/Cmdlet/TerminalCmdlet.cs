@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightTerminalAuditLog()
 		{
 			ApiInstance = new TerminalApi(Config);
-            MethodName = "GetTerminalAuditLogList";
+            MethodName = "GetTerminalAuditLogListWithHttpInfo";
 		}
     }
 }

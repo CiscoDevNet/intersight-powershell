@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightNotificationAccountSubscription()
 		{
 			ApiInstance = new NotificationApi(Config);
-            MethodName = "GetNotificationAccountSubscriptionList";
+            MethodName = "GetNotificationAccountSubscriptionListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new NotificationApi(Config);
             ModelObject = new NotificationAccountSubscription();
-            MethodName = "CreateNotificationAccountSubscription";
+            MethodName = "CreateNotificationAccountSubscriptionWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -105,7 +105,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new NotificationApi(Config);
             ModelObject = new NotificationAccountSubscription();
-            MethodName = "PatchNotificationAccountSubscription";
+            MethodName = "UpdateNotificationAccountSubscriptionWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -180,7 +180,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightNotificationAccountSubscription()
 		{
 			ApiInstance = new NotificationApi(Config);
-            MethodName = "DeleteNotificationAccountSubscription";
+            MethodName = "DeleteNotificationAccountSubscriptionWithHttpInfo";
 		}
     }
 }

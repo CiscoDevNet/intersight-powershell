@@ -19,7 +19,7 @@ New-IntersightCapabilityCimcFirmwareDescriptor [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityCimcFirmwareDescriptor&apos; resource.
+Create a &amp;apos;CapabilityCimcFirmwareDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ PS C:\> New-IntersightCapabilityCimcFirmwareDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityCimcFirmwareDescriptor](./Get-IntersightCapabilityCimcFirmwareDescriptor.md)
+[Set-IntersightCapabilityCimcFirmwareDescriptor](./Set-IntersightCapabilityCimcFirmwareDescriptor.md)
 
 [Remove-IntersightCapabilityCimcFirmwareDescriptor](./Remove-IntersightCapabilityCimcFirmwareDescriptor.md)
 
-[Set-IntersightCapabilityCimcFirmwareDescriptor](./Set-IntersightCapabilityCimcFirmwareDescriptor.md)
+[Get-IntersightCapabilityCimcFirmwareDescriptor](./Get-IntersightCapabilityCimcFirmwareDescriptor.md)

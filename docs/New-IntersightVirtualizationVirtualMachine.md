@@ -19,7 +19,7 @@ New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachin
 ```
 
 ## DESCRIPTION
-Create a &apos;VirtualizationVirtualMachine&apos; resource.
+Create a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -420,11 +420,11 @@ PS C:\> New-IntersightVirtualizationVirtualMachine
 
 ## RELATED LINKS
 
+[Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
+
 [Set-IntersightVirtualizationVirtualMachine](./Set-IntersightVirtualizationVirtualMachine.md)
 
 [Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
-
-[Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
 

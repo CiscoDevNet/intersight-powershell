@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightOprsDeployment](./New-IntersightOprsDeployment.md)
+
 [Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
 
 [Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
-
-[New-IntersightOprsDeployment](./New-IntersightOprsDeployment.md)
 

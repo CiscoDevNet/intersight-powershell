@@ -25,7 +25,7 @@ Get-IntersightCapabilityChassisDescriptor [-Count <Boolean>] [-InlineCount <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;CapabilityChassisDescriptor&amp;apos; resource.,
+Read a &apos;CapabilityChassisDescriptor&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)
+[New-IntersightCapabilityChassisDescriptor](./New-IntersightCapabilityChassisDescriptor.md)
 
 [Remove-IntersightCapabilityChassisDescriptor](./Remove-IntersightCapabilityChassisDescriptor.md)
 
-[New-IntersightCapabilityChassisDescriptor](./New-IntersightCapabilityChassisDescriptor.md)
+[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)
 

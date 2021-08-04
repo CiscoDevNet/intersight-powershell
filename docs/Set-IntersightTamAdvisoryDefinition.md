@@ -19,7 +19,7 @@ Set-IntersightTamAdvisoryDefinition [-Actions< List<TamAction>>][-AdditionalProp
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;TamAdvisoryDefinition&amp;apos; resource.
+Update a &apos;TamAdvisoryDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -365,11 +365,11 @@ PS C:\> Set-IntersightTamAdvisoryDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
-
 [Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
 [New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
+
+[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

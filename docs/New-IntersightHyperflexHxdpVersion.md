@@ -130,8 +130,8 @@ PS C:\> New-IntersightHyperflexHxdpVersion
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
+
 [Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
 
 [Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
-
-[Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
