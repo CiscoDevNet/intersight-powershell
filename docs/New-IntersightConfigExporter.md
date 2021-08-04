@@ -19,7 +19,7 @@ New-IntersightConfigExporter [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Create a &apos;ConfigExporter&apos; resource.
+Create a &amp;apos;ConfigExporter&amp;apos; resource.
 
 ## PARAMETERS
 

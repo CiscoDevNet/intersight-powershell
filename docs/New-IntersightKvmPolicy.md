@@ -19,7 +19,7 @@ New-IntersightKvmPolicy [-AdditionalProperties< Dictionary<string,object>>][-Des
 ```
 
 ## DESCRIPTION
-Create a &apos;KvmPolicy&apos; resource.
+Create a &amp;apos;KvmPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

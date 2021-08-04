@@ -19,7 +19,7 @@ Set-IntersightVirtualizationHost [-Action< VirtualizationHost.ActionEnum>][-Addi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationHost&amp;apos; resource.
+Update a &apos;VirtualizationHost&apos; resource.
 
 ## PARAMETERS
 

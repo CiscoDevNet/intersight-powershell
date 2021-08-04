@@ -19,7 +19,7 @@ Set-IntersightPortSubGroup [-AdditionalProperties< Dictionary<string,object>>][[
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;PortSubGroup&amp;apos; resource.
+Update a &apos;PortSubGroup&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightConfigImporter [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Create a &apos;ConfigImporter&apos; resource.
+Create a &amp;apos;ConfigImporter&amp;apos; resource.
 
 ## PARAMETERS
 

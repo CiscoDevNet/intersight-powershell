@@ -223,8 +223,8 @@ PS C:\> Set-IntersightHyperflexSysConfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)
-
 [Get-IntersightHyperflexSysConfigPolicy](./Get-IntersightHyperflexSysConfigPolicy.md)
 
 [New-IntersightHyperflexSysConfigPolicy](./New-IntersightHyperflexSysConfigPolicy.md)
+
+[Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)

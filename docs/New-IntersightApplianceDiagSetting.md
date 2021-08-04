@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password of the Intersight Appliance&amp;apos;s OS diagnostic user account.
+Password of the Intersight Appliance&apos;s OS diagnostic user account.
 
 ```yaml
 Type: string
@@ -145,6 +145,6 @@ PS C:\> New-IntersightApplianceDiagSetting
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)
-
 [Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
+
+[Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)

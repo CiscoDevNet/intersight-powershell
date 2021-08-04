@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OrganizationApi(Config);
             ModelObject = new OrganizationOrganization();
-            MethodName = "UpdateOrganizationOrganization";
+            MethodName = "PatchOrganizationOrganizationWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -83,7 +83,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightOrganizationOrganization()
 		{
 			ApiInstance = new OrganizationApi(Config);
-            MethodName = "DeleteOrganizationOrganization";
+            MethodName = "DeleteOrganizationOrganizationWithHttpInfo";
 		}
     }
     /// <summary>
@@ -96,7 +96,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OrganizationApi(Config);
             ModelObject = new OrganizationOrganization();
-            MethodName = "CreateOrganizationOrganization";
+            MethodName = "CreateOrganizationOrganizationWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -162,7 +162,7 @@ namespace Intersight.PowerShell
 		public GetIntersightOrganizationOrganization()
 		{
 			ApiInstance = new OrganizationApi(Config);
-            MethodName = "GetOrganizationOrganizationList";
+            MethodName = "GetOrganizationOrganizationListWithHttpInfo";
 		}
     }
 }

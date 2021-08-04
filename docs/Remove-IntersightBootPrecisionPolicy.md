@@ -17,7 +17,7 @@ Remove-IntersightBootPrecisionPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;BootPrecisionPolicy&amp;apos; resource.
+Delete a &apos;BootPrecisionPolicy&apos; resource.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CertificatemanagementApi(Config);
             ModelObject = new CertificatemanagementPolicy();
-            MethodName = "PatchCertificatemanagementPolicy";
+            MethodName = "UpdateCertificatemanagementPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -101,7 +101,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightCertificatemanagementPolicy()
 		{
 			ApiInstance = new CertificatemanagementApi(Config);
-            MethodName = "DeleteCertificatemanagementPolicy";
+            MethodName = "DeleteCertificatemanagementPolicyWithHttpInfo";
 		}
     }
     /// <summary>
@@ -113,7 +113,7 @@ namespace Intersight.PowerShell
 		public GetIntersightCertificatemanagementPolicy()
 		{
 			ApiInstance = new CertificatemanagementApi(Config);
-            MethodName = "GetCertificatemanagementPolicyList";
+            MethodName = "GetCertificatemanagementPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -126,7 +126,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CertificatemanagementApi(Config);
             ModelObject = new CertificatemanagementPolicy();
-            MethodName = "CreateCertificatemanagementPolicy";
+            MethodName = "CreateCertificatemanagementPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

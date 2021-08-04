@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightExternalsiteAuthorization](./Set-IntersightExternalsiteAuthorization.md)
-
 [New-IntersightExternalsiteAuthorization](./New-IntersightExternalsiteAuthorization.md)
+
+[Set-IntersightExternalsiteAuthorization](./Set-IntersightExternalsiteAuthorization.md)
 

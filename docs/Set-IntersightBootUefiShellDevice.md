@@ -19,7 +19,7 @@ Set-IntersightBootUefiShellDevice [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BootUefiShellDevice&amp;apos; resource.
+Update a &apos;BootUefiShellDevice&apos; resource.
 
 ## PARAMETERS
 

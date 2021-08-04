@@ -19,7 +19,7 @@ New-IntersightOsInstall [-AdditionalParameters< List<OsPlaceHolder>>][-Additiona
 ```
 
 ## DESCRIPTION
-Create a &apos;OsInstall&apos; resource.
+Create a &amp;apos;OsInstall&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightRproxyReverseProxy [-Account< IamAccountRelationship>][-Additional
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RproxyReverseProxy&amp;apos; resource.
+Create a &apos;RproxyReverseProxy&apos; resource.
 
 ## PARAMETERS
 

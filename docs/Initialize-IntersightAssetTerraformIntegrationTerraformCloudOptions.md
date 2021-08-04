@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetTerraformIntegrationTerraformCloudOptions [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum>][-DefaultTerraformOrganization< string>][-ObjectType< AssetTerraformIntegrationTerraformCloudOptions.ObjectTypeEnum>]
+Initialize-IntersightAssetTerraformIntegrationTerraformCloudOptions [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum>][-DefaultManagedHosts< List<string>>][-DefaultTerraformOrganization< string>][-ObjectType< AssetTerraformIntegrationTerraformCloudOptions.ObjectTypeEnum>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultManagedHosts
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

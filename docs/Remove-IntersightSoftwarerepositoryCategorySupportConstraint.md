@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
 [Get-IntersightSoftwarerepositoryCategorySupportConstraint](./Get-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
-[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 

@@ -19,7 +19,7 @@ Set-IntersightIamEndPointUser [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamEndPointUser&amp;apos; resource.
+Update a &apos;IamEndPointUser&apos; resource.
 
 ## PARAMETERS
 
@@ -148,8 +148,8 @@ PS C:\> Set-IntersightIamEndPointUser
 
 ## RELATED LINKS
 
+[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
+
 [Get-IntersightIamEndPointUser](./Get-IntersightIamEndPointUser.md)
 
 [New-IntersightIamEndPointUser](./New-IntersightIamEndPointUser.md)
-
-[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)

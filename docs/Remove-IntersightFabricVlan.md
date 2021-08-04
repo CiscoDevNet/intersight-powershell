@@ -17,7 +17,7 @@ Remove-IntersightFabricVlan -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricVlan&apos; resource.
+Delete a &amp;apos;FabricVlan&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFabricVlan](./Set-IntersightFabricVlan.md)
+
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
 [New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
-
-[Set-IntersightFabricVlan](./Set-IntersightFabricVlan.md)
 

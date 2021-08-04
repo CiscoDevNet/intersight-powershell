@@ -19,7 +19,7 @@ New-IntersightCapabilityServerSchemaDescriptor [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
+Create a &apos;CapabilityServerSchemaDescriptor&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightRecoveryBackupConfigPolicy [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &apos;RecoveryBackupConfigPolicy&apos; resource.
+Update a &amp;apos;RecoveryBackupConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -268,8 +268,8 @@ PS C:\> Set-IntersightRecoveryBackupConfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryBackupConfigPolicy](./Remove-IntersightRecoveryBackupConfigPolicy.md)
-
 [New-IntersightRecoveryBackupConfigPolicy](./New-IntersightRecoveryBackupConfigPolicy.md)
 
 [Get-IntersightRecoveryBackupConfigPolicy](./Get-IntersightRecoveryBackupConfigPolicy.md)
+
+[Remove-IntersightRecoveryBackupConfigPolicy](./Remove-IntersightRecoveryBackupConfigPolicy.md)

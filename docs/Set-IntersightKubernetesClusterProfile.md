@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementConfig
-Configuration required for provisioning and management of cluster management entities. Required if\n&apos;managedMode&apos; is set to &apos;Managed&apos;.
+Configuration required for provisioning and management of cluster management entities. Required if\n&amp;apos;managedMode&amp;apos; is set to &amp;apos;Managed&amp;apos;.
 
 Note :- Use Initialize-IntersightKubernetesClusterManagementConfig to create the object of complex type KubernetesClusterManagementConfig
 
@@ -453,11 +453,11 @@ PS C:\> Set-IntersightKubernetesClusterProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
+
 [Get-IntersightKubernetesClusterProfile](./Get-IntersightKubernetesClusterProfile.md)
 
 [New-IntersightKubernetesClusterProfile](./New-IntersightKubernetesClusterProfile.md)
-
-[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
 
 [Initialize-IntersightKubernetesClusterCertificateConfiguration](./Initialize-IntersightKubernetesClusterCertificateConfiguration.md)
 

@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightSolPolicy()
 		{
 			ApiInstance = new SolApi(Config);
-            MethodName = "GetSolPolicyList";
+            MethodName = "GetSolPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SolApi(Config);
             ModelObject = new SolPolicy();
-            MethodName = "CreateSolPolicy";
+            MethodName = "CreateSolPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -132,18 +132,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SolPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSolPolicy")]
-    public class RemoveIntersightSolPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightSolPolicy()
-		{
-			ApiInstance = new SolApi(Config);
-            MethodName = "DeleteSolPolicy";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SolPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSolPolicy")]
@@ -153,7 +141,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SolApi(Config);
             ModelObject = new SolPolicy();
-            MethodName = "UpdateSolPolicy";
+            MethodName = "UpdateSolPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -254,5 +242,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove SolPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightSolPolicy")]
+    public class RemoveIntersightSolPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightSolPolicy()
+		{
+			ApiInstance = new SolApi(Config);
+            MethodName = "DeleteSolPolicyWithHttpInfo";
+		}
     }
 }

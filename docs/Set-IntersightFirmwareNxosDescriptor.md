@@ -19,7 +19,7 @@ Set-IntersightFirmwareNxosDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareNxosDescriptor&amp;apos; resource.
+Update a &apos;FirmwareNxosDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> Set-IntersightFirmwareNxosDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
+[Get-IntersightFirmwareNxosDescriptor](./Get-IntersightFirmwareNxosDescriptor.md)
 
 [New-IntersightFirmwareNxosDescriptor](./New-IntersightFirmwareNxosDescriptor.md)
 
-[Get-IntersightFirmwareNxosDescriptor](./Get-IntersightFirmwareNxosDescriptor.md)
+[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)

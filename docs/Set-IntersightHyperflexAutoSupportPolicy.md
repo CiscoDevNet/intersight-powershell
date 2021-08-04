@@ -193,8 +193,8 @@ PS C:\> Set-IntersightHyperflexAutoSupportPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexAutoSupportPolicy](./Remove-IntersightHyperflexAutoSupportPolicy.md)
-
 [Get-IntersightHyperflexAutoSupportPolicy](./Get-IntersightHyperflexAutoSupportPolicy.md)
 
 [New-IntersightHyperflexAutoSupportPolicy](./New-IntersightHyperflexAutoSupportPolicy.md)
+
+[Remove-IntersightHyperflexAutoSupportPolicy](./Remove-IntersightHyperflexAutoSupportPolicy.md)

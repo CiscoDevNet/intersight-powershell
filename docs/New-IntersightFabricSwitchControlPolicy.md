@@ -19,7 +19,7 @@ New-IntersightFabricSwitchControlPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricSwitchControlPolicy&amp;apos; resource.
+Create a &apos;FabricSwitchControlPolicy&apos; resource.
 
 ## PARAMETERS
 

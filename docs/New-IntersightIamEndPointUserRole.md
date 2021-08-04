@@ -19,7 +19,7 @@ New-IntersightIamEndPointUserRole [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &apos;IamEndPointUserRole&apos; resource.
+Create a &amp;apos;IamEndPointUserRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -181,8 +181,8 @@ PS C:\> New-IntersightIamEndPointUserRole
 
 ## RELATED LINKS
 
-[Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)
-
 [Set-IntersightIamEndPointUserRole](./Set-IntersightIamEndPointUserRole.md)
 
 [Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
+
+[Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)

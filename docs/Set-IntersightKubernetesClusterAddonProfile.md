@@ -19,7 +19,7 @@ Set-IntersightKubernetesClusterAddonProfile [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesClusterAddonProfile&apos; resource.
+Update a &amp;apos;KubernetesClusterAddonProfile&amp;apos; resource.
 
 ## PARAMETERS
 

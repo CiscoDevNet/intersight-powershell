@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeServerSetting [-AdditionalProperties< Dictionary<string,object>>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-ServerConfig< ComputeServerConfig>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< List<MoTag>>]
+Set-IntersightComputeServerSetting [-AdditionalProperties< Dictionary<string,object>>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-ServerConfig< ComputeServerConfig>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< List<MoTag>>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeServerSetting&apos; resource.
+Update a &amp;apos;ComputeServerSetting&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -58,6 +58,53 @@ User configured power state of the server.\n* `Policy` - Power state is set to t
 
 ```yaml
 Type: ComputeServerSetting.AdminPowerStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertificatesAction
+Certificates Action configures the Certificate and PrivateKey at the endpoint.
+
+Note :- Use Initialize-IntersightCertificatemanagementCertificateBase to create the object of complex type CertificatemanagementCertificateBase
+
+```yaml
+Type: CertificatemanagementCertificateBase
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CmosReset
+The allowed actions on the CMOS Reset.\n* `Ready` - CMOS Reset operation is allowed to be done on the server in this state.\n* `Pending` - This indicates that the previous CMOS Reset operation on this server has not completed due to a pending power cycle. CMOS Reset operation cannot be done on the server when in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a CMOS Reset operation on a server.
+
+```yaml
+Type: ComputeServerSetting.CmosResetEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FrontPanelLockState
+The allowed actions on the Front Panel Lock.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state.
+
+```yaml
+Type: ComputeServerSetting.FrontPanelLockStateEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -228,6 +275,8 @@ PS C:\> Set-IntersightComputeServerSetting
 ## RELATED LINKS
 
 [Get-IntersightComputeServerSetting](./Get-IntersightComputeServerSetting.md)
+
+[Initialize-IntersightCertificatemanagementCertificateBase](./Initialize-IntersightCertificatemanagementCertificateBase.md)
 
 [Initialize-IntersightComputePersistentMemoryOperation](./Initialize-IntersightComputePersistentMemoryOperation.md)
 

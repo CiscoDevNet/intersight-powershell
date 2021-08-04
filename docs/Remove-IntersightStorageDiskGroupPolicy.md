@@ -17,7 +17,7 @@ Remove-IntersightStorageDiskGroupPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;StorageDiskGroupPolicy&amp;apos; resource.
+Delete a &apos;StorageDiskGroupPolicy&apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricSwitchControlPolicy&amp;apos; resource.
+Update a &apos;FabricSwitchControlPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -214,9 +214,9 @@ PS C:\> Set-IntersightFabricSwitchControlPolicy
 
 [Remove-IntersightFabricSwitchControlPolicy](./Remove-IntersightFabricSwitchControlPolicy.md)
 
-[New-IntersightFabricSwitchControlPolicy](./New-IntersightFabricSwitchControlPolicy.md)
-
 [Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
+
+[New-IntersightFabricSwitchControlPolicy](./New-IntersightFabricSwitchControlPolicy.md)
 
 [Initialize-IntersightFabricMacAgingSettings](./Initialize-IntersightFabricMacAgingSettings.md)
 

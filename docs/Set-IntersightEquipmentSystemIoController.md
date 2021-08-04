@@ -19,7 +19,7 @@ Set-IntersightEquipmentSystemIoController [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentSystemIoController&apos; resource.
+Update a &amp;apos;EquipmentSystemIoController&amp;apos; resource.
 
 ## PARAMETERS
 

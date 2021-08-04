@@ -19,7 +19,7 @@ Set-IntersightSnmpPolicy [-AccessCommunityString< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &apos;SnmpPolicy&apos; resource.
+Update a &amp;apos;SnmpPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -347,11 +347,11 @@ PS C:\> Set-IntersightSnmpPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
+
 [New-IntersightSnmpPolicy](./New-IntersightSnmpPolicy.md)
 
 [Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
-
-[Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
 
 [Initialize-IntersightSnmpTrap](./Initialize-IntersightSnmpTrap.md)
 

@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObservedGeneration
-ObservedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&amp;apos;s generation, which is updated on mutation by the API Server.
+ObservedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&apos;s generation, which is updated on mutation by the API Server.
 
 ```yaml
 Type: long

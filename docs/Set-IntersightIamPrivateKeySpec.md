@@ -19,7 +19,7 @@ Set-IntersightIamPrivateKeySpec [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamPrivateKeySpec&amp;apos; resource.
+Update a &apos;IamPrivateKeySpec&apos; resource.
 
 ## PARAMETERS
 

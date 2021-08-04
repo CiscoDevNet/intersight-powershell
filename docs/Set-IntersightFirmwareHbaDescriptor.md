@@ -19,7 +19,7 @@ Set-IntersightFirmwareHbaDescriptor [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareHbaDescriptor&amp;apos; resource.
+Update a &apos;FirmwareHbaDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> Set-IntersightFirmwareHbaDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightFirmwareHbaDescriptor](./Remove-IntersightFirmwareHbaDescriptor.md)
+
 [Get-IntersightFirmwareHbaDescriptor](./Get-IntersightFirmwareHbaDescriptor.md)
 
 [New-IntersightFirmwareHbaDescriptor](./New-IntersightFirmwareHbaDescriptor.md)
-
-[Remove-IntersightFirmwareHbaDescriptor](./Remove-IntersightFirmwareHbaDescriptor.md)

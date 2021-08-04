@@ -190,8 +190,8 @@ PS C:\> Set-IntersightCapabilityFanModuleDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityFanModuleDescriptor](./Remove-IntersightCapabilityFanModuleDescriptor.md)
-
 [Get-IntersightCapabilityFanModuleDescriptor](./Get-IntersightCapabilityFanModuleDescriptor.md)
 
 [New-IntersightCapabilityFanModuleDescriptor](./New-IntersightCapabilityFanModuleDescriptor.md)
+
+[Remove-IntersightCapabilityFanModuleDescriptor](./Remove-IntersightCapabilityFanModuleDescriptor.md)

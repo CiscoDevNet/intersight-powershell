@@ -8,66 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove UuidpoolUuidLease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolUuidLease")]
-    public class RemoveIntersightUuidpoolUuidLease:RemoveCmdletBase
-	{
-		public RemoveIntersightUuidpoolUuidLease()
-		{
-			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "DeleteUuidpoolUuidLease";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get UuidpoolPoolMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightUuidpoolPoolMember:GetCmdletBase
-	{
-		public GetIntersightUuidpoolPoolMember()
-		{
-			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "GetUuidpoolPoolMemberList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get UuidpoolUuidLease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUuidLease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightUuidpoolUuidLease:GetCmdletBase
-	{
-		public GetIntersightUuidpoolUuidLease()
-		{
-			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "GetUuidpoolUuidLeaseList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get UuidpoolBlock.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolBlock", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightUuidpoolBlock:GetCmdletBase
-	{
-		public GetIntersightUuidpoolBlock()
-		{
-			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "GetUuidpoolBlockList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get UuidpoolUniverse.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUniverse", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightUuidpoolUniverse:GetCmdletBase
-	{
-		public GetIntersightUuidpoolUniverse()
-		{
-			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "GetUuidpoolUniverseList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New UuidpoolPool.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightUuidpoolPool")]
@@ -77,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new UuidpoolApi(Config);
             ModelObject = new UuidpoolPool();
-            MethodName = "CreateUuidpoolPool";
+            MethodName = "CreateUuidpoolPoolWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -170,7 +110,67 @@ namespace Intersight.PowerShell
 		public GetIntersightUuidpoolPool()
 		{
 			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "GetUuidpoolPoolList";
+            MethodName = "GetUuidpoolPoolListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get UuidpoolPoolMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightUuidpoolPoolMember:GetCmdletBase
+	{
+		public GetIntersightUuidpoolPoolMember()
+		{
+			ApiInstance = new UuidpoolApi(Config);
+            MethodName = "GetUuidpoolPoolMemberListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get UuidpoolBlock.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolBlock", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightUuidpoolBlock:GetCmdletBase
+	{
+		public GetIntersightUuidpoolBlock()
+		{
+			ApiInstance = new UuidpoolApi(Config);
+            MethodName = "GetUuidpoolBlockListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get UuidpoolUuidLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUuidLease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightUuidpoolUuidLease:GetCmdletBase
+	{
+		public GetIntersightUuidpoolUuidLease()
+		{
+			ApiInstance = new UuidpoolApi(Config);
+            MethodName = "GetUuidpoolUuidLeaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get UuidpoolUniverse.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightUuidpoolUniverse:GetCmdletBase
+	{
+		public GetIntersightUuidpoolUniverse()
+		{
+			ApiInstance = new UuidpoolApi(Config);
+            MethodName = "GetUuidpoolUniverseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove UuidpoolUuidLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolUuidLease")]
+    public class RemoveIntersightUuidpoolUuidLease:RemoveCmdletBase
+	{
+		public RemoveIntersightUuidpoolUuidLease()
+		{
+			ApiInstance = new UuidpoolApi(Config);
+            MethodName = "DeleteUuidpoolUuidLeaseWithHttpInfo";
 		}
     }
     /// <summary>
@@ -183,7 +183,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new UuidpoolApi(Config);
             ModelObject = new UuidpoolPool();
-            MethodName = "UpdateUuidpoolPool";
+            MethodName = "UpdateUuidpoolPoolWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -276,7 +276,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightUuidpoolPool()
 		{
 			ApiInstance = new UuidpoolApi(Config);
-            MethodName = "DeleteUuidpoolPool";
+            MethodName = "DeleteUuidpoolPoolWithHttpInfo";
 		}
     }
 }

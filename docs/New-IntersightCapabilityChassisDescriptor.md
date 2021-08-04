@@ -190,8 +190,8 @@ PS C:\> New-IntersightCapabilityChassisDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)
+[Get-IntersightCapabilityChassisDescriptor](./Get-IntersightCapabilityChassisDescriptor.md)
 
 [Remove-IntersightCapabilityChassisDescriptor](./Remove-IntersightCapabilityChassisDescriptor.md)
 
-[Get-IntersightCapabilityChassisDescriptor](./Get-IntersightCapabilityChassisDescriptor.md)
+[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)

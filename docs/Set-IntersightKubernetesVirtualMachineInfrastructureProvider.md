@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineInfrastructureProvider [-AdditionalPropert
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesVirtualMachineInfrastructureProvider&amp;apos; resource.
+Update a &apos;KubernetesVirtualMachineInfrastructureProvider&apos; resource.
 
 ## PARAMETERS
 

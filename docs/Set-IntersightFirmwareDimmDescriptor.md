@@ -220,8 +220,8 @@ PS C:\> Set-IntersightFirmwareDimmDescriptor
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareDimmDescriptor](./New-IntersightFirmwareDimmDescriptor.md)
-
 [Get-IntersightFirmwareDimmDescriptor](./Get-IntersightFirmwareDimmDescriptor.md)
+
+[New-IntersightFirmwareDimmDescriptor](./New-IntersightFirmwareDimmDescriptor.md)
 
 [Remove-IntersightFirmwareDimmDescriptor](./Remove-IntersightFirmwareDimmDescriptor.md)

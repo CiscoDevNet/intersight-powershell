@@ -19,7 +19,7 @@ New-IntersightKubernetesAciCniProfile [-AaepName< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesAciCniProfile&apos; resource.
+Create a &amp;apos;KubernetesAciCniProfile&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -8,102 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicLatestMaintainedRelease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicLatestMaintainedRelease:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicLatestMaintainedRelease()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicLatestMaintainedReleaseList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiNiaMetadata.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNiaMetadata", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiNiaMetadata:GetCmdletBase
-	{
-		public GetIntersightNiaapiNiaMetadata()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiNiaMetadataList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmFieldNotice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmFieldNotice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmFieldNotice:GetCmdletBase
-	{
-		public GetIntersightNiaapiDcnmFieldNotice()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmFieldNoticeList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiFileDownloader.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiFileDownloader", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiFileDownloader:GetCmdletBase
-	{
-		public GetIntersightNiaapiFileDownloader()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiFileDownloaderList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicHweol.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicHweol", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicHweol:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicHweol()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicHweolList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicSweol.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicSweol", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicSweol:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicSweol()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicSweolList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiNibMetadata.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibMetadata", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiNibMetadata:GetCmdletBase
-	{
-		public GetIntersightNiaapiNibMetadata()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiNibMetadataList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicCcoPost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicCcoPost", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicCcoPost:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicCcoPost()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicCcoPostList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmHweol.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmHweol", DefaultParameterSetName = "CmdletParam")]
@@ -112,31 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightNiaapiDcnmHweol()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmHweolList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmReleaseRecommend.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmReleaseRecommend", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmReleaseRecommend:GetCmdletBase
-	{
-		public GetIntersightNiaapiDcnmReleaseRecommend()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmReleaseRecommendList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmLatestMaintainedRelease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmLatestMaintainedRelease:GetCmdletBase
-	{
-		public GetIntersightNiaapiDcnmLatestMaintainedRelease()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmLatestMaintainedReleaseList";
+            MethodName = "GetNiaapiDcnmHweolListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -148,31 +28,7 @@ namespace Intersight.PowerShell
 		public GetIntersightNiaapiApicReleaseRecommend()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicReleaseRecommendList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiNibFileDownloader.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibFileDownloader", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiNibFileDownloader:GetCmdletBase
-	{
-		public GetIntersightNiaapiNibFileDownloader()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiNibFileDownloaderList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmSweol.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmSweol", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmSweol:GetCmdletBase
-	{
-		public GetIntersightNiaapiDcnmSweol()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmSweolList";
+            MethodName = "GetNiaapiApicReleaseRecommendListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -184,7 +40,67 @@ namespace Intersight.PowerShell
 		public GetIntersightNiaapiDcnmCcoPost()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmCcoPostList";
+            MethodName = "GetNiaapiDcnmCcoPostListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicLatestMaintainedRelease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicLatestMaintainedRelease:GetCmdletBase
+	{
+		public GetIntersightNiaapiApicLatestMaintainedRelease()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiApicLatestMaintainedReleaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiFileDownloader.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiFileDownloader", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiFileDownloader:GetCmdletBase
+	{
+		public GetIntersightNiaapiFileDownloader()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiFileDownloaderListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmSweol.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmSweol", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmSweol:GetCmdletBase
+	{
+		public GetIntersightNiaapiDcnmSweol()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiDcnmSweolListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiNibFileDownloader.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibFileDownloader", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiNibFileDownloader:GetCmdletBase
+	{
+		public GetIntersightNiaapiNibFileDownloader()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiNibFileDownloaderListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicHweol.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicHweol", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicHweol:GetCmdletBase
+	{
+		public GetIntersightNiaapiApicHweol()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiApicHweolListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -196,7 +112,79 @@ namespace Intersight.PowerShell
 		public GetIntersightNiaapiApicFieldNotice()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicFieldNoticeList";
+            MethodName = "GetNiaapiApicFieldNoticeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicSweol.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicSweol", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicSweol:GetCmdletBase
+	{
+		public GetIntersightNiaapiApicSweol()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiApicSweolListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmReleaseRecommend.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmReleaseRecommend", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmReleaseRecommend:GetCmdletBase
+	{
+		public GetIntersightNiaapiDcnmReleaseRecommend()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiDcnmReleaseRecommendListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmFieldNotice.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmFieldNotice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmFieldNotice:GetCmdletBase
+	{
+		public GetIntersightNiaapiDcnmFieldNotice()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiDcnmFieldNoticeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiNiaMetadata.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNiaMetadata", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiNiaMetadata:GetCmdletBase
+	{
+		public GetIntersightNiaapiNiaMetadata()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiNiaMetadataListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmLatestMaintainedRelease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmLatestMaintainedRelease:GetCmdletBase
+	{
+		public GetIntersightNiaapiDcnmLatestMaintainedRelease()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiDcnmLatestMaintainedReleaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiNibMetadata.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibMetadata", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiNibMetadata:GetCmdletBase
+	{
+		public GetIntersightNiaapiNibMetadata()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiNibMetadataListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -208,7 +196,19 @@ namespace Intersight.PowerShell
 		public GetIntersightNiaapiVersionRegex()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiVersionRegexList";
+            MethodName = "GetNiaapiVersionRegexListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicCcoPost.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicCcoPost", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicCcoPost:GetCmdletBase
+	{
+		public GetIntersightNiaapiApicCcoPost()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiApicCcoPostListWithHttpInfo";
 		}
     }
 }

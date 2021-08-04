@@ -19,7 +19,7 @@ Set-IntersightHyperflexExtFcStoragePolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexExtFcStoragePolicy&apos; resource.
+Update a &amp;apos;HyperflexExtFcStoragePolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -231,9 +231,9 @@ PS C:\> Set-IntersightHyperflexExtFcStoragePolicy
 
 [Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
 
-[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
-
 [Get-IntersightHyperflexExtFcStoragePolicy](./Get-IntersightHyperflexExtFcStoragePolicy.md)
+
+[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
 
 [Initialize-IntersightHyperflexNamedVsan](./Initialize-IntersightHyperflexNamedVsan.md)
 

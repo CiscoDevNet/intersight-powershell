@@ -19,7 +19,7 @@ Set-IntersightFabricFlowControlPolicy [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricFlowControlPolicy&amp;apos; resource.
+Update a &apos;FabricFlowControlPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ PS C:\> Set-IntersightFabricFlowControlPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricFlowControlPolicy](./Remove-IntersightFabricFlowControlPolicy.md)
-
 [Get-IntersightFabricFlowControlPolicy](./Get-IntersightFabricFlowControlPolicy.md)
 
 [New-IntersightFabricFlowControlPolicy](./New-IntersightFabricFlowControlPolicy.md)
+
+[Remove-IntersightFabricFlowControlPolicy](./Remove-IntersightFabricFlowControlPolicy.md)

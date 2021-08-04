@@ -19,7 +19,7 @@ Set-IntersightLicenseCustomerOp [-AccountLicenseData< LicenseAccountLicenseDataR
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseCustomerOp&amp;apos; resource.
+Update a &apos;LicenseCustomerOp&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightIamResourceRoles [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &apos;IamResourceRoles&apos; resource.
+Create a &amp;apos;IamResourceRoles&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -133,8 +133,8 @@ PS C:\> New-IntersightIamResourceRoles
 
 ## RELATED LINKS
 
-[Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
-
 [Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)
 
 [Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
+
+[Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)

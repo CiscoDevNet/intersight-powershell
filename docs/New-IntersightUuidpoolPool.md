@@ -19,7 +19,7 @@ New-IntersightUuidpoolPool [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;UuidpoolPool&amp;apos; resource.
+Create a &apos;UuidpoolPool&apos; resource.
 
 ## PARAMETERS
 

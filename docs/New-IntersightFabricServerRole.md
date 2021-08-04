@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregatePortId
-Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &amp;apos;aggregatePortId&amp;apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
+Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &apos;aggregatePortId&apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
 
 ```yaml
 Type: long
@@ -160,8 +160,8 @@ PS C:\> New-IntersightFabricServerRole
 
 ## RELATED LINKS
 
+[Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
+
 [Set-IntersightFabricServerRole](./Set-IntersightFabricServerRole.md)
 
 [Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
-
-[Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)

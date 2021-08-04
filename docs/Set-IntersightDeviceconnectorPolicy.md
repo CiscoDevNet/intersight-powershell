@@ -178,8 +178,8 @@ PS C:\> Set-IntersightDeviceconnectorPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightDeviceconnectorPolicy](./Remove-IntersightDeviceconnectorPolicy.md)
-
 [New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
 
 [Get-IntersightDeviceconnectorPolicy](./Get-IntersightDeviceconnectorPolicy.md)
+
+[Remove-IntersightDeviceconnectorPolicy](./Remove-IntersightDeviceconnectorPolicy.md)

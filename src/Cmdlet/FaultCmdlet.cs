@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightFaultInstance()
 		{
 			ApiInstance = new FaultApi(Config);
-            MethodName = "GetFaultInstanceList";
+            MethodName = "GetFaultInstanceListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new FaultApi(Config);
             ModelObject = new FaultInstance();
-            MethodName = "UpdateFaultInstance";
+            MethodName = "UpdateFaultInstanceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

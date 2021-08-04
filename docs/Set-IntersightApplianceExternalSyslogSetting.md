@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceExternalSyslogSetting [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-Enabled< bool>][-ExportNginx< bool>][[-Moid]< string>][-Port< long>][-Server< string>][-Tags< List<MoTag>>]
+Set-IntersightApplianceExternalSyslogSetting [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-Enabled< bool>][-ExportNginx< bool>][[-Moid]< string>][-Port< long>][-Protocol< ApplianceExternalSyslogSetting.ProtocolEnum>][-Server< string>][-Tags< List<MoTag>>]
 
 ```
 
@@ -106,6 +106,21 @@ External Syslog Server Port for connection establishment.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Protocol
+Protocol used to connect to external syslog server.\n* `TCP` - External Syslog messages sent over TCP.\n* `UDP` - External Syslog messages sent over UDP.\n* `TLS` - Secure External Syslog messages sent over TLS.
+
+```yaml
+Type: ApplianceExternalSyslogSetting.ProtocolEnum
 Parameter Sets: (All)
 Aliases:
 

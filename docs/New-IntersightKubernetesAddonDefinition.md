@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< List<string>>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>][-Version< string>]
+New-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< List<string>>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Platforms< List<string>>][-Tags< List<MoTag>>][-Version< string>]
 
 ```
 
@@ -224,6 +224,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Platforms
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -283,8 +298,8 @@ PS C:\> New-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
+
 [Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)
 
 [Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
-
-[Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)

@@ -19,7 +19,7 @@ Set-IntersightKubernetesVersionPolicy [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
+Update a &apos;KubernetesVersionPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -181,8 +181,8 @@ PS C:\> Set-IntersightKubernetesVersionPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
-
 [Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
 
 [New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
+
+[Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)

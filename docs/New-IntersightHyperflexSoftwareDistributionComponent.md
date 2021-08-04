@@ -19,7 +19,7 @@ New-IntersightHyperflexSoftwareDistributionComponent [-AdditionalProperties< Dic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexSoftwareDistributionComponent&amp;apos; resource.
+Create a &apos;HyperflexSoftwareDistributionComponent&apos; resource.
 
 ## PARAMETERS
 

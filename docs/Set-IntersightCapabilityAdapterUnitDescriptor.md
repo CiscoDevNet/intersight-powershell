@@ -295,8 +295,8 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+[Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
 
-[Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
+[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)

@@ -25,7 +25,7 @@ Get-IntersightFirmwareMswitchDescriptor [-Count <Boolean>] [-InlineCount <String
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FirmwareMswitchDescriptor&apos; resource.,
+Read a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFirmwareMswitchDescriptor](./New-IntersightFirmwareMswitchDescriptor.md)
+
 [Set-IntersightFirmwareMswitchDescriptor](./Set-IntersightFirmwareMswitchDescriptor.md)
 
 [Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
-
-[New-IntersightFirmwareMswitchDescriptor](./New-IntersightFirmwareMswitchDescriptor.md)
 

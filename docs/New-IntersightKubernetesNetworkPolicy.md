@@ -19,7 +19,7 @@ New-IntersightKubernetesNetworkPolicy [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesNetworkPolicy&amp;apos; resource.
+Create a &apos;KubernetesNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -PodNetworkCidr
-CIDR block to allocate pod network IP addresses from.
+CIDR block to allocate Pod network IP addresses from.
 
 ```yaml
 Type: string
@@ -225,9 +225,9 @@ PS C:\> New-IntersightKubernetesNetworkPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesNetworkPolicy](./Set-IntersightKubernetesNetworkPolicy.md)
-
 [Remove-IntersightKubernetesNetworkPolicy](./Remove-IntersightKubernetesNetworkPolicy.md)
+
+[Set-IntersightKubernetesNetworkPolicy](./Set-IntersightKubernetesNetworkPolicy.md)
 
 [Get-IntersightKubernetesNetworkPolicy](./Get-IntersightKubernetesNetworkPolicy.md)
 

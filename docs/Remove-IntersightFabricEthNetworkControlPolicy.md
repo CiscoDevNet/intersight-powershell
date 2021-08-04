@@ -17,7 +17,7 @@ Remove-IntersightFabricEthNetworkControlPolicy -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricEthNetworkControlPolicy&apos; resource.
+Delete a &amp;apos;FabricEthNetworkControlPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricEthNetworkControlPolicy](./Set-IntersightFabricEthNetworkControlPolicy.md)
-
 [Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
 
 [New-IntersightFabricEthNetworkControlPolicy](./New-IntersightFabricEthNetworkControlPolicy.md)
+
+[Set-IntersightFabricEthNetworkControlPolicy](./Set-IntersightFabricEthNetworkControlPolicy.md)
 

@@ -19,7 +19,7 @@ Set-IntersightHyperflexNodeConfigPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexNodeConfigPolicy&amp;apos; resource.
+Update a &apos;HyperflexNodeConfigPolicy&apos; resource.
 
 ## PARAMETERS
 

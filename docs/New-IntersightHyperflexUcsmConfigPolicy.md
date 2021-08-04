@@ -212,11 +212,11 @@ PS C:\> New-IntersightHyperflexUcsmConfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexUcsmConfigPolicy](./Get-IntersightHyperflexUcsmConfigPolicy.md)
-
 [Set-IntersightHyperflexUcsmConfigPolicy](./Set-IntersightHyperflexUcsmConfigPolicy.md)
 
 [Remove-IntersightHyperflexUcsmConfigPolicy](./Remove-IntersightHyperflexUcsmConfigPolicy.md)
+
+[Get-IntersightHyperflexUcsmConfigPolicy](./Get-IntersightHyperflexUcsmConfigPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 

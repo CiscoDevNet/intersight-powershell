@@ -19,7 +19,7 @@ New-IntersightFirmwarePcieDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwarePcieDescriptor&apos; resource.
+Create a &amp;apos;FirmwarePcieDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwarePcieDescriptor
 
 ## RELATED LINKS
 
+[Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)
+
 [Set-IntersightFirmwarePcieDescriptor](./Set-IntersightFirmwarePcieDescriptor.md)
 
 [Remove-IntersightFirmwarePcieDescriptor](./Remove-IntersightFirmwarePcieDescriptor.md)
-
-[Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)

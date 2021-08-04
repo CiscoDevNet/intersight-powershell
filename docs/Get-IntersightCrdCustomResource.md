@@ -25,7 +25,7 @@ Get-IntersightCrdCustomResource [-Count <Boolean>] [-InlineCount <String>] [-Sel
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;CrdCustomResource&amp;apos; resource.,
+Read a &apos;CrdCustomResource&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
-
 [Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
 
 [Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
+
+[New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
 

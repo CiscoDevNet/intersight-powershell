@@ -19,7 +19,7 @@ New-IntersightFirmwareChassisUpgrade [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareChassisUpgrade&amp;apos; resource.
+Create a &apos;FirmwareChassisUpgrade&apos; resource.
 
 ## PARAMETERS
 
@@ -262,9 +262,9 @@ PS C:\> New-IntersightFirmwareChassisUpgrade
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
-
 [Remove-IntersightFirmwareChassisUpgrade](./Remove-IntersightFirmwareChassisUpgrade.md)
+
+[Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 

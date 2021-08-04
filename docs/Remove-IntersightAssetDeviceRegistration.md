@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightAssetDeviceRegistration](./Get-IntersightAssetDeviceRegistration.md)
-
 [Set-IntersightAssetDeviceRegistration](./Set-IntersightAssetDeviceRegistration.md)
+
+[Get-IntersightAssetDeviceRegistration](./Get-IntersightAssetDeviceRegistration.md)
 

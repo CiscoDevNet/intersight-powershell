@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
+[New-IntersightSmtpPolicy](./New-IntersightSmtpPolicy.md)
 
 [Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
 
-[New-IntersightSmtpPolicy](./New-IntersightSmtpPolicy.md)
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
 

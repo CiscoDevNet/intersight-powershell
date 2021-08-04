@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareHbaDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareHbaDescriptor](./Get-IntersightFirmwareHbaDescriptor.md)
-
 [Set-IntersightFirmwareHbaDescriptor](./Set-IntersightFirmwareHbaDescriptor.md)
 
 [Remove-IntersightFirmwareHbaDescriptor](./Remove-IntersightFirmwareHbaDescriptor.md)
+
+[Get-IntersightFirmwareHbaDescriptor](./Get-IntersightFirmwareHbaDescriptor.md)

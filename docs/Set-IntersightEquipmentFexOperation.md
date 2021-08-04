@@ -19,7 +19,7 @@ Set-IntersightEquipmentFexOperation [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentFexOperation&amp;apos; resource.
+Update a &apos;EquipmentFexOperation&apos; resource.
 
 ## PARAMETERS
 

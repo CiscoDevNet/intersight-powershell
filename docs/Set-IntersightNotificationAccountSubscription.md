@@ -19,7 +19,7 @@ Set-IntersightNotificationAccountSubscription [-Actions< List<NotificationAction
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;NotificationAccountSubscription&amp;apos; resource.
+Update a &apos;NotificationAccountSubscription&apos; resource.
 
 ## PARAMETERS
 

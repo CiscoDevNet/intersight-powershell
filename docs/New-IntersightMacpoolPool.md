@@ -19,7 +19,7 @@ New-IntersightMacpoolPool [-AdditionalProperties< Dictionary<string,object>>][-A
 ```
 
 ## DESCRIPTION
-Create a &apos;MacpoolPool&apos; resource.
+Create a &amp;apos;MacpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewPassword
-New password that the user&apos;s password should be changed to.
+New password that the user&amp;apos;s password should be changed to.
 
 ```yaml
 Type: string
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User&amp;apos;s current valid passsord.
+User&apos;s current valid passsord.
 
 Note :- Use Initialize-Intersightbyte to create the object of complex type byte
 

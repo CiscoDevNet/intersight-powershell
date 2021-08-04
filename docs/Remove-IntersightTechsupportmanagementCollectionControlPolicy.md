@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightTechsupportmanagementCollectionControlPolicy](./Set-IntersightTechsupportmanagementCollectionControlPolicy.md)
+
 [Get-IntersightTechsupportmanagementCollectionControlPolicy](./Get-IntersightTechsupportmanagementCollectionControlPolicy.md)
 
 [New-IntersightTechsupportmanagementCollectionControlPolicy](./New-IntersightTechsupportmanagementCollectionControlPolicy.md)
-
-[Set-IntersightTechsupportmanagementCollectionControlPolicy](./Set-IntersightTechsupportmanagementCollectionControlPolicy.md)
 

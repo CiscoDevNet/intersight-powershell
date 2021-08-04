@@ -8,6 +8,55 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set GraphicsController.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsController")]
+    public class SetIntersightGraphicsController:SetCmdletBase
+	{
+		public SetIntersightGraphicsController()
+		{
+			ApiInstance = new GraphicsApi(Config);
+            ModelObject = new GraphicsController();
+            MethodName = "UpdateGraphicsControllerWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get GraphicsCard.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightGraphicsCard", DefaultParameterSetName = "CmdletParam")]
@@ -16,7 +65,19 @@ namespace Intersight.PowerShell
 		public GetIntersightGraphicsCard()
 		{
 			ApiInstance = new GraphicsApi(Config);
-            MethodName = "GetGraphicsCardList";
+            MethodName = "GetGraphicsCardListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get GraphicsController.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightGraphicsController", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightGraphicsController:GetCmdletBase
+	{
+		public GetIntersightGraphicsController()
+		{
+			ApiInstance = new GraphicsApi(Config);
+            MethodName = "GetGraphicsControllerListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -29,7 +90,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new GraphicsApi(Config);
             ModelObject = new GraphicsCard();
-            MethodName = "UpdateGraphicsCard";
+            MethodName = "UpdateGraphicsCardWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -73,67 +134,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string NumGpus {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get GraphicsController.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightGraphicsController", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightGraphicsController:GetCmdletBase
-	{
-		public GetIntersightGraphicsController()
-		{
-			ApiInstance = new GraphicsApi(Config);
-            MethodName = "GetGraphicsControllerList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set GraphicsController.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsController")]
-    public class SetIntersightGraphicsController:SetCmdletBase
-	{
-		public SetIntersightGraphicsController()
-		{
-			ApiInstance = new GraphicsApi(Config);
-            ModelObject = new GraphicsController();
-            MethodName = "UpdateGraphicsController";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
             get;
             set;
         }

@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryPolicy [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryPolicy&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -244,11 +244,11 @@ PS C:\> Set-IntersightMemoryPersistentMemoryPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
+
 [Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
 
 [New-IntersightMemoryPersistentMemoryPolicy](./New-IntersightMemoryPersistentMemoryPolicy.md)
-
-[Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
 
 [Initialize-IntersightMemoryPersistentMemoryGoal](./Initialize-IntersightMemoryPersistentMemoryGoal.md)
 

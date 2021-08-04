@@ -127,8 +127,8 @@ PS C:\> Set-IntersightCapabilityIoCardCapabilityDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityIoCardCapabilityDef](./Remove-IntersightCapabilityIoCardCapabilityDef.md)
+[Get-IntersightCapabilityIoCardCapabilityDef](./Get-IntersightCapabilityIoCardCapabilityDef.md)
 
 [New-IntersightCapabilityIoCardCapabilityDef](./New-IntersightCapabilityIoCardCapabilityDef.md)
 
-[Get-IntersightCapabilityIoCardCapabilityDef](./Get-IntersightCapabilityIoCardCapabilityDef.md)
+[Remove-IntersightCapabilityIoCardCapabilityDef](./Remove-IntersightCapabilityIoCardCapabilityDef.md)

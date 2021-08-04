@@ -19,7 +19,7 @@ New-IntersightFabricSwitchClusterProfile [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricSwitchClusterProfile&amp;apos; resource.
+Create a &apos;FabricSwitchClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -198,6 +198,6 @@ PS C:\> New-IntersightFabricSwitchClusterProfile
 
 [Get-IntersightFabricSwitchClusterProfile](./Get-IntersightFabricSwitchClusterProfile.md)
 
-[Set-IntersightFabricSwitchClusterProfile](./Set-IntersightFabricSwitchClusterProfile.md)
-
 [Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)
+
+[Set-IntersightFabricSwitchClusterProfile](./Set-IntersightFabricSwitchClusterProfile.md)

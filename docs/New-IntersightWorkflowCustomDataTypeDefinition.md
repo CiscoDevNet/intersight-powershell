@@ -19,7 +19,7 @@ New-IntersightWorkflowCustomDataTypeDefinition [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowCustomDataTypeDefinition&apos; resource.
+Create a &amp;apos;WorkflowCustomDataTypeDefinition&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A human-friendly description of this custom data type indicating it&apos;s domain and usage.
+A human-friendly description of this custom data type indicating it&amp;apos;s domain and usage.
 
 ```yaml
 Type: string
@@ -226,11 +226,11 @@ PS C:\> New-IntersightWorkflowCustomDataTypeDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
+
 [Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
-
-[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Initialize-IntersightWorkflowParameterSet](./Initialize-IntersightWorkflowParameterSet.md)
 

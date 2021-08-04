@@ -8,28 +8,71 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get OsDistribution.</para>
+    /// <para type="synopsis">This is the cmdlet to New OsTemplateFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsDistribution", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightOsDistribution:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightOsTemplateFile")]
+    public class NewIntersightOsTemplateFile:NewCmdletBase
 	{
-		public GetIntersightOsDistribution()
+		public NewIntersightOsTemplateFile()
 		{
 			ApiInstance = new OsApi(Config);
-            MethodName = "GetOsDistributionList";
+            ModelObject = new OsTemplateFile();
+            MethodName = "CreateOsTemplateFileWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get OsSupportedVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsSupportedVersion", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightOsSupportedVersion:GetCmdletBase
-	{
-		public GetIntersightOsSupportedVersion()
-		{
-			ApiInstance = new OsApi(Config);
-            MethodName = "GetOsSupportedVersionList";
-		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the OS Template File that user uploads for unattended installation."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Placeholders {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The content of the entire template file is stored as value. The content\ncan either be a static file content or a template content.\nThe template is expected to conform to the golang template syntax. \nThe placeholders, if any, would be populated and the values provided would be \nused to populate this template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TemplateContent {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsConfigurationFile.</para>
@@ -40,7 +83,7 @@ namespace Intersight.PowerShell
 		public GetIntersightOsConfigurationFile()
 		{
 			ApiInstance = new OsApi(Config);
-            MethodName = "GetOsConfigurationFileList";
+            MethodName = "GetOsConfigurationFileListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -53,7 +96,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OsApi(Config);
             ModelObject = new OsConfigurationFile();
-            MethodName = "CreateOsConfigurationFile";
+            MethodName = "CreateOsConfigurationFileWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -147,16 +190,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New OsOsSupport.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove OsConfigurationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsOsSupport")]
-    public class NewIntersightOsOsSupport:NewCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightOsConfigurationFile")]
+    public class RemoveIntersightOsConfigurationFile:RemoveCmdletBase
 	{
-		public NewIntersightOsOsSupport()
+		public RemoveIntersightOsConfigurationFile()
 		{
 			ApiInstance = new OsApi(Config);
-            ModelObject = new OsOsSupport();
-            MethodName = "CreateOsOsSupport";
+            MethodName = "DeleteOsConfigurationFileWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set OsConfigurationFile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightOsConfigurationFile")]
+    public class SetIntersightOsConfigurationFile:SetCmdletBase
+	{
+		public SetIntersightOsConfigurationFile()
+		{
+			ApiInstance = new OsApi(Config);
+            ModelObject = new OsConfigurationFile();
+            MethodName = "UpdateOsConfigurationFileWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -168,20 +223,74 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// <para type="description">"A reference to a osCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsCatalogRelationship Catalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the OS ConfigurationFile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hclOperatingSystem resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HclOperatingSystemRelationship> Distributions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The content of the entire configuration file is stored as value. The content\ncan either be a static file content or a template content.\nThe template is expected to conform to the golang template syntax. The values\nfrom os.Answers properties will be used to populate this template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FileContent {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internal flag is set to true when configuration file is uploaded from OS Install wizard. Internal Configuration files will not be displayed in Answer Management Page."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Internal {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The version of the Operating System to be validated. The version should be as per HCL."</para>
+        /// <para type="description">"The name of the OS ConfigurationFile that uniquely identifies the configuration file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9\\._\\-]+$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string OsVersion {
+        public List<OsPlaceHolder> Placeholders {
             get;
             set;
         }
@@ -196,6 +305,30 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get OsDistribution.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightOsDistribution", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightOsDistribution:GetCmdletBase
+	{
+		public GetIntersightOsDistribution()
+		{
+			ApiInstance = new OsApi(Config);
+            MethodName = "GetOsDistributionListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get OsCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightOsCatalog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightOsCatalog:GetCmdletBase
+	{
+		public GetIntersightOsCatalog()
+		{
+			ApiInstance = new OsApi(Config);
+            MethodName = "GetOsCatalogListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsBulkInstallInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightOsBulkInstallInfo", DefaultParameterSetName = "CmdletParam")]
@@ -204,7 +337,7 @@ namespace Intersight.PowerShell
 		public GetIntersightOsBulkInstallInfo()
 		{
 			ApiInstance = new OsApi(Config);
-            MethodName = "GetOsBulkInstallInfoList";
+            MethodName = "GetOsBulkInstallInfoListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -217,7 +350,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OsApi(Config);
             ModelObject = new OsBulkInstallInfo();
-            MethodName = "CreateOsBulkInstallInfo";
+            MethodName = "CreateOsBulkInstallInfoWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -337,7 +470,7 @@ namespace Intersight.PowerShell
 		public GetIntersightOsInstall()
 		{
 			ApiInstance = new OsApi(Config);
-            MethodName = "GetOsInstallList";
+            MethodName = "GetOsInstallListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -350,7 +483,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OsApi(Config);
             ModelObject = new OsInstall();
-            MethodName = "CreateOsInstall";
+            MethodName = "CreateOsInstallWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -498,143 +631,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get OsCatalog.</para>
+    /// <para type="synopsis">This is the cmdlet to New OsOsSupport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsCatalog", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightOsCatalog:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightOsOsSupport")]
+    public class NewIntersightOsOsSupport:NewCmdletBase
 	{
-		public GetIntersightOsCatalog()
+		public NewIntersightOsOsSupport()
 		{
 			ApiInstance = new OsApi(Config);
-            MethodName = "GetOsCatalogList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove OsConfigurationFile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOsConfigurationFile")]
-    public class RemoveIntersightOsConfigurationFile:RemoveCmdletBase
-	{
-		public RemoveIntersightOsConfigurationFile()
-		{
-			ApiInstance = new OsApi(Config);
-            MethodName = "DeleteOsConfigurationFile";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set OsConfigurationFile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOsConfigurationFile")]
-    public class SetIntersightOsConfigurationFile:SetCmdletBase
-	{
-		public SetIntersightOsConfigurationFile()
-		{
-			ApiInstance = new OsApi(Config);
-            ModelObject = new OsConfigurationFile();
-            MethodName = "UpdateOsConfigurationFile";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a osCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsCatalogRelationship Catalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the OS ConfigurationFile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hclOperatingSystem resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclOperatingSystemRelationship> Distributions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The content of the entire configuration file is stored as value. The content\ncan either be a static file content or a template content.\nThe template is expected to conform to the golang template syntax. The values\nfrom os.Answers properties will be used to populate this template."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FileContent {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internal flag is set to true when configuration file is uploaded from OS Install wizard. Internal Configuration files will not be displayed in Answer Management Page."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Internal {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the OS ConfigurationFile that uniquely identifies the configuration file."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9\\._\\-]+$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<OsPlaceHolder> Placeholders {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New OsTemplateFile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsTemplateFile")]
-    public class NewIntersightOsTemplateFile:NewCmdletBase
-	{
-		public NewIntersightOsTemplateFile()
-		{
-			ApiInstance = new OsApi(Config);
-            ModelObject = new OsTemplateFile();
-            MethodName = "CreateOsTemplateFile";
+            ModelObject = new OsOsSupport();
+            MethodName = "CreateOsOsSupportWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -655,20 +661,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The name of the OS Template File that user uploads for unattended installation."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"The version of the Operating System to be validated. The version should be as per HCL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<string> Placeholders {
+        public string OsVersion {
             get;
             set;
         }
@@ -681,15 +678,18 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The content of the entire template file is stored as value. The content\ncan either be a static file content or a template content.\nThe template is expected to conform to the golang template syntax. \nThe placeholders, if any, would be populated and the values provided would be \nused to populate this template."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TemplateContent {
-            get;
-            set;
-        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get OsSupportedVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightOsSupportedVersion", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightOsSupportedVersion:GetCmdletBase
+	{
+		public GetIntersightOsSupportedVersion()
+		{
+			ApiInstance = new OsApi(Config);
+            MethodName = "GetOsSupportedVersionListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsValidInstallTarget.</para>
@@ -701,7 +701,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OsApi(Config);
             ModelObject = new OsValidInstallTarget();
-            MethodName = "CreateOsValidInstallTarget";
+            MethodName = "CreateOsValidInstallTargetWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -709,6 +709,15 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<OsInstallTargetResponse> InstallTargets {
             get;
             set;
         }
@@ -763,6 +772,15 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public List<ComputePhysicalRelationship> Servers {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flag to denote the source of the request.\nIf the call is from Orchestration UI, only the flat list of Install targets can be sent as response."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Src {
             get;
             set;
         }

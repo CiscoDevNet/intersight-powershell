@@ -19,7 +19,7 @@ Set-IntersightTamAdvisoryInfo [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Update a &apos;TamAdvisoryInfo&apos; resource.
+Update a &amp;apos;TamAdvisoryInfo&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -130,8 +130,8 @@ PS C:\> Set-IntersightTamAdvisoryInfo
 
 ## RELATED LINKS
 
-[Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)
-
 [Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)
 
 [New-IntersightTamAdvisoryInfo](./New-IntersightTamAdvisoryInfo.md)
+
+[Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)

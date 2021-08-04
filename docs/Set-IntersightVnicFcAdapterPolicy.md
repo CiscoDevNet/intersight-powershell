@@ -19,7 +19,7 @@ Set-IntersightVnicFcAdapterPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicFcAdapterPolicy&amp;apos; resource.
+Update a &apos;VnicFcAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -339,11 +339,11 @@ PS C:\> Set-IntersightVnicFcAdapterPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicFcAdapterPolicy](./Remove-IntersightVnicFcAdapterPolicy.md)
-
 [Get-IntersightVnicFcAdapterPolicy](./Get-IntersightVnicFcAdapterPolicy.md)
 
 [New-IntersightVnicFcAdapterPolicy](./New-IntersightVnicFcAdapterPolicy.md)
+
+[Remove-IntersightVnicFcAdapterPolicy](./Remove-IntersightVnicFcAdapterPolicy.md)
 
 [Initialize-IntersightVnicFcErrorRecoverySettings](./Initialize-IntersightVnicFcErrorRecoverySettings.md)
 

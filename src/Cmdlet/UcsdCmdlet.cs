@@ -16,7 +16,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightUcsdBackupInfo()
 		{
 			ApiInstance = new UcsdApi(Config);
-            MethodName = "DeleteUcsdBackupInfo";
+            MethodName = "DeleteUcsdBackupInfoWithHttpInfo";
 		}
     }
     /// <summary>
@@ -28,7 +28,7 @@ namespace Intersight.PowerShell
 		public GetIntersightUcsdBackupInfo()
 		{
 			ApiInstance = new UcsdApi(Config);
-            MethodName = "GetUcsdBackupInfoList";
+            MethodName = "GetUcsdBackupInfoListWithHttpInfo";
 		}
     }
 }

@@ -19,7 +19,7 @@ New-IntersightKubernetesClusterAddonProfile [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesClusterAddonProfile&amp;apos; resource.
+Create a &apos;KubernetesClusterAddonProfile&apos; resource.
 
 ## PARAMETERS
 

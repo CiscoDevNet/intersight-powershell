@@ -19,7 +19,7 @@ New-IntersightFeedbackFeedbackPost [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FeedbackFeedbackPost&amp;apos; resource.
+Create a &apos;FeedbackFeedbackPost&apos; resource.
 
 ## PARAMETERS
 

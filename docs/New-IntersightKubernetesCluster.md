@@ -19,7 +19,7 @@ New-IntersightKubernetesCluster [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesCluster&amp;apos; resource.
+Create a &apos;KubernetesCluster&apos; resource.
 
 ## PARAMETERS
 

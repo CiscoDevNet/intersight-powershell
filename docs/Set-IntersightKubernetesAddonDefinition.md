@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< List<string>>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>][-Version< string>]
+Set-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< List<string>>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Platforms< List<string>>][-Tags< List<MoTag>>][-Version< string>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAddonDefinition&amp;apos; resource.
+Update a &apos;KubernetesAddonDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -224,6 +224,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Platforms
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -283,8 +298,8 @@ PS C:\> Set-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
-
 [Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
 
 [New-IntersightKubernetesAddonDefinition](./New-IntersightKubernetesAddonDefinition.md)
+
+[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)

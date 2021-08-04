@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new IpmioverlanApi(Config);
             ModelObject = new IpmioverlanPolicy();
-            MethodName = "UpdateIpmioverlanPolicy";
+            MethodName = "UpdateIpmioverlanPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -119,7 +119,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightIpmioverlanPolicy()
 		{
 			ApiInstance = new IpmioverlanApi(Config);
-            MethodName = "DeleteIpmioverlanPolicy";
+            MethodName = "DeleteIpmioverlanPolicyWithHttpInfo";
 		}
     }
     /// <summary>
@@ -132,7 +132,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new IpmioverlanApi(Config);
             ModelObject = new IpmioverlanPolicy();
-            MethodName = "CreateIpmioverlanPolicy";
+            MethodName = "CreateIpmioverlanPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -234,7 +234,7 @@ namespace Intersight.PowerShell
 		public GetIntersightIpmioverlanPolicy()
 		{
 			ApiInstance = new IpmioverlanApi(Config);
-            MethodName = "GetIpmioverlanPolicyList";
+            MethodName = "GetIpmioverlanPolicyListWithHttpInfo";
 		}
     }
 }

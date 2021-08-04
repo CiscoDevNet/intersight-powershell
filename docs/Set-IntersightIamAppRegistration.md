@@ -19,7 +19,7 @@ Set-IntersightIamAppRegistration [-AdditionalProperties< Dictionary<string,objec
 ```
 
 ## DESCRIPTION
-Update a &apos;IamAppRegistration&apos; resource.
+Update a &amp;apos;IamAppRegistration&amp;apos; resource.
 
 ## PARAMETERS
 

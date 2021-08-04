@@ -19,7 +19,7 @@ Set-IntersightHyperflexProxySettingPolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexProxySettingPolicy&amp;apos; resource.
+Update a &apos;HyperflexProxySettingPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -223,8 +223,8 @@ PS C:\> Set-IntersightHyperflexProxySettingPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexProxySettingPolicy](./Remove-IntersightHyperflexProxySettingPolicy.md)
-
 [Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
 
 [New-IntersightHyperflexProxySettingPolicy](./New-IntersightHyperflexProxySettingPolicy.md)
+
+[Remove-IntersightHyperflexProxySettingPolicy](./Remove-IntersightHyperflexProxySettingPolicy.md)

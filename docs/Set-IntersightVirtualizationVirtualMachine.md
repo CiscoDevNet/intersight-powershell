@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachin
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVirtualMachine&apos; resource.
+Update a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -420,11 +420,11 @@ PS C:\> Set-IntersightVirtualizationVirtualMachine
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
-
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
 [New-IntersightVirtualizationVirtualMachine](./New-IntersightVirtualizationVirtualMachine.md)
+
+[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
 
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
 

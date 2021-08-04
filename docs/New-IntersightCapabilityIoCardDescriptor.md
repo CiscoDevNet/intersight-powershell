@@ -19,7 +19,7 @@ New-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityIoCardDescriptor&amp;apos; resource.
+Create a &apos;CapabilityIoCardDescriptor&apos; resource.
 
 ## PARAMETERS
 

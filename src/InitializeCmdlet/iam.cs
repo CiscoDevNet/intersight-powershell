@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamAccountPermissions.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamEndPointPasswordProperties.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamAccountPermissions")]
-    public class InitializeIntersightIamAccountPermissions:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIamEndPointPasswordProperties")]
+    public class InitializeIntersightIamEndPointPasswordProperties:PSCmdlet
 	{
-		public InitializeIntersightIamAccountPermissions()
+		public InitializeIntersightIamEndPointPasswordProperties()
 		{
-            ClassId = IamAccountPermissions.ClassIdEnum.IamAccountPermissions;
-            ObjectType = IamAccountPermissions.ObjectTypeEnum.IamAccountPermissions;
+            ClassId = IamEndPointPasswordProperties.ClassIdEnum.IamEndPointPasswordProperties;
+            ObjectType = IamEndPointPasswordProperties.ObjectTypeEnum.IamEndPointPasswordProperties;
             
 		}
         // <summary>
@@ -33,7 +33,52 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamAccountPermissions.ClassIdEnum ClassId {
+        public IamEndPointPasswordProperties.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables password expiry on the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool EnablePasswordExpiry {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables a strong password policy. Strong password requirements: A. The password must have a minimum of 8 and a maximum of 20 characters. B. The password must not contain the User's Name. C. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool EnforceStrongPassword {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User password will always be sent to endpoint device. If the option is not selected, then user password will be sent to endpoint device for new users and if user password is changed for existing users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ForceSendPassword {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Time period until when you can use the existing password, after it expires."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long GracePeriod {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The duration after which the password will expire."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NotificationPeriod {
             get;
             set;
         }
@@ -42,47 +87,80 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamAccountPermissions.ObjectTypeEnum ObjectType {
+        public IamEndPointPasswordProperties.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"Set time period for password expiration. Value should be greater than notification period and grace period."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 3650)]
+        public long PasswordExpiryDuration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Tracks password change history. Specifies in number of instances, that the new password was already used."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<Model.IamPermissionReference> Permissions {
+        public long PasswordHistory {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IamAccountPermissions initObject = new Intersight.Model.IamAccountPermissions();
+             Intersight.Model.IamEndPointPasswordProperties initObject = new Intersight.Model.IamEndPointPasswordProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Permissions"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnablePasswordExpiry"))
             {
-                initObject.Permissions = this.Permissions;
+                initObject.EnablePasswordExpiry = this.EnablePasswordExpiry;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnforceStrongPassword"))
+            {
+                initObject.EnforceStrongPassword = this.EnforceStrongPassword;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ForceSendPassword"))
+            {
+                initObject.ForceSendPassword = this.ForceSendPassword;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GracePeriod"))
+            {
+                initObject.GracePeriod = this.GracePeriod;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NotificationPeriod"))
+            {
+                initObject.NotificationPeriod = this.NotificationPeriod;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PasswordExpiryDuration"))
+            {
+                initObject.PasswordExpiryDuration = this.PasswordExpiryDuration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PasswordHistory"))
+            {
+                initObject.PasswordHistory = this.PasswordHistory;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamSsoSessionAttributes.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamClientMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamSsoSessionAttributes")]
-    public class InitializeIntersightIamSsoSessionAttributes:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIamClientMeta")]
+    public class InitializeIntersightIamClientMeta:PSCmdlet
 	{
-		public InitializeIntersightIamSsoSessionAttributes()
+		public InitializeIntersightIamClientMeta()
 		{
-            ClassId = IamSsoSessionAttributes.ClassIdEnum.IamSsoSessionAttributes;
-            ObjectType = IamSsoSessionAttributes.ObjectTypeEnum.IamSsoSessionAttributes;
+            ClassId = IamClientMeta.ClassIdEnum.IamClientMeta;
+            ObjectType = IamClientMeta.ObjectTypeEnum.IamClientMeta;
             
 		}
         // <summary>
@@ -99,7 +177,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamSsoSessionAttributes.ClassIdEnum ClassId {
+        public IamClientMeta.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Parsed device model from raw User-Agent."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DeviceModel {
             get;
             set;
         }
@@ -108,73 +195,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamSsoSessionAttributes.ObjectTypeEnum ObjectType {
+        public IamClientMeta.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The value of the \"User-Agent\" HTTP header, as sent by the HTTP client when it initiate a session to Intersight. This can be used to identify the client operating system, browser type and browser version.\nExample - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\nIt is set when User successfully passed OAuth login flow and receives Access Token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string UserAgent {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IamSsoSessionAttributes initObject = new Intersight.Model.IamSsoSessionAttributes();
+             Intersight.Model.IamClientMeta initObject = new Intersight.Model.IamClientMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamPermissionReference.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamPermissionReference")]
-    public class InitializeIntersightIamPermissionReference:PSCmdlet
-	{
-		public InitializeIntersightIamPermissionReference()
-		{
-            ClassId = IamPermissionReference.ClassIdEnum.IamPermissionReference;
-            ObjectType = IamPermissionReference.ObjectTypeEnum.IamPermissionReference;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamPermissionReference.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamPermissionReference.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.IamPermissionReference initObject = new Intersight.Model.IamPermissionReference();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceModel"))
             {
-                initObject.AdditionalProperties = this.AdditionalProperties;
+                initObject.DeviceModel = this.DeviceModel;
             }
-            initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserAgent"))
+            {
+                initObject.UserAgent = this.UserAgent;
+            }
             WriteObject(initObject);
         }
 
@@ -313,6 +364,99 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamRule")]
+    public class InitializeIntersightIamRule:PSCmdlet
+	{
+		public InitializeIntersightIamRule()
+		{
+            ClassId = IamRule.ClassIdEnum.IamRule;
+            ObjectType = IamRule.ObjectTypeEnum.IamRule;
+            RuleType = IamRule.RuleTypeEnum.Ip;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamRule.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The flag represents if IP addresses in the rule is IPv4 or IPv6."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool IpV6 {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamRule.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the IP address. Currently three types are supported, ie IP, CIDR range and IP range.\n* `Ip` - The IP address rule type is IP.\n* `Cidr` - The IP address rule type is CIDR range.\n* `IpRange` - The IP address rule type is IP range."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamRule.RuleTypeEnum RuleType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> RuleValue {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.IamRule initObject = new Intersight.Model.IamRule();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpV6"))
+            {
+                initObject.IpV6 = this.IpV6;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RuleType"))
+            {
+                initObject.RuleType = this.RuleType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RuleValue"))
+            {
+                initObject.RuleValue = this.RuleValue;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamLdapDnsParameters.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamLdapDnsParameters")]
@@ -406,16 +550,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamRule.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamPermissionReference.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamRule")]
-    public class InitializeIntersightIamRule:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIamPermissionReference")]
+    public class InitializeIntersightIamPermissionReference:PSCmdlet
 	{
-		public InitializeIntersightIamRule()
+		public InitializeIntersightIamPermissionReference()
 		{
-            ClassId = IamRule.ClassIdEnum.IamRule;
-            ObjectType = IamRule.ObjectTypeEnum.IamRule;
-            RuleType = IamRule.RuleTypeEnum.Ip;
+            ClassId = IamPermissionReference.ClassIdEnum.IamPermissionReference;
+            ObjectType = IamPermissionReference.ObjectTypeEnum.IamPermissionReference;
             
 		}
         // <summary>
@@ -432,16 +575,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamRule.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The flag represents if IP addresses in the rule is IPv4 or IPv6."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool IpV6 {
+        public IamPermissionReference.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -450,16 +584,60 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamRule.ObjectTypeEnum ObjectType {
+        public IamPermissionReference.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.IamPermissionReference initObject = new Intersight.Model.IamPermissionReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamAccountPermissions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamAccountPermissions")]
+    public class InitializeIntersightIamAccountPermissions:PSCmdlet
+	{
+		public InitializeIntersightIamAccountPermissions()
+		{
+            ClassId = IamAccountPermissions.ClassIdEnum.IamAccountPermissions;
+            ObjectType = IamAccountPermissions.ObjectTypeEnum.IamAccountPermissions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The type of the IP address. Currently three types are supported, ie IP, CIDR range and IP range.\n* `Ip` - The IP address rule type is IP.\n* `Cidr` - The IP address rule type is CIDR range.\n* `IpRange` - The IP address rule type is IP range."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IamRule.RuleTypeEnum RuleType {
+        public IamAccountPermissions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamAccountPermissions.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -468,31 +646,273 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<string> RuleValue {
+        public List<Model.IamPermissionReference> Permissions {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IamRule initObject = new Intersight.Model.IamRule();
+             Intersight.Model.IamAccountPermissions initObject = new Intersight.Model.IamAccountPermissions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpV6"))
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Permissions"))
             {
-                initObject.IpV6 = this.IpV6;
+                initObject.Permissions = this.Permissions;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamPermissionToRoles.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamPermissionToRoles")]
+    public class InitializeIntersightIamPermissionToRoles:PSCmdlet
+	{
+		public InitializeIntersightIamPermissionToRoles()
+		{
+            ClassId = IamPermissionToRoles.ClassIdEnum.IamPermissionToRoles;
+            ObjectType = IamPermissionToRoles.ObjectTypeEnum.IamPermissionToRoles;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamPermissionToRoles.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamPermissionToRoles.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoMoRef> Roles {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.IamPermissionToRoles initObject = new Intersight.Model.IamPermissionToRoles();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Roles"))
+            {
+                initObject.Roles = this.Roles;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamSsoSessionAttributes.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamSsoSessionAttributes")]
+    public class InitializeIntersightIamSsoSessionAttributes:PSCmdlet
+	{
+		public InitializeIntersightIamSsoSessionAttributes()
+		{
+            ClassId = IamSsoSessionAttributes.ClassIdEnum.IamSsoSessionAttributes;
+            ObjectType = IamSsoSessionAttributes.ObjectTypeEnum.IamSsoSessionAttributes;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamSsoSessionAttributes.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamSsoSessionAttributes.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.IamSsoSessionAttributes initObject = new Intersight.Model.IamSsoSessionAttributes();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamSamlSpConnection.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamSamlSpConnection")]
+    public class InitializeIntersightIamSamlSpConnection:PSCmdlet
+	{
+		public InitializeIntersightIamSamlSpConnection()
+		{
+            ClassId = IamSamlSpConnection.ClassIdEnum.IamSamlSpConnection;
+            ObjectType = IamSamlSpConnection.ObjectTypeEnum.IamSamlSpConnection;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamSamlSpConnection.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SingleLogout Services binding in IdP Metadata."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string IdentityProviderSloBinding {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SingleLogOut Services location in IdP Metadata."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string IdentityProviderSloUrl {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SingleSignOn Services binding in IdP Metadata."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string IdentityProviderSsoBinding {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SingleSignOn Services location in IdP Metadata."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string IdentityProviderSsoUrl {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Decoded Certificate from IdP Metatdata."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object IdpCertificateStore {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamSamlSpConnection.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"WantAuthnRequestsSigned from IdP Metadata."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool SignAuthnRequests {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.IamSamlSpConnection initObject = new Intersight.Model.IamSamlSpConnection();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdentityProviderSloBinding"))
+            {
+                initObject.IdentityProviderSloBinding = this.IdentityProviderSloBinding;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdentityProviderSloUrl"))
+            {
+                initObject.IdentityProviderSloUrl = this.IdentityProviderSloUrl;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdentityProviderSsoBinding"))
+            {
+                initObject.IdentityProviderSsoBinding = this.IdentityProviderSsoBinding;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdentityProviderSsoUrl"))
+            {
+                initObject.IdentityProviderSsoUrl = this.IdentityProviderSsoUrl;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdpCertificateStore"))
+            {
+                initObject.IdpCertificateStore = this.IdpCertificateStore;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RuleType"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("SignAuthnRequests"))
             {
-                initObject.RuleType = this.RuleType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RuleValue"))
-            {
-                initObject.RuleValue = this.RuleValue;
+                initObject.SignAuthnRequests = this.SignAuthnRequests;
             }
             WriteObject(initObject);
         }
@@ -703,295 +1123,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
             {
                 initObject.Timeout = this.Timeout;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamPermissionToRoles.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamPermissionToRoles")]
-    public class InitializeIntersightIamPermissionToRoles:PSCmdlet
-	{
-		public InitializeIntersightIamPermissionToRoles()
-		{
-            ClassId = IamPermissionToRoles.ClassIdEnum.IamPermissionToRoles;
-            ObjectType = IamPermissionToRoles.ObjectTypeEnum.IamPermissionToRoles;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamPermissionToRoles.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamPermissionToRoles.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.MoMoRef> Roles {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.IamPermissionToRoles initObject = new Intersight.Model.IamPermissionToRoles();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Roles"))
-            {
-                initObject.Roles = this.Roles;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamClientMeta.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamClientMeta")]
-    public class InitializeIntersightIamClientMeta:PSCmdlet
-	{
-		public InitializeIntersightIamClientMeta()
-		{
-            ClassId = IamClientMeta.ClassIdEnum.IamClientMeta;
-            ObjectType = IamClientMeta.ObjectTypeEnum.IamClientMeta;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamClientMeta.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Parsed device model from raw User-Agent."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DeviceModel {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamClientMeta.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The value of the \"User-Agent\" HTTP header, as sent by the HTTP client when it initiate a session to Intersight. This can be used to identify the client operating system, browser type and browser version.\nExample - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36\nIt is set when User successfully passed OAuth login flow and receives Access Token."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string UserAgent {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.IamClientMeta initObject = new Intersight.Model.IamClientMeta();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceModel"))
-            {
-                initObject.DeviceModel = this.DeviceModel;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("UserAgent"))
-            {
-                initObject.UserAgent = this.UserAgent;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamEndPointPasswordProperties.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamEndPointPasswordProperties")]
-    public class InitializeIntersightIamEndPointPasswordProperties:PSCmdlet
-	{
-		public InitializeIntersightIamEndPointPasswordProperties()
-		{
-            ClassId = IamEndPointPasswordProperties.ClassIdEnum.IamEndPointPasswordProperties;
-            ObjectType = IamEndPointPasswordProperties.ObjectTypeEnum.IamEndPointPasswordProperties;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamEndPointPasswordProperties.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables password expiry on the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool EnablePasswordExpiry {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables a strong password policy. Strong password requirements: A. The password must have a minimum of 8 and a maximum of 20 characters. B. The password must not contain the User's Name. C. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool EnforceStrongPassword {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User password will always be sent to endpoint device. If the option is not selected, then user password will be sent to endpoint device for new users and if user password is changed for existing users."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool ForceSendPassword {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Time period until when you can use the existing password, after it expires."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long GracePeriod {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The duration after which the password will expire."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NotificationPeriod {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamEndPointPasswordProperties.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Set time period for password expiration. Value should be greater than notification period and grace period."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 3650)]
-        public long PasswordExpiryDuration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Tracks password change history. Specifies in number of instances, that the new password was already used."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long PasswordHistory {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.IamEndPointPasswordProperties initObject = new Intersight.Model.IamEndPointPasswordProperties();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EnablePasswordExpiry"))
-            {
-                initObject.EnablePasswordExpiry = this.EnablePasswordExpiry;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EnforceStrongPassword"))
-            {
-                initObject.EnforceStrongPassword = this.EnforceStrongPassword;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ForceSendPassword"))
-            {
-                initObject.ForceSendPassword = this.ForceSendPassword;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("GracePeriod"))
-            {
-                initObject.GracePeriod = this.GracePeriod;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NotificationPeriod"))
-            {
-                initObject.NotificationPeriod = this.NotificationPeriod;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PasswordExpiryDuration"))
-            {
-                initObject.PasswordExpiryDuration = this.PasswordExpiryDuration;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PasswordHistory"))
-            {
-                initObject.PasswordHistory = this.PasswordHistory;
             }
             WriteObject(initObject);
         }

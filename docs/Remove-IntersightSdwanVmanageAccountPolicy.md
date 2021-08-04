@@ -17,7 +17,7 @@ Remove-IntersightSdwanVmanageAccountPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SdwanVmanageAccountPolicy&apos; resource.
+Delete a &amp;apos;SdwanVmanageAccountPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

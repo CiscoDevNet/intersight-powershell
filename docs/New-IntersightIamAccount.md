@@ -19,7 +19,7 @@ New-IntersightIamAccount [-AdditionalProperties< Dictionary<string,object>>][-Mo
 ```
 
 ## DESCRIPTION
-Create a &apos;IamAccount&apos; resource.
+Create a &amp;apos;IamAccount&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ $manifestParam = @{
     Guid = "41ce1a70-9c4b-489f-a153-12fe49b7fe62"
     Author = "Cisco Systems"
     CompanyName = "Cisco Systems"
-    ModuleVersion = "1.0.9.4375"
+    ModuleVersion = "1.0.9.4403"
     Copyright = "(c) 2021 Cisco Systems, Inc. All rights reserved."
     LicenseUri = "https://www.apache.org/licenses/LICENSE-2.0.txt"
     ProjectUri = "https://github.com/CiscoDevNet/intersight-powershell"
@@ -26,7 +26,7 @@ $manifestParam = @{
     RequireLicenseAcceptance = $true
     PowerShellVersion = "7.1"
     Description = "Intersight Powershell module provides the cmdlets to manage, analyze, and automate the IT infrastructure in Intersight."
-    ReleaseNotes = "Intersight.PowerShell - Version 1.0.9.4375
+    ReleaseNotes = "Intersight.PowerShell - Version 1.0.9.4403
 
 Features:
 Intersight.PowerShell module provides,

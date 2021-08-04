@@ -17,7 +17,7 @@ Remove-IntersightSyslogPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SyslogPolicy&amp;apos; resource.
+Delete a &apos;SyslogPolicy&apos; resource.
 
 ## EXAMPLES
 

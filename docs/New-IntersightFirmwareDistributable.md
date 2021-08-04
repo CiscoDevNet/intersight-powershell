@@ -19,7 +19,7 @@ New-IntersightFirmwareDistributable [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareDistributable&apos; resource.
+Create a &amp;apos;FirmwareDistributable&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -470,11 +470,11 @@ PS C:\> New-IntersightFirmwareDistributable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
-
 [Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
 
 [Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
+
+[Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

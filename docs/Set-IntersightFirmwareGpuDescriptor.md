@@ -220,8 +220,8 @@ PS C:\> Set-IntersightFirmwareGpuDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
-
 [New-IntersightFirmwareGpuDescriptor](./New-IntersightFirmwareGpuDescriptor.md)
+
+[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
 
 [Remove-IntersightFirmwareGpuDescriptor](./Remove-IntersightFirmwareGpuDescriptor.md)

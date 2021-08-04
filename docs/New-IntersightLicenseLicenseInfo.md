@@ -145,6 +145,6 @@ PS C:\> New-IntersightLicenseLicenseInfo
 
 ## RELATED LINKS
 
-[Get-IntersightLicenseLicenseInfo](./Get-IntersightLicenseLicenseInfo.md)
-
 [Set-IntersightLicenseLicenseInfo](./Set-IntersightLicenseLicenseInfo.md)
+
+[Get-IntersightLicenseLicenseInfo](./Get-IntersightLicenseLicenseInfo.md)

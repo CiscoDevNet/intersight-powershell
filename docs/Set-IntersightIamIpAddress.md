@@ -19,7 +19,7 @@ Set-IntersightIamIpAddress [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamIpAddress&amp;apos; resource.
+Update a &apos;IamIpAddress&apos; resource.
 
 ## PARAMETERS
 
@@ -127,8 +127,8 @@ PS C:\> Set-IntersightIamIpAddress
 
 ## RELATED LINKS
 
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
-
 [Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
 
 [New-IntersightIamIpAddress](./New-IntersightIamIpAddress.md)
+
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)

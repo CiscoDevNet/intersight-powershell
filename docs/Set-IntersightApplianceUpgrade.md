@@ -19,7 +19,7 @@ Set-IntersightApplianceUpgrade [-Account< IamAccountRelationship>][-AdditionalPr
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceUpgrade&amp;apos; resource.
+Update a &apos;ApplianceUpgrade&apos; resource.
 
 ## PARAMETERS
 

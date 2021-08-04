@@ -19,7 +19,7 @@ New-IntersightBulkMoMerger [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;BulkMoMerger&amp;apos; resource.
+Create a &apos;BulkMoMerger&apos; resource.
 
 ## PARAMETERS
 

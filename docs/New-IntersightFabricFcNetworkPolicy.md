@@ -178,8 +178,8 @@ PS C:\> New-IntersightFabricFcNetworkPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightFabricFcNetworkPolicy](./Get-IntersightFabricFcNetworkPolicy.md)
+
 [Set-IntersightFabricFcNetworkPolicy](./Set-IntersightFabricFcNetworkPolicy.md)
 
 [Remove-IntersightFabricFcNetworkPolicy](./Remove-IntersightFabricFcNetworkPolicy.md)
-
-[Get-IntersightFabricFcNetworkPolicy](./Get-IntersightFabricFcNetworkPolicy.md)

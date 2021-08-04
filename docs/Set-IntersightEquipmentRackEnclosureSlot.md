@@ -19,7 +19,7 @@ Set-IntersightEquipmentRackEnclosureSlot [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentRackEnclosureSlot&amp;apos; resource.
+Update a &apos;EquipmentRackEnclosureSlot&apos; resource.
 
 ## PARAMETERS
 

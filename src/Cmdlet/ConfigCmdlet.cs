@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConfigExportedItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConfigExportedItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConfigExportedItem:GetCmdletBase
-	{
-		public GetIntersightConfigExportedItem()
-		{
-			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigExportedItemList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConfigImportedItem.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightConfigImportedItem", DefaultParameterSetName = "CmdletParam")]
@@ -28,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightConfigImportedItem()
 		{
 			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigImportedItemList";
+            MethodName = "GetConfigImportedItemListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -40,7 +28,98 @@ namespace Intersight.PowerShell
 		public RemoveIntersightConfigImporter()
 		{
 			ApiInstance = new ConfigApi(Config);
-            MethodName = "DeleteConfigImporter";
+            MethodName = "DeleteConfigImporterWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New ConfigExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightConfigExporter")]
+    public class NewIntersightConfigExporter:NewCmdletBase
+	{
+		public NewIntersightConfigExporter()
+		{
+			ApiInstance = new ConfigApi(Config);
+            ModelObject = new ConfigExporter();
+            MethodName = "CreateConfigExporterWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<ConfigMoRef> Items {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An identifier for the exporter instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ConfigExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightConfigExporter", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConfigExporter:GetCmdletBase
+	{
+		public GetIntersightConfigExporter()
+		{
+			ApiInstance = new ConfigApi(Config);
+            MethodName = "GetConfigExporterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ConfigExportedItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightConfigExportedItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConfigExportedItem:GetCmdletBase
+	{
+		public GetIntersightConfigExportedItem()
+		{
+			ApiInstance = new ConfigApi(Config);
+            MethodName = "GetConfigExportedItemListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -52,7 +131,7 @@ namespace Intersight.PowerShell
 		public GetIntersightConfigImporter()
 		{
 			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigImporterList";
+            MethodName = "GetConfigImporterListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -65,7 +144,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ConfigApi(Config);
             ModelObject = new ConfigImporter();
-            MethodName = "CreateConfigImporter";
+            MethodName = "CreateConfigImporterWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -141,85 +220,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConfigExporter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConfigExporter", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConfigExporter:GetCmdletBase
-	{
-		public GetIntersightConfigExporter()
-		{
-			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigExporterList";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New ConfigExporter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightConfigExporter")]
-    public class NewIntersightConfigExporter:NewCmdletBase
-	{
-		public NewIntersightConfigExporter()
-		{
-			ApiInstance = new ConfigApi(Config);
-            ModelObject = new ConfigExporter();
-            MethodName = "CreateConfigExporter";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<ConfigMoRef> Items {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An identifier for the exporter instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ConfigExporter.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightConfigExporter")]
@@ -228,7 +228,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightConfigExporter()
 		{
 			ApiInstance = new ConfigApi(Config);
-            MethodName = "DeleteConfigExporter";
+            MethodName = "DeleteConfigExporterWithHttpInfo";
 		}
     }
 }

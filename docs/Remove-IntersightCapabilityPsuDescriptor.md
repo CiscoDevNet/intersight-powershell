@@ -17,7 +17,7 @@ Remove-IntersightCapabilityPsuDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityPsuDescriptor&apos; resource.
+Delete a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

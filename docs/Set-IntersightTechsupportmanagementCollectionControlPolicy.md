@@ -112,8 +112,8 @@ PS C:\> Set-IntersightTechsupportmanagementCollectionControlPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightTechsupportmanagementCollectionControlPolicy](./Remove-IntersightTechsupportmanagementCollectionControlPolicy.md)
+
 [Get-IntersightTechsupportmanagementCollectionControlPolicy](./Get-IntersightTechsupportmanagementCollectionControlPolicy.md)
 
 [New-IntersightTechsupportmanagementCollectionControlPolicy](./New-IntersightTechsupportmanagementCollectionControlPolicy.md)
-
-[Remove-IntersightTechsupportmanagementCollectionControlPolicy](./Remove-IntersightTechsupportmanagementCollectionControlPolicy.md)

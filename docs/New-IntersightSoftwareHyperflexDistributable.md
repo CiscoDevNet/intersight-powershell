@@ -19,7 +19,7 @@ New-IntersightSoftwareHyperflexDistributable [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareHyperflexDistributable&amp;apos; resource.
+Create a &apos;SoftwareHyperflexDistributable&apos; resource.
 
 ## PARAMETERS
 

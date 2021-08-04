@@ -19,7 +19,7 @@ New-IntersightSdwanVmanageAccountPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &apos;SdwanVmanageAccountPolicy&apos; resource.
+Create a &amp;apos;SdwanVmanageAccountPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

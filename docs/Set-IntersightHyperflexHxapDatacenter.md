@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexHxapDatacenter [-AdditionalProperties< Dictionary<string,object>>][-Identity< string>][[-Moid]< string>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< List<MoTag>>][-Uuid< string>]
+Set-IntersightHyperflexHxapDatacenter [-AdditionalProperties< Dictionary<string,object>>][[-Moid]< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< List<MoTag>>]
 
 ```
 
@@ -38,21 +38,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Identity
-The internally generated identity of this placement. This entity is not manipulated by users. It aids in uniquely identifying the placement object.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -62,21 +47,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the virtual machine placement. It is the name of the VPC (Virtual Private Cloud) in case of AWS\nvirtual machine, and datacenter name in case of VMware virtual machine.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
@@ -118,21 +88,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Uuid
-The uuid of this placement. The uuid is internally generated and not user specified.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -160,8 +115,8 @@ PS C:\> Set-IntersightHyperflexHxapDatacenter
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)
-
 [Get-IntersightHyperflexHxapDatacenter](./Get-IntersightHyperflexHxapDatacenter.md)
 
 [New-IntersightHyperflexHxapDatacenter](./New-IntersightHyperflexHxapDatacenter.md)
+
+[Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)

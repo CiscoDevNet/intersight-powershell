@@ -17,7 +17,7 @@ Remove-IntersightMemoryPersistentMemoryPolicy -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;MemoryPersistentMemoryPolicy&amp;apos; resource.
+Delete a &apos;MemoryPersistentMemoryPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)
+
 [Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
 
 [New-IntersightMemoryPersistentMemoryPolicy](./New-IntersightMemoryPersistentMemoryPolicy.md)
-
-[Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)
 

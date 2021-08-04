@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path identifies the specific resource in the host that the web client wants to access. Value is the decoded form of the path. e.g. &apos;/foo/bar&apos;.
+The path identifies the specific resource in the host that the web client wants to access. Value is the decoded form of the path. e.g. &amp;apos;/foo/bar&amp;apos;.
 
 ```yaml
 Type: string

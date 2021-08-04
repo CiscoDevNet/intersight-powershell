@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new NetworkconfigApi(Config);
             ModelObject = new NetworkconfigPolicy();
-            MethodName = "CreateNetworkconfigPolicy";
+            MethodName = "CreateNetworkconfigPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -182,7 +182,7 @@ namespace Intersight.PowerShell
 		public GetIntersightNetworkconfigPolicy()
 		{
 			ApiInstance = new NetworkconfigApi(Config);
-            MethodName = "GetNetworkconfigPolicyList";
+            MethodName = "GetNetworkconfigPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -195,7 +195,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new NetworkconfigApi(Config);
             ModelObject = new NetworkconfigPolicy();
-            MethodName = "UpdateNetworkconfigPolicy";
+            MethodName = "PatchNetworkconfigPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -360,7 +360,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightNetworkconfigPolicy()
 		{
 			ApiInstance = new NetworkconfigApi(Config);
-            MethodName = "DeleteNetworkconfigPolicy";
+            MethodName = "DeleteNetworkconfigPolicyWithHttpInfo";
 		}
     }
 }

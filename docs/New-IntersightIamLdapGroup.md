@@ -19,7 +19,7 @@ New-IntersightIamLdapGroup [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamLdapGroup&amp;apos; resource.
+Create a &apos;IamLdapGroup&apos; resource.
 
 ## PARAMETERS
 
@@ -165,6 +165,6 @@ PS C:\> New-IntersightIamLdapGroup
 
 [Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
 
-[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
-
 [Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
+
+[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)

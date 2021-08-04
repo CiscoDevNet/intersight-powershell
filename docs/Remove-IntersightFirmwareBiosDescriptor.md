@@ -17,7 +17,7 @@ Remove-IntersightFirmwareBiosDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareBiosDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareBiosDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

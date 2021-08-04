@@ -19,7 +19,7 @@ Set-IntersightEquipmentFexIdentity [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentFexIdentity&apos; resource.
+Update a &amp;apos;EquipmentFexIdentity&amp;apos; resource.
 
 ## PARAMETERS
 

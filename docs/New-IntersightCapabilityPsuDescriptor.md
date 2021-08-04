@@ -19,7 +19,7 @@ New-IntersightCapabilityPsuDescriptor [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.
+Create a &apos;CapabilityPsuDescriptor&apos; resource.
 
 ## PARAMETERS
 

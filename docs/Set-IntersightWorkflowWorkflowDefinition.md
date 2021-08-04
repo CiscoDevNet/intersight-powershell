@@ -344,11 +344,11 @@ PS C:\> Set-IntersightWorkflowWorkflowDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
+[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
 
 [New-IntersightWorkflowWorkflowDefinition](./New-IntersightWorkflowWorkflowDefinition.md)
 
-[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
+[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

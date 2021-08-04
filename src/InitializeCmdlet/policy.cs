@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeContext.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigContext.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeContext")]
-    public class InitializeIntersightPolicyConfigChangeContext:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigContext")]
+    public class InitializeIntersightPolicyConfigContext:PSCmdlet
 	{
-		public InitializeIntersightPolicyConfigChangeContext()
+		public InitializeIntersightPolicyConfigContext()
 		{
-            ClassId = PolicyConfigChangeContext.ClassIdEnum.PolicyConfigChangeContext;
-            ObjectType = PolicyConfigChangeContext.ObjectTypeEnum.PolicyConfigChangeContext;
+            ClassId = PolicyConfigContext.ClassIdEnum.PolicyConfigContext;
+            ObjectType = PolicyConfigContext.ObjectTypeEnum.PolicyConfigContext;
             
 		}
         // <summary>
@@ -33,7 +33,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyConfigChangeContext.ClassIdEnum ClassId {
+        public PolicyConfigContext.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"System action to trigger the appropriate workflow. Values -- No_op, ConfigChange, Deploy, Unbind."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ControlAction {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates a profile's error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ErrorState {
             get;
             set;
         }
@@ -42,19 +60,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyConfigChangeContext.ObjectTypeEnum ObjectType {
+        public PolicyConfigContext.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PolicyConfigChangeContext initObject = new Intersight.Model.PolicyConfigChangeContext();
+             Intersight.Model.PolicyConfigContext initObject = new Intersight.Model.PolicyConfigContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ControlAction"))
+            {
+                initObject.ControlAction = this.ControlAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ErrorState"))
+            {
+                initObject.ErrorState = this.ErrorState;
+            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -101,6 +127,59 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.PolicyActionQualifier initObject = new Intersight.Model.PolicyActionQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeContext.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeContext")]
+    public class InitializeIntersightPolicyConfigChangeContext:PSCmdlet
+	{
+		public InitializeIntersightPolicyConfigChangeContext()
+		{
+            ClassId = PolicyConfigChangeContext.ClassIdEnum.PolicyConfigChangeContext;
+            ObjectType = PolicyConfigChangeContext.ObjectTypeEnum.PolicyConfigChangeContext;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyConfigChangeContext.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyConfigChangeContext.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.PolicyConfigChangeContext initObject = new Intersight.Model.PolicyConfigChangeContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -341,85 +420,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigContext.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigContext")]
-    public class InitializeIntersightPolicyConfigContext:PSCmdlet
-	{
-		public InitializeIntersightPolicyConfigContext()
-		{
-            ClassId = PolicyConfigContext.ClassIdEnum.PolicyConfigContext;
-            ObjectType = PolicyConfigContext.ObjectTypeEnum.PolicyConfigContext;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyConfigContext.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"System action to trigger the appropriate workflow. Values -- No_op, ConfigChange, Deploy, Unbind."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ControlAction {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates a profile's error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ErrorState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyConfigContext.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.PolicyConfigContext initObject = new Intersight.Model.PolicyConfigContext();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ControlAction"))
-            {
-                initObject.ControlAction = this.ControlAction;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ErrorState"))
-            {
-                initObject.ErrorState = this.ErrorState;
-            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }

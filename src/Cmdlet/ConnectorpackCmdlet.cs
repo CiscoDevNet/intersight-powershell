@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConnectorpackUpgradeImpact.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackUpgradeImpact", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConnectorpackUpgradeImpact:GetCmdletBase
-	{
-		public GetIntersightConnectorpackUpgradeImpact()
-		{
-			ApiInstance = new ConnectorpackApi(Config);
-            MethodName = "GetConnectorpackUpgradeImpactList";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConnectorpackConnectorPackUpgrade.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackConnectorPackUpgrade", DefaultParameterSetName = "CmdletParam")]
@@ -28,7 +16,7 @@ namespace Intersight.PowerShell
 		public GetIntersightConnectorpackConnectorPackUpgrade()
 		{
 			ApiInstance = new ConnectorpackApi(Config);
-            MethodName = "GetConnectorpackConnectorPackUpgradeList";
+            MethodName = "GetConnectorpackConnectorPackUpgradeListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -41,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ConnectorpackApi(Config);
             ModelObject = new ConnectorpackConnectorPackUpgrade();
-            MethodName = "CreateConnectorpackConnectorPackUpgrade";
+            MethodName = "CreateConnectorpackConnectorPackUpgradeWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -90,6 +78,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ConnectorpackUpgradeImpact.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackUpgradeImpact", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConnectorpackUpgradeImpact:GetCmdletBase
+	{
+		public GetIntersightConnectorpackUpgradeImpact()
+		{
+			ApiInstance = new ConnectorpackApi(Config);
+            MethodName = "GetConnectorpackUpgradeImpactListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ConnectorpackConnectorPackUpgrade.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightConnectorpackConnectorPackUpgrade")]
@@ -98,7 +98,7 @@ namespace Intersight.PowerShell
 		public RemoveIntersightConnectorpackConnectorPackUpgrade()
 		{
 			ApiInstance = new ConnectorpackApi(Config);
-            MethodName = "DeleteConnectorpackConnectorPackUpgrade";
+            MethodName = "DeleteConnectorpackConnectorPackUpgradeWithHttpInfo";
 		}
     }
 }

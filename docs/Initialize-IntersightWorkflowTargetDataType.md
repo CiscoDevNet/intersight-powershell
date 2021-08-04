@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputParameters
-JSON formatted mapping from other property of the definition to the current property. Input parameter mapping is supported only for custom data type property in workflow definition and custom data type definition. The format to specify mapping ina workflow definition when source property is of scalar types is &amp;apos;${workflow.input.property}&amp;apos;. The format to specify mapping when the source property is of object reference and mapping needs to be made to the property of the object is &amp;apos;${workflow.input.property.subproperty}&amp;apos;. The format to specify mapping in a custom data type definition is &amp;apos;${datatype.type.property}&amp;apos;. When the current property is of non-scalar type like composite custom data type, then mapping can be provided to the individual property of the custom data type like &amp;apos;cdt_property:${workflow.input.property}&amp;apos;.
+JSON formatted mapping from other property of the definition to the current property. Input parameter mapping is supported only for custom data type property in workflow definition and custom data type definition. The format to specify mapping ina workflow definition when source property is of scalar types is &apos;${workflow.input.property}&apos;. The format to specify mapping when the source property is of object reference and mapping needs to be made to the property of the object is &apos;${workflow.input.property.subproperty}&apos;. The format to specify mapping in a custom data type definition is &apos;${datatype.type.property}&apos;. When the current property is of non-scalar type like composite custom data type, then mapping can be provided to the individual property of the custom data type like &apos;cdt_property:${workflow.input.property}&apos;.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowTargetDataType.ObjectTypeEnum
