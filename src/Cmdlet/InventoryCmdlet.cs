@@ -8,6 +8,46 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventoryHolder.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder")]
+    public class SetIntersightInventoryGenericInventoryHolder:SetCmdletBase
+	{
+		public SetIntersightInventoryGenericInventoryHolder()
+		{
+			ApiInstance = new InventoryApi(Config);
+            ModelObject = new InventoryGenericInventoryHolder();
+            MethodName = "UpdateInventoryGenericInventoryHolderWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventoryHolder.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventoryHolder", DefaultParameterSetName = "CmdletParam")]
@@ -20,15 +60,55 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get InventoryDnMoBinding.</para>
+    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightInventoryDnMoBinding:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventory")]
+    public class SetIntersightInventoryGenericInventory:SetCmdletBase
 	{
-		public GetIntersightInventoryDnMoBinding()
+		public SetIntersightInventoryGenericInventory()
 		{
 			ApiInstance = new InventoryApi(Config);
-            MethodName = "GetInventoryDnMoBindingListWithHttpInfo";
+            ModelObject = new InventoryGenericInventory();
+            MethodName = "UpdateInventoryGenericInventoryWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventory", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightInventoryGenericInventory:GetCmdletBase
+	{
+		public GetIntersightInventoryGenericInventory()
+		{
+			ApiInstance = new InventoryApi(Config);
+            MethodName = "GetInventoryGenericInventoryListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -90,98 +170,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventoryHolder.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder")]
-    public class SetIntersightInventoryGenericInventoryHolder:SetCmdletBase
-	{
-		public SetIntersightInventoryGenericInventoryHolder()
-		{
-			ApiInstance = new InventoryApi(Config);
-            ModelObject = new InventoryGenericInventoryHolder();
-            MethodName = "PatchInventoryGenericInventoryHolderWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventory.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventory", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightInventoryGenericInventory:GetCmdletBase
-	{
-		public GetIntersightInventoryGenericInventory()
-		{
-			ApiInstance = new InventoryApi(Config);
-            MethodName = "GetInventoryGenericInventoryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventory.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventory")]
-    public class SetIntersightInventoryGenericInventory:SetCmdletBase
-	{
-		public SetIntersightInventoryGenericInventory()
-		{
-			ApiInstance = new InventoryApi(Config);
-            ModelObject = new InventoryGenericInventory();
-            MethodName = "UpdateInventoryGenericInventoryWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryDeviceInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam")]
@@ -191,6 +179,18 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new InventoryApi(Config);
             MethodName = "GetInventoryDeviceInfoListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get InventoryDnMoBinding.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightInventoryDnMoBinding:GetCmdletBase
+	{
+		public GetIntersightInventoryDnMoBinding()
+		{
+			ApiInstance = new InventoryApi(Config);
+            MethodName = "GetInventoryDnMoBindingListWithHttpInfo";
 		}
     }
 }

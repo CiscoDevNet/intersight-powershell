@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryUnit [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryUnit&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryUnit&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightFabricPortPolicy [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricPortPolicy&amp;apos; resource.
+Create a &apos;FabricPortPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -178,8 +178,8 @@ PS C:\> New-IntersightFabricPortPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
+
 [Set-IntersightFabricPortPolicy](./Set-IntersightFabricPortPolicy.md)
 
 [Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
-
-[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)

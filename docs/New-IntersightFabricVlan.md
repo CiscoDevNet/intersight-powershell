@@ -19,7 +19,7 @@ New-IntersightFabricVlan [-AdditionalProperties< Dictionary<string,object>>][-Au
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricVlan&amp;apos; resource.
+Create a &apos;FabricVlan&apos; resource.
 
 ## PARAMETERS
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &apos;name&apos; used to identify this VLAN.
+The &amp;apos;name&amp;apos; used to identify this VLAN.
 
 ```yaml
 Type: string
@@ -193,8 +193,8 @@ PS C:\> New-IntersightFabricVlan
 
 ## RELATED LINKS
 
+[Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
+
 [Set-IntersightFabricVlan](./Set-IntersightFabricVlan.md)
 
 [Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
-
-[Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)

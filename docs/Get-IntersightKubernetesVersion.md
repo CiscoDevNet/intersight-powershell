@@ -25,7 +25,7 @@ Get-IntersightKubernetesVersion [-Count <Boolean>] [-InlineCount <String>] [-Sel
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KubernetesVersion&amp;apos; resource.,
+Read a &apos;KubernetesVersion&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightKubernetesVersion](./New-IntersightKubernetesVersion.md)
+
 [Set-IntersightKubernetesVersion](./Set-IntersightKubernetesVersion.md)
 
 [Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)
-
-[New-IntersightKubernetesVersion](./New-IntersightKubernetesVersion.md)
 

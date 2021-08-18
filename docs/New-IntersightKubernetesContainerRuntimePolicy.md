@@ -19,7 +19,7 @@ New-IntersightKubernetesContainerRuntimePolicy [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesContainerRuntimePolicy&apos; resource.
+Create a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -DockerBridgeNetworkCidr
-Bridge IP (--bip) including Prefix (e.g., 172.17.0.5/24) that Docker will use for the default bridge network (docker0). Containers will connect to this if no other network is configured, not used by kubernetes pods because their network is managed by CNI. However this address space must not collide with other CIDRs on your networks, including the cluster&apos;s Service CIDR, Pod Network CIDR and IP Pools.
+Bridge IP (--bip) including Prefix (e.g., 172.17.0.5/24) that Docker will use for the default bridge network (docker0). Containers will connect to this if no other network is configured, not used by kubernetes pods because their network is managed by CNI. However this address space must not collide with other CIDRs on your networks, including the cluster&amp;apos;s Service CIDR, Pod Network CIDR and IP Pools.
 
 ```yaml
 Type: string
@@ -229,8 +229,8 @@ PS C:\> New-IntersightKubernetesContainerRuntimePolicy
 
 [Get-IntersightKubernetesContainerRuntimePolicy](./Get-IntersightKubernetesContainerRuntimePolicy.md)
 
-[Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
-
 [Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
+
+[Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
 
 [Initialize-IntersightKubernetesProxyConfig](./Initialize-IntersightKubernetesProxyConfig.md)

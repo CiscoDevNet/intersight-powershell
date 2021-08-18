@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightStorageStoragePolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-DiskGroupPolicies< List<StorageDiskGroupPolicyRelationship>>][-GlobalHotSpares< List<StorageLocalDisk>>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-RetainPolicyVirtualDrives< bool>][-Tags< List<MoTag>>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-VirtualDrives< List<StorageVirtualDriveConfig>>]
+New-IntersightStorageStoragePolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-DriveGroup< List<StorageDriveGroupRelationship>>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-Raid0Drive< StorageR0Drive>][-Tags< List<MoTag>>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;StorageStoragePolicy&amp;apos; resource.
+Create a &apos;StorageStoragePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -53,14 +53,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DiskGroupPolicies
-An array of relationships to storageDiskGroupPolicy resources.
+### -DriveGroup
+An array of relationships to storageDriveGroup resources.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: System.Collections.Generic.List`1[StorageDiskGroupPolicyRelationship]
+Type: System.Collections.Generic.List`1[StorageDriveGroupRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -72,12 +72,27 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalHotSpares
-
-
-Note :- Use Initialize-IntersightStorageLocalDisk to create the object of complex type StorageLocalDisk
+A collection of disks that is to be used as hot spares, globally, for all the RAID groups. Allowed value is a number range separated by a comma or a hyphen.
 
 ```yaml
-Type: System.Collections.Generic.List`1[StorageLocalDisk]
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -M2VirtualDrive
+Virtual Drive configuration for M.2 RAID controller.
+
+Note :- Use Initialize-IntersightStorageM2VirtualDriveConfig to create the object of complex type StorageM2VirtualDriveConfig
+
+```yaml
+Type: StorageM2VirtualDriveConfig
 Parameter Sets: (All)
 Aliases:
 
@@ -154,11 +169,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RetainPolicyVirtualDrives
-Retains the virtual drives defined in policy if they exist already. If this flag is false, the existing virtual drives are removed and created again based on virtual drives in the policy.
+### -Raid0Drive
+The list of disks where RAID0 virtual drives must be created on each individual drive.
+
+Note :- Use Initialize-IntersightStorageR0Drive to create the object of complex type StorageR0Drive
 
 ```yaml
-Type: bool
+Type: StorageR0Drive
 Parameter Sets: (All)
 Aliases:
 
@@ -187,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnusedDisksState
-Unused Disks State is used to specify the state, unconfigured good or jbod, in which the disks that are not used in this policy should be moved.\n* `UnconfiguredGood` - Unconfigured good state -ready to be added in a RAID group.\n* `Jbod` - JBOD state where the disks start showing up to host os.
+State to which disks, not used in this policy, are to be moved. NoChange will not change the drive state.\n* `NoChange` - Drive state will not be modified by Storage Policy.\n* `UnconfiguredGood` - Unconfigured good state -ready to be added in a RAID group.\n* `Jbod` - JBOD state where the disks start showing up to Host OS.
 
 ```yaml
 Type: StorageStoragePolicy.UnusedDisksStateEnum
@@ -201,13 +218,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VirtualDrives
-
-
-Note :- Use Initialize-IntersightStorageVirtualDriveConfig to create the object of complex type StorageVirtualDriveConfig
+### -UseJbodForVdCreation
+Disks in JBOD State are used to create virtual drives.
 
 ```yaml
-Type: System.Collections.Generic.List`1[StorageVirtualDriveConfig]
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -251,6 +266,6 @@ PS C:\> New-IntersightStorageStoragePolicy
 
 [Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
 
-[Initialize-IntersightStorageLocalDisk](./Initialize-IntersightStorageLocalDisk.md)
+[Initialize-IntersightStorageM2VirtualDriveConfig](./Initialize-IntersightStorageM2VirtualDriveConfig.md)
 
-[Initialize-IntersightStorageVirtualDriveConfig](./Initialize-IntersightStorageVirtualDriveConfig.md)
+[Initialize-IntersightStorageR0Drive](./Initialize-IntersightStorageR0Drive.md)

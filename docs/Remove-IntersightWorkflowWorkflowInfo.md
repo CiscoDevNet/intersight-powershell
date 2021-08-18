@@ -17,7 +17,7 @@ Remove-IntersightWorkflowWorkflowInfo -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowWorkflowInfo&apos; resource.
+Delete a &amp;apos;WorkflowWorkflowInfo&amp;apos; resource.
 
 ## EXAMPLES
 

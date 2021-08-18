@@ -19,7 +19,7 @@ Set-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
+Update a &apos;HyperflexHealthCheckDefinition&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightSnmpPolicy [-AccessCommunityString< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SnmpPolicy&amp;apos; resource.
+Update a &apos;SnmpPolicy&apos; resource.
 
 ## PARAMETERS
 

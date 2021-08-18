@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ExternalsiteAuthorization.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightExternalsiteAuthorization", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightExternalsiteAuthorization:GetCmdletBase
-	{
-		public GetIntersightExternalsiteAuthorization()
-		{
-			ApiInstance = new ExternalsiteApi(Config);
-            MethodName = "GetExternalsiteAuthorizationListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ExternalsiteAuthorization.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightExternalsiteAuthorization")]
@@ -85,6 +73,18 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ExternalsiteAuthorization.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightExternalsiteAuthorization", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightExternalsiteAuthorization:GetCmdletBase
+	{
+		public GetIntersightExternalsiteAuthorization()
+		{
+			ApiInstance = new ExternalsiteApi(Config);
+            MethodName = "GetExternalsiteAuthorizationListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ExternalsiteAuthorization.</para>

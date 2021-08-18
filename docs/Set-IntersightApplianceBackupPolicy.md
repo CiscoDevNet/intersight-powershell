@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &amp;apos;false&amp;apos; for this schedule to be active.
+Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &apos;false&apos; for this schedule to be active.
 
 Note :- Use Initialize-IntersightOnpremSchedule to create the object of complex type OnpremSchedule
 
@@ -252,8 +252,8 @@ PS C:\> Set-IntersightApplianceBackupPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceBackupPolicy](./Get-IntersightApplianceBackupPolicy.md)
-
 [New-IntersightApplianceBackupPolicy](./New-IntersightApplianceBackupPolicy.md)
+
+[Get-IntersightApplianceBackupPolicy](./Get-IntersightApplianceBackupPolicy.md)
 
 [Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)

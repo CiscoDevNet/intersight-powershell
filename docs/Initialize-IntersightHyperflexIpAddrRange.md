@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexIpAddrRange [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexIpAddrRange.ClassIdEnum>][-EndAddr< string>][-Gateway< string>][-Netmask< string>][-ObjectType< HyperflexIpAddrRange.ObjectTypeEnum>][-StartAddr< string>]
+Initialize-IntersightHyperflexIpAddrRange [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexIpAddrRange.ClassIdEnum>][-EndAddr< string>][-Gateway< string>][-IpAddrBlocks< List<Model.CommIpV4AddressBlock>>][-Netmask< string>][-ObjectType< HyperflexIpAddrRange.ObjectTypeEnum>][-StartAddr< string>]
 
 ```
 
@@ -84,6 +84,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -IpAddrBlocks
+
+
+Note :- Use Initialize-IntersightCommIpV4AddressBlock to create the object of complex type CommIpV4AddressBlock
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.CommIpV4AddressBlock]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Netmask
 The netmask specified in dot decimal notation.\nThe start address, end address, and gateway must all be within the network specified by this netmask.
 
@@ -100,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: HyperflexIpAddrRange.ObjectTypeEnum
@@ -155,3 +172,5 @@ PS C:\> Initialize-IntersightHyperflexIpAddrRange
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightCommIpV4AddressBlock](./Initialize-IntersightCommIpV4AddressBlock.md)

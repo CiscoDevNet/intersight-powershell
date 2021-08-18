@@ -115,8 +115,8 @@ PS C:\> Set-IntersightHyperflexHxapDatacenter
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)
+
 [Get-IntersightHyperflexHxapDatacenter](./Get-IntersightHyperflexHxapDatacenter.md)
 
 [New-IntersightHyperflexHxapDatacenter](./New-IntersightHyperflexHxapDatacenter.md)
-
-[Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)

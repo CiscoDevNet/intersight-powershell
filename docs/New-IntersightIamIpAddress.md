@@ -19,7 +19,7 @@ New-IntersightIamIpAddress [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamIpAddress&amp;apos; resource.
+Create a &apos;IamIpAddress&apos; resource.
 
 ## PARAMETERS
 
@@ -127,8 +127,8 @@ PS C:\> New-IntersightIamIpAddress
 
 ## RELATED LINKS
 
-[Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
-
 [Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)
 
 [Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
+
+[Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)

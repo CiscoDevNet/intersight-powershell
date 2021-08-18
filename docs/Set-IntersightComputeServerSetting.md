@@ -19,7 +19,7 @@ Set-IntersightComputeServerSetting [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ComputeServerSetting&amp;apos; resource.
+Update a &apos;ComputeServerSetting&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightServerProfileTemplate [-Action< string>][-AdditionalProperties< Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ServerProfileTemplate&amp;apos; resource.
+Create a &apos;ServerProfileTemplate&apos; resource.
 
 ## PARAMETERS
 
@@ -243,10 +243,10 @@ PS C:\> New-IntersightServerProfileTemplate
 
 ## RELATED LINKS
 
-[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
+[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
 
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
 
-[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
+[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)

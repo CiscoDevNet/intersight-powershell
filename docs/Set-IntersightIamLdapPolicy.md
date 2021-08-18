@@ -19,7 +19,7 @@ Set-IntersightIamLdapPolicy [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLdapPolicy&amp;apos; resource.
+Update a &apos;IamLdapPolicy&apos; resource.
 
 ## PARAMETERS
 

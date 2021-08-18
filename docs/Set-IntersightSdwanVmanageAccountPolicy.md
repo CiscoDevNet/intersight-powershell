@@ -19,7 +19,7 @@ Set-IntersightSdwanVmanageAccountPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SdwanVmanageAccountPolicy&amp;apos; resource.
+Update a &apos;SdwanVmanageAccountPolicy&apos; resource.
 
 ## PARAMETERS
 

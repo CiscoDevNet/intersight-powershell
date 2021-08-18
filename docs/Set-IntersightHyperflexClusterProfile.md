@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexClusterProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-AssociatedCluster< HyperflexClusterRelationship>][-AutoSupport< HyperflexAutoSupportPolicyRelationship>][-ClusterNetwork< HyperflexClusterNetworkPolicyRelationship>][-ClusterStorage< HyperflexClusterStoragePolicyRelationship>][-ConfigContext< PolicyConfigContext>][-DataIpAddress< string>][-Description< string>][-ExtFcStorage< HyperflexExtFcStoragePolicyRelationship>][-ExtIscsiStorage< HyperflexExtIscsiStoragePolicyRelationship>][-HostNamePrefix< string>][-Httpproxypolicy< CommHttpProxyPolicyRelationship>][-HypervisorControlIpAddress< string>][-HypervisorType< HyperflexClusterProfile.HypervisorTypeEnum>][-LocalCredential< HyperflexLocalCredentialPolicyRelationship>][-MacAddressPrefix< string>][-MgmtIpAddress< string>][-MgmtPlatform< HyperflexClusterProfile.MgmtPlatformEnum>][[-Moid]< string>][-Name< string>][-NodeConfig< HyperflexNodeConfigPolicyRelationship>][-NodeProfileConfig< List<HyperflexNodeProfileRelationship>>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-ProxySetting< HyperflexProxySettingPolicyRelationship>][-Replication< long>][-SoftwareVersion< HyperflexSoftwareVersionPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StorageClusterAuxiliaryIp< string>][-StorageDataVlan< HyperflexNamedVlan>][-StorageType< HyperflexClusterProfile.StorageTypeEnum>][-SysConfig< HyperflexSysConfigPolicyRelationship>][-Tags< List<MoTag>>][-Type< HyperflexClusterProfile.TypeEnum>][-UcsmConfig< HyperflexUcsmConfigPolicyRelationship>][-VcenterConfig< HyperflexVcenterConfigPolicyRelationship>][-WwxnPrefix< string>]
+Set-IntersightHyperflexClusterProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-AssociatedCluster< HyperflexClusterRelationship>][-AutoSupport< HyperflexAutoSupportPolicyRelationship>][-ClusterInternalSubnet< CommIpV4Interface>][-ClusterNetwork< HyperflexClusterNetworkPolicyRelationship>][-ClusterStorage< HyperflexClusterStoragePolicyRelationship>][-ConfigContext< PolicyConfigContext>][-DataIpAddress< string>][-Description< string>][-ExtFcStorage< HyperflexExtFcStoragePolicyRelationship>][-ExtIscsiStorage< HyperflexExtIscsiStoragePolicyRelationship>][-HostNamePrefix< string>][-Httpproxypolicy< CommHttpProxyPolicyRelationship>][-HypervisorControlIpAddress< string>][-HypervisorType< HyperflexClusterProfile.HypervisorTypeEnum>][-LocalCredential< HyperflexLocalCredentialPolicyRelationship>][-MacAddressPrefix< string>][-MgmtIpAddress< string>][-MgmtPlatform< HyperflexClusterProfile.MgmtPlatformEnum>][[-Moid]< string>][-Name< string>][-NodeConfig< HyperflexNodeConfigPolicyRelationship>][-NodeProfileConfig< List<HyperflexNodeProfileRelationship>>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-ProxySetting< HyperflexProxySettingPolicyRelationship>][-Replication< long>][-SoftwareVersion< HyperflexSoftwareVersionPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StorageClientIpAddress< string>][-StorageClientNetmask< string>][-StorageClientVlan< HyperflexNamedVlan>][-StorageClusterAuxiliaryIp< string>][-StorageDataVlan< HyperflexNamedVlan>][-StorageType< HyperflexClusterProfile.StorageTypeEnum>][-SysConfig< HyperflexSysConfigPolicyRelationship>][-Tags< List<MoTag>>][-Type< HyperflexClusterProfile.TypeEnum>][-UcsmConfig< HyperflexUcsmConfigPolicyRelationship>][-VcenterConfig< HyperflexVcenterConfigPolicyRelationship>][-WwxnPrefix< string>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterProfile&apos; resource.
+Update a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -79,6 +79,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: HyperflexAutoSupportPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterInternalSubnet
+A CIDR subnet for the cluster internal network. This applies to Intersight Workload Engine clusters only.
+
+Note :- Use Initialize-IntersightCommIpV4Interface to create the object of complex type CommIpV4Interface
+
+```yaml
+Type: CommIpV4Interface
 Parameter Sets: (All)
 Aliases:
 
@@ -505,6 +522,53 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -StorageClientIpAddress
+The storage data IP address for the HyperFlex cluster.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageClientNetmask
+The netmask for the Storage client network IP address.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageClientVlan
+The named VLAN associated with this cluster&amp;apos;s storage client network. This applies to Intersight Workload Engine clusters only.
+
+Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
+
+```yaml
+Type: HyperflexNamedVlan
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StorageClusterAuxiliaryIp
 The auxiliary storage IP address for the HyperFlex cluster. For two node clusters, this is the IP address of the auxiliary ZK controller.
 
@@ -680,11 +744,13 @@ PS C:\> Set-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
+[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
 
 [New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
-[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
+[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
+
+[Initialize-IntersightCommIpV4Interface](./Initialize-IntersightCommIpV4Interface.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

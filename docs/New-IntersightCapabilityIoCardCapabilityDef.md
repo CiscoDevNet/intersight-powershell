@@ -19,7 +19,7 @@ New-IntersightCapabilityIoCardCapabilityDef [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityIoCardCapabilityDef&amp;apos; resource.
+Create a &apos;CapabilityIoCardCapabilityDef&apos; resource.
 
 ## PARAMETERS
 

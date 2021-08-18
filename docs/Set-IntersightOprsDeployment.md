@@ -237,10 +237,10 @@ PS C:\> Set-IntersightOprsDeployment
 
 ## RELATED LINKS
 
+[Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
+
 [Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
 
 [New-IntersightOprsDeployment](./New-IntersightOprsDeployment.md)
-
-[Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
 
 [Initialize-IntersightOprsKvpair](./Initialize-IntersightOprsKvpair.md)

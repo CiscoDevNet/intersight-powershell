@@ -19,7 +19,7 @@ Set-IntersightVnicFcIf [-AdditionalProperties< Dictionary<string,object>>][-FcAd
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicFcIf&apos; resource.
+Update a &amp;apos;VnicFcIf&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -366,10 +366,10 @@ PS C:\> Set-IntersightVnicFcIf
 
 ## RELATED LINKS
 
-[Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
+[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
 
 [New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
 
-[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
+[Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)

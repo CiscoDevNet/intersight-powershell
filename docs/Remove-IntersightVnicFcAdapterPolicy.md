@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVnicFcAdapterPolicy](./Set-IntersightVnicFcAdapterPolicy.md)
+
 [Get-IntersightVnicFcAdapterPolicy](./Get-IntersightVnicFcAdapterPolicy.md)
 
 [New-IntersightVnicFcAdapterPolicy](./New-IntersightVnicFcAdapterPolicy.md)
-
-[Set-IntersightVnicFcAdapterPolicy](./Set-IntersightVnicFcAdapterPolicy.md)
 

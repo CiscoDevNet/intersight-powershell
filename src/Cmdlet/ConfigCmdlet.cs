@@ -8,27 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConfigImportedItem.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ConfigExporter.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConfigImportedItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConfigImportedItem:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightConfigExporter", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConfigExporter:GetCmdletBase
 	{
-		public GetIntersightConfigImportedItem()
+		public GetIntersightConfigExporter()
 		{
 			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigImportedItemListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ConfigImporter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightConfigImporter")]
-    public class RemoveIntersightConfigImporter:RemoveCmdletBase
-	{
-		public RemoveIntersightConfigImporter()
-		{
-			ApiInstance = new ConfigApi(Config);
-            MethodName = "DeleteConfigImporterWithHttpInfo";
+            MethodName = "GetConfigExporterListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -97,42 +85,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConfigExporter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConfigExporter", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConfigExporter:GetCmdletBase
-	{
-		public GetIntersightConfigExporter()
-		{
-			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigExporterListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConfigExportedItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConfigExportedItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConfigExportedItem:GetCmdletBase
-	{
-		public GetIntersightConfigExportedItem()
-		{
-			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigExportedItemListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ConfigImporter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConfigImporter", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightConfigImporter:GetCmdletBase
-	{
-		public GetIntersightConfigImporter()
-		{
-			ApiInstance = new ConfigApi(Config);
-            MethodName = "GetConfigImporterListWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ConfigImporter.</para>
@@ -220,6 +172,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ConfigImporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightConfigImporter", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConfigImporter:GetCmdletBase
+	{
+		public GetIntersightConfigImporter()
+		{
+			ApiInstance = new ConfigApi(Config);
+            MethodName = "GetConfigImporterListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ConfigExporter.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightConfigExporter")]
@@ -229,6 +193,42 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ConfigApi(Config);
             MethodName = "DeleteConfigExporterWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ConfigImportedItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightConfigImportedItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConfigImportedItem:GetCmdletBase
+	{
+		public GetIntersightConfigImportedItem()
+		{
+			ApiInstance = new ConfigApi(Config);
+            MethodName = "GetConfigImportedItemListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ConfigExportedItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightConfigExportedItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightConfigExportedItem:GetCmdletBase
+	{
+		public GetIntersightConfigExportedItem()
+		{
+			ApiInstance = new ConfigApi(Config);
+            MethodName = "GetConfigExportedItemListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ConfigImporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightConfigImporter")]
+    public class RemoveIntersightConfigImporter:RemoveCmdletBase
+	{
+		public RemoveIntersightConfigImporter()
+		{
+			ApiInstance = new ConfigApi(Config);
+            MethodName = "DeleteConfigImporterWithHttpInfo";
 		}
     }
 }

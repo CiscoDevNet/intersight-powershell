@@ -19,7 +19,7 @@ Set-IntersightFabricMulticastPolicy [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricMulticastPolicy&amp;apos; resource.
+Update a &apos;FabricMulticastPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -205,8 +205,8 @@ PS C:\> Set-IntersightFabricMulticastPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
+[New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
 
 [Get-IntersightFabricMulticastPolicy](./Get-IntersightFabricMulticastPolicy.md)
 
-[New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
+[Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)

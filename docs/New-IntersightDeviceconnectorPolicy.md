@@ -19,7 +19,7 @@ New-IntersightDeviceconnectorPolicy [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &apos;DeviceconnectorPolicy&apos; resource.
+Create a &amp;apos;DeviceconnectorPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

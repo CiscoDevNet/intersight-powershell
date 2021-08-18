@@ -130,6 +130,6 @@ PS C:\> New-IntersightVmrcConsole
 
 ## RELATED LINKS
 
-[Get-IntersightVmrcConsole](./Get-IntersightVmrcConsole.md)
-
 [Set-IntersightVmrcConsole](./Set-IntersightVmrcConsole.md)
+
+[Get-IntersightVmrcConsole](./Get-IntersightVmrcConsole.md)

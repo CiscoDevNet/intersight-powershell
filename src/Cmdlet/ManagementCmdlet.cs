@@ -8,42 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ManagementInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightManagementInterface:GetCmdletBase
-	{
-		public GetIntersightManagementInterface()
-		{
-			ApiInstance = new ManagementApi(Config);
-            MethodName = "GetManagementInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ManagementController.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementController", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightManagementController:GetCmdletBase
-	{
-		public GetIntersightManagementController()
-		{
-			ApiInstance = new ManagementApi(Config);
-            MethodName = "GetManagementControllerListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ManagementEntity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementEntity", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightManagementEntity:GetCmdletBase
-	{
-		public GetIntersightManagementEntity()
-		{
-			ApiInstance = new ManagementApi(Config);
-            MethodName = "GetManagementEntityListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ManagementEntity.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightManagementEntity")]
@@ -84,53 +48,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ManagementController.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ManagementController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightManagementController")]
-    public class SetIntersightManagementController:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementController", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightManagementController:GetCmdletBase
 	{
-		public SetIntersightManagementController()
+		public GetIntersightManagementController()
 		{
 			ApiInstance = new ManagementApi(Config);
-            ModelObject = new ManagementController();
-            MethodName = "PatchManagementControllerWithHttpInfo";
+            MethodName = "GetManagementControllerListWithHttpInfo";
 		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentIoCardBaseRelationship EquipmentIoCardBase {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ManagementEntity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementEntity", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightManagementEntity:GetCmdletBase
+	{
+		public GetIntersightManagementEntity()
+		{
+			ApiInstance = new ManagementApi(Config);
+            MethodName = "GetManagementEntityListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ManagementInterface.</para>
@@ -240,6 +179,67 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public long VlanId {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ManagementInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightManagementInterface:GetCmdletBase
+	{
+		public GetIntersightManagementInterface()
+		{
+			ApiInstance = new ManagementApi(Config);
+            MethodName = "GetManagementInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set ManagementController.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightManagementController")]
+    public class SetIntersightManagementController:SetCmdletBase
+	{
+		public SetIntersightManagementController()
+		{
+			ApiInstance = new ManagementApi(Config);
+            ModelObject = new ManagementController();
+            MethodName = "UpdateManagementControllerWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentIoCardBaseRelationship EquipmentIoCardBase {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
             get;
             set;
         }

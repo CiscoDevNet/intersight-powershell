@@ -176,8 +176,8 @@ PS C:\> Set-IntersightIamApiKey
 
 [Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
 
-[New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
-
 [Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
+
+[New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
 
 [Initialize-IntersightPkixKeyGenerationSpec](./Initialize-IntersightPkixKeyGenerationSpec.md)

@@ -25,7 +25,7 @@ Get-IntersightHyperflexSoftwareDistributionComponent [-Count <Boolean>] [-Inline
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;HyperflexSoftwareDistributionComponent&amp;apos; resource.,
+Read a &apos;HyperflexSoftwareDistributionComponent&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightHyperflexSoftwareDistributionComponent](./New-IntersightHyperflexSoftwareDistributionComponent.md)
+
 [Set-IntersightHyperflexSoftwareDistributionComponent](./Set-IntersightHyperflexSoftwareDistributionComponent.md)
 
 [Remove-IntersightHyperflexSoftwareDistributionComponent](./Remove-IntersightHyperflexSoftwareDistributionComponent.md)
-
-[New-IntersightHyperflexSoftwareDistributionComponent](./New-IntersightHyperflexSoftwareDistributionComponent.md)
 

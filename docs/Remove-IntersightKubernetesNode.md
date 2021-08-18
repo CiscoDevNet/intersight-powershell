@@ -17,7 +17,7 @@ Remove-IntersightKubernetesNode -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesNode&amp;apos; resource.
+Delete a &apos;KubernetesNode&apos; resource.
 
 ## EXAMPLES
 

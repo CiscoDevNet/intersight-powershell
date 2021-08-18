@@ -19,7 +19,7 @@ Set-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowWorkflowDefinition&apos; resource.
+Update a &amp;apos;WorkflowWorkflowDefinition&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -344,11 +344,11 @@ PS C:\> Set-IntersightWorkflowWorkflowDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
+[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [New-IntersightWorkflowWorkflowDefinition](./New-IntersightWorkflowWorkflowDefinition.md)
 
-[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
+[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

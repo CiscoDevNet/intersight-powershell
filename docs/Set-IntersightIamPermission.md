@@ -217,8 +217,8 @@ PS C:\> Set-IntersightIamPermission
 
 ## RELATED LINKS
 
+[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
+
 [New-IntersightIamPermission](./New-IntersightIamPermission.md)
 
 [Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
-
-[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)

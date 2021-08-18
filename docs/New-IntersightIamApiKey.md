@@ -19,7 +19,7 @@ New-IntersightIamApiKey [-AdditionalProperties< Dictionary<string,object>>][-Has
 ```
 
 ## DESCRIPTION
-Create a &apos;IamApiKey&apos; resource.
+Create a &amp;apos;IamApiKey&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -174,9 +174,9 @@ PS C:\> New-IntersightIamApiKey
 
 ## RELATED LINKS
 
-[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
-
 [Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
+
+[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
 
 [Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
 

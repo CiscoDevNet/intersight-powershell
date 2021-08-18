@@ -19,7 +19,7 @@ New-IntersightIamResourceRoles [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamResourceRoles&amp;apos; resource.
+Create a &apos;IamResourceRoles&apos; resource.
 
 ## PARAMETERS
 

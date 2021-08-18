@@ -19,7 +19,7 @@ Set-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexSoftwareVersionPolicy&apos; resource.
+Update a &amp;apos;HyperflexSoftwareVersionPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

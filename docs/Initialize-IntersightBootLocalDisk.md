@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The slot id of the local disk device. Supported values are (1-255, \&quot;M\&quot;, \&quot;HBA\&quot;, \&quot;SAS\&quot;, \&quot;RAID\&quot;, \&quot;MRAID\&quot;, \&quot;MRAID1\&quot;, \&quot;MRAID2\&quot;, \&quot;MSTOR-RAID\&quot;).
+The slot id of the local disk device. Supported values for Standalone Rack servers are (1-205, \&amp;quot;M\&amp;quot;, \&amp;quot;HBA\&amp;quot;, \&amp;quot;SAS\&amp;quot;, \&amp;quot;RAID\&amp;quot;, \&amp;quot;MRAID\&amp;quot;, \&amp;quot;MRAID1\&amp;quot;, \&amp;quot;MRAID2\&amp;quot;, \&amp;quot;MSTOR-RAID\&amp;quot;). Supported values for FI-attached servers are (1-205, \&amp;quot;MRAID\&amp;quot;, \&amp;quot;FMEZZ1-SAS\&amp;quot;, \&amp;quot;MRAID1\&amp;quot;, \&amp;quot;MRAID2\&amp;quot;, \&amp;quot;MSTOR-RAID\&amp;quot;, \&amp;quot;MSTOR-RAID-1\&amp;quot;, \&amp;quot;MSTOR-RAID-2\&amp;quot;).
 
 ```yaml
 Type: string

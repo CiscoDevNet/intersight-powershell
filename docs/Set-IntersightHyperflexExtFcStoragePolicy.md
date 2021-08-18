@@ -19,7 +19,7 @@ Set-IntersightHyperflexExtFcStoragePolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexExtFcStoragePolicy&amp;apos; resource.
+Update a &apos;HyperflexExtFcStoragePolicy&apos; resource.
 
 ## PARAMETERS
 

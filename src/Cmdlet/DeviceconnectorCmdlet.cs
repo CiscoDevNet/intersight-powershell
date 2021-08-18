@@ -114,7 +114,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new DeviceconnectorApi(Config);
             ModelObject = new DeviceconnectorPolicy();
-            MethodName = "UpdateDeviceconnectorPolicyWithHttpInfo";
+            MethodName = "PatchDeviceconnectorPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

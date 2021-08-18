@@ -17,7 +17,7 @@ Remove-IntersightFirmwareHbaDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareHbaDescriptor&amp;apos; resource.
+Delete a &apos;FirmwareHbaDescriptor&apos; resource.
 
 ## EXAMPLES
 

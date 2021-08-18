@@ -25,7 +25,7 @@ Get-IntersightResourceGroup [-Count <Boolean>] [-InlineCount <String>] [-Select 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ResourceGroup&apos; resource.,
+Read a &amp;apos;ResourceGroup&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightResourceGroup](./New-IntersightResourceGroup.md)
-
 [Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
 
 [Remove-IntersightResourceGroup](./Remove-IntersightResourceGroup.md)
+
+[New-IntersightResourceGroup](./New-IntersightResourceGroup.md)
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
+
 [Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)
 
 [New-IntersightBiosPolicy](./New-IntersightBiosPolicy.md)
-
-[Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
+[Remove-IntersightNotificationAccountSubscription](./Remove-IntersightNotificationAccountSubscription.md)
 
 [Set-IntersightNotificationAccountSubscription](./Set-IntersightNotificationAccountSubscription.md)
 
-[Remove-IntersightNotificationAccountSubscription](./Remove-IntersightNotificationAccountSubscription.md)
+[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
 

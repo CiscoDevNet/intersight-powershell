@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
+
 [New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
 
 [Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
-
-[Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
 

@@ -210,10 +210,10 @@ PS C:\> New-IntersightOsConfigurationFile
 
 ## RELATED LINKS
 
-[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
-
 [Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
 
 [Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
+
+[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
 
 [Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)

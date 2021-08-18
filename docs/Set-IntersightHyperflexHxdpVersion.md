@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxdpVersion [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxdpVersion&amp;apos; resource.
+Update a &apos;HyperflexHxdpVersion&apos; resource.
 
 ## PARAMETERS
 
@@ -130,8 +130,8 @@ PS C:\> Set-IntersightHyperflexHxdpVersion
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
-
 [Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
+
+[New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
 
 [Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)

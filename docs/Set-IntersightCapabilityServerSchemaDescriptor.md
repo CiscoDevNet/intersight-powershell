@@ -205,8 +205,8 @@ PS C:\> Set-IntersightCapabilityServerSchemaDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)
-
 [Get-IntersightCapabilityServerSchemaDescriptor](./Get-IntersightCapabilityServerSchemaDescriptor.md)
 
 [New-IntersightCapabilityServerSchemaDescriptor](./New-IntersightCapabilityServerSchemaDescriptor.md)
+
+[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)

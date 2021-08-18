@@ -19,7 +19,7 @@ New-IntersightWorkflowTemplateEvaluation [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowTemplateEvaluation&apos; resource.
+Create a &amp;apos;WorkflowTemplateEvaluation&amp;apos; resource.
 
 ## PARAMETERS
 

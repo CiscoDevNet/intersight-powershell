@@ -178,8 +178,8 @@ PS C:\> Set-IntersightTamAdvisoryInstance
 
 ## RELATED LINKS
 
+[Remove-IntersightTamAdvisoryInstance](./Remove-IntersightTamAdvisoryInstance.md)
+
 [Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
 
 [New-IntersightTamAdvisoryInstance](./New-IntersightTamAdvisoryInstance.md)
-
-[Remove-IntersightTamAdvisoryInstance](./Remove-IntersightTamAdvisoryInstance.md)

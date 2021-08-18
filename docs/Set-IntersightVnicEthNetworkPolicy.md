@@ -177,10 +177,10 @@ PS C:\> Set-IntersightVnicEthNetworkPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthNetworkPolicy](./Remove-IntersightVnicEthNetworkPolicy.md)
-
 [Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
 
 [New-IntersightVnicEthNetworkPolicy](./New-IntersightVnicEthNetworkPolicy.md)
+
+[Remove-IntersightVnicEthNetworkPolicy](./Remove-IntersightVnicEthNetworkPolicy.md)
 
 [Initialize-IntersightVnicVlanSettings](./Initialize-IntersightVnicVlanSettings.md)

@@ -19,7 +19,7 @@ New-IntersightIamLdapProvider [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Create a &apos;IamLdapProvider&apos; resource.
+Create a &amp;apos;IamLdapProvider&amp;apos; resource.
 
 ## PARAMETERS
 

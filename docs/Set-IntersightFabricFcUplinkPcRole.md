@@ -19,7 +19,7 @@ Set-IntersightFabricFcUplinkPcRole [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricFcUplinkPcRole&apos; resource.
+Update a &amp;apos;FabricFcUplinkPcRole&amp;apos; resource.
 
 ## PARAMETERS
 

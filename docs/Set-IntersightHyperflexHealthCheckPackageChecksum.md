@@ -19,7 +19,7 @@ Set-IntersightHyperflexHealthCheckPackageChecksum [-AdditionalProperties< Dictio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHealthCheckPackageChecksum&amp;apos; resource.
+Update a &apos;HyperflexHealthCheckPackageChecksum&apos; resource.
 
 ## PARAMETERS
 
@@ -174,8 +174,8 @@ PS C:\> Set-IntersightHyperflexHealthCheckPackageChecksum
 
 [Remove-IntersightHyperflexHealthCheckPackageChecksum](./Remove-IntersightHyperflexHealthCheckPackageChecksum.md)
 
-[Get-IntersightHyperflexHealthCheckPackageChecksum](./Get-IntersightHyperflexHealthCheckPackageChecksum.md)
-
 [New-IntersightHyperflexHealthCheckPackageChecksum](./New-IntersightHyperflexHealthCheckPackageChecksum.md)
+
+[Get-IntersightHyperflexHealthCheckPackageChecksum](./Get-IntersightHyperflexHealthCheckPackageChecksum.md)
 
 [Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)

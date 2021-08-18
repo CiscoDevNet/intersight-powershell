@@ -19,7 +19,7 @@ Set-IntersightIamLdapGroup [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &apos;IamLdapGroup&apos; resource.
+Update a &amp;apos;IamLdapGroup&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -163,8 +163,8 @@ PS C:\> Set-IntersightIamLdapGroup
 
 ## RELATED LINKS
 
+[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
+
 [New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
 
 [Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
-
-[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)

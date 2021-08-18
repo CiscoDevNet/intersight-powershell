@@ -19,7 +19,7 @@ New-IntersightBulkMoCloner [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &apos;BulkMoCloner&apos; resource.
+Create a &amp;apos;BulkMoCloner&amp;apos; resource.
 
 ## PARAMETERS
 

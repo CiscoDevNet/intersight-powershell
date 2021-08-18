@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The path identifies the specific resource in the host that the web client wants to access. Value is the decoded form of the path. e.g. &amp;apos;/foo/bar&amp;apos;.
+The path identifies the specific resource in the host that the web client wants to access. Value is the decoded form of the path. e.g. &apos;/foo/bar&apos;.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawPath
-The URI encoded form of the path property. e.g. &apos;%2Fapi%2Fv1%2F&apos;.
+The URI encoded form of the path property. e.g. &amp;apos;%2Fapi%2Fv1%2F&amp;apos;.
 
 ```yaml
 Type: string

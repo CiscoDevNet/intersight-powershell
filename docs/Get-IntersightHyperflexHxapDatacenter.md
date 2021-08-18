@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexHxapDatacenter](./New-IntersightHyperflexHxapDatacenter.md)
-
 [Set-IntersightHyperflexHxapDatacenter](./Set-IntersightHyperflexHxapDatacenter.md)
 
 [Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)
+
+[New-IntersightHyperflexHxapDatacenter](./New-IntersightHyperflexHxapDatacenter.md)
 

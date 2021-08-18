@@ -19,7 +19,7 @@ Set-IntersightComputeRackUnit [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeRackUnit&apos; resource.
+Update a &amp;apos;ComputeRackUnit&amp;apos; resource.
 
 ## PARAMETERS
 

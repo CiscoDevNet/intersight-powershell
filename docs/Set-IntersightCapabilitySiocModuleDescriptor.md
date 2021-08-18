@@ -190,8 +190,8 @@ PS C:\> Set-IntersightCapabilitySiocModuleDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySiocModuleDescriptor](./Remove-IntersightCapabilitySiocModuleDescriptor.md)
-
 [Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
 
 [New-IntersightCapabilitySiocModuleDescriptor](./New-IntersightCapabilitySiocModuleDescriptor.md)
+
+[Remove-IntersightCapabilitySiocModuleDescriptor](./Remove-IntersightCapabilitySiocModuleDescriptor.md)

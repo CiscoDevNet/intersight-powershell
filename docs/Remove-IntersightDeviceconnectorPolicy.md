@@ -17,7 +17,7 @@ Remove-IntersightDeviceconnectorPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;DeviceconnectorPolicy&apos; resource.
+Delete a &amp;apos;DeviceconnectorPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

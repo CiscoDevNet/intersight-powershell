@@ -19,7 +19,7 @@ New-IntersightFirmwareMswitchDescriptor [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
+Create a &apos;FirmwareMswitchDescriptor&apos; resource.
 
 ## PARAMETERS
 

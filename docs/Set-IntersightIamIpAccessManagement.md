@@ -19,7 +19,7 @@ Set-IntersightIamIpAccessManagement [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamIpAccessManagement&amp;apos; resource.
+Update a &apos;IamIpAccessManagement&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightBootPchStorageDevice [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &apos;BootPchStorageDevice&apos; resource.
+Update a &amp;apos;BootPchStorageDevice&amp;apos; resource.
 
 ## PARAMETERS
 

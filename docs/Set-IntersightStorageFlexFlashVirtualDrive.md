@@ -19,7 +19,7 @@ Set-IntersightStorageFlexFlashVirtualDrive [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageFlexFlashVirtualDrive&amp;apos; resource.
+Update a &apos;StorageFlexFlashVirtualDrive&apos; resource.
 
 ## PARAMETERS
 

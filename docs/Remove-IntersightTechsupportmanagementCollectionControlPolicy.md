@@ -17,7 +17,7 @@ Remove-IntersightTechsupportmanagementCollectionControlPolicy -Moid <String> [<C
 ```
 
 ## DESCRIPTION
-Delete a &apos;TechsupportmanagementCollectionControlPolicy&apos; resource.
+Delete a &amp;apos;TechsupportmanagementCollectionControlPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

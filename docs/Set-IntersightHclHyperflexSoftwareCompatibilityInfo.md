@@ -19,7 +19,7 @@ Set-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HclHyperflexSoftwareCompatibilityInfo&amp;apos; resource.
+Update a &apos;HclHyperflexSoftwareCompatibilityInfo&apos; resource.
 
 ## PARAMETERS
 

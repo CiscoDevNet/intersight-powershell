@@ -19,7 +19,7 @@ Set-IntersightCapabilitySiocModuleManufacturingDef [-AdditionalProperties< Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilitySiocModuleManufacturingDef&amp;apos; resource.
+Update a &apos;CapabilitySiocModuleManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

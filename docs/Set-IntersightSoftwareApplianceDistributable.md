@@ -19,7 +19,7 @@ Set-IntersightSoftwareApplianceDistributable [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwareApplianceDistributable&amp;apos; resource.
+Update a &apos;SoftwareApplianceDistributable&apos; resource.
 
 ## PARAMETERS
 
@@ -425,11 +425,11 @@ PS C:\> Set-IntersightSoftwareApplianceDistributable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwareApplianceDistributable](./New-IntersightSoftwareApplianceDistributable.md)
+[Remove-IntersightSoftwareApplianceDistributable](./Remove-IntersightSoftwareApplianceDistributable.md)
 
 [Get-IntersightSoftwareApplianceDistributable](./Get-IntersightSoftwareApplianceDistributable.md)
 
-[Remove-IntersightSoftwareApplianceDistributable](./Remove-IntersightSoftwareApplianceDistributable.md)
+[New-IntersightSoftwareApplianceDistributable](./New-IntersightSoftwareApplianceDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

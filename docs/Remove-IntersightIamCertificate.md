@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamCertificate](./Set-IntersightIamCertificate.md)
-
 [Get-IntersightIamCertificate](./Get-IntersightIamCertificate.md)
 
 [New-IntersightIamCertificate](./New-IntersightIamCertificate.md)
+
+[Set-IntersightIamCertificate](./Set-IntersightIamCertificate.md)
 

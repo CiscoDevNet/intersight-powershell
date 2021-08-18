@@ -19,7 +19,7 @@ New-IntersightSoftwareUcsdBundleDistributable [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareUcsdBundleDistributable&amp;apos; resource.
+Create a &apos;SoftwareUcsdBundleDistributable&apos; resource.
 
 ## PARAMETERS
 

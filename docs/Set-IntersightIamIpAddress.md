@@ -127,8 +127,8 @@ PS C:\> Set-IntersightIamIpAddress
 
 ## RELATED LINKS
 
-[Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
 
 [New-IntersightIamIpAddress](./New-IntersightIamIpAddress.md)
 
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
+[Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)

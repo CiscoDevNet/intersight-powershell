@@ -148,8 +148,8 @@ PS C:\> New-IntersightIamEndPointUser
 
 ## RELATED LINKS
 
+[Get-IntersightIamEndPointUser](./Get-IntersightIamEndPointUser.md)
+
 [Set-IntersightIamEndPointUser](./Set-IntersightIamEndPointUser.md)
 
 [Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
-
-[Get-IntersightIamEndPointUser](./Get-IntersightIamEndPointUser.md)

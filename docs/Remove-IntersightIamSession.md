@@ -17,7 +17,7 @@ Remove-IntersightIamSession -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamSession&amp;apos; resource.
+Delete a &apos;IamSession&apos; resource.
 
 ## EXAMPLES
 

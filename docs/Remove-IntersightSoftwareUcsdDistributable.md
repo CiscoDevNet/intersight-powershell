@@ -17,7 +17,7 @@ Remove-IntersightSoftwareUcsdDistributable -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareUcsdDistributable&amp;apos; resource.
+Delete a &apos;SoftwareUcsdDistributable&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
+
 [Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
 
 [New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
-
-[Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
 

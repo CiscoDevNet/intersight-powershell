@@ -8,30 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcpoolFcBlock.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolFcBlock", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcpoolFcBlock:GetCmdletBase
-	{
-		public GetIntersightFcpoolFcBlock()
-		{
-			ApiInstance = new FcpoolApi(Config);
-            MethodName = "GetFcpoolFcBlockListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove FcpoolLease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolLease")]
-    public class RemoveIntersightFcpoolLease:RemoveCmdletBase
-	{
-		public RemoveIntersightFcpoolLease()
-		{
-			ApiInstance = new FcpoolApi(Config);
-            MethodName = "DeleteFcpoolLeaseWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolPool.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPool", DefaultParameterSetName = "CmdletParam")]
@@ -150,15 +126,15 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcpoolUniverse.</para>
+    /// <para type="synopsis">This is the cmdlet to Get FcpoolFcBlock.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolUniverse", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcpoolUniverse:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolFcBlock", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcpoolFcBlock:GetCmdletBase
 	{
-		public GetIntersightFcpoolUniverse()
+		public GetIntersightFcpoolFcBlock()
 		{
 			ApiInstance = new FcpoolApi(Config);
-            MethodName = "GetFcpoolUniverseListWithHttpInfo";
+            MethodName = "GetFcpoolFcBlockListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -268,6 +244,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FcpoolUniverse.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcpoolUniverse:GetCmdletBase
+	{
+		public GetIntersightFcpoolUniverse()
+		{
+			ApiInstance = new FcpoolApi(Config);
+            MethodName = "GetFcpoolUniverseListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolLease.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFcpoolLease", DefaultParameterSetName = "CmdletParam")]
@@ -277,6 +265,18 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new FcpoolApi(Config);
             MethodName = "GetFcpoolLeaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove FcpoolLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolLease")]
+    public class RemoveIntersightFcpoolLease:RemoveCmdletBase
+	{
+		public RemoveIntersightFcpoolLease()
+		{
+			ApiInstance = new FcpoolApi(Config);
+            MethodName = "DeleteFcpoolLeaseWithHttpInfo";
 		}
     }
 }

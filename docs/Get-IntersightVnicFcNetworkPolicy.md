@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightVnicFcNetworkPolicy](./New-IntersightVnicFcNetworkPolicy.md)
+[Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
 
 [Set-IntersightVnicFcNetworkPolicy](./Set-IntersightVnicFcNetworkPolicy.md)
 
-[Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
+[New-IntersightVnicFcNetworkPolicy](./New-IntersightVnicFcNetworkPolicy.md)
 

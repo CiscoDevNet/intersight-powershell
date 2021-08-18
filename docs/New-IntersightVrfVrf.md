@@ -127,8 +127,8 @@ PS C:\> New-IntersightVrfVrf
 
 ## RELATED LINKS
 
+[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
+
 [Set-IntersightVrfVrf](./Set-IntersightVrfVrf.md)
 
 [Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
-
-[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)

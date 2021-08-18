@@ -19,7 +19,7 @@ New-IntersightSnmpPolicy [-AccessCommunityString< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SnmpPolicy&amp;apos; resource.
+Create a &apos;SnmpPolicy&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryNamespace [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryNamespace&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryNamespace&apos; resource.
 
 ## PARAMETERS
 

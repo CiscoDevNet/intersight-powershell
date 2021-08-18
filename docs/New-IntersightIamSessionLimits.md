@@ -175,8 +175,8 @@ PS C:\> New-IntersightIamSessionLimits
 
 ## RELATED LINKS
 
-[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
+[Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
 
 [Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
 
-[Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
+[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)

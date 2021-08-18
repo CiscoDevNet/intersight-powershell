@@ -187,6 +187,6 @@ PS C:\> New-IntersightApplianceDeviceClaim
 
 ## RELATED LINKS
 
-[Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)
-
 [Get-IntersightApplianceDeviceClaim](./Get-IntersightApplianceDeviceClaim.md)
+
+[Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)

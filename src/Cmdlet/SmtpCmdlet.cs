@@ -150,18 +150,6 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SmtpPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSmtpPolicy")]
-    public class RemoveIntersightSmtpPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightSmtpPolicy()
-		{
-			ApiInstance = new SmtpApi(Config);
-            MethodName = "DeleteSmtpPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SmtpPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSmtpPolicy")]
@@ -290,5 +278,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove SmtpPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightSmtpPolicy")]
+    public class RemoveIntersightSmtpPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightSmtpPolicy()
+		{
+			ApiInstance = new SmtpApi(Config);
+            MethodName = "DeleteSmtpPolicyWithHttpInfo";
+		}
     }
 }

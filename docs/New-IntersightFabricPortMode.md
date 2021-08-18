@@ -175,8 +175,8 @@ PS C:\> New-IntersightFabricPortMode
 
 ## RELATED LINKS
 
-[Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)
-
 [Set-IntersightFabricPortMode](./Set-IntersightFabricPortMode.md)
 
 [Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)
+
+[Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)

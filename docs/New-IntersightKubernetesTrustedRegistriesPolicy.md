@@ -19,7 +19,7 @@ New-IntersightKubernetesTrustedRegistriesPolicy [-AdditionalProperties< Dictiona
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesTrustedRegistriesPolicy&amp;apos; resource.
+Create a &apos;KubernetesTrustedRegistriesPolicy&apos; resource.
 
 ## PARAMETERS
 

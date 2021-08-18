@@ -19,7 +19,7 @@ Set-IntersightTamAdvisoryInfo [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;TamAdvisoryInfo&amp;apos; resource.
+Update a &apos;TamAdvisoryInfo&apos; resource.
 
 ## PARAMETERS
 

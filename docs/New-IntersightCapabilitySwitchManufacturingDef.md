@@ -19,7 +19,7 @@ New-IntersightCapabilitySwitchManufacturingDef [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilitySwitchManufacturingDef&apos; resource.
+Create a &amp;apos;CapabilitySwitchManufacturingDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -217,8 +217,8 @@ PS C:\> New-IntersightCapabilitySwitchManufacturingDef
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilitySwitchManufacturingDef](./Get-IntersightCapabilitySwitchManufacturingDef.md)
+
 [Set-IntersightCapabilitySwitchManufacturingDef](./Set-IntersightCapabilitySwitchManufacturingDef.md)
 
 [Remove-IntersightCapabilitySwitchManufacturingDef](./Remove-IntersightCapabilitySwitchManufacturingDef.md)
-
-[Get-IntersightCapabilitySwitchManufacturingDef](./Get-IntersightCapabilitySwitchManufacturingDef.md)

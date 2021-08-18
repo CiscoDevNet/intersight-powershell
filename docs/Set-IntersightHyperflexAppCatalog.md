@@ -258,6 +258,6 @@ PS C:\> Set-IntersightHyperflexAppCatalog
 
 [Remove-IntersightHyperflexAppCatalog](./Remove-IntersightHyperflexAppCatalog.md)
 
-[Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)
-
 [New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
+
+[Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)

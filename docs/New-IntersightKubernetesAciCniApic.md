@@ -19,7 +19,7 @@ New-IntersightKubernetesAciCniApic [-AciCniProfiles< List<KubernetesAciCniProfil
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesAciCniApic&apos; resource.
+Create a &amp;apos;KubernetesAciCniApic&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -181,8 +181,8 @@ PS C:\> New-IntersightKubernetesAciCniApic
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)
+
 [Set-IntersightKubernetesAciCniApic](./Set-IntersightKubernetesAciCniApic.md)
 
 [Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
-
-[Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)

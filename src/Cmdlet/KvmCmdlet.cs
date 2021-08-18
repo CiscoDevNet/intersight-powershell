@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get KvmTunnel.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmTunnel", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightKvmTunnel:GetCmdletBase
+	{
+		public GetIntersightKvmTunnel()
+		{
+			ApiInstance = new KvmApi(Config);
+            MethodName = "GetKvmTunnelListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KvmTunnel.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightKvmTunnel")]
@@ -75,27 +87,100 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get KvmTunnel.</para>
+    /// <para type="synopsis">This is the cmdlet to New KvmSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmTunnel", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightKvmTunnel:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightKvmSession")]
+    public class NewIntersightKvmSession:NewCmdletBase
 	{
-		public GetIntersightKvmTunnel()
+		public NewIntersightKvmSession()
 		{
 			ApiInstance = new KvmApi(Config);
-            MethodName = "GetKvmTunnelListWithHttpInfo";
+            ModelObject = new KvmSession();
+            MethodName = "CreateKvmSessionWithHttpInfo";
 		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Temporary one-time password for vKVM access."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OneTimePassword {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship Server {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The status of the session.\n* `Active` - The session is currently active.\n* `Ended` - The session has ended normally.\n* `Terminated` - The session was terminated by an admin."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KvmSession.StatusEnum Status {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a kvmTunnel resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KvmTunnelRelationship Tunnel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Username used for vKVM access."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Username {
+            get;
+            set;
+        }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get KvmVmConsole.</para>
+    /// <para type="synopsis">This is the cmdlet to Get KvmSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmVmConsole", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightKvmVmConsole:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmSession", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightKvmSession:GetCmdletBase
 	{
-		public GetIntersightKvmVmConsole()
+		public GetIntersightKvmSession()
 		{
 			ApiInstance = new KvmApi(Config);
-            MethodName = "GetKvmVmConsoleListWithHttpInfo";
+            MethodName = "GetKvmSessionListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -232,91 +317,6 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set KvmSession.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKvmSession")]
-    public class SetIntersightKvmSession:SetCmdletBase
-	{
-		public SetIntersightKvmSession()
-		{
-			ApiInstance = new KvmApi(Config);
-            ModelObject = new KvmSession();
-            MethodName = "UpdateKvmSessionWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Temporary one-time password for vKVM access."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OneTimePassword {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship Server {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The status of the session.\n* `Active` - The session is currently active.\n* `Ended` - The session has ended normally.\n* `Terminated` - The session was terminated by an admin."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KvmSession.StatusEnum Status {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a kvmTunnel resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KvmTunnelRelationship Tunnel {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Username used for vKVM access."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Username {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KvmPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightKvmPolicy", DefaultParameterSetName = "CmdletParam")]
@@ -450,16 +450,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New KvmSession.</para>
+    /// <para type="synopsis">This is the cmdlet to Set KvmSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKvmSession")]
-    public class NewIntersightKvmSession:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightKvmSession")]
+    public class SetIntersightKvmSession:SetCmdletBase
 	{
-		public NewIntersightKvmSession()
+		public SetIntersightKvmSession()
 		{
 			ApiInstance = new KvmApi(Config);
             ModelObject = new KvmSession();
-            MethodName = "CreateKvmSessionWithHttpInfo";
+            MethodName = "UpdateKvmSessionWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -473,7 +473,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -535,15 +535,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get KvmSession.</para>
+    /// <para type="synopsis">This is the cmdlet to Get KvmVmConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmSession", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightKvmSession:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmVmConsole", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightKvmVmConsole:GetCmdletBase
 	{
-		public GetIntersightKvmSession()
+		public GetIntersightKvmVmConsole()
 		{
 			ApiInstance = new KvmApi(Config);
-            MethodName = "GetKvmSessionListWithHttpInfo";
+            MethodName = "GetKvmVmConsoleListWithHttpInfo";
 		}
     }
 }

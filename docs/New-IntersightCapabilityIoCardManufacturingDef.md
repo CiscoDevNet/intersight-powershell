@@ -19,7 +19,7 @@ New-IntersightCapabilityIoCardManufacturingDef [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.
+Create a &apos;CapabilityIoCardManufacturingDef&apos; resource.
 
 ## PARAMETERS
 
@@ -202,8 +202,8 @@ PS C:\> New-IntersightCapabilityIoCardManufacturingDef
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityIoCardManufacturingDef](./Get-IntersightCapabilityIoCardManufacturingDef.md)
-
 [Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
 
 [Remove-IntersightCapabilityIoCardManufacturingDef](./Remove-IntersightCapabilityIoCardManufacturingDef.md)
+
+[Get-IntersightCapabilityIoCardManufacturingDef](./Get-IntersightCapabilityIoCardManufacturingDef.md)

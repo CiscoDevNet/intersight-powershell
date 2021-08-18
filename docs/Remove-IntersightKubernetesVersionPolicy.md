@@ -17,7 +17,7 @@ Remove-IntersightKubernetesVersionPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesVersionPolicy&apos; resource.
+Delete a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightCapabilityEquipmentPhysicalDef [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityEquipmentPhysicalDef&apos; resource.
+Update a &amp;apos;CapabilityEquipmentPhysicalDef&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightSdcardPolicy [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &apos;SdcardPolicy&apos; resource.
+Update a &amp;apos;SdcardPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -180,10 +180,10 @@ PS C:\> Set-IntersightSdcardPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightSdcardPolicy](./Remove-IntersightSdcardPolicy.md)
-
 [Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
 
 [New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
+
+[Remove-IntersightSdcardPolicy](./Remove-IntersightSdcardPolicy.md)
 
 [Initialize-IntersightSdcardPartition](./Initialize-IntersightSdcardPartition.md)

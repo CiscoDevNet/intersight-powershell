@@ -19,7 +19,7 @@ New-IntersightTechsupportmanagementTechSupportBundle [-AdditionalProperties< Dic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TechsupportmanagementTechSupportBundle&amp;apos; resource.
+Create a &apos;TechsupportmanagementTechSupportBundle&apos; resource.
 
 ## PARAMETERS
 

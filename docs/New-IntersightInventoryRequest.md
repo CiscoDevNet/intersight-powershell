@@ -19,7 +19,7 @@ New-IntersightInventoryRequest [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &apos;InventoryRequest&apos; resource.
+Create a &amp;apos;InventoryRequest&amp;apos; resource.
 
 ## PARAMETERS
 

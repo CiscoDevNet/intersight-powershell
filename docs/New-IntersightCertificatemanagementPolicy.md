@@ -19,7 +19,7 @@ New-IntersightCertificatemanagementPolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Create a &apos;CertificatemanagementPolicy&apos; resource.
+Create a &amp;apos;CertificatemanagementPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -183,10 +183,10 @@ PS C:\> New-IntersightCertificatemanagementPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
+
 [Set-IntersightCertificatemanagementPolicy](./Set-IntersightCertificatemanagementPolicy.md)
 
 [Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)
-
-[Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
 
 [Initialize-IntersightCertificatemanagementCertificateBase](./Initialize-IntersightCertificatemanagementCertificateBase.md)

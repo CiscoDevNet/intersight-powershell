@@ -19,7 +19,7 @@ Set-IntersightIamIdpReference [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamIdpReference&amp;apos; resource.
+Update a &apos;IamIdpReference&apos; resource.
 
 ## PARAMETERS
 

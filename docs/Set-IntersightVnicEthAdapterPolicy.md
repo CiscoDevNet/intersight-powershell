@@ -19,7 +19,7 @@ Set-IntersightVnicEthAdapterPolicy [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
+Update a &apos;VnicEthAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 

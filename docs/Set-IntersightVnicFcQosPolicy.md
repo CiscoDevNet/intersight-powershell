@@ -205,8 +205,8 @@ PS C:\> Set-IntersightVnicFcQosPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
+[New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
 
 [Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
 
-[New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
+[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)

@@ -19,7 +19,7 @@ Set-IntersightStorageEnclosureDisk [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageEnclosureDisk&amp;apos; resource.
+Update a &apos;StorageEnclosureDisk&apos; resource.
 
 ## PARAMETERS
 

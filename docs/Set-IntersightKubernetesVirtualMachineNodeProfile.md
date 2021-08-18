@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineNodeProfile [-Action< string>][-Additional
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesVirtualMachineNodeProfile&apos; resource.
+Update a &amp;apos;KubernetesVirtualMachineNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -297,10 +297,10 @@ PS C:\> Set-IntersightKubernetesVirtualMachineNodeProfile
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesVirtualMachineNodeProfile](./New-IntersightKubernetesVirtualMachineNodeProfile.md)
+[Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)
 
 [Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
 
-[Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)
+[New-IntersightKubernetesVirtualMachineNodeProfile](./New-IntersightKubernetesVirtualMachineNodeProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)

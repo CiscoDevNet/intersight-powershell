@@ -19,7 +19,7 @@ New-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexHealthCheckDefinition&apos; resource.
+Create a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
 
 ## PARAMETERS
 

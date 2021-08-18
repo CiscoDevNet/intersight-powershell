@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexNodeProfile [-AdditionalProperties< Dictionary<string,object>>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][[-Moid]< string>][-Name< string>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-Type< HyperflexNodeProfile.TypeEnum>]
+Set-IntersightHyperflexNodeProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-Type< HyperflexNodeProfile.TypeEnum>]
 
 ```
 
@@ -22,6 +22,21 @@ Set-IntersightHyperflexNodeProfile [-AdditionalProperties< Dictionary<string,obj
 Update a &apos;HyperflexNodeProfile&apos; resource.
 
 ## PARAMETERS
+
+### -Action
+User initiated action. Each profile type has its own supported actions. For HyperFlex cluster profile, the supported actions are -- Validate, Deploy, Continue, Retry, Abort, Unassign For server profile, the support actions are -- Deploy, Unassign.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -74,6 +89,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ConfigContext
+The configuration state and results of the last configuration operation.
+
+Note :- Use Initialize-IntersightPolicyConfigContext to create the object of complex type PolicyConfigContext
+
+```yaml
+Type: PolicyConfigContext
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Description
 Description of the profile.
 
@@ -106,6 +138,21 @@ Accept wildcard characters: False
 
 ### -HxdpMgmtIp
 IP address for HyperFlex management network.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HxdpStorageClientIp
+IP address for storage client network (Controller VM interface).
 
 ```yaml
 Type: string
@@ -194,6 +241,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PolicyBucket
+An array of relationships to policyAbstractPolicy resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -271,8 +336,10 @@ PS C:\> Set-IntersightHyperflexNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
-
 [Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
 
 [New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+
+[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
+
+[Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)

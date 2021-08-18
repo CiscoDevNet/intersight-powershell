@@ -19,7 +19,7 @@ New-IntersightFirmwareDriveDescriptor [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareDriveDescriptor&apos; resource.
+Create a &amp;apos;FirmwareDriveDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

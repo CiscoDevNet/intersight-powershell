@@ -19,7 +19,7 @@ Set-IntersightRecoveryOnDemandBackup [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &apos;RecoveryOnDemandBackup&apos; resource.
+Update a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
 
 ## PARAMETERS
 

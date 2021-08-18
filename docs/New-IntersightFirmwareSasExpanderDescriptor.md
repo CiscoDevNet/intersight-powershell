@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareSasExpanderDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareSasExpanderDescriptor](./Get-IntersightFirmwareSasExpanderDescriptor.md)
+[Set-IntersightFirmwareSasExpanderDescriptor](./Set-IntersightFirmwareSasExpanderDescriptor.md)
 
 [Remove-IntersightFirmwareSasExpanderDescriptor](./Remove-IntersightFirmwareSasExpanderDescriptor.md)
 
-[Set-IntersightFirmwareSasExpanderDescriptor](./Set-IntersightFirmwareSasExpanderDescriptor.md)
+[Get-IntersightFirmwareSasExpanderDescriptor](./Get-IntersightFirmwareSasExpanderDescriptor.md)

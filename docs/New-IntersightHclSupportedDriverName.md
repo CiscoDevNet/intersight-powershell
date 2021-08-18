@@ -19,7 +19,7 @@ New-IntersightHclSupportedDriverName [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &apos;HclSupportedDriverName&apos; resource.
+Create a &amp;apos;HclSupportedDriverName&amp;apos; resource.
 
 ## PARAMETERS
 

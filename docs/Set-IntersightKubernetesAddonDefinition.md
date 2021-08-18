@@ -298,8 +298,8 @@ PS C:\> Set-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
+
 [Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
 
 [New-IntersightKubernetesAddonDefinition](./New-IntersightKubernetesAddonDefinition.md)
-
-[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)

@@ -19,7 +19,7 @@ Set-IntersightBootSanDevice [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &apos;BootSanDevice&apos; resource.
+Update a &amp;apos;BootSanDevice&amp;apos; resource.
 
 ## PARAMETERS
 

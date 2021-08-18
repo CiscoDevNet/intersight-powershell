@@ -19,7 +19,7 @@ New-IntersightIqnpoolPool [-AdditionalProperties< Dictionary<string,object>>][-A
 ```
 
 ## DESCRIPTION
-Create a &apos;IqnpoolPool&apos; resource.
+Create a &amp;apos;IqnpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-The prefix for IQN blocks created for this pool.
+The prefix for any IQN blocks created for this pool. IQN Prefix must have the following format \&quot;iqn.yyyy-mm.naming-authority\&quot;, where naming-authority is usually the reverse syntax of the Internet domain name of the naming authority.
 
 ```yaml
 Type: string
@@ -192,10 +192,10 @@ PS C:\> New-IntersightIqnpoolPool
 
 ## RELATED LINKS
 
+[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
+
 [Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
 
 [Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
-
-[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)

@@ -228,10 +228,10 @@ PS C:\> Set-IntersightFabricAppliancePcRole
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
+
 [Get-IntersightFabricAppliancePcRole](./Get-IntersightFabricAppliancePcRole.md)
 
 [New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
-
-[Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)

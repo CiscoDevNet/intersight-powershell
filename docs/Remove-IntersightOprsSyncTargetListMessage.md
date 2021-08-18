@@ -17,7 +17,7 @@ Remove-IntersightOprsSyncTargetListMessage -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;OprsSyncTargetListMessage&amp;apos; resource.
+Delete a &apos;OprsSyncTargetListMessage&apos; resource.
 
 ## EXAMPLES
 

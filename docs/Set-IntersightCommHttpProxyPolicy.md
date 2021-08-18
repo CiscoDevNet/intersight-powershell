@@ -19,7 +19,7 @@ Set-IntersightCommHttpProxyPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CommHttpProxyPolicy&amp;apos; resource.
+Update a &apos;CommHttpProxyPolicy&apos; resource.
 
 ## PARAMETERS
 

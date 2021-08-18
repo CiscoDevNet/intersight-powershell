@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetType
-If the web API is to be executed in a remote device connected to the\nIntersight through device connector, &apos;Endpoint&apos; is expected as the value\nwhereas if the API is an Intersight API, &apos;Local&apos; is expected as the value.
+If the web API is to be executed in a remote device connected to the\nIntersight through device connector, &amp;apos;Endpoint&amp;apos; is expected as the value\nwhereas if the API is an Intersight API, &amp;apos;Local&amp;apos; is expected as the value.
 
 ```yaml
 Type: string

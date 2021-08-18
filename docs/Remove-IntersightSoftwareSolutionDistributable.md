@@ -17,7 +17,7 @@ Remove-IntersightSoftwareSolutionDistributable -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwareSolutionDistributable&apos; resource.
+Delete a &amp;apos;SoftwareSolutionDistributable&amp;apos; resource.
 
 ## EXAMPLES
 

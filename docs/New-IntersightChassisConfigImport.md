@@ -19,7 +19,7 @@ New-IntersightChassisConfigImport [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &apos;ChassisConfigImport&apos; resource.
+Create a &amp;apos;ChassisConfigImport&amp;apos; resource.
 
 ## PARAMETERS
 

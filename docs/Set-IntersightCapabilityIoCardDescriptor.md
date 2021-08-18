@@ -19,7 +19,7 @@ Set-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityIoCardDescriptor&amp;apos; resource.
+Update a &apos;CapabilityIoCardDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> Set-IntersightCapabilityIoCardDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityIoCardDescriptor](./Remove-IntersightCapabilityIoCardDescriptor.md)
+
 [Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
 
 [New-IntersightCapabilityIoCardDescriptor](./New-IntersightCapabilityIoCardDescriptor.md)
-
-[Remove-IntersightCapabilityIoCardDescriptor](./Remove-IntersightCapabilityIoCardDescriptor.md)
