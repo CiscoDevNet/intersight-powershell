@@ -19,7 +19,7 @@ Set-IntersightMacpoolPool [-AdditionalProperties< Dictionary<string,object>>][-A
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MacpoolPool&amp;apos; resource.
+Update a &apos;MacpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -177,10 +177,10 @@ PS C:\> Set-IntersightMacpoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
-
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
 
 [New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
+
+[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
 
 [Initialize-IntersightMacpoolBlock](./Initialize-IntersightMacpoolBlock.md)

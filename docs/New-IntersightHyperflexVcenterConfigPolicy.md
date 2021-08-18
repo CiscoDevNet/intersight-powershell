@@ -19,7 +19,7 @@ New-IntersightHyperflexVcenterConfigPolicy [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
+Create a &apos;HyperflexVcenterConfigPolicy&apos; resource.
 
 ## PARAMETERS
 

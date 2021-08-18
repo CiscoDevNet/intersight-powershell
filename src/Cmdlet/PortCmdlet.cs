@@ -8,58 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PortMacBinding.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortMacBinding", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPortMacBinding:GetCmdletBase
-	{
-		public GetIntersightPortMacBinding()
-		{
-			ApiInstance = new PortApi(Config);
-            MethodName = "GetPortMacBindingListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set PortGroup.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPortGroup")]
-    public class SetIntersightPortGroup:SetCmdletBase
-	{
-		public SetIntersightPortGroup()
-		{
-			ApiInstance = new PortApi(Config);
-            ModelObject = new PortGroup();
-            MethodName = "UpdatePortGroupWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PortSubGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightPortSubGroup")]
@@ -112,6 +60,70 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get PortGroup.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightPortGroup", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPortGroup:GetCmdletBase
+	{
+		public GetIntersightPortGroup()
+		{
+			ApiInstance = new PortApi(Config);
+            MethodName = "GetPortGroupListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get PortMacBinding.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightPortMacBinding", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPortMacBinding:GetCmdletBase
+	{
+		public GetIntersightPortMacBinding()
+		{
+			ApiInstance = new PortApi(Config);
+            MethodName = "GetPortMacBindingListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set PortGroup.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightPortGroup")]
+    public class SetIntersightPortGroup:SetCmdletBase
+	{
+		public SetIntersightPortGroup()
+		{
+			ApiInstance = new PortApi(Config);
+            ModelObject = new PortGroup();
+            MethodName = "UpdatePortGroupWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PortMacBinding.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightPortMacBinding")]
@@ -121,7 +133,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new PortApi(Config);
             ModelObject = new PortMacBinding();
-            MethodName = "PatchPortMacBindingWithHttpInfo";
+            MethodName = "UpdatePortMacBindingWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -312,17 +324,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PortGroup.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortGroup", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPortGroup:GetCmdletBase
-	{
-		public GetIntersightPortGroup()
-		{
-			ApiInstance = new PortApi(Config);
-            MethodName = "GetPortGroupListWithHttpInfo";
-		}
     }
 }

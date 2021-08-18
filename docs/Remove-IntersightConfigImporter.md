@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightConfigImporter](./Get-IntersightConfigImporter.md)
-
 [New-IntersightConfigImporter](./New-IntersightConfigImporter.md)
+
+[Get-IntersightConfigImporter](./Get-IntersightConfigImporter.md)
 

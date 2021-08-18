@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexHxapDatacenter](./Set-IntersightHyperflexHxapDatacenter.md)
+
 [Get-IntersightHyperflexHxapDatacenter](./Get-IntersightHyperflexHxapDatacenter.md)
 
 [New-IntersightHyperflexHxapDatacenter](./New-IntersightHyperflexHxapDatacenter.md)
-
-[Set-IntersightHyperflexHxapDatacenter](./Set-IntersightHyperflexHxapDatacenter.md)
 

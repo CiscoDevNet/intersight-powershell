@@ -19,7 +19,7 @@ New-IntersightKubernetesVersionPolicy [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesVersionPolicy&apos; resource.
+Create a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

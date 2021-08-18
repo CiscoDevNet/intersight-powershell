@@ -19,7 +19,7 @@ New-IntersightVnicFcNetworkPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicFcNetworkPolicy&amp;apos; resource.
+Create a &apos;VnicFcNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -162,10 +162,10 @@ PS C:\> New-IntersightVnicFcNetworkPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicFcNetworkPolicy](./Get-IntersightVnicFcNetworkPolicy.md)
+[Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
 
 [Set-IntersightVnicFcNetworkPolicy](./Set-IntersightVnicFcNetworkPolicy.md)
 
-[Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
+[Get-IntersightVnicFcNetworkPolicy](./Get-IntersightVnicFcNetworkPolicy.md)
 
 [Initialize-IntersightVnicVsanSettings](./Initialize-IntersightVnicVsanSettings.md)

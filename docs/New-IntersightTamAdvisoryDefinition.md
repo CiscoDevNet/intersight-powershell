@@ -367,9 +367,9 @@ PS C:\> New-IntersightTamAdvisoryDefinition
 
 [Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
-[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
-
 [Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
+
+[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

@@ -19,7 +19,7 @@ Set-IntersightServerProfile [-Action< string>][-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ServerProfile&amp;apos; resource.
+Update a &apos;ServerProfile&apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)
-
 [Set-IntersightThermalPolicy](./Set-IntersightThermalPolicy.md)
 
 [Remove-IntersightThermalPolicy](./Remove-IntersightThermalPolicy.md)
+
+[New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)
 

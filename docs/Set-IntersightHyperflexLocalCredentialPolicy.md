@@ -223,8 +223,8 @@ PS C:\> Set-IntersightHyperflexLocalCredentialPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
+
 [Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
 
 [New-IntersightHyperflexLocalCredentialPolicy](./New-IntersightHyperflexLocalCredentialPolicy.md)
-
-[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)

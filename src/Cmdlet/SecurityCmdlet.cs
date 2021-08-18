@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SecurityApi(Config);
             ModelObject = new SecurityUnit();
-            MethodName = "UpdateSecurityUnitWithHttpInfo";
+            MethodName = "PatchSecurityUnitWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

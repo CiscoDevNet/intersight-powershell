@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightCapabilityEquipmentSlotArray](./Set-IntersightCapabilityEquipmentSlotArray.md)
 
-[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
-
 [New-IntersightCapabilityEquipmentSlotArray](./New-IntersightCapabilityEquipmentSlotArray.md)
+
+[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
 

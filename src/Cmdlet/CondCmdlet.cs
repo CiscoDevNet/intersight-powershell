@@ -8,6 +8,30 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondHclStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatus", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondHclStatus:GetCmdletBase
+	{
+		public GetIntersightCondHclStatus()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondHclStatusListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondHclStatusJob.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusJob", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondHclStatusJob:GetCmdletBase
+	{
+		public GetIntersightCondHclStatusJob()
+		{
+			ApiInstance = new CondApi(Config);
+            MethodName = "GetCondHclStatusJobListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CondAlarm.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightCondAlarm")]
@@ -17,7 +41,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CondApi(Config);
             ModelObject = new CondAlarm();
-            MethodName = "UpdateCondAlarmWithHttpInfo";
+            MethodName = "PatchCondAlarmWithHttpInfo";
 		}
         // <summary>
         /// <para type="description">"Alarm acknowledgment state. Default value is None.\n* `None` - The Enum value None represents that the alarm is not acknowledged and is included as part of health status and overall alarm count.\n* `Acknowledge` - The Enum value Acknowledge represents that the alarm is acknowledged by user. The alarm will be ignored from the health status and overall alarm count."</para>
@@ -99,18 +123,6 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondHclStatusJob.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusJob", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondHclStatusJob:GetCmdletBase
-	{
-		public GetIntersightCondHclStatusJob()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondHclStatusJobListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondHclStatusDetail.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusDetail", DefaultParameterSetName = "CmdletParam")]
@@ -120,18 +132,6 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CondApi(Config);
             MethodName = "GetCondHclStatusDetailListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CondHclStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatus", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCondHclStatus:GetCmdletBase
-	{
-		public GetIntersightCondHclStatus()
-		{
-			ApiInstance = new CondApi(Config);
-            MethodName = "GetCondHclStatusListWithHttpInfo";
 		}
     }
 }

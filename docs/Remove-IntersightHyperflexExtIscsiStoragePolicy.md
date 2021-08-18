@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexExtIscsiStoragePolicy](./New-IntersightHyperflexExtIscsiStoragePolicy.md)
-
 [Get-IntersightHyperflexExtIscsiStoragePolicy](./Get-IntersightHyperflexExtIscsiStoragePolicy.md)
+
+[New-IntersightHyperflexExtIscsiStoragePolicy](./New-IntersightHyperflexExtIscsiStoragePolicy.md)
 
 [Set-IntersightHyperflexExtIscsiStoragePolicy](./Set-IntersightHyperflexExtIscsiStoragePolicy.md)
 

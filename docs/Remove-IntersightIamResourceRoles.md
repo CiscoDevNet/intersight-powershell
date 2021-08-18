@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)
 
-[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
-
 [Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
+
+[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
 

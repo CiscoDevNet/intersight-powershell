@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
+[Set-IntersightFabricEthNetworkControlPolicy](./Set-IntersightFabricEthNetworkControlPolicy.md)
 
 [New-IntersightFabricEthNetworkControlPolicy](./New-IntersightFabricEthNetworkControlPolicy.md)
 
-[Set-IntersightFabricEthNetworkControlPolicy](./Set-IntersightFabricEthNetworkControlPolicy.md)
+[Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
 

@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
-
 [New-IntersightIamIpAccessManagement](./New-IntersightIamIpAccessManagement.md)
+
+[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
 

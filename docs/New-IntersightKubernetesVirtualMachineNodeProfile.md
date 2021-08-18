@@ -297,10 +297,10 @@ PS C:\> New-IntersightKubernetesVirtualMachineNodeProfile
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
-
 [Set-IntersightKubernetesVirtualMachineNodeProfile](./Set-IntersightKubernetesVirtualMachineNodeProfile.md)
 
 [Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)
+
+[Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)

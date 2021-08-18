@@ -19,7 +19,7 @@ Set-IntersightHyperflexAutoSupportPolicy [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexAutoSupportPolicy&amp;apos; resource.
+Update a &apos;HyperflexAutoSupportPolicy&apos; resource.
 
 ## PARAMETERS
 

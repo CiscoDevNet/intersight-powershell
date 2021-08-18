@@ -147,7 +147,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject.Version = this.Version;
+                initObject._Version = this.Version;
             }
             WriteObject(initObject);
         }

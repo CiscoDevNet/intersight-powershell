@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVirtualDisk [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVirtualDisk&amp;apos; resource.
+Update a &apos;VirtualizationVirtualDisk&apos; resource.
 
 ## PARAMETERS
 
@@ -223,8 +223,8 @@ PS C:\> Set-IntersightVirtualizationVirtualDisk
 
 ## RELATED LINKS
 
+[Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
+
 [Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)
 
 [New-IntersightVirtualizationVirtualDisk](./New-IntersightVirtualizationVirtualDisk.md)
-
-[Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)

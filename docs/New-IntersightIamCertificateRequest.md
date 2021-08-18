@@ -212,11 +212,11 @@ PS C:\> New-IntersightIamCertificateRequest
 
 ## RELATED LINKS
 
-[Get-IntersightIamCertificateRequest](./Get-IntersightIamCertificateRequest.md)
-
 [Set-IntersightIamCertificateRequest](./Set-IntersightIamCertificateRequest.md)
 
 [Remove-IntersightIamCertificateRequest](./Remove-IntersightIamCertificateRequest.md)
+
+[Get-IntersightIamCertificateRequest](./Get-IntersightIamCertificateRequest.md)
 
 [Initialize-IntersightPkixDistinguishedName](./Initialize-IntersightPkixDistinguishedName.md)
 

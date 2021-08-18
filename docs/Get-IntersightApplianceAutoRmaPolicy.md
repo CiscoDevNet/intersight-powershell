@@ -25,7 +25,7 @@ Get-IntersightApplianceAutoRmaPolicy [-Count <Boolean>] [-InlineCount <String>] 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;ApplianceAutoRmaPolicy&amp;apos; resource.,
+Read a &apos;ApplianceAutoRmaPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightApplianceAutoRmaPolicy](./Set-IntersightApplianceAutoRmaPolicy.md)
-
 [New-IntersightApplianceAutoRmaPolicy](./New-IntersightApplianceAutoRmaPolicy.md)
+
+[Set-IntersightApplianceAutoRmaPolicy](./Set-IntersightApplianceAutoRmaPolicy.md)
 

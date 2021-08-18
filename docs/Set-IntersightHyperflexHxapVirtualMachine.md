@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapVirtualMachine [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexHxapVirtualMachine&apos; resource.
+Update a &amp;apos;HyperflexHxapVirtualMachine&amp;apos; resource.
 
 ## PARAMETERS
 

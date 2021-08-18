@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexCluster [-AdditionalProperties< Dictionary<string,object>>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< List<HyperflexBaseClusterRelationship>>][-ClusterPurpose< HyperflexCluster.ClusterPurposeEnum>][-HypervisorType< HyperflexCluster.HypervisorTypeEnum>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ParentCluster< HyperflexBaseClusterRelationship>][-ProcessorCapacity< VirtualizationComputeCapacity>][-Tags< List<MoTag>>][-TotalCores< long>]
+Set-IntersightHyperflexCluster [-AdditionalProperties< Dictionary<string,object>>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< List<HyperflexBaseClusterRelationship>>][-ClusterPurpose< HyperflexCluster.ClusterPurposeEnum>][-DnsServers< List<string>>][-HypervisorType< HyperflexCluster.HypervisorTypeEnum>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-NtpServers< List<string>>][-ParentCluster< HyperflexBaseClusterRelationship>][-ProcessorCapacity< VirtualizationComputeCapacity>][-Tags< List<MoTag>>][-TotalCores< long>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexCluster&apos; resource.
+Update a &amp;apos;HyperflexCluster&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -89,6 +89,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DnsServers
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -HypervisorType
 Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
 
@@ -130,6 +145,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NtpServers
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)

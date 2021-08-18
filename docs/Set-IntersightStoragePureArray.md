@@ -19,7 +19,7 @@ Set-IntersightStoragePureArray [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StoragePureArray&amp;apos; resource.
+Update a &apos;StoragePureArray&apos; resource.
 
 ## PARAMETERS
 

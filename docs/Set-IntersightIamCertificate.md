@@ -132,10 +132,10 @@ PS C:\> Set-IntersightIamCertificate
 
 ## RELATED LINKS
 
-[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
-
 [Get-IntersightIamCertificate](./Get-IntersightIamCertificate.md)
 
 [New-IntersightIamCertificate](./New-IntersightIamCertificate.md)
+
+[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
 
 [Initialize-IntersightX509Certificate](./Initialize-IntersightX509Certificate.md)

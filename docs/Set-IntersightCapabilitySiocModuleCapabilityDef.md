@@ -19,7 +19,7 @@ Set-IntersightCapabilitySiocModuleCapabilityDef [-AdditionalProperties< Dictiona
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilitySiocModuleCapabilityDef&amp;apos; resource.
+Update a &apos;CapabilitySiocModuleCapabilityDef&apos; resource.
 
 ## PARAMETERS
 

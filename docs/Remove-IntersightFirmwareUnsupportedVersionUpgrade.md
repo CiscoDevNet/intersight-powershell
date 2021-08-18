@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFirmwareUnsupportedVersionUpgrade](./Set-IntersightFirmwareUnsupportedVersionUpgrade.md)
+
 [Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [New-IntersightFirmwareUnsupportedVersionUpgrade](./New-IntersightFirmwareUnsupportedVersionUpgrade.md)
-
-[Set-IntersightFirmwareUnsupportedVersionUpgrade](./Set-IntersightFirmwareUnsupportedVersionUpgrade.md)
 

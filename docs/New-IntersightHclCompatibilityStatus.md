@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestType
-Type of the request to be served.\n* `FillSupportedVersions` - Responds with the supported firmware and driver versions. The API doesn&apos;t expect firmware and driver versions to be passed in the request and ignores if passed.\n* `CheckCompatibility` - Checks the compatibility for the given firmware and driver versions. This request type expects the firmware and driver versions to filled and the service validates the values and responds back with the error codes.\n* `GetRecommendedDrivers` - Responds with the supported drivers. The API expects firmware version to be filled. The API populates driver ISO url for the given server model. Today the link is same for all servers managed by UCSM whereas it depends on the model for Standalone servers.
+Type of the request to be served.\n* `FillSupportedVersions` - Responds with the supported firmware and driver versions. The API doesn&amp;apos;t expect firmware and driver versions to be passed in the request and ignores if passed.\n* `CheckCompatibility` - Checks the compatibility for the given firmware and driver versions. This request type expects the firmware and driver versions to filled and the service validates the values and responds back with the error codes.\n* `GetRecommendedDrivers` - Responds with the supported drivers. The API expects firmware version to be filled. The API populates driver ISO url for the given server model. Today the link is same for all servers managed by UCSM whereas it depends on the model for Standalone servers.
 
 ```yaml
 Type: HclCompatibilityStatus.RequestTypeEnum

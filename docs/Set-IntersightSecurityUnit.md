@@ -19,7 +19,7 @@ Set-IntersightSecurityUnit [-AdditionalProperties< Dictionary<string,object>>][[
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SecurityUnit&amp;apos; resource.
+Update a &apos;SecurityUnit&apos; resource.
 
 ## PARAMETERS
 

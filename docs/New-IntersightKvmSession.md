@@ -178,6 +178,6 @@ PS C:\> New-IntersightKvmSession
 
 ## RELATED LINKS
 
-[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
-
 [Get-IntersightKvmSession](./Get-IntersightKvmSession.md)
+
+[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)

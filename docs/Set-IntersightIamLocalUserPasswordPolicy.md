@@ -19,7 +19,7 @@ Set-IntersightIamLocalUserPasswordPolicy [-Account< IamAccountRelationship>][-Ad
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLocalUserPasswordPolicy&amp;apos; resource.
+Update a &apos;IamLocalUserPasswordPolicy&apos; resource.
 
 ## PARAMETERS
 

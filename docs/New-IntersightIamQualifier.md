@@ -130,8 +130,8 @@ PS C:\> New-IntersightIamQualifier
 
 ## RELATED LINKS
 
-[Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
-
 [Set-IntersightIamQualifier](./Set-IntersightIamQualifier.md)
 
 [Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
+
+[Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)

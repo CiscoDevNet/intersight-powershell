@@ -112,8 +112,8 @@ PS C:\> Set-IntersightIamAccount
 
 ## RELATED LINKS
 
-[Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)
-
 [New-IntersightIamAccount](./New-IntersightIamAccount.md)
 
 [Get-IntersightIamAccount](./Get-IntersightIamAccount.md)
+
+[Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)

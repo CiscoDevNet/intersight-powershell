@@ -105,15 +105,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AdapterHostEthInterface.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AdapterExtEthInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostEthInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAdapterHostEthInterface:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterExtEthInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAdapterExtEthInterface:GetCmdletBase
 	{
-		public GetIntersightAdapterHostEthInterface()
+		public GetIntersightAdapterExtEthInterface()
 		{
 			ApiInstance = new AdapterApi(Config);
-            MethodName = "GetAdapterHostEthInterfaceListWithHttpInfo";
+            MethodName = "GetAdapterExtEthInterfaceListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -129,51 +129,15 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AdapterHostFcInterface.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove AdapterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostFcInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAdapterHostFcInterface:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightAdapterConfigPolicy")]
+    public class RemoveIntersightAdapterConfigPolicy:RemoveCmdletBase
 	{
-		public GetIntersightAdapterHostFcInterface()
+		public RemoveIntersightAdapterConfigPolicy()
 		{
 			ApiInstance = new AdapterApi(Config);
-            MethodName = "GetAdapterHostFcInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AdapterExtEthInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterExtEthInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAdapterExtEthInterface:GetCmdletBase
-	{
-		public GetIntersightAdapterExtEthInterface()
-		{
-			ApiInstance = new AdapterApi(Config);
-            MethodName = "GetAdapterExtEthInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AdapterHostIscsiInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostIscsiInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAdapterHostIscsiInterface:GetCmdletBase
-	{
-		public GetIntersightAdapterHostIscsiInterface()
-		{
-			ApiInstance = new AdapterApi(Config);
-            MethodName = "GetAdapterHostIscsiInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AdapterUnitExpander.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterUnitExpander", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAdapterUnitExpander:GetCmdletBase
-	{
-		public GetIntersightAdapterUnitExpander()
-		{
-			ApiInstance = new AdapterApi(Config);
-            MethodName = "GetAdapterUnitExpanderListWithHttpInfo";
+            MethodName = "DeleteAdapterConfigPolicyWithHttpInfo";
 		}
     }
     /// <summary>
@@ -262,15 +226,51 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AdapterConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AdapterUnitExpander.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAdapterConfigPolicy")]
-    public class RemoveIntersightAdapterConfigPolicy:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterUnitExpander", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAdapterUnitExpander:GetCmdletBase
 	{
-		public RemoveIntersightAdapterConfigPolicy()
+		public GetIntersightAdapterUnitExpander()
 		{
 			ApiInstance = new AdapterApi(Config);
-            MethodName = "DeleteAdapterConfigPolicyWithHttpInfo";
+            MethodName = "GetAdapterUnitExpanderListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AdapterHostIscsiInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostIscsiInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAdapterHostIscsiInterface:GetCmdletBase
+	{
+		public GetIntersightAdapterHostIscsiInterface()
+		{
+			ApiInstance = new AdapterApi(Config);
+            MethodName = "GetAdapterHostIscsiInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AdapterHostFcInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostFcInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAdapterHostFcInterface:GetCmdletBase
+	{
+		public GetIntersightAdapterHostFcInterface()
+		{
+			ApiInstance = new AdapterApi(Config);
+            MethodName = "GetAdapterHostFcInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AdapterHostEthInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostEthInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAdapterHostEthInterface:GetCmdletBase
+	{
+		public GetIntersightAdapterHostEthInterface()
+		{
+			ApiInstance = new AdapterApi(Config);
+            MethodName = "GetAdapterHostEthInterfaceListWithHttpInfo";
 		}
     }
 }

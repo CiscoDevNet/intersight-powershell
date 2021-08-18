@@ -180,9 +180,9 @@ PS C:\> New-IntersightKubernetesAddonPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
-
 [Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)
+
+[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
 
 [Get-IntersightKubernetesAddonPolicy](./Get-IntersightKubernetesAddonPolicy.md)
 

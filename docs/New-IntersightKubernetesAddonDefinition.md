@@ -19,7 +19,7 @@ New-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesAddonDefinition&apos; resource.
+Create a &amp;apos;KubernetesAddonDefinition&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -298,8 +298,8 @@ PS C:\> New-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
-
 [Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)
 
 [Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
+
+[Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)

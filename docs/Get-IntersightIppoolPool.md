@@ -25,7 +25,7 @@ Get-IntersightIppoolPool [-Count <Boolean>] [-InlineCount <String>] [-Select <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IppoolPool&amp;apos; resource.,
+Read a &apos;IppoolPool&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
+[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
 
 [Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
 
-[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
+[Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
 

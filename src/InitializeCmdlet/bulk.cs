@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkRestSubRequest.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkRestResult.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkRestSubRequest")]
-    public class InitializeIntersightBulkRestSubRequest:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkRestResult")]
+    public class InitializeIntersightBulkRestResult:PSCmdlet
 	{
-		public InitializeIntersightBulkRestSubRequest()
+		public InitializeIntersightBulkRestResult()
 		{
-            ClassId = BulkRestSubRequest.ClassIdEnum.BulkRestSubRequest;
-            ObjectType = BulkRestSubRequest.ObjectTypeEnum.BulkRestSubRequest;
+            ClassId = BulkRestResult.ClassIdEnum.BulkRestResult;
+            ObjectType = BulkRestResult.ObjectTypeEnum.BulkRestResult;
             
 		}
         // <summary>
@@ -29,20 +29,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The content to be used for creating or updating a MO.\nThis field would need to conform to the schema published for the object type that is being operated upon."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.MoBaseMo Body {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkRestSubRequest.ClassIdEnum ClassId {
+        public BulkRestResult.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -51,37 +42,20 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkRestSubRequest.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Used with PATCH & DELETE actions. The moid of an existing object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TargetMoid {
+        public BulkRestResult.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.BulkRestSubRequest initObject = new Intersight.Model.BulkRestSubRequest();
+             Intersight.Model.BulkRestResult initObject = new Intersight.Model.BulkRestResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Body"))
-            {
-                initObject.Body = this.Body;
-            }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetMoid"))
-            {
-                initObject.TargetMoid = this.TargetMoid;
-            }
             WriteObject(initObject);
         }
 
@@ -191,15 +165,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkRestResult.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkRestSubRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkRestResult")]
-    public class InitializeIntersightBulkRestResult:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkRestSubRequest")]
+    public class InitializeIntersightBulkRestSubRequest:PSCmdlet
 	{
-		public InitializeIntersightBulkRestResult()
+		public InitializeIntersightBulkRestSubRequest()
 		{
-            ClassId = BulkRestResult.ClassIdEnum.BulkRestResult;
-            ObjectType = BulkRestResult.ObjectTypeEnum.BulkRestResult;
+            ClassId = BulkRestSubRequest.ClassIdEnum.BulkRestSubRequest;
+            ObjectType = BulkRestSubRequest.ObjectTypeEnum.BulkRestSubRequest;
             
 		}
         // <summary>
@@ -212,11 +186,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The content to be used for creating or updating a MO.\nThis field would need to conform to the schema published for the object type that is being operated upon."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.MoBaseMo Body {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkRestResult.ClassIdEnum ClassId {
+        public BulkRestSubRequest.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -225,20 +208,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkRestResult.ObjectTypeEnum ObjectType {
+        public BulkRestSubRequest.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used with PATCH & DELETE actions. The moid of an existing object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TargetMoid {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.BulkRestResult initObject = new Intersight.Model.BulkRestResult();
+             Intersight.Model.BulkRestSubRequest initObject = new Intersight.Model.BulkRestSubRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Body"))
+            {
+                initObject.Body = this.Body;
+            }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetMoid"))
+            {
+                initObject.TargetMoid = this.TargetMoid;
+            }
             WriteObject(initObject);
         }
 

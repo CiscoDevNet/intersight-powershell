@@ -19,7 +19,7 @@ Set-IntersightPciSwitch [-AdditionalProperties< Dictionary<string,object>>][[-Mo
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;PciSwitch&amp;apos; resource.
+Update a &apos;PciSwitch&apos; resource.
 
 ## PARAMETERS
 

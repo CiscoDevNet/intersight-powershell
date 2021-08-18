@@ -19,7 +19,7 @@ New-IntersightHyperflexSoftwareDistributionVersion [-AdditionalProperties< Dicti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexSoftwareDistributionVersion&amp;apos; resource.
+Create a &apos;HyperflexSoftwareDistributionVersion&apos; resource.
 
 ## PARAMETERS
 

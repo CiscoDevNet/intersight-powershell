@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
+
 [Set-IntersightCapabilityPortGroupAggregationDef](./Set-IntersightCapabilityPortGroupAggregationDef.md)
 
 [Remove-IntersightCapabilityPortGroupAggregationDef](./Remove-IntersightCapabilityPortGroupAggregationDef.md)
-
-[New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
 

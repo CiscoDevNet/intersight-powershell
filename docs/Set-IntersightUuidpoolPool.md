@@ -192,10 +192,10 @@ PS C:\> Set-IntersightUuidpoolPool
 
 ## RELATED LINKS
 
-[New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
+[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
 
 [Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
-[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
+[New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
 
 [Initialize-IntersightUuidpoolUuidBlock](./Initialize-IntersightUuidpoolUuidBlock.md)

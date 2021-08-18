@@ -25,7 +25,7 @@ Get-IntersightConfigImporter [-Count <Boolean>] [-InlineCount <String>] [-Select
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ConfigImporter&apos; resource.,
+Read a &amp;apos;ConfigImporter&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightConfigImporter](./Remove-IntersightConfigImporter.md)
-
 [New-IntersightConfigImporter](./New-IntersightConfigImporter.md)
+
+[Remove-IntersightConfigImporter](./Remove-IntersightConfigImporter.md)
 

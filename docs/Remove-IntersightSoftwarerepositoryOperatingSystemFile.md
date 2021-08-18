@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryOperatingSystemFile -Moid <String> [<CommonPa
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwarerepositoryOperatingSystemFile&apos; resource.
+Delete a &amp;apos;SoftwarerepositoryOperatingSystemFile&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
-[New-IntersightSoftwarerepositoryOperatingSystemFile](./New-IntersightSoftwarerepositoryOperatingSystemFile.md)
-
 [Get-IntersightSoftwarerepositoryOperatingSystemFile](./Get-IntersightSoftwarerepositoryOperatingSystemFile.md)
+
+[New-IntersightSoftwarerepositoryOperatingSystemFile](./New-IntersightSoftwarerepositoryOperatingSystemFile.md)
 

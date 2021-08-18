@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityPortGroupAggregationDef](./Set-IntersightCapabilityPortGroupAggregationDef.md)
-
 [Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
 
 [New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
+
+[Set-IntersightCapabilityPortGroupAggregationDef](./Set-IntersightCapabilityPortGroupAggregationDef.md)
 

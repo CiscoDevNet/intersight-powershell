@@ -202,8 +202,8 @@ PS C:\> New-IntersightCapabilityPsuManufacturingDef
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityPsuManufacturingDef](./Get-IntersightCapabilityPsuManufacturingDef.md)
+[Set-IntersightCapabilityPsuManufacturingDef](./Set-IntersightCapabilityPsuManufacturingDef.md)
 
 [Remove-IntersightCapabilityPsuManufacturingDef](./Remove-IntersightCapabilityPsuManufacturingDef.md)
 
-[Set-IntersightCapabilityPsuManufacturingDef](./Set-IntersightCapabilityPsuManufacturingDef.md)
+[Get-IntersightCapabilityPsuManufacturingDef](./Get-IntersightCapabilityPsuManufacturingDef.md)

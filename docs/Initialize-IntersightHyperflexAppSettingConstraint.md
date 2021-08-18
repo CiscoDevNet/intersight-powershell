@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexAppSettingConstraint [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexAppSettingConstraint.ClassIdEnum>][-HxdpVersion< string>][-HypervisorType< HyperflexAppSettingConstraint.HypervisorTypeEnum>][-MgmtPlatform< HyperflexAppSettingConstraint.MgmtPlatformEnum>][-ObjectType< HyperflexAppSettingConstraint.ObjectTypeEnum>][-ServerModel< string>]
+Initialize-IntersightHyperflexAppSettingConstraint [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexAppSettingConstraint.ClassIdEnum>][-DeploymentType< HyperflexAppSettingConstraint.DeploymentTypeEnum>][-HxdpVersion< string>][-HypervisorType< HyperflexAppSettingConstraint.HypervisorTypeEnum>][-MgmtPlatform< HyperflexAppSettingConstraint.MgmtPlatformEnum>][-ObjectType< HyperflexAppSettingConstraint.ObjectTypeEnum>][-ServerModel< string>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: HyperflexAppSettingConstraint.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeploymentType
+The deployment type of the cluster.\n* `NA` - The deployment type of the HyperFlex cluster is not available.\n* `Datacenter` - The deployment type of a HyperFlex cluster consisting of UCS Fabric Interconnect-attached nodes on the same site.\n* `Stretched Cluster` - The deployment type of a HyperFlex cluster consisting of UCS Fabric Interconnect-attached nodes across different sites.\n* `Edge` - The deployment type of a HyperFlex cluster consisting of 2 or more standalone nodes.
+
+```yaml
+Type: HyperflexAppSettingConstraint.DeploymentTypeEnum
 Parameter Sets: (All)
 Aliases:
 

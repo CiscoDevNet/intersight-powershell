@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareNetwork [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareNetwork&apos; resource.
+Update a &amp;apos;VirtualizationVmwareNetwork&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
+[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
 
 [Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)
 
-[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
-
 [Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
+
+[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
 
 [New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
 

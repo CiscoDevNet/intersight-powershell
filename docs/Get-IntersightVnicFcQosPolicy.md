@@ -25,7 +25,7 @@ Get-IntersightVnicFcQosPolicy [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;VnicFcQosPolicy&amp;apos; resource.,
+Read a &apos;VnicFcQosPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicFcQosPolicy](./Set-IntersightVnicFcQosPolicy.md)
+[New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
 
 [Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
 
-[New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
+[Set-IntersightVnicFcQosPolicy](./Set-IntersightVnicFcQosPolicy.md)
 

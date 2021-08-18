@@ -38,10 +38,15 @@ namespace Intersight.PowerShell
 				var propertyList = this.ModelObject.GetType().GetProperties();
 				foreach (var item in propertyList)
 				{
-						
-					if (this.MyInvocation.BoundParameters.ContainsKey(item.Name))
+					var propName = item.Name;
+					if (item.Name.StartsWith("_"))
 					{
-						item.SetValue(ModelObject, this.MyInvocation.BoundParameters[item.Name]);
+						propName = item.Name.TrimStart('_');
+					}
+
+					if (this.MyInvocation.BoundParameters.ContainsKey(propName))
+					{
+						item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
 					}
 				}
 

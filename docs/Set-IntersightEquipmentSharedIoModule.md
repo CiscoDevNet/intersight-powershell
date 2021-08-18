@@ -19,7 +19,7 @@ Set-IntersightEquipmentSharedIoModule [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentSharedIoModule&amp;apos; resource.
+Update a &apos;EquipmentSharedIoModule&apos; resource.
 
 ## PARAMETERS
 

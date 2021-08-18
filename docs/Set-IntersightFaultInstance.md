@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFaultInstance [-AdditionalProperties< Dictionary<string,object>>][[-Moid]< string>][-Tags< List<MoTag>>]
+Set-IntersightFaultInstance [-AdditionalProperties< Dictionary<string,object>>][-AffectedMo< InventoryBaseRelationship>][-AncestorMo< InventoryBaseRelationship>][[-Moid]< string>][-Tags< List<MoTag>>]
 
 ```
 
@@ -28,6 +28,42 @@ Update a &apos;FaultInstance&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AffectedMo
+A reference to a inventoryBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: InventoryBaseRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AncestorMo
+A reference to a inventoryBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: InventoryBaseRelationship
 Parameter Sets: (All)
 Aliases:
 

@@ -453,9 +453,9 @@ PS C:\> New-IntersightKubernetesClusterProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
-
 [Set-IntersightKubernetesClusterProfile](./Set-IntersightKubernetesClusterProfile.md)
+
+[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
 
 [Get-IntersightKubernetesClusterProfile](./Get-IntersightKubernetesClusterProfile.md)
 

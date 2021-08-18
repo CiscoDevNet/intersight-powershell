@@ -17,7 +17,7 @@ Remove-IntersightSdwanProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SdwanProfile&amp;apos; resource.
+Delete a &apos;SdwanProfile&apos; resource.
 
 ## EXAMPLES
 

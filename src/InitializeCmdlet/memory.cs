@@ -8,6 +8,85 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryLocalSecurity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryLocalSecurity")]
+    public class InitializeIntersightMemoryPersistentMemoryLocalSecurity:PSCmdlet
+	{
+		public InitializeIntersightMemoryPersistentMemoryLocalSecurity()
+		{
+            ClassId = MemoryPersistentMemoryLocalSecurity.ClassIdEnum.MemoryPersistentMemoryLocalSecurity;
+            ObjectType = MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum.MemoryPersistentMemoryLocalSecurity;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MemoryPersistentMemoryLocalSecurity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Persistent Memory Security state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Secure passphrase to be applied on the Persistent Memory Modules on the server. The allowed characters are a-z, A to Z, 0-9, and special characters =, \\u0021, &, \\#, $, %, +, ^, @, _, *, -."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
+        public string SecurePassphrase {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.MemoryPersistentMemoryLocalSecurity initObject = new Intersight.Model.MemoryPersistentMemoryLocalSecurity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecurePassphrase"))
+            {
+                initObject.SecurePassphrase = this.SecurePassphrase;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryLogicalNamespace.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryLogicalNamespace")]
@@ -123,85 +202,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SocketMemoryId"))
             {
                 initObject.SocketMemoryId = this.SocketMemoryId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryLocalSecurity.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryLocalSecurity")]
-    public class InitializeIntersightMemoryPersistentMemoryLocalSecurity:PSCmdlet
-	{
-		public InitializeIntersightMemoryPersistentMemoryLocalSecurity()
-		{
-            ClassId = MemoryPersistentMemoryLocalSecurity.ClassIdEnum.MemoryPersistentMemoryLocalSecurity;
-            ObjectType = MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum.MemoryPersistentMemoryLocalSecurity;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MemoryPersistentMemoryLocalSecurity.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Persistent Memory Security state."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Secure passphrase to be applied on the Persistent Memory Modules on the server. The allowed characters are a-z, A to Z, 0-9, and special characters =, \\u0021, &, \\#, $, %, +, ^, @, _, *, -."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
-        public string SecurePassphrase {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.MemoryPersistentMemoryLocalSecurity initObject = new Intersight.Model.MemoryPersistentMemoryLocalSecurity();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecurePassphrase"))
-            {
-                initObject.SecurePassphrase = this.SecurePassphrase;
             }
             WriteObject(initObject);
         }

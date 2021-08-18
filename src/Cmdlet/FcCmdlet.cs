@@ -8,6 +8,30 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FcPortChannel.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFcPortChannel", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcPortChannel:GetCmdletBase
+	{
+		public GetIntersightFcPortChannel()
+		{
+			ApiInstance = new FcApi(Config);
+            MethodName = "GetFcPortChannelListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FcPhysicalPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFcPhysicalPort", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcPhysicalPort:GetCmdletBase
+	{
+		public GetIntersightFcPhysicalPort()
+		{
+			ApiInstance = new FcApi(Config);
+            MethodName = "GetFcPhysicalPortListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FcPhysicalPort.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort")]
@@ -46,29 +70,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcPhysicalPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcPhysicalPort", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcPhysicalPort:GetCmdletBase
-	{
-		public GetIntersightFcPhysicalPort()
-		{
-			ApiInstance = new FcApi(Config);
-            MethodName = "GetFcPhysicalPortListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcPortChannel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcPortChannel", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcPortChannel:GetCmdletBase
-	{
-		public GetIntersightFcPortChannel()
-		{
-			ApiInstance = new FcApi(Config);
-            MethodName = "GetFcPortChannelListWithHttpInfo";
-		}
     }
 }

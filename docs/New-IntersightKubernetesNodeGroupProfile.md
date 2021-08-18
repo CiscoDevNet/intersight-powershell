@@ -394,11 +394,11 @@ PS C:\> New-IntersightKubernetesNodeGroupProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesNodeGroupProfile](./Remove-IntersightKubernetesNodeGroupProfile.md)
+[Get-IntersightKubernetesNodeGroupProfile](./Get-IntersightKubernetesNodeGroupProfile.md)
 
 [Set-IntersightKubernetesNodeGroupProfile](./Set-IntersightKubernetesNodeGroupProfile.md)
 
-[Get-IntersightKubernetesNodeGroupProfile](./Get-IntersightKubernetesNodeGroupProfile.md)
+[Remove-IntersightKubernetesNodeGroupProfile](./Remove-IntersightKubernetesNodeGroupProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

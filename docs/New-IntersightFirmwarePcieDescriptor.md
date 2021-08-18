@@ -19,7 +19,7 @@ New-IntersightFirmwarePcieDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwarePcieDescriptor&amp;apos; resource.
+Create a &apos;FirmwarePcieDescriptor&apos; resource.
 
 ## PARAMETERS
 

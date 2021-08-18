@@ -17,7 +17,7 @@ Remove-IntersightMacpoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;MacpoolPool&apos; resource.
+Delete a &amp;apos;MacpoolPool&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
-
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
 
 [New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
+
+[Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
 

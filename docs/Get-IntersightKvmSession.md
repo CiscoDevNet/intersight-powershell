@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
-
 [New-IntersightKvmSession](./New-IntersightKvmSession.md)
+
+[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
 

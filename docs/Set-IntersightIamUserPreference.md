@@ -19,7 +19,7 @@ Set-IntersightIamUserPreference [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &apos;IamUserPreference&apos; resource.
+Update a &amp;apos;IamUserPreference&amp;apos; resource.
 
 ## PARAMETERS
 

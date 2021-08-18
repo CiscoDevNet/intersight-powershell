@@ -19,7 +19,7 @@ New-IntersightServerConfigImport [-AdditionalProperties< Dictionary<string,objec
 ```
 
 ## DESCRIPTION
-Create a &apos;ServerConfigImport&apos; resource.
+Create a &amp;apos;ServerConfigImport&amp;apos; resource.
 
 ## PARAMETERS
 

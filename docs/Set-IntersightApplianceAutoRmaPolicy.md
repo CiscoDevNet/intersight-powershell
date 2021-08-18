@@ -19,7 +19,7 @@ Set-IntersightApplianceAutoRmaPolicy [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &apos;ApplianceAutoRmaPolicy&apos; resource.
+Update a &amp;apos;ApplianceAutoRmaPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Status of the data collection mode. If the value is &amp;apos;true&amp;apos;, then data collection is enabled.
+Status of the data collection mode. If the value is &apos;true&apos;, then data collection is enabled.
 
 ```yaml
 Type: bool

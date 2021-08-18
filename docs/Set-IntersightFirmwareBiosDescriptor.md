@@ -19,7 +19,7 @@ Set-IntersightFirmwareBiosDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareBiosDescriptor&amp;apos; resource.
+Update a &apos;FirmwareBiosDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> Set-IntersightFirmwareBiosDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightFirmwareBiosDescriptor](./Remove-IntersightFirmwareBiosDescriptor.md)
+
 [Get-IntersightFirmwareBiosDescriptor](./Get-IntersightFirmwareBiosDescriptor.md)
 
 [New-IntersightFirmwareBiosDescriptor](./New-IntersightFirmwareBiosDescriptor.md)
-
-[Remove-IntersightFirmwareBiosDescriptor](./Remove-IntersightFirmwareBiosDescriptor.md)

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
 
-[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
-
 [Set-IntersightVnicIscsiBootPolicy](./Set-IntersightVnicIscsiBootPolicy.md)
+
+[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
 

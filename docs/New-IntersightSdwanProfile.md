@@ -19,7 +19,7 @@ New-IntersightSdwanProfile [-Action< string>][-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Create a &apos;SdwanProfile&apos; resource.
+Create a &amp;apos;SdwanProfile&amp;apos; resource.
 
 ## PARAMETERS
 

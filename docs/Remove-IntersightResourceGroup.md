@@ -17,7 +17,7 @@ Remove-IntersightResourceGroup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ResourceGroup&apos; resource.
+Delete a &amp;apos;ResourceGroup&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
+
 [New-IntersightResourceGroup](./New-IntersightResourceGroup.md)
 
 [Get-IntersightResourceGroup](./Get-IntersightResourceGroup.md)
-
-[Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
 

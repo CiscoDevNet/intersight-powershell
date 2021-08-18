@@ -19,7 +19,7 @@ New-IntersightFabricEthNetworkPolicy [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricEthNetworkPolicy&amp;apos; resource.
+Create a &apos;FabricEthNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -163,8 +163,8 @@ PS C:\> New-IntersightFabricEthNetworkPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightFabricEthNetworkPolicy](./Get-IntersightFabricEthNetworkPolicy.md)
-
 [Set-IntersightFabricEthNetworkPolicy](./Set-IntersightFabricEthNetworkPolicy.md)
 
 [Remove-IntersightFabricEthNetworkPolicy](./Remove-IntersightFabricEthNetworkPolicy.md)
+
+[Get-IntersightFabricEthNetworkPolicy](./Get-IntersightFabricEthNetworkPolicy.md)

@@ -35,7 +35,7 @@ namespace Intersight.PowerShell
 				if (Json.IsPresent)
 				{
 					StringBuilder requestJson = new StringBuilder();
-					requestJson.Append(">>>>>>>>>>>>>>>>>>(Request)>>>>>>>>>>>>>>>>>>\n");
+					//requestJson.Append(">>>>>>>>>>>>>>>>>>(Request)>>>>>>>>>>>>>>>>>>\n");
 					requestJson.Append(string.Format("{{\n\"Moid\" : \"{0}\"\n}}",this.Moid));
 					WriteObject(requestJson.ToString());
 					WriteResponseJson(result);

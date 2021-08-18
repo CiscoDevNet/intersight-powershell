@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryNamespaceConfigResult [-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryNamespaceConfigResult&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryNamespaceConfigResult&apos; resource.
 
 ## PARAMETERS
 

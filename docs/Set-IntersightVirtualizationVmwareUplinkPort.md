@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareUplinkPort [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareUplinkPort&amp;apos; resource.
+Update a &apos;VirtualizationVmwareUplinkPort&apos; resource.
 
 ## PARAMETERS
 

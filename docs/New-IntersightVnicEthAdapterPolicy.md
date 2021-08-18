@@ -19,7 +19,7 @@ New-IntersightVnicEthAdapterPolicy [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicEthAdapterPolicy&apos; resource.
+Create a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

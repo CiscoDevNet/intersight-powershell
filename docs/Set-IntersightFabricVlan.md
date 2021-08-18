@@ -19,7 +19,7 @@ Set-IntersightFabricVlan [-AdditionalProperties< Dictionary<string,object>>][-Au
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricVlan&apos; resource.
+Update a &amp;apos;FabricVlan&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsNative
-Used to define whether this VLAN is to be classified as &amp;apos;native&amp;apos; for traffic in this FI.
+Used to define whether this VLAN is to be classified as &apos;native&apos; for traffic in this FI.
 
 ```yaml
 Type: bool
@@ -193,8 +193,8 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
-
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
 [New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)

@@ -19,7 +19,7 @@ New-IntersightFirmwareDimmDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareDimmDescriptor&amp;apos; resource.
+Create a &apos;FirmwareDimmDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareDimmDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareDimmDescriptor](./Get-IntersightFirmwareDimmDescriptor.md)
-
 [Set-IntersightFirmwareDimmDescriptor](./Set-IntersightFirmwareDimmDescriptor.md)
 
 [Remove-IntersightFirmwareDimmDescriptor](./Remove-IntersightFirmwareDimmDescriptor.md)
+
+[Get-IntersightFirmwareDimmDescriptor](./Get-IntersightFirmwareDimmDescriptor.md)

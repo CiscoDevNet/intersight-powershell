@@ -17,7 +17,7 @@ Remove-IntersightIpmioverlanPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IpmioverlanPolicy&apos; resource.
+Delete a &amp;apos;IpmioverlanPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

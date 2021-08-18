@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryRelease [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwarerepositoryRelease&amp;apos; resource.
+Update a &apos;SoftwarerepositoryRelease&apos; resource.
 
 ## PARAMETERS
 

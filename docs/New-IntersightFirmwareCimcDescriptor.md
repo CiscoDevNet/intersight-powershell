@@ -19,7 +19,7 @@ New-IntersightFirmwareCimcDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareCimcDescriptor&amp;apos; resource.
+Create a &apos;FirmwareCimcDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareCimcDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareCimcDescriptor](./Set-IntersightFirmwareCimcDescriptor.md)
+[Get-IntersightFirmwareCimcDescriptor](./Get-IntersightFirmwareCimcDescriptor.md)
 
 [Remove-IntersightFirmwareCimcDescriptor](./Remove-IntersightFirmwareCimcDescriptor.md)
 
-[Get-IntersightFirmwareCimcDescriptor](./Get-IntersightFirmwareCimcDescriptor.md)
+[Set-IntersightFirmwareCimcDescriptor](./Set-IntersightFirmwareCimcDescriptor.md)

@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareBoardControllerDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)
-
 [Set-IntersightFirmwareBoardControllerDescriptor](./Set-IntersightFirmwareBoardControllerDescriptor.md)
 
 [Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
+
+[Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)

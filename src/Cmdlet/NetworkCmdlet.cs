@@ -8,125 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set NetworkVlanPortInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVlanPortInfo")]
-    public class SetIntersightNetworkVlanPortInfo:SetCmdletBase
-	{
-		public SetIntersightNetworkVlanPortInfo()
-		{
-			ApiInstance = new NetworkApi(Config);
-            ModelObject = new NetworkVlanPortInfo();
-            MethodName = "UpdateNetworkVlanPortInfoWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of compressed VLAN Group count on a Fabric Interconnect calculated by VLAN port group library."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CompressedOptimizationSetsValue {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of compressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CompressedVlanPortCountValue {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of uncompressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long UncompressedVlanPortCountValue {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NetworkFcZoneInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFcZoneInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNetworkFcZoneInfo:GetCmdletBase
-	{
-		public GetIntersightNetworkFcZoneInfo()
-		{
-			ApiInstance = new NetworkApi(Config);
-            MethodName = "GetNetworkFcZoneInfoListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set NetworkFcZoneInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkFcZoneInfo")]
-    public class SetIntersightNetworkFcZoneInfo:SetCmdletBase
-	{
-		public SetIntersightNetworkFcZoneInfo()
-		{
-			ApiInstance = new NetworkApi(Config);
-            ModelObject = new NetworkFcZoneInfo();
-            MethodName = "UpdateNetworkFcZoneInfoWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkElement.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightNetworkElement")]
@@ -266,16 +147,111 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NetworkElementSummary.</para>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkFcZoneInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkElementSummary", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNetworkElementSummary:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkFcZoneInfo")]
+    public class SetIntersightNetworkFcZoneInfo:SetCmdletBase
 	{
-		public GetIntersightNetworkElementSummary()
+		public SetIntersightNetworkFcZoneInfo()
 		{
 			ApiInstance = new NetworkApi(Config);
-            MethodName = "GetNetworkElementSummaryListWithHttpInfo";
+            ModelObject = new NetworkFcZoneInfo();
+            MethodName = "UpdateNetworkFcZoneInfoWithHttpInfo";
 		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkVlanPortInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVlanPortInfo")]
+    public class SetIntersightNetworkVlanPortInfo:SetCmdletBase
+	{
+		public SetIntersightNetworkVlanPortInfo()
+		{
+			ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkVlanPortInfo();
+            MethodName = "UpdateNetworkVlanPortInfoWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of compressed VLAN Group count on a Fabric Interconnect calculated by VLAN port group library."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long CompressedOptimizationSetsValue {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of compressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long CompressedVlanPortCountValue {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of uncompressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UncompressedVlanPortCountValue {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVlanPortInfo.</para>
@@ -299,6 +275,30 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new NetworkApi(Config);
             MethodName = "GetNetworkElementListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkElementSummary.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkElementSummary", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNetworkElementSummary:GetCmdletBase
+	{
+		public GetIntersightNetworkElementSummary()
+		{
+			ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkElementSummaryListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkFcZoneInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFcZoneInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNetworkFcZoneInfo:GetCmdletBase
+	{
+		public GetIntersightNetworkFcZoneInfo()
+		{
+			ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkFcZoneInfoListWithHttpInfo";
 		}
     }
 }

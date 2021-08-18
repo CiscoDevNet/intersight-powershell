@@ -19,7 +19,7 @@ Set-IntersightIamCertificateRequest [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamCertificateRequest&amp;apos; resource.
+Update a &apos;IamCertificateRequest&apos; resource.
 
 ## PARAMETERS
 
@@ -212,11 +212,11 @@ PS C:\> Set-IntersightIamCertificateRequest
 
 ## RELATED LINKS
 
-[New-IntersightIamCertificateRequest](./New-IntersightIamCertificateRequest.md)
+[Remove-IntersightIamCertificateRequest](./Remove-IntersightIamCertificateRequest.md)
 
 [Get-IntersightIamCertificateRequest](./Get-IntersightIamCertificateRequest.md)
 
-[Remove-IntersightIamCertificateRequest](./Remove-IntersightIamCertificateRequest.md)
+[New-IntersightIamCertificateRequest](./New-IntersightIamCertificateRequest.md)
 
 [Initialize-IntersightPkixDistinguishedName](./Initialize-IntersightPkixDistinguishedName.md)
 

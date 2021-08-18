@@ -19,7 +19,7 @@ Set-IntersightWorkflowTaskInfo [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowTaskInfo&amp;apos; resource.
+Update a &apos;WorkflowTaskInfo&apos; resource.
 
 ## PARAMETERS
 

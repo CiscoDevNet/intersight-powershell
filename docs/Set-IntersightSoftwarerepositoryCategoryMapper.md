@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
+Update a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
 
 ## PARAMETERS
 

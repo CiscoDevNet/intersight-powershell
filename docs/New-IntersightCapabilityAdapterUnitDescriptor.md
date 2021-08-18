@@ -19,7 +19,7 @@ New-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.
+Create a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
 
 ## PARAMETERS
 

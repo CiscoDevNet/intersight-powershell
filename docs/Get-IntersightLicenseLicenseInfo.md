@@ -25,7 +25,7 @@ Get-IntersightLicenseLicenseInfo [-Count <Boolean>] [-InlineCount <String>] [-Se
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;LicenseLicenseInfo&amp;apos; resource.,
+Read a &apos;LicenseLicenseInfo&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightLicenseLicenseInfo](./Set-IntersightLicenseLicenseInfo.md)
-
 [New-IntersightLicenseLicenseInfo](./New-IntersightLicenseLicenseInfo.md)
+
+[Set-IntersightLicenseLicenseInfo](./Set-IntersightLicenseLicenseInfo.md)
 

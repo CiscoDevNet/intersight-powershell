@@ -19,7 +19,7 @@ New-IntersightHyperflexServerModel [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexServerModel&apos; resource.
+Create a &amp;apos;HyperflexServerModel&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightOsTemplateFile [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OsTemplateFile&amp;apos; resource.
+Create a &apos;OsTemplateFile&apos; resource.
 
 ## PARAMETERS
 

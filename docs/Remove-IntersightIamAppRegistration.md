@@ -17,7 +17,7 @@ Remove-IntersightIamAppRegistration -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamAppRegistration&apos; resource.
+Delete a &amp;apos;IamAppRegistration&amp;apos; resource.
 
 ## EXAMPLES
 

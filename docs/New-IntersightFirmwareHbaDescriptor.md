@@ -19,7 +19,7 @@ New-IntersightFirmwareHbaDescriptor [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareHbaDescriptor&apos; resource.
+Create a &amp;apos;FirmwareHbaDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

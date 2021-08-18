@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerRestoreState
-Sets the Power Restore State of the Server.\n* `AlwaysOff` - Set the Power Restore Mode to Off.\n* `AlwaysOn` - Set the Power Restore Mode to On.\n* `LastState` - Set the Power Restore Mode to LastState.
+Sets the Power Restore State of the Server. This field is only supported for Cisco UCS X series servers.\n* `AlwaysOff` - Set the Power Restore Mode to Off.\n* `AlwaysOn` - Set the Power Restore Mode to On.\n* `LastState` - Set the Power Restore Mode to LastState.
 
 ```yaml
 Type: PowerPolicy.PowerRestoreStateEnum
@@ -223,8 +223,8 @@ PS C:\> New-IntersightPowerPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)
+[Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
 
 [Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
 
-[Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
+[Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)

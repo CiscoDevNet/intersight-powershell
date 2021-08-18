@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
+[New-IntersightAssetTarget](./New-IntersightAssetTarget.md)
 
 [Set-IntersightAssetTarget](./Set-IntersightAssetTarget.md)
 
-[New-IntersightAssetTarget](./New-IntersightAssetTarget.md)
+[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
 

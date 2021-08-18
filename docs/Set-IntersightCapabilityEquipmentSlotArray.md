@@ -399,6 +399,6 @@ PS C:\> Set-IntersightCapabilityEquipmentSlotArray
 
 [Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
 
-[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
-
 [New-IntersightCapabilityEquipmentSlotArray](./New-IntersightCapabilityEquipmentSlotArray.md)
+
+[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)

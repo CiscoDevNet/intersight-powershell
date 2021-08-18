@@ -19,7 +19,7 @@ Set-IntersightTamSecurityAdvisory [-Actions< List<TamAction>>][-AdditionalProper
 ```
 
 ## DESCRIPTION
-Update a &apos;TamSecurityAdvisory&apos; resource.
+Update a &amp;apos;TamSecurityAdvisory&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightDeviceconnectorPolicy [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &apos;DeviceconnectorPolicy&apos; resource.
+Update a &amp;apos;DeviceconnectorPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

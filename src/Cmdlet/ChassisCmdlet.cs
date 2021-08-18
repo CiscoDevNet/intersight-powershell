@@ -20,110 +20,40 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ChassisConfigImport.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ChassisConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigImport", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightChassisConfigImport:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigResult", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightChassisConfigResult:GetCmdletBase
 	{
-		public GetIntersightChassisConfigImport()
+		public GetIntersightChassisConfigResult()
 		{
 			ApiInstance = new ChassisApi(Config);
-            MethodName = "GetChassisConfigImportListWithHttpInfo";
+            MethodName = "GetChassisConfigResultListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New ChassisConfigImport.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ChassisIomProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightChassisConfigImport")]
-    public class NewIntersightChassisConfigImport:NewCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisIomProfile", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightChassisIomProfile:GetCmdletBase
 	{
-		public NewIntersightChassisConfigImport()
+		public GetIntersightChassisIomProfile()
 		{
 			ApiInstance = new ChassisApi(Config);
-            ModelObject = new ChassisConfigImport();
-            MethodName = "CreateChassisConfigImportWithHttpInfo";
+            MethodName = "GetChassisIomProfileListWithHttpInfo";
 		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentChassisRelationship Chassis {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the imported profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Policy prefix for the policies of the imported chassis profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,32}$")]
-        public string PolicyPrefix {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> PolicyTypes {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Profile name for the imported chassis profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string ProfileName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ChassisConfigChangeDetail.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightChassisConfigChangeDetail:GetCmdletBase
+	{
+		public GetIntersightChassisConfigChangeDetail()
+		{
+			ApiInstance = new ChassisApi(Config);
+            MethodName = "GetChassisConfigChangeDetailListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisProfile.</para>
@@ -277,54 +207,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ChassisIomProfile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisIomProfile", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightChassisIomProfile:GetCmdletBase
-	{
-		public GetIntersightChassisIomProfile()
-		{
-			ApiInstance = new ChassisApi(Config);
-            MethodName = "GetChassisIomProfileListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ChassisConfigResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigResult", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightChassisConfigResult:GetCmdletBase
-	{
-		public GetIntersightChassisConfigResult()
-		{
-			ApiInstance = new ChassisApi(Config);
-            MethodName = "GetChassisConfigResultListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ChassisConfigChangeDetail.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightChassisConfigChangeDetail:GetCmdletBase
-	{
-		public GetIntersightChassisConfigChangeDetail()
-		{
-			ApiInstance = new ChassisApi(Config);
-            MethodName = "GetChassisConfigChangeDetailListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ChassisProfile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightChassisProfile")]
-    public class RemoveIntersightChassisProfile:RemoveCmdletBase
-	{
-		public RemoveIntersightChassisProfile()
-		{
-			ApiInstance = new ChassisApi(Config);
-            MethodName = "DeleteChassisProfileWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ChassisProfile.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightChassisProfile")]
@@ -459,6 +341,124 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public ChassisProfile.TypeEnum Type {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ChassisProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightChassisProfile")]
+    public class RemoveIntersightChassisProfile:RemoveCmdletBase
+	{
+		public RemoveIntersightChassisProfile()
+		{
+			ApiInstance = new ChassisApi(Config);
+            MethodName = "DeleteChassisProfileWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ChassisConfigImport.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigImport", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightChassisConfigImport:GetCmdletBase
+	{
+		public GetIntersightChassisConfigImport()
+		{
+			ApiInstance = new ChassisApi(Config);
+            MethodName = "GetChassisConfigImportListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New ChassisConfigImport.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightChassisConfigImport")]
+    public class NewIntersightChassisConfigImport:NewCmdletBase
+	{
+		public NewIntersightChassisConfigImport()
+		{
+			ApiInstance = new ChassisApi(Config);
+            ModelObject = new ChassisConfigImport();
+            MethodName = "CreateChassisConfigImportWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentChassisRelationship Chassis {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the imported profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Policy prefix for the policies of the imported chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,32}$")]
+        public string PolicyPrefix {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> PolicyTypes {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Profile name for the imported chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string ProfileName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
             get;
             set;
         }

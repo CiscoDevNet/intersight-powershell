@@ -180,9 +180,9 @@ PS C:\> Set-IntersightRecoveryScheduleConfigPolicy
 
 ## RELATED LINKS
 
-[New-IntersightRecoveryScheduleConfigPolicy](./New-IntersightRecoveryScheduleConfigPolicy.md)
-
 [Get-IntersightRecoveryScheduleConfigPolicy](./Get-IntersightRecoveryScheduleConfigPolicy.md)
+
+[New-IntersightRecoveryScheduleConfigPolicy](./New-IntersightRecoveryScheduleConfigPolicy.md)
 
 [Remove-IntersightRecoveryScheduleConfigPolicy](./Remove-IntersightRecoveryScheduleConfigPolicy.md)
 

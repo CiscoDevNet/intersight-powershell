@@ -19,7 +19,7 @@ Set-IntersightThermalPolicy [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &apos;ThermalPolicy&apos; resource.
+Update a &amp;apos;ThermalPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -178,8 +178,8 @@ PS C:\> Set-IntersightThermalPolicy
 
 ## RELATED LINKS
 
-[New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)
+[Remove-IntersightThermalPolicy](./Remove-IntersightThermalPolicy.md)
 
 [Get-IntersightThermalPolicy](./Get-IntersightThermalPolicy.md)
 
-[Remove-IntersightThermalPolicy](./Remove-IntersightThermalPolicy.md)
+[New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)

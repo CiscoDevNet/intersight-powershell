@@ -19,7 +19,7 @@ New-IntersightIamIdp [-AdditionalProperties< Dictionary<string,object>>][-Domain
 ```
 
 ## DESCRIPTION
-Create a &apos;IamIdp&apos; resource.
+Create a &amp;apos;IamIdp&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSingleLogout
-Setting that indicates whether &amp;apos;Single Logout (SLO)&amp;apos; has been enabled for this IdP.
+Setting that indicates whether &apos;Single Logout (SLO)&apos; has been enabled for this IdP.
 
 ```yaml
 Type: bool

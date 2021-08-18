@@ -142,6 +142,6 @@ PS C:\> Set-IntersightExternalsiteAuthorization
 
 ## RELATED LINKS
 
-[Get-IntersightExternalsiteAuthorization](./Get-IntersightExternalsiteAuthorization.md)
-
 [New-IntersightExternalsiteAuthorization](./New-IntersightExternalsiteAuthorization.md)
+
+[Get-IntersightExternalsiteAuthorization](./Get-IntersightExternalsiteAuthorization.md)

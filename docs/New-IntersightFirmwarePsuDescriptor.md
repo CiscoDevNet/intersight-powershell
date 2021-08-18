@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwarePsuDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)
+[Get-IntersightFirmwarePsuDescriptor](./Get-IntersightFirmwarePsuDescriptor.md)
 
 [Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)
 
-[Get-IntersightFirmwarePsuDescriptor](./Get-IntersightFirmwarePsuDescriptor.md)
+[Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)

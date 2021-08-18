@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new TopApi(Config);
             ModelObject = new TopSystem();
-            MethodName = "UpdateTopSystemWithHttpInfo";
+            MethodName = "PatchTopSystemWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

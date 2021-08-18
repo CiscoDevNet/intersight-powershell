@@ -141,6 +141,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get EtherHostPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherHostPort", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEtherHostPort:GetCmdletBase
+	{
+		public GetIntersightEtherHostPort()
+		{
+			ApiInstance = new EtherApi(Config);
+            MethodName = "GetEtherHostPortListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EtherHostPort.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightEtherHostPort")]
@@ -217,15 +229,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get EtherNetworkPort.</para>
+    /// <para type="synopsis">This is the cmdlet to Get EtherPhysicalPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherNetworkPort", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightEtherNetworkPort:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherPhysicalPort", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEtherPhysicalPort:GetCmdletBase
 	{
-		public GetIntersightEtherNetworkPort()
+		public GetIntersightEtherPhysicalPort()
 		{
 			ApiInstance = new EtherApi(Config);
-            MethodName = "GetEtherNetworkPortListWithHttpInfo";
+            MethodName = "GetEtherPhysicalPortListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -287,27 +299,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get EtherPhysicalPort.</para>
+    /// <para type="synopsis">This is the cmdlet to Get EtherNetworkPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherPhysicalPort", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightEtherPhysicalPort:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherNetworkPort", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEtherNetworkPort:GetCmdletBase
 	{
-		public GetIntersightEtherPhysicalPort()
+		public GetIntersightEtherNetworkPort()
 		{
 			ApiInstance = new EtherApi(Config);
-            MethodName = "GetEtherPhysicalPortListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get EtherHostPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherHostPort", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightEtherHostPort:GetCmdletBase
-	{
-		public GetIntersightEtherHostPort()
-		{
-			ApiInstance = new EtherApi(Config);
-            MethodName = "GetEtherHostPortListWithHttpInfo";
+            MethodName = "GetEtherNetworkPortListWithHttpInfo";
 		}
     }
 }

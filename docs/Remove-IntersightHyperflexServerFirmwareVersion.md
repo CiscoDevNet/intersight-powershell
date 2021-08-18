@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
+[Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
 
 [New-IntersightHyperflexServerFirmwareVersion](./New-IntersightHyperflexServerFirmwareVersion.md)
 
-[Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
+[Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
 

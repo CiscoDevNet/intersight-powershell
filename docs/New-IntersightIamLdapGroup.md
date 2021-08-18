@@ -163,8 +163,8 @@ PS C:\> New-IntersightIamLdapGroup
 
 ## RELATED LINKS
 
-[Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
-
 [Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
 
 [Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
+
+[Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)

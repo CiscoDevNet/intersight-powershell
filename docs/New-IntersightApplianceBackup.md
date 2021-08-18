@@ -19,7 +19,7 @@ New-IntersightApplianceBackup [-Account< IamAccountRelationship>][-AdditionalPro
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceBackup&amp;apos; resource.
+Create a &apos;ApplianceBackup&apos; resource.
 
 ## PARAMETERS
 

@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementTechSupportStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportStatus", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightTechsupportmanagementTechSupportStatus:GetCmdletBase
+	{
+		public GetIntersightTechsupportmanagementTechSupportStatus()
+		{
+			ApiInstance = new TechsupportmanagementApi(Config);
+            MethodName = "GetTechsupportmanagementTechSupportStatusListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementTechSupportBundle.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportBundle", DefaultParameterSetName = "CmdletParam")]
@@ -105,18 +117,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementTechSupportBundle.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementTechSupportBundle")]
-    public class RemoveIntersightTechsupportmanagementTechSupportBundle:RemoveCmdletBase
-	{
-		public RemoveIntersightTechsupportmanagementTechSupportBundle()
-		{
-			ApiInstance = new TechsupportmanagementApi(Config);
-            MethodName = "DeleteTechsupportmanagementTechSupportBundleWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementDownload.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementDownload", DefaultParameterSetName = "CmdletParam")]
@@ -138,7 +138,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new TechsupportmanagementApi(Config);
             ModelObject = new TechsupportmanagementCollectionControlPolicy();
-            MethodName = "PatchTechsupportmanagementCollectionControlPolicyWithHttpInfo";
+            MethodName = "UpdateTechsupportmanagementCollectionControlPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -187,6 +187,18 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new TechsupportmanagementApi(Config);
             MethodName = "DeleteTechsupportmanagementCollectionControlPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementTechSupportBundle.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementTechSupportBundle")]
+    public class RemoveIntersightTechsupportmanagementTechSupportBundle:RemoveCmdletBase
+	{
+		public RemoveIntersightTechsupportmanagementTechSupportBundle()
+		{
+			ApiInstance = new TechsupportmanagementApi(Config);
+            MethodName = "DeleteTechsupportmanagementTechSupportBundleWithHttpInfo";
 		}
     }
     /// <summary>
@@ -249,17 +261,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementTechSupportStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportStatus", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightTechsupportmanagementTechSupportStatus:GetCmdletBase
-	{
-		public GetIntersightTechsupportmanagementTechSupportStatus()
-		{
-			ApiInstance = new TechsupportmanagementApi(Config);
-            MethodName = "GetTechsupportmanagementTechSupportStatusListWithHttpInfo";
-		}
     }
 }

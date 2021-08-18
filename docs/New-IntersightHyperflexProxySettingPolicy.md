@@ -19,7 +19,7 @@ New-IntersightHyperflexProxySettingPolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexProxySettingPolicy&amp;apos; resource.
+Create a &apos;HyperflexProxySettingPolicy&apos; resource.
 
 ## PARAMETERS
 
