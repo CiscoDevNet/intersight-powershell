@@ -19,7 +19,7 @@ Set-IntersightFaultInstance [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &apos;FaultInstance&apos; resource.
+Update a &amp;apos;FaultInstance&amp;apos; resource.
 
 ## PARAMETERS
 

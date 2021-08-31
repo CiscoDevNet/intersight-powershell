@@ -8,15 +8,99 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove IaasUcsdInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Get IaasServiceRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIaasUcsdInfo")]
-    public class RemoveIntersightIaasUcsdInfo:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasServiceRequest", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasServiceRequest:GetCmdletBase
 	{
-		public RemoveIntersightIaasUcsdInfo()
+		public GetIntersightIaasServiceRequest()
 		{
 			ApiInstance = new IaasApi(Config);
-            MethodName = "DeleteIaasUcsdInfoWithHttpInfo";
+            MethodName = "GetIaasServiceRequestListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasUcsdMessages.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdMessages", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasUcsdMessages:GetCmdletBase
+	{
+		public GetIntersightIaasUcsdMessages()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasUcsdMessagesListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasUcsdManagedInfra.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdManagedInfra", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasUcsdManagedInfra:GetCmdletBase
+	{
+		public GetIntersightIaasUcsdManagedInfra()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasUcsdManagedInfraListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasConnectorPack.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasConnectorPack", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasConnectorPack:GetCmdletBase
+	{
+		public GetIntersightIaasConnectorPack()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasConnectorPackListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasLicenseInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasLicenseInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasLicenseInfo:GetCmdletBase
+	{
+		public GetIntersightIaasLicenseInfo()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasLicenseInfoListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasDiagnosticMessages.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasDiagnosticMessages", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasDiagnosticMessages:GetCmdletBase
+	{
+		public GetIntersightIaasDiagnosticMessages()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasDiagnosticMessagesListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasMostRunTasks.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasMostRunTasks", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasMostRunTasks:GetCmdletBase
+	{
+		public GetIntersightIaasMostRunTasks()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasMostRunTasksListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IaasUcsdInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIaasUcsdInfo:GetCmdletBase
+	{
+		public GetIntersightIaasUcsdInfo()
+		{
+			ApiInstance = new IaasApi(Config);
+            MethodName = "GetIaasUcsdInfoListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -60,99 +144,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasConnectorPack.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove IaasUcsdInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasConnectorPack", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasConnectorPack:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightIaasUcsdInfo")]
+    public class RemoveIntersightIaasUcsdInfo:RemoveCmdletBase
 	{
-		public GetIntersightIaasConnectorPack()
+		public RemoveIntersightIaasUcsdInfo()
 		{
 			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasConnectorPackListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasUcsdMessages.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdMessages", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasUcsdMessages:GetCmdletBase
-	{
-		public GetIntersightIaasUcsdMessages()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasUcsdMessagesListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasMostRunTasks.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasMostRunTasks", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasMostRunTasks:GetCmdletBase
-	{
-		public GetIntersightIaasMostRunTasks()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasMostRunTasksListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasDiagnosticMessages.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasDiagnosticMessages", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasDiagnosticMessages:GetCmdletBase
-	{
-		public GetIntersightIaasDiagnosticMessages()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasDiagnosticMessagesListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasUcsdManagedInfra.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdManagedInfra", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasUcsdManagedInfra:GetCmdletBase
-	{
-		public GetIntersightIaasUcsdManagedInfra()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasUcsdManagedInfraListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasLicenseInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasLicenseInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasLicenseInfo:GetCmdletBase
-	{
-		public GetIntersightIaasLicenseInfo()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasLicenseInfoListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasServiceRequest.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasServiceRequest", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasServiceRequest:GetCmdletBase
-	{
-		public GetIntersightIaasServiceRequest()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasServiceRequestListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get IaasUcsdInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightIaasUcsdInfo:GetCmdletBase
-	{
-		public GetIntersightIaasUcsdInfo()
-		{
-			ApiInstance = new IaasApi(Config);
-            MethodName = "GetIaasUcsdInfoListWithHttpInfo";
+            MethodName = "DeleteIaasUcsdInfoWithHttpInfo";
 		}
     }
     /// <summary>

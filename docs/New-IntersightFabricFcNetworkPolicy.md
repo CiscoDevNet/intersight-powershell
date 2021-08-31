@@ -19,7 +19,7 @@ New-IntersightFabricFcNetworkPolicy [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricFcNetworkPolicy&amp;apos; resource.
+Create a &apos;FabricFcNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 

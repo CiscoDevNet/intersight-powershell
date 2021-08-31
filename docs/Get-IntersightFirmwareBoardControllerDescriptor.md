@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFirmwareBoardControllerDescriptor](./New-IntersightFirmwareBoardControllerDescriptor.md)
+
 [Set-IntersightFirmwareBoardControllerDescriptor](./Set-IntersightFirmwareBoardControllerDescriptor.md)
 
 [Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
-
-[New-IntersightFirmwareBoardControllerDescriptor](./New-IntersightFirmwareBoardControllerDescriptor.md)
 

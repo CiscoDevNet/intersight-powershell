@@ -19,7 +19,7 @@ Set-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesAddonDefinition&apos; resource.
+Update a &amp;apos;KubernetesAddonDefinition&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightFabricMulticastPolicy [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FabricMulticastPolicy&amp;apos; resource.,
+Read a &apos;FabricMulticastPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
-
 [Set-IntersightFabricMulticastPolicy](./Set-IntersightFabricMulticastPolicy.md)
 
 [Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
+
+[New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
 

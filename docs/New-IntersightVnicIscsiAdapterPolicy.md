@@ -19,7 +19,7 @@ New-IntersightVnicIscsiAdapterPolicy [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
+Create a &apos;VnicIscsiAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ PS C:\> New-IntersightVnicIscsiAdapterPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
-
 [Set-IntersightVnicIscsiAdapterPolicy](./Set-IntersightVnicIscsiAdapterPolicy.md)
 
 [Remove-IntersightVnicIscsiAdapterPolicy](./Remove-IntersightVnicIscsiAdapterPolicy.md)
+
+[Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)

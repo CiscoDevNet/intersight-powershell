@@ -19,7 +19,7 @@ New-IntersightCapabilityIoCardCapabilityDef [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityIoCardCapabilityDef&apos; resource.
+Create a &amp;apos;CapabilityIoCardCapabilityDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -129,6 +129,6 @@ PS C:\> New-IntersightCapabilityIoCardCapabilityDef
 
 [Get-IntersightCapabilityIoCardCapabilityDef](./Get-IntersightCapabilityIoCardCapabilityDef.md)
 
-[Set-IntersightCapabilityIoCardCapabilityDef](./Set-IntersightCapabilityIoCardCapabilityDef.md)
-
 [Remove-IntersightCapabilityIoCardCapabilityDef](./Remove-IntersightCapabilityIoCardCapabilityDef.md)
+
+[Set-IntersightCapabilityIoCardCapabilityDef](./Set-IntersightCapabilityIoCardCapabilityDef.md)

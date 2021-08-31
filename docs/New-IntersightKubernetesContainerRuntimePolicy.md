@@ -19,7 +19,7 @@ New-IntersightKubernetesContainerRuntimePolicy [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.
+Create a &apos;KubernetesContainerRuntimePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -229,8 +229,8 @@ PS C:\> New-IntersightKubernetesContainerRuntimePolicy
 
 [Get-IntersightKubernetesContainerRuntimePolicy](./Get-IntersightKubernetesContainerRuntimePolicy.md)
 
-[Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
-
 [Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
+
+[Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
 
 [Initialize-IntersightKubernetesProxyConfig](./Initialize-IntersightKubernetesProxyConfig.md)

@@ -159,7 +159,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SmtpApi(Config);
             ModelObject = new SmtpPolicy();
-            MethodName = "UpdateSmtpPolicyWithHttpInfo";
+            MethodName = "PatchSmtpPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

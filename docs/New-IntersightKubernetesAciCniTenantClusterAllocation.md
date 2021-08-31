@@ -115,8 +115,8 @@ PS C:\> New-IntersightKubernetesAciCniTenantClusterAllocation
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesAciCniTenantClusterAllocation](./Get-IntersightKubernetesAciCniTenantClusterAllocation.md)
+
 [Set-IntersightKubernetesAciCniTenantClusterAllocation](./Set-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
 [Remove-IntersightKubernetesAciCniTenantClusterAllocation](./Remove-IntersightKubernetesAciCniTenantClusterAllocation.md)
-
-[Get-IntersightKubernetesAciCniTenantClusterAllocation](./Get-IntersightKubernetesAciCniTenantClusterAllocation.md)

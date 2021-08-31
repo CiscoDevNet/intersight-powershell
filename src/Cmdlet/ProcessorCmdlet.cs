@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ProcessorUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightProcessorUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightProcessorUnit:GetCmdletBase
+	{
+		public GetIntersightProcessorUnit()
+		{
+			ApiInstance = new ProcessorApi(Config);
+            MethodName = "GetProcessorUnitListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ProcessorUnit.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightProcessorUnit")]
@@ -82,17 +94,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ProcessorUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightProcessorUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightProcessorUnit:GetCmdletBase
-	{
-		public GetIntersightProcessorUnit()
-		{
-			ApiInstance = new ProcessorApi(Config);
-            MethodName = "GetProcessorUnitListWithHttpInfo";
-		}
     }
 }

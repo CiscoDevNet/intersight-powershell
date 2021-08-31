@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFcpoolPool](./New-IntersightFcpoolPool.md)
 
-[Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
-
 [Set-IntersightFcpoolPool](./Set-IntersightFcpoolPool.md)
+
+[Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
 

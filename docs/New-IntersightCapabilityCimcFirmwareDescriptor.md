@@ -19,7 +19,7 @@ New-IntersightCapabilityCimcFirmwareDescriptor [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityCimcFirmwareDescriptor&amp;apos; resource.
+Create a &apos;CapabilityCimcFirmwareDescriptor&apos; resource.
 
 ## PARAMETERS
 

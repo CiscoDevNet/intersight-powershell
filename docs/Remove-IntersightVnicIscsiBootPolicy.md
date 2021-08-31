@@ -17,7 +17,7 @@ Remove-IntersightVnicIscsiBootPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VnicIscsiBootPolicy&amp;apos; resource.
+Delete a &apos;VnicIscsiBootPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVnicIscsiBootPolicy](./Set-IntersightVnicIscsiBootPolicy.md)
+
 [Get-IntersightVnicIscsiBootPolicy](./Get-IntersightVnicIscsiBootPolicy.md)
 
 [New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
-
-[Set-IntersightVnicIscsiBootPolicy](./Set-IntersightVnicIscsiBootPolicy.md)
 

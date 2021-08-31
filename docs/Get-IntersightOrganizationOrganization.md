@@ -25,7 +25,7 @@ Get-IntersightOrganizationOrganization [-Count <Boolean>] [-InlineCount <String>
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;OrganizationOrganization&amp;apos; resource.,
+Read a &apos;OrganizationOrganization&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
-[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
-
 [Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
+
+[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
 

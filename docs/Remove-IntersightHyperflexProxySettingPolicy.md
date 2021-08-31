@@ -17,7 +17,7 @@ Remove-IntersightHyperflexProxySettingPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexProxySettingPolicy&apos; resource.
+Delete a &amp;apos;HyperflexProxySettingPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -472,9 +472,9 @@ PS C:\> Set-IntersightFirmwareDistributable
 
 [Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
 
-[New-IntersightFirmwareDistributable](./New-IntersightFirmwareDistributable.md)
-
 [Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
+
+[New-IntersightFirmwareDistributable](./New-IntersightFirmwareDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

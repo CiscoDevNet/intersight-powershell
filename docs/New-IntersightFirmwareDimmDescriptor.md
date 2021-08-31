@@ -19,7 +19,7 @@ New-IntersightFirmwareDimmDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareDimmDescriptor&apos; resource.
+Create a &amp;apos;FirmwareDimmDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

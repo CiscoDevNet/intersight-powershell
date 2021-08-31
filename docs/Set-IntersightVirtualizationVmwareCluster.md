@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareCluster [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareCluster&apos; resource.
+Update a &amp;apos;VirtualizationVmwareCluster&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightEtherPhysicalPort [-AcknowledgedPeerInterface< PortInterfaceBaseRe
 ```
 
 ## DESCRIPTION
-Update a &apos;EtherPhysicalPort&apos; resource.
+Update a &amp;apos;EtherPhysicalPort&amp;apos; resource.
 
 ## PARAMETERS
 

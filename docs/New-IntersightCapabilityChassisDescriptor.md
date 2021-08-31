@@ -19,7 +19,7 @@ New-IntersightCapabilityChassisDescriptor [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityChassisDescriptor&apos; resource.
+Create a &amp;apos;CapabilityChassisDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

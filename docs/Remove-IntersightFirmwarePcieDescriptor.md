@@ -17,7 +17,7 @@ Remove-IntersightFirmwarePcieDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwarePcieDescriptor&amp;apos; resource.
+Delete a &apos;FirmwarePcieDescriptor&apos; resource.
 
 ## EXAMPLES
 

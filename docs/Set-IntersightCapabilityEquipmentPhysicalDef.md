@@ -19,7 +19,7 @@ Set-IntersightCapabilityEquipmentPhysicalDef [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityEquipmentPhysicalDef&amp;apos; resource.
+Update a &apos;CapabilityEquipmentPhysicalDef&apos; resource.
 
 ## PARAMETERS
 
@@ -262,8 +262,8 @@ PS C:\> Set-IntersightCapabilityEquipmentPhysicalDef
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityEquipmentPhysicalDef](./Remove-IntersightCapabilityEquipmentPhysicalDef.md)
+
 [Get-IntersightCapabilityEquipmentPhysicalDef](./Get-IntersightCapabilityEquipmentPhysicalDef.md)
 
 [New-IntersightCapabilityEquipmentPhysicalDef](./New-IntersightCapabilityEquipmentPhysicalDef.md)
-
-[Remove-IntersightCapabilityEquipmentPhysicalDef](./Remove-IntersightCapabilityEquipmentPhysicalDef.md)

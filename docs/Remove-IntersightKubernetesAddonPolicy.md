@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)
-
 [Get-IntersightKubernetesAddonPolicy](./Get-IntersightKubernetesAddonPolicy.md)
 
 [New-IntersightKubernetesAddonPolicy](./New-IntersightKubernetesAddonPolicy.md)
+
+[Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)
 

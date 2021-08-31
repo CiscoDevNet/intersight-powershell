@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumActiveFans
-Minimum required fans in &apos;active&apos; state for this Switch/Fabric-Interconnect.
+Minimum required fans in &amp;apos;active&amp;apos; state for this Switch/Fabric-Interconnect.
 
 ```yaml
 Type: long
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: CapabilitySwitchNetworkLimits.ObjectTypeEnum

@@ -226,8 +226,8 @@ PS C:\> Set-IntersightSdwanRouterPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightSdwanRouterPolicy](./Remove-IntersightSdwanRouterPolicy.md)
-
 [Get-IntersightSdwanRouterPolicy](./Get-IntersightSdwanRouterPolicy.md)
 
 [New-IntersightSdwanRouterPolicy](./New-IntersightSdwanRouterPolicy.md)
+
+[Remove-IntersightSdwanRouterPolicy](./Remove-IntersightSdwanRouterPolicy.md)

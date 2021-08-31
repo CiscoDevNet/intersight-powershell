@@ -19,7 +19,7 @@ New-IntersightVnicIscsiStaticTargetPolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicIscsiStaticTargetPolicy&amp;apos; resource.
+Create a &apos;VnicIscsiStaticTargetPolicy&apos; resource.
 
 ## PARAMETERS
 

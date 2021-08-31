@@ -19,7 +19,7 @@ Set-IntersightBootCddDevice [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &apos;BootCddDevice&apos; resource.
+Update a &amp;apos;BootCddDevice&amp;apos; resource.
 
 ## PARAMETERS
 

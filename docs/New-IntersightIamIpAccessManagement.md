@@ -112,6 +112,6 @@ PS C:\> New-IntersightIamIpAccessManagement
 
 ## RELATED LINKS
 
-[Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)
-
 [Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
+
+[Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)

@@ -19,7 +19,7 @@ New-IntersightHyperflexHxapDatacenter [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexHxapDatacenter&apos; resource.
+Create a &amp;apos;HyperflexHxapDatacenter&amp;apos; resource.
 
 ## PARAMETERS
 

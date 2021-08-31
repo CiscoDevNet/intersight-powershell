@@ -19,7 +19,7 @@ New-IntersightIamIdp [-AdditionalProperties< Dictionary<string,object>>][-Domain
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamIdp&amp;apos; resource.
+Create a &apos;IamIdp&apos; resource.
 
 ## PARAMETERS
 

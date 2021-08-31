@@ -8,15 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPortRange.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchingModeCapability.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPortRange")]
-    public class InitializeIntersightCapabilityPortRange:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchingModeCapability")]
+    public class InitializeIntersightCapabilitySwitchingModeCapability:PSCmdlet
 	{
-		public InitializeIntersightCapabilityPortRange()
+		public InitializeIntersightCapabilitySwitchingModeCapability()
 		{
-            ClassId = CapabilityPortRange.ClassIdEnum.CapabilityPortRange;
-            ObjectType = CapabilityPortRange.ObjectTypeEnum.CapabilityPortRange;
+            ClassId = CapabilitySwitchingModeCapability.ClassIdEnum.CapabilitySwitchingModeCapability;
+            ObjectType = CapabilitySwitchingModeCapability.ObjectTypeEnum.CapabilitySwitchingModeCapability;
+            SwitchingMode = CapabilitySwitchingModeCapability.SwitchingModeEnum.EndHost;
             
 		}
         // <summary>
@@ -33,25 +34,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CapabilityPortRange.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Ending Port ID in this range of ports."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long EndPortId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Ending Slot ID in this range of ports."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long EndSlotId {
+        public CapabilitySwitchingModeCapability.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -60,53 +43,45 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CapabilityPortRange.ObjectTypeEnum ObjectType {
+        public CapabilitySwitchingModeCapability.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Starting Port ID in this range of ports."</para>
+        /// <para type="description">"Switching mode type (endhost, switch) of the switch.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long StartPortId {
+        public CapabilitySwitchingModeCapability.SwitchingModeEnum SwitchingMode {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Starting Slot ID in this range of ports."</para>
+        /// <para type="description">"VP Compression support on this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long StartSlotId {
+        public bool VpCompressionSupported {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.CapabilityPortRange initObject = new Intersight.Model.CapabilityPortRange();
+             Intersight.Model.CapabilitySwitchingModeCapability initObject = new Intersight.Model.CapabilitySwitchingModeCapability();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EndPortId"))
-            {
-                initObject.EndPortId = this.EndPortId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EndSlotId"))
-            {
-                initObject.EndSlotId = this.EndSlotId;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("StartPortId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchingMode"))
             {
-                initObject.StartPortId = this.StartPortId;
+                initObject.SwitchingMode = this.SwitchingMode;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StartSlotId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpCompressionSupported"))
             {
-                initObject.StartSlotId = this.StartSlotId;
+                initObject.VpCompressionSupported = this.VpCompressionSupported;
             }
             WriteObject(initObject);
         }
@@ -231,15 +206,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchSystemLimits.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPortRange.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchSystemLimits")]
-    public class InitializeIntersightCapabilitySwitchSystemLimits:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPortRange")]
+    public class InitializeIntersightCapabilityPortRange:PSCmdlet
 	{
-		public InitializeIntersightCapabilitySwitchSystemLimits()
+		public InitializeIntersightCapabilityPortRange()
 		{
-            ClassId = CapabilitySwitchSystemLimits.ClassIdEnum.CapabilitySwitchSystemLimits;
-            ObjectType = CapabilitySwitchSystemLimits.ObjectTypeEnum.CapabilitySwitchSystemLimits;
+            ClassId = CapabilityPortRange.ClassIdEnum.CapabilityPortRange;
+            ObjectType = CapabilityPortRange.ObjectTypeEnum.CapabilityPortRange;
             
 		}
         // <summary>
@@ -256,34 +231,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CapabilitySwitchSystemLimits.ClassIdEnum ClassId {
+        public CapabilityPortRange.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Maximum UCS chassis that can be connected to this Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"Ending Port ID in this range of ports."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long MaximumChassisCount {
+        public long EndPortId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Maximum UCS Fabric-extenders (FEX) per Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"Ending Slot ID in this range of ports."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long MaximumFexPerDomain {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum UCS servers per Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long MaximumServersPerDomain {
+        public long EndSlotId {
             get;
             set;
         }
@@ -292,32 +258,54 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CapabilitySwitchSystemLimits.ObjectTypeEnum ObjectType {
+        public CapabilityPortRange.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Starting Port ID in this range of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long StartPortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Starting Slot ID in this range of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long StartSlotId {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.CapabilitySwitchSystemLimits initObject = new Intersight.Model.CapabilitySwitchSystemLimits();
+             Intersight.Model.CapabilityPortRange initObject = new Intersight.Model.CapabilityPortRange();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumChassisCount"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndPortId"))
             {
-                initObject.MaximumChassisCount = this.MaximumChassisCount;
+                initObject.EndPortId = this.EndPortId;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumFexPerDomain"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndSlotId"))
             {
-                initObject.MaximumFexPerDomain = this.MaximumFexPerDomain;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumServersPerDomain"))
-            {
-                initObject.MaximumServersPerDomain = this.MaximumServersPerDomain;
+                initObject.EndSlotId = this.EndSlotId;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("StartPortId"))
+            {
+                initObject.StartPortId = this.StartPortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StartSlotId"))
+            {
+                initObject.StartSlotId = this.StartSlotId;
+            }
             WriteObject(initObject);
         }
 
@@ -571,16 +559,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchingModeCapability.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchSystemLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchingModeCapability")]
-    public class InitializeIntersightCapabilitySwitchingModeCapability:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchSystemLimits")]
+    public class InitializeIntersightCapabilitySwitchSystemLimits:PSCmdlet
 	{
-		public InitializeIntersightCapabilitySwitchingModeCapability()
+		public InitializeIntersightCapabilitySwitchSystemLimits()
 		{
-            ClassId = CapabilitySwitchingModeCapability.ClassIdEnum.CapabilitySwitchingModeCapability;
-            ObjectType = CapabilitySwitchingModeCapability.ObjectTypeEnum.CapabilitySwitchingModeCapability;
-            SwitchingMode = CapabilitySwitchingModeCapability.SwitchingModeEnum.EndHost;
+            ClassId = CapabilitySwitchSystemLimits.ClassIdEnum.CapabilitySwitchSystemLimits;
+            ObjectType = CapabilitySwitchSystemLimits.ObjectTypeEnum.CapabilitySwitchSystemLimits;
             
 		}
         // <summary>
@@ -597,7 +584,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CapabilitySwitchingModeCapability.ClassIdEnum ClassId {
+        public CapabilitySwitchSystemLimits.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum UCS chassis that can be connected to this Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MaximumChassisCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum UCS Fabric-extenders (FEX) per Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MaximumFexPerDomain {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum UCS servers per Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MaximumServersPerDomain {
             get;
             set;
         }
@@ -606,46 +620,32 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CapabilitySwitchingModeCapability.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switching mode type (endhost, switch) of the switch.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CapabilitySwitchingModeCapability.SwitchingModeEnum SwitchingMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VP Compression support on this switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool VpCompressionSupported {
+        public CapabilitySwitchSystemLimits.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.CapabilitySwitchingModeCapability initObject = new Intersight.Model.CapabilitySwitchingModeCapability();
+             Intersight.Model.CapabilitySwitchSystemLimits initObject = new Intersight.Model.CapabilitySwitchSystemLimits();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumChassisCount"))
+            {
+                initObject.MaximumChassisCount = this.MaximumChassisCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumFexPerDomain"))
+            {
+                initObject.MaximumFexPerDomain = this.MaximumFexPerDomain;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumServersPerDomain"))
+            {
+                initObject.MaximumServersPerDomain = this.MaximumServersPerDomain;
+            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchingMode"))
-            {
-                initObject.SwitchingMode = this.SwitchingMode;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VpCompressionSupported"))
-            {
-                initObject.VpCompressionSupported = this.VpCompressionSupported;
-            }
             WriteObject(initObject);
         }
 

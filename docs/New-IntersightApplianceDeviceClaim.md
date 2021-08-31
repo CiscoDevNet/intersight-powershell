@@ -19,7 +19,7 @@ New-IntersightApplianceDeviceClaim [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &apos;ApplianceDeviceClaim&apos; resource.
+Create a &amp;apos;ApplianceDeviceClaim&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -187,6 +187,6 @@ PS C:\> New-IntersightApplianceDeviceClaim
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceDeviceClaim](./Get-IntersightApplianceDeviceClaim.md)
-
 [Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)
+
+[Get-IntersightApplianceDeviceClaim](./Get-IntersightApplianceDeviceClaim.md)

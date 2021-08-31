@@ -8,6 +8,216 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamSeverity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTamSeverity")]
+    public class InitializeIntersightTamSeverity:PSCmdlet
+	{
+		public InitializeIntersightTamSeverity()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamSeverity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamSeverity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TamSeverity initObject = new Intersight.Model.TamSeverity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamBaseAdvisoryDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTamBaseAdvisoryDetails")]
+    public class InitializeIntersightTamBaseAdvisoryDetails:PSCmdlet
+	{
+		public InitializeIntersightTamBaseAdvisoryDetails()
+		{
+            ClassId = TamBaseAdvisoryDetails.ClassIdEnum.TamSecurityAdvisoryDetails;
+            ObjectType = TamBaseAdvisoryDetails.ObjectTypeEnum.TamSecurityAdvisoryDetails;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamBaseAdvisoryDetails.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Brief description of details specified for an advisory type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamBaseAdvisoryDetails.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TamBaseAdvisoryDetails initObject = new Intersight.Model.TamBaseAdvisoryDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamTextFsmTemplateDataSource.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTamTextFsmTemplateDataSource")]
+    public class InitializeIntersightTamTextFsmTemplateDataSource:PSCmdlet
+	{
+		public InitializeIntersightTamTextFsmTemplateDataSource()
+		{
+            ClassId = TamTextFsmTemplateDataSource.ClassIdEnum.TamTextFsmTemplateDataSource;
+            ObjectType = TamTextFsmTemplateDataSource.ObjectTypeEnum.TamTextFsmTemplateDataSource;
+            Type = TamTextFsmTemplateDataSource.TypeEnum.IntersightApi;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamTextFsmTemplateDataSource.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Command used to gather data needed to evaluate field notice applicability."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Cmd {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name is used to unique identify and refer a given data source in an alert definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamTextFsmTemplateDataSource.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of data source (for e.g. TextFsmTempalate based, Intersight API based etc.).\n* `intersightApi` - Collector type for this data collection is Intersight APIs.\n* `nxos` - Collector type for this data collection is NXOS.\n* `s3File` - Collector type for this data collection is a file in a cloud hosted object storage bucket."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamTextFsmTemplateDataSource.TypeEnum Type {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TamTextFsmTemplateDataSource initObject = new Intersight.Model.TamTextFsmTemplateDataSource();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cmd"))
+            {
+                initObject.Cmd = this.Cmd;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TamSecurityAdvisoryDetails.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTamSecurityAdvisoryDetails")]
@@ -134,335 +344,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TemporalScore"))
             {
                 initObject.TemporalScore = this.TemporalScore;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TamIdentifiers.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTamIdentifiers")]
-    public class InitializeIntersightTamIdentifiers:PSCmdlet
-	{
-		public InitializeIntersightTamIdentifiers()
-		{
-            ClassId = TamIdentifiers.ClassIdEnum.TamIdentifiers;
-            ObjectType = TamIdentifiers.ObjectTypeEnum.TamIdentifiers;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamIdentifiers.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the filter paramter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamIdentifiers.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Value of the filter paramter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Value {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TamIdentifiers initObject = new Intersight.Model.TamIdentifiers();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
-            {
-                initObject.Value = this.Value;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TamApiDataSource.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTamApiDataSource")]
-    public class InitializeIntersightTamApiDataSource:PSCmdlet
-	{
-		public InitializeIntersightTamApiDataSource()
-		{
-            ClassId = TamApiDataSource.ClassIdEnum.TamApiDataSource;
-            ObjectType = TamApiDataSource.ObjectTypeEnum.TamApiDataSource;
-            Type = TamApiDataSource.TypeEnum.IntersightApi;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamApiDataSource.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of Intersight managed object used as data source."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string MoType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name is used to unique identify and refer a given data source in an alert definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamApiDataSource.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.TamQueryEntry> Queries {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of data source (for e.g. TextFsmTempalate based, Intersight API based etc.).\n* `intersightApi` - Collector type for this data collection is Intersight APIs.\n* `nxos` - Collector type for this data collection is NXOS.\n* `s3File` - Collector type for this data collection is a file in a cloud hosted object storage bucket."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamApiDataSource.TypeEnum Type {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TamApiDataSource initObject = new Intersight.Model.TamApiDataSource();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
-            {
-                initObject.MoType = this.MoType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Queries"))
-            {
-                initObject.Queries = this.Queries;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TamSeverity.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTamSeverity")]
-    public class InitializeIntersightTamSeverity:PSCmdlet
-	{
-		public InitializeIntersightTamSeverity()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamSeverity.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamSeverity.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TamSeverity initObject = new Intersight.Model.TamSeverity();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TamTextFsmTemplateDataSource.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTamTextFsmTemplateDataSource")]
-    public class InitializeIntersightTamTextFsmTemplateDataSource:PSCmdlet
-	{
-		public InitializeIntersightTamTextFsmTemplateDataSource()
-		{
-            ClassId = TamTextFsmTemplateDataSource.ClassIdEnum.TamTextFsmTemplateDataSource;
-            ObjectType = TamTextFsmTemplateDataSource.ObjectTypeEnum.TamTextFsmTemplateDataSource;
-            Type = TamTextFsmTemplateDataSource.TypeEnum.IntersightApi;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamTextFsmTemplateDataSource.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Command used to gather data needed to evaluate field notice applicability."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Cmd {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name is used to unique identify and refer a given data source in an alert definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamTextFsmTemplateDataSource.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of data source (for e.g. TextFsmTempalate based, Intersight API based etc.).\n* `intersightApi` - Collector type for this data collection is Intersight APIs.\n* `nxos` - Collector type for this data collection is NXOS.\n* `s3File` - Collector type for this data collection is a file in a cloud hosted object storage bucket."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamTextFsmTemplateDataSource.TypeEnum Type {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TamTextFsmTemplateDataSource initObject = new Intersight.Model.TamTextFsmTemplateDataSource();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Cmd"))
-            {
-                initObject.Cmd = this.Cmd;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
             }
             WriteObject(initObject);
         }
@@ -616,6 +497,179 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamPsirtSeverity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTamPsirtSeverity")]
+    public class InitializeIntersightTamPsirtSeverity:PSCmdlet
+	{
+		public InitializeIntersightTamPsirtSeverity()
+		{
+            ClassId = TamPsirtSeverity.ClassIdEnum.TamPsirtSeverity;
+            Level = TamPsirtSeverity.LevelEnum.Critical;
+            ObjectType = TamPsirtSeverity.ObjectTypeEnum.TamPsirtSeverity;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamPsirtSeverity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Severity level associated with the security advisory.\n* `critical` - < If applicable, it may expose users to critical failures and it needs to be addressed immediately. For e.g. a PSIRT advisory with a corresponding CVSS score of above 9.0.\n* `high` - < If applicable, it may expose the users to critical failure and it needs to be addressed immediately. For e.g. a PSIRT advisory with a corresponding CVSS score between 7.0-8.9. These may be the vulnerabilities that are more difficult to exploit than the ones deemed critical but once exploited, the will cause critical failures.\n* `medium` - < If applicable, it may expose the users to failure of certain functions. for e.g. a PSIRT advisory with a corresponding CVSS score between 4.0-6.9. These may be the vulnerabilities that are mitigated to a large extent but that may still be exploited in certain restricted cases.\n* `info` - < If applicable, it may have some minimal impact for certain functions in the user environment. For e.g. a PSIRT advisory with a corresponding CVSS score below 4.0."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamPsirtSeverity.LevelEnum Level {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamPsirtSeverity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TamPsirtSeverity initObject = new Intersight.Model.TamPsirtSeverity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Level"))
+            {
+                initObject.Level = this.Level;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamApiDataSource.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTamApiDataSource")]
+    public class InitializeIntersightTamApiDataSource:PSCmdlet
+	{
+		public InitializeIntersightTamApiDataSource()
+		{
+            ClassId = TamApiDataSource.ClassIdEnum.TamApiDataSource;
+            ObjectType = TamApiDataSource.ObjectTypeEnum.TamApiDataSource;
+            Type = TamApiDataSource.TypeEnum.IntersightApi;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamApiDataSource.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of Intersight managed object used as data source."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string MoType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name is used to unique identify and refer a given data source in an alert definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamApiDataSource.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.TamQueryEntry> Queries {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of data source (for e.g. TextFsmTempalate based, Intersight API based etc.).\n* `intersightApi` - Collector type for this data collection is Intersight APIs.\n* `nxos` - Collector type for this data collection is NXOS.\n* `s3File` - Collector type for this data collection is a file in a cloud hosted object storage bucket."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TamApiDataSource.TypeEnum Type {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TamApiDataSource initObject = new Intersight.Model.TamApiDataSource();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
+            {
+                initObject.MoType = this.MoType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Queries"))
+            {
+                initObject.Queries = this.Queries;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TamQueryEntry.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTamQueryEntry")]
@@ -703,72 +757,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Query = this.Query;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TamBaseAdvisoryDetails.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTamBaseAdvisoryDetails")]
-    public class InitializeIntersightTamBaseAdvisoryDetails:PSCmdlet
-	{
-		public InitializeIntersightTamBaseAdvisoryDetails()
-		{
-            ClassId = TamBaseAdvisoryDetails.ClassIdEnum.TamSecurityAdvisoryDetails;
-            ObjectType = TamBaseAdvisoryDetails.ObjectTypeEnum.TamSecurityAdvisoryDetails;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamBaseAdvisoryDetails.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Brief description of details specified for an advisory type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TamBaseAdvisoryDetails.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TamBaseAdvisoryDetails initObject = new Intersight.Model.TamBaseAdvisoryDetails();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -880,16 +868,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TamPsirtSeverity.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamIdentifiers.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTamPsirtSeverity")]
-    public class InitializeIntersightTamPsirtSeverity:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightTamIdentifiers")]
+    public class InitializeIntersightTamIdentifiers:PSCmdlet
 	{
-		public InitializeIntersightTamPsirtSeverity()
+		public InitializeIntersightTamIdentifiers()
 		{
-            ClassId = TamPsirtSeverity.ClassIdEnum.TamPsirtSeverity;
-            Level = TamPsirtSeverity.LevelEnum.Critical;
-            ObjectType = TamPsirtSeverity.ObjectTypeEnum.TamPsirtSeverity;
+            ClassId = TamIdentifiers.ClassIdEnum.TamIdentifiers;
+            ObjectType = TamIdentifiers.ObjectTypeEnum.TamIdentifiers;
             
 		}
         // <summary>
@@ -906,16 +893,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TamPsirtSeverity.ClassIdEnum ClassId {
+        public TamIdentifiers.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Severity level associated with the security advisory.\n* `critical` - < If applicable, it may expose users to critical failures and it needs to be addressed immediately. For e.g. a PSIRT advisory with a corresponding CVSS score of above 9.0.\n* `high` - < If applicable, it may expose the users to critical failure and it needs to be addressed immediately. For e.g. a PSIRT advisory with a corresponding CVSS score between 7.0-8.9. These may be the vulnerabilities that are more difficult to exploit than the ones deemed critical but once exploited, the will cause critical failures.\n* `medium` - < If applicable, it may expose the users to failure of certain functions. for e.g. a PSIRT advisory with a corresponding CVSS score between 4.0-6.9. These may be the vulnerabilities that are mitigated to a large extent but that may still be exploited in certain restricted cases.\n* `info` - < If applicable, it may have some minimal impact for certain functions in the user environment. For e.g. a PSIRT advisory with a corresponding CVSS score below 4.0."</para>
+        /// <para type="description">"Name of the filter paramter."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TamPsirtSeverity.LevelEnum Level {
+        public string Name {
             get;
             set;
         }
@@ -924,24 +911,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TamPsirtSeverity.ObjectTypeEnum ObjectType {
+        public TamIdentifiers.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Value of the filter paramter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Value {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.TamPsirtSeverity initObject = new Intersight.Model.TamPsirtSeverity();
+             Intersight.Model.TamIdentifiers initObject = new Intersight.Model.TamIdentifiers();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Level"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
-                initObject.Level = this.Level;
+                initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
             WriteObject(initObject);
         }
 

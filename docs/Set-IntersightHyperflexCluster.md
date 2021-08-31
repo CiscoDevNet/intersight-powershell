@@ -19,7 +19,7 @@ Set-IntersightHyperflexCluster [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexCluster&amp;apos; resource.
+Update a &apos;HyperflexCluster&apos; resource.
 
 ## PARAMETERS
 

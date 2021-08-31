@@ -19,7 +19,7 @@ Set-IntersightKubernetesVersion [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesVersion&apos; resource.
+Update a &amp;apos;KubernetesVersion&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -217,8 +217,8 @@ PS C:\> Set-IntersightKubernetesVersion
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesVersion](./New-IntersightKubernetesVersion.md)
-
 [Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
+
+[New-IntersightKubernetesVersion](./New-IntersightKubernetesVersion.md)
 
 [Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)

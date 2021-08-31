@@ -19,7 +19,7 @@ Set-IntersightCapabilityCatalog [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityCatalog&apos; resource.
+Update a &amp;apos;CapabilityCatalog&amp;apos; resource.
 
 ## PARAMETERS
 

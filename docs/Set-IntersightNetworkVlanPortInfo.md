@@ -19,7 +19,7 @@ Set-IntersightNetworkVlanPortInfo [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &apos;NetworkVlanPortInfo&apos; resource.
+Update a &amp;apos;NetworkVlanPortInfo&amp;apos; resource.
 
 ## PARAMETERS
 

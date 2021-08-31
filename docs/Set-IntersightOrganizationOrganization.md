@@ -145,8 +145,8 @@ PS C:\> Set-IntersightOrganizationOrganization
 
 ## RELATED LINKS
 
-[New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
-
 [Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
+
+[New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
 [Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)

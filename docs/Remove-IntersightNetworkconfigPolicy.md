@@ -17,7 +17,7 @@ Remove-IntersightNetworkconfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;NetworkconfigPolicy&amp;apos; resource.
+Delete a &apos;NetworkconfigPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
+
 [New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
 
 [Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
-
-[Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
 

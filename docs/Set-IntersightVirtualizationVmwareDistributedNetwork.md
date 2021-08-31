@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareDistributedNetwork [-AdditionalProperties< Dic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDistributedNetwork&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDistributedNetwork&apos; resource.
 
 ## PARAMETERS
 

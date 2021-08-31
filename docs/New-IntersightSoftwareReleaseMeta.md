@@ -19,7 +19,7 @@ New-IntersightSoftwareReleaseMeta [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &apos;SoftwareReleaseMeta&apos; resource.
+Create a &amp;apos;SoftwareReleaseMeta&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> New-IntersightSoftwareReleaseMeta
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwareReleaseMeta](./Get-IntersightSoftwareReleaseMeta.md)
-
 [Set-IntersightSoftwareReleaseMeta](./Set-IntersightSoftwareReleaseMeta.md)
 
 [Remove-IntersightSoftwareReleaseMeta](./Remove-IntersightSoftwareReleaseMeta.md)
+
+[Get-IntersightSoftwareReleaseMeta](./Get-IntersightSoftwareReleaseMeta.md)

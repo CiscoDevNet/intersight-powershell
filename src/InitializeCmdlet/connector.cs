@@ -8,109 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStreamKeepalive.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorStreamKeepalive")]
-    public class InitializeIntersightConnectorStreamKeepalive:PSCmdlet
-	{
-		public InitializeIntersightConnectorStreamKeepalive()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorStreamKeepalive.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptedAesKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptionKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorStreamKeepalive.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object SecureProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StreamName {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorStreamKeepalive initObject = new Intersight.Model.ConnectorStreamKeepalive();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
-            {
-                initObject.EncryptedAesKey = this.EncryptedAesKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
-            {
-                initObject.EncryptionKey = this.EncryptionKey;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
-            {
-                initObject.SecureProperties = this.SecureProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
-            {
-                initObject.StreamName = this.StreamName;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ConnectorUrl.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightConnectorUrl")]
@@ -262,98 +159,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Scheme"))
             {
                 initObject.Scheme = this.Scheme;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorExpectPrompt.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorExpectPrompt")]
-    public class InitializeIntersightConnectorExpectPrompt:PSCmdlet
-	{
-		public InitializeIntersightConnectorExpectPrompt()
-		{
-            ClassId = ConnectorExpectPrompt.ClassIdEnum.ConnectorExpectPrompt;
-            ObjectType = ConnectorExpectPrompt.ObjectTypeEnum.ConnectorExpectPrompt;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorExpectPrompt.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The regex of the expect prompt of the interactive command."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Expect {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The timeout for the expect prompt while executing interactive command. If timeout is not set a default of 60 seconds will be used."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ExpectTimeout {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorExpectPrompt.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The answer string to the expect prompt."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Send {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorExpectPrompt initObject = new Intersight.Model.ConnectorExpectPrompt();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Expect"))
-            {
-                initObject.Expect = this.Expect;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExpectTimeout"))
-            {
-                initObject.ExpectTimeout = this.ExpectTimeout;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Send"))
-            {
-                initObject.Send = this.Send;
             }
             WriteObject(initObject);
         }
@@ -524,255 +329,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("XmlRequest"))
             {
                 initObject.XmlRequest = this.XmlRequest;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorPlatformParamBase.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorPlatformParamBase")]
-    public class InitializeIntersightConnectorPlatformParamBase:PSCmdlet
-	{
-		public InitializeIntersightConnectorPlatformParamBase()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorPlatformParamBase.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorPlatformParamBase.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorPlatformParamBase initObject = new Intersight.Model.ConnectorPlatformParamBase();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorFileChecksum.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorFileChecksum")]
-    public class InitializeIntersightConnectorFileChecksum:PSCmdlet
-	{
-		public InitializeIntersightConnectorFileChecksum()
-		{
-            ClassId = ConnectorFileChecksum.ClassIdEnum.ConnectorFileChecksum;
-            HashAlgorithm = ConnectorFileChecksum.HashAlgorithmEnum.Crc;
-            ObjectType = ConnectorFileChecksum.ObjectTypeEnum.ConnectorFileChecksum;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorFileChecksum.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The calculated hash of the contents using the algorithm."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public byte[] Hash {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The hash algorithm used to calculate the checksum.\n* `crc` - A CRC hash as definded by RFC 3385. Generated with the IEEE polynomial.\n* `sha256` - A SHA256 hash as defined by RFC 4634."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorFileChecksum.HashAlgorithmEnum HashAlgorithm {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorFileChecksum.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorFileChecksum initObject = new Intersight.Model.ConnectorFileChecksum();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Hash"))
-            {
-                initObject.Hash = this.Hash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("HashAlgorithm"))
-            {
-                initObject.HashAlgorithm = this.HashAlgorithm;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorFetchStreamMessage.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorFetchStreamMessage")]
-    public class InitializeIntersightConnectorFetchStreamMessage:PSCmdlet
-	{
-		public InitializeIntersightConnectorFetchStreamMessage()
-		{
-            ClassId = ConnectorFetchStreamMessage.ClassIdEnum.ConnectorFetchStreamMessage;
-            ObjectType = ConnectorFetchStreamMessage.ObjectTypeEnum.ConnectorFetchStreamMessage;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorFetchStreamMessage.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptedAesKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptionKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorFetchStreamMessage.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object SecureProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<long> Sequences {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StreamName {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorFetchStreamMessage initObject = new Intersight.Model.ConnectorFetchStreamMessage();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
-            {
-                initObject.EncryptedAesKey = this.EncryptedAesKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
-            {
-                initObject.EncryptionKey = this.EncryptionKey;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
-            {
-                initObject.SecureProperties = this.SecureProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sequences"))
-            {
-                initObject.Sequences = this.Sequences;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
-            {
-                initObject.StreamName = this.StreamName;
             }
             WriteObject(initObject);
         }
@@ -1197,6 +753,527 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorFetchStreamMessage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorFetchStreamMessage")]
+    public class InitializeIntersightConnectorFetchStreamMessage:PSCmdlet
+	{
+		public InitializeIntersightConnectorFetchStreamMessage()
+		{
+            ClassId = ConnectorFetchStreamMessage.ClassIdEnum.ConnectorFetchStreamMessage;
+            ObjectType = ConnectorFetchStreamMessage.ObjectTypeEnum.ConnectorFetchStreamMessage;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorFetchStreamMessage.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptedAesKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptionKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorFetchStreamMessage.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object SecureProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<long> Sequences {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StreamName {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorFetchStreamMessage initObject = new Intersight.Model.ConnectorFetchStreamMessage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
+            {
+                initObject.EncryptedAesKey = this.EncryptedAesKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
+            {
+                initObject.EncryptionKey = this.EncryptionKey;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
+            {
+                initObject.SecureProperties = this.SecureProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sequences"))
+            {
+                initObject.Sequences = this.Sequences;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
+            {
+                initObject.StreamName = this.StreamName;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorSshConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorSshConfig")]
+    public class InitializeIntersightConnectorSshConfig:PSCmdlet
+	{
+		public InitializeIntersightConnectorSshConfig()
+		{
+            ClassId = ConnectorSshConfig.ClassIdEnum.ConnectorSshConfig;
+            ObjectType = ConnectorSshConfig.ObjectTypeEnum.ConnectorSshConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorSshConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptedAesKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptionKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A jump host for establishing a connection to a server. Plugin will first establish a connection to this server, then create a tunneled connection to the target host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string JumpHost {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorSshConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Password to use in the connection credentials (If empty the private key will be used)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The private key to use in the connection credentials (Optional if password is given)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public byte[] Pkey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object SecureProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The remote server to connect to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Target {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Username for the remote connection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string User {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorSshConfig initObject = new Intersight.Model.ConnectorSshConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
+            {
+                initObject.EncryptedAesKey = this.EncryptedAesKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
+            {
+                initObject.EncryptionKey = this.EncryptionKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("JumpHost"))
+            {
+                initObject.JumpHost = this.JumpHost;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            {
+                initObject.Password = this.Password;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pkey"))
+            {
+                initObject.Pkey = this.Pkey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
+            {
+                initObject.SecureProperties = this.SecureProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Target"))
+            {
+                initObject.Target = this.Target;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("User"))
+            {
+                initObject.User = this.User;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorExpectPrompt.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorExpectPrompt")]
+    public class InitializeIntersightConnectorExpectPrompt:PSCmdlet
+	{
+		public InitializeIntersightConnectorExpectPrompt()
+		{
+            ClassId = ConnectorExpectPrompt.ClassIdEnum.ConnectorExpectPrompt;
+            ObjectType = ConnectorExpectPrompt.ObjectTypeEnum.ConnectorExpectPrompt;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorExpectPrompt.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The regex of the expect prompt of the interactive command."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Expect {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The timeout for the expect prompt while executing interactive command. If timeout is not set a default of 60 seconds will be used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ExpectTimeout {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorExpectPrompt.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The answer string to the expect prompt."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Send {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorExpectPrompt initObject = new Intersight.Model.ConnectorExpectPrompt();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Expect"))
+            {
+                initObject.Expect = this.Expect;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExpectTimeout"))
+            {
+                initObject.ExpectTimeout = this.ExpectTimeout;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Send"))
+            {
+                initObject.Send = this.Send;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorPlatformParamBase.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorPlatformParamBase")]
+    public class InitializeIntersightConnectorPlatformParamBase:PSCmdlet
+	{
+		public InitializeIntersightConnectorPlatformParamBase()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorPlatformParamBase.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorPlatformParamBase.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorPlatformParamBase initObject = new Intersight.Model.ConnectorPlatformParamBase();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorCloseStreamMessage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorCloseStreamMessage")]
+    public class InitializeIntersightConnectorCloseStreamMessage:PSCmdlet
+	{
+		public InitializeIntersightConnectorCloseStreamMessage()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorCloseStreamMessage.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptedAesKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptionKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorCloseStreamMessage.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object SecureProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StreamName {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorCloseStreamMessage initObject = new Intersight.Model.ConnectorCloseStreamMessage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
+            {
+                initObject.EncryptedAesKey = this.EncryptedAesKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
+            {
+                initObject.EncryptionKey = this.EncryptionKey;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
+            {
+                initObject.SecureProperties = this.SecureProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
+            {
+                initObject.StreamName = this.StreamName;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStartStream.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightConnectorStartStream")]
@@ -1419,436 +1496,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorSshConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorSshConfig")]
-    public class InitializeIntersightConnectorSshConfig:PSCmdlet
-	{
-		public InitializeIntersightConnectorSshConfig()
-		{
-            ClassId = ConnectorSshConfig.ClassIdEnum.ConnectorSshConfig;
-            ObjectType = ConnectorSshConfig.ObjectTypeEnum.ConnectorSshConfig;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorSshConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptedAesKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptionKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A jump host for establishing a connection to a server. Plugin will first establish a connection to this server, then create a tunneled connection to the target host."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string JumpHost {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorSshConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Password to use in the connection credentials (If empty the private key will be used)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Password {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The private key to use in the connection credentials (Optional if password is given)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public byte[] Pkey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object SecureProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The remote server to connect to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Target {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Username for the remote connection."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string User {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorSshConfig initObject = new Intersight.Model.ConnectorSshConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
-            {
-                initObject.EncryptedAesKey = this.EncryptedAesKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
-            {
-                initObject.EncryptionKey = this.EncryptionKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("JumpHost"))
-            {
-                initObject.JumpHost = this.JumpHost;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
-            {
-                initObject.Password = this.Password;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pkey"))
-            {
-                initObject.Pkey = this.Pkey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
-            {
-                initObject.SecureProperties = this.SecureProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Target"))
-            {
-                initObject.Target = this.Target;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("User"))
-            {
-                initObject.User = this.User;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStartStreamFromDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorStartStreamFromDevice")]
-    public class InitializeIntersightConnectorStartStreamFromDevice:PSCmdlet
-	{
-		public InitializeIntersightConnectorStartStreamFromDevice()
-		{
-            ClassId = ConnectorStartStreamFromDevice.ClassIdEnum.ConnectorStartStreamFromDevice;
-            ObjectType = ConnectorStartStreamFromDevice.ObjectTypeEnum.ConnectorStartStreamFromDevice;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorStartStreamFromDevice.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptedAesKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptionKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The asset.ClusterMember member identity that is opening this stream."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string MemberId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The stream is to be started against the cluster member."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool MemberStream {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorStartStreamFromDevice.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object SecureProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Any extra configuration needed to open/identify a stream."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object StreamConfig {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StreamName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifies the type of stream to open to the device. The Intersight service will validate that the device should open a stream of this type and if so build a stream configuration and send it down to the device. The streamType should identify a unique stream to open to a device, that is if the device sends a stream open message and a stream of that type is already open in the cloud the existing stream should be re-used."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StreamType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The topic the device should send the stream open message to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Topic {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorStartStreamFromDevice initObject = new Intersight.Model.ConnectorStartStreamFromDevice();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
-            {
-                initObject.EncryptedAesKey = this.EncryptedAesKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
-            {
-                initObject.EncryptionKey = this.EncryptionKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemberId"))
-            {
-                initObject.MemberId = this.MemberId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemberStream"))
-            {
-                initObject.MemberStream = this.MemberStream;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
-            {
-                initObject.SecureProperties = this.SecureProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StreamConfig"))
-            {
-                initObject.StreamConfig = this.StreamConfig;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
-            {
-                initObject.StreamName = this.StreamName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StreamType"))
-            {
-                initObject.StreamType = this.StreamType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Topic"))
-            {
-                initObject.Topic = this.Topic;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorCloseStreamMessage.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorCloseStreamMessage")]
-    public class InitializeIntersightConnectorCloseStreamMessage:PSCmdlet
-	{
-		public InitializeIntersightConnectorCloseStreamMessage()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorCloseStreamMessage.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptedAesKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptionKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorCloseStreamMessage.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object SecureProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StreamName {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConnectorCloseStreamMessage initObject = new Intersight.Model.ConnectorCloseStreamMessage();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
-            {
-                initObject.EncryptedAesKey = this.EncryptedAesKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
-            {
-                initObject.EncryptionKey = this.EncryptionKey;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
-            {
-                initObject.SecureProperties = this.SecureProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
-            {
-                initObject.StreamName = this.StreamName;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ConnectorFileMessage.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightConnectorFileMessage")]
@@ -1981,15 +1628,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorSshMessage.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStreamInput.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorSshMessage")]
-    public class InitializeIntersightConnectorSshMessage:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorStreamInput")]
+    public class InitializeIntersightConnectorStreamInput:PSCmdlet
 	{
-		public InitializeIntersightConnectorSshMessage()
+		public InitializeIntersightConnectorStreamInput()
 		{
-            ClassId = ConnectorSshMessage.ClassIdEnum.ConnectorSshMessage;
-            ObjectType = ConnectorSshMessage.ObjectTypeEnum.ConnectorSshMessage;
+            ClassId = ConnectorStreamInput.ClassIdEnum.ConnectorStreamInput;
+            ObjectType = ConnectorStreamInput.ObjectTypeEnum.ConnectorStreamInput;
             
 		}
         // <summary>
@@ -2006,7 +1653,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ConnectorSshMessage.ClassIdEnum ClassId {
+        public ConnectorStreamInput.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -2029,20 +1676,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"The input to write to the stream plugin."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<Model.ConnectorExpectPrompt> ExpectPrompts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The operation to execute on a new or existing session."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long MsgType {
+        public byte[] Input {
             get;
             set;
         }
@@ -2051,7 +1689,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ConnectorSshMessage.ObjectTypeEnum ObjectType {
+        public ConnectorStreamInput.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -2065,45 +1703,18 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Unique id of session to route messages to."</para>
+        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string SessionId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The regex of the secure shell prompt."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ShellPrompt {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Input to the SSH operation to be executed. e.g. file contents to write."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public byte[] Stream {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The timeout for the ssh command to complete and exit after starting or receiving input. If timeout is not set a default of 10 minutes will be used."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Timeout {
+        public string StreamName {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ConnectorSshMessage initObject = new Intersight.Model.ConnectorSshMessage();
+             Intersight.Model.ConnectorStreamInput initObject = new Intersight.Model.ConnectorStreamInput();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -2117,34 +1728,18 @@ namespace Intersight.PowerShell
             {
                 initObject.EncryptionKey = this.EncryptionKey;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExpectPrompts"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Input"))
             {
-                initObject.ExpectPrompts = this.ExpectPrompts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MsgType"))
-            {
-                initObject.MsgType = this.MsgType;
+                initObject.Input = this.Input;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
             {
                 initObject.SecureProperties = this.SecureProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SessionId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
             {
-                initObject.SessionId = this.SessionId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ShellPrompt"))
-            {
-                initObject.ShellPrompt = this.ShellPrompt;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Stream"))
-            {
-                initObject.Stream = this.Stream;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
-            {
-                initObject.Timeout = this.Timeout;
+                initObject.StreamName = this.StreamName;
             }
             WriteObject(initObject);
         }
@@ -2400,15 +1995,13 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStreamInput.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStreamKeepalive.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConnectorStreamInput")]
-    public class InitializeIntersightConnectorStreamInput:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorStreamKeepalive")]
+    public class InitializeIntersightConnectorStreamKeepalive:PSCmdlet
 	{
-		public InitializeIntersightConnectorStreamInput()
+		public InitializeIntersightConnectorStreamKeepalive()
 		{
-            ClassId = ConnectorStreamInput.ClassIdEnum.ConnectorStreamInput;
-            ObjectType = ConnectorStreamInput.ObjectTypeEnum.ConnectorStreamInput;
             
 		}
         // <summary>
@@ -2421,11 +2014,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ConnectorStreamInput.ClassIdEnum ClassId {
+        public ConnectorStreamKeepalive.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -2448,20 +2041,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The input to write to the stream plugin."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public byte[] Input {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConnectorStreamInput.ObjectTypeEnum ObjectType {
+        public ConnectorStreamKeepalive.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -2486,7 +2070,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ConnectorStreamInput initObject = new Intersight.Model.ConnectorStreamInput();
+             Intersight.Model.ConnectorStreamKeepalive initObject = new Intersight.Model.ConnectorStreamKeepalive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -2500,10 +2084,6 @@ namespace Intersight.PowerShell
             {
                 initObject.EncryptionKey = this.EncryptionKey;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Input"))
-            {
-                initObject.Input = this.Input;
-            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
             {
@@ -2512,6 +2092,426 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
             {
                 initObject.StreamName = this.StreamName;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorStartStreamFromDevice.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorStartStreamFromDevice")]
+    public class InitializeIntersightConnectorStartStreamFromDevice:PSCmdlet
+	{
+		public InitializeIntersightConnectorStartStreamFromDevice()
+		{
+            ClassId = ConnectorStartStreamFromDevice.ClassIdEnum.ConnectorStartStreamFromDevice;
+            ObjectType = ConnectorStartStreamFromDevice.ObjectTypeEnum.ConnectorStartStreamFromDevice;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorStartStreamFromDevice.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptedAesKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptionKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The asset.ClusterMember member identity that is opening this stream."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string MemberId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The stream is to be started against the cluster member."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool MemberStream {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorStartStreamFromDevice.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object SecureProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Any extra configuration needed to open/identify a stream."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object StreamConfig {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The requested stream name. Stream names are unique per device endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StreamName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifies the type of stream to open to the device. The Intersight service will validate that the device should open a stream of this type and if so build a stream configuration and send it down to the device. The streamType should identify a unique stream to open to a device, that is if the device sends a stream open message and a stream of that type is already open in the cloud the existing stream should be re-used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StreamType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The topic the device should send the stream open message to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Topic {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorStartStreamFromDevice initObject = new Intersight.Model.ConnectorStartStreamFromDevice();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
+            {
+                initObject.EncryptedAesKey = this.EncryptedAesKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
+            {
+                initObject.EncryptionKey = this.EncryptionKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemberId"))
+            {
+                initObject.MemberId = this.MemberId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemberStream"))
+            {
+                initObject.MemberStream = this.MemberStream;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
+            {
+                initObject.SecureProperties = this.SecureProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StreamConfig"))
+            {
+                initObject.StreamConfig = this.StreamConfig;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StreamName"))
+            {
+                initObject.StreamName = this.StreamName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StreamType"))
+            {
+                initObject.StreamType = this.StreamType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Topic"))
+            {
+                initObject.Topic = this.Topic;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorFileChecksum.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorFileChecksum")]
+    public class InitializeIntersightConnectorFileChecksum:PSCmdlet
+	{
+		public InitializeIntersightConnectorFileChecksum()
+		{
+            ClassId = ConnectorFileChecksum.ClassIdEnum.ConnectorFileChecksum;
+            HashAlgorithm = ConnectorFileChecksum.HashAlgorithmEnum.Crc;
+            ObjectType = ConnectorFileChecksum.ObjectTypeEnum.ConnectorFileChecksum;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorFileChecksum.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The calculated hash of the contents using the algorithm."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public byte[] Hash {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The hash algorithm used to calculate the checksum.\n* `crc` - A CRC hash as definded by RFC 3385. Generated with the IEEE polynomial.\n* `sha256` - A SHA256 hash as defined by RFC 4634."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorFileChecksum.HashAlgorithmEnum HashAlgorithm {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorFileChecksum.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorFileChecksum initObject = new Intersight.Model.ConnectorFileChecksum();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Hash"))
+            {
+                initObject.Hash = this.Hash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HashAlgorithm"))
+            {
+                initObject.HashAlgorithm = this.HashAlgorithm;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorSshMessage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorSshMessage")]
+    public class InitializeIntersightConnectorSshMessage:PSCmdlet
+	{
+		public InitializeIntersightConnectorSshMessage()
+		{
+            ClassId = ConnectorSshMessage.ClassIdEnum.ConnectorSshMessage;
+            ObjectType = ConnectorSshMessage.ObjectTypeEnum.ConnectorSshMessage;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorSshMessage.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptedAesKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EncryptionKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.ConnectorExpectPrompt> ExpectPrompts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The operation to execute on a new or existing session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MsgType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConnectorSshMessage.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object SecureProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique id of session to route messages to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SessionId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The regex of the secure shell prompt."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ShellPrompt {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Input to the SSH operation to be executed. e.g. file contents to write."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public byte[] Stream {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The timeout for the ssh command to complete and exit after starting or receiving input. If timeout is not set a default of 10 minutes will be used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Timeout {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConnectorSshMessage initObject = new Intersight.Model.ConnectorSshMessage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedAesKey"))
+            {
+                initObject.EncryptedAesKey = this.EncryptedAesKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptionKey"))
+            {
+                initObject.EncryptionKey = this.EncryptionKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExpectPrompts"))
+            {
+                initObject.ExpectPrompts = this.ExpectPrompts;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MsgType"))
+            {
+                initObject.MsgType = this.MsgType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecureProperties"))
+            {
+                initObject.SecureProperties = this.SecureProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SessionId"))
+            {
+                initObject.SessionId = this.SessionId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ShellPrompt"))
+            {
+                initObject.ShellPrompt = this.ShellPrompt;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Stream"))
+            {
+                initObject.Stream = this.Stream;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
+            {
+                initObject.Timeout = this.Timeout;
             }
             WriteObject(initObject);
         }

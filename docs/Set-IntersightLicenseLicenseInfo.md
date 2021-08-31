@@ -19,7 +19,7 @@ Set-IntersightLicenseLicenseInfo [-AccountLicenseData< LicenseAccountLicenseData
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseLicenseInfo&amp;apos; resource.
+Update a &apos;LicenseLicenseInfo&apos; resource.
 
 ## PARAMETERS
 

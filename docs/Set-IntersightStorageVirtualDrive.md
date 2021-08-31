@@ -19,7 +19,7 @@ Set-IntersightStorageVirtualDrive [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageVirtualDrive&amp;apos; resource.
+Update a &apos;StorageVirtualDrive&apos; resource.
 
 ## PARAMETERS
 

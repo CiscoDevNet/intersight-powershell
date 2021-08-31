@@ -19,7 +19,7 @@ New-IntersightFirmwareChassisUpgrade [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareChassisUpgrade&amp;apos; resource.
+Create a &apos;FirmwareChassisUpgrade&apos; resource.
 
 ## PARAMETERS
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkShare
-Deprecated (Use &amp;apos;fileServer&amp;apos; property). Network share options in case of the upgradeType is network share based upgrade.
+Deprecated (Use &apos;fileServer&apos; property). Network share options in case of the upgradeType is network share based upgrade.
 
 Note :- Use Initialize-IntersightFirmwareNetworkShare to create the object of complex type FirmwareNetworkShare
 

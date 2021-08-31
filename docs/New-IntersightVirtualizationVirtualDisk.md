@@ -223,8 +223,8 @@ PS C:\> New-IntersightVirtualizationVirtualDisk
 
 ## RELATED LINKS
 
+[Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)
+
 [Set-IntersightVirtualizationVirtualDisk](./Set-IntersightVirtualizationVirtualDisk.md)
 
 [Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
-
-[Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)

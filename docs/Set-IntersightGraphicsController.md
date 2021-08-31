@@ -19,7 +19,7 @@ Set-IntersightGraphicsController [-AdditionalProperties< Dictionary<string,objec
 ```
 
 ## DESCRIPTION
-Update a &apos;GraphicsController&apos; resource.
+Update a &amp;apos;GraphicsController&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightFabricFcUplinkRole [-Count <Boolean>] [-InlineCount <String>] [-Se
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FabricFcUplinkRole&apos; resource.,
+Read a &amp;apos;FabricFcUplinkRole&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFabricFcUplinkRole](./New-IntersightFabricFcUplinkRole.md)
+
 [Set-IntersightFabricFcUplinkRole](./Set-IntersightFabricFcUplinkRole.md)
 
 [Remove-IntersightFabricFcUplinkRole](./Remove-IntersightFabricFcUplinkRole.md)
-
-[New-IntersightFabricFcUplinkRole](./New-IntersightFabricFcUplinkRole.md)
 

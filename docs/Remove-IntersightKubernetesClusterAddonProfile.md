@@ -17,7 +17,7 @@ Remove-IntersightKubernetesClusterAddonProfile -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesClusterAddonProfile&amp;apos; resource.
+Delete a &apos;KubernetesClusterAddonProfile&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesClusterAddonProfile](./Set-IntersightKubernetesClusterAddonProfile.md)
+
 [Get-IntersightKubernetesClusterAddonProfile](./Get-IntersightKubernetesClusterAddonProfile.md)
 
 [New-IntersightKubernetesClusterAddonProfile](./New-IntersightKubernetesClusterAddonProfile.md)
-
-[Set-IntersightKubernetesClusterAddonProfile](./Set-IntersightKubernetesClusterAddonProfile.md)
 

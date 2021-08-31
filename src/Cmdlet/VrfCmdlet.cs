@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VrfVrf.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVrfVrf", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVrfVrf:GetCmdletBase
-	{
-		public GetIntersightVrfVrf()
-		{
-			ApiInstance = new VrfApi(Config);
-            MethodName = "GetVrfVrfListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VrfVrf.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightVrfVrf")]
@@ -76,6 +64,18 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VrfVrf.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVrfVrf", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVrfVrf:GetCmdletBase
+	{
+		public GetIntersightVrfVrf()
+		{
+			ApiInstance = new VrfApi(Config);
+            MethodName = "GetVrfVrfListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VrfVrf.</para>

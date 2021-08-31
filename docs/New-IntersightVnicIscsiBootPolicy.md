@@ -328,11 +328,11 @@ PS C:\> New-IntersightVnicIscsiBootPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicIscsiBootPolicy](./Get-IntersightVnicIscsiBootPolicy.md)
+[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
 
 [Set-IntersightVnicIscsiBootPolicy](./Set-IntersightVnicIscsiBootPolicy.md)
 
-[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
+[Get-IntersightVnicIscsiBootPolicy](./Get-IntersightVnicIscsiBootPolicy.md)
 
 [Initialize-IntersightVnicIscsiAuthProfile](./Initialize-IntersightVnicIscsiAuthProfile.md)
 

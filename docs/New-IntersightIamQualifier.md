@@ -19,7 +19,7 @@ New-IntersightIamQualifier [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &apos;IamQualifier&apos; resource.
+Create a &amp;apos;IamQualifier&amp;apos; resource.
 
 ## PARAMETERS
 

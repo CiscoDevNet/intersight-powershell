@@ -19,7 +19,7 @@ Set-IntersightInventoryGenericInventory [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &apos;InventoryGenericInventory&apos; resource.
+Update a &amp;apos;InventoryGenericInventory&amp;apos; resource.
 
 ## PARAMETERS
 

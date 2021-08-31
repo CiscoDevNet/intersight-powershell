@@ -223,8 +223,8 @@ PS C:\> Set-IntersightSdwanVmanageAccountPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightSdwanVmanageAccountPolicy](./Remove-IntersightSdwanVmanageAccountPolicy.md)
+
 [Get-IntersightSdwanVmanageAccountPolicy](./Get-IntersightSdwanVmanageAccountPolicy.md)
 
 [New-IntersightSdwanVmanageAccountPolicy](./New-IntersightSdwanVmanageAccountPolicy.md)
-
-[Remove-IntersightSdwanVmanageAccountPolicy](./Remove-IntersightSdwanVmanageAccountPolicy.md)

@@ -19,7 +19,7 @@ Set-IntersightHyperflexCiscoHypervisorManager [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexCiscoHypervisorManager&apos; resource.
+Update a &amp;apos;HyperflexCiscoHypervisorManager&amp;apos; resource.
 
 ## PARAMETERS
 

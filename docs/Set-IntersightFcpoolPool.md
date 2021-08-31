@@ -19,7 +19,7 @@ Set-IntersightFcpoolPool [-AdditionalProperties< Dictionary<string,object>>][-As
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FcpoolPool&amp;apos; resource.
+Update a &apos;FcpoolPool&apos; resource.
 
 ## PARAMETERS
 

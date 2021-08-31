@@ -8,133 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetSubscriptionAccount.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetDeploymentDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscriptionAccount", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetSubscriptionAccount:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeploymentDevice")]
+    public class RemoveIntersightAssetDeploymentDevice:RemoveCmdletBase
 	{
-		public GetIntersightAssetSubscriptionAccount()
+		public RemoveIntersightAssetDeploymentDevice()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetSubscriptionAccountListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetDeploymentDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeploymentDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetDeploymentDevice:GetCmdletBase
-	{
-		public GetIntersightAssetDeploymentDevice()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetDeploymentDeviceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceContractInformation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceContractInformation", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetDeviceContractInformation:GetCmdletBase
-	{
-		public GetIntersightAssetDeviceContractInformation()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetDeviceContractInformationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set AssetDeviceConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceConfiguration")]
-    public class SetIntersightAssetDeviceConfiguration:SetCmdletBase
-	{
-		public SetIntersightAssetDeviceConfiguration()
-		{
-			ApiInstance = new AssetApi(Config);
-            ModelObject = new AssetDeviceConfiguration();
-            MethodName = "UpdateAssetDeviceConfigurationWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies whether configuration through the platforms local management interface has been disabled, with only configuration through the Intersight service enabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool LocalConfigurationLocked {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The log level of the device connector service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string LogLevel {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeployment")]
-    public class RemoveIntersightAssetDeployment:RemoveCmdletBase
-	{
-		public RemoveIntersightAssetDeployment()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeploymentWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConfiguration", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetDeviceConfiguration:GetCmdletBase
-	{
-		public GetIntersightAssetDeviceConfiguration()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetDeviceConfigurationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetClusterMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetClusterMember", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetClusterMember:GetCmdletBase
-	{
-		public GetIntersightAssetClusterMember()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetClusterMemberListWithHttpInfo";
+            MethodName = "DeleteAssetDeploymentDeviceWithHttpInfo";
 		}
     }
     /// <summary>
@@ -205,15 +87,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceClaim.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AssetClusterMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceClaim")]
-    public class RemoveIntersightAssetDeviceClaim:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetClusterMember", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetClusterMember:GetCmdletBase
 	{
-		public RemoveIntersightAssetDeviceClaim()
+		public GetIntersightAssetClusterMember()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeviceClaimWithHttpInfo";
+            MethodName = "GetAssetClusterMemberListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -229,16 +111,16 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set AssetDeviceContractInformation.</para>
+    /// <para type="synopsis">This is the cmdlet to Set AssetDeviceConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceContractInformation")]
-    public class SetIntersightAssetDeviceContractInformation:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceConfiguration")]
+    public class SetIntersightAssetDeviceConfiguration:SetCmdletBase
 	{
-		public SetIntersightAssetDeviceContractInformation()
+		public SetIntersightAssetDeviceConfiguration()
 		{
 			ApiInstance = new AssetApi(Config);
-            ModelObject = new AssetDeviceContractInformation();
-            MethodName = "UpdateAssetDeviceContractInformationWithHttpInfo";
+            ModelObject = new AssetDeviceConfiguration();
+            MethodName = "UpdateAssetDeviceConfigurationWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -250,20 +132,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Specifies whether configuration through the platforms local management interface has been disabled, with only configuration through the Intersight service enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool LocalConfigurationLocked {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The log level of the device connector service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string LogLevel {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Internal property used for triggering and tracking actions for contract information.\n* `Update` - Sn2Info/Contract information needs to be updated.\n* `OK` - Sn2Info/Contract information was fetched succcessfuly and updated.\n* `Failed` - Sn2Info/Contract information was not available  or failed while fetching.\n* `Retry` - Sn2Info/Contract information update failed and will be retried later."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceContractInformation.StateContractEnum StateContract {
             get;
             set;
         }
@@ -278,15 +169,75 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceContractInformation.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceConnectorManager.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceContractInformation")]
-    public class RemoveIntersightAssetDeviceContractInformation:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConnectorManager", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetDeviceConnectorManager:GetCmdletBase
 	{
-		public RemoveIntersightAssetDeviceContractInformation()
+		public GetIntersightAssetDeviceConnectorManager()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeviceContractInformationWithHttpInfo";
+            MethodName = "GetAssetDeviceConnectorManagerListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AssetSubscriptionAccount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscriptionAccount", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetSubscriptionAccount:GetCmdletBase
+	{
+		public GetIntersightAssetSubscriptionAccount()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "GetAssetSubscriptionAccountListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetSubscriptionAccount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscriptionAccount")]
+    public class RemoveIntersightAssetSubscriptionAccount:RemoveCmdletBase
+	{
+		public RemoveIntersightAssetSubscriptionAccount()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "DeleteAssetSubscriptionAccountWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeployment")]
+    public class RemoveIntersightAssetDeployment:RemoveCmdletBase
+	{
+		public RemoveIntersightAssetDeployment()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "DeleteAssetDeploymentWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceRegistration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceRegistration", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetDeviceRegistration:GetCmdletBase
+	{
+		public GetIntersightAssetDeviceRegistration()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "GetAssetDeviceRegistrationListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetSubscription.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscription")]
+    public class RemoveIntersightAssetSubscription:RemoveCmdletBase
+	{
+		public RemoveIntersightAssetSubscription()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "DeleteAssetSubscriptionWithHttpInfo";
 		}
     }
     /// <summary>
@@ -432,27 +383,27 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeploymentDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AssetSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeploymentDevice")]
-    public class RemoveIntersightAssetDeploymentDevice:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscription", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetSubscription:GetCmdletBase
 	{
-		public RemoveIntersightAssetDeploymentDevice()
+		public GetIntersightAssetSubscription()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeploymentDeviceWithHttpInfo";
+            MethodName = "GetAssetSubscriptionListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetDeployment.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AssetDeploymentDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeployment", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetDeployment:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeploymentDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetDeploymentDevice:GetCmdletBase
 	{
-		public GetIntersightAssetDeployment()
+		public GetIntersightAssetDeploymentDevice()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetDeploymentListWithHttpInfo";
+            MethodName = "GetAssetDeploymentDeviceListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -598,63 +549,27 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceConnectorManager.</para>
+    /// <para type="synopsis">This is the cmdlet to Get AssetDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConnectorManager", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetDeviceConnectorManager:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeployment", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetDeployment:GetCmdletBase
 	{
-		public GetIntersightAssetDeviceConnectorManager()
+		public GetIntersightAssetDeployment()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetDeviceConnectorManagerListWithHttpInfo";
+            MethodName = "GetAssetDeploymentListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetSubscriptionAccount.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscriptionAccount")]
-    public class RemoveIntersightAssetSubscriptionAccount:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceRegistration")]
+    public class RemoveIntersightAssetDeviceRegistration:RemoveCmdletBase
 	{
-		public RemoveIntersightAssetSubscriptionAccount()
+		public RemoveIntersightAssetDeviceRegistration()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetSubscriptionAccountWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceRegistration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceRegistration", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetDeviceRegistration:GetCmdletBase
-	{
-		public GetIntersightAssetDeviceRegistration()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetDeviceRegistrationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetSubscription.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscription")]
-    public class RemoveIntersightAssetSubscription:RemoveCmdletBase
-	{
-		public RemoveIntersightAssetSubscription()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetSubscriptionWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get AssetSubscription.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscription", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightAssetSubscription:GetCmdletBase
-	{
-		public GetIntersightAssetSubscription()
-		{
-			ApiInstance = new AssetApi(Config);
-            MethodName = "GetAssetSubscriptionListWithHttpInfo";
+            MethodName = "DeleteAssetDeviceRegistrationWithHttpInfo";
 		}
     }
     /// <summary>
@@ -770,15 +685,100 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceRegistration.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceClaim.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceRegistration")]
-    public class RemoveIntersightAssetDeviceRegistration:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceClaim")]
+    public class RemoveIntersightAssetDeviceClaim:RemoveCmdletBase
 	{
-		public RemoveIntersightAssetDeviceRegistration()
+		public RemoveIntersightAssetDeviceClaim()
 		{
 			ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeviceRegistrationWithHttpInfo";
+            MethodName = "DeleteAssetDeviceClaimWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConfiguration", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetDeviceConfiguration:GetCmdletBase
+	{
+		public GetIntersightAssetDeviceConfiguration()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "GetAssetDeviceConfigurationListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set AssetDeviceContractInformation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceContractInformation")]
+    public class SetIntersightAssetDeviceContractInformation:SetCmdletBase
+	{
+		public SetIntersightAssetDeviceContractInformation()
+		{
+			ApiInstance = new AssetApi(Config);
+            ModelObject = new AssetDeviceContractInformation();
+            MethodName = "UpdateAssetDeviceContractInformationWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Internal property used for triggering and tracking actions for contract information.\n* `Update` - Sn2Info/Contract information needs to be updated.\n* `OK` - Sn2Info/Contract information was fetched succcessfuly and updated.\n* `Failed` - Sn2Info/Contract information was not available  or failed while fetching.\n* `Retry` - Sn2Info/Contract information update failed and will be retried later."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceContractInformation.StateContractEnum StateContract {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceContractInformation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceContractInformation")]
+    public class RemoveIntersightAssetDeviceContractInformation:RemoveCmdletBase
+	{
+		public RemoveIntersightAssetDeviceContractInformation()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "DeleteAssetDeviceContractInformationWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get AssetDeviceContractInformation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceContractInformation", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightAssetDeviceContractInformation:GetCmdletBase
+	{
+		public GetIntersightAssetDeviceContractInformation()
+		{
+			ApiInstance = new AssetApi(Config);
+            MethodName = "GetAssetDeviceContractInformationListWithHttpInfo";
 		}
     }
 }

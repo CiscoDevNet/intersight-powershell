@@ -17,7 +17,7 @@ Remove-IntersightSoftwareApplianceDistributable -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwareApplianceDistributable&apos; resource.
+Delete a &amp;apos;SoftwareApplianceDistributable&amp;apos; resource.
 
 ## EXAMPLES
 

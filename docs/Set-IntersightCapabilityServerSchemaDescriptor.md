@@ -19,7 +19,7 @@ Set-IntersightCapabilityServerSchemaDescriptor [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
+Update a &apos;CapabilityServerSchemaDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -205,8 +205,8 @@ PS C:\> Set-IntersightCapabilityServerSchemaDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)
+
 [Get-IntersightCapabilityServerSchemaDescriptor](./Get-IntersightCapabilityServerSchemaDescriptor.md)
 
 [New-IntersightCapabilityServerSchemaDescriptor](./New-IntersightCapabilityServerSchemaDescriptor.md)
-
-[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)

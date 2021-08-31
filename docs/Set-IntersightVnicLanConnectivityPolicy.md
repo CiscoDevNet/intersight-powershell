@@ -19,7 +19,7 @@ Set-IntersightVnicLanConnectivityPolicy [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicLanConnectivityPolicy&apos; resource.
+Update a &amp;apos;VnicLanConnectivityPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -274,8 +274,8 @@ PS C:\> Set-IntersightVnicLanConnectivityPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicLanConnectivityPolicy](./Get-IntersightVnicLanConnectivityPolicy.md)
-
 [New-IntersightVnicLanConnectivityPolicy](./New-IntersightVnicLanConnectivityPolicy.md)
+
+[Get-IntersightVnicLanConnectivityPolicy](./Get-IntersightVnicLanConnectivityPolicy.md)
 
 [Remove-IntersightVnicLanConnectivityPolicy](./Remove-IntersightVnicLanConnectivityPolicy.md)

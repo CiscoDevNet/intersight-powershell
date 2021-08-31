@@ -17,7 +17,7 @@ Remove-IntersightNtpPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;NtpPolicy&apos; resource.
+Delete a &amp;apos;NtpPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightNtpPolicy](./Set-IntersightNtpPolicy.md)
-
 [New-IntersightNtpPolicy](./New-IntersightNtpPolicy.md)
 
 [Get-IntersightNtpPolicy](./Get-IntersightNtpPolicy.md)
+
+[Set-IntersightNtpPolicy](./Set-IntersightNtpPolicy.md)
 

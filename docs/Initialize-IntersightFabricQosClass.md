@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mtu
-Maximum transmission unit (MTU) is the largest size packet or frame,\nthat can be sent in a packet- or frame-based network such as the Internet.\nUser can select from the following:\n1. Any value between 1500 and 9216\n2. &amp;apos;Normal&amp;apos; (default) mapping to a value of 1500.\n3. &amp;apos;FC&amp;apos; mapping to a value of 2240.
+Maximum transmission unit (MTU) is the largest size packet or frame,\nthat can be sent in a packet- or frame-based network such as the Internet.\nUser can select from the following:\n1. Any value between 1500 and 9216\n2. &apos;Normal&apos; (default) mapping to a value of 1500.\n3. &apos;FC&apos; mapping to a value of 2240.
 
 ```yaml
 Type: long
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: FabricQosClass.ObjectTypeEnum

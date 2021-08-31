@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ServerConfigResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResult", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightServerConfigResult:GetCmdletBase
+	{
+		public GetIntersightServerConfigResult()
+		{
+			ApiInstance = new ServerApi(Config);
+            MethodName = "GetServerConfigResultListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ServerProfileTemplate.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightServerProfileTemplate")]
@@ -274,122 +286,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ServerConfigResult.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ServerConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResult", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightServerConfigResult:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightServerConfigResultEntry:GetCmdletBase
 	{
-		public GetIntersightServerConfigResult()
+		public GetIntersightServerConfigResultEntry()
 		{
 			ApiInstance = new ServerApi(Config);
-            MethodName = "GetServerConfigResultListWithHttpInfo";
+            MethodName = "GetServerConfigResultEntryListWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ServerConfigImport.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigImport", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightServerConfigImport:GetCmdletBase
-	{
-		public GetIntersightServerConfigImport()
-		{
-			ApiInstance = new ServerApi(Config);
-            MethodName = "GetServerConfigImportListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New ServerConfigImport.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightServerConfigImport")]
-    public class NewIntersightServerConfigImport:NewCmdletBase
-	{
-		public NewIntersightServerConfigImport()
-		{
-			ApiInstance = new ServerApi(Config);
-            ModelObject = new ServerConfigImport();
-            MethodName = "CreateServerConfigImportWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the imported profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Policy prefix for the policies of the imported server profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,32}$")]
-        public string PolicyPrefix {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> PolicyTypes {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Profile name for the imported server profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
-        public string ProfileName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeRackUnitRelationship Server {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerProfile.</para>
@@ -552,6 +458,124 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ServerConfigImport.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigImport", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightServerConfigImport:GetCmdletBase
+	{
+		public GetIntersightServerConfigImport()
+		{
+			ApiInstance = new ServerApi(Config);
+            MethodName = "GetServerConfigImportListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New ServerConfigImport.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightServerConfigImport")]
+    public class NewIntersightServerConfigImport:NewCmdletBase
+	{
+		public NewIntersightServerConfigImport()
+		{
+			ApiInstance = new ServerApi(Config);
+            ModelObject = new ServerConfigImport();
+            MethodName = "CreateServerConfigImportWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the imported profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Policy prefix for the policies of the imported server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,32}$")]
+        public string PolicyPrefix {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> PolicyTypes {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Profile name for the imported server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string ProfileName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeRackUnitRelationship Server {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ServerConfigChangeDetail.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightServerConfigChangeDetail:GetCmdletBase
+	{
+		public GetIntersightServerConfigChangeDetail()
+		{
+			ApiInstance = new ServerApi(Config);
+            MethodName = "GetServerConfigChangeDetailListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ServerProfile.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightServerProfile")]
@@ -709,30 +733,6 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ServerApi(Config);
             MethodName = "DeleteServerProfileWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ServerConfigResultEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightServerConfigResultEntry:GetCmdletBase
-	{
-		public GetIntersightServerConfigResultEntry()
-		{
-			ApiInstance = new ServerApi(Config);
-            MethodName = "GetServerConfigResultEntryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ServerConfigChangeDetail.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightServerConfigChangeDetail:GetCmdletBase
-	{
-		public GetIntersightServerConfigChangeDetail()
-		{
-			ApiInstance = new ServerApi(Config);
-            MethodName = "GetServerConfigChangeDetailListWithHttpInfo";
 		}
     }
 }

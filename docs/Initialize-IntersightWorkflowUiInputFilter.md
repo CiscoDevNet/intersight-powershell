@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name for the input definition to which this filter applies. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_). The first and last character in name must be an alphanumeric character. When defining the cascade filter for a sub property, use a period (.) to seperate each section of the name like \&amp;quot;StorageConfig.Volume\&amp;quot; where &amp;apos;StorageConfig&amp;apos; is an input name and &amp;apos;Volume&amp;apos; is a sub property defined through custom data type definition.
+Name for the input definition to which this filter applies. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_). The first and last character in name must be an alphanumeric character. When defining the cascade filter for a sub property, use a period (.) to seperate each section of the name like \&quot;StorageConfig.Volume\&quot; where &apos;StorageConfig&apos; is an input name and &apos;Volume&apos; is a sub property defined through custom data type definition.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowUiInputFilter.ObjectTypeEnum

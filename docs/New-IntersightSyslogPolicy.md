@@ -19,7 +19,7 @@ New-IntersightSyslogPolicy [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &apos;SyslogPolicy&apos; resource.
+Create a &amp;apos;SyslogPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -203,11 +203,11 @@ PS C:\> New-IntersightSyslogPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
+
 [Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
 
 [Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
-
-[Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
 
 [Initialize-IntersightSyslogLocalClientBase](./Initialize-IntersightSyslogLocalClientBase.md)
 

@@ -25,7 +25,7 @@ Get-IntersightApplianceBackup [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ApplianceBackup&apos; resource.,
+Read a &amp;apos;ApplianceBackup&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

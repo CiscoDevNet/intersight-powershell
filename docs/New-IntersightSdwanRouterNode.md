@@ -230,11 +230,11 @@ PS C:\> New-IntersightSdwanRouterNode
 
 ## RELATED LINKS
 
+[Get-IntersightSdwanRouterNode](./Get-IntersightSdwanRouterNode.md)
+
 [Remove-IntersightSdwanRouterNode](./Remove-IntersightSdwanRouterNode.md)
 
 [Set-IntersightSdwanRouterNode](./Set-IntersightSdwanRouterNode.md)
-
-[Get-IntersightSdwanRouterNode](./Get-IntersightSdwanRouterNode.md)
 
 [Initialize-IntersightSdwanNetworkConfigurationType](./Initialize-IntersightSdwanNetworkConfigurationType.md)
 

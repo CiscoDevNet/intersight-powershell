@@ -19,7 +19,7 @@ Set-IntersightHyperflexNodeProfile [-Action< string>][-AdditionalProperties< Dic
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexNodeProfile&apos; resource.
+Update a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 

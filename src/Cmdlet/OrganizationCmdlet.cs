@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get OrganizationOrganization.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightOrganizationOrganization", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightOrganizationOrganization:GetCmdletBase
+	{
+		public GetIntersightOrganizationOrganization()
+		{
+			ApiInstance = new OrganizationApi(Config);
+            MethodName = "GetOrganizationOrganizationListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OrganizationOrganization.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightOrganizationOrganization")]
@@ -75,30 +87,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get OrganizationOrganization.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOrganizationOrganization", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightOrganizationOrganization:GetCmdletBase
-	{
-		public GetIntersightOrganizationOrganization()
-		{
-			ApiInstance = new OrganizationApi(Config);
-            MethodName = "GetOrganizationOrganizationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove OrganizationOrganization.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOrganizationOrganization")]
-    public class RemoveIntersightOrganizationOrganization:RemoveCmdletBase
-	{
-		public RemoveIntersightOrganizationOrganization()
-		{
-			ApiInstance = new OrganizationApi(Config);
-            MethodName = "DeleteOrganizationOrganizationWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OrganizationOrganization.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightOrganizationOrganization")]
@@ -164,5 +152,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove OrganizationOrganization.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightOrganizationOrganization")]
+    public class RemoveIntersightOrganizationOrganization:RemoveCmdletBase
+	{
+		public RemoveIntersightOrganizationOrganization()
+		{
+			ApiInstance = new OrganizationApi(Config);
+            MethodName = "DeleteOrganizationOrganizationWithHttpInfo";
+		}
     }
 }

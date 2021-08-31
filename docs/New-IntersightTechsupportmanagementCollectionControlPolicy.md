@@ -19,7 +19,7 @@ New-IntersightTechsupportmanagementCollectionControlPolicy [-AdditionalPropertie
 ```
 
 ## DESCRIPTION
-Create a &apos;TechsupportmanagementCollectionControlPolicy&apos; resource.
+Create a &amp;apos;TechsupportmanagementCollectionControlPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

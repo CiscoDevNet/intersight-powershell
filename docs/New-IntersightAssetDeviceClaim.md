@@ -19,7 +19,7 @@ New-IntersightAssetDeviceClaim [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AssetDeviceClaim&amp;apos; resource.
+Create a &apos;AssetDeviceClaim&apos; resource.
 
 ## PARAMETERS
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -SerialNumber
-Obtained from the device connector management UI or API (REST endpoint &amp;apos;/connector/DeviceIdentifiers&amp;apos;).
+Obtained from the device connector management UI or API (REST endpoint &apos;/connector/DeviceIdentifiers&apos;).
 
 ```yaml
 Type: string

@@ -19,7 +19,7 @@ Set-IntersightApplianceDiagSetting [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceDiagSetting&amp;apos; resource.
+Update a &apos;ApplianceDiagSetting&apos; resource.
 
 ## PARAMETERS
 
@@ -145,6 +145,6 @@ PS C:\> Set-IntersightApplianceDiagSetting
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)
-
 [New-IntersightApplianceDiagSetting](./New-IntersightApplianceDiagSetting.md)
+
+[Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)

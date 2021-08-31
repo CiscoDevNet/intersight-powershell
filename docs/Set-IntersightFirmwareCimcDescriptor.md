@@ -19,7 +19,7 @@ Set-IntersightFirmwareCimcDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareCimcDescriptor&apos; resource.
+Update a &amp;apos;FirmwareCimcDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

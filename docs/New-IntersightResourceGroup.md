@@ -19,7 +19,7 @@ New-IntersightResourceGroup [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ResourceGroup&amp;apos; resource.
+Create a &apos;ResourceGroup&apos; resource.
 
 ## PARAMETERS
 

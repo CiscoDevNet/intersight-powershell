@@ -19,7 +19,7 @@ New-IntersightApplianceDiagSetting [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Create a &apos;ApplianceDiagSetting&apos; resource.
+Create a &amp;apos;ApplianceDiagSetting&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password of the Intersight Appliance&apos;s OS diagnostic user account.
+Password of the Intersight Appliance&amp;apos;s OS diagnostic user account.
 
 ```yaml
 Type: string

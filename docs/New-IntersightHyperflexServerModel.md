@@ -19,7 +19,7 @@ New-IntersightHyperflexServerModel [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexServerModel&amp;apos; resource.
+Create a &apos;HyperflexServerModel&apos; resource.
 
 ## PARAMETERS
 
@@ -132,10 +132,10 @@ PS C:\> New-IntersightHyperflexServerModel
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
-
 [Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 
 [Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
+
+[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 
 [Initialize-IntersightHyperflexServerModelEntry](./Initialize-IntersightHyperflexServerModelEntry.md)

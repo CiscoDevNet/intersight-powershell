@@ -19,7 +19,7 @@ Set-IntersightSolPolicy [-AdditionalProperties< Dictionary<string,object>>][-Bau
 ```
 
 ## DESCRIPTION
-Update a &apos;SolPolicy&apos; resource.
+Update a &amp;apos;SolPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

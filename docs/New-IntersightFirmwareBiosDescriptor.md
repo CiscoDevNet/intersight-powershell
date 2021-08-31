@@ -19,7 +19,7 @@ New-IntersightFirmwareBiosDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareBiosDescriptor&apos; resource.
+Create a &amp;apos;FirmwareBiosDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

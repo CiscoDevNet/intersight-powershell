@@ -183,10 +183,10 @@ PS C:\> New-IntersightCertificatemanagementPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
-
 [Set-IntersightCertificatemanagementPolicy](./Set-IntersightCertificatemanagementPolicy.md)
 
 [Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)
+
+[Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
 
 [Initialize-IntersightCertificatemanagementCertificateBase](./Initialize-IntersightCertificatemanagementCertificateBase.md)

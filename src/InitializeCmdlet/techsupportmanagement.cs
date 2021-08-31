@@ -127,6 +127,72 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementApplianceParam.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementApplianceParam")]
+    public class InitializeIntersightTechsupportmanagementApplianceParam:PSCmdlet
+	{
+		public InitializeIntersightTechsupportmanagementApplianceParam()
+		{
+            ClassId = TechsupportmanagementApplianceParam.ClassIdEnum.TechsupportmanagementApplianceParam;
+            ObjectType = TechsupportmanagementApplianceParam.ObjectTypeEnum.TechsupportmanagementApplianceParam;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TechsupportmanagementApplianceParam.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies whether the techsupport request is from the cloud or by the appliance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool IsApplianceRequest {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TechsupportmanagementApplianceParam.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TechsupportmanagementApplianceParam initObject = new Intersight.Model.TechsupportmanagementApplianceParam();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsApplianceRequest"))
+            {
+                initObject.IsApplianceRequest = this.IsApplianceRequest;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementPlatformParam.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementPlatformParam")]
@@ -200,72 +266,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("IncludeCore"))
             {
                 initObject.IncludeCore = this.IncludeCore;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementApplianceParam.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementApplianceParam")]
-    public class InitializeIntersightTechsupportmanagementApplianceParam:PSCmdlet
-	{
-		public InitializeIntersightTechsupportmanagementApplianceParam()
-		{
-            ClassId = TechsupportmanagementApplianceParam.ClassIdEnum.TechsupportmanagementApplianceParam;
-            ObjectType = TechsupportmanagementApplianceParam.ObjectTypeEnum.TechsupportmanagementApplianceParam;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TechsupportmanagementApplianceParam.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies whether the techsupport request is from the cloud or by the appliance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool IsApplianceRequest {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TechsupportmanagementApplianceParam.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TechsupportmanagementApplianceParam initObject = new Intersight.Model.TechsupportmanagementApplianceParam();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IsApplianceRequest"))
-            {
-                initObject.IsApplianceRequest = this.IsApplianceRequest;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);

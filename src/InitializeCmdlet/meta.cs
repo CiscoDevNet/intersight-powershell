@@ -8,59 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MetaRelationshipDefinition.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMetaRelationshipDefinition")]
-    public class InitializeIntersightMetaRelationshipDefinition:PSCmdlet
-	{
-		public InitializeIntersightMetaRelationshipDefinition()
-		{
-            ClassId = MetaRelationshipDefinition.ClassIdEnum.MetaRelationshipDefinition;
-            ObjectType = MetaRelationshipDefinition.ObjectTypeEnum.MetaRelationshipDefinition;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MetaRelationshipDefinition.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MetaRelationshipDefinition.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.MetaRelationshipDefinition initObject = new Intersight.Model.MetaRelationshipDefinition();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize MetaDisplayNameDefinition.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightMetaDisplayNameDefinition")]
@@ -114,15 +61,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MetaAccessPrivilege.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize MetaRelationshipDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMetaAccessPrivilege")]
-    public class InitializeIntersightMetaAccessPrivilege:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightMetaRelationshipDefinition")]
+    public class InitializeIntersightMetaRelationshipDefinition:PSCmdlet
 	{
-		public InitializeIntersightMetaAccessPrivilege()
+		public InitializeIntersightMetaRelationshipDefinition()
 		{
-            ClassId = MetaAccessPrivilege.ClassIdEnum.MetaAccessPrivilege;
-            ObjectType = MetaAccessPrivilege.ObjectTypeEnum.MetaAccessPrivilege;
+            ClassId = MetaRelationshipDefinition.ClassIdEnum.MetaRelationshipDefinition;
+            ObjectType = MetaRelationshipDefinition.ObjectTypeEnum.MetaRelationshipDefinition;
             
 		}
         // <summary>
@@ -139,7 +86,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public MetaAccessPrivilege.ClassIdEnum ClassId {
+        public MetaRelationshipDefinition.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -148,14 +95,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public MetaAccessPrivilege.ObjectTypeEnum ObjectType {
+        public MetaRelationshipDefinition.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.MetaAccessPrivilege initObject = new Intersight.Model.MetaAccessPrivilege();
+             Intersight.Model.MetaRelationshipDefinition initObject = new Intersight.Model.MetaRelationshipDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -209,6 +156,59 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.MetaPropDefinition initObject = new Intersight.Model.MetaPropDefinition();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MetaAccessPrivilege.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMetaAccessPrivilege")]
+    public class InitializeIntersightMetaAccessPrivilege:PSCmdlet
+	{
+		public InitializeIntersightMetaAccessPrivilege()
+		{
+            ClassId = MetaAccessPrivilege.ClassIdEnum.MetaAccessPrivilege;
+            ObjectType = MetaAccessPrivilege.ObjectTypeEnum.MetaAccessPrivilege;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MetaAccessPrivilege.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MetaAccessPrivilege.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.MetaAccessPrivilege initObject = new Intersight.Model.MetaAccessPrivilege();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

@@ -19,7 +19,7 @@ Set-IntersightBootUsbDevice [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &apos;BootUsbDevice&apos; resource.
+Update a &amp;apos;BootUsbDevice&amp;apos; resource.
 
 ## PARAMETERS
 

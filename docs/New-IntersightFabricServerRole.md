@@ -19,7 +19,7 @@ New-IntersightFabricServerRole [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricServerRole&amp;apos; resource.
+Create a &apos;FabricServerRole&apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> New-IntersightFabricServerRole
 
 ## RELATED LINKS
 
-[Set-IntersightFabricServerRole](./Set-IntersightFabricServerRole.md)
-
 [Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
+
+[Set-IntersightFabricServerRole](./Set-IntersightFabricServerRole.md)
 
 [Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)

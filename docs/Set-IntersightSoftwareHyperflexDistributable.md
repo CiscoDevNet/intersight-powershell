@@ -425,11 +425,11 @@ PS C:\> Set-IntersightSoftwareHyperflexDistributable
 
 ## RELATED LINKS
 
+[Remove-IntersightSoftwareHyperflexDistributable](./Remove-IntersightSoftwareHyperflexDistributable.md)
+
 [Get-IntersightSoftwareHyperflexDistributable](./Get-IntersightSoftwareHyperflexDistributable.md)
 
 [New-IntersightSoftwareHyperflexDistributable](./New-IntersightSoftwareHyperflexDistributable.md)
-
-[Remove-IntersightSoftwareHyperflexDistributable](./Remove-IntersightSoftwareHyperflexDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

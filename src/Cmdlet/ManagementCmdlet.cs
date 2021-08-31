@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ManagementEntity.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ManagementController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightManagementEntity")]
-    public class SetIntersightManagementEntity:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightManagementController")]
+    public class SetIntersightManagementController:SetCmdletBase
 	{
-		public SetIntersightManagementEntity()
+		public SetIntersightManagementController()
 		{
 			ApiInstance = new ManagementApi(Config);
-            ModelObject = new ManagementEntity();
-            MethodName = "UpdateManagementEntityWithHttpInfo";
+            ModelObject = new ManagementController();
+            MethodName = "UpdateManagementControllerWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -25,6 +25,15 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentIoCardBaseRelationship EquipmentIoCardBase {
             get;
             set;
         }
@@ -81,7 +90,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ManagementApi(Config);
             ModelObject = new ManagementInterface();
-            MethodName = "UpdateManagementInterfaceWithHttpInfo";
+            MethodName = "PatchManagementInterfaceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -184,28 +193,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ManagementInterface.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ManagementEntity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightManagementInterface:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightManagementEntity")]
+    public class SetIntersightManagementEntity:SetCmdletBase
 	{
-		public GetIntersightManagementInterface()
+		public SetIntersightManagementEntity()
 		{
 			ApiInstance = new ManagementApi(Config);
-            MethodName = "GetManagementInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ManagementController.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightManagementController")]
-    public class SetIntersightManagementController:SetCmdletBase
-	{
-		public SetIntersightManagementController()
-		{
-			ApiInstance = new ManagementApi(Config);
-            ModelObject = new ManagementController();
-            MethodName = "UpdateManagementControllerWithHttpInfo";
+            ModelObject = new ManagementEntity();
+            MethodName = "UpdateManagementEntityWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -213,15 +210,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentIoCardBaseRelationship EquipmentIoCardBase {
             get;
             set;
         }
@@ -243,5 +231,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ManagementInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightManagementInterface:GetCmdletBase
+	{
+		public GetIntersightManagementInterface()
+		{
+			ApiInstance = new ManagementApi(Config);
+            MethodName = "GetManagementInterfaceListWithHttpInfo";
+		}
     }
 }

@@ -19,7 +19,7 @@ Set-IntersightCapabilityChassisDescriptor [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityChassisDescriptor&amp;apos; resource.
+Update a &apos;CapabilityChassisDescriptor&apos; resource.
 
 ## PARAMETERS
 

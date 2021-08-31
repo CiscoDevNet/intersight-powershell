@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -KubeletVersion
-The kubelet is the primary \&quot;node agent\&quot; that runs on each node. It can register the node with the apiserver using one of such as the hostname; a flag to override the hostname; or specific logic for a cloud provider. This field describes the kubelet version the node currently using.
+The kubelet is the primary \&amp;quot;node agent\&amp;quot; that runs on each node. It can register the node with the apiserver using one of such as the hostname; a flag to override the hostname; or specific logic for a cloud provider. This field describes the kubelet version the node currently using.
 
 ```yaml
 Type: string

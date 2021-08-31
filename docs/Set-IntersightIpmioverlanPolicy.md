@@ -19,7 +19,7 @@ Set-IntersightIpmioverlanPolicy [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &apos;IpmioverlanPolicy&apos; resource.
+Update a &amp;apos;IpmioverlanPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

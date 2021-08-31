@@ -17,7 +17,7 @@ Remove-IntersightMacpoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;MacpoolPool&amp;apos; resource.
+Delete a &apos;MacpoolPool&apos; resource.
 
 ## EXAMPLES
 

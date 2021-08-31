@@ -8,6 +8,254 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set SdwanVmanageAccountPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightSdwanVmanageAccountPolicy")]
+    public class SetIntersightSdwanVmanageAccountPolicy:SetCmdletBase
+	{
+		public SetIntersightSdwanVmanageAccountPolicy()
+		{
+			ApiInstance = new SdwanApi(Config);
+            ModelObject = new SdwanVmanageAccountPolicy();
+            MethodName = "UpdateSdwanVmanageAccountPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VManage server hostname (FQDN) that the acccount holds information for."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EndpointAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Local password for authenticating with the vManage server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VManage Port number on which the application is running."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Port {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to sdwanProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<SdwanProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Local username for authenticating with the vManage server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Username {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove SdwanVmanageAccountPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdwanVmanageAccountPolicy")]
+    public class RemoveIntersightSdwanVmanageAccountPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightSdwanVmanageAccountPolicy()
+		{
+			ApiInstance = new SdwanApi(Config);
+            MethodName = "DeleteSdwanVmanageAccountPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get SdwanRouterPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightSdwanRouterPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightSdwanRouterPolicy:GetCmdletBase
+	{
+		public GetIntersightSdwanRouterPolicy()
+		{
+			ApiInstance = new SdwanApi(Config);
+            MethodName = "GetSdwanRouterPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New SdwanRouterPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightSdwanRouterPolicy")]
+    public class NewIntersightSdwanRouterPolicy:NewCmdletBase
+	{
+		public NewIntersightSdwanRouterPolicy()
+		{
+			ApiInstance = new SdwanApi(Config);
+            ModelObject = new SdwanRouterPolicy();
+            MethodName = "CreateSdwanRouterPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Scale of the SD-WAN router virtual machine deployment.\n* `Typical` - Typical deployment configuration with 4 vCPUs and 4GB RAM.\n* `Minimal` - Minimal deployment configuration with 2 vCPUs and 4GB RAM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdwanRouterPolicy.DeploymentSizeEnum DeploymentSize {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to sdwanProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<SdwanProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a softwareSolutionDistributable resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwareSolutionDistributableRelationship SolutionImage {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of WAN connections across the SD-WAN site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(2, 3)]
+        public long WanCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines if the WAN networks are singly or dually terminated. Dually terminated WANs are configured on all the SD-WAN routers. Singly terminated WANs are configured only on one of the SD-WAN routers.\n* `Single` - Singly terminated WANs ar evenly distributed across SD-WAN router nodes. A given WAN connection is available only on one of the router nodes.\n* `Dual` - Dually terminated WANs are configured on all the SD-WAN routers. A given WAN connection is available on multiple router nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdwanRouterPolicy.WanTerminationTypeEnum WanTerminationType {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SdwanProfile.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSdwanProfile")]
@@ -159,130 +407,6 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SdwanRouterNode.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdwanRouterNode")]
-    public class RemoveIntersightSdwanRouterNode:RemoveCmdletBase
-	{
-		public RemoveIntersightSdwanRouterNode()
-		{
-			ApiInstance = new SdwanApi(Config);
-            MethodName = "DeleteSdwanRouterNodeWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set SdwanRouterNode.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSdwanRouterNode")]
-    public class SetIntersightSdwanRouterNode:SetCmdletBase
-	{
-		public SetIntersightSdwanRouterNode()
-		{
-			ApiInstance = new SdwanApi(Config);
-            ModelObject = new SdwanRouterNode();
-            MethodName = "UpdateSdwanRouterNodeWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the Cisco vManage device template that the current device should be attached to. A device template consists of many feature templates that contain SD-WAN vEdge router configuration."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DeviceTemplate {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the router node object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<SdwanNetworkConfigurationType> NetworkConfiguration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a sdwanProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdwanProfileRelationship Profile {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship ServerNode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<SdwanTemplateInputsType> TemplateInputs {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Uniquely identifies the router by its chassis number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(([a-zA-Z0-9]){8}-([a-zA-Z0-9]){4}-([a-zA-Z0-9]){4}-([a-zA-Z0-9]){4}-([a-zA-Z0-9]){12})$")]
-        public string Uuid {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SdwanRouterPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSdwanRouterPolicy")]
@@ -405,6 +529,130 @@ namespace Intersight.PowerShell
 			ApiInstance = new SdwanApi(Config);
             MethodName = "DeleteSdwanRouterPolicyWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get SdwanRouterNode.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightSdwanRouterNode", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightSdwanRouterNode:GetCmdletBase
+	{
+		public GetIntersightSdwanRouterNode()
+		{
+			ApiInstance = new SdwanApi(Config);
+            MethodName = "GetSdwanRouterNodeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New SdwanRouterNode.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightSdwanRouterNode")]
+    public class NewIntersightSdwanRouterNode:NewCmdletBase
+	{
+		public NewIntersightSdwanRouterNode()
+		{
+			ApiInstance = new SdwanApi(Config);
+            ModelObject = new SdwanRouterNode();
+            MethodName = "CreateSdwanRouterNodeWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the Cisco vManage device template that the current device should be attached to. A device template consists of many feature templates that contain SD-WAN vEdge router configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DeviceTemplate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the router node object."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<SdwanNetworkConfigurationType> NetworkConfiguration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a sdwanProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdwanProfileRelationship Profile {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship ServerNode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<SdwanTemplateInputsType> TemplateInputs {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Uniquely identifies the router by its chassis number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(([a-zA-Z0-9]){8}-([a-zA-Z0-9]){4}-([a-zA-Z0-9]){4}-([a-zA-Z0-9]){4}-([a-zA-Z0-9]){12})$")]
+        public string Uuid {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SdwanProfile.</para>
@@ -558,28 +806,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get SdwanRouterNode.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove SdwanRouterNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSdwanRouterNode", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightSdwanRouterNode:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdwanRouterNode")]
+    public class RemoveIntersightSdwanRouterNode:RemoveCmdletBase
 	{
-		public GetIntersightSdwanRouterNode()
+		public RemoveIntersightSdwanRouterNode()
 		{
 			ApiInstance = new SdwanApi(Config);
-            MethodName = "GetSdwanRouterNodeListWithHttpInfo";
+            MethodName = "DeleteSdwanRouterNodeWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New SdwanRouterNode.</para>
+    /// <para type="synopsis">This is the cmdlet to Set SdwanRouterNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSdwanRouterNode")]
-    public class NewIntersightSdwanRouterNode:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightSdwanRouterNode")]
+    public class SetIntersightSdwanRouterNode:SetCmdletBase
 	{
-		public NewIntersightSdwanRouterNode()
+		public SetIntersightSdwanRouterNode()
 		{
 			ApiInstance = new SdwanApi(Config);
             ModelObject = new SdwanRouterNode();
-            MethodName = "CreateSdwanRouterNodeWithHttpInfo";
+            MethodName = "UpdateSdwanRouterNodeWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -602,7 +850,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -611,7 +859,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the router node object."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Name {
             get;
@@ -804,253 +1052,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get SdwanRouterPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSdwanRouterPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightSdwanRouterPolicy:GetCmdletBase
-	{
-		public GetIntersightSdwanRouterPolicy()
-		{
-			ApiInstance = new SdwanApi(Config);
-            MethodName = "GetSdwanRouterPolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New SdwanRouterPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSdwanRouterPolicy")]
-    public class NewIntersightSdwanRouterPolicy:NewCmdletBase
-	{
-		public NewIntersightSdwanRouterPolicy()
-		{
-			ApiInstance = new SdwanApi(Config);
-            ModelObject = new SdwanRouterPolicy();
-            MethodName = "CreateSdwanRouterPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Scale of the SD-WAN router virtual machine deployment.\n* `Typical` - Typical deployment configuration with 4 vCPUs and 4GB RAM.\n* `Minimal` - Minimal deployment configuration with 2 vCPUs and 4GB RAM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdwanRouterPolicy.DeploymentSizeEnum DeploymentSize {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to sdwanProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<SdwanProfileRelationship> Profiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a softwareSolutionDistributable resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwareSolutionDistributableRelationship SolutionImage {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of WAN connections across the SD-WAN site."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(2, 3)]
-        public long WanCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Defines if the WAN networks are singly or dually terminated. Dually terminated WANs are configured on all the SD-WAN routers. Singly terminated WANs are configured only on one of the SD-WAN routers.\n* `Single` - Singly terminated WANs ar evenly distributed across SD-WAN router nodes. A given WAN connection is available only on one of the router nodes.\n* `Dual` - Dually terminated WANs are configured on all the SD-WAN routers. A given WAN connection is available on multiple router nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdwanRouterPolicy.WanTerminationTypeEnum WanTerminationType {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set SdwanVmanageAccountPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSdwanVmanageAccountPolicy")]
-    public class SetIntersightSdwanVmanageAccountPolicy:SetCmdletBase
-	{
-		public SetIntersightSdwanVmanageAccountPolicy()
-		{
-			ApiInstance = new SdwanApi(Config);
-            ModelObject = new SdwanVmanageAccountPolicy();
-            MethodName = "UpdateSdwanVmanageAccountPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VManage server hostname (FQDN) that the acccount holds information for."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EndpointAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Local password for authenticating with the vManage server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Password {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VManage Port number on which the application is running."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Port {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to sdwanProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<SdwanProfileRelationship> Profiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Local username for authenticating with the vManage server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Username {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SdwanVmanageAccountPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdwanVmanageAccountPolicy")]
-    public class RemoveIntersightSdwanVmanageAccountPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightSdwanVmanageAccountPolicy()
-		{
-			ApiInstance = new SdwanApi(Config);
-            MethodName = "DeleteSdwanVmanageAccountPolicyWithHttpInfo";
-		}
     }
 }

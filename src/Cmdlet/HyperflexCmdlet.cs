@@ -8,28 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterReplicationNetworkPolicyDeployment.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxdpVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterReplicationNetworkPolicyDeployment:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxdpVersion")]
+    public class SetIntersightHyperflexHxdpVersion:SetCmdletBase
 	{
-		public GetIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
+		public SetIntersightHyperflexHxdpVersion()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterReplicationNetworkPolicyDeploymentListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterReplicationNetworkPolicyDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
-    public class NewIntersightHyperflexClusterReplicationNetworkPolicyDeployment:NewCmdletBase
-	{
-		public NewIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterReplicationNetworkPolicyDeployment();
-            MethodName = "CreateHyperflexClusterReplicationNetworkPolicyDeploymentWithHttpInfo";
+            ModelObject = new HyperflexHxdpVersion();
+            MethodName = "PatchHyperflexHxdpVersionWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -41,198 +29,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexClusterRelationship Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Discovered {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexIpAddrRange> ReplicationIpranges {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexStorageContainer.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexStorageContainer", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexStorageContainer:GetCmdletBase
-	{
-		public GetIntersightHyperflexStorageContainer()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexStorageContainerListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapNetwork", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapNetwork:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapNetwork()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapNetworkListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealth.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealth", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHealth:GetCmdletBase
-	{
-		public GetIntersightHyperflexHealth()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHealthListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexNode.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNode", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexNode:GetCmdletBase
-	{
-		public GetIntersightHyperflexNode()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexNodeListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHealthCheckDefinition.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckDefinition")]
-    public class SetIntersightHyperflexHealthCheckDefinition:SetCmdletBase
-	{
-		public SetIntersightHyperflexHealthCheckDefinition()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHealthCheckDefinition();
-            MethodName = "PatchHyperflexHealthCheckDefinitionWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Category that the health check belongs to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Category {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Static information detailing the common causes for the health check failure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string CommonCauses {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Execution configuration fo the health check script."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Configuration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the health check definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexHealthCheckScriptInfo> HealthCheckScriptInfos {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Static information detailing the health impact of the health check failure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HealthImpact {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Internal name of the health check definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string InternalName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Minimum HyperFlex version that the check is supported on. Defaults to version 3.0.1."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string MinimumHyperFlexVersion {
+        public HyperflexAppCatalogRelationship AppCatalog {
             get;
             set;
         }
@@ -246,51 +47,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the health check definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Static information containing additional reference for the health check."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Reference {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Static information detailing the possible remediation actions that can be taken to remedy the health check failure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Resolution {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Execution mode of the health script on the HyperFlex cluster.\n* `ON_DEMAND` - Execute the health check on-demand.\n* `SCHEDULED` - Execute the health check on a scheduled interval."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHealthCheckDefinition.ScriptExecutionModeEnum ScriptExecutionMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates if the script needs to be executed on HyperFlex compute nodes. |\nTypically, scripts are only executed on the storage Nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool ScriptExecutionOnComputeNodes {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -300,68 +56,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates whether the health check is executed only on the leader node, or on all nodes in the HyperFlex cluster.\n* `EXECUTE_ON_LEADER_NODE` - Execute the health check script only on the HyperFlex cluster's leader node.\n* `EXECUTE_ON_ALL_NODES` - Execute health check on all nodes and aggregate the results.\n* `EXECUTE_ON_ALL_NODES_AND_AGGREGATE` - Execute the health check on all Nodes and perform custom aggregation."</para>
+        /// <para type="description">"The HyperFlex Data Platform version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexHealthCheckDefinition.TargetExecutionTypeEnum TargetExecutionType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Health check script execution timeout."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Timeout {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> UnsupportedHyperFlexVersions {
+        public string Version {
             get;
             set;
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHealthCheckDefinition.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxdpVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckDefinition")]
-    public class RemoveIntersightHyperflexHealthCheckDefinition:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxdpVersion")]
+    public class RemoveIntersightHyperflexHxdpVersion:RemoveCmdletBase
 	{
-		public RemoveIntersightHyperflexHealthCheckDefinition()
+		public RemoveIntersightHyperflexHxdpVersion()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexHealthCheckDefinitionWithHttpInfo";
+            MethodName = "DeleteHyperflexHxdpVersionWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionComponent.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexCapabilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionComponent", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexSoftwareDistributionComponent:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCapabilityInfo")]
+    public class SetIntersightHyperflexCapabilityInfo:SetCmdletBase
 	{
-		public GetIntersightHyperflexSoftwareDistributionComponent()
+		public SetIntersightHyperflexCapabilityInfo()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexSoftwareDistributionComponentListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionComponent.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionComponent")]
-    public class NewIntersightHyperflexSoftwareDistributionComponent:NewCmdletBase
-	{
-		public NewIntersightHyperflexSoftwareDistributionComponent()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareDistributionComponent();
-            MethodName = "CreateHyperflexSoftwareDistributionComponentWithHttpInfo";
+            ModelObject = new HyperflexCapabilityInfo();
+            MethodName = "UpdateHyperflexCapabilityInfoWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -373,38 +99,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The bucket name where the files are present, if source is external cloud store."</para>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string BucketName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution Component Identifier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ComponentId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution Component Name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ComponentName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"File location on the cloud storage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FilePath {
+        public HyperflexAppCatalogRelationship AppCatalog {
             get;
             set;
         }
@@ -413,25 +112,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<string> FilesToDownload {
+        public List<HclConstraint> CapabilityConstraints {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a hyperflexSoftwareDistributionVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Name of the capability or feature set consisting of a collection of constraint rules and value."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexSoftwareDistributionVersionRelationship SoftwareDistributionVersion {
+        public string Name {
             get;
             set;
         }
@@ -444,15 +143,18 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution Component Version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexCapabilityInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexCapabilityInfo")]
+    public class RemoveIntersightHyperflexCapabilityInfo:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexCapabilityInfo()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexCapabilityInfoWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexFeatureLimitInternal.</para>
@@ -525,86 +227,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxdpVersion.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexLocalCredentialPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxdpVersion", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxdpVersion:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexLocalCredentialPolicy")]
+    public class SetIntersightHyperflexLocalCredentialPolicy:SetCmdletBase
 	{
-		public GetIntersightHyperflexHxdpVersion()
+		public SetIntersightHyperflexLocalCredentialPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxdpVersionListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexHxdpVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHxdpVersion")]
-    public class NewIntersightHyperflexHxdpVersion:NewCmdletBase
-	{
-		public NewIntersightHyperflexHxdpVersion()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxdpVersion();
-            MethodName = "CreateHyperflexHxdpVersionWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Data Platform version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexUcsmConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexUcsmConfigPolicy")]
-    public class SetIntersightHyperflexUcsmConfigPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexUcsmConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexUcsmConfigPolicy();
-            MethodName = "UpdateHyperflexUcsmConfigPolicyWithHttpInfo";
+            ModelObject = new HyperflexLocalCredentialPolicy();
+            MethodName = "UpdateHyperflexLocalCredentialPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -634,20 +266,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
+        /// <para type="description">"Indicates if Hypervisor password is the factory set default password. For HyperFlex Data Platform versions 3.0 or higher, enable this if the default password was not changed on the Hypervisor. It is required to supply a new custom Hypervisor password that will be applied to the Hypervisor during deployment. For HyperFlex Data Platform versions prior to 3.0 release, this setting has no effect and the default password will be used for initial install. The Hypervisor password should be changed after deployment."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexIpAddrRange KvmIpRange {
+        public bool FactoryHypervisorPassword {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
+        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^&*! special characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexMacAddrPrefixRange MacPrefixRange {
+        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_-]{10,}$")]
+        public string HxdpRootPwd {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Hypervisor administrator username must contain only alphanumeric characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{1,}$")]
+        public string HypervisorAdmin {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The ESXi root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \"Cisco123\" for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^.{7,40}$")]
+        public string HypervisorAdminPwd {
             get;
             set;
         }
@@ -679,15 +329,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The server firmware bundle version used for server components such as CIMC, adapters, BIOS, etc."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("(^3\\.[1-9]\\([1-9][a-z]\\)$|^[4-9]\\.[0-9]\\([1-9][a-z]\\)$)")]
-        public string ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -698,28 +339,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexUcsmConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexLocalCredentialPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexUcsmConfigPolicy")]
-    public class RemoveIntersightHyperflexUcsmConfigPolicy:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexLocalCredentialPolicy")]
+    public class RemoveIntersightHyperflexLocalCredentialPolicy:RemoveCmdletBase
 	{
-		public RemoveIntersightHyperflexUcsmConfigPolicy()
+		public RemoveIntersightHyperflexLocalCredentialPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexUcsmConfigPolicyWithHttpInfo";
+            MethodName = "DeleteHyperflexLocalCredentialPolicyWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionVersion.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionVersion")]
-    public class SetIntersightHyperflexSoftwareDistributionVersion:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckPackageChecksum")]
+    public class SetIntersightHyperflexHealthCheckPackageChecksum:SetCmdletBase
 	{
-		public SetIntersightHyperflexSoftwareDistributionVersion()
+		public SetIntersightHyperflexHealthCheckPackageChecksum()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareDistributionVersion();
-            MethodName = "UpdateHyperflexSoftwareDistributionVersionWithHttpInfo";
+            ModelObject = new HyperflexHealthCheckPackageChecksum();
+            MethodName = "UpdateHyperflexHealthCheckPackageChecksumWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -731,11 +372,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionComponent resources."</para>
+        /// <para type="description">"SHA512 checksum of the health check package."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexSoftwareDistributionComponentRelationship> DistributionComponents {
+        public string Checksum {
             get;
             set;
         }
@@ -749,11 +390,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a hyperflexSoftwareDistributionEntry resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Name of the health check Debian package."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexSoftwareDistributionEntryRelationship SoftwareDistributionEntry {
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"HyperFlex health check Debian package file name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PackageName {
             get;
             set;
         }
@@ -767,7 +417,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution version."</para>
+        /// <para type="description">"Timestamp of last update of HyperFlex health check package checksum."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public DateTime Timestamp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"HyperFlex health check Debian Package Version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -777,158 +436,59 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionVersion.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionVersion")]
-    public class RemoveIntersightHyperflexSoftwareDistributionVersion:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckPackageChecksum")]
+    public class RemoveIntersightHyperflexHealthCheckPackageChecksum:RemoveCmdletBase
 	{
-		public RemoveIntersightHyperflexSoftwareDistributionVersion()
+		public RemoveIntersightHyperflexHealthCheckPackageChecksum()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexSoftwareDistributionVersionWithHttpInfo";
+            MethodName = "DeleteHyperflexHealthCheckPackageChecksumWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmImportOperation.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexVmBackupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmImportOperation")]
-    public class RemoveIntersightHyperflexVmImportOperation:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmBackupInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexVmBackupInfo:GetCmdletBase
 	{
-		public RemoveIntersightHyperflexVmImportOperation()
+		public GetIntersightHyperflexVmBackupInfo()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexVmImportOperationWithHttpInfo";
+            MethodName = "GetHyperflexVmBackupInfoListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexNodeProfile.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexVmRestoreOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeProfile", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexNodeProfile:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmRestoreOperation", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexVmRestoreOperation:GetCmdletBase
 	{
-		public GetIntersightHyperflexNodeProfile()
+		public GetIntersightHyperflexVmRestoreOperation()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexNodeProfileListWithHttpInfo";
+            MethodName = "GetHyperflexVmRestoreOperationListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexNodeProfile.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexVmRestoreOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeProfile")]
-    public class NewIntersightHyperflexNodeProfile:NewCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVmRestoreOperation")]
+    public class NewIntersightHyperflexVmRestoreOperation:NewCmdletBase
 	{
-		public NewIntersightHyperflexNodeProfile()
+		public NewIntersightHyperflexVmRestoreOperation()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexNodeProfile();
-            MethodName = "CreateHyperflexNodeProfileWithHttpInfo";
+            ModelObject = new HyperflexVmRestoreOperation();
+            MethodName = "CreateHyperflexVmRestoreOperationWithHttpInfo";
 		}
-        // <summary>
-        /// <para type="description">"User initiated action. Each profile type has its own supported actions. For HyperFlex cluster profile, the supported actions are -- Validate, Deploy, Continue, Retry, Abort, Unassign For server profile, the support actions are -- Deploy, Unassign."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Action {
-            get;
-            set;
-        }
         // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship AssignedServer {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexClusterProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterProfileRelationship ClusterProfile {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The configuration state and results of the last configuration operation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyConfigContext ConfigContext {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for storage data network (Controller VM interface)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HxdpDataIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for HyperFlex management network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HxdpMgmtIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for storage client network (Controller VM interface)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HxdpStorageClientIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for hypervisor control such as VM migration or pod management."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HypervisorControlIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for storage data network (Hypervisor interface)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HypervisorDataIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for Hypervisor management network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HypervisorMgmtIp {
             get;
             set;
         }
@@ -942,29 +502,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the profile instance or profile template."</para>
+        /// <para type="description">"New name for the Virtual Machine after recovery."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
-        public string Name {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string NewName {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<PolicyAbstractPolicyRelationship> PolicyBucket {
+        public OrganizationOrganizationRelationship Organization {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Power on the Virtual Machine after recovery."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyAbstractProfileRelationship SrcTemplate {
+        public bool PowerOn {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterRelationship RestoreEdgeClusterMoid {
             get;
             set;
         }
@@ -978,14 +547,35 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
+        /// <para type="description">"A reference to a hyperflexVmBackupInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexNodeProfile.TypeEnum Type {
+        public HyperflexVmBackupInfoRelationship VmBackupInfoMoid {
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexVmSnapshotInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexVmSnapshotInfoRelationship VmSnapshotInfoMoid {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapNetwork.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapNetwork", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapNetwork:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxapNetwork()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxapNetworkListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterBackupPolicy.</para>
@@ -1139,394 +729,52 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexBackupCluster.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapVirtualDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexBackupCluster", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexBackupCluster:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapVirtualDisk", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapVirtualDisk:GetCmdletBase
 	{
-		public GetIntersightHyperflexBackupCluster()
+		public GetIntersightHyperflexHxapVirtualDisk()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexBackupClusterListWithHttpInfo";
+            MethodName = "GetHyperflexHxapVirtualDiskListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexCapabilityInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCapabilityInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexCapabilityInfo:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapHost", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapHost:GetCmdletBase
 	{
-		public GetIntersightHyperflexCapabilityInfo()
+		public GetIntersightHyperflexHxapHost()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexCapabilityInfoListWithHttpInfo";
+            MethodName = "GetHyperflexHxapHostListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexCapabilityInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexCapabilityInfo")]
-    public class NewIntersightHyperflexCapabilityInfo:NewCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterStoragePolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterStoragePolicy:GetCmdletBase
 	{
-		public NewIntersightHyperflexCapabilityInfo()
+		public GetIntersightHyperflexClusterStoragePolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexCapabilityInfo();
-            MethodName = "CreateHyperflexCapabilityInfoWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclConstraint> CapabilityConstraints {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the capability or feature set consisting of a collection of constraint rules and value."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexNodeProfile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeProfile")]
-    public class SetIntersightHyperflexNodeProfile:SetCmdletBase
-	{
-		public SetIntersightHyperflexNodeProfile()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexNodeProfile();
-            MethodName = "UpdateHyperflexNodeProfileWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description">"User initiated action. Each profile type has its own supported actions. For HyperFlex cluster profile, the supported actions are -- Validate, Deploy, Continue, Retry, Abort, Unassign For server profile, the support actions are -- Deploy, Unassign."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Action {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputePhysicalRelationship AssignedServer {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexClusterProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterProfileRelationship ClusterProfile {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The configuration state and results of the last configuration operation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyConfigContext ConfigContext {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the profile."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for storage data network (Controller VM interface)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HxdpDataIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for HyperFlex management network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HxdpMgmtIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for storage client network (Controller VM interface)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HxdpStorageClientIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for hypervisor control such as VM migration or pod management."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HypervisorControlIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for storage data network (Hypervisor interface)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HypervisorDataIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IP address for Hypervisor management network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string HypervisorMgmtIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the profile instance or profile template."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<PolicyAbstractPolicyRelationship> PolicyBucket {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyAbstractProfileRelationship SrcTemplate {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNodeProfile.TypeEnum Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexNodeProfile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeProfile")]
-    public class RemoveIntersightHyperflexNodeProfile:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexNodeProfile()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexNodeProfileWithHttpInfo";
+            MethodName = "GetHyperflexClusterStoragePolicyListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexWitnessConfiguration.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexWitnessConfiguration", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexWitnessConfiguration:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterStoragePolicy")]
+    public class NewIntersightHyperflexClusterStoragePolicy:NewCmdletBase
 	{
-		public GetIntersightHyperflexWitnessConfiguration()
+		public NewIntersightHyperflexClusterStoragePolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexWitnessConfigurationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexServerFirmwareVersionEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersionEntry")]
-    public class NewIntersightHyperflexServerFirmwareVersionEntry:NewCmdletBase
-	{
-		public NewIntersightHyperflexServerFirmwareVersionEntry()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexServerFirmwareVersionEntry();
-            MethodName = "CreateHyperflexServerFirmwareVersionEntryWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The conditions that must be satisfied before applying the AppSetting."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppSettingConstraint Constraint {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexServerFirmwareVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexServerFirmwareVersionRelationship ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The server platform type that is applicable for the server firmware bundle version.\n* `M5` - M5 generation of UCS server.\n* `M3` - M3 generation of UCS server.\n* `M4` - M4 generation of UCS server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexServerFirmwareVersionEntry.ServerPlatformEnum ServerPlatform {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The server firmware bundle version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("(^3\\.[1-9]\\([1-9][a-z]\\)$|^[4-9]\\.[0-9]\\([1-9][a-z]\\)$)")]
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexServerFirmwareVersionEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersionEntry", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexServerFirmwareVersionEntry:GetCmdletBase
-	{
-		public GetIntersightHyperflexServerFirmwareVersionEntry()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexServerFirmwareVersionEntryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterNetworkPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterNetworkPolicy")]
-    public class SetIntersightHyperflexClusterNetworkPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexClusterNetworkPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterNetworkPolicy();
-            MethodName = "UpdateHyperflexClusterNetworkPolicyWithHttpInfo";
+            ModelObject = new HyperflexClusterStoragePolicy();
+            MethodName = "CreateHyperflexClusterStoragePolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -1556,831 +804,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enable or disable jumbo frames."</para>
+        /// <para type="description">"If enabled, formats existing disk partitions (destroys all user data)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool JumboFrame {
+        public bool DiskPartitionCleanup {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
+        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexIpAddrRange KvmIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexMacAddrPrefixRange MacPrefixRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The VLAN for the management network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan MgmtVlan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be '1G' or '10G+'. Use '10G+' for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be 'default' only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterNetworkPolicy.UplinkSpeedEnum UplinkSpeed {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The VM migration VLAN.\nThis VLAN is used for transfering VMs from one host to another during operations such a cluster upgrade.\nFor HyperFlex Application Platform clusters, this VLAN is also used for hypervisor control traffic such as\nnode to node communication, pod-to-pod communication, etc."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan VmMigrationVlan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexNamedVlan> VmNetworkVlans {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterNetworkPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterNetworkPolicy")]
-    public class RemoveIntersightHyperflexClusterNetworkPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexClusterNetworkPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexClusterNetworkPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexLocalCredentialPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexLocalCredentialPolicy")]
-    public class SetIntersightHyperflexLocalCredentialPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexLocalCredentialPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexLocalCredentialPolicy();
-            MethodName = "UpdateHyperflexLocalCredentialPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates if Hypervisor password is the factory set default password. For HyperFlex Data Platform versions 3.0 or higher, enable this if the default password was not changed on the Hypervisor. It is required to supply a new custom Hypervisor password that will be applied to the Hypervisor during deployment. For HyperFlex Data Platform versions prior to 3.0 release, this setting has no effect and the default password will be used for initial install. The Hypervisor password should be changed after deployment."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool FactoryHypervisorPassword {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^&*! special characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_-]{10,}$")]
-        public string HxdpRootPwd {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Hypervisor administrator username must contain only alphanumeric characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9]{1,}$")]
-        public string HypervisorAdmin {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The ESXi root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \"Cisco123\" for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^.{7,40}$")]
-        public string HypervisorAdminPwd {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexLocalCredentialPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexLocalCredentialPolicy")]
-    public class RemoveIntersightHyperflexLocalCredentialPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexLocalCredentialPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexLocalCredentialPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexDrive.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDrive", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexDrive:GetCmdletBase
-	{
-		public GetIntersightHyperflexDrive()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexDriveListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexCluster.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCluster")]
-    public class SetIntersightHyperflexCluster:SetCmdletBase
-	{
-		public SetIntersightHyperflexCluster()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexCluster();
-            MethodName = "UpdateHyperflexClusterWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyAbstractProfileRelationship AssociatedProfile {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexBaseCluster resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexBaseClusterRelationship> ChildClusters {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This can be a Storage or Compute cluster. A storage cluster contains storage nodes that are used to persist data. A compute cluster contains compute nodes that are used for executing business logic.\n* `Storage` - Cluster of storage nodes used to persist data.\n* `Compute` - Cluster of compute nodes used to execute business logic.\n* `Unknown` - This cluster type is Unknown. Expect Compute or Storage as valid values."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexCluster.ClusterPurposeEnum ClusterPurpose {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> DnsServers {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexCluster.HypervisorTypeEnum HypervisorType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The capacity and usage information for memory on this cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryCapacity MemoryCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> NtpServers {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexBaseClusterRelationship ParentCluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The capacity and usage information for CPU power on this cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationComputeCapacity ProcessorCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total number of CPU cores in this cluster. It is a cumulative number across all hosts in the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long TotalCores {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapHostVswitch.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapHostVswitch", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapHostVswitch:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapHostVswitch()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapHostVswitchListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexConfigResultEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexConfigResultEntry:GetCmdletBase
-	{
-		public GetIntersightHyperflexConfigResultEntry()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexConfigResultEntryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexServerModel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerModel", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexServerModel:GetCmdletBase
-	{
-		public GetIntersightHyperflexServerModel()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexServerModelListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexServerModel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerModel")]
-    public class NewIntersightHyperflexServerModel:NewCmdletBase
-	{
-		public NewIntersightHyperflexServerModel()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexServerModel();
-            MethodName = "CreateHyperflexServerModelWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexServerModelEntry> ServerModelEntries {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapCluster.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapCluster", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapCluster:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapCluster()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapClusterListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexServerModel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerModel")]
-    public class SetIntersightHyperflexServerModel:SetCmdletBase
-	{
-		public SetIntersightHyperflexServerModel()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexServerModel();
-            MethodName = "UpdateHyperflexServerModelWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexServerModelEntry> ServerModelEntries {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerModel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerModel")]
-    public class RemoveIntersightHyperflexServerModel:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexServerModel()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexServerModelWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexLicense.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLicense", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexLicense:GetCmdletBase
-	{
-		public GetIntersightHyperflexLicense()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexLicenseListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexFeatureLimitInternal.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitInternal")]
-    public class SetIntersightHyperflexFeatureLimitInternal:SetCmdletBase
-	{
-		public SetIntersightHyperflexFeatureLimitInternal()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexFeatureLimitInternal();
-            MethodName = "UpdateHyperflexFeatureLimitInternalWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexFeatureLimitEntry> FeatureLimitEntries {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexFeatureLimitInternal.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitInternal")]
-    public class RemoveIntersightHyperflexFeatureLimitInternal:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexFeatureLimitInternal()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexFeatureLimitInternalWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexNodeConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeConfigPolicy")]
-    public class SetIntersightHyperflexNodeConfigPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexNodeConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexNodeConfigPolicy();
-            MethodName = "UpdateHyperflexNodeConfigPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The range of storage data IPs to be assigned to the nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange DataIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The range of storage management IPs to be assigned to the nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange HxdpIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The range of IPs to be assigned to each hypervisor node for VM migration and hypervior control."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange HypervisorControlIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The range of management IPs to be assigned to the nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange MgmtIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The node name prefix that is used to automatically generate the default hostname for each server.\nA dash (-) will be appended to the prefix followed by the node number to form a hostname.\nThis default naming scheme can be manually overridden in the node configuration.\nThe maximum length of a prefix is 60, must only contain alphanumeric characters or dash (-), and must\nstart with an alphanumeric character."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-]{1,59}$")]
-        public string NodeNamePrefix {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexNodeConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeConfigPolicy")]
-    public class RemoveIntersightHyperflexNodeConfigPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexNodeConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexNodeConfigPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexProxySettingPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexProxySettingPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexProxySettingPolicy:GetCmdletBase
-	{
-		public GetIntersightHyperflexProxySettingPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexProxySettingPolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexProxySettingPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexProxySettingPolicy")]
-    public class NewIntersightHyperflexProxySettingPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexProxySettingPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexProxySettingPolicy();
-            MethodName = "CreateHyperflexProxySettingPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HTTP Proxy server FQDN or IP."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string Hostname {
+        public HyperflexLogicalAvailabilityZone LogicalAvalabilityZoneConfig {
             get;
             set;
         }
@@ -2412,24 +849,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The password for the HTTP Proxy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Password {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HTTP Proxy port number.\nThe port number of the HTTP proxy must be between 1 and 65535, inclusive."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 65535)]
-        public long Port {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -2439,178 +858,14 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The username for the HTTP Proxy."</para>
+        /// <para type="description">"Enable or disable VDI optimization (hybrid HyperFlex systems only)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Username {
+        public bool VdiOptimization {
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapVirtualMachineNetworkInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapVirtualMachineNetworkInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapVirtualMachineNetworkInterface:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapVirtualMachineNetworkInterface()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapVirtualMachineNetworkInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexCapabilityInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCapabilityInfo")]
-    public class SetIntersightHyperflexCapabilityInfo:SetCmdletBase
-	{
-		public SetIntersightHyperflexCapabilityInfo()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexCapabilityInfo();
-            MethodName = "UpdateHyperflexCapabilityInfoWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclConstraint> CapabilityConstraints {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the capability or feature set consisting of a collection of constraint rules and value."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexCapabilityInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexCapabilityInfo")]
-    public class RemoveIntersightHyperflexCapabilityInfo:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexCapabilityInfo()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexCapabilityInfoWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexCluster.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCluster", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexCluster:GetCmdletBase
-	{
-		public GetIntersightHyperflexCluster()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapDatacenter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapDatacenter")]
-    public class SetIntersightHyperflexHxapDatacenter:SetCmdletBase
-	{
-		public SetIntersightHyperflexHxapDatacenter()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxapDatacenter();
-            MethodName = "UpdateHyperflexHxapDatacenterWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxapDatacenter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxapDatacenter")]
-    public class RemoveIntersightHyperflexHxapDatacenter:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexHxapDatacenter()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexHxapDatacenterWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckDefinition.</para>
@@ -2809,40 +1064,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexAlarm.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckExecutionSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAlarm", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexAlarm:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHealthCheckExecutionSnapshot:GetCmdletBase
 	{
-		public GetIntersightHyperflexAlarm()
+		public GetIntersightHyperflexHealthCheckExecutionSnapshot()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexAlarmListWithHttpInfo";
+            MethodName = "GetHyperflexHealthCheckExecutionSnapshotListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareVersionPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterReplicationNetworkPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareVersionPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexSoftwareVersionPolicy:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
+    public class SetIntersightHyperflexClusterReplicationNetworkPolicyDeployment:SetCmdletBase
 	{
-		public GetIntersightHyperflexSoftwareVersionPolicy()
+		public SetIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexSoftwareVersionPolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareVersionPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareVersionPolicy")]
-    public class NewIntersightHyperflexSoftwareVersionPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexSoftwareVersionPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareVersionPolicy();
-            MethodName = "CreateHyperflexSoftwareVersionPolicyWithHttpInfo";
+            ModelObject = new HyperflexClusterReplicationNetworkPolicyDeployment();
+            MethodName = "UpdateHyperflexClusterReplicationNetworkPolicyDeploymentWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -2854,135 +1097,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+        public HyperflexClusterRelationship Cluster {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desired HyperFlex Data Platform software version to apply on the HyperFlex cluster."</para>
+        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string HxdpVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desired  hypervisor version to apply for all the nodes on the HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HypervisorVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desired server firmware version to apply on the HyperFlex Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|(^3\\.[0-9]\\([1-9][a-z]\\)$|^[4-9]\\.[1-9]\\([1-9][a-z]\\)$|^4\\.0\\([1-3][a-z]\\)$|^4\\.0\\(4[d-z]\\)$|4\\.0\\([5-9][a-z]\\)$)")]
-        public string ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexServerFirmwareVersionInfo> ServerFirmwareVersions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> UpgradeTypes {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexConfigResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResult", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexConfigResult:GetCmdletBase
-	{
-		public GetIntersightHyperflexConfigResult()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexConfigResultListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexCiscoHypervisorManager.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCiscoHypervisorManager")]
-    public class SetIntersightHyperflexCiscoHypervisorManager:SetCmdletBase
-	{
-		public SetIntersightHyperflexCiscoHypervisorManager()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexCiscoHypervisorManager();
-            MethodName = "PatchHyperflexCiscoHypervisorManagerWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
+        public bool Discovered {
             get;
             set;
         }
@@ -2996,20 +1124,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The user provided name for the hypervisor manager. For example, vCenterIreland. Usually, this name is subject to manipulation by the user. It is not the identity of the hypervisor."</para>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9]+[\\sa-zA-Z0-9_-]{1,32}$")]
-        public string Name {
+        
+        public OrganizationOrganizationRelationship Organization {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
+        public List<HyperflexIpAddrRange> ReplicationIpranges {
             get;
             set;
         }
@@ -3024,16 +1152,281 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapVirtualDisk.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterReplicationNetworkPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapVirtualDisk", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapVirtualDisk:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
+    public class RemoveIntersightHyperflexClusterReplicationNetworkPolicyDeployment:RemoveCmdletBase
 	{
-		public GetIntersightHyperflexHxapVirtualDisk()
+		public RemoveIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapVirtualDiskListWithHttpInfo";
+            MethodName = "DeleteHyperflexClusterReplicationNetworkPolicyDeploymentWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapVirtualMachine.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapVirtualMachine")]
+    public class SetIntersightHyperflexHxapVirtualMachine:SetCmdletBase
+	{
+		public SetIntersightHyperflexHxapVirtualMachine()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHxapVirtualMachine();
+            MethodName = "UpdateHyperflexHxapVirtualMachineWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InfraMetaData> AffinitySelectors {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Denotes age or life time of the VM in nano seconds."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Age {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InfraMetaData> AntiAffinitySelectors {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Time when this VM booted up."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public DateTime BootTime {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Provisioned CPU and memory information for this virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public InfraHardwareInfo Capacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexVmDisk> Disks {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Reason of the failure when VM is in failed state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FailureReason {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Guest operating system details running on this machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationGuestInfo GuestInfo {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapVirtualMachine.HypervisorTypeEnum HypervisorType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of this VM. This entity is not manipulated by users. It aids in uniquely identifying the virtual machine object. For VMware, this is MOR (managed object reference)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Identity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexVmInterface> Interfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> IpAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InfraMetaData> Labels {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The capacity and usage information for memory on this virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationMemoryCapacity MemoryCapacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User-provided name to identify the virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number network interfaces associated with the virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NetworkCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Power state of the virtual machine.\n* `Unknown` - The entity's power state is unknown.\n* `PoweringOn` - The entity is powering on.\n* `PoweredOn` - The entity is powered on.\n* `PoweringOff` - The entity is powering off.\n* `PoweredOff` - The entity is powered down.\n* `StandBy` - The entity is in standby mode.\n* `Paused` - The entity is in pause state.\n* `Rebooting` - The entity reboot is in progress.\n* `` - The entity's power state is not available."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapVirtualMachine.PowerStateEnum PowerState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The capacity and usage information for CPU power on this virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationComputeCapacity ProcessorCapacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapVirtualMachine.ProviderEnum Provider {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Denotes the VM start timestamp."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StartTime {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The current state of the virtual machine. For example, starting, stopped, etc.\n* `None` - A place holder for the default value.\n* `Creating` - Virtual machine creation is in progress.\n* `Pending` - The virtual machine is preparing to enter the started state.\n* `Starting` - The virtual machine is starting.\n* `Started` - The virtual machine is running and ready for use.\n* `Stopping` - The virtual machine is preparing to be stopped.\n* `Stopped` - The virtual machine is shut down and cannot be used. The virtual machine can be started again at any time.\n* `Pausing` - The virtual machine is preparing to be paused.\n* `Paused` - The virtual machine enters into paused state due to low free disk space.\n* `Suspending` - The virtual machine is preparing to be suspended.\n* `Suspended` - Virtual machine is in sleep mode.When a virtual machine is suspended, the current state of theoperating system, and applications is saved, and the virtual machine put into a suspended mode.\n* `Deleting` - The virtual machine is preparing to be terminated.\n* `Terminated` - The virtual machine has been permanently deleted and cannot be started.\n* `Rebooting` - The virtual machine reboot is in progress.\n* `Error` - The deployment of virtual machine is failed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapVirtualMachine.StateEnum State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Status of virtual machine.\n* `Unknown` - Virtual machine state is not available.\n* `Running` - Virtual machine is running normally.\n* `Stopped` - Virtual machine has been stopped.\n* `WaitForLaunch` - Virtual machine is wating to be launched.\n* `Paused` - Virtual machine is currently paused.\n* `ImportInProgress` - Virtual machine image is being imported into the platform.\n* `ImportFailed` - Virtual machine image import operation failed.\n* `DiskCloneInProgress` - Disk clone operation for the virtual machine is in progress.\n* `DiskCloneFailed` - Disk clone operation for the virtual machine failed.\n* `Processing` - Virtual machine is being created.\n* `UnSchedulable` - Virtual machine cannot be scheduled to run, either due to insufficient resources or failure to match affinity specifications.\n* `Failed` - Some virtual machine operation has failed. More information is available as part of the results of the operation.\n* `` - Virtual machine status is not available."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapVirtualMachine.StatusEnum Status {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The uuid of this virtual machine. The uuid is internally generated and not user specified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
+        public string Uuid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Time when this virtualmachine is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public DateTime VmCreationTime {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexSysConfigPolicy.</para>
@@ -3160,6 +1553,399 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapHostVswitch.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapHostVswitch", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapHostVswitch:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxapHostVswitch()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxapHostVswitchListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmRestoreOperation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmRestoreOperation")]
+    public class RemoveIntersightHyperflexVmRestoreOperation:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexVmRestoreOperation()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexVmRestoreOperationWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexServerModel.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerModel")]
+    public class SetIntersightHyperflexServerModel:SetCmdletBase
+	{
+		public SetIntersightHyperflexServerModel()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexServerModel();
+            MethodName = "UpdateHyperflexServerModelWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexServerModelEntry> ServerModelEntries {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerModel.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerModel")]
+    public class RemoveIntersightHyperflexServerModel:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexServerModel()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexServerModelWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealth.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealth", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHealth:GetCmdletBase
+	{
+		public GetIntersightHyperflexHealth()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHealthListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexVmSnapshotInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmSnapshotInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexVmSnapshotInfo:GetCmdletBase
+	{
+		public GetIntersightHyperflexVmSnapshotInfo()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexVmSnapshotInfoListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterReplicationNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicy")]
+    public class SetIntersightHyperflexClusterReplicationNetworkPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexClusterReplicationNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterReplicationNetworkPolicy();
+            MethodName = "UpdateHyperflexClusterReplicationNetworkPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Bandwidth for the Replication network in Mbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ReplicationBandwidthMbps {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexIpAddrRange> ReplicationIpranges {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MTU for the Replication network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1024, 1500)]
+        public long ReplicationMtu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN for the Replication network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan ReplicationVlan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterReplicationNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicy")]
+    public class RemoveIntersightHyperflexClusterReplicationNetworkPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexClusterReplicationNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexClusterReplicationNetworkPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicy")]
+    public class SetIntersightHyperflexClusterBackupPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexClusterBackupPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterBackupPolicy();
+            MethodName = "PatchHyperflexClusterBackupPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Backup datastore name prefix used during the auto creation of the datastore. All VMs created in this datastore will be automatically backed up."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string BackupDataStoreName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Replication data store size in backupDataStoreSizeUnit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long BackupDataStoreSize {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Replication data store size."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string BackupDataStoreSizeUnit {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterRelationship BackupTarget {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Replication cluster pairing name prefix."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ReplicationPairNamePrefix {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Backup policy replication schedule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexReplicationSchedule ReplicationSchedule {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of snapshots that will be retained as part of the Multi Point in Time support."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 30)]
+        public long SnapshotRetentionCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicy")]
+    public class RemoveIntersightHyperflexClusterBackupPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexClusterBackupPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexClusterBackupPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexLocalCredentialPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLocalCredentialPolicy", DefaultParameterSetName = "CmdletParam")]
@@ -3284,28 +2070,2278 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmRestoreOperation.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionComponent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmRestoreOperation")]
-    public class RemoveIntersightHyperflexVmRestoreOperation:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionComponent")]
+    public class SetIntersightHyperflexSoftwareDistributionComponent:SetCmdletBase
 	{
-		public RemoveIntersightHyperflexVmRestoreOperation()
+		public SetIntersightHyperflexSoftwareDistributionComponent()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexVmRestoreOperationWithHttpInfo";
+            ModelObject = new HyperflexSoftwareDistributionComponent();
+            MethodName = "UpdateHyperflexSoftwareDistributionComponentWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The bucket name where the files are present, if source is external cloud store."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string BucketName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution Component Identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ComponentId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution Component Name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ComponentName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"File location on the cloud storage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FilePath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> FilesToDownload {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexSoftwareDistributionVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexSoftwareDistributionVersionRelationship SoftwareDistributionVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution Component Version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionComponent.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionComponent")]
+    public class RemoveIntersightHyperflexSoftwareDistributionComponent:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexSoftwareDistributionComponent()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexSoftwareDistributionComponentWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexDevicePackageDownloadState.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDevicePackageDownloadState", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexDevicePackageDownloadState:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexConfigResultEntry:GetCmdletBase
 	{
-		public GetIntersightHyperflexDevicePackageDownloadState()
+		public GetIntersightHyperflexConfigResultEntry()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexDevicePackageDownloadStateListWithHttpInfo";
+            MethodName = "GetHyperflexConfigResultEntryListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxapVirtualMachineNetworkInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxapVirtualMachineNetworkInterface")]
+    public class RemoveIntersightHyperflexHxapVirtualMachineNetworkInterface:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexHxapVirtualMachineNetworkInterface()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexHxapVirtualMachineNetworkInterfaceWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapDvUplink.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapDvUplink", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapDvUplink:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxapDvUplink()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxapDvUplinkListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexVcenterConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVcenterConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexVcenterConfigPolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexVcenterConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexVcenterConfigPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexVcenterConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVcenterConfigPolicy")]
+    public class NewIntersightHyperflexVcenterConfigPolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexVcenterConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexVcenterConfigPolicy();
+            MethodName = "CreateHyperflexVcenterConfigPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vCenter datacenter name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9~!@#$%&*()-_][a-zA-Z0-9~!@#$%&* ()-_]{0,79}$")]
+        public string DataCenter {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vCenter server FQDN or IP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Hostname {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password for authenticating with vCenter. Follow the corresponding password policy governed by vCenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Overrides the default vCenter Single Sign-On URL. Do not specify unless instructed by Cisco TAC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SsoUrl {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vCenter username (e.g. administrator@vsphere.local)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)$")]
+        public string Username {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexServerFirmwareVersionEntry.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersionEntry")]
+    public class NewIntersightHyperflexServerFirmwareVersionEntry:NewCmdletBase
+	{
+		public NewIntersightHyperflexServerFirmwareVersionEntry()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexServerFirmwareVersionEntry();
+            MethodName = "CreateHyperflexServerFirmwareVersionEntryWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The conditions that must be satisfied before applying the AppSetting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppSettingConstraint Constraint {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexServerFirmwareVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexServerFirmwareVersionRelationship ServerFirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The server platform type that is applicable for the server firmware bundle version.\n* `M5` - M5 generation of UCS server.\n* `M3` - M3 generation of UCS server.\n* `M4` - M4 generation of UCS server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexServerFirmwareVersionEntry.ServerPlatformEnum ServerPlatform {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The server firmware bundle version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("(^3\\.[1-9]\\([1-9][a-z]\\)$|^[4-9]\\.[0-9]\\([1-9][a-z]\\)$)")]
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexServerFirmwareVersionEntry.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersionEntry", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexServerFirmwareVersionEntry:GetCmdletBase
+	{
+		public GetIntersightHyperflexServerFirmwareVersionEntry()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexServerFirmwareVersionEntryListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexDataProtectionPeer.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDataProtectionPeer", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexDataProtectionPeer:GetCmdletBase
+	{
+		public GetIntersightHyperflexDataProtectionPeer()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexDataProtectionPeerListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareVersionPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareVersionPolicy")]
+    public class SetIntersightHyperflexSoftwareVersionPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexSoftwareVersionPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexSoftwareVersionPolicy();
+            MethodName = "UpdateHyperflexSoftwareVersionPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired HyperFlex Data Platform software version to apply on the HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HxdpVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired  hypervisor version to apply for all the nodes on the HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HypervisorVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired server firmware version to apply on the HyperFlex Cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|(^3\\.[0-9]\\([1-9][a-z]\\)$|^[4-9]\\.[1-9]\\([1-9][a-z]\\)$|^4\\.0\\([1-3][a-z]\\)$|^4\\.0\\(4[d-z]\\)$|4\\.0\\([5-9][a-z]\\)$)")]
+        public string ServerFirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexServerFirmwareVersionInfo> ServerFirmwareVersions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> UpgradeTypes {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareVersionPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareVersionPolicy")]
+    public class RemoveIntersightHyperflexSoftwareVersionPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexSoftwareVersionPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexSoftwareVersionPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexNode.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNode", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexNode:GetCmdletBase
+	{
+		public GetIntersightHyperflexNode()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexNodeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexLicense.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLicense", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexLicense:GetCmdletBase
+	{
+		public GetIntersightHyperflexLicense()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexLicenseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexExtFcStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtFcStoragePolicy")]
+    public class SetIntersightHyperflexExtFcStoragePolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexExtFcStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexExtFcStoragePolicy();
+            MethodName = "UpdateHyperflexExtFcStoragePolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or disables external FC storage configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VSAN for the primary Fabric Interconnect external FC storage traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVsan ExtaTraffic {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VSAN for the secondary Fabric Interconnect external FC storage traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVsan ExtbTraffic {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of WWxN addresses to use for the FC storage configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexWwxnPrefixRange WwxnPrefixRange {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexExtFcStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtFcStoragePolicy")]
+    public class RemoveIntersightHyperflexExtFcStoragePolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexExtFcStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexExtFcStoragePolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexProxySettingPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexProxySettingPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexProxySettingPolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexProxySettingPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexProxySettingPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexProxySettingPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexProxySettingPolicy")]
+    public class NewIntersightHyperflexProxySettingPolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexProxySettingPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexProxySettingPolicy();
+            MethodName = "CreateHyperflexProxySettingPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"HTTP Proxy server FQDN or IP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Hostname {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password for the HTTP Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HTTP Proxy port number.\nThe port number of the HTTP proxy must be between 1 and 65535, inclusive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 65535)]
+        public long Port {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The username for the HTTP Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Username {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterReplicationNetworkPolicyDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterReplicationNetworkPolicyDeployment:GetCmdletBase
+	{
+		public GetIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexClusterReplicationNetworkPolicyDeploymentListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterReplicationNetworkPolicyDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
+    public class NewIntersightHyperflexClusterReplicationNetworkPolicyDeployment:NewCmdletBase
+	{
+		public NewIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterReplicationNetworkPolicyDeployment();
+            MethodName = "CreateHyperflexClusterReplicationNetworkPolicyDeploymentWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterRelationship Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Discovered {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexIpAddrRange> ReplicationIpranges {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexNodeConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexNodeConfigPolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexNodeConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexNodeConfigPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexNodeConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeConfigPolicy")]
+    public class NewIntersightHyperflexNodeConfigPolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexNodeConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexNodeConfigPolicy();
+            MethodName = "CreateHyperflexNodeConfigPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of storage data IPs to be assigned to the nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange DataIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of storage management IPs to be assigned to the nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange HxdpIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of IPs to be assigned to each hypervisor node for VM migration and hypervior control."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange HypervisorControlIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of management IPs to be assigned to the nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange MgmtIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The node name prefix that is used to automatically generate the default hostname for each server.\nA dash (-) will be appended to the prefix followed by the node number to form a hostname.\nThis default naming scheme can be manually overridden in the node configuration.\nThe maximum length of a prefix is 60, must only contain alphanumeric characters or dash (-), and must\nstart with an alphanumeric character."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-]{1,59}$")]
+        public string NodeNamePrefix {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexProxySettingPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexProxySettingPolicy")]
+    public class SetIntersightHyperflexProxySettingPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexProxySettingPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexProxySettingPolicy();
+            MethodName = "UpdateHyperflexProxySettingPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"HTTP Proxy server FQDN or IP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Hostname {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password for the HTTP Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HTTP Proxy port number.\nThe port number of the HTTP proxy must be between 1 and 65535, inclusive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 65535)]
+        public long Port {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The username for the HTTP Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Username {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexProxySettingPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexProxySettingPolicy")]
+    public class RemoveIntersightHyperflexProxySettingPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexProxySettingPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexProxySettingPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexAppCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAppCatalog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexAppCatalog:GetCmdletBase
+	{
+		public GetIntersightHyperflexAppCatalog()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexAppCatalogListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexAppCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAppCatalog")]
+    public class NewIntersightHyperflexAppCatalog:NewCmdletBase
+	{
+		public NewIntersightHyperflexAppCatalog()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexAppCatalog();
+            MethodName = "CreateHyperflexAppCatalogWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexFeatureLimitExternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexFeatureLimitExternalRelationship FeatureLimitExternal {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexFeatureLimitInternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexFeatureLimitInternalRelationship FeatureLimitInternal {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexHxdpVersion resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexHxdpVersionRelationship> HxdpVersions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexCapabilityInfo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexCapabilityInfoRelationship> HyperflexCapabilityInfos {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hclHyperflexSoftwareCompatibilityInfo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HclHyperflexSoftwareCompatibilityInfoRelationship> HyperflexSoftwareCompatibilityInfos {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexServerFirmwareVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexServerFirmwareVersionRelationship ServerFirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexServerModel resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexServerModelRelationship ServerModel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionEntry resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexSoftwareDistributionEntryRelationship> SoftwareDistributions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The catalog version used in HyperFlex cluster configuration service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexAutoSupportPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAutoSupportPolicy")]
+    public class SetIntersightHyperflexAutoSupportPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexAutoSupportPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexAutoSupportPolicy();
+            MethodName = "UpdateHyperflexAutoSupportPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable Auto-Support."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The recipient email address for support tickets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
+        public string ServiceTicketReceipient {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexAutoSupportPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAutoSupportPolicy")]
+    public class RemoveIntersightHyperflexAutoSupportPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexAutoSupportPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexAutoSupportPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexConfigResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResult", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexConfigResult:GetCmdletBase
+	{
+		public GetIntersightHyperflexConfigResult()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexConfigResultListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexServerFirmwareVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersion")]
+    public class SetIntersightHyperflexServerFirmwareVersion:SetCmdletBase
+	{
+		public SetIntersightHyperflexServerFirmwareVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexServerFirmwareVersion();
+            MethodName = "PatchHyperflexServerFirmwareVersionWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexServerFirmwareVersionEntry resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexServerFirmwareVersionEntryRelationship> ServerFirmwareVersionEntries {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerFirmwareVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerFirmwareVersion")]
+    public class RemoveIntersightHyperflexServerFirmwareVersion:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexServerFirmwareVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexServerFirmwareVersionWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmImportOperation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmImportOperation")]
+    public class RemoveIntersightHyperflexVmImportOperation:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexVmImportOperation()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexVmImportOperationWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexAppCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAppCatalog")]
+    public class SetIntersightHyperflexAppCatalog:SetCmdletBase
+	{
+		public SetIntersightHyperflexAppCatalog()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexAppCatalog();
+            MethodName = "UpdateHyperflexAppCatalogWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexFeatureLimitExternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexFeatureLimitExternalRelationship FeatureLimitExternal {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexFeatureLimitInternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexFeatureLimitInternalRelationship FeatureLimitInternal {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexHxdpVersion resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexHxdpVersionRelationship> HxdpVersions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexCapabilityInfo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexCapabilityInfoRelationship> HyperflexCapabilityInfos {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hclHyperflexSoftwareCompatibilityInfo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HclHyperflexSoftwareCompatibilityInfoRelationship> HyperflexSoftwareCompatibilityInfos {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexServerFirmwareVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexServerFirmwareVersionRelationship ServerFirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexServerModel resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexServerModelRelationship ServerModel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionEntry resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexSoftwareDistributionEntryRelationship> SoftwareDistributions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The catalog version used in HyperFlex cluster configuration service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexAppCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAppCatalog")]
+    public class RemoveIntersightHyperflexAppCatalog:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexAppCatalog()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexAppCatalogWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexUcsmConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexUcsmConfigPolicy")]
+    public class SetIntersightHyperflexUcsmConfigPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexUcsmConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexUcsmConfigPolicy();
+            MethodName = "UpdateHyperflexUcsmConfigPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange KvmIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexMacAddrPrefixRange MacPrefixRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The server firmware bundle version used for server components such as CIMC, adapters, BIOS, etc."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("(^3\\.[1-9]\\([1-9][a-z]\\)$|^[4-9]\\.[0-9]\\([1-9][a-z]\\)$)")]
+        public string ServerFirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexUcsmConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexUcsmConfigPolicy")]
+    public class RemoveIntersightHyperflexUcsmConfigPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexUcsmConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexUcsmConfigPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterStoragePolicy")]
+    public class SetIntersightHyperflexClusterStoragePolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexClusterStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterStoragePolicy();
+            MethodName = "UpdateHyperflexClusterStoragePolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If enabled, formats existing disk partitions (destroys all user data)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool DiskPartitionCleanup {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexLogicalAvailabilityZone LogicalAvalabilityZoneConfig {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable VDI optimization (hybrid HyperFlex systems only)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool VdiOptimization {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterStoragePolicy")]
+    public class RemoveIntersightHyperflexClusterStoragePolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexClusterStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexClusterStoragePolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHealthCheckDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckDefinition")]
+    public class SetIntersightHyperflexHealthCheckDefinition:SetCmdletBase
+	{
+		public SetIntersightHyperflexHealthCheckDefinition()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHealthCheckDefinition();
+            MethodName = "UpdateHyperflexHealthCheckDefinitionWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Category that the health check belongs to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Category {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Static information detailing the common causes for the health check failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string CommonCauses {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Execution configuration fo the health check script."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Configuration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the health check definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexHealthCheckScriptInfo> HealthCheckScriptInfos {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Static information detailing the health impact of the health check failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HealthImpact {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Internal name of the health check definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string InternalName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Minimum HyperFlex version that the check is supported on. Defaults to version 3.0.1."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string MinimumHyperFlexVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the health check definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Static information containing additional reference for the health check."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Reference {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Static information detailing the possible remediation actions that can be taken to remedy the health check failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Resolution {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Execution mode of the health script on the HyperFlex cluster.\n* `ON_DEMAND` - Execute the health check on-demand.\n* `SCHEDULED` - Execute the health check on a scheduled interval."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHealthCheckDefinition.ScriptExecutionModeEnum ScriptExecutionMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the script needs to be executed on HyperFlex compute nodes. |\nTypically, scripts are only executed on the storage Nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ScriptExecutionOnComputeNodes {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates whether the health check is executed only on the leader node, or on all nodes in the HyperFlex cluster.\n* `EXECUTE_ON_LEADER_NODE` - Execute the health check script only on the HyperFlex cluster's leader node.\n* `EXECUTE_ON_ALL_NODES` - Execute health check on all nodes and aggregate the results.\n* `EXECUTE_ON_ALL_NODES_AND_AGGREGATE` - Execute the health check on all Nodes and perform custom aggregation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHealthCheckDefinition.TargetExecutionTypeEnum TargetExecutionType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Health check script execution timeout."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Timeout {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> UnsupportedHyperFlexVersions {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHealthCheckDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckDefinition")]
+    public class RemoveIntersightHyperflexHealthCheckDefinition:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexHealthCheckDefinition()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexHealthCheckDefinitionWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexNodeConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeConfigPolicy")]
+    public class SetIntersightHyperflexNodeConfigPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexNodeConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexNodeConfigPolicy();
+            MethodName = "UpdateHyperflexNodeConfigPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of storage data IPs to be assigned to the nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange DataIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of storage management IPs to be assigned to the nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange HxdpIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of IPs to be assigned to each hypervisor node for VM migration and hypervior control."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange HypervisorControlIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The range of management IPs to be assigned to the nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange MgmtIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The node name prefix that is used to automatically generate the default hostname for each server.\nA dash (-) will be appended to the prefix followed by the node number to form a hostname.\nThis default naming scheme can be manually overridden in the node configuration.\nThe maximum length of a prefix is 60, must only contain alphanumeric characters or dash (-), and must\nstart with an alphanumeric character."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-]{1,59}$")]
+        public string NodeNamePrefix {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexNodeConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeConfigPolicy")]
+    public class RemoveIntersightHyperflexNodeConfigPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexNodeConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexNodeConfigPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexExtIscsiStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexExtIscsiStoragePolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexExtIscsiStoragePolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexExtIscsiStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexExtIscsiStoragePolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexExtIscsiStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexExtIscsiStoragePolicy")]
+    public class NewIntersightHyperflexExtIscsiStoragePolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexExtIscsiStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexExtIscsiStoragePolicy();
+            MethodName = "CreateHyperflexExtIscsiStoragePolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN for the primary Fabric Interconnect external FCoE storage traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan ExtaTraffic {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN for the secondary Fabric Interconnect external FCoE storage traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan ExtbTraffic {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapVirtualMachine.</para>
@@ -3320,28 +4356,507 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexServerFirmwareVersion.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersion", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexServerFirmwareVersion:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionEntry", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexSoftwareDistributionEntry:GetCmdletBase
 	{
-		public GetIntersightHyperflexServerFirmwareVersion()
+		public GetIntersightHyperflexSoftwareDistributionEntry()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexServerFirmwareVersionListWithHttpInfo";
+            MethodName = "GetHyperflexSoftwareDistributionEntryListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexServerFirmwareVersion.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersion")]
-    public class NewIntersightHyperflexServerFirmwareVersion:NewCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionEntry")]
+    public class NewIntersightHyperflexSoftwareDistributionEntry:NewCmdletBase
 	{
-		public NewIntersightHyperflexServerFirmwareVersion()
+		public NewIntersightHyperflexSoftwareDistributionEntry()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexServerFirmwareVersion();
-            MethodName = "CreateHyperflexServerFirmwareVersionWithHttpInfo";
+            ModelObject = new HyperflexSoftwareDistributionEntry();
+            MethodName = "CreateHyperflexSoftwareDistributionEntryWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DistributionType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionVersion resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexSoftwareDistributionVersionRelationship> DistributionVersions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexDrive.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDrive", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexDrive:GetCmdletBase
+	{
+		public GetIntersightHyperflexDrive()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexDriveListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionComponent.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionComponent", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexSoftwareDistributionComponent:GetCmdletBase
+	{
+		public GetIntersightHyperflexSoftwareDistributionComponent()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexSoftwareDistributionComponentListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionComponent.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionComponent")]
+    public class NewIntersightHyperflexSoftwareDistributionComponent:NewCmdletBase
+	{
+		public NewIntersightHyperflexSoftwareDistributionComponent()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexSoftwareDistributionComponent();
+            MethodName = "CreateHyperflexSoftwareDistributionComponentWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The bucket name where the files are present, if source is external cloud store."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string BucketName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution Component Identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ComponentId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution Component Name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ComponentName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"File location on the cloud storage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FilePath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> FilesToDownload {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexSoftwareDistributionVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexSoftwareDistributionVersionRelationship SoftwareDistributionVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution Component Version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterNetworkPolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexClusterNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexClusterNetworkPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterNetworkPolicy")]
+    public class NewIntersightHyperflexClusterNetworkPolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexClusterNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterNetworkPolicy();
+            MethodName = "CreateHyperflexClusterNetworkPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable jumbo frames."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool JumboFrame {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange KvmIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexMacAddrPrefixRange MacPrefixRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The VLAN for the management network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan MgmtVlan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be '1G' or '10G+'. Use '10G+' for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be 'default' only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterNetworkPolicy.UplinkSpeedEnum UplinkSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The VM migration VLAN.\nThis VLAN is used for transfering VMs from one host to another during operations such a cluster upgrade.\nFor HyperFlex Application Platform clusters, this VLAN is also used for hypervisor control traffic such as\nnode to node communication, pod-to-pod communication, etc."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan VmMigrationVlan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexNamedVlan> VmNetworkVlans {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapDatacenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapDatacenter")]
+    public class SetIntersightHyperflexHxapDatacenter:SetCmdletBase
+	{
+		public SetIntersightHyperflexHxapDatacenter()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHxapDatacenter();
+            MethodName = "PatchHyperflexHxapDatacenterWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxapDatacenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxapDatacenter")]
+    public class RemoveIntersightHyperflexHxapDatacenter:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexHxapDatacenter()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexHxapDatacenterWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapDatacenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapDatacenter", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapDatacenter:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxapDatacenter()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxapDatacenterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexHxapDatacenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHxapDatacenter")]
+    public class NewIntersightHyperflexHxapDatacenter:NewCmdletBase
+	{
+		public NewIntersightHyperflexHxapDatacenter()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHxapDatacenter();
+            MethodName = "CreateHyperflexHxapDatacenterWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxdpVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxdpVersion", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxdpVersion:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxdpVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxdpVersionListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexHxdpVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHxdpVersion")]
+    public class NewIntersightHyperflexHxdpVersion:NewCmdletBase
+	{
+		public NewIntersightHyperflexHxdpVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHxdpVersion();
+            MethodName = "CreateHyperflexHxdpVersionWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -3371,11 +4886,123 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexServerFirmwareVersionEntry resources."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexServerFirmwareVersionEntryRelationship> ServerFirmwareVersionEntries {
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Data Platform version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexVcenterConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexVcenterConfigPolicy")]
+    public class SetIntersightHyperflexVcenterConfigPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexVcenterConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexVcenterConfigPolicy();
+            MethodName = "UpdateHyperflexVcenterConfigPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vCenter datacenter name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9~!@#$%&*()-_][a-zA-Z0-9~!@#$%&* ()-_]{0,79}$")]
+        public string DataCenter {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vCenter server FQDN or IP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Hostname {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password for authenticating with vCenter. Follow the corresponding password policy governed by vCenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Overrides the default vCenter Single Sign-On URL. Do not specify unless instructed by Cisco TAC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SsoUrl {
             get;
             set;
         }
@@ -3388,6 +5015,27 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The vCenter username (e.g. administrator@vsphere.local)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)$")]
+        public string Username {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexVcenterConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVcenterConfigPolicy")]
+    public class RemoveIntersightHyperflexVcenterConfigPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexVcenterConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexVcenterConfigPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterProfile.</para>
@@ -3793,310 +5441,28 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexVmSnapshotInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexUcsmConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmSnapshotInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexVmSnapshotInfo:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexUcsmConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexUcsmConfigPolicy:GetCmdletBase
 	{
-		public GetIntersightHyperflexVmSnapshotInfo()
+		public GetIntersightHyperflexUcsmConfigPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexVmSnapshotInfoListWithHttpInfo";
+            MethodName = "GetHyperflexUcsmConfigPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexAppCatalog.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexUcsmConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAppCatalog")]
-    public class SetIntersightHyperflexAppCatalog:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexUcsmConfigPolicy")]
+    public class NewIntersightHyperflexUcsmConfigPolicy:NewCmdletBase
 	{
-		public SetIntersightHyperflexAppCatalog()
+		public NewIntersightHyperflexUcsmConfigPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexAppCatalog();
-            MethodName = "PatchHyperflexAppCatalogWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexFeatureLimitExternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexFeatureLimitExternalRelationship FeatureLimitExternal {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexFeatureLimitInternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexFeatureLimitInternalRelationship FeatureLimitInternal {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexHxdpVersion resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexHxdpVersionRelationship> HxdpVersions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexCapabilityInfo resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexCapabilityInfoRelationship> HyperflexCapabilityInfos {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hclHyperflexSoftwareCompatibilityInfo resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclHyperflexSoftwareCompatibilityInfoRelationship> HyperflexSoftwareCompatibilityInfos {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexServerFirmwareVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexServerFirmwareVersionRelationship ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexServerModel resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexServerModelRelationship ServerModel {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionEntry resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexSoftwareDistributionEntryRelationship> SoftwareDistributions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The catalog version used in HyperFlex cluster configuration service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexAppCatalog.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAppCatalog")]
-    public class RemoveIntersightHyperflexAppCatalog:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexAppCatalog()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexAppCatalogWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexFeatureLimitExternal.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitExternal")]
-    public class SetIntersightHyperflexFeatureLimitExternal:SetCmdletBase
-	{
-		public SetIntersightHyperflexFeatureLimitExternal()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexFeatureLimitExternal();
-            MethodName = "UpdateHyperflexFeatureLimitExternalWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexFeatureLimitEntry> FeatureLimitEntries {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexFeatureLimitExternal.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitExternal")]
-    public class RemoveIntersightHyperflexFeatureLimitExternal:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexFeatureLimitExternal()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexFeatureLimitExternalWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionVersion", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexSoftwareDistributionVersion:GetCmdletBase
-	{
-		public GetIntersightHyperflexSoftwareDistributionVersion()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexSoftwareDistributionVersionListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionVersion")]
-    public class NewIntersightHyperflexSoftwareDistributionVersion:NewCmdletBase
-	{
-		public NewIntersightHyperflexSoftwareDistributionVersion()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareDistributionVersion();
-            MethodName = "CreateHyperflexSoftwareDistributionVersionWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionComponent resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexSoftwareDistributionComponentRelationship> DistributionComponents {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexSoftwareDistributionEntry resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexSoftwareDistributionEntryRelationship SoftwareDistributionEntry {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexVcenterConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVcenterConfigPolicy")]
-    public class NewIntersightHyperflexVcenterConfigPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexVcenterConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexVcenterConfigPolicy();
-            MethodName = "CreateHyperflexVcenterConfigPolicyWithHttpInfo";
+            ModelObject = new HyperflexUcsmConfigPolicy();
+            MethodName = "CreateHyperflexUcsmConfigPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -4117,15 +5483,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The vCenter datacenter name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9~!@#$%&*()-_][a-zA-Z0-9~!@#$%&* ()-_]{0,79}$")]
-        public string DataCenter {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Description of the policy."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -4135,11 +5492,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The vCenter server FQDN or IP."</para>
+        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string Hostname {
+        
+        public HyperflexIpAddrRange KvmIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexMacAddrPrefixRange MacPrefixRange {
             get;
             set;
         }
@@ -4171,20 +5537,108 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The password for authenticating with vCenter. Follow the corresponding password policy governed by vCenter."</para>
+        /// <para type="description">"The server firmware bundle version used for server components such as CIMC, adapters, BIOS, etc."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Password {
+        [ValidatePattern("(^3\\.[1-9]\\([1-9][a-z]\\)$|^[4-9]\\.[0-9]\\([1-9][a-z]\\)$)")]
+        public string ServerFirmwareVersion {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Overrides the default vCenter Single Sign-On URL. Do not specify unless instructed by Cisco TAC."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string SsoUrl {
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterBackupPolicyDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicyDeployment", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterBackupPolicyDeployment:GetCmdletBase
+	{
+		public GetIntersightHyperflexClusterBackupPolicyDeployment()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexClusterBackupPolicyDeploymentListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterBackupPolicyDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterBackupPolicyDeployment")]
+    public class NewIntersightHyperflexClusterBackupPolicyDeployment:NewCmdletBase
+	{
+		public NewIntersightHyperflexClusterBackupPolicyDeployment()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterBackupPolicyDeployment();
+            MethodName = "CreateHyperflexClusterBackupPolicyDeploymentWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterRelationship BackupTarget {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Discovered {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterRelationship SourceCluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"True if policy was detached from source Hyperflex Cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool SourceDetached {
             get;
             set;
         }
@@ -4198,38 +5652,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The vCenter username (e.g. administrator@vsphere.local)."</para>
+        /// <para type="description">"True if policy was detached from target Hyperflex Cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)$")]
-        public string Username {
+        
+        public bool TargetDetached {
             get;
             set;
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexVcenterConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapDvswitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVcenterConfigPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexVcenterConfigPolicy:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapDvswitch", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapDvswitch:GetCmdletBase
 	{
-		public GetIntersightHyperflexVcenterConfigPolicy()
+		public GetIntersightHyperflexHxapDvswitch()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexVcenterConfigPolicyListWithHttpInfo";
+            MethodName = "GetHyperflexHxapDvswitchListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexExtFcStoragePolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtFcStoragePolicy")]
-    public class SetIntersightHyperflexExtFcStoragePolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicyDeployment")]
+    public class SetIntersightHyperflexClusterBackupPolicyDeployment:SetCmdletBase
 	{
-		public SetIntersightHyperflexExtFcStoragePolicy()
+		public SetIntersightHyperflexClusterBackupPolicyDeployment()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexExtFcStoragePolicy();
-            MethodName = "UpdateHyperflexExtFcStoragePolicyWithHttpInfo";
+            ModelObject = new HyperflexClusterBackupPolicyDeployment();
+            MethodName = "UpdateHyperflexClusterBackupPolicyDeploymentWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -4241,47 +5695,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enables or disables external FC storage configuration."</para>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool AdminState {
+        public HyperflexClusterRelationship BackupTarget {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VSAN for the primary Fabric Interconnect external FC storage traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVsan ExtaTraffic {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VSAN for the secondary Fabric Interconnect external FC storage traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVsan ExtbTraffic {
+        public bool Discovered {
             get;
             set;
         }
@@ -4295,20 +5722,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterRelationship SourceCluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"True if policy was detached from source Hyperflex Cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool SourceDetached {
             get;
             set;
         }
@@ -4322,307 +5758,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The range of WWxN addresses to use for the FC storage configuration."</para>
+        /// <para type="description">"True if policy was detached from target Hyperflex Cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexWwxnPrefixRange WwxnPrefixRange {
+        public bool TargetDetached {
             get;
             set;
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexExtFcStoragePolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtFcStoragePolicy")]
-    public class RemoveIntersightHyperflexExtFcStoragePolicy:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicyDeployment")]
+    public class RemoveIntersightHyperflexClusterBackupPolicyDeployment:RemoveCmdletBase
 	{
-		public RemoveIntersightHyperflexExtFcStoragePolicy()
+		public RemoveIntersightHyperflexClusterBackupPolicyDeployment()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexExtFcStoragePolicyWithHttpInfo";
+            MethodName = "DeleteHyperflexClusterBackupPolicyDeploymentWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexExtIscsiStoragePolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexExtIscsiStoragePolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexExtIscsiStoragePolicy:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionEntry")]
+    public class SetIntersightHyperflexSoftwareDistributionEntry:SetCmdletBase
 	{
-		public GetIntersightHyperflexExtIscsiStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexExtIscsiStoragePolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexExtIscsiStoragePolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexExtIscsiStoragePolicy")]
-    public class NewIntersightHyperflexExtIscsiStoragePolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexExtIscsiStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexExtIscsiStoragePolicy();
-            MethodName = "CreateHyperflexExtIscsiStoragePolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool AdminState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN for the primary Fabric Interconnect external FCoE storage traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan ExtaTraffic {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN for the secondary Fabric Interconnect external FCoE storage traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan ExtbTraffic {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapDvUplink.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapDvUplink", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapDvUplink:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapDvUplink()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapDvUplinkListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexDataProtectionPeer.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDataProtectionPeer", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexDataProtectionPeer:GetCmdletBase
-	{
-		public GetIntersightHyperflexDataProtectionPeer()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexDataProtectionPeerListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxapVirtualMachineNetworkInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxapVirtualMachineNetworkInterface")]
-    public class RemoveIntersightHyperflexHxapVirtualMachineNetworkInterface:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexHxapVirtualMachineNetworkInterface()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexHxapVirtualMachineNetworkInterfaceWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexAutoSupportPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAutoSupportPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexAutoSupportPolicy:GetCmdletBase
-	{
-		public GetIntersightHyperflexAutoSupportPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexAutoSupportPolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexAutoSupportPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAutoSupportPolicy")]
-    public class NewIntersightHyperflexAutoSupportPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexAutoSupportPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexAutoSupportPolicy();
-            MethodName = "CreateHyperflexAutoSupportPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable Auto-Support."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool AdminState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The recipient email address for support tickets."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
-        public string ServiceTicketReceipient {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionEntry", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexSoftwareDistributionEntry:GetCmdletBase
-	{
-		public GetIntersightHyperflexSoftwareDistributionEntry()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexSoftwareDistributionEntryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionEntry")]
-    public class NewIntersightHyperflexSoftwareDistributionEntry:NewCmdletBase
-	{
-		public NewIntersightHyperflexSoftwareDistributionEntry()
+		public SetIntersightHyperflexSoftwareDistributionEntry()
 		{
 			ApiInstance = new HyperflexApi(Config);
             ModelObject = new HyperflexSoftwareDistributionEntry();
-            MethodName = "CreateHyperflexSoftwareDistributionEntryWithHttpInfo";
+            MethodName = "UpdateHyperflexSoftwareDistributionEntryWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -4663,82 +5830,6 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareVersionPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareVersionPolicy")]
-    public class SetIntersightHyperflexSoftwareVersionPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexSoftwareVersionPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareVersionPolicy();
-            MethodName = "PatchHyperflexSoftwareVersionPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desired HyperFlex Data Platform software version to apply on the HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HxdpVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desired  hypervisor version to apply for all the nodes on the HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HypervisorVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
@@ -4746,42 +5837,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desired server firmware version to apply on the HyperFlex Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|(^3\\.[0-9]\\([1-9][a-z]\\)$|^[4-9]\\.[1-9]\\([1-9][a-z]\\)$|^4\\.0\\([1-3][a-z]\\)$|^4\\.0\\(4[d-z]\\)$|4\\.0\\([5-9][a-z]\\)$)")]
-        public string ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexServerFirmwareVersionInfo> ServerFirmwareVersions {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -4790,40 +5845,52 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionEntry.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionEntry")]
+    public class RemoveIntersightHyperflexSoftwareDistributionEntry:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexSoftwareDistributionEntry()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexSoftwareDistributionEntryWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexNodeProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeProfile", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexNodeProfile:GetCmdletBase
+	{
+		public GetIntersightHyperflexNodeProfile()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexNodeProfileListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexNodeProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeProfile")]
+    public class NewIntersightHyperflexNodeProfile:NewCmdletBase
+	{
+		public NewIntersightHyperflexNodeProfile()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexNodeProfile();
+            MethodName = "CreateHyperflexNodeProfileWithHttpInfo";
+		}
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"User initiated action. Each profile type has its own supported actions. For HyperFlex cluster profile, the supported actions are -- Validate, Deploy, Continue, Retry, Abort, Unassign For server profile, the support actions are -- Deploy, Unassign."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<string> UpgradeTypes {
+        public string Action {
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareVersionPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareVersionPolicy")]
-    public class RemoveIntersightHyperflexSoftwareVersionPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexSoftwareVersionPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexSoftwareVersionPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexNodeConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeConfigPolicy")]
-    public class NewIntersightHyperflexNodeConfigPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexNodeConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexNodeConfigPolicy();
-            MethodName = "CreateHyperflexNodeConfigPolicyWithHttpInfo";
-		}
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -4834,25 +5901,34 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+        public ComputePhysicalRelationship AssignedServer {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The range of storage data IPs to be assigned to the nodes."</para>
+        /// <para type="description">"A reference to a hyperflexClusterProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexIpAddrRange DataIpRange {
+        public HyperflexClusterProfileRelationship ClusterProfile {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Description of the policy."</para>
+        /// <para type="description">"The configuration state and results of the last configuration operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyConfigContext ConfigContext {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the profile."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
@@ -4861,29 +5937,56 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The range of storage management IPs to be assigned to the nodes."</para>
+        /// <para type="description">"IP address for storage data network (Controller VM interface)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange HxdpIpRange {
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HxdpDataIp {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The range of IPs to be assigned to each hypervisor node for VM migration and hypervior control."</para>
+        /// <para type="description">"IP address for HyperFlex management network."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange HypervisorControlIpRange {
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HxdpMgmtIp {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The range of management IPs to be assigned to the nodes."</para>
+        /// <para type="description">"IP address for storage client network (Controller VM interface)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange MgmtIpRange {
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HxdpStorageClientIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for hypervisor control such as VM migration or pod management."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HypervisorControlIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for storage data network (Hypervisor interface)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HypervisorDataIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for Hypervisor management network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HypervisorMgmtIp {
             get;
             set;
         }
@@ -4897,29 +6000,108 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
+        /// <para type="description">"Name of the profile instance or profile template."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
         public string Name {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The node name prefix that is used to automatically generate the default hostname for each server.\nA dash (-) will be appended to the prefix followed by the node number to form a hostname.\nThis default naming scheme can be manually overridden in the node configuration.\nThe maximum length of a prefix is 60, must only contain alphanumeric characters or dash (-), and must\nstart with an alphanumeric character."</para>
+        /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-]{1,59}$")]
-        public string NodeNamePrefix {
+        
+        public List<PolicyAbstractPolicyRelationship> PolicyBucket {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OrganizationOrganizationRelationship Organization {
+        public PolicyAbstractProfileRelationship SrcTemplate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNodeProfile.TypeEnum Type {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexServerFirmwareVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersion", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexServerFirmwareVersion:GetCmdletBase
+	{
+		public GetIntersightHyperflexServerFirmwareVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexServerFirmwareVersionListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexServerFirmwareVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersion")]
+    public class NewIntersightHyperflexServerFirmwareVersion:NewCmdletBase
+	{
+		public NewIntersightHyperflexServerFirmwareVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexServerFirmwareVersion();
+            MethodName = "CreateHyperflexServerFirmwareVersionWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexServerFirmwareVersionEntry resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexServerFirmwareVersionEntryRelationship> ServerFirmwareVersionEntries {
             get;
             set;
         }
@@ -4934,16 +6116,83 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexNodeConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexCapabilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeConfigPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexNodeConfigPolicy:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCapabilityInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexCapabilityInfo:GetCmdletBase
 	{
-		public GetIntersightHyperflexNodeConfigPolicy()
+		public GetIntersightHyperflexCapabilityInfo()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexNodeConfigPolicyListWithHttpInfo";
+            MethodName = "GetHyperflexCapabilityInfoListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexCapabilityInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexCapabilityInfo")]
+    public class NewIntersightHyperflexCapabilityInfo:NewCmdletBase
+	{
+		public NewIntersightHyperflexCapabilityInfo()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexCapabilityInfo();
+            MethodName = "CreateHyperflexCapabilityInfoWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HclConstraint> CapabilityConstraints {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the capability or feature set consisting of a collection of constraint rules and value."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexExtFcStoragePolicy.</para>
@@ -5070,266 +6319,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexVolume.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVolume", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexVolume:GetCmdletBase
-	{
-		public GetIntersightHyperflexVolume()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexVolumeListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicy")]
-    public class SetIntersightHyperflexClusterBackupPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexClusterBackupPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterBackupPolicy();
-            MethodName = "UpdateHyperflexClusterBackupPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Backup datastore name prefix used during the auto creation of the datastore. All VMs created in this datastore will be automatically backed up."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string BackupDataStoreName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Replication data store size in backupDataStoreSizeUnit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long BackupDataStoreSize {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Replication data store size."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string BackupDataStoreSizeUnit {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterRelationship BackupTarget {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Replication cluster pairing name prefix."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ReplicationPairNamePrefix {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Backup policy replication schedule."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexReplicationSchedule ReplicationSchedule {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of snapshots that will be retained as part of the Multi Point in Time support."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 30)]
-        public long SnapshotRetentionCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicy")]
-    public class RemoveIntersightHyperflexClusterBackupPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexClusterBackupPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexClusterBackupPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHealthCheckPackageChecksum.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckPackageChecksum")]
-    public class SetIntersightHyperflexHealthCheckPackageChecksum:SetCmdletBase
-	{
-		public SetIntersightHyperflexHealthCheckPackageChecksum()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHealthCheckPackageChecksum();
-            MethodName = "UpdateHyperflexHealthCheckPackageChecksumWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SHA512 checksum of the health check package."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Checksum {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the health check Debian package."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HyperFlex health check Debian package file name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string PackageName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Timestamp of last update of HyperFlex health check package checksum."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime Timestamp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HyperFlex health check Debian Package Version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHealthCheckPackageChecksum.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckPackageChecksum")]
-    public class RemoveIntersightHyperflexHealthCheckPackageChecksum:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexHealthCheckPackageChecksum()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexHealthCheckPackageChecksumWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexServerFirmwareVersionEntry.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersionEntry")]
@@ -5418,835 +6407,40 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterStoragePolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapVirtualMachineNetworkInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterStoragePolicy")]
-    public class SetIntersightHyperflexClusterStoragePolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapVirtualMachineNetworkInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapVirtualMachineNetworkInterface:GetCmdletBase
 	{
-		public SetIntersightHyperflexClusterStoragePolicy()
+		public GetIntersightHyperflexHxapVirtualMachineNetworkInterface()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterStoragePolicy();
-            MethodName = "UpdateHyperflexClusterStoragePolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If enabled, formats existing disk partitions (destroys all user data)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool DiskPartitionCleanup {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexLogicalAvailabilityZone LogicalAvalabilityZoneConfig {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable VDI optimization (hybrid HyperFlex systems only)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool VdiOptimization {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterStoragePolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterStoragePolicy")]
-    public class RemoveIntersightHyperflexClusterStoragePolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexClusterStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexClusterStoragePolicyWithHttpInfo";
+            MethodName = "GetHyperflexHxapVirtualMachineNetworkInterfaceListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexHealthCheckPackageChecksum.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexServerModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHealthCheckPackageChecksum")]
-    public class NewIntersightHyperflexHealthCheckPackageChecksum:NewCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerModel", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexServerModel:GetCmdletBase
 	{
-		public NewIntersightHyperflexHealthCheckPackageChecksum()
+		public GetIntersightHyperflexServerModel()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHealthCheckPackageChecksum();
-            MethodName = "CreateHyperflexHealthCheckPackageChecksumWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SHA512 checksum of the health check package."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Checksum {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the health check Debian package."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HyperFlex health check Debian package file name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string PackageName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Timestamp of last update of HyperFlex health check package checksum."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime Timestamp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HyperFlex health check Debian Package Version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckPackageChecksum.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckPackageChecksum", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHealthCheckPackageChecksum:GetCmdletBase
-	{
-		public GetIntersightHyperflexHealthCheckPackageChecksum()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHealthCheckPackageChecksumListWithHttpInfo";
+            MethodName = "GetHyperflexServerModelListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapVirtualMachine.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexServerModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapVirtualMachine")]
-    public class SetIntersightHyperflexHxapVirtualMachine:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerModel")]
+    public class NewIntersightHyperflexServerModel:NewCmdletBase
 	{
-		public SetIntersightHyperflexHxapVirtualMachine()
+		public NewIntersightHyperflexServerModel()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxapVirtualMachine();
-            MethodName = "UpdateHyperflexHxapVirtualMachineWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InfraMetaData> AffinitySelectors {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Denotes age or life time of the VM in nano seconds."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Age {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InfraMetaData> AntiAffinitySelectors {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Time when this VM booted up."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime BootTime {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Provisioned CPU and memory information for this virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public InfraHardwareInfo Capacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexVmDisk> Disks {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Reason of the failure when VM is in failed state."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FailureReason {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Guest operating system details running on this machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationGuestInfo GuestInfo {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapVirtualMachine.HypervisorTypeEnum HypervisorType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally generated identity of this VM. This entity is not manipulated by users. It aids in uniquely identifying the virtual machine object. For VMware, this is MOR (managed object reference)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Identity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexVmInterface> Interfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> IpAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InfraMetaData> Labels {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The capacity and usage information for memory on this virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryCapacity MemoryCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User-provided name to identify the virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number network interfaces associated with the virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NetworkCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Power state of the virtual machine.\n* `Unknown` - The entity's power state is unknown.\n* `PoweringOn` - The entity is powering on.\n* `PoweredOn` - The entity is powered on.\n* `PoweringOff` - The entity is powering off.\n* `PoweredOff` - The entity is powered down.\n* `StandBy` - The entity is in standby mode.\n* `Paused` - The entity is in pause state.\n* `Rebooting` - The entity reboot is in progress.\n* `` - The entity's power state is not available."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapVirtualMachine.PowerStateEnum PowerState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The capacity and usage information for CPU power on this virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationComputeCapacity ProcessorCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapVirtualMachine.ProviderEnum Provider {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Denotes the VM start timestamp."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StartTime {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The current state of the virtual machine. For example, starting, stopped, etc.\n* `None` - A place holder for the default value.\n* `Creating` - Virtual machine creation is in progress.\n* `Pending` - The virtual machine is preparing to enter the started state.\n* `Starting` - The virtual machine is starting.\n* `Started` - The virtual machine is running and ready for use.\n* `Stopping` - The virtual machine is preparing to be stopped.\n* `Stopped` - The virtual machine is shut down and cannot be used. The virtual machine can be started again at any time.\n* `Pausing` - The virtual machine is preparing to be paused.\n* `Paused` - The virtual machine enters into paused state due to low free disk space.\n* `Suspending` - The virtual machine is preparing to be suspended.\n* `Suspended` - Virtual machine is in sleep mode.When a virtual machine is suspended, the current state of theoperating system, and applications is saved, and the virtual machine put into a suspended mode.\n* `Deleting` - The virtual machine is preparing to be terminated.\n* `Terminated` - The virtual machine has been permanently deleted and cannot be started.\n* `Rebooting` - The virtual machine reboot is in progress.\n* `Error` - The deployment of virtual machine is failed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapVirtualMachine.StateEnum State {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Status of virtual machine.\n* `Unknown` - Virtual machine state is not available.\n* `Running` - Virtual machine is running normally.\n* `Stopped` - Virtual machine has been stopped.\n* `WaitForLaunch` - Virtual machine is wating to be launched.\n* `Paused` - Virtual machine is currently paused.\n* `ImportInProgress` - Virtual machine image is being imported into the platform.\n* `ImportFailed` - Virtual machine image import operation failed.\n* `DiskCloneInProgress` - Disk clone operation for the virtual machine is in progress.\n* `DiskCloneFailed` - Disk clone operation for the virtual machine failed.\n* `Processing` - Virtual machine is being created.\n* `UnSchedulable` - Virtual machine cannot be scheduled to run, either due to insufficient resources or failure to match affinity specifications.\n* `Failed` - Some virtual machine operation has failed. More information is available as part of the results of the operation.\n* `` - Virtual machine status is not available."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapVirtualMachine.StatusEnum Status {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The uuid of this virtual machine. The uuid is internally generated and not user specified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
-        public string Uuid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Time when this virtualmachine is created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime VmCreationTime {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapHost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapHost", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapHost:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapHost()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapHostListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterNetworkPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterNetworkPolicy:GetCmdletBase
-	{
-		public GetIntersightHyperflexClusterNetworkPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterNetworkPolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterNetworkPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterNetworkPolicy")]
-    public class NewIntersightHyperflexClusterNetworkPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexClusterNetworkPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterNetworkPolicy();
-            MethodName = "CreateHyperflexClusterNetworkPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable jumbo frames."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool JumboFrame {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange KvmIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexMacAddrPrefixRange MacPrefixRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The VLAN for the management network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan MgmtVlan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be '1G' or '10G+'. Use '10G+' for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be 'default' only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterNetworkPolicy.UplinkSpeedEnum UplinkSpeed {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The VM migration VLAN.\nThis VLAN is used for transfering VMs from one host to another during operations such a cluster upgrade.\nFor HyperFlex Application Platform clusters, this VLAN is also used for hypervisor control traffic such as\nnode to node communication, pod-to-pod communication, etc."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan VmMigrationVlan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexNamedVlan> VmNetworkVlans {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapVirtualDisk")]
-    public class SetIntersightHyperflexHxapVirtualDisk:SetCmdletBase
-	{
-		public SetIntersightHyperflexHxapVirtualDisk()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxapVirtualDisk();
-            MethodName = "UpdateHyperflexHxapVirtualDiskWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexHxapCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapClusterRelationship Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk size represented in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Size {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual disk used for cloning new disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceVirtualDisk {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexDatastoreStatistic.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDatastoreStatistic", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexDatastoreStatistic:GetCmdletBase
-	{
-		public GetIntersightHyperflexDatastoreStatistic()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexDatastoreStatisticListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexFeatureLimitExternal.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexFeatureLimitExternal", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexFeatureLimitExternal:GetCmdletBase
-	{
-		public GetIntersightHyperflexFeatureLimitExternal()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexFeatureLimitExternalListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexFeatureLimitExternal.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexFeatureLimitExternal")]
-    public class NewIntersightHyperflexFeatureLimitExternal:NewCmdletBase
-	{
-		public NewIntersightHyperflexFeatureLimitExternal()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexFeatureLimitExternal();
-            MethodName = "CreateHyperflexFeatureLimitExternalWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexFeatureLimitEntry> FeatureLimitEntries {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckExecutionSnapshot.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHealthCheckExecutionSnapshot:GetCmdletBase
-	{
-		public GetIntersightHyperflexHealthCheckExecutionSnapshot()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHealthCheckExecutionSnapshotListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexServerFirmwareVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersion")]
-    public class SetIntersightHyperflexServerFirmwareVersion:SetCmdletBase
-	{
-		public SetIntersightHyperflexServerFirmwareVersion()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexServerFirmwareVersion();
-            MethodName = "UpdateHyperflexServerFirmwareVersionWithHttpInfo";
+            ModelObject = new HyperflexServerModel();
+            MethodName = "CreateHyperflexServerModelWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -6269,18 +6463,18 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexServerFirmwareVersionEntry resources."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexServerFirmwareVersionEntryRelationship> ServerFirmwareVersionEntries {
+        public List<HyperflexServerModelEntry> ServerModelEntries {
             get;
             set;
         }
@@ -6295,40 +6489,76 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerFirmwareVersion.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexDevicePackageDownloadState.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerFirmwareVersion")]
-    public class RemoveIntersightHyperflexServerFirmwareVersion:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDevicePackageDownloadState", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexDevicePackageDownloadState:GetCmdletBase
 	{
-		public RemoveIntersightHyperflexServerFirmwareVersion()
+		public GetIntersightHyperflexDevicePackageDownloadState()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexServerFirmwareVersionWithHttpInfo";
+            MethodName = "GetHyperflexDevicePackageDownloadStateListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterReplicationNetworkPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterHealthCheckExecutionSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterReplicationNetworkPolicy:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterHealthCheckExecutionSnapshot:GetCmdletBase
 	{
-		public GetIntersightHyperflexClusterReplicationNetworkPolicy()
+		public GetIntersightHyperflexClusterHealthCheckExecutionSnapshot()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterReplicationNetworkPolicyListWithHttpInfo";
+            MethodName = "GetHyperflexClusterHealthCheckExecutionSnapshotListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterReplicationNetworkPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicy")]
-    public class NewIntersightHyperflexClusterReplicationNetworkPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVolume", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexVolume:GetCmdletBase
 	{
-		public NewIntersightHyperflexClusterReplicationNetworkPolicy()
+		public GetIntersightHyperflexVolume()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterReplicationNetworkPolicy();
-            MethodName = "CreateHyperflexClusterReplicationNetworkPolicyWithHttpInfo";
+            MethodName = "GetHyperflexVolumeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexWitnessConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexWitnessConfiguration", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexWitnessConfiguration:GetCmdletBase
+	{
+		public GetIntersightHyperflexWitnessConfiguration()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexWitnessConfigurationListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexStorageContainer.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexStorageContainer", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexStorageContainer:GetCmdletBase
+	{
+		public GetIntersightHyperflexStorageContainer()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexStorageContainerListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexExtIscsiStoragePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtIscsiStoragePolicy")]
+    public class SetIntersightHyperflexExtIscsiStoragePolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexExtIscsiStoragePolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexExtIscsiStoragePolicy();
+            MethodName = "UpdateHyperflexExtIscsiStoragePolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -6336,6 +6566,15 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool AdminState {
             get;
             set;
         }
@@ -6358,9 +6597,27 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// <para type="description">"VLAN for the primary Fabric Interconnect external FCoE storage traffic."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan ExtaTraffic {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN for the secondary Fabric Interconnect external FCoE storage traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan ExtbTraffic {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -6369,7 +6626,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -6385,42 +6642,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Bandwidth for the Replication network in Mbps."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ReplicationBandwidthMbps {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexIpAddrRange> ReplicationIpranges {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"MTU for the Replication network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1024, 1500)]
-        public long ReplicationMtu {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN for the Replication network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan ReplicationVlan {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -6431,279 +6652,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapCluster.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexExtIscsiStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapCluster")]
-    public class SetIntersightHyperflexHxapCluster:SetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtIscsiStoragePolicy")]
+    public class RemoveIntersightHyperflexExtIscsiStoragePolicy:RemoveCmdletBase
 	{
-		public SetIntersightHyperflexHxapCluster()
+		public RemoveIntersightHyperflexExtIscsiStoragePolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxapCluster();
-            MethodName = "UpdateHyperflexHxapClusterWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PolicyAbstractProfileRelationship AssociatedProfile {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexBaseCluster resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexBaseClusterRelationship> ChildClusters {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This can be a Storage or Compute cluster. A storage cluster contains storage nodes that are used to persist data. A compute cluster contains compute nodes that are used for executing business logic.\n* `Storage` - Cluster of storage nodes used to persist data.\n* `Compute` - Cluster of compute nodes used to execute business logic.\n* `Unknown` - This cluster type is Unknown. Expect Compute or Storage as valid values."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapCluster.ClusterPurposeEnum ClusterPurpose {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CPU oversubscription factor configured on the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public double ConfiguredCpuOverSubFactor {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CPU allocation details of the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationCpuAllocation CpuAllocation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Current oversubscription factor of the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public double CurrentCpuOverSubFactor {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Datacenter to which the cluster belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DatacenterName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Reason for the failure when cluster is in failed state."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FailureReason {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Hypervisor version of HyperFlex compute cluster along with build number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HypervisorBuild {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexHxapCluster.HypervisorTypeEnum HypervisorType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Management IP Address of the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ManagementIpAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Memory allocation details of the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryAllocation MemoryAllocation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The capacity and usage information for memory on this cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryCapacity MemoryCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexBaseClusterRelationship ParentCluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The capacity and usage information for CPU power on this cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationComputeCapacity ProcessorCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total number of CPU cores in this cluster. It is a cumulative number across all hosts in the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long TotalCores {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxapCluster.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxapCluster")]
-    public class RemoveIntersightHyperflexHxapCluster:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexHxapCluster()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexHxapClusterWithHttpInfo";
+            MethodName = "DeleteHyperflexExtIscsiStoragePolicyWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexCiscoHypervisorManager.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCiscoHypervisorManager", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexCiscoHypervisorManager:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterProfile", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterProfile:GetCmdletBase
 	{
-		public GetIntersightHyperflexCiscoHypervisorManager()
+		public GetIntersightHyperflexClusterProfile()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexCiscoHypervisorManagerListWithHttpInfo";
+            MethodName = "GetHyperflexClusterProfileListWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexCiscoHypervisorManager.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexCiscoHypervisorManager")]
-    public class NewIntersightHyperflexCiscoHypervisorManager:NewCmdletBase
-	{
-		public NewIntersightHyperflexCiscoHypervisorManager()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexCiscoHypervisorManager();
-            MethodName = "CreateHyperflexCiscoHypervisorManagerWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The user provided name for the hypervisor manager. For example, vCenterIreland. Usually, this name is subject to manipulation by the user. It is not the identity of the hypervisor."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9]+[\\sa-zA-Z0-9_-]{1,32}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterProfile.</para>
@@ -7097,40 +7067,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterProfile.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexAutoSupportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterProfile", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterProfile:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAutoSupportPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexAutoSupportPolicy:GetCmdletBase
 	{
-		public GetIntersightHyperflexClusterProfile()
+		public GetIntersightHyperflexAutoSupportPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterProfileListWithHttpInfo";
+            MethodName = "GetHyperflexAutoSupportPolicyListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckExecution.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexAutoSupportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecution", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHealthCheckExecution:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAutoSupportPolicy")]
+    public class NewIntersightHyperflexAutoSupportPolicy:NewCmdletBase
 	{
-		public GetIntersightHyperflexHealthCheckExecution()
+		public NewIntersightHyperflexAutoSupportPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHealthCheckExecutionListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxdpVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxdpVersion")]
-    public class SetIntersightHyperflexHxdpVersion:SetCmdletBase
-	{
-		public SetIntersightHyperflexHxdpVersion()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxdpVersion();
-            MethodName = "UpdateHyperflexHxdpVersionWithHttpInfo";
+            ModelObject = new HyperflexAutoSupportPolicy();
+            MethodName = "CreateHyperflexAutoSupportPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -7142,236 +7100,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Enable or disable Auto-Support."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Data Platform version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxdpVersion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxdpVersion")]
-    public class RemoveIntersightHyperflexHxdpVersion:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexHxdpVersion()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexHxdpVersionWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapDvswitch.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapDvswitch", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapDvswitch:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapDvswitch()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapDvswitchListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionEntry")]
-    public class SetIntersightHyperflexSoftwareDistributionEntry:SetCmdletBase
-	{
-		public SetIntersightHyperflexSoftwareDistributionEntry()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareDistributionEntry();
-            MethodName = "UpdateHyperflexSoftwareDistributionEntryWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexAppCatalogRelationship AppCatalog {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DistributionType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionVersion resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexSoftwareDistributionVersionRelationship> DistributionVersions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionEntry.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionEntry")]
-    public class RemoveIntersightHyperflexSoftwareDistributionEntry:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexSoftwareDistributionEntry()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexSoftwareDistributionEntryWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapDatacenter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapDatacenter", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapDatacenter:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapDatacenter()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapDatacenterListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexHxapDatacenter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHxapDatacenter")]
-    public class NewIntersightHyperflexHxapDatacenter:NewCmdletBase
-	{
-		public NewIntersightHyperflexHxapDatacenter()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexHxapDatacenter();
-            MethodName = "CreateHyperflexHxapDatacenterWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterStoragePolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterStoragePolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterStoragePolicy:GetCmdletBase
-	{
-		public GetIntersightHyperflexClusterStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterStoragePolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterStoragePolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterStoragePolicy")]
-    public class NewIntersightHyperflexClusterStoragePolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexClusterStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterStoragePolicy();
-            MethodName = "CreateHyperflexClusterStoragePolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
+        public bool AdminState {
             get;
             set;
         }
@@ -7390,24 +7123,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If enabled, formats existing disk partitions (destroys all user data)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool DiskPartitionCleanup {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexLogicalAvailabilityZone LogicalAvalabilityZoneConfig {
             get;
             set;
         }
@@ -7439,6 +7154,199 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The recipient email address for support tickets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
+        public string ServiceTicketReceipient {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapCluster.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapCluster")]
+    public class SetIntersightHyperflexHxapCluster:SetCmdletBase
+	{
+		public SetIntersightHyperflexHxapCluster()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHxapCluster();
+            MethodName = "UpdateHyperflexHxapClusterWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyAbstractProfileRelationship AssociatedProfile {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexBaseCluster resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexBaseClusterRelationship> ChildClusters {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This can be a Storage or Compute cluster. A storage cluster contains storage nodes that are used to persist data. A compute cluster contains compute nodes that are used for executing business logic.\n* `Storage` - Cluster of storage nodes used to persist data.\n* `Compute` - Cluster of compute nodes used to execute business logic.\n* `Unknown` - This cluster type is Unknown. Expect Compute or Storage as valid values."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapCluster.ClusterPurposeEnum ClusterPurpose {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CPU oversubscription factor configured on the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public double ConfiguredCpuOverSubFactor {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CPU allocation details of the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationCpuAllocation CpuAllocation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Current oversubscription factor of the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public double CurrentCpuOverSubFactor {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Datacenter to which the cluster belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DatacenterName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Reason for the failure when cluster is in failed state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FailureReason {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Hypervisor version of HyperFlex compute cluster along with build number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HypervisorBuild {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapCluster.HypervisorTypeEnum HypervisorType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Management IP Address of the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ManagementIpAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Memory allocation details of the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationMemoryAllocation MemoryAllocation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The capacity and usage information for memory on this cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationMemoryCapacity MemoryCapacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexBaseClusterRelationship ParentCluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The capacity and usage information for CPU power on this cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationComputeCapacity ProcessorCapacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -7448,38 +7356,853 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enable or disable VDI optimization (hybrid HyperFlex systems only)."</para>
+        /// <para type="description">"Total number of CPU cores in this cluster. It is a cumulative number across all hosts in the cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool VdiOptimization {
+        public long TotalCores {
             get;
             set;
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexVmBackupInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxapCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmBackupInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexVmBackupInfo:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxapCluster")]
+    public class RemoveIntersightHyperflexHxapCluster:RemoveCmdletBase
 	{
-		public GetIntersightHyperflexVmBackupInfo()
+		public RemoveIntersightHyperflexHxapCluster()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexVmBackupInfoListWithHttpInfo";
+            MethodName = "DeleteHyperflexHxapClusterWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterReplicationNetworkPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexCiscoHypervisorManager.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicy")]
-    public class SetIntersightHyperflexClusterReplicationNetworkPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCiscoHypervisorManager")]
+    public class SetIntersightHyperflexCiscoHypervisorManager:SetCmdletBase
 	{
-		public SetIntersightHyperflexClusterReplicationNetworkPolicy()
+		public SetIntersightHyperflexCiscoHypervisorManager()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexCiscoHypervisorManager();
+            MethodName = "PatchHyperflexCiscoHypervisorManagerWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The user provided name for the hypervisor manager. For example, vCenterIreland. Usually, this name is subject to manipulation by the user. It is not the identity of the hypervisor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]+[\\sa-zA-Z0-9_-]{1,32}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareVersionPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareVersionPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexSoftwareVersionPolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexSoftwareVersionPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexSoftwareVersionPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareVersionPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareVersionPolicy")]
+    public class NewIntersightHyperflexSoftwareVersionPolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexSoftwareVersionPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexSoftwareVersionPolicy();
+            MethodName = "CreateHyperflexSoftwareVersionPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired HyperFlex Data Platform software version to apply on the HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HxdpVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired  hypervisor version to apply for all the nodes on the HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HypervisorVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired server firmware version to apply on the HyperFlex Cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|(^3\\.[0-9]\\([1-9][a-z]\\)$|^[4-9]\\.[1-9]\\([1-9][a-z]\\)$|^4\\.0\\([1-3][a-z]\\)$|^4\\.0\\(4[d-z]\\)$|4\\.0\\([5-9][a-z]\\)$)")]
+        public string ServerFirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexServerFirmwareVersionInfo> ServerFirmwareVersions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> UpgradeTypes {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexCluster.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCluster", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexCluster:GetCmdletBase
+	{
+		public GetIntersightHyperflexCluster()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexClusterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexCiscoHypervisorManager.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCiscoHypervisorManager", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexCiscoHypervisorManager:GetCmdletBase
+	{
+		public GetIntersightHyperflexCiscoHypervisorManager()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexCiscoHypervisorManagerListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexCiscoHypervisorManager.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexCiscoHypervisorManager")]
+    public class NewIntersightHyperflexCiscoHypervisorManager:NewCmdletBase
+	{
+		public NewIntersightHyperflexCiscoHypervisorManager()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexCiscoHypervisorManager();
+            MethodName = "CreateHyperflexCiscoHypervisorManagerWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The user provided name for the hypervisor manager. For example, vCenterIreland. Usually, this name is subject to manipulation by the user. It is not the identity of the hypervisor."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]+[\\sa-zA-Z0-9_-]{1,32}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapCluster.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapCluster", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapCluster:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxapCluster()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxapClusterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapHostInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapHostInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHxapHostInterface:GetCmdletBase
+	{
+		public GetIntersightHyperflexHxapHostInterface()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHxapHostInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSysConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSysConfigPolicy")]
+    public class RemoveIntersightHyperflexSysConfigPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexSysConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexSysConfigPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexSysConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSysConfigPolicy")]
+    public class SetIntersightHyperflexSysConfigPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexSysConfigPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexSysConfigPolicy();
+            MethodName = "UpdateHyperflexSysConfigPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The DNS Search Domain Name. This setting applies to HyperFlex Data Platform 3.0 or later only."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.)*[a-zA-Z]{2,63}$")]
+        public string DnsDomainName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> DnsServers {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> NtpServers {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The timezone of the HyperFlex cluster's system clock.\n* `Pacific/Niue` - \n* `Pacific/Pago_Pago` - \n* `Pacific/Honolulu` - \n* `Pacific/Rarotonga` - \n* `Pacific/Tahiti` - \n* `Pacific/Marquesas` - \n* `America/Anchorage` - \n* `Pacific/Gambier` - \n* `America/Los_Angeles` - \n* `America/Tijuana` - \n* `America/Vancouver` - \n* `America/Whitehorse` - \n* `Pacific/Pitcairn` - \n* `America/Dawson_Creek` - \n* `America/Denver` - \n* `America/Edmonton` - \n* `America/Hermosillo` - \n* `America/Mazatlan` - \n* `America/Phoenix` - \n* `America/Yellowknife` - \n* `America/Belize` - \n* `America/Chicago` - \n* `America/Costa_Rica` - \n* `America/El_Salvador` - \n* `America/Guatemala` - \n* `America/Managua` - \n* `America/Mexico_City` - \n* `America/Regina` - \n* `America/Tegucigalpa` - \n* `America/Winnipeg` - \n* `Pacific/Galapagos` - \n* `America/Bogota` - \n* `America/Cancun` - \n* `America/Cayman` - \n* `America/Guayaquil` - \n* `America/Havana` - \n* `America/Iqaluit` - \n* `America/Jamaica` - \n* `America/Lima` - \n* `America/Nassau` - \n* `America/New_York` - \n* `America/Panama` - \n* `America/Port-au-Prince` - \n* `America/Rio_Branco` - \n* `America/Toronto` - \n* `Pacific/Easter` - \n* `America/Caracas` - \n* `America/Asuncion` - \n* `America/Barbados` - \n* `America/Boa_Vista` - \n* `America/Campo_Grande` - \n* `America/Cuiaba` - \n* `America/Curacao` - \n* `America/Grand_Turk` - \n* `America/Guyana` - \n* `America/Halifax` - \n* `America/La_Paz` - \n* `America/Manaus` - \n* `America/Martinique` - \n* `America/Port_of_Spain` - \n* `America/Porto_Velho` - \n* `America/Puerto_Rico` - \n* `America/Santo_Domingo` - \n* `America/Thule` - \n* `Atlantic/Bermuda` - \n* `America/St_Johns` - \n* `America/Araguaina` - \n* `America/Argentina/Buenos_Aires` - \n* `America/Bahia` - \n* `America/Belem` - \n* `America/Cayenne` - \n* `America/Fortaleza` - \n* `America/Godthab` - \n* `America/Maceio` - \n* `America/Miquelon` - \n* `America/Montevideo` - \n* `America/Paramaribo` - \n* `America/Recife` - \n* `America/Santiago` - \n* `America/Sao_Paulo` - \n* `Antarctica/Palmer` - \n* `Antarctica/Rothera` - \n* `Atlantic/Stanley` - \n* `America/Noronha` - \n* `Atlantic/South_Georgia` - \n* `America/Scoresbysund` - \n* `Atlantic/Azores` - \n* `Atlantic/Cape_Verde` - \n* `Africa/Abidjan` - \n* `Africa/Accra` - \n* `Africa/Bissau` - \n* `Africa/Casablanca` - \n* `Africa/El_Aaiun` - \n* `Africa/Monrovia` - \n* `America/Danmarkshavn` - \n* `Atlantic/Canary` - \n* `Atlantic/Faroe` - \n* `Atlantic/Reykjavik` - \n* `Etc/GMT` - \n* `Europe/Dublin` - \n* `Europe/Lisbon` - \n* `Europe/London` - \n* `Africa/Algiers` - \n* `Africa/Ceuta` - \n* `Africa/Lagos` - \n* `Africa/Ndjamena` - \n* `Africa/Tunis` - \n* `Africa/Windhoek` - \n* `Europe/Amsterdam` - \n* `Europe/Andorra` - \n* `Europe/Belgrade` - \n* `Europe/Berlin` - \n* `Europe/Brussels` - \n* `Europe/Budapest` - \n* `Europe/Copenhagen` - \n* `Europe/Gibraltar` - \n* `Europe/Luxembourg` - \n* `Europe/Madrid` - \n* `Europe/Malta` - \n* `Europe/Monaco` - \n* `Europe/Oslo` - \n* `Europe/Paris` - \n* `Europe/Prague` - \n* `Europe/Rome` - \n* `Europe/Stockholm` - \n* `Europe/Tirane` - \n* `Europe/Vienna` - \n* `Europe/Warsaw` - \n* `Europe/Zurich` - \n* `Africa/Cairo` - \n* `Africa/Johannesburg` - \n* `Africa/Maputo` - \n* `Africa/Tripoli` - \n* `Asia/Amman` - \n* `Asia/Beirut` - \n* `Asia/Damascus` - \n* `Asia/Gaza` - \n* `Asia/Jerusalem` - \n* `Asia/Nicosia` - \n* `Europe/Athens` - \n* `Europe/Bucharest` - \n* `Europe/Chisinau` - \n* `Europe/Helsinki` - \n* `Europe/Istanbul` - \n* `Europe/Kaliningrad` - \n* `Europe/Kiev` - \n* `Europe/Riga` - \n* `Europe/Sofia` - \n* `Europe/Tallinn` - \n* `Europe/Vilnius` - \n* `Africa/Khartoum` - \n* `Africa/Nairobi` - \n* `Antarctica/Syowa` - \n* `Asia/Baghdad` - \n* `Asia/Qatar` - \n* `Asia/Riyadh` - \n* `Europe/Minsk` - \n* `Europe/Moscow` - \n* `Asia/Tehran` - \n* `Asia/Baku` - \n* `Asia/Dubai` - \n* `Asia/Tbilisi` - \n* `Asia/Yerevan` - \n* `Europe/Samara` - \n* `Indian/Mahe` - \n* `Indian/Mauritius` - \n* `Indian/Reunion` - \n* `Asia/Kabul` - \n* `Antarctica/Mawson` - \n* `Asia/Aqtau` - \n* `Asia/Aqtobe` - \n* `Asia/Ashgabat` - \n* `Asia/Dushanbe` - \n* `Asia/Karachi` - \n* `Asia/Tashkent` - \n* `Asia/Yekaterinburg` - \n* `Indian/Kerguelen` - \n* `Indian/Maldives` - \n* `Asia/Calcutta` - \n* `Asia/Kolkata` - \n* `Asia/Colombo` - \n* `Asia/Katmandu` - \n* `Antarctica/Vostok` - \n* `Asia/Almaty` - \n* `Asia/Bishkek` - \n* `Asia/Dhaka` - \n* `Asia/Omsk` - \n* `Asia/Thimphu` - \n* `Indian/Chagos` - \n* `Asia/Rangoon` - \n* `Indian/Cocos` - \n* `Antarctica/Davis` - \n* `Asia/Bangkok` - \n* `Asia/Hovd` - \n* `Asia/Jakarta` - \n* `Asia/Krasnoyarsk` - \n* `Asia/Saigon` - \n* `Indian/Christmas` - \n* `Antarctica/Casey` - \n* `Asia/Brunei` - \n* `Asia/Choibalsan` - \n* `Asia/Hong_Kong` - \n* `Asia/Irkutsk` - \n* `Asia/Kuala_Lumpur` - \n* `Asia/Macau` - \n* `Asia/Makassar` - \n* `Asia/Manila` - \n* `Asia/Shanghai` - \n* `Asia/Singapore` - \n* `Asia/Taipei` - \n* `Asia/Ulaanbaatar` - \n* `Australia/Perth` - \n* `Asia/Pyongyang` - \n* `Asia/Dili` - \n* `Asia/Jayapura` - \n* `Asia/Seoul` - \n* `Asia/Tokyo` - \n* `Asia/Yakutsk` - \n* `Pacific/Palau` - \n* `Australia/Adelaide` - \n* `Australia/Darwin` - \n* `Antarctica/DumontDUrville` - \n* `Asia/Magadan` - \n* `Asia/Vladivostok` - \n* `Australia/Brisbane` - \n* `Australia/Hobart` - \n* `Australia/Sydney` - \n* `Pacific/Chuuk` - \n* `Pacific/Guam` - \n* `Pacific/Port_Moresby` - \n* `Pacific/Efate` - \n* `Pacific/Guadalcanal` - \n* `Pacific/Kosrae` - \n* `Pacific/Norfolk` - \n* `Pacific/Noumea` - \n* `Pacific/Pohnpei` - \n* `Asia/Kamchatka` - \n* `Pacific/Auckland` - \n* `Pacific/Fiji` - \n* `Pacific/Funafuti` - \n* `Pacific/Kwajalein` - \n* `Pacific/Majuro` - \n* `Pacific/Nauru` - \n* `Pacific/Tarawa` - \n* `Pacific/Wake` - \n* `Pacific/Wallis` - \n* `Pacific/Apia` - \n* `Pacific/Enderbury` - \n* `Pacific/Fakaofo` - \n* `Pacific/Tongatapu` - \n* `Pacific/Kiritimati` -"</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexSysConfigPolicy.TimezoneEnum Timezone {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckExecution.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecution", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHealthCheckExecution:GetCmdletBase
+	{
+		public GetIntersightHyperflexHealthCheckExecution()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHealthCheckExecutionListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterNetworkPolicy")]
+    public class SetIntersightHyperflexClusterNetworkPolicy:SetCmdletBase
+	{
+		public SetIntersightHyperflexClusterNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexClusterNetworkPolicy();
+            MethodName = "UpdateHyperflexClusterNetworkPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable jumbo frames."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool JumboFrame {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexIpAddrRange KvmIpRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexMacAddrPrefixRange MacPrefixRange {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The VLAN for the management network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan MgmtVlan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be '1G' or '10G+'. Use '10G+' for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be 'default' only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterNetworkPolicy.UplinkSpeedEnum UplinkSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The VM migration VLAN.\nThis VLAN is used for transfering VMs from one host to another during operations such a cluster upgrade.\nFor HyperFlex Application Platform clusters, this VLAN is also used for hypervisor control traffic such as\nnode to node communication, pod-to-pod communication, etc."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNamedVlan VmMigrationVlan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexNamedVlan> VmNetworkVlans {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterNetworkPolicy")]
+    public class RemoveIntersightHyperflexClusterNetworkPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexClusterNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexClusterNetworkPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexFeatureLimitExternal.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitExternal")]
+    public class RemoveIntersightHyperflexFeatureLimitExternal:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexFeatureLimitExternal()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexFeatureLimitExternalWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexFeatureLimitExternal.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitExternal")]
+    public class SetIntersightHyperflexFeatureLimitExternal:SetCmdletBase
+	{
+		public SetIntersightHyperflexFeatureLimitExternal()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexFeatureLimitExternal();
+            MethodName = "UpdateHyperflexFeatureLimitExternalWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexFeatureLimitEntry> FeatureLimitEntries {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexFeatureLimitExternal.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexFeatureLimitExternal", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexFeatureLimitExternal:GetCmdletBase
+	{
+		public GetIntersightHyperflexFeatureLimitExternal()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexFeatureLimitExternalListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexFeatureLimitExternal.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexFeatureLimitExternal")]
+    public class NewIntersightHyperflexFeatureLimitExternal:NewCmdletBase
+	{
+		public NewIntersightHyperflexFeatureLimitExternal()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexFeatureLimitExternal();
+            MethodName = "CreateHyperflexFeatureLimitExternalWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexAppCatalogRelationship AppCatalog {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexFeatureLimitEntry> FeatureLimitEntries {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionVersion", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexSoftwareDistributionVersion:GetCmdletBase
+	{
+		public GetIntersightHyperflexSoftwareDistributionVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexSoftwareDistributionVersionListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionVersion")]
+    public class NewIntersightHyperflexSoftwareDistributionVersion:NewCmdletBase
+	{
+		public NewIntersightHyperflexSoftwareDistributionVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexSoftwareDistributionVersion();
+            MethodName = "CreateHyperflexSoftwareDistributionVersionWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionComponent resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexSoftwareDistributionComponentRelationship> DistributionComponents {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexSoftwareDistributionEntry resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexSoftwareDistributionEntryRelationship SoftwareDistributionEntry {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterReplicationNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexClusterReplicationNetworkPolicy:GetCmdletBase
+	{
+		public GetIntersightHyperflexClusterReplicationNetworkPolicy()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexClusterReplicationNetworkPolicyListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterReplicationNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicy")]
+    public class NewIntersightHyperflexClusterReplicationNetworkPolicy:NewCmdletBase
+	{
+		public NewIntersightHyperflexClusterReplicationNetworkPolicy()
 		{
 			ApiInstance = new HyperflexApi(Config);
             ModelObject = new HyperflexClusterReplicationNetworkPolicy();
-            MethodName = "UpdateHyperflexClusterReplicationNetworkPolicyWithHttpInfo";
+            MethodName = "CreateHyperflexClusterReplicationNetworkPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -7511,7 +8234,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -7520,7 +8243,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -7582,40 +8305,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterReplicationNetworkPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexFeatureLimitInternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicy")]
-    public class RemoveIntersightHyperflexClusterReplicationNetworkPolicy:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitInternal")]
+    public class SetIntersightHyperflexFeatureLimitInternal:SetCmdletBase
 	{
-		public RemoveIntersightHyperflexClusterReplicationNetworkPolicy()
+		public SetIntersightHyperflexFeatureLimitInternal()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexClusterReplicationNetworkPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterBackupPolicyDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicyDeployment", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterBackupPolicyDeployment:GetCmdletBase
-	{
-		public GetIntersightHyperflexClusterBackupPolicyDeployment()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterBackupPolicyDeploymentListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexClusterBackupPolicyDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterBackupPolicyDeployment")]
-    public class NewIntersightHyperflexClusterBackupPolicyDeployment:NewCmdletBase
-	{
-		public NewIntersightHyperflexClusterBackupPolicyDeployment()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterBackupPolicyDeployment();
-            MethodName = "CreateHyperflexClusterBackupPolicyDeploymentWithHttpInfo";
+            ModelObject = new HyperflexFeatureLimitInternal();
+            MethodName = "UpdateHyperflexFeatureLimitInternalWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -7627,56 +8326,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a hyperflexAppCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexClusterRelationship BackupTarget {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Discovered {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterRelationship SourceCluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if policy was detached from source Hyperflex Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool SourceDetached {
+        public HyperflexAppCatalogRelationship AppCatalog {
             get;
             set;
         }
@@ -7685,56 +8339,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if policy was detached from target Hyperflex Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool TargetDetached {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterReplicationNetworkPolicyDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
-    public class SetIntersightHyperflexClusterReplicationNetworkPolicyDeployment:SetCmdletBase
-	{
-		public SetIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterReplicationNetworkPolicyDeployment();
-            MethodName = "UpdateHyperflexClusterReplicationNetworkPolicyDeploymentWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterRelationship Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Discovered {
+        public List<HyperflexFeatureLimitEntry> FeatureLimitEntries {
             get;
             set;
         }
@@ -7748,11 +8353,45 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OrganizationOrganizationRelationship Organization {
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexFeatureLimitInternal.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitInternal")]
+    public class RemoveIntersightHyperflexFeatureLimitInternal:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexFeatureLimitInternal()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexFeatureLimitInternalWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexNodeProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeProfile")]
+    public class SetIntersightHyperflexNodeProfile:SetCmdletBase
+	{
+		public SetIntersightHyperflexNodeProfile()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexNodeProfile();
+            MethodName = "UpdateHyperflexNodeProfileWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"User initiated action. Each profile type has its own supported actions. For HyperFlex cluster profile, the supported actions are -- Validate, Deploy, Continue, Retry, Abort, Unassign For server profile, the support actions are -- Deploy, Unassign."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Action {
             get;
             set;
         }
@@ -7761,7 +8400,318 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexIpAddrRange> ReplicationIpranges {
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePhysicalRelationship AssignedServer {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexClusterProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexClusterProfileRelationship ClusterProfile {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The configuration state and results of the last configuration operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyConfigContext ConfigContext {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for storage data network (Controller VM interface)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HxdpDataIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for HyperFlex management network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HxdpMgmtIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for storage client network (Controller VM interface)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HxdpStorageClientIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for hypervisor control such as VM migration or pod management."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HypervisorControlIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for storage data network (Hypervisor interface)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HypervisorDataIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address for Hypervisor management network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string HypervisorMgmtIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the profile instance or profile template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<PolicyAbstractPolicyRelationship> PolicyBucket {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyAbstractProfileRelationship SrcTemplate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexNodeProfile.TypeEnum Type {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexNodeProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeProfile")]
+    public class RemoveIntersightHyperflexNodeProfile:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexNodeProfile()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexNodeProfileWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionVersion")]
+    public class SetIntersightHyperflexSoftwareDistributionVersion:SetCmdletBase
+	{
+		public SetIntersightHyperflexSoftwareDistributionVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexSoftwareDistributionVersion();
+            MethodName = "PatchHyperflexSoftwareDistributionVersionWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionComponent resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<HyperflexSoftwareDistributionComponentRelationship> DistributionComponents {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexSoftwareDistributionEntry resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexSoftwareDistributionEntryRelationship SoftwareDistributionEntry {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HyperFlex Software Distribution version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionVersion")]
+    public class RemoveIntersightHyperflexSoftwareDistributionVersion:RemoveCmdletBase
+	{
+		public RemoveIntersightHyperflexSoftwareDistributionVersion()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "DeleteHyperflexSoftwareDistributionVersionWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexHxapVirtualDisk.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxapVirtualDisk")]
+    public class SetIntersightHyperflexHxapVirtualDisk:SetCmdletBase
+	{
+		public SetIntersightHyperflexHxapVirtualDisk()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            ModelObject = new HyperflexHxapVirtualDisk();
+            MethodName = "UpdateHyperflexHxapVirtualDiskWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a hyperflexHxapCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexHxapClusterRelationship Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk size represented in bytes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Size {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual disk used for cloning new disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceVirtualDisk {
             get;
             set;
         }
@@ -7776,15 +8726,27 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterReplicationNetworkPolicyDeployment.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexAlarm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
-    public class RemoveIntersightHyperflexClusterReplicationNetworkPolicyDeployment:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAlarm", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexAlarm:GetCmdletBase
 	{
-		public RemoveIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
+		public GetIntersightHyperflexAlarm()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexClusterReplicationNetworkPolicyDeploymentWithHttpInfo";
+            MethodName = "GetHyperflexAlarmListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexDatastoreStatistic.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDatastoreStatistic", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexDatastoreStatistic:GetCmdletBase
+	{
+		public GetIntersightHyperflexDatastoreStatistic()
+		{
+			ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexDatastoreStatisticListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -8071,499 +9033,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexHxapHostInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxapHostInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexHxapHostInterface:GetCmdletBase
-	{
-		public GetIntersightHyperflexHxapHostInterface()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexHxapHostInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexVcenterConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexVcenterConfigPolicy")]
-    public class SetIntersightHyperflexVcenterConfigPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexVcenterConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexVcenterConfigPolicy();
-            MethodName = "UpdateHyperflexVcenterConfigPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vCenter datacenter name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9~!@#$%&*()-_][a-zA-Z0-9~!@#$%&* ()-_]{0,79}$")]
-        public string DataCenter {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vCenter server FQDN or IP."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string Hostname {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The password for authenticating with vCenter. Follow the corresponding password policy governed by vCenter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Password {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Overrides the default vCenter Single Sign-On URL. Do not specify unless instructed by Cisco TAC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SsoUrl {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vCenter username (e.g. administrator@vsphere.local)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^([a-zA-Z0-9._-]+)@([a-zA-Z0-9._-]+)$")]
-        public string Username {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexVcenterConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVcenterConfigPolicy")]
-    public class RemoveIntersightHyperflexVcenterConfigPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexVcenterConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexVcenterConfigPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterHealthCheckExecutionSnapshot.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexClusterHealthCheckExecutionSnapshot:GetCmdletBase
-	{
-		public GetIntersightHyperflexClusterHealthCheckExecutionSnapshot()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexClusterHealthCheckExecutionSnapshotListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexAutoSupportPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAutoSupportPolicy")]
-    public class SetIntersightHyperflexAutoSupportPolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexAutoSupportPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexAutoSupportPolicy();
-            MethodName = "UpdateHyperflexAutoSupportPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable Auto-Support."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool AdminState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The recipient email address for support tickets."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
-        public string ServiceTicketReceipient {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexAutoSupportPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAutoSupportPolicy")]
-    public class RemoveIntersightHyperflexAutoSupportPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexAutoSupportPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexAutoSupportPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexUcsmConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexUcsmConfigPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexUcsmConfigPolicy:GetCmdletBase
-	{
-		public GetIntersightHyperflexUcsmConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexUcsmConfigPolicyListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexUcsmConfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexUcsmConfigPolicy")]
-    public class NewIntersightHyperflexUcsmConfigPolicy:NewCmdletBase
-	{
-		public NewIntersightHyperflexUcsmConfigPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexUcsmConfigPolicy();
-            MethodName = "CreateHyperflexUcsmConfigPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Out-of-band KVM IP range.\nConfigures the service profiles to use IP addresses within this range for setting the KVM IP of a server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexIpAddrRange KvmIpRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The MAC address prefix range for configuring vNICs.\nConfigures the service profiles to use MAC address prefixes within this range for setting the MAC address of server vNICs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexMacAddrPrefixRange MacPrefixRange {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The server firmware bundle version used for server components such as CIMC, adapters, BIOS, etc."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("(^3\\.[1-9]\\([1-9][a-z]\\)$|^[4-9]\\.[0-9]\\([1-9][a-z]\\)$)")]
-        public string ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexExtIscsiStoragePolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtIscsiStoragePolicy")]
-    public class SetIntersightHyperflexExtIscsiStoragePolicy:SetCmdletBase
-	{
-		public SetIntersightHyperflexExtIscsiStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexExtIscsiStoragePolicy();
-            MethodName = "UpdateHyperflexExtIscsiStoragePolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool AdminState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN for the primary Fabric Interconnect external FCoE storage traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan ExtaTraffic {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN for the secondary Fabric Interconnect external FCoE storage traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexNamedVlan ExtbTraffic {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexExtIscsiStoragePolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtIscsiStoragePolicy")]
-    public class RemoveIntersightHyperflexExtIscsiStoragePolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexExtIscsiStoragePolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexExtIscsiStoragePolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVmImportOperation.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmImportOperation", DefaultParameterSetName = "CmdletParam")]
@@ -8634,16 +9103,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexSysConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set HyperflexCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSysConfigPolicy")]
-    public class SetIntersightHyperflexSysConfigPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCluster")]
+    public class SetIntersightHyperflexCluster:SetCmdletBase
 	{
-		public SetIntersightHyperflexSysConfigPolicy()
+		public SetIntersightHyperflexCluster()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSysConfigPolicy();
-            MethodName = "UpdateHyperflexSysConfigPolicyWithHttpInfo";
+            ModelObject = new HyperflexCluster();
+            MethodName = "UpdateHyperflexClusterWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -8655,29 +9124,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
+        public PolicyAbstractProfileRelationship AssociatedProfile {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Description of the policy."</para>
+        /// <para type="description">"An array of relationships to hyperflexBaseCluster resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
+        
+        public List<HyperflexBaseClusterRelationship> ChildClusters {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The DNS Search Domain Name. This setting applies to HyperFlex Data Platform 3.0 or later only."</para>
+        /// <para type="description">"This can be a Storage or Compute cluster. A storage cluster contains storage nodes that are used to persist data. A compute cluster contains compute nodes that are used for executing business logic.\n* `Storage` - Cluster of storage nodes used to persist data.\n* `Compute` - Cluster of compute nodes used to execute business logic.\n* `Unknown` - This cluster type is Unknown. Expect Compute or Storage as valid values."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.)*[a-zA-Z]{2,63}$")]
-        public string DnsDomainName {
+        
+        public HyperflexCluster.ClusterPurposeEnum ClusterPurpose {
             get;
             set;
         }
@@ -8691,20 +9160,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HyperflexCluster.HypervisorTypeEnum HypervisorType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The capacity and usage information for memory on this cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationMemoryCapacity MemoryCapacity {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
             get;
             set;
         }
@@ -8718,11 +9196,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a hyperflexBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OrganizationOrganizationRelationship Organization {
+        public HyperflexBaseClusterRelationship ParentCluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The capacity and usage information for CPU power on this cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationComputeCapacity ProcessorCapacity {
             get;
             set;
         }
@@ -8736,38 +9223,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The timezone of the HyperFlex cluster's system clock.\n* `Pacific/Niue` - \n* `Pacific/Pago_Pago` - \n* `Pacific/Honolulu` - \n* `Pacific/Rarotonga` - \n* `Pacific/Tahiti` - \n* `Pacific/Marquesas` - \n* `America/Anchorage` - \n* `Pacific/Gambier` - \n* `America/Los_Angeles` - \n* `America/Tijuana` - \n* `America/Vancouver` - \n* `America/Whitehorse` - \n* `Pacific/Pitcairn` - \n* `America/Dawson_Creek` - \n* `America/Denver` - \n* `America/Edmonton` - \n* `America/Hermosillo` - \n* `America/Mazatlan` - \n* `America/Phoenix` - \n* `America/Yellowknife` - \n* `America/Belize` - \n* `America/Chicago` - \n* `America/Costa_Rica` - \n* `America/El_Salvador` - \n* `America/Guatemala` - \n* `America/Managua` - \n* `America/Mexico_City` - \n* `America/Regina` - \n* `America/Tegucigalpa` - \n* `America/Winnipeg` - \n* `Pacific/Galapagos` - \n* `America/Bogota` - \n* `America/Cancun` - \n* `America/Cayman` - \n* `America/Guayaquil` - \n* `America/Havana` - \n* `America/Iqaluit` - \n* `America/Jamaica` - \n* `America/Lima` - \n* `America/Nassau` - \n* `America/New_York` - \n* `America/Panama` - \n* `America/Port-au-Prince` - \n* `America/Rio_Branco` - \n* `America/Toronto` - \n* `Pacific/Easter` - \n* `America/Caracas` - \n* `America/Asuncion` - \n* `America/Barbados` - \n* `America/Boa_Vista` - \n* `America/Campo_Grande` - \n* `America/Cuiaba` - \n* `America/Curacao` - \n* `America/Grand_Turk` - \n* `America/Guyana` - \n* `America/Halifax` - \n* `America/La_Paz` - \n* `America/Manaus` - \n* `America/Martinique` - \n* `America/Port_of_Spain` - \n* `America/Porto_Velho` - \n* `America/Puerto_Rico` - \n* `America/Santo_Domingo` - \n* `America/Thule` - \n* `Atlantic/Bermuda` - \n* `America/St_Johns` - \n* `America/Araguaina` - \n* `America/Argentina/Buenos_Aires` - \n* `America/Bahia` - \n* `America/Belem` - \n* `America/Cayenne` - \n* `America/Fortaleza` - \n* `America/Godthab` - \n* `America/Maceio` - \n* `America/Miquelon` - \n* `America/Montevideo` - \n* `America/Paramaribo` - \n* `America/Recife` - \n* `America/Santiago` - \n* `America/Sao_Paulo` - \n* `Antarctica/Palmer` - \n* `Antarctica/Rothera` - \n* `Atlantic/Stanley` - \n* `America/Noronha` - \n* `Atlantic/South_Georgia` - \n* `America/Scoresbysund` - \n* `Atlantic/Azores` - \n* `Atlantic/Cape_Verde` - \n* `Africa/Abidjan` - \n* `Africa/Accra` - \n* `Africa/Bissau` - \n* `Africa/Casablanca` - \n* `Africa/El_Aaiun` - \n* `Africa/Monrovia` - \n* `America/Danmarkshavn` - \n* `Atlantic/Canary` - \n* `Atlantic/Faroe` - \n* `Atlantic/Reykjavik` - \n* `Etc/GMT` - \n* `Europe/Dublin` - \n* `Europe/Lisbon` - \n* `Europe/London` - \n* `Africa/Algiers` - \n* `Africa/Ceuta` - \n* `Africa/Lagos` - \n* `Africa/Ndjamena` - \n* `Africa/Tunis` - \n* `Africa/Windhoek` - \n* `Europe/Amsterdam` - \n* `Europe/Andorra` - \n* `Europe/Belgrade` - \n* `Europe/Berlin` - \n* `Europe/Brussels` - \n* `Europe/Budapest` - \n* `Europe/Copenhagen` - \n* `Europe/Gibraltar` - \n* `Europe/Luxembourg` - \n* `Europe/Madrid` - \n* `Europe/Malta` - \n* `Europe/Monaco` - \n* `Europe/Oslo` - \n* `Europe/Paris` - \n* `Europe/Prague` - \n* `Europe/Rome` - \n* `Europe/Stockholm` - \n* `Europe/Tirane` - \n* `Europe/Vienna` - \n* `Europe/Warsaw` - \n* `Europe/Zurich` - \n* `Africa/Cairo` - \n* `Africa/Johannesburg` - \n* `Africa/Maputo` - \n* `Africa/Tripoli` - \n* `Asia/Amman` - \n* `Asia/Beirut` - \n* `Asia/Damascus` - \n* `Asia/Gaza` - \n* `Asia/Jerusalem` - \n* `Asia/Nicosia` - \n* `Europe/Athens` - \n* `Europe/Bucharest` - \n* `Europe/Chisinau` - \n* `Europe/Helsinki` - \n* `Europe/Istanbul` - \n* `Europe/Kaliningrad` - \n* `Europe/Kiev` - \n* `Europe/Riga` - \n* `Europe/Sofia` - \n* `Europe/Tallinn` - \n* `Europe/Vilnius` - \n* `Africa/Khartoum` - \n* `Africa/Nairobi` - \n* `Antarctica/Syowa` - \n* `Asia/Baghdad` - \n* `Asia/Qatar` - \n* `Asia/Riyadh` - \n* `Europe/Minsk` - \n* `Europe/Moscow` - \n* `Asia/Tehran` - \n* `Asia/Baku` - \n* `Asia/Dubai` - \n* `Asia/Tbilisi` - \n* `Asia/Yerevan` - \n* `Europe/Samara` - \n* `Indian/Mahe` - \n* `Indian/Mauritius` - \n* `Indian/Reunion` - \n* `Asia/Kabul` - \n* `Antarctica/Mawson` - \n* `Asia/Aqtau` - \n* `Asia/Aqtobe` - \n* `Asia/Ashgabat` - \n* `Asia/Dushanbe` - \n* `Asia/Karachi` - \n* `Asia/Tashkent` - \n* `Asia/Yekaterinburg` - \n* `Indian/Kerguelen` - \n* `Indian/Maldives` - \n* `Asia/Calcutta` - \n* `Asia/Kolkata` - \n* `Asia/Colombo` - \n* `Asia/Katmandu` - \n* `Antarctica/Vostok` - \n* `Asia/Almaty` - \n* `Asia/Bishkek` - \n* `Asia/Dhaka` - \n* `Asia/Omsk` - \n* `Asia/Thimphu` - \n* `Indian/Chagos` - \n* `Asia/Rangoon` - \n* `Indian/Cocos` - \n* `Antarctica/Davis` - \n* `Asia/Bangkok` - \n* `Asia/Hovd` - \n* `Asia/Jakarta` - \n* `Asia/Krasnoyarsk` - \n* `Asia/Saigon` - \n* `Indian/Christmas` - \n* `Antarctica/Casey` - \n* `Asia/Brunei` - \n* `Asia/Choibalsan` - \n* `Asia/Hong_Kong` - \n* `Asia/Irkutsk` - \n* `Asia/Kuala_Lumpur` - \n* `Asia/Macau` - \n* `Asia/Makassar` - \n* `Asia/Manila` - \n* `Asia/Shanghai` - \n* `Asia/Singapore` - \n* `Asia/Taipei` - \n* `Asia/Ulaanbaatar` - \n* `Australia/Perth` - \n* `Asia/Pyongyang` - \n* `Asia/Dili` - \n* `Asia/Jayapura` - \n* `Asia/Seoul` - \n* `Asia/Tokyo` - \n* `Asia/Yakutsk` - \n* `Pacific/Palau` - \n* `Australia/Adelaide` - \n* `Australia/Darwin` - \n* `Antarctica/DumontDUrville` - \n* `Asia/Magadan` - \n* `Asia/Vladivostok` - \n* `Australia/Brisbane` - \n* `Australia/Hobart` - \n* `Australia/Sydney` - \n* `Pacific/Chuuk` - \n* `Pacific/Guam` - \n* `Pacific/Port_Moresby` - \n* `Pacific/Efate` - \n* `Pacific/Guadalcanal` - \n* `Pacific/Kosrae` - \n* `Pacific/Norfolk` - \n* `Pacific/Noumea` - \n* `Pacific/Pohnpei` - \n* `Asia/Kamchatka` - \n* `Pacific/Auckland` - \n* `Pacific/Fiji` - \n* `Pacific/Funafuti` - \n* `Pacific/Kwajalein` - \n* `Pacific/Majuro` - \n* `Pacific/Nauru` - \n* `Pacific/Tarawa` - \n* `Pacific/Wake` - \n* `Pacific/Wallis` - \n* `Pacific/Apia` - \n* `Pacific/Enderbury` - \n* `Pacific/Fakaofo` - \n* `Pacific/Tongatapu` - \n* `Pacific/Kiritimati` -"</para>
+        /// <para type="description">"Total number of CPU cores in this cluster. It is a cumulative number across all hosts in the cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HyperflexSysConfigPolicy.TimezoneEnum Timezone {
+        public long TotalCores {
             get;
             set;
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSysConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSysConfigPolicy")]
-    public class RemoveIntersightHyperflexSysConfigPolicy:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckPackageChecksum", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHealthCheckPackageChecksum:GetCmdletBase
 	{
-		public RemoveIntersightHyperflexSysConfigPolicy()
+		public GetIntersightHyperflexHealthCheckPackageChecksum()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexSysConfigPolicyWithHttpInfo";
+            MethodName = "GetHyperflexHealthCheckPackageChecksumListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexProxySettingPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexProxySettingPolicy")]
-    public class SetIntersightHyperflexProxySettingPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHealthCheckPackageChecksum")]
+    public class NewIntersightHyperflexHealthCheckPackageChecksum:NewCmdletBase
 	{
-		public SetIntersightHyperflexProxySettingPolicy()
+		public NewIntersightHyperflexHealthCheckPackageChecksum()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexProxySettingPolicy();
-            MethodName = "UpdateHyperflexProxySettingPolicyWithHttpInfo";
+            ModelObject = new HyperflexHealthCheckPackageChecksum();
+            MethodName = "CreateHyperflexHealthCheckPackageChecksumWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -8779,74 +9266,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to hyperflexClusterProfile resources."</para>
+        /// <para type="description">"SHA512 checksum of the health check package."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<HyperflexClusterProfileRelationship> ClusterProfiles {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"HTTP Proxy server FQDN or IP."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string Hostname {
+        public string Checksum {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
+        /// <para type="description">"Name of the health check Debian package."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
         public string Name {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"HyperFlex health check Debian package file name."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The password for the HTTP Proxy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Password {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HTTP Proxy port number.\nThe port number of the HTTP proxy must be between 1 and 65535, inclusive."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 65535)]
-        public long Port {
+        public string PackageName {
             get;
             set;
         }
@@ -8860,246 +9311,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The username for the HTTP Proxy."</para>
+        /// <para type="description">"Timestamp of last update of HyperFlex health check package checksum."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Username {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexProxySettingPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexProxySettingPolicy")]
-    public class RemoveIntersightHyperflexProxySettingPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexProxySettingPolicy()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexProxySettingPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexVmRestoreOperation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmRestoreOperation", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexVmRestoreOperation:GetCmdletBase
-	{
-		public GetIntersightHyperflexVmRestoreOperation()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexVmRestoreOperationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexVmRestoreOperation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVmRestoreOperation")]
-    public class NewIntersightHyperflexVmRestoreOperation:NewCmdletBase
-	{
-		public NewIntersightHyperflexVmRestoreOperation()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexVmRestoreOperation();
-            MethodName = "CreateHyperflexVmRestoreOperationWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
+        public DateTime Timestamp {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"New name for the Virtual Machine after recovery."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string NewName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Power on the Virtual Machine after recovery."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool PowerOn {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterRelationship RestoreEdgeClusterMoid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexVmBackupInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexVmBackupInfoRelationship VmBackupInfoMoid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexVmSnapshotInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexVmSnapshotInfoRelationship VmSnapshotInfoMoid {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New HyperflexAppCatalog.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAppCatalog")]
-    public class NewIntersightHyperflexAppCatalog:NewCmdletBase
-	{
-		public NewIntersightHyperflexAppCatalog()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexAppCatalog();
-            MethodName = "CreateHyperflexAppCatalogWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexFeatureLimitExternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexFeatureLimitExternalRelationship FeatureLimitExternal {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexFeatureLimitInternal resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexFeatureLimitInternalRelationship FeatureLimitInternal {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexHxdpVersion resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexHxdpVersionRelationship> HxdpVersions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexCapabilityInfo resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexCapabilityInfoRelationship> HyperflexCapabilityInfos {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hclHyperflexSoftwareCompatibilityInfo resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HclHyperflexSoftwareCompatibilityInfoRelationship> HyperflexSoftwareCompatibilityInfos {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexServerFirmwareVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexServerFirmwareVersionRelationship ServerFirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexServerModel resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexServerModelRelationship ServerModel {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to hyperflexSoftwareDistributionEntry resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<HyperflexSoftwareDistributionEntryRelationship> SoftwareDistributions {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The catalog version used in HyperFlex cluster configuration service."</para>
+        /// <para type="description">"HyperFlex health check Debian Package Version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -9109,236 +9330,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get HyperflexAppCatalog.</para>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexBackupCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAppCatalog", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightHyperflexAppCatalog:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexBackupCluster", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexBackupCluster:GetCmdletBase
 	{
-		public GetIntersightHyperflexAppCatalog()
+		public GetIntersightHyperflexBackupCluster()
 		{
 			ApiInstance = new HyperflexApi(Config);
-            MethodName = "GetHyperflexAppCatalogListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicyDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicyDeployment")]
-    public class SetIntersightHyperflexClusterBackupPolicyDeployment:SetCmdletBase
-	{
-		public SetIntersightHyperflexClusterBackupPolicyDeployment()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexClusterBackupPolicyDeployment();
-            MethodName = "UpdateHyperflexClusterBackupPolicyDeploymentWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterRelationship BackupTarget {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if record created by discovery on HyperFlex cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Discovered {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexClusterRelationship SourceCluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if policy was detached from source Hyperflex Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool SourceDetached {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"True if policy was detached from target Hyperflex Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool TargetDetached {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicyDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicyDeployment")]
-    public class RemoveIntersightHyperflexClusterBackupPolicyDeployment:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexClusterBackupPolicyDeployment()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexClusterBackupPolicyDeploymentWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionComponent.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionComponent")]
-    public class SetIntersightHyperflexSoftwareDistributionComponent:SetCmdletBase
-	{
-		public SetIntersightHyperflexSoftwareDistributionComponent()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            ModelObject = new HyperflexSoftwareDistributionComponent();
-            MethodName = "UpdateHyperflexSoftwareDistributionComponentWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The bucket name where the files are present, if source is external cloud store."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string BucketName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution Component Identifier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ComponentId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution Component Name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ComponentName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"File location on the cloud storage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FilePath {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> FilesToDownload {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a hyperflexSoftwareDistributionVersion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HyperflexSoftwareDistributionVersionRelationship SoftwareDistributionVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The HyperFlex Software Distribution Component Version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionComponent.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionComponent")]
-    public class RemoveIntersightHyperflexSoftwareDistributionComponent:RemoveCmdletBase
-	{
-		public RemoveIntersightHyperflexSoftwareDistributionComponent()
-		{
-			ApiInstance = new HyperflexApi(Config);
-            MethodName = "DeleteHyperflexSoftwareDistributionComponentWithHttpInfo";
+            MethodName = "GetHyperflexBackupClusterListWithHttpInfo";
 		}
     }
 }

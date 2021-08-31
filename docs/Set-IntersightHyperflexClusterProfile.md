@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterProfile [-Action< string>][-AdditionalProperties< 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
+Update a &apos;HyperflexClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -746,9 +746,9 @@ PS C:\> Set-IntersightHyperflexClusterProfile
 
 [Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
 
-[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
-
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
+
+[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
 [Initialize-IntersightCommIpV4Interface](./Initialize-IntersightCommIpV4Interface.md)
 

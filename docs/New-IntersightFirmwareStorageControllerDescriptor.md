@@ -220,8 +220,8 @@ PS C:\> New-IntersightFirmwareStorageControllerDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)
-
 [Set-IntersightFirmwareStorageControllerDescriptor](./Set-IntersightFirmwareStorageControllerDescriptor.md)
 
 [Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)
+
+[Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)

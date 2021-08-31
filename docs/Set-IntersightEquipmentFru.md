@@ -19,7 +19,7 @@ Set-IntersightEquipmentFru [-Action< EquipmentFru.ActionEnum>][-AdditionalProper
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentFru&apos; resource.
+Update a &amp;apos;EquipmentFru&amp;apos; resource.
 
 ## PARAMETERS
 

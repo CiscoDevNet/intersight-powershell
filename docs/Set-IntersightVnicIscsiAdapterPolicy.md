@@ -19,7 +19,7 @@ Set-IntersightVnicIscsiAdapterPolicy [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
+Update a &apos;VnicIscsiAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ PS C:\> Set-IntersightVnicIscsiAdapterPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightVnicIscsiAdapterPolicy](./Remove-IntersightVnicIscsiAdapterPolicy.md)
+
 [Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
 
 [New-IntersightVnicIscsiAdapterPolicy](./New-IntersightVnicIscsiAdapterPolicy.md)
-
-[Remove-IntersightVnicIscsiAdapterPolicy](./Remove-IntersightVnicIscsiAdapterPolicy.md)

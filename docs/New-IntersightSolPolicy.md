@@ -225,6 +225,6 @@ PS C:\> New-IntersightSolPolicy
 
 [Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
-[Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
-
 [Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
+
+[Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)

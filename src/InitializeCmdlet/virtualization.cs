@@ -113,15 +113,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiOvaCustomSpec.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiVmComputeConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiOvaCustomSpec")]
-    public class InitializeIntersightVirtualizationEsxiOvaCustomSpec:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiVmComputeConfiguration")]
+    public class InitializeIntersightVirtualizationEsxiVmComputeConfiguration:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationEsxiOvaCustomSpec()
+		public InitializeIntersightVirtualizationEsxiVmComputeConfiguration()
 		{
-            ClassId = VirtualizationEsxiOvaCustomSpec.ClassIdEnum.VirtualizationEsxiOvaCustomSpec;
-            ObjectType = VirtualizationEsxiOvaCustomSpec.ObjectTypeEnum.VirtualizationEsxiOvaCustomSpec;
+            ClassId = VirtualizationEsxiVmComputeConfiguration.ClassIdEnum.VirtualizationEsxiVmComputeConfiguration;
+            ObjectType = VirtualizationEsxiVmComputeConfiguration.ObjectTypeEnum.VirtualizationEsxiVmComputeConfiguration;
             
 		}
         // <summary>
@@ -138,16 +138,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationEsxiOvaCustomSpec.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specify the Extra Config specification which can be configured on virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object ExtraConfig {
+        public VirtualizationEsxiVmComputeConfiguration.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -156,48 +147,97 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationEsxiOvaCustomSpec.ObjectTypeEnum ObjectType {
+        public VirtualizationEsxiVmComputeConfiguration.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Specify the OVA Environment specification which can be configured on the virtual machine."</para>
+        /// <para type="description">"ResourcePool where virtual machine is deployed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public object OvaEnvSpec {
+        public string ResourcePool {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationEsxiOvaCustomSpec initObject = new Intersight.Model.VirtualizationEsxiOvaCustomSpec();
+             Intersight.Model.VirtualizationEsxiVmComputeConfiguration initObject = new Intersight.Model.VirtualizationEsxiVmComputeConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraConfig"))
-            {
-                initObject.ExtraConfig = this.ExtraConfig;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OvaEnvSpec"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePool"))
             {
-                initObject.OvaEnvSpec = this.OvaEnvSpec;
+                initObject.ResourcePool = this.ResourcePool;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationBaseCustomSpec.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationActionInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationBaseCustomSpec")]
-    public class InitializeIntersightVirtualizationBaseCustomSpec:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationActionInfo")]
+    public class InitializeIntersightVirtualizationActionInfo:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationBaseCustomSpec()
+		public InitializeIntersightVirtualizationActionInfo()
+		{
+            ClassId = VirtualizationActionInfo.ClassIdEnum.VirtualizationActionInfo;
+            ObjectType = VirtualizationActionInfo.ObjectTypeEnum.VirtualizationActionInfo;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationActionInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationActionInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationActionInfo initObject = new Intersight.Model.VirtualizationActionInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationBaseVmConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationBaseVmConfiguration")]
+    public class InitializeIntersightVirtualizationBaseVmConfiguration:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationBaseVmConfiguration()
 		{
             
 		}
@@ -215,7 +255,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationBaseCustomSpec.ClassIdEnum ClassId {
+        public VirtualizationBaseVmConfiguration.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -224,14 +264,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationBaseCustomSpec.ObjectTypeEnum ObjectType {
+        public VirtualizationBaseVmConfiguration.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationBaseCustomSpec initObject = new Intersight.Model.VirtualizationBaseCustomSpec();
+             Intersight.Model.VirtualizationBaseVmConfiguration initObject = new Intersight.Model.VirtualizationBaseVmConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -243,15 +283,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationCpuInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationGuestInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationCpuInfo")]
-    public class InitializeIntersightVirtualizationCpuInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationGuestInfo")]
+    public class InitializeIntersightVirtualizationGuestInfo:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationCpuInfo()
+		public InitializeIntersightVirtualizationGuestInfo()
 		{
-            ClassId = VirtualizationCpuInfo.ClassIdEnum.VirtualizationCpuInfo;
-            ObjectType = VirtualizationCpuInfo.ObjectTypeEnum.VirtualizationCpuInfo;
+            ClassId = VirtualizationGuestInfo.ClassIdEnum.VirtualizationGuestInfo;
+            ObjectType = VirtualizationGuestInfo.ObjectTypeEnum.VirtualizationGuestInfo;
             
 		}
         // <summary>
@@ -268,25 +308,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationCpuInfo.ClassIdEnum ClassId {
+        public VirtualizationGuestInfo.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Number of cores per CPU, as reported by the manufacturer."</para>
+        /// <para type="description">"Name provided to the host OS (example, ubuntu6410, test-gateway, etc.)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long Cores {
+        public string Hostname {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The vendor provided description of the CPU. For example, Intel Xeon E5-2640 v3 @ 2.60GHz."</para>
+        /// <para type="description">"Primary IP address of the guest os."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Description {
+        public string IpAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the guest running on this VM. This may not be the same as the hostname."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
             get;
             set;
         }
@@ -295,67 +344,308 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationCpuInfo.ObjectTypeEnum ObjectType {
+        public VirtualizationGuestInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Number of CPU sockets available."</para>
+        /// <para type="description">"The name of the guest OS running on this VM (Cent OS 4/5/6/7)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long Sockets {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Speed of the CPUs in Hertz. For example, 2593749663."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Speed {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Manufacturer of the CPU . For example, Intel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Vendor {
+        public string OperatingSystem {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationCpuInfo initObject = new Intersight.Model.VirtualizationCpuInfo();
+             Intersight.Model.VirtualizationGuestInfo initObject = new Intersight.Model.VirtualizationGuestInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Cores"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Hostname"))
             {
-                initObject.Cores = this.Cores;
+                initObject.Hostname = this.Hostname;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpAddress"))
             {
-                initObject.Description = this.Description;
+                initObject.IpAddress = this.IpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sockets"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("OperatingSystem"))
             {
-                initObject.Sockets = this.Sockets;
+                initObject.OperatingSystem = this.OperatingSystem;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Speed"))
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationProductInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationProductInfo")]
+    public class InitializeIntersightVirtualizationProductInfo:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationProductInfo()
+		{
+            ClassId = VirtualizationProductInfo.ClassIdEnum.VirtualizationProductInfo;
+            ObjectType = VirtualizationProductInfo.ObjectTypeEnum.VirtualizationProductInfo;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The build number of the hypervisor running on this host (e.g., 4541947, 6.3.9600.18692). The build number may indicate some feature support that applications might rely on. The build number may not always be an integer."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Build {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationProductInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationProductInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Commercial product name. For example, VMware ESXi."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ProductName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product name provided by the vendor. For example, embeddedEsx."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ProductType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Commercial vendor name. For example, VMware Inc."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ProductVendor {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Hypervisor version running on the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationProductInfo initObject = new Intersight.Model.VirtualizationProductInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.Speed = this.Speed;
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Build"))
             {
-                initObject.Vendor = this.Vendor;
+                initObject.Build = this.Build;
             }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductType"))
+            {
+                initObject.ProductType = this.ProductType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductVendor"))
+            {
+                initObject.ProductVendor = this.ProductVendor;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVlanRange.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVlanRange")]
+    public class InitializeIntersightVirtualizationVmwareVlanRange:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationVmwareVlanRange()
+		{
+            ClassId = VirtualizationVmwareVlanRange.ClassIdEnum.VirtualizationVmwareVlanRange;
+            ObjectType = VirtualizationVmwareVlanRange.ObjectTypeEnum.VirtualizationVmwareVlanRange;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVlanRange.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVlanRange.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"End value of VLAN range for the trunk port. The valid range is from 0 to 4094."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long VlanRangeEnd {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Start value of VLAN range for the trunk port. The valid range is from 0 to 4094."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long VlanRangeStart {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationVmwareVlanRange initObject = new Intersight.Model.VirtualizationVmwareVlanRange();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanRangeEnd"))
+            {
+                initObject.VlanRangeEnd = this.VlanRangeEnd;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanRangeStart"))
+            {
+                initObject.VlanRangeStart = this.VlanRangeStart;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiVmNetworkConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiVmNetworkConfiguration")]
+    public class InitializeIntersightVirtualizationEsxiVmNetworkConfiguration:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationEsxiVmNetworkConfiguration()
+		{
+            ClassId = VirtualizationEsxiVmNetworkConfiguration.ClassIdEnum.VirtualizationEsxiVmNetworkConfiguration;
+            ObjectType = VirtualizationEsxiVmNetworkConfiguration.ObjectTypeEnum.VirtualizationEsxiVmNetworkConfiguration;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationEsxiVmNetworkConfiguration.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.VirtualizationNetworkInterface> Interfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationEsxiVmNetworkConfiguration.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationEsxiVmNetworkConfiguration initObject = new Intersight.Model.VirtualizationEsxiVmNetworkConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
+            {
+                initObject.Interfaces = this.Interfaces;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -448,6 +738,295 @@ namespace Intersight.PowerShell
             {
                 initObject.Used = this.Used;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationMemoryCapacity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationMemoryCapacity")]
+    public class InitializeIntersightVirtualizationMemoryCapacity:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationMemoryCapacity()
+		{
+            ClassId = VirtualizationMemoryCapacity.ClassIdEnum.VirtualizationMemoryCapacity;
+            ObjectType = VirtualizationMemoryCapacity.ObjectTypeEnum.VirtualizationMemoryCapacity;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The total memory capacity of the entity in bytes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Capacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationMemoryCapacity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Free memory (bytes) that is unused and available for allocation, as a point-in-time snapshot. The available memory capacity is reported for an entity (such as Host or Cluster) when inventory data is collected for that entity. As part of the inventory data, a snapshot of the free and used memory capacity is also reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Free {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationMemoryCapacity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Memory (bytes) that has been already used up, as a point-in-time snapshot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Used {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationMemoryCapacity initObject = new Intersight.Model.VirtualizationMemoryCapacity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capacity"))
+            {
+                initObject.Capacity = this.Capacity;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Free"))
+            {
+                initObject.Free = this.Free;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
+            {
+                initObject.Used = this.Used;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationComputeCapacity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationComputeCapacity")]
+    public class InitializeIntersightVirtualizationComputeCapacity:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationComputeCapacity()
+		{
+            ClassId = VirtualizationComputeCapacity.ClassIdEnum.VirtualizationComputeCapacity;
+            ObjectType = VirtualizationComputeCapacity.ObjectTypeEnum.VirtualizationComputeCapacity;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total capacity of the entity in MHz."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Capacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationComputeCapacity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Free CPU capacity in MHz, as a point-in-time snapshot. The available CPU capacity is reported for an entity (such as Host or Cluster) when inventory data is collected for that entity. As part of the inventory data, a snapshot of the free and used CPU capacity is also reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Free {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationComputeCapacity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used CPU capacity of the entity in MHz, as a point-in-time snapshot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Used {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationComputeCapacity initObject = new Intersight.Model.VirtualizationComputeCapacity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capacity"))
+            {
+                initObject.Capacity = this.Capacity;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Free"))
+            {
+                initObject.Free = this.Free;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
+            {
+                initObject.Used = this.Used;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmMemoryShareInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmMemoryShareInfo")]
+    public class InitializeIntersightVirtualizationVmwareVmMemoryShareInfo:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationVmwareVmMemoryShareInfo()
+		{
+            ClassId = VirtualizationVmwareVmMemoryShareInfo.ClassIdEnum.VirtualizationVmwareVmMemoryShareInfo;
+            ObjectType = VirtualizationVmwareVmMemoryShareInfo.ObjectTypeEnum.VirtualizationVmwareVmMemoryShareInfo;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVmMemoryShareInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Limit on the memory sharing imposed (in Mbytes)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MemLimit {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Limit on memory overhead imposed (in Mbytes)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MemOverheadLimit {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Similar to CPU reservations (Mbytes)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MemReservation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Similar to CPU Shares but applicable to memory. There is no unit for this value. It is a relative measure based on the settings for other resource pools."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MemShares {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVmMemoryShareInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationVmwareVmMemoryShareInfo initObject = new Intersight.Model.VirtualizationVmwareVmMemoryShareInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemLimit"))
+            {
+                initObject.MemLimit = this.MemLimit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemOverheadLimit"))
+            {
+                initObject.MemOverheadLimit = this.MemOverheadLimit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemReservation"))
+            {
+                initObject.MemReservation = this.MemReservation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemShares"))
+            {
+                initObject.MemShares = this.MemShares;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -665,6 +1244,85 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiCloneCustomSpec.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiCloneCustomSpec")]
+    public class InitializeIntersightVirtualizationEsxiCloneCustomSpec:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationEsxiCloneCustomSpec()
+		{
+            ClassId = VirtualizationEsxiCloneCustomSpec.ClassIdEnum.VirtualizationEsxiCloneCustomSpec;
+            ObjectType = VirtualizationEsxiCloneCustomSpec.ObjectTypeEnum.VirtualizationEsxiCloneCustomSpec;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationEsxiCloneCustomSpec.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specify the Extra Config specification which can be configured on virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object ExtraConfig {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationEsxiCloneCustomSpec.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specify the OVA Environment specification which can be configured on virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object OvaEnvSpec {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationEsxiCloneCustomSpec initObject = new Intersight.Model.VirtualizationEsxiCloneCustomSpec();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraConfig"))
+            {
+                initObject.ExtraConfig = this.ExtraConfig;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OvaEnvSpec"))
+            {
+                initObject.OvaEnvSpec = this.OvaEnvSpec;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationCloudInitConfig.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationCloudInitConfig")]
@@ -783,125 +1441,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVirtualDiskConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVirtualDiskConfig")]
-    public class InitializeIntersightVirtualizationVirtualDiskConfig:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationVirtualDiskConfig()
-		{
-            ClassId = VirtualizationVirtualDiskConfig.ClassIdEnum.VirtualizationVirtualDiskConfig;
-            Mode = VirtualizationVirtualDiskConfig.ModeEnum.Block;
-            ObjectType = VirtualizationVirtualDiskConfig.ObjectTypeEnum.VirtualizationVirtualDiskConfig;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Capacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualDiskConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"File mode of the disk, example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualDiskConfig.ModeEnum Mode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualDiskConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceCerts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Source disk name from where the clone is done."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceDiskToClone {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk image source for the virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceFilePath {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationVirtualDiskConfig initObject = new Intersight.Model.VirtualizationVirtualDiskConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capacity"))
-            {
-                initObject.Capacity = this.Capacity;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SourceCerts"))
-            {
-                initObject.SourceCerts = this.SourceCerts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SourceDiskToClone"))
-            {
-                initObject.SourceDiskToClone = this.SourceDiskToClone;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SourceFilePath"))
-            {
-                initObject.SourceFilePath = this.SourceFilePath;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiVmStorageConfiguration.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiVmStorageConfiguration")]
@@ -981,15 +1520,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmDiskCommitInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareRemoteDisplayInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmDiskCommitInfo")]
-    public class InitializeIntersightVirtualizationVmwareVmDiskCommitInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareRemoteDisplayInfo")]
+    public class InitializeIntersightVirtualizationVmwareRemoteDisplayInfo:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationVmwareVmDiskCommitInfo()
+		public InitializeIntersightVirtualizationVmwareRemoteDisplayInfo()
 		{
-            ClassId = VirtualizationVmwareVmDiskCommitInfo.ClassIdEnum.VirtualizationVmwareVmDiskCommitInfo;
-            ObjectType = VirtualizationVmwareVmDiskCommitInfo.ObjectTypeEnum.VirtualizationVmwareVmDiskCommitInfo;
+            ClassId = VirtualizationVmwareRemoteDisplayInfo.ClassIdEnum.VirtualizationVmwareRemoteDisplayInfo;
+            ObjectType = VirtualizationVmwareRemoteDisplayInfo.ObjectTypeEnum.VirtualizationVmwareRemoteDisplayInfo;
             
 		}
         // <summary>
@@ -1006,16 +1545,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVmDiskCommitInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk committed in bytes on this virtual machine (disk space used up)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CommittedDisk {
+        public VirtualizationVmwareRemoteDisplayInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1024,220 +1554,58 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVmDiskCommitInfo.ObjectTypeEnum ObjectType {
+        public VirtualizationVmwareRemoteDisplayInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Total uncommitted disk space that is available for use (in bytes)."</para>
+        /// <para type="description">"The password used for remote access. It is stored base64 encoded."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long UnCommittedDisk {
+        public string RemoteDisplayPassword {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Total unshared disk space (in bytes)."</para>
+        /// <para type="description">"The access key for the remote display, potentially a long string."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long UnsharedDisk {
+        public string RemoteDisplayVncKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Applies only when remoteDisplayvnc is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long RemoteDisplayVncPort {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationVmwareVmDiskCommitInfo initObject = new Intersight.Model.VirtualizationVmwareVmDiskCommitInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CommittedDisk"))
-            {
-                initObject.CommittedDisk = this.CommittedDisk;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("UnCommittedDisk"))
-            {
-                initObject.UnCommittedDisk = this.UnCommittedDisk;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UnsharedDisk"))
-            {
-                initObject.UnsharedDisk = this.UnsharedDisk;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVlanRange.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVlanRange")]
-    public class InitializeIntersightVirtualizationVmwareVlanRange:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationVmwareVlanRange()
-		{
-            ClassId = VirtualizationVmwareVlanRange.ClassIdEnum.VirtualizationVmwareVlanRange;
-            ObjectType = VirtualizationVmwareVlanRange.ObjectTypeEnum.VirtualizationVmwareVlanRange;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVlanRange.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVlanRange.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"End value of VLAN range for the trunk port. The valid range is from 0 to 4094."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long VlanRangeEnd {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Start value of VLAN range for the trunk port. The valid range is from 0 to 4094."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long VlanRangeStart {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationVmwareVlanRange initObject = new Intersight.Model.VirtualizationVmwareVlanRange();
+             Intersight.Model.VirtualizationVmwareRemoteDisplayInfo initObject = new Intersight.Model.VirtualizationVmwareRemoteDisplayInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("VlanRangeEnd"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RemoteDisplayPassword"))
             {
-                initObject.VlanRangeEnd = this.VlanRangeEnd;
+                initObject.RemoteDisplayPassword = this.RemoteDisplayPassword;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VlanRangeStart"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RemoteDisplayVncKey"))
             {
-                initObject.VlanRangeStart = this.VlanRangeStart;
+                initObject.RemoteDisplayVncKey = this.RemoteDisplayVncKey;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationComputeCapacity.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationComputeCapacity")]
-    public class InitializeIntersightVirtualizationComputeCapacity:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationComputeCapacity()
-		{
-            ClassId = VirtualizationComputeCapacity.ClassIdEnum.VirtualizationComputeCapacity;
-            ObjectType = VirtualizationComputeCapacity.ObjectTypeEnum.VirtualizationComputeCapacity;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total capacity of the entity in MHz."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Capacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationComputeCapacity.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Free CPU capacity in MHz, as a point-in-time snapshot. The available CPU capacity is reported for an entity (such as Host or Cluster) when inventory data is collected for that entity. As part of the inventory data, a snapshot of the free and used CPU capacity is also reported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Free {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationComputeCapacity.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Used CPU capacity of the entity in MHz, as a point-in-time snapshot."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Used {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationComputeCapacity initObject = new Intersight.Model.VirtualizationComputeCapacity();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RemoteDisplayVncPort"))
             {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capacity"))
-            {
-                initObject.Capacity = this.Capacity;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Free"))
-            {
-                initObject.Free = this.Free;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
-            {
-                initObject.Used = this.Used;
+                initObject.RemoteDisplayVncPort = this.RemoteDisplayVncPort;
             }
             WriteObject(initObject);
         }
@@ -1318,6 +1686,57 @@ namespace Intersight.PowerShell
             {
                 initObject.Shares = this.Shares;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationBaseCustomSpec.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationBaseCustomSpec")]
+    public class InitializeIntersightVirtualizationBaseCustomSpec:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationBaseCustomSpec()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseCustomSpec.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseCustomSpec.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationBaseCustomSpec initObject = new Intersight.Model.VirtualizationBaseCustomSpec();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -1493,15 +1912,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareRemoteDisplayInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationCpuInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareRemoteDisplayInfo")]
-    public class InitializeIntersightVirtualizationVmwareRemoteDisplayInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationCpuInfo")]
+    public class InitializeIntersightVirtualizationCpuInfo:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationVmwareRemoteDisplayInfo()
+		public InitializeIntersightVirtualizationCpuInfo()
 		{
-            ClassId = VirtualizationVmwareRemoteDisplayInfo.ClassIdEnum.VirtualizationVmwareRemoteDisplayInfo;
-            ObjectType = VirtualizationVmwareRemoteDisplayInfo.ObjectTypeEnum.VirtualizationVmwareRemoteDisplayInfo;
+            ClassId = VirtualizationCpuInfo.ClassIdEnum.VirtualizationCpuInfo;
+            ObjectType = VirtualizationCpuInfo.ObjectTypeEnum.VirtualizationCpuInfo;
             
 		}
         // <summary>
@@ -1518,7 +1937,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareRemoteDisplayInfo.ClassIdEnum ClassId {
+        public VirtualizationCpuInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of cores per CPU, as reported by the manufacturer."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Cores {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vendor provided description of the CPU. For example, Intel Xeon E5-2640 v3 @ 2.60GHz."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
             get;
             set;
         }
@@ -1527,73 +1964,82 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareRemoteDisplayInfo.ObjectTypeEnum ObjectType {
+        public VirtualizationCpuInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The password used for remote access. It is stored base64 encoded."</para>
+        /// <para type="description">"Number of CPU sockets available."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string RemoteDisplayPassword {
+        public long Sockets {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The access key for the remote display, potentially a long string."</para>
+        /// <para type="description">"Speed of the CPUs in Hertz. For example, 2593749663."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string RemoteDisplayVncKey {
+        public long Speed {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Applies only when remoteDisplayvnc is enabled."</para>
+        /// <para type="description">"Manufacturer of the CPU . For example, Intel."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long RemoteDisplayVncPort {
+        public string Vendor {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationVmwareRemoteDisplayInfo initObject = new Intersight.Model.VirtualizationVmwareRemoteDisplayInfo();
+             Intersight.Model.VirtualizationCpuInfo initObject = new Intersight.Model.VirtualizationCpuInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cores"))
+            {
+                initObject.Cores = this.Cores;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RemoteDisplayPassword"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sockets"))
             {
-                initObject.RemoteDisplayPassword = this.RemoteDisplayPassword;
+                initObject.Sockets = this.Sockets;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RemoteDisplayVncKey"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Speed"))
             {
-                initObject.RemoteDisplayVncKey = this.RemoteDisplayVncKey;
+                initObject.Speed = this.Speed;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RemoteDisplayVncPort"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
             {
-                initObject.RemoteDisplayVncPort = this.RemoteDisplayVncPort;
+                initObject.Vendor = this.Vendor;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationGuestInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVirtualDiskConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationGuestInfo")]
-    public class InitializeIntersightVirtualizationGuestInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVirtualDiskConfig")]
+    public class InitializeIntersightVirtualizationVirtualDiskConfig:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationGuestInfo()
+		public InitializeIntersightVirtualizationVirtualDiskConfig()
 		{
-            ClassId = VirtualizationGuestInfo.ClassIdEnum.VirtualizationGuestInfo;
-            ObjectType = VirtualizationGuestInfo.ObjectTypeEnum.VirtualizationGuestInfo;
+            ClassId = VirtualizationVirtualDiskConfig.ClassIdEnum.VirtualizationVirtualDiskConfig;
+            Mode = VirtualizationVirtualDiskConfig.ModeEnum.Block;
+            ObjectType = VirtualizationVirtualDiskConfig.ObjectTypeEnum.VirtualizationVirtualDiskConfig;
             
 		}
         // <summary>
@@ -1606,107 +2052,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationGuestInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name provided to the host OS (example, ubuntu6410, test-gateway, etc.)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Hostname {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Primary IP address of the guest os."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string IpAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the guest running on this VM. This may not be the same as the hostname."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationGuestInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the guest OS running on this VM (Cent OS 4/5/6/7)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OperatingSystem {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationGuestInfo initObject = new Intersight.Model.VirtualizationGuestInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Hostname"))
-            {
-                initObject.Hostname = this.Hostname;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpAddress"))
-            {
-                initObject.IpAddress = this.IpAddress;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperatingSystem"))
-            {
-                initObject.OperatingSystem = this.OperatingSystem;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmCpuShareInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmCpuShareInfo")]
-    public class InitializeIntersightVirtualizationVmwareVmCpuShareInfo:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationVmwareVmCpuShareInfo()
-		{
-            ClassId = VirtualizationVmwareVmCpuShareInfo.ClassIdEnum.VirtualizationVmwareVmCpuShareInfo;
-            ObjectType = VirtualizationVmwareVmCpuShareInfo.ObjectTypeEnum.VirtualizationVmwareVmCpuShareInfo;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
+        public string Capacity {
             get;
             set;
         }
@@ -1715,43 +2065,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVmCpuShareInfo.ClassIdEnum ClassId {
+        public VirtualizationVirtualDiskConfig.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Upper limit on CPU allocation (MHz)."</para>
+        /// <para type="description">"File mode of the disk, example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long CpuLimit {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Amount of CPU for virtualization overhead."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CpuOverheadLimit {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Guaranteed minimum allocation of CPU resource (MHz)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CpuReservation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Shows the relative importance of a VM. There is no unit for this value. It is a relative measure based on the settings for other resource pools. For more information, see VMware documentation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CpuShares {
+        public VirtualizationVirtualDiskConfig.ModeEnum Mode {
             get;
             set;
         }
@@ -1760,215 +2083,41 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVmCpuShareInfo.ObjectTypeEnum ObjectType {
+        public VirtualizationVirtualDiskConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceCerts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source disk name from where the clone is done."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceDiskToClone {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk image source for the virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceFilePath {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationVmwareVmCpuShareInfo initObject = new Intersight.Model.VirtualizationVmwareVmCpuShareInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CpuLimit"))
-            {
-                initObject.CpuLimit = this.CpuLimit;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("CpuOverheadLimit"))
-            {
-                initObject.CpuOverheadLimit = this.CpuOverheadLimit;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("CpuReservation"))
-            {
-                initObject.CpuReservation = this.CpuReservation;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("CpuShares"))
-            {
-                initObject.CpuShares = this.CpuShares;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationMemoryAllocation.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationMemoryAllocation")]
-    public class InitializeIntersightVirtualizationMemoryAllocation:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationMemoryAllocation()
-		{
-            ClassId = VirtualizationMemoryAllocation.ClassIdEnum.VirtualizationMemoryAllocation;
-            ObjectType = VirtualizationMemoryAllocation.ObjectTypeEnum.VirtualizationMemoryAllocation;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryAllocation.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Free memory on the entity in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Free {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryAllocation.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Reserved memory on the entity in bytes. These reserved memory can be used for system purposes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Reserved {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total memory capacity of the entity in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Total {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Used or allocated memory on the entity represented in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Used {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationMemoryAllocation initObject = new Intersight.Model.VirtualizationMemoryAllocation();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Free"))
-            {
-                initObject.Free = this.Free;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Reserved"))
-            {
-                initObject.Reserved = this.Reserved;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Total"))
-            {
-                initObject.Total = this.Total;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
-            {
-                initObject.Used = this.Used;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationMemoryCapacity.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationMemoryCapacity")]
-    public class InitializeIntersightVirtualizationMemoryCapacity:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationMemoryCapacity()
-		{
-            ClassId = VirtualizationMemoryCapacity.ClassIdEnum.VirtualizationMemoryCapacity;
-            ObjectType = VirtualizationMemoryCapacity.ObjectTypeEnum.VirtualizationMemoryCapacity;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total memory capacity of the entity in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Capacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryCapacity.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Free memory (bytes) that is unused and available for allocation, as a point-in-time snapshot. The available memory capacity is reported for an entity (such as Host or Cluster) when inventory data is collected for that entity. As part of the inventory data, a snapshot of the free and used memory capacity is also reported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Free {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationMemoryCapacity.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Memory (bytes) that has been already used up, as a point-in-time snapshot."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Used {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationMemoryCapacity initObject = new Intersight.Model.VirtualizationMemoryCapacity();
+             Intersight.Model.VirtualizationVirtualDiskConfig initObject = new Intersight.Model.VirtualizationVirtualDiskConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1978,211 +2127,23 @@ namespace Intersight.PowerShell
                 initObject.Capacity = this.Capacity;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Free"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
             {
-                initObject.Free = this.Free;
+                initObject.Mode = this.Mode;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceCerts"))
             {
-                initObject.Used = this.Used;
+                initObject.SourceCerts = this.SourceCerts;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmCpuSocketInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmCpuSocketInfo")]
-    public class InitializeIntersightVirtualizationVmwareVmCpuSocketInfo:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationVmwareVmCpuSocketInfo()
-		{
-            ClassId = VirtualizationVmwareVmCpuSocketInfo.ClassIdEnum.VirtualizationVmwareVmCpuSocketInfo;
-            ObjectType = VirtualizationVmwareVmCpuSocketInfo.ObjectTypeEnum.VirtualizationVmwareVmCpuSocketInfo;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVmCpuSocketInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of core per CPU socket (value may be empty)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CoresPerSocket {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of CPUs allocated to this VM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumCpus {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of CPU sockets allocated."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumSockets {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVmCpuSocketInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationVmwareVmCpuSocketInfo initObject = new Intersight.Model.VirtualizationVmwareVmCpuSocketInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceDiskToClone"))
             {
-                initObject.AdditionalProperties = this.AdditionalProperties;
+                initObject.SourceDiskToClone = this.SourceDiskToClone;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CoresPerSocket"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceFilePath"))
             {
-                initObject.CoresPerSocket = this.CoresPerSocket;
+                initObject.SourceFilePath = this.SourceFilePath;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumCpus"))
-            {
-                initObject.NumCpus = this.NumCpus;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumSockets"))
-            {
-                initObject.NumSockets = this.NumSockets;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationActionInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationActionInfo")]
-    public class InitializeIntersightVirtualizationActionInfo:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationActionInfo()
-		{
-            ClassId = VirtualizationActionInfo.ClassIdEnum.VirtualizationActionInfo;
-            ObjectType = VirtualizationActionInfo.ObjectTypeEnum.VirtualizationActionInfo;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationActionInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationActionInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationActionInfo initObject = new Intersight.Model.VirtualizationActionInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationBaseVmConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationBaseVmConfiguration")]
-    public class InitializeIntersightVirtualizationBaseVmConfiguration:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationBaseVmConfiguration()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseVmConfiguration.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseVmConfiguration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationBaseVmConfiguration initObject = new Intersight.Model.VirtualizationBaseVmConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -2319,15 +2280,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiVmNetworkConfiguration.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmDiskCommitInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiVmNetworkConfiguration")]
-    public class InitializeIntersightVirtualizationEsxiVmNetworkConfiguration:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmDiskCommitInfo")]
+    public class InitializeIntersightVirtualizationVmwareVmDiskCommitInfo:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationEsxiVmNetworkConfiguration()
+		public InitializeIntersightVirtualizationVmwareVmDiskCommitInfo()
 		{
-            ClassId = VirtualizationEsxiVmNetworkConfiguration.ClassIdEnum.VirtualizationEsxiVmNetworkConfiguration;
-            ObjectType = VirtualizationEsxiVmNetworkConfiguration.ObjectTypeEnum.VirtualizationEsxiVmNetworkConfiguration;
+            ClassId = VirtualizationVmwareVmDiskCommitInfo.ClassIdEnum.VirtualizationVmwareVmDiskCommitInfo;
+            ObjectType = VirtualizationVmwareVmDiskCommitInfo.ObjectTypeEnum.VirtualizationVmwareVmDiskCommitInfo;
             
 		}
         // <summary>
@@ -2344,73 +2305,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationEsxiVmNetworkConfiguration.ClassIdEnum ClassId {
+        public VirtualizationVmwareVmDiskCommitInfo.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"Disk committed in bytes on this virtual machine (disk space used up)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<Model.VirtualizationNetworkInterface> Interfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationEsxiVmNetworkConfiguration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationEsxiVmNetworkConfiguration initObject = new Intersight.Model.VirtualizationEsxiVmNetworkConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
-            {
-                initObject.Interfaces = this.Interfaces;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiVmComputeConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiVmComputeConfiguration")]
-    public class InitializeIntersightVirtualizationEsxiVmComputeConfiguration:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationEsxiVmComputeConfiguration()
-		{
-            ClassId = VirtualizationEsxiVmComputeConfiguration.ClassIdEnum.VirtualizationEsxiVmComputeConfiguration;
-            ObjectType = VirtualizationEsxiVmComputeConfiguration.ObjectTypeEnum.VirtualizationEsxiVmComputeConfiguration;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationEsxiVmComputeConfiguration.ClassIdEnum ClassId {
+        public long CommittedDisk {
             get;
             set;
         }
@@ -2419,111 +2323,49 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationEsxiVmComputeConfiguration.ObjectTypeEnum ObjectType {
+        public VirtualizationVmwareVmDiskCommitInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"ResourcePool where virtual machine is deployed."</para>
+        /// <para type="description">"Total uncommitted disk space that is available for use (in bytes)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ResourcePool {
+        public long UnCommittedDisk {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total unshared disk space (in bytes)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UnsharedDisk {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationEsxiVmComputeConfiguration initObject = new Intersight.Model.VirtualizationEsxiVmComputeConfiguration();
+             Intersight.Model.VirtualizationVmwareVmDiskCommitInfo initObject = new Intersight.Model.VirtualizationVmwareVmDiskCommitInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePool"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CommittedDisk"))
             {
-                initObject.ResourcePool = this.ResourcePool;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiCloneCustomSpec.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiCloneCustomSpec")]
-    public class InitializeIntersightVirtualizationEsxiCloneCustomSpec:PSCmdlet
-	{
-		public InitializeIntersightVirtualizationEsxiCloneCustomSpec()
-		{
-            ClassId = VirtualizationEsxiCloneCustomSpec.ClassIdEnum.VirtualizationEsxiCloneCustomSpec;
-            ObjectType = VirtualizationEsxiCloneCustomSpec.ObjectTypeEnum.VirtualizationEsxiCloneCustomSpec;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationEsxiCloneCustomSpec.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specify the Extra Config specification which can be configured on virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object ExtraConfig {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationEsxiCloneCustomSpec.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specify the OVA Environment specification which can be configured on virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object OvaEnvSpec {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.VirtualizationEsxiCloneCustomSpec initObject = new Intersight.Model.VirtualizationEsxiCloneCustomSpec();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraConfig"))
-            {
-                initObject.ExtraConfig = this.ExtraConfig;
+                initObject.CommittedDisk = this.CommittedDisk;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OvaEnvSpec"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("UnCommittedDisk"))
             {
-                initObject.OvaEnvSpec = this.OvaEnvSpec;
+                initObject.UnCommittedDisk = this.UnCommittedDisk;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UnsharedDisk"))
+            {
+                initObject.UnsharedDisk = this.UnsharedDisk;
             }
             WriteObject(initObject);
         }
@@ -2581,15 +2423,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmMemoryShareInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmCpuShareInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmMemoryShareInfo")]
-    public class InitializeIntersightVirtualizationVmwareVmMemoryShareInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmCpuShareInfo")]
+    public class InitializeIntersightVirtualizationVmwareVmCpuShareInfo:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationVmwareVmMemoryShareInfo()
+		public InitializeIntersightVirtualizationVmwareVmCpuShareInfo()
 		{
-            ClassId = VirtualizationVmwareVmMemoryShareInfo.ClassIdEnum.VirtualizationVmwareVmMemoryShareInfo;
-            ObjectType = VirtualizationVmwareVmMemoryShareInfo.ObjectTypeEnum.VirtualizationVmwareVmMemoryShareInfo;
+            ClassId = VirtualizationVmwareVmCpuShareInfo.ClassIdEnum.VirtualizationVmwareVmCpuShareInfo;
+            ObjectType = VirtualizationVmwareVmCpuShareInfo.ObjectTypeEnum.VirtualizationVmwareVmCpuShareInfo;
             
 		}
         // <summary>
@@ -2606,43 +2448,43 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVmMemoryShareInfo.ClassIdEnum ClassId {
+        public VirtualizationVmwareVmCpuShareInfo.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Limit on the memory sharing imposed (in Mbytes)."</para>
+        /// <para type="description">"Upper limit on CPU allocation (MHz)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long MemLimit {
+        public long CpuLimit {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Limit on memory overhead imposed (in Mbytes)."</para>
+        /// <para type="description">"Amount of CPU for virtualization overhead."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long MemOverheadLimit {
+        public long CpuOverheadLimit {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Similar to CPU reservations (Mbytes)."</para>
+        /// <para type="description">"Guaranteed minimum allocation of CPU resource (MHz)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long MemReservation {
+        public long CpuReservation {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Similar to CPU Shares but applicable to memory. There is no unit for this value. It is a relative measure based on the settings for other resource pools."</para>
+        /// <para type="description">"Shows the relative importance of a VM. There is no unit for this value. It is a relative measure based on the settings for other resource pools. For more information, see VMware documentation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long MemShares {
+        public long CpuShares {
             get;
             set;
         }
@@ -2651,34 +2493,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVmMemoryShareInfo.ObjectTypeEnum ObjectType {
+        public VirtualizationVmwareVmCpuShareInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationVmwareVmMemoryShareInfo initObject = new Intersight.Model.VirtualizationVmwareVmMemoryShareInfo();
+             Intersight.Model.VirtualizationVmwareVmCpuShareInfo initObject = new Intersight.Model.VirtualizationVmwareVmCpuShareInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemLimit"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuLimit"))
             {
-                initObject.MemLimit = this.MemLimit;
+                initObject.CpuLimit = this.CpuLimit;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemOverheadLimit"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuOverheadLimit"))
             {
-                initObject.MemOverheadLimit = this.MemOverheadLimit;
+                initObject.CpuOverheadLimit = this.CpuOverheadLimit;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemReservation"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuReservation"))
             {
-                initObject.MemReservation = this.MemReservation;
+                initObject.CpuReservation = this.CpuReservation;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemShares"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuShares"))
             {
-                initObject.MemShares = this.MemShares;
+                initObject.CpuShares = this.CpuShares;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -2813,6 +2655,177 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVmCpuSocketInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVmCpuSocketInfo")]
+    public class InitializeIntersightVirtualizationVmwareVmCpuSocketInfo:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationVmwareVmCpuSocketInfo()
+		{
+            ClassId = VirtualizationVmwareVmCpuSocketInfo.ClassIdEnum.VirtualizationVmwareVmCpuSocketInfo;
+            ObjectType = VirtualizationVmwareVmCpuSocketInfo.ObjectTypeEnum.VirtualizationVmwareVmCpuSocketInfo;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVmCpuSocketInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of core per CPU socket (value may be empty)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long CoresPerSocket {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of CPUs allocated to this VM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumCpus {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of CPU sockets allocated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumSockets {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVmCpuSocketInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationVmwareVmCpuSocketInfo initObject = new Intersight.Model.VirtualizationVmwareVmCpuSocketInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CoresPerSocket"))
+            {
+                initObject.CoresPerSocket = this.CoresPerSocket;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumCpus"))
+            {
+                initObject.NumCpus = this.NumCpus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumSockets"))
+            {
+                initObject.NumSockets = this.NumSockets;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationEsxiOvaCustomSpec.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationEsxiOvaCustomSpec")]
+    public class InitializeIntersightVirtualizationEsxiOvaCustomSpec:PSCmdlet
+	{
+		public InitializeIntersightVirtualizationEsxiOvaCustomSpec()
+		{
+            ClassId = VirtualizationEsxiOvaCustomSpec.ClassIdEnum.VirtualizationEsxiOvaCustomSpec;
+            ObjectType = VirtualizationEsxiOvaCustomSpec.ObjectTypeEnum.VirtualizationEsxiOvaCustomSpec;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationEsxiOvaCustomSpec.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specify the Extra Config specification which can be configured on virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object ExtraConfig {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationEsxiOvaCustomSpec.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specify the OVA Environment specification which can be configured on the virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object OvaEnvSpec {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.VirtualizationEsxiOvaCustomSpec initObject = new Intersight.Model.VirtualizationEsxiOvaCustomSpec();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraConfig"))
+            {
+                initObject.ExtraConfig = this.ExtraConfig;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OvaEnvSpec"))
+            {
+                initObject.OvaEnvSpec = this.OvaEnvSpec;
+            }
             WriteObject(initObject);
         }
 
@@ -2964,15 +2977,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationProductInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationMemoryAllocation.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationProductInfo")]
-    public class InitializeIntersightVirtualizationProductInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationMemoryAllocation")]
+    public class InitializeIntersightVirtualizationMemoryAllocation:PSCmdlet
 	{
-		public InitializeIntersightVirtualizationProductInfo()
+		public InitializeIntersightVirtualizationMemoryAllocation()
 		{
-            ClassId = VirtualizationProductInfo.ClassIdEnum.VirtualizationProductInfo;
-            ObjectType = VirtualizationProductInfo.ObjectTypeEnum.VirtualizationProductInfo;
+            ClassId = VirtualizationMemoryAllocation.ClassIdEnum.VirtualizationMemoryAllocation;
+            ObjectType = VirtualizationMemoryAllocation.ObjectTypeEnum.VirtualizationMemoryAllocation;
             
 		}
         // <summary>
@@ -2985,20 +2998,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The build number of the hypervisor running on this host (e.g., 4541947, 6.3.9600.18692). The build number may indicate some feature support that applications might rely on. The build number may not always be an integer."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Build {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationProductInfo.ClassIdEnum ClassId {
+        public VirtualizationMemoryAllocation.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Free memory on the entity in bytes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Free {
             get;
             set;
         }
@@ -3007,75 +3020,62 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationProductInfo.ObjectTypeEnum ObjectType {
+        public VirtualizationMemoryAllocation.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Commercial product name. For example, VMware ESXi."</para>
+        /// <para type="description">"Reserved memory on the entity in bytes. These reserved memory can be used for system purposes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ProductName {
+        public long Reserved {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Product name provided by the vendor. For example, embeddedEsx."</para>
+        /// <para type="description">"The total memory capacity of the entity in bytes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ProductType {
+        public long Total {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Commercial vendor name. For example, VMware Inc."</para>
+        /// <para type="description">"Used or allocated memory on the entity represented in bytes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ProductVendor {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Hypervisor version running on the system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
+        public long Used {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.VirtualizationProductInfo initObject = new Intersight.Model.VirtualizationProductInfo();
+             Intersight.Model.VirtualizationMemoryAllocation initObject = new Intersight.Model.VirtualizationMemoryAllocation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Build"))
-            {
-                initObject.Build = this.Build;
-            }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Free"))
+            {
+                initObject.Free = this.Free;
+            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reserved"))
             {
-                initObject.ProductName = this.ProductName;
+                initObject.Reserved = this.Reserved;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductType"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Total"))
             {
-                initObject.ProductType = this.ProductType;
+                initObject.Total = this.Total;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductVendor"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
             {
-                initObject.ProductVendor = this.ProductVendor;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
+                initObject.Used = this.Used;
             }
             WriteObject(initObject);
         }

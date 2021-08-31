@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
-
 [Set-IntersightIamPermission](./Set-IntersightIamPermission.md)
+
+[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
 
 [New-IntersightIamPermission](./New-IntersightIamPermission.md)
 

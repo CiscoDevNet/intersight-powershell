@@ -19,7 +19,7 @@ New-IntersightWorkflowErrorResponseHandler [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowErrorResponseHandler&amp;apos; resource.
+Create a &apos;WorkflowErrorResponseHandler&apos; resource.
 
 ## PARAMETERS
 

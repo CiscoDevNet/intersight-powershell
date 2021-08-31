@@ -17,7 +17,7 @@ Remove-IntersightServerProfileTemplate -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ServerProfileTemplate&amp;apos; resource.
+Delete a &apos;ServerProfileTemplate&apos; resource.
 
 ## EXAMPLES
 

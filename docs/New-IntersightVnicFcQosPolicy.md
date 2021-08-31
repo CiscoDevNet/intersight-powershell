@@ -19,7 +19,7 @@ New-IntersightVnicFcQosPolicy [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicFcQosPolicy&amp;apos; resource.
+Create a &apos;VnicFcQosPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -207,6 +207,6 @@ PS C:\> New-IntersightVnicFcQosPolicy
 
 [Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
 
-[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
-
 [Set-IntersightVnicFcQosPolicy](./Set-IntersightVnicFcQosPolicy.md)
+
+[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)

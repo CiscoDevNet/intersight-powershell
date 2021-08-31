@@ -19,7 +19,7 @@ New-IntersightApplianceDataExportPolicy [-Account< IamAccountRelationship>][-Add
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceDataExportPolicy&amp;apos; resource.
+Create a &apos;ApplianceDataExportPolicy&apos; resource.
 
 ## PARAMETERS
 

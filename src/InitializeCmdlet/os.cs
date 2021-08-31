@@ -8,6 +8,281 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsVirtualDrive.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsVirtualDrive")]
+    public class InitializeIntersightOsVirtualDrive:PSCmdlet
+	{
+		public InitializeIntersightOsVirtualDrive()
+		{
+            ClassId = OsVirtualDrive.ClassIdEnum.OsVirtualDrive;
+            ObjectType = OsVirtualDrive.ObjectTypeEnum.OsVirtualDrive;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsVirtualDrive.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual Drive ID to be used as Install Target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Id {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Virtual Drive Name to be used as Install Target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsVirtualDrive.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The SlotID of the Storage Controller associated to the virtual drive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StorageControllerSlotId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OsVirtualDrive initObject = new Intersight.Model.OsVirtualDrive();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
+            {
+                initObject.Id = this.Id;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("StorageControllerSlotId"))
+            {
+                initObject.StorageControllerSlotId = this.StorageControllerSlotId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsIpv4Configuration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsIpv4Configuration")]
+    public class InitializeIntersightOsIpv4Configuration:PSCmdlet
+	{
+		public InitializeIntersightOsIpv4Configuration()
+		{
+            ClassId = OsIpv4Configuration.ClassIdEnum.OsIpv4Configuration;
+            ObjectType = OsIpv4Configuration.ObjectTypeEnum.OsIpv4Configuration;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsIpv4Configuration.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"In case of static IP configuration, IP address, netmask and gateway details are\nprovided."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.CommIpV4Interface IpV4Config {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsIpv4Configuration.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OsIpv4Configuration initObject = new Intersight.Model.OsIpv4Configuration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpV4Config"))
+            {
+                initObject.IpV4Config = this.IpV4Config;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsIpv6Configuration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsIpv6Configuration")]
+    public class InitializeIntersightOsIpv6Configuration:PSCmdlet
+	{
+		public InitializeIntersightOsIpv6Configuration()
+		{
+            ClassId = OsIpv6Configuration.ClassIdEnum.OsIpv6Configuration;
+            ObjectType = OsIpv6Configuration.ObjectTypeEnum.OsIpv6Configuration;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsIpv6Configuration.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"In case of static IP configuration, IP address, netmask and gateway details are\nprovided."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.CommIpV6Interface IpV6Config {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsIpv6Configuration.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OsIpv6Configuration initObject = new Intersight.Model.OsIpv6Configuration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpV6Config"))
+            {
+                initObject.IpV6Config = this.IpV6Config;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsOperatingSystemParameters.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsOperatingSystemParameters")]
+    public class InitializeIntersightOsOperatingSystemParameters:PSCmdlet
+	{
+		public InitializeIntersightOsOperatingSystemParameters()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsOperatingSystemParameters.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsOperatingSystemParameters.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OsOperatingSystemParameters initObject = new Intersight.Model.OsOperatingSystemParameters();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize OsGlobalConfig.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightOsGlobalConfig")]
@@ -55,6 +330,73 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsWindowsParameters.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsWindowsParameters")]
+    public class InitializeIntersightOsWindowsParameters:PSCmdlet
+	{
+		public InitializeIntersightOsWindowsParameters()
+		{
+            ClassId = OsWindowsParameters.ClassIdEnum.OsWindowsParameters;
+            Edition = OsWindowsParameters.EditionEnum.Standard;
+            ObjectType = OsWindowsParameters.ObjectTypeEnum.OsWindowsParameters;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsWindowsParameters.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Lists all the editions supported for Windows Server installation.\n* `Standard` - Windows Standard Edition ideal for advanced features with limited virtualization.\n* `StandardCore` - Windows Standard Core Edition is a minimal installation option while installing Standard Core that is ideal for advanced features with limited virtualization.\n* `Datacenter` - Windows Standard Core Edition ideal for high requirements on IT workloads with largenumber fo virtual systems.\n* `DatacenterCore` - Windows Datacenter Core Edition is a minimal installation option while installing Datacenter Core that isideal for high requirements on IT workloads with largenumber for virtual systems.\n* `Core` - Microsoft Hyper-V is a native hypervisor to create and run virtual machines."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsWindowsParameters.EditionEnum Edition {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsWindowsParameters.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OsWindowsParameters initObject = new Intersight.Model.OsWindowsParameters();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Edition"))
+            {
+                initObject.Edition = this.Edition;
+            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -233,292 +575,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsIpConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsIpConfiguration")]
-    public class InitializeIntersightOsIpConfiguration:PSCmdlet
-	{
-		public InitializeIntersightOsIpConfiguration()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsIpConfiguration.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsIpConfiguration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OsIpConfiguration initObject = new Intersight.Model.OsIpConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsPhysicalDiskResponse.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsPhysicalDiskResponse")]
-    public class InitializeIntersightOsPhysicalDiskResponse:PSCmdlet
-	{
-		public InitializeIntersightOsPhysicalDiskResponse()
-		{
-            ClassId = OsPhysicalDiskResponse.ClassIdEnum.OsPhysicalDiskResponse;
-            ObjectType = OsPhysicalDiskResponse.ObjectTypeEnum.OsPhysicalDiskResponse;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Bootable field of the Physical Drive target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Bootable {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsPhysicalDiskResponse.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Physical Disk Name to be used as Install Target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsPhysicalDiskResponse.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Serial Number of the Physical Disk Target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SerialNumber {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Mo Reference of the LUN in CmRf format."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.MoMoRef SourceMo {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Storage Controller associated to the physical disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StorageControllerSlotId {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OsPhysicalDiskResponse initObject = new Intersight.Model.OsPhysicalDiskResponse();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Bootable"))
-            {
-                initObject.Bootable = this.Bootable;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
-            {
-                initObject.SerialNumber = this.SerialNumber;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SourceMo"))
-            {
-                initObject.SourceMo = this.SourceMo;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StorageControllerSlotId"))
-            {
-                initObject.StorageControllerSlotId = this.StorageControllerSlotId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsOperatingSystemParameters.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsOperatingSystemParameters")]
-    public class InitializeIntersightOsOperatingSystemParameters:PSCmdlet
-	{
-		public InitializeIntersightOsOperatingSystemParameters()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsOperatingSystemParameters.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsOperatingSystemParameters.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OsOperatingSystemParameters initObject = new Intersight.Model.OsOperatingSystemParameters();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsIpv6Configuration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsIpv6Configuration")]
-    public class InitializeIntersightOsIpv6Configuration:PSCmdlet
-	{
-		public InitializeIntersightOsIpv6Configuration()
-		{
-            ClassId = OsIpv6Configuration.ClassIdEnum.OsIpv6Configuration;
-            ObjectType = OsIpv6Configuration.ObjectTypeEnum.OsIpv6Configuration;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsIpv6Configuration.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"In case of static IP configuration, IP address, netmask and gateway details are\nprovided."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.CommIpV6Interface IpV6Config {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsIpv6Configuration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OsIpv6Configuration initObject = new Intersight.Model.OsIpv6Configuration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpV6Config"))
-            {
-                initObject.IpV6Config = this.IpV6Config;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize OsPlaceHolder.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightOsPlaceHolder")]
@@ -611,12 +667,91 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsInstallTargetResponse.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsServerConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsInstallTargetResponse")]
-    public class InitializeIntersightOsInstallTargetResponse:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightOsServerConfig")]
+    public class InitializeIntersightOsServerConfig:PSCmdlet
 	{
-		public InitializeIntersightOsInstallTargetResponse()
+		public InitializeIntersightOsServerConfig()
+		{
+            ClassId = OsServerConfig.ClassIdEnum.OsServerConfig;
+            ObjectType = OsServerConfig.ObjectTypeEnum.OsServerConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.OsPlaceHolder> AdditionalParameters {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsServerConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> ErrorMsgs {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OsServerConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OsServerConfig initObject = new Intersight.Model.OsServerConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalParameters"))
+            {
+                initObject.AdditionalParameters = this.AdditionalParameters;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ErrorMsgs"))
+            {
+                initObject.ErrorMsgs = this.ErrorMsgs;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsIpConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsIpConfiguration")]
+    public class InitializeIntersightOsIpConfiguration:PSCmdlet
+	{
+		public InitializeIntersightOsIpConfiguration()
 		{
             
 		}
@@ -634,7 +769,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OsInstallTargetResponse.ClassIdEnum ClassId {
+        public OsIpConfiguration.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -643,33 +778,20 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OsInstallTargetResponse.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Mo Reference of the LUN in CmRf format."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.MoMoRef SourceMo {
+        public OsIpConfiguration.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.OsInstallTargetResponse initObject = new Intersight.Model.OsInstallTargetResponse();
+             Intersight.Model.OsIpConfiguration initObject = new Intersight.Model.OsIpConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SourceMo"))
-            {
-                initObject.SourceMo = this.SourceMo;
-            }
             WriteObject(initObject);
         }
 
@@ -938,73 +1060,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsWindowsParameters.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsWindowsParameters")]
-    public class InitializeIntersightOsWindowsParameters:PSCmdlet
-	{
-		public InitializeIntersightOsWindowsParameters()
-		{
-            ClassId = OsWindowsParameters.ClassIdEnum.OsWindowsParameters;
-            Edition = OsWindowsParameters.EditionEnum.Standard;
-            ObjectType = OsWindowsParameters.ObjectTypeEnum.OsWindowsParameters;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsWindowsParameters.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Lists all the editions supported for Windows Server installation.\n* `Standard` - Windows Standard Edition ideal for advanced features with limited virtualization.\n* `StandardCore` - Windows Standard Core Edition is a minimal installation option while installing Standard Core that is ideal for advanced features with limited virtualization.\n* `Datacenter` - Windows Standard Core Edition ideal for high requirements on IT workloads with largenumber fo virtual systems.\n* `DatacenterCore` - Windows Datacenter Core Edition is a minimal installation option while installing Datacenter Core that isideal for high requirements on IT workloads with largenumber for virtual systems.\n* `Core` - Microsoft Hyper-V is a native hypervisor to create and run virtual machines."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsWindowsParameters.EditionEnum Edition {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsWindowsParameters.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OsWindowsParameters initObject = new Intersight.Model.OsWindowsParameters();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Edition"))
-            {
-                initObject.Edition = this.Edition;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize OsInstallTarget.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightOsInstallTarget")]
@@ -1056,26 +1111,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsServerConfig.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsInstallTargetResponse.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsServerConfig")]
-    public class InitializeIntersightOsServerConfig:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightOsInstallTargetResponse")]
+    public class InitializeIntersightOsInstallTargetResponse:PSCmdlet
 	{
-		public InitializeIntersightOsServerConfig()
+		public InitializeIntersightOsInstallTargetResponse()
 		{
-            ClassId = OsServerConfig.ClassIdEnum.OsServerConfig;
-            ObjectType = OsServerConfig.ObjectTypeEnum.OsServerConfig;
             
 		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.OsPlaceHolder> AdditionalParameters {
-            get;
-            set;
-        }
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1086,64 +1130,60 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OsServerConfig.ClassIdEnum ClassId {
+        public OsInstallTargetResponse.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<string> ErrorMsgs {
+        public OsInstallTargetResponse.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"Mo Reference of the LUN in CmRf format."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OsServerConfig.ObjectTypeEnum ObjectType {
+        public Model.MoMoRef SourceMo {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.OsServerConfig initObject = new Intersight.Model.OsServerConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalParameters"))
-            {
-                initObject.AdditionalParameters = this.AdditionalParameters;
-            }
+             Intersight.Model.OsInstallTargetResponse initObject = new Intersight.Model.OsInstallTargetResponse();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ErrorMsgs"))
-            {
-                initObject.ErrorMsgs = this.ErrorMsgs;
-            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceMo"))
+            {
+                initObject.SourceMo = this.SourceMo;
+            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsVirtualDrive.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsPhysicalDiskResponse.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsVirtualDrive")]
-    public class InitializeIntersightOsVirtualDrive:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightOsPhysicalDiskResponse")]
+    public class InitializeIntersightOsPhysicalDiskResponse:PSCmdlet
 	{
-		public InitializeIntersightOsVirtualDrive()
+		public InitializeIntersightOsPhysicalDiskResponse()
 		{
-            ClassId = OsVirtualDrive.ClassIdEnum.OsVirtualDrive;
-            ObjectType = OsVirtualDrive.ObjectTypeEnum.OsVirtualDrive;
+            ClassId = OsPhysicalDiskResponse.ClassIdEnum.OsPhysicalDiskResponse;
+            ObjectType = OsPhysicalDiskResponse.ObjectTypeEnum.OsPhysicalDiskResponse;
             
 		}
         // <summary>
@@ -1156,25 +1196,25 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Bootable field of the Physical Drive target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Bootable {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OsVirtualDrive.ClassIdEnum ClassId {
+        public OsPhysicalDiskResponse.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Virtual Drive ID to be used as Install Target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Id {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Virtual Drive Name to be used as Install Target."</para>
+        /// <para type="description">"The Physical Disk Name to be used as Install Target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1187,12 +1227,30 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OsVirtualDrive.ObjectTypeEnum ObjectType {
+        public OsPhysicalDiskResponse.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The SlotID of the Storage Controller associated to the virtual drive."</para>
+        /// <para type="description">"Serial Number of the Physical Disk Target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SerialNumber {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Mo Reference of the LUN in CmRf format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.MoMoRef SourceMo {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Storage Controller associated to the physical disk."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1203,91 +1261,33 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.OsVirtualDrive initObject = new Intersight.Model.OsVirtualDrive();
+             Intersight.Model.OsPhysicalDiskResponse initObject = new Intersight.Model.OsPhysicalDiskResponse();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Bootable"))
             {
-                initObject.Id = this.Id;
+                initObject.Bootable = this.Bootable;
             }
+            initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
+            {
+                initObject.SerialNumber = this.SerialNumber;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceMo"))
+            {
+                initObject.SourceMo = this.SourceMo;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("StorageControllerSlotId"))
             {
                 initObject.StorageControllerSlotId = this.StorageControllerSlotId;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OsIpv4Configuration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOsIpv4Configuration")]
-    public class InitializeIntersightOsIpv4Configuration:PSCmdlet
-	{
-		public InitializeIntersightOsIpv4Configuration()
-		{
-            ClassId = OsIpv4Configuration.ClassIdEnum.OsIpv4Configuration;
-            ObjectType = OsIpv4Configuration.ObjectTypeEnum.OsIpv4Configuration;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsIpv4Configuration.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"In case of static IP configuration, IP address, netmask and gateway details are\nprovided."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.CommIpV4Interface IpV4Config {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OsIpv4Configuration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OsIpv4Configuration initObject = new Intersight.Model.OsIpv4Configuration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpV4Config"))
-            {
-                initObject.IpV4Config = this.IpV4Config;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

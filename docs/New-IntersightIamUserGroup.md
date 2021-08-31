@@ -184,8 +184,8 @@ PS C:\> New-IntersightIamUserGroup
 
 ## RELATED LINKS
 
-[Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
+[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
 
 [Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
 
-[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
+[Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)

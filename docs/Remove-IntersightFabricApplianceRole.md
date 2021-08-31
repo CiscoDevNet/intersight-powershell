@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricApplianceRole](./Set-IntersightFabricApplianceRole.md)
 
-[Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
-
 [New-IntersightFabricApplianceRole](./New-IntersightFabricApplianceRole.md)
+
+[Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightSdwanVmanageAccountPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SdwanVmanageAccountPolicy&amp;apos; resource.
+Delete a &apos;SdwanVmanageAccountPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSdwanVmanageAccountPolicy](./Set-IntersightSdwanVmanageAccountPolicy.md)
+
 [Get-IntersightSdwanVmanageAccountPolicy](./Get-IntersightSdwanVmanageAccountPolicy.md)
 
 [New-IntersightSdwanVmanageAccountPolicy](./New-IntersightSdwanVmanageAccountPolicy.md)
-
-[Set-IntersightSdwanVmanageAccountPolicy](./Set-IntersightSdwanVmanageAccountPolicy.md)
 

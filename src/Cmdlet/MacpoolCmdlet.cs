@@ -8,15 +8,39 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove MacpoolLease.</para>
+    /// <para type="synopsis">This is the cmdlet to Get MacpoolIdBlock.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolLease")]
-    public class RemoveIntersightMacpoolLease:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolIdBlock", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMacpoolIdBlock:GetCmdletBase
 	{
-		public RemoveIntersightMacpoolLease()
+		public GetIntersightMacpoolIdBlock()
 		{
 			ApiInstance = new MacpoolApi(Config);
-            MethodName = "DeleteMacpoolLeaseWithHttpInfo";
+            MethodName = "GetMacpoolIdBlockListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MacpoolLease.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolLease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMacpoolLease:GetCmdletBase
+	{
+		public GetIntersightMacpoolLease()
+		{
+			ApiInstance = new MacpoolApi(Config);
+            MethodName = "GetMacpoolLeaseListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MacpoolUniverse.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMacpoolUniverse:GetCmdletBase
+	{
+		public GetIntersightMacpoolUniverse()
+		{
+			ApiInstance = new MacpoolApi(Config);
+            MethodName = "GetMacpoolUniverseListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -117,18 +141,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove MacpoolPool.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolPool")]
-    public class RemoveIntersightMacpoolPool:RemoveCmdletBase
-	{
-		public RemoveIntersightMacpoolPool()
-		{
-			ApiInstance = new MacpoolApi(Config);
-            MethodName = "DeleteMacpoolPoolWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MacpoolPool.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightMacpoolPool")]
@@ -214,27 +226,27 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MacpoolLease.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove MacpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolLease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMacpoolLease:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolPool")]
+    public class RemoveIntersightMacpoolPool:RemoveCmdletBase
 	{
-		public GetIntersightMacpoolLease()
+		public RemoveIntersightMacpoolPool()
 		{
 			ApiInstance = new MacpoolApi(Config);
-            MethodName = "GetMacpoolLeaseListWithHttpInfo";
+            MethodName = "DeleteMacpoolPoolWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MacpoolIdBlock.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove MacpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolIdBlock", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMacpoolIdBlock:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolLease")]
+    public class RemoveIntersightMacpoolLease:RemoveCmdletBase
 	{
-		public GetIntersightMacpoolIdBlock()
+		public RemoveIntersightMacpoolLease()
 		{
 			ApiInstance = new MacpoolApi(Config);
-            MethodName = "GetMacpoolIdBlockListWithHttpInfo";
+            MethodName = "DeleteMacpoolLeaseWithHttpInfo";
 		}
     }
     /// <summary>
@@ -247,18 +259,6 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new MacpoolApi(Config);
             MethodName = "GetMacpoolPoolMemberListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MacpoolUniverse.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolUniverse", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMacpoolUniverse:GetCmdletBase
-	{
-		public GetIntersightMacpoolUniverse()
-		{
-			ApiInstance = new MacpoolApi(Config);
-            MethodName = "GetMacpoolUniverseListWithHttpInfo";
 		}
     }
 }

@@ -19,7 +19,7 @@ New-IntersightFirmwareEula [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareEula&amp;apos; resource.
+Create a &apos;FirmwareEula&apos; resource.
 
 ## PARAMETERS
 

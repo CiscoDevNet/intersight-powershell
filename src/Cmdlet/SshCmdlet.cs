@@ -132,7 +132,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SshApi(Config);
             ModelObject = new SshPolicy();
-            MethodName = "UpdateSshPolicyWithHttpInfo";
+            MethodName = "PatchSshPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>

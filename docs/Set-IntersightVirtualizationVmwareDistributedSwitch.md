@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareDistributedSwitch [-AdditionalProperties< Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareDistributedSwitch&apos; resource.
+Update a &amp;apos;VirtualizationVmwareDistributedSwitch&amp;apos; resource.
 
 ## PARAMETERS
 

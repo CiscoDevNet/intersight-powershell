@@ -19,7 +19,7 @@ New-IntersightWorkflowRollbackWorkflow [-Action< WorkflowRollbackWorkflow.Action
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowRollbackWorkflow&amp;apos; resource.
+Create a &apos;WorkflowRollbackWorkflow&apos; resource.
 
 ## PARAMETERS
 

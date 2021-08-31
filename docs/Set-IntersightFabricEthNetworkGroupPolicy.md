@@ -19,7 +19,7 @@ Set-IntersightFabricEthNetworkGroupPolicy [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricEthNetworkGroupPolicy&apos; resource.
+Update a &amp;apos;FabricEthNetworkGroupPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

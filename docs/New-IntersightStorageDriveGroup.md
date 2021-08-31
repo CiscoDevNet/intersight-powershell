@@ -19,7 +19,7 @@ New-IntersightStorageDriveGroup [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;StorageDriveGroup&amp;apos; resource.
+Create a &apos;StorageDriveGroup&apos; resource.
 
 ## PARAMETERS
 

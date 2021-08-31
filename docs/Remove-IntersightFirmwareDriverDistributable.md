@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFirmwareDriverDistributable](./Set-IntersightFirmwareDriverDistributable.md)
+
 [New-IntersightFirmwareDriverDistributable](./New-IntersightFirmwareDriverDistributable.md)
 
 [Get-IntersightFirmwareDriverDistributable](./Get-IntersightFirmwareDriverDistributable.md)
-
-[Set-IntersightFirmwareDriverDistributable](./Set-IntersightFirmwareDriverDistributable.md)
 

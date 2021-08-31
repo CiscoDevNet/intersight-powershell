@@ -190,8 +190,8 @@ PS C:\> New-IntersightFabricPortOperation
 
 ## RELATED LINKS
 
-[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
-
 [Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
 
 [Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
+
+[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)

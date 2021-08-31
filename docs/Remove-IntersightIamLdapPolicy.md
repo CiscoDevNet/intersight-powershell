@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
+
 [New-IntersightIamLdapPolicy](./New-IntersightIamLdapPolicy.md)
 
 [Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
-
-[Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
 

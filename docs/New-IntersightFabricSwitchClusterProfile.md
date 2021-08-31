@@ -198,6 +198,6 @@ PS C:\> New-IntersightFabricSwitchClusterProfile
 
 [Get-IntersightFabricSwitchClusterProfile](./Get-IntersightFabricSwitchClusterProfile.md)
 
-[Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)
-
 [Set-IntersightFabricSwitchClusterProfile](./Set-IntersightFabricSwitchClusterProfile.md)
+
+[Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)
