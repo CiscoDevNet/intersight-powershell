@@ -19,7 +19,7 @@ New-IntersightBulkRequest [-AdditionalProperties< Dictionary<string,object>>][-M
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;BulkRequest&amp;apos; resource.
+Create a &apos;BulkRequest&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightSshPolicy [-AdditionalProperties< Dictionary<string,object>>][-Des
 ```
 
 ## DESCRIPTION
-Create a &apos;SshPolicy&apos; resource.
+Create a &amp;apos;SshPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

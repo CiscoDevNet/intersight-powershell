@@ -179,8 +179,8 @@ PS C:\> New-IntersightMacpoolPool
 
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
 
-[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
-
 [Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
+
+[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
 
 [Initialize-IntersightMacpoolBlock](./Initialize-IntersightMacpoolBlock.md)

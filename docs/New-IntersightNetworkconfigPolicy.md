@@ -19,7 +19,7 @@ New-IntersightNetworkconfigPolicy [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &apos;NetworkconfigPolicy&apos; resource.
+Create a &amp;apos;NetworkconfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -316,8 +316,8 @@ PS C:\> New-IntersightNetworkconfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
+[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
 
 [Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
 
-[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
+[Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)

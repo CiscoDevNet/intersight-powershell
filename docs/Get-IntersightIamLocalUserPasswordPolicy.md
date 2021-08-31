@@ -25,7 +25,7 @@ Get-IntersightIamLocalUserPasswordPolicy [-Count <Boolean>] [-InlineCount <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamLocalUserPasswordPolicy&apos; resource.,
+Read a &amp;apos;IamLocalUserPasswordPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

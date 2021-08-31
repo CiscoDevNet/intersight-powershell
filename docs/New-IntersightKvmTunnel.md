@@ -19,7 +19,7 @@ New-IntersightKvmTunnel [-AdditionalProperties< Dictionary<string,object>>][-Kvm
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KvmTunnel&amp;apos; resource.
+Create a &apos;KvmTunnel&apos; resource.
 
 ## PARAMETERS
 

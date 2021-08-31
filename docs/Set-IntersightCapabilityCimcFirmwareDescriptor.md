@@ -19,7 +19,7 @@ Set-IntersightCapabilityCimcFirmwareDescriptor [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityCimcFirmwareDescriptor&apos; resource.
+Update a &amp;apos;CapabilityCimcFirmwareDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

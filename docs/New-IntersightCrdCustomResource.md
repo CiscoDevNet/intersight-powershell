@@ -19,7 +19,7 @@ New-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalP
 ```
 
 ## DESCRIPTION
-Create a &apos;CrdCustomResource&apos; resource.
+Create a &amp;apos;CrdCustomResource&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get EtherPortChannel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherPortChannel", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightEtherPortChannel:GetCmdletBase
-	{
-		public GetIntersightEtherPortChannel()
-		{
-			ApiInstance = new EtherApi(Config);
-            MethodName = "GetEtherPortChannelListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EtherNetworkPort.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightEtherNetworkPort")]
@@ -153,6 +141,76 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get EtherPortChannel.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherPortChannel", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEtherPortChannel:GetCmdletBase
+	{
+		public GetIntersightEtherPortChannel()
+		{
+			ApiInstance = new EtherApi(Config);
+            MethodName = "GetEtherPortChannelListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set EtherPhysicalPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherPhysicalPort")]
+    public class SetIntersightEtherPhysicalPort:SetCmdletBase
+	{
+		public SetIntersightEtherPhysicalPort()
+		{
+			ApiInstance = new EtherApi(Config);
+            ModelObject = new EtherPhysicalPort();
+            MethodName = "UpdateEtherPhysicalPortWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PortInterfaceBaseRelationship AcknowledgedPeerInterface {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PortInterfaceBaseRelationship PeerInterface {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EtherHostPort.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightEtherHostPort")]
@@ -239,64 +297,6 @@ namespace Intersight.PowerShell
 			ApiInstance = new EtherApi(Config);
             MethodName = "GetEtherPhysicalPortListWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set EtherPhysicalPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherPhysicalPort")]
-    public class SetIntersightEtherPhysicalPort:SetCmdletBase
-	{
-		public SetIntersightEtherPhysicalPort()
-		{
-			ApiInstance = new EtherApi(Config);
-            ModelObject = new EtherPhysicalPort();
-            MethodName = "UpdateEtherPhysicalPortWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PortInterfaceBaseRelationship AcknowledgedPeerInterface {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PortInterfaceBaseRelationship PeerInterface {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EtherNetworkPort.</para>

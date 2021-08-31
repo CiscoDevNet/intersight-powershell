@@ -19,7 +19,7 @@ New-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HclHyperflexSoftwareCompatibilityInfo&amp;apos; resource.
+Create a &apos;HclHyperflexSoftwareCompatibilityInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -192,10 +192,10 @@ PS C:\> New-IntersightHclHyperflexSoftwareCompatibilityInfo
 
 ## RELATED LINKS
 
-[Remove-IntersightHclHyperflexSoftwareCompatibilityInfo](./Remove-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
+[Get-IntersightHclHyperflexSoftwareCompatibilityInfo](./Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [Set-IntersightHclHyperflexSoftwareCompatibilityInfo](./Set-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
-[Get-IntersightHclHyperflexSoftwareCompatibilityInfo](./Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
+[Remove-IntersightHclHyperflexSoftwareCompatibilityInfo](./Remove-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [Initialize-IntersightHclConstraint](./Initialize-IntersightHclConstraint.md)

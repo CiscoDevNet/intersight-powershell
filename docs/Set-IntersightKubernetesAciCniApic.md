@@ -19,7 +19,7 @@ Set-IntersightKubernetesAciCniApic [-AciCniProfiles< List<KubernetesAciCniProfil
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesAciCniApic&apos; resource.
+Update a &amp;apos;KubernetesAciCniApic&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -181,8 +181,8 @@ PS C:\> Set-IntersightKubernetesAciCniApic
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
+
 [Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)
 
 [New-IntersightKubernetesAciCniApic](./New-IntersightKubernetesAciCniApic.md)
-
-[Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)

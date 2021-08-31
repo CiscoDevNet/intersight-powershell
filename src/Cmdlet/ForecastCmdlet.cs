@@ -8,30 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ForecastCatalog.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightForecastCatalog", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightForecastCatalog:GetCmdletBase
-	{
-		public GetIntersightForecastCatalog()
-		{
-			ApiInstance = new ForecastApi(Config);
-            MethodName = "GetForecastCatalogListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ForecastInstance.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightForecastInstance", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightForecastInstance:GetCmdletBase
-	{
-		public GetIntersightForecastInstance()
-		{
-			ApiInstance = new ForecastApi(Config);
-            MethodName = "GetForecastInstanceListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ForecastDefinition.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightForecastDefinition", DefaultParameterSetName = "CmdletParam")]
@@ -44,6 +20,18 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ForecastCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightForecastCatalog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightForecastCatalog:GetCmdletBase
+	{
+		public GetIntersightForecastCatalog()
+		{
+			ApiInstance = new ForecastApi(Config);
+            MethodName = "GetForecastCatalogListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ForecastInstance.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightForecastInstance")]
@@ -53,7 +41,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ForecastApi(Config);
             ModelObject = new ForecastInstance();
-            MethodName = "UpdateForecastInstanceWithHttpInfo";
+            MethodName = "PatchForecastInstanceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description">"Action to be triggered on forecast instance. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
@@ -118,5 +106,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ForecastInstance.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightForecastInstance", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightForecastInstance:GetCmdletBase
+	{
+		public GetIntersightForecastInstance()
+		{
+			ApiInstance = new ForecastApi(Config);
+            MethodName = "GetForecastInstanceListWithHttpInfo";
+		}
     }
 }

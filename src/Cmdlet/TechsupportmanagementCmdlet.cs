@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementTechSupportBundle.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementTechSupportBundle")]
+    public class RemoveIntersightTechsupportmanagementTechSupportBundle:RemoveCmdletBase
+	{
+		public RemoveIntersightTechsupportmanagementTechSupportBundle()
+		{
+			ApiInstance = new TechsupportmanagementApi(Config);
+            MethodName = "DeleteTechsupportmanagementTechSupportBundleWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementTechSupportStatus.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportStatus", DefaultParameterSetName = "CmdletParam")]
@@ -17,6 +29,79 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new TechsupportmanagementApi(Config);
             MethodName = "GetTechsupportmanagementTechSupportStatusListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementDownload.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementDownload", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightTechsupportmanagementDownload:GetCmdletBase
+	{
+		public GetIntersightTechsupportmanagementDownload()
+		{
+			ApiInstance = new TechsupportmanagementApi(Config);
+            MethodName = "GetTechsupportmanagementDownloadListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set TechsupportmanagementCollectionControlPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightTechsupportmanagementCollectionControlPolicy")]
+    public class SetIntersightTechsupportmanagementCollectionControlPolicy:SetCmdletBase
+	{
+		public SetIntersightTechsupportmanagementCollectionControlPolicy()
+		{
+			ApiInstance = new TechsupportmanagementApi(Config);
+            ModelObject = new TechsupportmanagementCollectionControlPolicy();
+            MethodName = "UpdateTechsupportmanagementCollectionControlPolicyWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable techsupport collection for a specific account.\n* `Enable` - Enable techsupport collection.\n* `Disable` - Disable techsupport collection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TechsupportmanagementCollectionControlPolicy.TechSupportCollectionEnum TechSupportCollection {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementCollectionControlPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementCollectionControlPolicy")]
+    public class RemoveIntersightTechsupportmanagementCollectionControlPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightTechsupportmanagementCollectionControlPolicy()
+		{
+			ApiInstance = new TechsupportmanagementApi(Config);
+            MethodName = "DeleteTechsupportmanagementCollectionControlPolicyWithHttpInfo";
 		}
     }
     /// <summary>
@@ -115,91 +200,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementDownload.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementDownload", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightTechsupportmanagementDownload:GetCmdletBase
-	{
-		public GetIntersightTechsupportmanagementDownload()
-		{
-			ApiInstance = new TechsupportmanagementApi(Config);
-            MethodName = "GetTechsupportmanagementDownloadListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set TechsupportmanagementCollectionControlPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTechsupportmanagementCollectionControlPolicy")]
-    public class SetIntersightTechsupportmanagementCollectionControlPolicy:SetCmdletBase
-	{
-		public SetIntersightTechsupportmanagementCollectionControlPolicy()
-		{
-			ApiInstance = new TechsupportmanagementApi(Config);
-            ModelObject = new TechsupportmanagementCollectionControlPolicy();
-            MethodName = "UpdateTechsupportmanagementCollectionControlPolicyWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable or Disable techsupport collection for a specific account.\n* `Enable` - Enable techsupport collection.\n* `Disable` - Disable techsupport collection."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TechsupportmanagementCollectionControlPolicy.TechSupportCollectionEnum TechSupportCollection {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementCollectionControlPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementCollectionControlPolicy")]
-    public class RemoveIntersightTechsupportmanagementCollectionControlPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightTechsupportmanagementCollectionControlPolicy()
-		{
-			ApiInstance = new TechsupportmanagementApi(Config);
-            MethodName = "DeleteTechsupportmanagementCollectionControlPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementTechSupportBundle.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementTechSupportBundle")]
-    public class RemoveIntersightTechsupportmanagementTechSupportBundle:RemoveCmdletBase
-	{
-		public RemoveIntersightTechsupportmanagementTechSupportBundle()
-		{
-			ApiInstance = new TechsupportmanagementApi(Config);
-            MethodName = "DeleteTechsupportmanagementTechSupportBundleWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementCollectionControlPolicy.</para>

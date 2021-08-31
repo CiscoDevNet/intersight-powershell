@@ -19,7 +19,7 @@ Set-IntersightManagementController [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &apos;ManagementController&apos; resource.
+Update a &amp;apos;ManagementController&amp;apos; resource.
 
 ## PARAMETERS
 

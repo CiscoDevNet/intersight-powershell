@@ -19,7 +19,7 @@ Set-IntersightFirmwarePsuDescriptor [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwarePsuDescriptor&apos; resource.
+Update a &amp;apos;FirmwarePsuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

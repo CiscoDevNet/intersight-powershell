@@ -19,7 +19,7 @@ New-IntersightRecoveryScheduleConfigPolicy [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Create a &apos;RecoveryScheduleConfigPolicy&apos; resource.
+Create a &amp;apos;RecoveryScheduleConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -180,10 +180,10 @@ PS C:\> New-IntersightRecoveryScheduleConfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightRecoveryScheduleConfigPolicy](./Get-IntersightRecoveryScheduleConfigPolicy.md)
-
 [Remove-IntersightRecoveryScheduleConfigPolicy](./Remove-IntersightRecoveryScheduleConfigPolicy.md)
 
 [Set-IntersightRecoveryScheduleConfigPolicy](./Set-IntersightRecoveryScheduleConfigPolicy.md)
+
+[Get-IntersightRecoveryScheduleConfigPolicy](./Get-IntersightRecoveryScheduleConfigPolicy.md)
 
 [Initialize-IntersightRecoveryBackupSchedule](./Initialize-IntersightRecoveryBackupSchedule.md)

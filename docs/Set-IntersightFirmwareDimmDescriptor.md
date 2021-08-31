@@ -19,7 +19,7 @@ Set-IntersightFirmwareDimmDescriptor [-AdditionalProperties< Dictionary<string,o
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareDimmDescriptor&amp;apos; resource.
+Update a &apos;FirmwareDimmDescriptor&apos; resource.
 
 ## PARAMETERS
 

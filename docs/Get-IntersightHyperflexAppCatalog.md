@@ -25,7 +25,7 @@ Get-IntersightHyperflexAppCatalog [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;HyperflexAppCatalog&amp;apos; resource.,
+Read a &apos;HyperflexAppCatalog&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
+
 [Set-IntersightHyperflexAppCatalog](./Set-IntersightHyperflexAppCatalog.md)
 
 [Remove-IntersightHyperflexAppCatalog](./Remove-IntersightHyperflexAppCatalog.md)
-
-[New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
 

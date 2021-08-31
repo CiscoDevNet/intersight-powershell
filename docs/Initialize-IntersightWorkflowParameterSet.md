@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The controlling parameter will be evaluated against this &apos;value&apos;.
+The controlling parameter will be evaluated against this &amp;apos;value&amp;apos;.
 
 ```yaml
 Type: string

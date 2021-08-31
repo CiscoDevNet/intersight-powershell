@@ -19,7 +19,7 @@ New-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
+Create a &apos;HyperflexHealthCheckDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetExecutionType
-Indicates whether the health check is executed only on the leader node, or on all nodes in the HyperFlex cluster.\n* `EXECUTE_ON_LEADER_NODE` - Execute the health check script only on the HyperFlex cluster&amp;apos;s leader node.\n* `EXECUTE_ON_ALL_NODES` - Execute health check on all nodes and aggregate the results.\n* `EXECUTE_ON_ALL_NODES_AND_AGGREGATE` - Execute the health check on all Nodes and perform custom aggregation.
+Indicates whether the health check is executed only on the leader node, or on all nodes in the HyperFlex cluster.\n* `EXECUTE_ON_LEADER_NODE` - Execute the health check script only on the HyperFlex cluster&apos;s leader node.\n* `EXECUTE_ON_ALL_NODES` - Execute health check on all nodes and aggregate the results.\n* `EXECUTE_ON_ALL_NODES_AND_AGGREGATE` - Execute the health check on all Nodes and perform custom aggregation.
 
 ```yaml
 Type: HyperflexHealthCheckDefinition.TargetExecutionTypeEnum
@@ -339,10 +339,10 @@ PS C:\> New-IntersightHyperflexHealthCheckDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
+
 [Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
 
 [Remove-IntersightHyperflexHealthCheckDefinition](./Remove-IntersightHyperflexHealthCheckDefinition.md)
-
-[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
 
 [Initialize-IntersightHyperflexHealthCheckScriptInfo](./Initialize-IntersightHyperflexHealthCheckScriptInfo.md)

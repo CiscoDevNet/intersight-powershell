@@ -19,7 +19,7 @@ Set-IntersightIamPermission [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &apos;IamPermission&apos; resource.
+Update a &amp;apos;IamPermission&amp;apos; resource.
 
 ## PARAMETERS
 

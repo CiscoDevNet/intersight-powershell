@@ -19,7 +19,7 @@ Set-IntersightStorageDriveGroup [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageDriveGroup&amp;apos; resource.
+Update a &apos;StorageDriveGroup&apos; resource.
 
 ## PARAMETERS
 

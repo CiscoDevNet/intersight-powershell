@@ -19,7 +19,7 @@ Set-IntersightPortMacBinding [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;PortMacBinding&amp;apos; resource.
+Update a &apos;PortMacBinding&apos; resource.
 
 ## PARAMETERS
 

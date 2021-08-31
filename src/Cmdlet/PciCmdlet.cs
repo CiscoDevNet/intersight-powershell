@@ -8,16 +8,28 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set PciLink.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PciDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciLink")]
-    public class SetIntersightPciLink:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPciDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPciDevice:GetCmdletBase
 	{
-		public SetIntersightPciLink()
+		public GetIntersightPciDevice()
 		{
 			ApiInstance = new PciApi(Config);
-            ModelObject = new PciLink();
-            MethodName = "UpdatePciLinkWithHttpInfo";
+            MethodName = "GetPciDeviceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set PciSwitch.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightPciSwitch")]
+    public class SetIntersightPciSwitch:SetCmdletBase
+	{
+		public SetIntersightPciSwitch()
+		{
+			ApiInstance = new PciApi(Config);
+            ModelObject = new PciSwitch();
+            MethodName = "UpdatePciSwitchWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -52,6 +64,15 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type information of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
             get;
             set;
         }
@@ -136,28 +157,40 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PciDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PciSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPciDevice:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPciSwitch", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPciSwitch:GetCmdletBase
 	{
-		public GetIntersightPciDevice()
+		public GetIntersightPciSwitch()
 		{
 			ApiInstance = new PciApi(Config);
-            MethodName = "GetPciDeviceListWithHttpInfo";
+            MethodName = "GetPciSwitchListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set PciSwitch.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PciCoprocessorCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciSwitch")]
-    public class SetIntersightPciSwitch:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPciCoprocessorCard", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPciCoprocessorCard:GetCmdletBase
 	{
-		public SetIntersightPciSwitch()
+		public GetIntersightPciCoprocessorCard()
 		{
 			ApiInstance = new PciApi(Config);
-            ModelObject = new PciSwitch();
-            MethodName = "UpdatePciSwitchWithHttpInfo";
+            MethodName = "GetPciCoprocessorCardListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set PciLink.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightPciLink")]
+    public class SetIntersightPciLink:SetCmdletBase
+	{
+		public SetIntersightPciLink()
+		{
+			ApiInstance = new PciApi(Config);
+            ModelObject = new PciLink();
+            MethodName = "UpdatePciLinkWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -195,38 +228,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The type information of the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PciSwitch.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciSwitch", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPciSwitch:GetCmdletBase
-	{
-		public GetIntersightPciSwitch()
-		{
-			ApiInstance = new PciApi(Config);
-            MethodName = "GetPciSwitchListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PciCoprocessorCard.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciCoprocessorCard", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPciCoprocessorCard:GetCmdletBase
-	{
-		public GetIntersightPciCoprocessorCard()
-		{
-			ApiInstance = new PciApi(Config);
-            MethodName = "GetPciCoprocessorCardListWithHttpInfo";
-		}
     }
 }

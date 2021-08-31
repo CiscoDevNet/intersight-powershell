@@ -19,7 +19,7 @@ New-IntersightFirmwareDistributable [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareDistributable&amp;apos; resource.
+Create a &apos;FirmwareDistributable&apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightSdcardPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SdcardPolicy&amp;apos; resource.
+Delete a &apos;SdcardPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSdcardPolicy](./Set-IntersightSdcardPolicy.md)
+
 [Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
 
 [New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
-
-[Set-IntersightSdcardPolicy](./Set-IntersightSdcardPolicy.md)
 

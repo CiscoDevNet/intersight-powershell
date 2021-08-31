@@ -19,7 +19,7 @@ Set-IntersightCapabilityIoCardManufacturingDef [-AdditionalProperties< Dictionar
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.
+Update a &apos;CapabilityIoCardManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

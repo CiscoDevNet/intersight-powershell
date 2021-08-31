@@ -180,6 +180,6 @@ PS C:\> Set-IntersightFabricFcNetworkPolicy
 
 [Remove-IntersightFabricFcNetworkPolicy](./Remove-IntersightFabricFcNetworkPolicy.md)
 
-[New-IntersightFabricFcNetworkPolicy](./New-IntersightFabricFcNetworkPolicy.md)
-
 [Get-IntersightFabricFcNetworkPolicy](./Get-IntersightFabricFcNetworkPolicy.md)
+
+[New-IntersightFabricFcNetworkPolicy](./New-IntersightFabricFcNetworkPolicy.md)

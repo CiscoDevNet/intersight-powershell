@@ -19,7 +19,7 @@ Set-IntersightIamLdapGroup [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLdapGroup&amp;apos; resource.
+Update a &apos;IamLdapGroup&apos; resource.
 
 ## PARAMETERS
 

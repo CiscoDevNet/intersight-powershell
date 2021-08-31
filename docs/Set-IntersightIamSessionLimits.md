@@ -19,7 +19,7 @@ Set-IntersightIamSessionLimits [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamSessionLimits&amp;apos; resource.
+Update a &apos;IamSessionLimits&apos; resource.
 
 ## PARAMETERS
 

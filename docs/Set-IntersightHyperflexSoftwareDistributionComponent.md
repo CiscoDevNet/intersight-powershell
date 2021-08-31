@@ -19,7 +19,7 @@ Set-IntersightHyperflexSoftwareDistributionComponent [-AdditionalProperties< Dic
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexSoftwareDistributionComponent&apos; resource.
+Update a &amp;apos;HyperflexSoftwareDistributionComponent&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -205,8 +205,8 @@ PS C:\> Set-IntersightHyperflexSoftwareDistributionComponent
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexSoftwareDistributionComponent](./Remove-IntersightHyperflexSoftwareDistributionComponent.md)
+
 [Get-IntersightHyperflexSoftwareDistributionComponent](./Get-IntersightHyperflexSoftwareDistributionComponent.md)
 
 [New-IntersightHyperflexSoftwareDistributionComponent](./New-IntersightHyperflexSoftwareDistributionComponent.md)
-
-[Remove-IntersightHyperflexSoftwareDistributionComponent](./Remove-IntersightHyperflexSoftwareDistributionComponent.md)

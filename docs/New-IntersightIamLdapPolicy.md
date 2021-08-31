@@ -296,11 +296,11 @@ PS C:\> New-IntersightIamLdapPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
-
 [Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
 
 [Remove-IntersightIamLdapPolicy](./Remove-IntersightIamLdapPolicy.md)
+
+[Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
 
 [Initialize-IntersightIamLdapBaseProperties](./Initialize-IntersightIamLdapBaseProperties.md)
 

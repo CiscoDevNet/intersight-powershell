@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get LsServiceProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightLsServiceProfile", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLsServiceProfile:GetCmdletBase
+	{
+		public GetIntersightLsServiceProfile()
+		{
+			ApiInstance = new LsApi(Config);
+            MethodName = "GetLsServiceProfileListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LsServiceProfile.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightLsServiceProfile")]
@@ -46,17 +58,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LsServiceProfile.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLsServiceProfile", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLsServiceProfile:GetCmdletBase
-	{
-		public GetIntersightLsServiceProfile()
-		{
-			ApiInstance = new LsApi(Config);
-            MethodName = "GetLsServiceProfileListWithHttpInfo";
-		}
     }
 }

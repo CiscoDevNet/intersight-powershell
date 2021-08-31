@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexHxapCluster](./Get-IntersightHyperflexHxapCluster.md)
-
 [Set-IntersightHyperflexHxapCluster](./Set-IntersightHyperflexHxapCluster.md)
+
+[Get-IntersightHyperflexHxapCluster](./Get-IntersightHyperflexHxapCluster.md)
 

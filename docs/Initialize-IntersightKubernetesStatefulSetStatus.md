@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: KubernetesStatefulSetStatus.ObjectTypeEnum
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateRevision
-UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &amp;lt;replicas&amp;gt; - &amp;lt;updatedReplicas&amp;gt;, until pod number &amp;lt;replicas&amp;gt;.
+UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &lt;replicas&gt; - &lt;updatedReplicas&gt;, until pod number &lt;replicas&gt;.
 
 ```yaml
 Type: string

@@ -17,7 +17,7 @@ Remove-IntersightSoftwareHyperflexDistributable -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwareHyperflexDistributable&apos; resource.
+Delete a &amp;apos;SoftwareHyperflexDistributable&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareHyperflexDistributable](./Set-IntersightSoftwareHyperflexDistributable.md)
+
 [Get-IntersightSoftwareHyperflexDistributable](./Get-IntersightSoftwareHyperflexDistributable.md)
 
 [New-IntersightSoftwareHyperflexDistributable](./New-IntersightSoftwareHyperflexDistributable.md)
-
-[Set-IntersightSoftwareHyperflexDistributable](./Set-IntersightSoftwareHyperflexDistributable.md)
 

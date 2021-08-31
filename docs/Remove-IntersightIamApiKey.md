@@ -17,7 +17,7 @@ Remove-IntersightIamApiKey -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamApiKey&apos; resource.
+Delete a &amp;apos;IamApiKey&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
 
-[Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
-
 [New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
+
+[Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
 

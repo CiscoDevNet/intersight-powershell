@@ -19,7 +19,7 @@ New-IntersightFirmwareIomDescriptor [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareIomDescriptor&apos; resource.
+Create a &amp;apos;FirmwareIomDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get SecurityUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightSecurityUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightSecurityUnit:GetCmdletBase
+	{
+		public GetIntersightSecurityUnit()
+		{
+			ApiInstance = new SecurityApi(Config);
+            MethodName = "GetSecurityUnitListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SecurityUnit.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSecurityUnit")]
@@ -17,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SecurityApi(Config);
             ModelObject = new SecurityUnit();
-            MethodName = "PatchSecurityUnitWithHttpInfo";
+            MethodName = "UpdateSecurityUnitWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -55,17 +67,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get SecurityUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSecurityUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightSecurityUnit:GetCmdletBase
-	{
-		public GetIntersightSecurityUnit()
-		{
-			ApiInstance = new SecurityApi(Config);
-            MethodName = "GetSecurityUnitListWithHttpInfo";
-		}
     }
 }

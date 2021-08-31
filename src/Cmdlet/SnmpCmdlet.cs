@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SnmpApi(Config);
             ModelObject = new SnmpPolicy();
-            MethodName = "UpdateSnmpPolicyWithHttpInfo";
+            MethodName = "PatchSnmpPolicyWithHttpInfo";
 		}
         // <summary>
         /// <para type="description">"The default SNMPv1, SNMPv2c community name or SNMPv3 username to include on any trap messages sent to the SNMP host. The name can be 18 characters long."</para>

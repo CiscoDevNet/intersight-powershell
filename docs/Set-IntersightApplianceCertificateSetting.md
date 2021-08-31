@@ -19,7 +19,7 @@ Set-IntersightApplianceCertificateSetting [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Update a &apos;ApplianceCertificateSetting&apos; resource.
+Update a &amp;apos;ApplianceCertificateSetting&amp;apos; resource.
 
 ## PARAMETERS
 

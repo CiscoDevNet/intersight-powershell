@@ -238,8 +238,8 @@ PS C:\> New-IntersightKvmPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightKvmPolicy](./Get-IntersightKvmPolicy.md)
+
 [Set-IntersightKvmPolicy](./Set-IntersightKvmPolicy.md)
 
 [Remove-IntersightKvmPolicy](./Remove-IntersightKvmPolicy.md)
-
-[Get-IntersightKvmPolicy](./Get-IntersightKvmPolicy.md)

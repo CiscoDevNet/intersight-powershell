@@ -19,7 +19,7 @@ Set-IntersightCapabilityFanModuleDescriptor [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityFanModuleDescriptor&amp;apos; resource.
+Update a &apos;CapabilityFanModuleDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ PS C:\> Set-IntersightCapabilityFanModuleDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityFanModuleDescriptor](./Remove-IntersightCapabilityFanModuleDescriptor.md)
-
 [Get-IntersightCapabilityFanModuleDescriptor](./Get-IntersightCapabilityFanModuleDescriptor.md)
 
 [New-IntersightCapabilityFanModuleDescriptor](./New-IntersightCapabilityFanModuleDescriptor.md)
+
+[Remove-IntersightCapabilityFanModuleDescriptor](./Remove-IntersightCapabilityFanModuleDescriptor.md)

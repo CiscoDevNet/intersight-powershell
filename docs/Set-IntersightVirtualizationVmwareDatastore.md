@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< Dictionary<string,object>>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< List<MoTag>>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>]
+Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< Dictionary<string,object>>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< List<MoTag>>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDatastore&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDatastore&apos; resource.
 
 ## PARAMETERS
 
@@ -78,6 +78,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: VirtualizationVmwareClusterRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DatastoreCluster
+A reference to a virtualizationVmwareDatastoreCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: VirtualizationVmwareDatastoreClusterRelationship
 Parameter Sets: (All)
 Aliases:
 

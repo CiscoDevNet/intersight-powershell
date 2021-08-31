@@ -8,74 +8,40 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeVmedia.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnitIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeVmedia", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeVmedia:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnitIdentity", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeRackUnitIdentity:GetCmdletBase
 	{
-		public GetIntersightComputeVmedia()
+		public GetIntersightComputeRackUnitIdentity()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeVmediaListWithHttpInfo";
+            MethodName = "GetComputeRackUnitIdentityListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeBoard.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeServerSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBoard")]
-    public class SetIntersightComputeBoard:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerSetting", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeServerSetting:GetCmdletBase
 	{
-		public SetIntersightComputeBoard()
+		public GetIntersightComputeServerSetting()
 		{
 			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeBoard();
-            MethodName = "UpdateComputeBoardWithHttpInfo";
+            MethodName = "GetComputeServerSettingListWithHttpInfo";
 		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> OperReason {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeBladeIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBladeIdentity", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeBladeIdentity:GetCmdletBase
+	{
+		public GetIntersightComputeBladeIdentity()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeBladeIdentityListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeServerSetting.</para>
@@ -87,7 +53,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ComputeApi(Config);
             ModelObject = new ComputeServerSetting();
-            MethodName = "UpdateComputeServerSettingWithHttpInfo";
+            MethodName = "PatchComputeServerSettingWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -217,39 +183,155 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeBladeIdentity.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeBladeIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBladeIdentity", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeBladeIdentity:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBladeIdentity")]
+    public class SetIntersightComputeBladeIdentity:SetCmdletBase
 	{
-		public GetIntersightComputeBladeIdentity()
+		public SetIntersightComputeBladeIdentity()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeBladeIdentityListWithHttpInfo";
+            ModelObject = new ComputeBladeIdentity();
+            MethodName = "UpdateComputeBladeIdentityWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeBladeIdentity.AdminActionEnum AdminAction {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship PhysicalDeviceRegistration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ComputeBladeIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeBladeIdentity")]
+    public class RemoveIntersightComputeBladeIdentity:RemoveCmdletBase
+	{
+		public RemoveIntersightComputeBladeIdentity()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "DeleteComputeBladeIdentityWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnitIdentity.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeRackUnitIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnitIdentity", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeRackUnitIdentity:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeRackUnitIdentity")]
+    public class SetIntersightComputeRackUnitIdentity:SetCmdletBase
 	{
-		public GetIntersightComputeRackUnitIdentity()
+		public SetIntersightComputeRackUnitIdentity()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeRackUnitIdentityListWithHttpInfo";
+            ModelObject = new ComputeRackUnitIdentity();
+            MethodName = "PatchComputeRackUnitIdentityWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeRackUnitIdentity.AdminActionEnum AdminAction {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship PhysicalDeviceRegistration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ComputeRackUnitIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnitIdentity")]
+    public class RemoveIntersightComputeRackUnitIdentity:RemoveCmdletBase
+	{
+		public RemoveIntersightComputeRackUnitIdentity()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "DeleteComputeRackUnitIdentityWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeBoard.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeMapping.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBoard", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeBoard:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeMapping", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeMapping:GetCmdletBase
 	{
-		public GetIntersightComputeBoard()
+		public GetIntersightComputeMapping()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeBoardListWithHttpInfo";
+            MethodName = "GetComputeMappingListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -572,28 +654,16 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeBlade.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeMapping.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBlade", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeBlade:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeMapping")]
+    public class SetIntersightComputeMapping:SetCmdletBase
 	{
-		public GetIntersightComputeBlade()
+		public SetIntersightComputeMapping()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeBladeListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeRackUnitIdentity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeRackUnitIdentity")]
-    public class SetIntersightComputeRackUnitIdentity:SetCmdletBase
-	{
-		public SetIntersightComputeRackUnitIdentity()
-		{
-			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeRackUnitIdentity();
-            MethodName = "PatchComputeRackUnitIdentityWithHttpInfo";
+            ModelObject = new ComputeMapping();
+            MethodName = "UpdateComputeMappingWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -605,11 +675,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Remote image location from where the image is uploaded to server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ComputeRackUnitIdentity.AdminActionEnum AdminAction {
+        public string FileLocation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> MediaTypes {
             get;
             set;
         }
@@ -619,15 +698,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship PhysicalDeviceRegistration {
             get;
             set;
         }
@@ -642,15 +712,121 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ComputeRackUnitIdentity.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeBlade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnitIdentity")]
-    public class RemoveIntersightComputeRackUnitIdentity:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBlade", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeBlade:GetCmdletBase
 	{
-		public RemoveIntersightComputeRackUnitIdentity()
+		public GetIntersightComputeBlade()
 		{
 			ApiInstance = new ComputeApi(Config);
-            MethodName = "DeleteComputeRackUnitIdentityWithHttpInfo";
+            MethodName = "GetComputeBladeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputePhysicalSummary.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePhysicalSummary", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputePhysicalSummary:GetCmdletBase
+	{
+		public GetIntersightComputePhysicalSummary()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputePhysicalSummaryListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeRackUnit:GetCmdletBase
+	{
+		public GetIntersightComputeRackUnit()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeRackUnitListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeBoard.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBoard", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeBoard:GetCmdletBase
+	{
+		public GetIntersightComputeBoard()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeBoardListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set ComputeBoard.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBoard")]
+    public class SetIntersightComputeBoard:SetCmdletBase
+	{
+		public SetIntersightComputeBoard()
+		{
+			ApiInstance = new ComputeApi(Config);
+            ModelObject = new ComputeBoard();
+            MethodName = "UpdateComputeBoardWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> OperReason {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeVmedia.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeVmedia", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeVmedia:GetCmdletBase
+	{
+		public GetIntersightComputeVmedia()
+		{
+			ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeVmediaListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -663,7 +839,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ComputeApi(Config);
             ModelObject = new ComputeRackUnit();
-            MethodName = "PatchComputeRackUnitWithHttpInfo";
+            MethodName = "UpdateComputeRackUnitWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -980,181 +1156,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeMapping.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeMapping")]
-    public class SetIntersightComputeMapping:SetCmdletBase
-	{
-		public SetIntersightComputeMapping()
-		{
-			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeMapping();
-            MethodName = "UpdateComputeMappingWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Remote image location from where the image is uploaded to server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FileLocation {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> MediaTypes {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputePhysicalSummary.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputePhysicalSummary", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputePhysicalSummary:GetCmdletBase
-	{
-		public GetIntersightComputePhysicalSummary()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputePhysicalSummaryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeRackUnit:GetCmdletBase
-	{
-		public GetIntersightComputeRackUnit()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeRackUnitListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeServerSetting.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerSetting", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeServerSetting:GetCmdletBase
-	{
-		public GetIntersightComputeServerSetting()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeServerSettingListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ComputeBladeIdentity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBladeIdentity")]
-    public class SetIntersightComputeBladeIdentity:SetCmdletBase
-	{
-		public SetIntersightComputeBladeIdentity()
-		{
-			ApiInstance = new ComputeApi(Config);
-            ModelObject = new ComputeBladeIdentity();
-            MethodName = "UpdateComputeBladeIdentityWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeBladeIdentity.AdminActionEnum AdminAction {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship PhysicalDeviceRegistration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ComputeBladeIdentity.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeBladeIdentity")]
-    public class RemoveIntersightComputeBladeIdentity:RemoveCmdletBase
-	{
-		public RemoveIntersightComputeBladeIdentity()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "DeleteComputeBladeIdentityWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ComputeMapping.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeMapping", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightComputeMapping:GetCmdletBase
-	{
-		public GetIntersightComputeMapping()
-		{
-			ApiInstance = new ComputeApi(Config);
-            MethodName = "GetComputeMappingListWithHttpInfo";
-		}
     }
 }

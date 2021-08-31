@@ -147,8 +147,8 @@ PS C:\> New-IntersightConfigExporter
 
 ## RELATED LINKS
 
-[Get-IntersightConfigExporter](./Get-IntersightConfigExporter.md)
-
 [Remove-IntersightConfigExporter](./Remove-IntersightConfigExporter.md)
+
+[Get-IntersightConfigExporter](./Get-IntersightConfigExporter.md)
 
 [Initialize-IntersightConfigMoRef](./Initialize-IntersightConfigMoRef.md)

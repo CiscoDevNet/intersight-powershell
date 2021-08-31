@@ -210,10 +210,10 @@ PS C:\> New-IntersightKubernetesAddonRepository
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAddonRepository](./Get-IntersightKubernetesAddonRepository.md)
-
 [Set-IntersightKubernetesAddonRepository](./Set-IntersightKubernetesAddonRepository.md)
 
 [Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)
+
+[Get-IntersightKubernetesAddonRepository](./Get-IntersightKubernetesAddonRepository.md)
 
 [Initialize-IntersightX509Certificate](./Initialize-IntersightX509Certificate.md)

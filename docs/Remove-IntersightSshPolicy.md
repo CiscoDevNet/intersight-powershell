@@ -17,7 +17,7 @@ Remove-IntersightSshPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SshPolicy&apos; resource.
+Delete a &amp;apos;SshPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

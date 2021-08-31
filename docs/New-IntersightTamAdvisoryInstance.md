@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryInstance [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TamAdvisoryInstance&amp;apos; resource.
+Create a &apos;TamAdvisoryInstance&apos; resource.
 
 ## PARAMETERS
 

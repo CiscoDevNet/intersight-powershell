@@ -19,7 +19,7 @@ Set-IntersightUuidpoolPool [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &apos;UuidpoolPool&apos; resource.
+Update a &amp;apos;UuidpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightFabricPcOperation [-AdditionalProperties< Dictionary<string,object
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricPcOperation&amp;apos; resource.
+Update a &apos;FabricPcOperation&apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> Set-IntersightFabricPcOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)
+[New-IntersightFabricPcOperation](./New-IntersightFabricPcOperation.md)
 
 [Get-IntersightFabricPcOperation](./Get-IntersightFabricPcOperation.md)
 
-[New-IntersightFabricPcOperation](./New-IntersightFabricPcOperation.md)
+[Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)

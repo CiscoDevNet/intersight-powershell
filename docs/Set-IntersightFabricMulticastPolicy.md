@@ -205,8 +205,8 @@ PS C:\> Set-IntersightFabricMulticastPolicy
 
 ## RELATED LINKS
 
-[New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
+[Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
 
 [Get-IntersightFabricMulticastPolicy](./Get-IntersightFabricMulticastPolicy.md)
 
-[Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
+[New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)

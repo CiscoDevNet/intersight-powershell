@@ -19,7 +19,7 @@ Set-IntersightStorageSasPort [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageSasPort&apos; resource.
+Update a &amp;apos;StorageSasPort&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightIamEndPointUser [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamEndPointUser&amp;apos; resource.
+Update a &apos;IamEndPointUser&apos; resource.
 
 ## PARAMETERS
 

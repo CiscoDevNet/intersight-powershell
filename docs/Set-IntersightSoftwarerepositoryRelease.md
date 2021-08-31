@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryRelease [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryRelease&apos; resource.
+Update a &amp;apos;SoftwarerepositoryRelease&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -175,8 +175,8 @@ PS C:\> Set-IntersightSoftwarerepositoryRelease
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
-
 [New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
 
 [Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
+
+[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)

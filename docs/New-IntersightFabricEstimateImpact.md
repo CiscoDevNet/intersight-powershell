@@ -19,7 +19,7 @@ New-IntersightFabricEstimateImpact [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricEstimateImpact&apos; resource.
+Create a &amp;apos;FabricEstimateImpact&amp;apos; resource.
 
 ## PARAMETERS
 

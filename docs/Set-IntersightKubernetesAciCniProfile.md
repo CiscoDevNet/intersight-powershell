@@ -391,8 +391,8 @@ PS C:\> Set-IntersightKubernetesAciCniProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
-
 [Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
 
 [New-IntersightKubernetesAciCniProfile](./New-IntersightKubernetesAciCniProfile.md)
+
+[Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)

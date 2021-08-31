@@ -19,7 +19,7 @@ Set-IntersightEquipmentChassis [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentChassis&amp;apos; resource.
+Update a &apos;EquipmentChassis&apos; resource.
 
 ## PARAMETERS
 

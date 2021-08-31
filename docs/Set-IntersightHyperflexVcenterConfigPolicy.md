@@ -19,7 +19,7 @@ Set-IntersightHyperflexVcenterConfigPolicy [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexVcenterConfigPolicy&apos; resource.
+Update a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -238,8 +238,8 @@ PS C:\> Set-IntersightHyperflexVcenterConfigPolicy
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexVcenterConfigPolicy](./New-IntersightHyperflexVcenterConfigPolicy.md)
-
 [Get-IntersightHyperflexVcenterConfigPolicy](./Get-IntersightHyperflexVcenterConfigPolicy.md)
+
+[New-IntersightHyperflexVcenterConfigPolicy](./New-IntersightHyperflexVcenterConfigPolicy.md)
 
 [Remove-IntersightHyperflexVcenterConfigPolicy](./Remove-IntersightHyperflexVcenterConfigPolicy.md)

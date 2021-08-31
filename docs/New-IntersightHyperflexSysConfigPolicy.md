@@ -19,7 +19,7 @@ New-IntersightHyperflexSysConfigPolicy [-AdditionalProperties< Dictionary<string
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexSysConfigPolicy&amp;apos; resource.
+Create a &apos;HyperflexSysConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -225,6 +225,6 @@ PS C:\> New-IntersightHyperflexSysConfigPolicy
 
 [Get-IntersightHyperflexSysConfigPolicy](./Get-IntersightHyperflexSysConfigPolicy.md)
 
-[Set-IntersightHyperflexSysConfigPolicy](./Set-IntersightHyperflexSysConfigPolicy.md)
-
 [Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)
+
+[Set-IntersightHyperflexSysConfigPolicy](./Set-IntersightHyperflexSysConfigPolicy.md)

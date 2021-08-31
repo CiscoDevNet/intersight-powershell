@@ -19,7 +19,7 @@ Set-IntersightAssetDeviceContractInformation [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;AssetDeviceContractInformation&amp;apos; resource.
+Update a &apos;AssetDeviceContractInformation&apos; resource.
 
 ## PARAMETERS
 
@@ -112,6 +112,6 @@ PS C:\> Set-IntersightAssetDeviceContractInformation
 
 ## RELATED LINKS
 
-[Get-IntersightAssetDeviceContractInformation](./Get-IntersightAssetDeviceContractInformation.md)
-
 [Remove-IntersightAssetDeviceContractInformation](./Remove-IntersightAssetDeviceContractInformation.md)
+
+[Get-IntersightAssetDeviceContractInformation](./Get-IntersightAssetDeviceContractInformation.md)

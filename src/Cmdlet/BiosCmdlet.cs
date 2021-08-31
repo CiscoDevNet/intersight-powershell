@@ -20,18 +20,6 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosBootDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosBootDevice:GetCmdletBase
-	{
-		public GetIntersightBiosBootDevice()
-		{
-			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosBootDeviceListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosSystemBootOrder.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightBiosSystemBootOrder", DefaultParameterSetName = "CmdletParam")]
@@ -56,153 +44,16 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosUnit.</para>
+    /// <para type="synopsis">This is the cmdlet to Get BiosBootDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosUnit:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosBootDevice:GetCmdletBase
 	{
-		public GetIntersightBiosUnit()
+		public GetIntersightBiosBootDevice()
 		{
 			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosUnitListWithHttpInfo";
+            MethodName = "GetBiosBootDeviceListWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosVfSelectMemoryRasConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosVfSelectMemoryRasConfiguration", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosVfSelectMemoryRasConfiguration:GetCmdletBase
-	{
-		public GetIntersightBiosVfSelectMemoryRasConfiguration()
-		{
-			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosVfSelectMemoryRasConfigurationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BiosBootMode.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosBootMode")]
-    public class SetIntersightBiosBootMode:SetCmdletBase
-	{
-		public SetIntersightBiosBootMode()
-		{
-			ApiInstance = new BiosApi(Config);
-            ModelObject = new BiosBootMode();
-            MethodName = "PatchBiosBootModeWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ActualBootMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeBladeRelationship ComputeBlade {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeRackUnitRelationship ComputeRackUnit {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BiosUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosUnit")]
-    public class SetIntersightBiosUnit:SetCmdletBase
-	{
-		public SetIntersightBiosUnit()
-		{
-			ApiInstance = new BiosApi(Config);
-            ModelObject = new BiosUnit();
-            MethodName = "PatchBiosUnitWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BiosSystemBootOrderRelationship SystemBootOrder {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove BiosPolicy.</para>
@@ -7201,5 +7052,154 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BiosUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosUnit:GetCmdletBase
+	{
+		public GetIntersightBiosUnit()
+		{
+			ApiInstance = new BiosApi(Config);
+            MethodName = "GetBiosUnitListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BiosBootMode.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosBootMode")]
+    public class SetIntersightBiosBootMode:SetCmdletBase
+	{
+		public SetIntersightBiosBootMode()
+		{
+			ApiInstance = new BiosApi(Config);
+            ModelObject = new BiosBootMode();
+            MethodName = "UpdateBiosBootModeWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ActualBootMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeBladeRelationship ComputeBlade {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeRackUnitRelationship ComputeRackUnit {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BiosUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosUnit")]
+    public class SetIntersightBiosUnit:SetCmdletBase
+	{
+		public SetIntersightBiosUnit()
+		{
+			ApiInstance = new BiosApi(Config);
+            ModelObject = new BiosUnit();
+            MethodName = "UpdateBiosUnitWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BiosSystemBootOrderRelationship SystemBootOrder {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BiosVfSelectMemoryRasConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosVfSelectMemoryRasConfiguration", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosVfSelectMemoryRasConfiguration:GetCmdletBase
+	{
+		public GetIntersightBiosVfSelectMemoryRasConfiguration()
+		{
+			ApiInstance = new BiosApi(Config);
+            MethodName = "GetBiosVfSelectMemoryRasConfigurationListWithHttpInfo";
+		}
     }
 }

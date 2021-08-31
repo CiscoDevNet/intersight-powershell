@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImportSource
-The source of the archive in Intersight storage that has all the MOs\nto be imported.\n* `ImageRepo` - The &apos;ImageRepo&apos; source if the source of exporter archive is image repository.\n* `URL` - The &apos;URL&apos; source if the source of exported archive is a URL.
+The source of the archive in Intersight storage that has all the MOs\nto be imported.\n* `ImageRepo` - The &amp;apos;ImageRepo&amp;apos; source if the source of exporter archive is image repository.\n* `URL` - The &amp;apos;URL&amp;apos; source if the source of exported archive is a URL.
 
 ```yaml
 Type: ConfigImporter.ImportSourceEnum
@@ -175,6 +175,6 @@ PS C:\> New-IntersightConfigImporter
 
 ## RELATED LINKS
 
-[Get-IntersightConfigImporter](./Get-IntersightConfigImporter.md)
-
 [Remove-IntersightConfigImporter](./Remove-IntersightConfigImporter.md)
+
+[Get-IntersightConfigImporter](./Get-IntersightConfigImporter.md)

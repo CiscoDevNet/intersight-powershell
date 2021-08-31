@@ -8,50 +8,29 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualDisk.</para>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualDisk", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareVirtualDisk:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareCluster", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareCluster:GetCmdletBase
 	{
-		public GetIntersightVirtualizationVmwareVirtualDisk()
+		public GetIntersightVirtualizationVmwareCluster()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareVirtualDiskListWithHttpInfo";
+            MethodName = "GetVirtualizationVmwareClusterListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDistributedSwitch.</para>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDistributedSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedSwitch", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareDistributedSwitch:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDistributedSwitch")]
+    public class SetIntersightVirtualizationVmwareDistributedSwitch:SetCmdletBase
 	{
-		public GetIntersightVirtualizationVmwareDistributedSwitch()
+		public SetIntersightVirtualizationVmwareDistributedSwitch()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareDistributedSwitchListWithHttpInfo";
+            ModelObject = new VirtualizationVmwareDistributedSwitch();
+            MethodName = "UpdateVirtualizationVmwareDistributedSwitchWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualNetworkInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualNetworkInterface")]
-    public class SetIntersightVirtualizationVmwareVirtualNetworkInterface:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVmwareVirtualNetworkInterface()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareVirtualNetworkInterface();
-            MethodName = "UpdateVirtualizationVmwareVirtualNetworkInterfaceWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description">"Type of virtual ethernet adapter for virtual network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string AdapterType {
-            get;
-            set;
-        }
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -62,47 +41,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Connect or not to connect the device when the virtual machine starts."</para>
+        /// <para type="description">"Switch description (user provided), if any."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool ConnectAtPowerOn {
+        public string Description {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Device is currently connected or not. Valid only while the virtual machine is running."</para>
+        /// <para type="description">"The internally generated identity of this switch. This entity is not manipulated by users. It aids in uniquely identifying the switch object. For VMware, this is MOR (managed object reference)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool Connected {
+        public string Identity {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The internally assigned key of this virtual network interface. This entity is not manipulated by users."</para>
+        /// <para type="description">"Maximum number of ports allowed on this distributed virtual switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long Key {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"MAC address assigned to virtual network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")]
-        public string MacAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"MAC address type for the mac address assigned to virtual network interface.\n* `manual` - Statically assigned MAC address.\n* `generated` - Automatically generated MAC address.\n* `assigned` - MAC address assigned by VCenter to the virtual network interface card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualNetworkInterface.MacAddressTypeEnum MacAddressType {
+        public long MaxPort {
             get;
             set;
         }
@@ -116,7 +77,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the virtual network interface created on a virtual machine."</para>
+        /// <para type="description">"Maximum transmission unit configured on a distributed virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Mtu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User-provided name to identify the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -125,11 +95,174 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Type of network for virtual network interface. It can be either standard or distributed."</para>
+        /// <para type="description">"The teams can then either share the load of traffic between physical and virtual networks among some or all of its members, or provide passive failover in the event of a hardware failure or a network outage."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string NetworkType {
+        public VirtualizationVmwareTeamingAndFailover NicTeamingAndFailover {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The total number of hosts attached to the distributed virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumHosts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The total number of distributed networks in the distributed virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumNetworks {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of stand-alone ports in use."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumStandAlonePorts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of uplinks configured in this distributed virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumUplinks {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Capacity and consumption information about this distributed virtual switch, if available."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationStorageCapacity SwitchCapacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Universally Unique Id of this distributed virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
+        public string Uuid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The running config's version details are represented."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareUplinkPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareUplinkPort", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareUplinkPort:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareUplinkPort()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareUplinkPortListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatacenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatacenter", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareDatacenter:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareDatacenter()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareDatacenterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareUplinkPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareUplinkPort")]
+    public class SetIntersightVirtualizationVmwareUplinkPort:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareUplinkPort()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareUplinkPort();
+            MethodName = "PatchVirtualizationVmwareUplinkPortWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The VMware managed object reference as a string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Identity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally assigned key of this uplink port object. This entity is not manipulated by users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Key {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User-provided name to identify the uplink port object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
             get;
             set;
         }
@@ -148,15 +281,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identity of the virtual machine where the virtual network interface is created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string VmIdentity {
             get;
             set;
         }
@@ -174,16 +298,16 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareFolder.</para>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareFolder")]
-    public class SetIntersightVirtualizationVmwareFolder:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareNetwork")]
+    public class SetIntersightVirtualizationVmwareNetwork:SetCmdletBase
 	{
-		public SetIntersightVirtualizationVmwareFolder()
+		public SetIntersightVirtualizationVmwareNetwork()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareFolder();
-            MethodName = "PatchVirtualizationVmwareFolderWithHttpInfo";
+            ModelObject = new VirtualizationVmwareNetwork();
+            MethodName = "UpdateVirtualizationVmwareNetworkWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -195,16 +319,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a virtualizationVmwareVcenter resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"If forgedTransmits property value is set to reject, outbound frames with source MAC address different from the one set on the adapter are dropped. If property value is set to accept, no filtering is performed and all outbound frames are passed.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareVcenterRelationship HypervisorManager {
+        public VirtualizationVmwareNetwork.ForgedTransmitsEnum ForgedTransmits {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The internally generated identity of this folder. This entity is not manipulated by users. It aids in uniquely identifying the folder object. For VMware, this is a MOR (managed object reference)."</para>
+        /// <para type="description">"The internally generated identity of network. This entity cannot manipulated by users. It aids in uniquely identifying the network object. For VMware, this is MOR (managed object reference)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -213,20 +337,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If a folder is internal, it will be set to true."</para>
+        /// <para type="description">"If macAddressChanges property value is set to reject and the MAC address of the adapter is changed to a value other than the one specified in .vmx configuration file, all inbound frames are dropped. If property value is set to accept and the MAC address is changed, inbound frames to the new MAC address are received.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool Internal {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Inventory path to the folder. Example - /DC/myFolder."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string InventoryPath {
+        public VirtualizationVmwareNetwork.MacAddressChangesEnum MacAddressChanges {
             get;
             set;
         }
@@ -240,7 +355,390 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the folder as stored in vCenter."</para>
+        /// <para type="description">"User-provided name to identify the portgroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The teams can then either share the load of traffic between physical and virtual networks among some or all of its members, or provide passive failover in the event of a hardware failure or a network outage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareTeamingAndFailover NicTeamingAndFailover {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If promiscuousMode property value is set to reject, incoming traffic only targeted to that network will be visible. If property value is set to accept, objects defined within the network can see all incoming traffic on the virtual switch based on the VLAN policy.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareNetwork.PromiscuousModeEnum PromiscuousMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN id with which the network is associated. A value of 0 specifies that port is not associated with a VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long VlanId {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualMachine.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualMachine", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVirtualMachine:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVirtualMachine()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVirtualMachineListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualMachine.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualMachine")]
+    public class NewIntersightVirtualizationVirtualMachine:NewCmdletBase
+	{
+		public NewIntersightVirtualizationVirtualMachine()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVirtualMachine();
+            MethodName = "CreateVirtualizationVirtualMachineWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"Action to be performed on a virtual machine (Create, PowerState, Migrate, Clone etc).\n* `None` - A place holder for the default value.\n* `PowerState` - Power action is performed on the virtual machine.\n* `Migrate` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor.\n* `Create` - The virtual machine will be created on the specified hypervisor. This action is also useful if the virtual machine creation failed during first POST operation on VirtualMachine managed object. User can set this action to retry the virtual machine creation.\n* `Delete` - The virtual machine will be deleted from the specified hypervisor. User can either set this action or can do a DELETE operation on the VirtualMachine managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVirtualMachine.ActionEnum Action {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InfraMetaData> AffinitySelectors {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InfraMetaData> AntiAffinitySelectors {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Cloud init configuration data for virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationCloudInitConfig CloudInitConfig {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseClusterRelationship Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Cluster where virtual machine is deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ClusterEsxi {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of vCPUs allocated to virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 40)]
+        public long Cpu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<VirtualizationVirtualMachineDisk> Disk {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Normally any virtual machine that is still powered on cannot be deleted. The expected sequence from a user is to first power off the virtual machine and then invoke the delete operation. However, in special circumstances, the owner of the virtual machine may know very well that the virtual machine is no longer needed and just wants to dispose it off. In such situations a delete operation of a virtual machine object is accepted only when this forceDelete attribute is set to true. Under normal circumstances (forceDelete is false), delete operation first confirms that the virtual machine is powered off and then proceeds to delete the virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ForceDelete {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Guest operating system running on virtual machine.\n* `linux` - A Linux operating system.\n* `windows` - A Windows operating system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVirtualMachine.GuestOsEnum GuestOs {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationBaseHost resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseHostRelationship Host {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Host where virtual machine is deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HostEsxi {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<VirtualizationNetworkInterface> Interfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InfraMetaData> Labels {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte, 1MiB, is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4.17792e+06)]
+        public long Memory {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual machine name that is unique. Hypervisors enforce platform specific limits and character sets. The name length limit, both min and max, vary among hypervisors. Therefore, the basic limits are set here and proper enforcement is done elsewhere."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Expected power state of virtual machine (PowerOn, PowerOff, Restart).\n* `PowerOff` - The virtual machine will be powered off if it is already not in powered off state. If it is already powered off, no side-effects are expected.\n* `PowerOn` - The virtual machine will be powered on if it is already not in powered on state. If it is already powered on, no side-effects are expected.\n* `Suspend` - The virtual machine will be put into  a suspended state.\n* `ShutDownGuestOS` - The guest operating system is shut down gracefully.\n* `RestartGuestOS` - It can either act as a reset switch and abruptly reset the guest operating system, or it can send a restart signal to the guest operating system so that it shuts down gracefully and restarts.\n* `Reset` - Resets the virtual machine abruptly, with no consideration for work in progress.\n* `Restart` - The virtual machine will be restarted only if it is in powered on state. If it is powered off, it will not be started up.\n* `Unknown` - Power state of the entity is unknown."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVirtualMachine.PowerStateEnum PowerState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was 'discovered' and not created from Intersight. No provisioning information is available."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVirtualMachine.ProvisionTypeEnum ProvisionType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual machine configuration to provision."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseVmConfiguration VmConfig {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwarePhysicalNetworkInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwarePhysicalNetworkInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwarePhysicalNetworkInterface:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwarePhysicalNetworkInterface()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwarePhysicalNetworkInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareKernelNetwork.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareKernelNetwork")]
+    public class SetIntersightVirtualizationVmwareKernelNetwork:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareKernelNetwork()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareKernelNetwork();
+            MethodName = "PatchVirtualizationVmwareKernelNetworkWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates that fault tolerance logging is enabled on this kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool FaultToleranceLogging {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of network. This entity cannot manipulated by users. It aids in uniquely identifying the network object. For VMware, this is MOR (managed object reference)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Identity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> IpAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Standard MAC address assigned to this kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")]
+        public string MacAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates that management traffic is enabled on this kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Management {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum transmission unit configured on a kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Mtu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User-provided name to identify the portgroup."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -267,23 +765,123 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Determines the type of folder. e.g. vCenter folder, VM and Templete Folder, StorageFolder, NetworkFolder, Host and Cluster Folder.\n* `Unknown` - The type of the folder is unknown. It may not represent that the folder does not exist but indicates that something might be wrong.\n* `VMTemplateFolder` - The folder contains VMs and VM templates.\n* `StorageFolder` - The folder contains storage devices.\n* `HostClusterFolder` - The folder contains hosts and clusters.\n* `NetworkFolder` - The folder contains network items.\n* `VcenterFolder` - The folder created under a vCenter or vCenter folder."</para>
+        /// <para type="description">"Indicates that vmotion is enabled on this kernel network."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareFolder.TypeofFolderEnum TypeofFolder {
+        public bool Vmotion {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a virtualizationVmwareFolder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Indicates that vsan traffic is enabled on this kernel network."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareFolderRelationship VmwareFolder {
+        public bool Vsan {
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Indicates that vsphere provisioning traffic is enabled on this kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool VsphereProvisioning {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates that vsphere replication is enabled on this kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool VsphereReplication {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates that vsphere replication nfc is enabled on this kernel network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool VsphereReplicationNfc {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationHost.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationHost")]
+    public class SetIntersightVirtualizationHost:SetCmdletBase
+	{
+		public SetIntersightVirtualizationHost()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationHost();
+            MethodName = "UpdateVirtualizationHostWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"Action to be performed on a host (Create, PowerState, Migrate, Clone etc).\n* `None` - A place holder for the default value.\n* `PowerOffStorageController` - Power off HyperFlex storage controller node running on selected hypervisor host.\n* `PowerOnStorageController` - Power on HyperFlex storage controller node running on selected hypervisor host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationHost.ActionEnum Action {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatastoreCluster.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastoreCluster", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareDatastoreCluster:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareDatastoreCluster()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareDatastoreClusterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualSwitch.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualSwitch", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareVirtualSwitch:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareVirtualSwitch()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareVirtualSwitchListWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDistributedNetwork.</para>
@@ -434,562 +1032,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVcenter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVcenter", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareVcenter:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareVcenter()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareVcenterListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualSwitch.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualSwitch")]
-    public class SetIntersightVirtualizationVmwareVirtualSwitch:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVmwareVirtualSwitch()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareVirtualSwitch();
-            MethodName = "UpdateVirtualizationVmwareVirtualSwitchWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If forgedTransmits property value is set to reject, outbound frames with a source MAC address different from the one set on the adapter are dropped. If property value is set to accept, the switch does not perform filtering and permits all outbound frames.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualSwitch.ForgedTransmitsEnum ForgedTransmits {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally generated identity of this switch. This entity is not manipulated by users. It aids in uniquely identifying the switch object. For VMware, this is MOR (managed object reference)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Identity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If macAddressChanges property value is set to reject and the MAC address of the adapter is changed to a value other than the one specified in .vmx configuration file, the switch drops all inbound frames to the adapter. If property value is set to accept and the MAC address is changed, the switch allows frames to the new MAC address to pass.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualSwitch.MacAddressChangesEnum MacAddressChanges {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum transmission unit configured on a virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Mtu {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User-provided name to identify the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The teams can then either share the load of traffic between physical and virtual networks among some or all of its members, or provide passive failover in the event of a hardware failure or a network outage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareTeamingAndFailover NicTeamingAndFailover {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of networks available on this virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumNetworks {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of physical network interfaces connected with this virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumPhysicalNetworkInterfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If promiscuousMode property value is set to reject, the virtual switch forwards only frames that are addressed to the adapter. If property value is set to accept, the virtual switch forwards all frames to the adapter in compliance with the active VLAN policy for the port to which it is connected.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualSwitch.PromiscuousModeEnum PromiscuousMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVirtualDisk")]
-    public class SetIntersightVirtualizationVirtualDisk:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVirtualDisk()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualDisk();
-            MethodName = "UpdateVirtualizationVirtualDiskWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Capacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseClusterRelationship Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualDisk.ModeEnum Mode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceCerts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Source disk from which the content is copied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceDiskToClone {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Image path used to import on the created disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceFilePath {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualDisk")]
-    public class RemoveIntersightVirtualizationVirtualDisk:RemoveCmdletBase
-	{
-		public RemoveIntersightVirtualizationVirtualDisk()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "DeleteVirtualizationVirtualDiskWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualDisk")]
-    public class SetIntersightVirtualizationVmwareVirtualDisk:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVmwareVirtualDisk()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareVirtualDisk();
-            MethodName = "UpdateVirtualizationVmwareVirtualDiskWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Compatibility mode of the raw disk mapping (RDM).\n* `notApplicable` - Value specified for any disk which is not of raw device mapping type.\n* `physicalMode` - A disk device backed by a physical compatibility mode raw disk mapping cannot use disk modes, and commands are passed straight through to the LUN indicated by the raw disk mapping.\n* `virtualMode` - A disk device backed by a virtual compatibility mode raw disk mapping can use disk modes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualDisk.CompatibilityModeEnum CompatibilityMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Key of the controller on which the disk is created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ControllerKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Host-specific device the LUN is being accessed through. If the target LUN is not available on the host then it is empty. For example, this could happen if it has accidentally been masked out."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DeviceName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Persistence mode of the virtual disk. For RDM disks, it is only supported when the raw disk mapping is using virtual compatibility mode.\n* `persistent` - Changes are immediately and permanently written to the virtual disk.\n* `independent_persistent` - Changes are immediately and permanently written to the virtual disk and not affected by snapshots.\n* `independent_nonpersistent` - Changes to virtual disk are made to a redo log and discarded at power off and not affected by snapshots.\n* `nonpersistent` - Changes to virtual disk are made to a redo log and discarded at power off.\n* `undoable` - Changes to virtual disk are made to a redo log and has the option to commit or undo.\n* `append` - Changes are appended to the redo log and can be revoked by removing the undo log."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualDisk.DiskModeEnum DiskMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies whether the virtual disk is a RDM or a Hard disk.\n* `flatDisk` - Specifies that it is a flat disk.\n* `rdmDisk` - Specifies that it is a raw device mapping disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualDisk.DiskTypeEnum DiskType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally assigned key of this disk. This entity is not manipulated by users."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Key {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The utilization of a virtual machine will not exceed this limit, even if there are available resources. Used to ensure a consistent performance of virtual machines independent of available resources. If set to -1, then there is no fixed limit on resource usage (only bounded by available resources and shares). The unit is number of I/O per second."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Limit {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Unique identifier of the LUN accessed by the raw disk mapping (RDM)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string LunUuid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Serial ID of the storage device."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Serial {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk shares used for resource scheduling."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareSharesInfo Shares {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Sharing mode of the virtual disk.\n* `sharingNone` - The virtual disk is not shared.\n* `sharingMultiWriter` - The virtual disk is shared between multiple virtual machines."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualDisk.SharingEnum Sharing {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk size represented in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Size {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Allocation type for the virtual disk.\n* `notApplicable` - Value specified for a disk for which storage allocation type is not applicable.\n* `thin` - A thin provisioned disk consumes only the space that it needs for its initial operrations, and grows with time according to demand. It is the fastest method to create a virtual disk because it creates a disk with just the header information.\n* `lazyZeroedThick` - A lazy zeroed thick disk has all space allocated at the time of its creation. Data remaining on the physical device is not erased during creation, but is zeroed out on demand later on first write from the virtual machine.\n* `eagerZeroedThick` - An eager zeroed thick disk has all space allocated and wiped clean of any previous contents on the physical media at creation time. Such disks may take longer time during creation compared to other disk formats."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareVirtualDisk.StorageAllocationTypeEnum StorageAllocationType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Unit number of the disk on its controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long UnitNumber {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"UUID assigned by vCenter to every disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
-        public string Uuid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identity of the virtual disk object as the first class entity."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
-        public string VdiskId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Vendor of the storage device."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Vendor {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Path of the virtual disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string VirtualDiskPath {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identity of the virtual machine where the virtual disk is created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string VmIdentity {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationHost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationHost")]
-    public class SetIntersightVirtualizationHost:SetCmdletBase
-	{
-		public SetIntersightVirtualizationHost()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationHost();
-            MethodName = "UpdateVirtualizationHostWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description">"Action to be performed on a host (Create, PowerState, Migrate, Clone etc).\n* `None` - A place holder for the default value.\n* `PowerOffStorageController` - Power off HyperFlex storage controller node running on selected hypervisor host.\n* `PowerOnStorageController` - Power on HyperFlex storage controller node running on selected hypervisor host."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationHost.ActionEnum Action {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualSwitch.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualSwitch", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareVirtualSwitch:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareVirtualSwitch()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareVirtualSwitchListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareCluster.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareCluster")]
@@ -1102,6 +1144,604 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVcenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVcenter", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareVcenter:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareVcenter()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareVcenterListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatacenter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatacenter")]
+    public class SetIntersightVirtualizationVmwareDatacenter:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareDatacenter()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareDatacenter();
+            MethodName = "PatchVirtualizationVmwareDatacenterWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Count of all clusters associated with this DC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ClusterCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Count of all datastores associated with this DC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long DatastoreCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Count of all hosts associated with this DC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long HostCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Inventory path of the DC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string InventoryPath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Count of all networks associated with this datacenter (DC)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NetworkCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Count of all virtual machines (VMs) associated with this DC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long VmCount {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualNetworkInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualNetworkInterface", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareVirtualNetworkInterface:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareVirtualNetworkInterface()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareVirtualNetworkInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualNetworkInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualNetworkInterface")]
+    public class SetIntersightVirtualizationVmwareVirtualNetworkInterface:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareVirtualNetworkInterface()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareVirtualNetworkInterface();
+            MethodName = "PatchVirtualizationVmwareVirtualNetworkInterfaceWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"Type of virtual ethernet adapter for virtual network interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AdapterType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Connect or not to connect the device when the virtual machine starts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ConnectAtPowerOn {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Device is currently connected or not. Valid only while the virtual machine is running."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Connected {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally assigned key of this virtual network interface. This entity is not manipulated by users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Key {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MAC address assigned to virtual network interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")]
+        public string MacAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MAC address type for the mac address assigned to virtual network interface.\n* `manual` - Statically assigned MAC address.\n* `generated` - Automatically generated MAC address.\n* `assigned` - MAC address assigned by VCenter to the virtual network interface card."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualNetworkInterface.MacAddressTypeEnum MacAddressType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the virtual network interface created on a virtual machine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of network for virtual network interface. It can be either standard or distributed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string NetworkType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identity of the virtual machine where the virtual network interface is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string VmIdentity {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualMachine.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachine", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareVirtualMachine:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareVirtualMachine()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareVirtualMachineListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatastore.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastore")]
+    public class SetIntersightVirtualizationVmwareDatastore:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareDatastore()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareDatastore();
+            MethodName = "UpdateVirtualizationVmwareDatastoreWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description">"Shows if this datastore is accessible."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Accessible {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Storage utilization for this datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationStorageCapacity Capacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationVmwareCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareClusterRelationship Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationVmwareDatastoreCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareDatastoreClusterRelationship DatastoreCluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of hosts attached to or supported-by this datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long HostCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of this datastore. This entity is not manipulated by users. It aids in uniquely identifying the datastore object. For VMware, this is a MOR (managed object reference)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Identity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Inventory path of the Datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string InventoryPath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the datastore is in maintenance mode. Will be set to True, when in maintenance mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool MaintenanceMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if this datastore is connected to multiple hosts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool MultipleHostAccess {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of this datastore supplied by user. It is not the identity of the datastore. The name is subject to user manipulations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Datastore health status, as reported by the hypervisor platform.\n* `Unknown` - Entity status is unknown.\n* `Degraded` - State is degraded, and might impact normal operation of the entity.\n* `Critical` - Entity is in a critical state, impacting operations.\n* `Ok` - Entity status is in a stable state, operating normally."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareDatastore.StatusEnum Status {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if this datastore supports thin provisioning for files."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ThinProvisioningSupported {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A string indicating the type of the datastore (VMFS, NFS, etc).\n* `Unknown` - The nature of the file system is unknown.\n* `VMFS` - It is a Virtual Machine Filesystem.\n* `NFS` - It is a Network File System.\n* `vSAN` - It is a virtual Storage Area Network file system.\n* `VirtualVolume` - A Virtual Volume datastore represents a storage container in a hypervisor server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareDatastore.TypeEnum Type {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Space uncommitted in this datastore in bytes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UnCommitted {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The URL to access this datastore (example - 'ds:///vmfs/volumes/562a4e8a-0eeb5372-dd61-78baf9cb9afa/')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Url {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of virtual machines relying on (using) this datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long VmCount {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatastore.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastore", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareDatastore:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareDatastore()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareDatastoreListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualDisk.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualDisk", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVirtualDisk:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVirtualDisk()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVirtualDiskListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualDisk.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualDisk")]
+    public class NewIntersightVirtualizationVirtualDisk:NewCmdletBase
+	{
+		public NewIntersightVirtualizationVirtualDisk()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVirtualDisk();
+            MethodName = "CreateVirtualizationVirtualDiskWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Capacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseClusterRelationship Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVirtualDisk.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceCerts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source disk from which the content is copied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceDiskToClone {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Image path used to import on the created disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceFilePath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualMachine.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualMachine")]
@@ -1111,7 +1751,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new VirtualizationApi(Config);
             ModelObject = new VirtualizationVmwareVirtualMachine();
-            MethodName = "PatchVirtualizationVmwareVirtualMachineWithHttpInfo";
+            MethodName = "UpdateVirtualizationVmwareVirtualMachineWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -1637,16 +2277,635 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareCluster.</para>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareCluster", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareCluster:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareHost", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareHost:GetCmdletBase
 	{
-		public GetIntersightVirtualizationVmwareCluster()
+		public GetIntersightVirtualizationVmwareHost()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareClusterListWithHttpInfo";
+            MethodName = "GetVirtualizationVmwareHostListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDistributedNetwork.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedNetwork", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareDistributedNetwork:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareDistributedNetwork()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareDistributedNetworkListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualSwitch.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualSwitch")]
+    public class SetIntersightVirtualizationVmwareVirtualSwitch:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareVirtualSwitch()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareVirtualSwitch();
+            MethodName = "UpdateVirtualizationVmwareVirtualSwitchWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If forgedTransmits property value is set to reject, outbound frames with a source MAC address different from the one set on the adapter are dropped. If property value is set to accept, the switch does not perform filtering and permits all outbound frames.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualSwitch.ForgedTransmitsEnum ForgedTransmits {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of this switch. This entity is not manipulated by users. It aids in uniquely identifying the switch object. For VMware, this is MOR (managed object reference)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Identity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If macAddressChanges property value is set to reject and the MAC address of the adapter is changed to a value other than the one specified in .vmx configuration file, the switch drops all inbound frames to the adapter. If property value is set to accept and the MAC address is changed, the switch allows frames to the new MAC address to pass.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualSwitch.MacAddressChangesEnum MacAddressChanges {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum transmission unit configured on a virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Mtu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User-provided name to identify the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The teams can then either share the load of traffic between physical and virtual networks among some or all of its members, or provide passive failover in the event of a hardware failure or a network outage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareTeamingAndFailover NicTeamingAndFailover {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of networks available on this virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumNetworks {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of physical network interfaces connected with this virtual switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumPhysicalNetworkInterfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If promiscuousMode property value is set to reject, the virtual switch forwards only frames that are addressed to the adapter. If property value is set to accept, the virtual switch forwards all frames to the adapter in compliance with the active VLAN policy for the port to which it is connected.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualSwitch.PromiscuousModeEnum PromiscuousMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVirtualDisk.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVirtualDisk")]
+    public class SetIntersightVirtualizationVirtualDisk:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVirtualDisk()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVirtualDisk();
+            MethodName = "UpdateVirtualizationVirtualDiskWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Capacity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationBaseClusterRelationship Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVirtualDisk.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceCerts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source disk from which the content is copied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceDiskToClone {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Image path used to import on the created disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceFilePath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualDisk.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualDisk")]
+    public class RemoveIntersightVirtualizationVirtualDisk:RemoveCmdletBase
+	{
+		public RemoveIntersightVirtualizationVirtualDisk()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "DeleteVirtualizationVirtualDiskWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareFolder.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareFolder")]
+    public class SetIntersightVirtualizationVmwareFolder:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareFolder()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareFolder();
+            MethodName = "UpdateVirtualizationVmwareFolderWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationVmwareVcenter resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVcenterRelationship HypervisorManager {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of this folder. This entity is not manipulated by users. It aids in uniquely identifying the folder object. For VMware, this is a MOR (managed object reference)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Identity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If a folder is internal, it will be set to true."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Internal {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Inventory path to the folder. Example - /DC/myFolder."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string InventoryPath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the folder as stored in vCenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines the type of folder. e.g. vCenter folder, VM and Templete Folder, StorageFolder, NetworkFolder, Host and Cluster Folder.\n* `Unknown` - The type of the folder is unknown. It may not represent that the folder does not exist but indicates that something might be wrong.\n* `VMTemplateFolder` - The folder contains VMs and VM templates.\n* `StorageFolder` - The folder contains storage devices.\n* `HostClusterFolder` - The folder contains hosts and clusters.\n* `NetworkFolder` - The folder contains network items.\n* `VcenterFolder` - The folder created under a vCenter or vCenter folder."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareFolder.TypeofFolderEnum TypeofFolder {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationVmwareFolder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareFolderRelationship VmwareFolder {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareFolder.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareFolder", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareFolder:GetCmdletBase
+	{
+		public GetIntersightVirtualizationVmwareFolder()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            MethodName = "GetVirtualizationVmwareFolderListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualDisk.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualDisk")]
+    public class SetIntersightVirtualizationVmwareVirtualDisk:SetCmdletBase
+	{
+		public SetIntersightVirtualizationVmwareVirtualDisk()
+		{
+			ApiInstance = new VirtualizationApi(Config);
+            ModelObject = new VirtualizationVmwareVirtualDisk();
+            MethodName = "PatchVirtualizationVmwareVirtualDiskWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Compatibility mode of the raw disk mapping (RDM).\n* `notApplicable` - Value specified for any disk which is not of raw device mapping type.\n* `physicalMode` - A disk device backed by a physical compatibility mode raw disk mapping cannot use disk modes, and commands are passed straight through to the LUN indicated by the raw disk mapping.\n* `virtualMode` - A disk device backed by a virtual compatibility mode raw disk mapping can use disk modes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualDisk.CompatibilityModeEnum CompatibilityMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Key of the controller on which the disk is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ControllerKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Host-specific device the LUN is being accessed through. If the target LUN is not available on the host then it is empty. For example, this could happen if it has accidentally been masked out."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DeviceName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Persistence mode of the virtual disk. For RDM disks, it is only supported when the raw disk mapping is using virtual compatibility mode.\n* `persistent` - Changes are immediately and permanently written to the virtual disk.\n* `independent_persistent` - Changes are immediately and permanently written to the virtual disk and not affected by snapshots.\n* `independent_nonpersistent` - Changes to virtual disk are made to a redo log and discarded at power off and not affected by snapshots.\n* `nonpersistent` - Changes to virtual disk are made to a redo log and discarded at power off.\n* `undoable` - Changes to virtual disk are made to a redo log and has the option to commit or undo.\n* `append` - Changes are appended to the redo log and can be revoked by removing the undo log."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualDisk.DiskModeEnum DiskMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies whether the virtual disk is a RDM or a Hard disk.\n* `flatDisk` - Specifies that it is a flat disk.\n* `rdmDisk` - Specifies that it is a raw device mapping disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualDisk.DiskTypeEnum DiskType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally assigned key of this disk. This entity is not manipulated by users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Key {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The utilization of a virtual machine will not exceed this limit, even if there are available resources. Used to ensure a consistent performance of virtual machines independent of available resources. If set to -1, then there is no fixed limit on resource usage (only bounded by available resources and shares). The unit is number of I/O per second."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Limit {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique identifier of the LUN accessed by the raw disk mapping (RDM)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string LunUuid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial ID of the storage device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Serial {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk shares used for resource scheduling."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareSharesInfo Shares {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Sharing mode of the virtual disk.\n* `sharingNone` - The virtual disk is not shared.\n* `sharingMultiWriter` - The virtual disk is shared between multiple virtual machines."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualDisk.SharingEnum Sharing {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk size represented in bytes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Size {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Allocation type for the virtual disk.\n* `notApplicable` - Value specified for a disk for which storage allocation type is not applicable.\n* `thin` - A thin provisioned disk consumes only the space that it needs for its initial operrations, and grows with time according to demand. It is the fastest method to create a virtual disk because it creates a disk with just the header information.\n* `lazyZeroedThick` - A lazy zeroed thick disk has all space allocated at the time of its creation. Data remaining on the physical device is not erased during creation, but is zeroed out on demand later on first write from the virtual machine.\n* `eagerZeroedThick` - An eager zeroed thick disk has all space allocated and wiped clean of any previous contents on the physical media at creation time. Such disks may take longer time during creation compared to other disk formats."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareVirtualDisk.StorageAllocationTypeEnum StorageAllocationType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unit number of the disk on its controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UnitNumber {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UUID assigned by vCenter to every disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
+        public string Uuid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identity of the virtual disk object as the first class entity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
+        public string VdiskId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Vendor of the storage device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Vendor {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Path of the virtual disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string VirtualDiskPath {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identity of the virtual machine where the virtual disk is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string VmIdentity {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareHost.</para>
@@ -1905,26 +3164,17 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatastore.</para>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatastoreCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastore")]
-    public class SetIntersightVirtualizationVmwareDatastore:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastoreCluster")]
+    public class SetIntersightVirtualizationVmwareDatastoreCluster:SetCmdletBase
 	{
-		public SetIntersightVirtualizationVmwareDatastore()
+		public SetIntersightVirtualizationVmwareDatastoreCluster()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareDatastore();
-            MethodName = "UpdateVirtualizationVmwareDatastoreWithHttpInfo";
+            ModelObject = new VirtualizationVmwareDatastoreCluster();
+            MethodName = "PatchVirtualizationVmwareDatastoreClusterWithHttpInfo";
 		}
-        // <summary>
-        /// <para type="description">"Shows if this datastore is accessible."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Accessible {
-            get;
-            set;
-        }
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1935,7 +3185,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Storage utilization for this datastore."</para>
+        /// <para type="description">"The global automation level for all virtual machines in this datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AutomationLevel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Storage utilization for this datastore cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1944,16 +3203,25 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a virtualizationVmwareCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Number of datastores present in this datastore cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareClusterRelationship Cluster {
+        public long DatastoreCount {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Number of hosts attached to or supported-by this datastore."</para>
+        /// <para type="description">"Minimum level of free space for each datastore that is the threshold for action."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long FreeSpaceThreshold {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of hosts attached to or supported-by this datastore cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1962,7 +3230,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The internally generated identity of this datastore. This entity is not manipulated by users. It aids in uniquely identifying the datastore object. For VMware, this is a MOR (managed object reference)."</para>
+        /// <para type="description">"The internally generated identity of this datastore cluster. This entity is not manipulated by users. It aids in uniquely identifying the datastore cluster object. For VMware, this is an MOR (managed object reference)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1971,7 +3239,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Inventory path of the Datastore."</para>
+        /// <para type="description">"Inventory path of the Datastore Cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1980,11 +3248,47 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates if the datastore is in maintenance mode. Will be set to True, when in maintenance mode."</para>
+        /// <para type="description">"Minimum I/O latency for each datastore below which I/O load balancing moves are not considered."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool MaintenanceMode {
+        public int IoLatencyThreshold {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Storage DRS behavior when it generates recommendations for correcting I/O load imbalance in a datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string IoLoadBalanceAutomationMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Amount of imbalance that Storage DRS should tolerate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public int IoLoadImbalanceThreshold {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Is I/O Metrics enabled for this datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool IoMetricsEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specify how much of an improvement DRS should look for before making a recommendation or performing a migration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public int MinSpaceUtilizationDifference {
             get;
             set;
         }
@@ -1998,20 +3302,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates if this datastore is connected to multiple hosts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool MultipleHostAccess {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of this datastore supplied by user. It is not the identity of the datastore. The name is subject to user manipulations."</para>
+        /// <para type="description">"Name of the Datastore Cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Storage DRS behavior when it generates recommendations for correcting storage and VM policy violations in a datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PolicyEnforcementAutomationMode {
             get;
             set;
         }
@@ -2025,11 +3329,56 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Datastore health status, as reported by the hypervisor platform.\n* `Unknown` - Entity status is unknown.\n* `Degraded` - State is degraded, and might impact normal operation of the entity.\n* `Critical` - Entity is in a critical state, impacting operations.\n* `Ok` - Entity status is in a stable state, operating normally."</para>
+        /// <para type="description">"Storage DRS makes storage migration recommendations if total IOPs reservation of all VMs running on a datastore is higher than the specified threshold."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareDatastore.StatusEnum Status {
+        public int ReservablePercentThreshold {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Storage DRS behavior when it generates recommendations for correcting affinity rule violations in a datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string RuleEnforcementAutomationMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Storage DRS behavior when it generates recommendations for correcting space load imbalance in a datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SpaceLoadBalanceAutomationMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Runtime thresholds govern when Storage DRS performs or recommends migrations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SpaceThresholdMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Datastore cluster health status, as reported by the hypervisor platform.\n* `Unknown` - Entity status is unknown.\n* `Degraded` - State is degraded, and might impact normal operation of the entity.\n* `Critical` - Entity is in a critical state, impacting operations.\n* `Ok` - Entity status is in a stable state, operating normally."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VirtualizationVmwareDatastoreCluster.StatusEnum Status {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Is Storage DRS enabled for this datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool StorageDrsEnabled {
             get;
             set;
         }
@@ -2043,43 +3392,25 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates if this datastore supports thin provisioning for files."</para>
+        /// <para type="description">"Type of the Datastore Cluster.\n* `Unknown` - The nature of the file system is unknown.\n* `VMFS` - It is a Virtual Machine Filesystem.\n* `NFS` - It is a Network File System.\n* `vSAN` - It is a virtual Storage Area Network file system.\n* `VirtualVolume` - A Virtual Volume datastore represents a storage container in a hypervisor server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool ThinProvisioningSupported {
+        public VirtualizationVmwareDatastoreCluster.TypeEnum Type {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A string indicating the type of the datastore (VMFS, NFS, etc).\n* `Unknown` - The nature of the file system is unknown.\n* `VMFS` - It is a Virtual Machine Filesystem.\n* `NFS` - It is a Network File System.\n* `vSAN` - It is a virtual Storage Area Network file system.\n* `VirtualVolume` - A Virtual Volume datastore represents a storage container in a hypervisor server."</para>
+        /// <para type="description">"Minimum level of consumed space for each datastore that is the threshold for action."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public VirtualizationVmwareDatastore.TypeEnum Type {
+        public int UtilizedSpaceThreshold {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Space uncommitted in this datastore in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long UnCommitted {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The URL to access this datastore (example - 'ds:///vmfs/volumes/562a4e8a-0eeb5372-dd61-78baf9cb9afa/')."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Url {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of virtual machines relying on (using) this datastore."</para>
+        /// <para type="description">"Number of virtual machines relying on (using) this datastore cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -2087,1028 +3418,38 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Storage DRS behavior when it generates recommendations for VM evacuations from datastores in a datastore cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string VmEvacuationAutomationMode {
+            get;
+            set;
+        }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatastore.</para>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastore", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareDatastore:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualDisk", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareVirtualDisk:GetCmdletBase
 	{
-		public GetIntersightVirtualizationVmwareDatastore()
+		public GetIntersightVirtualizationVmwareVirtualDisk()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareDatastoreListWithHttpInfo";
+            MethodName = "GetVirtualizationVmwareVirtualDiskListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwarePhysicalNetworkInterface.</para>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDistributedSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwarePhysicalNetworkInterface")]
-    public class SetIntersightVirtualizationVmwarePhysicalNetworkInterface:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedSwitch", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareDistributedSwitch:GetCmdletBase
 	{
-		public SetIntersightVirtualizationVmwarePhysicalNetworkInterface()
+		public GetIntersightVirtualizationVmwareDistributedSwitch()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwarePhysicalNetworkInterface();
-            MethodName = "PatchVirtualizationVmwarePhysicalNetworkInterfaceWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Driver type associated with physical network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Driver {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally generated identity of physical network interface. This entity cannot manipulated by users. It aids in uniquely identifying the physical network interface object. For VMware, this is MOR (managed object reference)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Identity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Link speed of the physical network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public int LinkSpeed {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Standard MAC address assigned to physical network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")]
-        public string MacAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User-provided name to identify the physical network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"PCI info for physical network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Pci {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch associated with the physical network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SwitchName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareNetwork")]
-    public class SetIntersightVirtualizationVmwareNetwork:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVmwareNetwork()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareNetwork();
-            MethodName = "UpdateVirtualizationVmwareNetworkWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If forgedTransmits property value is set to reject, outbound frames with source MAC address different from the one set on the adapter are dropped. If property value is set to accept, no filtering is performed and all outbound frames are passed.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareNetwork.ForgedTransmitsEnum ForgedTransmits {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally generated identity of network. This entity cannot manipulated by users. It aids in uniquely identifying the network object. For VMware, this is MOR (managed object reference)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Identity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If macAddressChanges property value is set to reject and the MAC address of the adapter is changed to a value other than the one specified in .vmx configuration file, all inbound frames are dropped. If property value is set to accept and the MAC address is changed, inbound frames to the new MAC address are received.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareNetwork.MacAddressChangesEnum MacAddressChanges {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User-provided name to identify the portgroup."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The teams can then either share the load of traffic between physical and virtual networks among some or all of its members, or provide passive failover in the event of a hardware failure or a network outage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareTeamingAndFailover NicTeamingAndFailover {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If promiscuousMode property value is set to reject, incoming traffic only targeted to that network will be visible. If property value is set to accept, objects defined within the network can see all incoming traffic on the virtual switch based on the VLAN policy.\n* `Reject` - Indicates that the security policy is rejected.\n* `Accept` - Indicates that the security policy is accepted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareNetwork.PromiscuousModeEnum PromiscuousMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN id with which the network is associated. A value of 0 specifies that port is not associated with a VLAN."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long VlanId {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDistributedSwitch.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDistributedSwitch")]
-    public class SetIntersightVirtualizationVmwareDistributedSwitch:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVmwareDistributedSwitch()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareDistributedSwitch();
-            MethodName = "UpdateVirtualizationVmwareDistributedSwitchWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch description (user provided), if any."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally generated identity of this switch. This entity is not manipulated by users. It aids in uniquely identifying the switch object. For VMware, this is MOR (managed object reference)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Identity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum number of ports allowed on this distributed virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long MaxPort {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum transmission unit configured on a distributed virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Mtu {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User-provided name to identify the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The teams can then either share the load of traffic between physical and virtual networks among some or all of its members, or provide passive failover in the event of a hardware failure or a network outage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVmwareTeamingAndFailover NicTeamingAndFailover {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total number of hosts attached to the distributed virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumHosts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total number of distributed networks in the distributed virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumNetworks {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of stand-alone ports in use."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumStandAlonePorts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of uplinks configured in this distributed virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumUplinks {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Capacity and consumption information about this distributed virtual switch, if available."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationStorageCapacity SwitchCapacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Universally Unique Id of this distributed virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
-        public string Uuid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The running config's version details are represented."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationHost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationHost", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationHost:GetCmdletBase
-	{
-		public GetIntersightVirtualizationHost()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationHostListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareKernelNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareKernelNetwork")]
-    public class SetIntersightVirtualizationVmwareKernelNetwork:SetCmdletBase
-	{
-		public SetIntersightVirtualizationVmwareKernelNetwork()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareKernelNetwork();
-            MethodName = "UpdateVirtualizationVmwareKernelNetworkWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that fault tolerance logging is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool FaultToleranceLogging {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The internally generated identity of network. This entity cannot manipulated by users. It aids in uniquely identifying the network object. For VMware, this is MOR (managed object reference)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Identity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> IpAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Standard MAC address assigned to this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")]
-        public string MacAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that management traffic is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Management {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum transmission unit configured on a kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Mtu {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User-provided name to identify the portgroup."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that vmotion is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Vmotion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that vsan traffic is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Vsan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that vsphere provisioning traffic is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool VsphereProvisioning {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that vsphere replication is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool VsphereReplication {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates that vsphere replication nfc is enabled on this kernel network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool VsphereReplicationNfc {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareNetwork", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareNetwork:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareNetwork()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareNetworkListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualMachine.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualMachine", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVirtualMachine:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVirtualMachine()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVirtualMachineListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualMachine.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualMachine")]
-    public class NewIntersightVirtualizationVirtualMachine:NewCmdletBase
-	{
-		public NewIntersightVirtualizationVirtualMachine()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualMachine();
-            MethodName = "CreateVirtualizationVirtualMachineWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description">"Action to be performed on a virtual machine (Create, PowerState, Migrate, Clone etc).\n* `None` - A place holder for the default value.\n* `PowerState` - Power action is performed on the virtual machine.\n* `Migrate` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor.\n* `Create` - The virtual machine will be created on the specified hypervisor. This action is also useful if the virtual machine creation failed during first POST operation on VirtualMachine managed object. User can set this action to retry the virtual machine creation.\n* `Delete` - The virtual machine will be deleted from the specified hypervisor. User can either set this action or can do a DELETE operation on the VirtualMachine managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualMachine.ActionEnum Action {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InfraMetaData> AffinitySelectors {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InfraMetaData> AntiAffinitySelectors {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Cloud init configuration data for virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationCloudInitConfig CloudInitConfig {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseClusterRelationship Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Cluster where virtual machine is deployed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ClusterEsxi {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of vCPUs allocated to virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 40)]
-        public long Cpu {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<VirtualizationVirtualMachineDisk> Disk {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Normally any virtual machine that is still powered on cannot be deleted. The expected sequence from a user is to first power off the virtual machine and then invoke the delete operation. However, in special circumstances, the owner of the virtual machine may know very well that the virtual machine is no longer needed and just wants to dispose it off. In such situations a delete operation of a virtual machine object is accepted only when this forceDelete attribute is set to true. Under normal circumstances (forceDelete is false), delete operation first confirms that the virtual machine is powered off and then proceeds to delete the virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool ForceDelete {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Guest operating system running on virtual machine.\n* `linux` - A Linux operating system.\n* `windows` - A Windows operating system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualMachine.GuestOsEnum GuestOs {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseHost resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseHostRelationship Host {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Host where virtual machine is deployed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HostEsxi {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<VirtualizationNetworkInterface> Interfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InfraMetaData> Labels {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte, 1MiB, is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 4.17792e+06)]
-        public long Memory {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual machine name that is unique. Hypervisors enforce platform specific limits and character sets. The name length limit, both min and max, vary among hypervisors. Therefore, the basic limits are set here and proper enforcement is done elsewhere."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Expected power state of virtual machine (PowerOn, PowerOff, Restart).\n* `PowerOff` - The virtual machine will be powered off if it is already not in powered off state. If it is already powered off, no side-effects are expected.\n* `PowerOn` - The virtual machine will be powered on if it is already not in powered on state. If it is already powered on, no side-effects are expected.\n* `Suspend` - The virtual machine will be put into  a suspended state.\n* `ShutDownGuestOS` - The guest operating system is shut down gracefully.\n* `RestartGuestOS` - It can either act as a reset switch and abruptly reset the guest operating system, or it can send a restart signal to the guest operating system so that it shuts down gracefully and restarts.\n* `Reset` - Resets the virtual machine abruptly, with no consideration for work in progress.\n* `Restart` - The virtual machine will be restarted only if it is in powered on state. If it is powered off, it will not be started up.\n* `Unknown` - Power state of the entity is unknown."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualMachine.PowerStateEnum PowerState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was 'discovered' and not created from Intersight. No provisioning information is available."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualMachine.ProvisionTypeEnum ProvisionType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual machine configuration to provision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseVmConfiguration VmConfig {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwarePhysicalNetworkInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwarePhysicalNetworkInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwarePhysicalNetworkInterface:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwarePhysicalNetworkInterface()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwarePhysicalNetworkInterfaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatacenter.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatacenter", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareDatacenter:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareDatacenter()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareDatacenterListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareFolder.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareFolder", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareFolder:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareFolder()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareFolderListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualDisk", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVirtualDisk:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVirtualDisk()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVirtualDiskListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualDisk")]
-    public class NewIntersightVirtualizationVirtualDisk:NewCmdletBase
-	{
-		public NewIntersightVirtualizationVirtualDisk()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualDisk();
-            MethodName = "CreateVirtualizationVirtualDiskWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Capacity {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationBaseClusterRelationship Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public VirtualizationVirtualDisk.ModeEnum Mode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceCerts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Source disk from which the content is copied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceDiskToClone {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Image path used to import on the created disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceFilePath {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareHost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareHost", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareHost:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareHost()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareHostListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDistributedNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedNetwork", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareDistributedNetwork:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareDistributedNetwork()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareDistributedNetworkListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualMachine.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachine", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareVirtualMachine:GetCmdletBase
-	{
-		public GetIntersightVirtualizationVmwareVirtualMachine()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareVirtualMachineListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualMachine.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualMachine")]
-    public class RemoveIntersightVirtualizationVirtualMachine:RemoveCmdletBase
-	{
-		public RemoveIntersightVirtualizationVirtualMachine()
-		{
-			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "DeleteVirtualizationVirtualMachineWithHttpInfo";
+            MethodName = "GetVirtualizationVmwareDistributedSwitchListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -3332,28 +3673,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualNetworkInterface.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualNetworkInterface", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareVirtualNetworkInterface:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualMachine")]
+    public class RemoveIntersightVirtualizationVirtualMachine:RemoveCmdletBase
 	{
-		public GetIntersightVirtualizationVmwareVirtualNetworkInterface()
+		public RemoveIntersightVirtualizationVirtualMachine()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareVirtualNetworkInterfaceListWithHttpInfo";
+            MethodName = "DeleteVirtualizationVirtualMachineWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareUplinkPort.</para>
+    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwarePhysicalNetworkInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareUplinkPort")]
-    public class SetIntersightVirtualizationVmwareUplinkPort:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwarePhysicalNetworkInterface")]
+    public class SetIntersightVirtualizationVmwarePhysicalNetworkInterface:SetCmdletBase
 	{
-		public SetIntersightVirtualizationVmwareUplinkPort()
+		public SetIntersightVirtualizationVmwarePhysicalNetworkInterface()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareUplinkPort();
-            MethodName = "PatchVirtualizationVmwareUplinkPortWithHttpInfo";
+            ModelObject = new VirtualizationVmwarePhysicalNetworkInterface();
+            MethodName = "UpdateVirtualizationVmwarePhysicalNetworkInterfaceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -3365,7 +3706,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The VMware managed object reference as a string."</para>
+        /// <para type="description">"Driver type associated with physical network interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Driver {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of physical network interface. This entity cannot manipulated by users. It aids in uniquely identifying the physical network interface object. For VMware, this is MOR (managed object reference)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -3374,11 +3724,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The internally assigned key of this uplink port object. This entity is not manipulated by users."</para>
+        /// <para type="description">"Link speed of the physical network interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Key {
+        public int LinkSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Standard MAC address assigned to physical network interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$")]
+        public string MacAddress {
             get;
             set;
         }
@@ -3392,7 +3751,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"User-provided name to identify the uplink port object."</para>
+        /// <para type="description">"User-provided name to identify the physical network interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -3401,11 +3760,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"PCI info for physical network interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Pci {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Switch associated with the physical network interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SwitchName {
             get;
             set;
         }
@@ -3420,118 +3797,27 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareUplinkPort.</para>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareUplinkPort", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVmwareUplinkPort:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationHost", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationHost:GetCmdletBase
 	{
-		public GetIntersightVirtualizationVmwareUplinkPort()
+		public GetIntersightVirtualizationHost()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVmwareUplinkPortListWithHttpInfo";
+            MethodName = "GetVirtualizationHostListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatacenter.</para>
+    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatacenter")]
-    public class SetIntersightVirtualizationVmwareDatacenter:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareNetwork", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightVirtualizationVmwareNetwork:GetCmdletBase
 	{
-		public SetIntersightVirtualizationVmwareDatacenter()
+		public GetIntersightVirtualizationVmwareNetwork()
 		{
 			ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVmwareDatacenter();
-            MethodName = "UpdateVirtualizationVmwareDatacenterWithHttpInfo";
+            MethodName = "GetVirtualizationVmwareNetworkListWithHttpInfo";
 		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all clusters associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ClusterCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all datastores associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long DatastoreCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all hosts associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long HostCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Inventory path of the DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string InventoryPath {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all networks associated with this datacenter (DC)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NetworkCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all virtual machines (VMs) associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long VmCount {
-            get;
-            set;
-        }
     }
 }

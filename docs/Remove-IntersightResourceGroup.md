@@ -17,7 +17,7 @@ Remove-IntersightResourceGroup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ResourceGroup&amp;apos; resource.
+Delete a &apos;ResourceGroup&apos; resource.
 
 ## EXAMPLES
 

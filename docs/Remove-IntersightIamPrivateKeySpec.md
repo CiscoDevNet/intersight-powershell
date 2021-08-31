@@ -17,7 +17,7 @@ Remove-IntersightIamPrivateKeySpec -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamPrivateKeySpec&amp;apos; resource.
+Delete a &apos;IamPrivateKeySpec&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
-
 [New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
+
+[Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
 
 [Set-IntersightIamPrivateKeySpec](./Set-IntersightIamPrivateKeySpec.md)
 

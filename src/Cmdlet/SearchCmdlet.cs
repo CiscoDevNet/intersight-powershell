@@ -8,6 +8,30 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get SearchTagItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightSearchTagItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightSearchTagItem:GetCmdletBase
+	{
+		public GetIntersightSearchTagItem()
+		{
+			ApiInstance = new SearchApi(Config);
+            MethodName = "GetSearchTagItemListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get SearchSearchItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightSearchSearchItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightSearchSearchItem:GetCmdletBase
+	{
+		public GetIntersightSearchSearchItem()
+		{
+			ApiInstance = new SearchApi(Config);
+            MethodName = "GetSearchSearchItemListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SearchSuggestItem.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightSearchSuggestItem")]
@@ -28,29 +52,5 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get SearchSearchItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSearchSearchItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightSearchSearchItem:GetCmdletBase
-	{
-		public GetIntersightSearchSearchItem()
-		{
-			ApiInstance = new SearchApi(Config);
-            MethodName = "GetSearchSearchItemListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get SearchTagItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSearchTagItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightSearchTagItem:GetCmdletBase
-	{
-		public GetIntersightSearchTagItem()
-		{
-			ApiInstance = new SearchApi(Config);
-            MethodName = "GetSearchTagItemListWithHttpInfo";
-		}
     }
 }

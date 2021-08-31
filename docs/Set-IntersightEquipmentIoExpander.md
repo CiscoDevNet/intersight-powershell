@@ -19,7 +19,7 @@ Set-IntersightEquipmentIoExpander [-AdditionalProperties< Dictionary<string,obje
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentIoExpander&apos; resource.
+Update a &amp;apos;EquipmentIoExpander&amp;apos; resource.
 
 ## PARAMETERS
 

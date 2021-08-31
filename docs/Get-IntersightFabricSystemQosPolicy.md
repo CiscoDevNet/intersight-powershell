@@ -25,7 +25,7 @@ Get-IntersightFabricSystemQosPolicy [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FabricSystemQosPolicy&amp;apos; resource.,
+Read a &apos;FabricSystemQosPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFabricSystemQosPolicy](./New-IntersightFabricSystemQosPolicy.md)
+
 [Set-IntersightFabricSystemQosPolicy](./Set-IntersightFabricSystemQosPolicy.md)
 
 [Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
-
-[New-IntersightFabricSystemQosPolicy](./New-IntersightFabricSystemQosPolicy.md)
 

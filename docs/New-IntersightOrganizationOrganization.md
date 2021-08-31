@@ -19,7 +19,7 @@ New-IntersightOrganizationOrganization [-AdditionalProperties< Dictionary<string
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OrganizationOrganization&amp;apos; resource.
+Create a &apos;OrganizationOrganization&apos; resource.
 
 ## PARAMETERS
 
@@ -147,6 +147,6 @@ PS C:\> New-IntersightOrganizationOrganization
 
 [Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
 
-[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
-
 [Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
+
+[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)

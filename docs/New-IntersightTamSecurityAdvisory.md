@@ -19,7 +19,7 @@ New-IntersightTamSecurityAdvisory [-Actions< List<TamAction>>][-AdditionalProper
 ```
 
 ## DESCRIPTION
-Create a &apos;TamSecurityAdvisory&apos; resource.
+Create a &amp;apos;TamSecurityAdvisory&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -391,11 +391,11 @@ PS C:\> New-IntersightTamSecurityAdvisory
 
 ## RELATED LINKS
 
+[Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
+
 [Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)
 
 [Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
-
-[Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

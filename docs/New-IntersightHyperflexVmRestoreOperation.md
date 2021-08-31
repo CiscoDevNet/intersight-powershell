@@ -19,7 +19,7 @@ New-IntersightHyperflexVmRestoreOperation [-AdditionalProperties< Dictionary<str
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexVmRestoreOperation&apos; resource.
+Create a &amp;apos;HyperflexVmRestoreOperation&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -199,6 +199,6 @@ PS C:\> New-IntersightHyperflexVmRestoreOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
-
 [Get-IntersightHyperflexVmRestoreOperation](./Get-IntersightHyperflexVmRestoreOperation.md)
+
+[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)

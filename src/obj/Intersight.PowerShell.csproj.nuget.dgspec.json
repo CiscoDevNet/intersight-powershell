@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4430\\src\\Intersight.PowerShell.csproj": {}
+    "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4437\\src\\Intersight.PowerShell.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4430\\src\\Intersight.PowerShell.csproj": {
-      "version": "1.0.9.4430",
+    "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4437\\src\\Intersight.PowerShell.csproj": {
+      "version": "1.0.9.4437",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4430\\src\\Intersight.PowerShell.csproj",
+        "projectUniqueName": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4437\\src\\Intersight.PowerShell.csproj",
         "projectName": "PSIntersight",
-        "projectPath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4430\\src\\Intersight.PowerShell.csproj",
+        "projectPath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4437\\src\\Intersight.PowerShell.csproj",
         "packagesPath": "C:\\Users\\gzahidi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4430\\src\\obj\\",
+        "outputPath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4437\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

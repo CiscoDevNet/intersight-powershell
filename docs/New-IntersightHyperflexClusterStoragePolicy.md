@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterStoragePolicy [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexClusterStoragePolicy&amp;apos; resource.
+Create a &apos;HyperflexClusterStoragePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -210,10 +210,10 @@ PS C:\> New-IntersightHyperflexClusterStoragePolicy
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexClusterStoragePolicy](./Get-IntersightHyperflexClusterStoragePolicy.md)
+
 [Set-IntersightHyperflexClusterStoragePolicy](./Set-IntersightHyperflexClusterStoragePolicy.md)
 
 [Remove-IntersightHyperflexClusterStoragePolicy](./Remove-IntersightHyperflexClusterStoragePolicy.md)
-
-[Get-IntersightHyperflexClusterStoragePolicy](./Get-IntersightHyperflexClusterStoragePolicy.md)
 
 [Initialize-IntersightHyperflexLogicalAvailabilityZone](./Initialize-IntersightHyperflexLogicalAvailabilityZone.md)

@@ -19,7 +19,7 @@ Set-IntersightFabricEthNetworkControlPolicy [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricEthNetworkControlPolicy&apos; resource.
+Update a &amp;apos;FabricEthNetworkControlPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -240,10 +240,10 @@ PS C:\> Set-IntersightFabricEthNetworkControlPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
+[Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
 
 [New-IntersightFabricEthNetworkControlPolicy](./New-IntersightFabricEthNetworkControlPolicy.md)
 
-[Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
+[Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
 
 [Initialize-IntersightFabricLldpSettings](./Initialize-IntersightFabricLldpSettings.md)

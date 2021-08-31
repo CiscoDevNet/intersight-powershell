@@ -19,7 +19,7 @@ Set-IntersightHyperflexFeatureLimitInternal [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexFeatureLimitInternal&apos; resource.
+Update a &amp;apos;HyperflexFeatureLimitInternal&amp;apos; resource.
 
 ## PARAMETERS
 

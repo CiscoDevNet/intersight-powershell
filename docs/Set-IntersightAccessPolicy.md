@@ -231,10 +231,10 @@ PS C:\> Set-IntersightAccessPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
-
 [Get-IntersightAccessPolicy](./Get-IntersightAccessPolicy.md)
 
 [New-IntersightAccessPolicy](./New-IntersightAccessPolicy.md)
+
+[Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
 
 [Initialize-IntersightAccessAddressType](./Initialize-IntersightAccessAddressType.md)

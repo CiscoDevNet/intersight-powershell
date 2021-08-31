@@ -19,7 +19,7 @@ New-IntersightRecoveryBackupProfile [-Action< string>][-AdditionalProperties< Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
+Create a &apos;RecoveryBackupProfile&apos; resource.
 
 ## PARAMETERS
 

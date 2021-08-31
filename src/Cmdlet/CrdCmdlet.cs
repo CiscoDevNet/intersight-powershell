@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CrdApi(Config);
             ModelObject = new CrdCustomResource();
-            MethodName = "UpdateCrdCustomResourceWithHttpInfo";
+            MethodName = "PatchCrdCustomResourceWithHttpInfo";
 		}
         // <summary>
         /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>

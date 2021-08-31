@@ -19,7 +19,7 @@ New-IntersightCapabilityEquipmentSlotArray [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityEquipmentSlotArray&apos; resource.
+Create a &amp;apos;CapabilityEquipmentSlotArray&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -397,8 +397,8 @@ PS C:\> New-IntersightCapabilityEquipmentSlotArray
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
+
 [Set-IntersightCapabilityEquipmentSlotArray](./Set-IntersightCapabilityEquipmentSlotArray.md)
 
 [Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
-
-[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)

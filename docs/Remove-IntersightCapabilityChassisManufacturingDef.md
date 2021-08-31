@@ -17,7 +17,7 @@ Remove-IntersightCapabilityChassisManufacturingDef -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityChassisManufacturingDef&apos; resource.
+Delete a &amp;apos;CapabilityChassisManufacturingDef&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityChassisManufacturingDef](./Set-IntersightCapabilityChassisManufacturingDef.md)
-
 [Get-IntersightCapabilityChassisManufacturingDef](./Get-IntersightCapabilityChassisManufacturingDef.md)
 
 [New-IntersightCapabilityChassisManufacturingDef](./New-IntersightCapabilityChassisManufacturingDef.md)
+
+[Set-IntersightCapabilityChassisManufacturingDef](./Set-IntersightCapabilityChassisManufacturingDef.md)
 

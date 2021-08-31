@@ -19,7 +19,7 @@ Set-IntersightSoftwareHyperflexBundleDistributable [-AdditionalProperties< Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwareHyperflexBundleDistributable&apos; resource.
+Update a &amp;apos;SoftwareHyperflexBundleDistributable&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -425,11 +425,11 @@ PS C:\> Set-IntersightSoftwareHyperflexBundleDistributable
 
 ## RELATED LINKS
 
+[Remove-IntersightSoftwareHyperflexBundleDistributable](./Remove-IntersightSoftwareHyperflexBundleDistributable.md)
+
 [Get-IntersightSoftwareHyperflexBundleDistributable](./Get-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [New-IntersightSoftwareHyperflexBundleDistributable](./New-IntersightSoftwareHyperflexBundleDistributable.md)
-
-[Remove-IntersightSoftwareHyperflexBundleDistributable](./Remove-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

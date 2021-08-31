@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcPortChannel.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcPortChannel", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcPortChannel:GetCmdletBase
-	{
-		public GetIntersightFcPortChannel()
-		{
-			ApiInstance = new FcApi(Config);
-            MethodName = "GetFcPortChannelListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcPhysicalPort.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFcPhysicalPort", DefaultParameterSetName = "CmdletParam")]
@@ -70,5 +58,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FcPortChannel.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFcPortChannel", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcPortChannel:GetCmdletBase
+	{
+		public GetIntersightFcPortChannel()
+		{
+			ApiInstance = new FcApi(Config);
+            MethodName = "GetFcPortChannelListWithHttpInfo";
+		}
     }
 }

@@ -17,7 +17,7 @@ Remove-IntersightSnmpPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SnmpPolicy&apos; resource.
+Delete a &amp;apos;SnmpPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

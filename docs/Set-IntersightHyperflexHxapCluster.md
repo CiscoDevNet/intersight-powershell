@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapCluster [-AdditionalProperties< Dictionary<string,obj
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxapCluster&amp;apos; resource.
+Update a &apos;HyperflexHxapCluster&apos; resource.
 
 ## PARAMETERS
 
@@ -372,9 +372,9 @@ PS C:\> Set-IntersightHyperflexHxapCluster
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexHxapCluster](./Get-IntersightHyperflexHxapCluster.md)
-
 [Remove-IntersightHyperflexHxapCluster](./Remove-IntersightHyperflexHxapCluster.md)
+
+[Get-IntersightHyperflexHxapCluster](./Get-IntersightHyperflexHxapCluster.md)
 
 [Initialize-IntersightVirtualizationCpuAllocation](./Initialize-IntersightVirtualizationCpuAllocation.md)
 

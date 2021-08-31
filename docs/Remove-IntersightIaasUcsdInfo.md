@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIaasUcsdInfo](./Set-IntersightIaasUcsdInfo.md)
-
 [Get-IntersightIaasUcsdInfo](./Get-IntersightIaasUcsdInfo.md)
+
+[Set-IntersightIaasUcsdInfo](./Set-IntersightIaasUcsdInfo.md)
 

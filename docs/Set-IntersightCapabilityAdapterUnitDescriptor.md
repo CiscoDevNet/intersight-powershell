@@ -19,7 +19,7 @@ Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< Dictionary
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.
+Update a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
 
 ## PARAMETERS
 

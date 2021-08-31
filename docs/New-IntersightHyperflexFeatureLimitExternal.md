@@ -19,7 +19,7 @@ New-IntersightHyperflexFeatureLimitExternal [-AdditionalProperties< Dictionary<s
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexFeatureLimitExternal&amp;apos; resource.
+Create a &apos;HyperflexFeatureLimitExternal&apos; resource.
 
 ## PARAMETERS
 
@@ -132,9 +132,9 @@ PS C:\> New-IntersightHyperflexFeatureLimitExternal
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
-
 [Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
+
+[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
 
 [Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
 

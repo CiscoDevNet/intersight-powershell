@@ -19,7 +19,7 @@ Set-IntersightRecoveryBackupConfigPolicy [-AdditionalProperties< Dictionary<stri
 ```
 
 ## DESCRIPTION
-Update a &apos;RecoveryBackupConfigPolicy&apos; resource.
+Update a &amp;apos;RecoveryBackupConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

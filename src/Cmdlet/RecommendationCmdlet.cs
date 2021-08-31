@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get RecommendationPhysicalItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPhysicalItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightRecommendationPhysicalItem:GetCmdletBase
-	{
-		public GetIntersightRecommendationPhysicalItem()
-		{
-			ApiInstance = new RecommendationApi(Config);
-            MethodName = "GetRecommendationPhysicalItemListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationCapacityRunway.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightRecommendationCapacityRunway", DefaultParameterSetName = "CmdletParam")]
@@ -29,6 +17,18 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new RecommendationApi(Config);
             MethodName = "GetRecommendationCapacityRunwayListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get RecommendationPhysicalItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPhysicalItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightRecommendationPhysicalItem:GetCmdletBase
+	{
+		public GetIntersightRecommendationPhysicalItem()
+		{
+			ApiInstance = new RecommendationApi(Config);
+            MethodName = "GetRecommendationPhysicalItemListWithHttpInfo";
 		}
     }
 }

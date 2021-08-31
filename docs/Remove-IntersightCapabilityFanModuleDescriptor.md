@@ -17,7 +17,7 @@ Remove-IntersightCapabilityFanModuleDescriptor -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityFanModuleDescriptor&apos; resource.
+Delete a &amp;apos;CapabilityFanModuleDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityFanModuleDescriptor](./Set-IntersightCapabilityFanModuleDescriptor.md)
-
 [Get-IntersightCapabilityFanModuleDescriptor](./Get-IntersightCapabilityFanModuleDescriptor.md)
 
 [New-IntersightCapabilityFanModuleDescriptor](./New-IntersightCapabilityFanModuleDescriptor.md)
+
+[Set-IntersightCapabilityFanModuleDescriptor](./Set-IntersightCapabilityFanModuleDescriptor.md)
 

@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIamTrustPoint](./Remove-IntersightIamTrustPoint.md)
-
 [New-IntersightIamTrustPoint](./New-IntersightIamTrustPoint.md)
+
+[Remove-IntersightIamTrustPoint](./Remove-IntersightIamTrustPoint.md)
 

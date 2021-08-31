@@ -19,7 +19,7 @@ Set-IntersightFirmwareIomDescriptor [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareIomDescriptor&apos; resource.
+Update a &amp;apos;FirmwareIomDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareHbaDescriptor](./Set-IntersightFirmwareHbaDescriptor.md)
+[New-IntersightFirmwareHbaDescriptor](./New-IntersightFirmwareHbaDescriptor.md)
 
 [Remove-IntersightFirmwareHbaDescriptor](./Remove-IntersightFirmwareHbaDescriptor.md)
 
-[New-IntersightFirmwareHbaDescriptor](./New-IntersightFirmwareHbaDescriptor.md)
+[Set-IntersightFirmwareHbaDescriptor](./Set-IntersightFirmwareHbaDescriptor.md)
 

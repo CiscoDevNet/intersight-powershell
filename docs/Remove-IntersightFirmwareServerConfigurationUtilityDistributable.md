@@ -17,7 +17,7 @@ Remove-IntersightFirmwareServerConfigurationUtilityDistributable -Moid <String> 
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareServerConfigurationUtilityDistributable&amp;apos; resource.
+Delete a &apos;FirmwareServerConfigurationUtilityDistributable&apos; resource.
 
 ## EXAMPLES
 

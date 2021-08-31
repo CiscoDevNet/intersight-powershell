@@ -19,7 +19,7 @@ New-IntersightFirmwarePsuDescriptor [-AdditionalProperties< Dictionary<string,ob
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwarePsuDescriptor&apos; resource.
+Create a &amp;apos;FirmwarePsuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -222,6 +222,6 @@ PS C:\> New-IntersightFirmwarePsuDescriptor
 
 [Get-IntersightFirmwarePsuDescriptor](./Get-IntersightFirmwarePsuDescriptor.md)
 
-[Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)
-
 [Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)
+
+[Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)

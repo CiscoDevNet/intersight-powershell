@@ -19,7 +19,7 @@ Set-IntersightCapabilityPortGroupAggregationDef [-AdditionalProperties< Dictiona
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityPortGroupAggregationDef&amp;apos; resource.
+Update a &apos;CapabilityPortGroupAggregationDef&apos; resource.
 
 ## PARAMETERS
 

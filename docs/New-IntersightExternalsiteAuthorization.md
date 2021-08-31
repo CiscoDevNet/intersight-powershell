@@ -19,7 +19,7 @@ New-IntersightExternalsiteAuthorization [-AdditionalProperties< Dictionary<strin
 ```
 
 ## DESCRIPTION
-Create a &apos;ExternalsiteAuthorization&apos; resource.
+Create a &amp;apos;ExternalsiteAuthorization&amp;apos; resource.
 
 ## PARAMETERS
 

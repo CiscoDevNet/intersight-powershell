@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryCount [-AdditionalProperties< Dictionary<string,object>
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TamAdvisoryCount&amp;apos; resource.
+Create a &apos;TamAdvisoryCount&apos; resource.
 
 ## PARAMETERS
 

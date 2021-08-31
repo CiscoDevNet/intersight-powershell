@@ -907,7 +907,7 @@ Accept wildcard characters: False
 ```
 
 ### -VnicDeviceConfigId
-Information related to the guest info&amp;apos;s VNIC virtual device. It is a comma-separated list.
+Information related to the guest info&apos;s VNIC virtual device. It is a comma-separated list.
 
 ```yaml
 Type: string

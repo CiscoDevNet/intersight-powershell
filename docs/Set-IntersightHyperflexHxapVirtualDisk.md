@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapVirtualDisk [-AdditionalProperties< Dictionary<string
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxapVirtualDisk&amp;apos; resource.
+Update a &apos;HyperflexHxapVirtualDisk&apos; resource.
 
 ## PARAMETERS
 

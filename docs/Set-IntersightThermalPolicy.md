@@ -19,7 +19,7 @@ Set-IntersightThermalPolicy [-AdditionalProperties< Dictionary<string,object>>][
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ThermalPolicy&amp;apos; resource.
+Update a &apos;ThermalPolicy&apos; resource.
 
 ## PARAMETERS
 

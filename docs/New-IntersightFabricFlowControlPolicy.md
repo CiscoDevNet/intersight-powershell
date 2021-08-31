@@ -19,7 +19,7 @@ New-IntersightFabricFlowControlPolicy [-AdditionalProperties< Dictionary<string,
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricFlowControlPolicy&amp;apos; resource.
+Create a &apos;FabricFlowControlPolicy&apos; resource.
 
 ## PARAMETERS
 

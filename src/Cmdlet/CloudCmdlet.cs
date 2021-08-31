@@ -8,160 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudTfcWorkspace.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcWorkspace", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudTfcWorkspace:GetCmdletBase
-	{
-		public GetIntersightCloudTfcWorkspace()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudTfcWorkspaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudTfcOrganization.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcOrganization", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudTfcOrganization:GetCmdletBase
-	{
-		public GetIntersightCloudTfcOrganization()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudTfcOrganizationListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudRegions.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudRegions", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudRegions:GetCmdletBase
-	{
-		public GetIntersightCloudRegions()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudRegionsListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudTfcAgentpool.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcAgentpool", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudTfcAgentpool:GetCmdletBase
-	{
-		public GetIntersightCloudTfcAgentpool()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudTfcAgentpoolListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudAwsOrganizationalUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsOrganizationalUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudAwsOrganizationalUnit:GetCmdletBase
-	{
-		public GetIntersightCloudAwsOrganizationalUnit()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudAwsOrganizationalUnitListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudSkuNetworkType.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuNetworkType", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudSkuNetworkType:GetCmdletBase
-	{
-		public GetIntersightCloudSkuNetworkType()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudSkuNetworkTypeListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudAwsBillingUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsBillingUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudAwsBillingUnit:GetCmdletBase
-	{
-		public GetIntersightCloudAwsBillingUnit()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudAwsBillingUnitListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New CloudCollectInventory.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCloudCollectInventory")]
-    public class NewIntersightCloudCollectInventory:NewCmdletBase
-	{
-		public NewIntersightCloudCollectInventory()
-		{
-			ApiInstance = new CloudApi(Config);
-            ModelObject = new CloudCollectInventory();
-            MethodName = "CreateCloudCollectInventoryWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTargetRelationship Target {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The id of the new Terraform cloud asset which was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TargetId {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudAwsVirtualMachine.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsVirtualMachine", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudAwsVirtualMachine:GetCmdletBase
-	{
-		public GetIntersightCloudAwsVirtualMachine()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudAwsVirtualMachineListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CloudAwsVolume.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsVolume", DefaultParameterSetName = "CmdletParam")]
@@ -174,15 +20,15 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudSkuVolumeType.</para>
+    /// <para type="synopsis">This is the cmdlet to Get CloudAwsVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuVolumeType", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudSkuVolumeType:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsVirtualMachine", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudAwsVirtualMachine:GetCmdletBase
 	{
-		public GetIntersightCloudSkuVolumeType()
+		public GetIntersightCloudAwsVirtualMachine()
 		{
 			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudSkuVolumeTypeListWithHttpInfo";
+            MethodName = "GetCloudAwsVirtualMachineListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -198,6 +44,18 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudSkuDatabaseType.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuDatabaseType", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudSkuDatabaseType:GetCmdletBase
+	{
+		public GetIntersightCloudSkuDatabaseType()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudSkuDatabaseTypeListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CloudAwsSecurityGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsSecurityGroup", DefaultParameterSetName = "CmdletParam")]
@@ -210,27 +68,15 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudSkuInstanceType.</para>
+    /// <para type="synopsis">This is the cmdlet to Get CloudAwsSubnet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuInstanceType", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudSkuInstanceType:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsSubnet", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudAwsSubnet:GetCmdletBase
 	{
-		public GetIntersightCloudSkuInstanceType()
+		public GetIntersightCloudAwsSubnet()
 		{
 			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudSkuInstanceTypeListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudAwsKeyPair.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsKeyPair", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudAwsKeyPair:GetCmdletBase
-	{
-		public GetIntersightCloudAwsKeyPair()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudAwsKeyPairListWithHttpInfo";
+            MethodName = "GetCloudAwsSubnetListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -373,6 +219,148 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudTfcWorkspace.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcWorkspace", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudTfcWorkspace:GetCmdletBase
+	{
+		public GetIntersightCloudTfcWorkspace()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudTfcWorkspaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudSkuNetworkType.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuNetworkType", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudSkuNetworkType:GetCmdletBase
+	{
+		public GetIntersightCloudSkuNetworkType()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudSkuNetworkTypeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudSkuVolumeType.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuVolumeType", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudSkuVolumeType:GetCmdletBase
+	{
+		public GetIntersightCloudSkuVolumeType()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudSkuVolumeTypeListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudTfcAgentpool.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcAgentpool", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudTfcAgentpool:GetCmdletBase
+	{
+		public GetIntersightCloudTfcAgentpool()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudTfcAgentpoolListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudRegions.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudRegions", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudRegions:GetCmdletBase
+	{
+		public GetIntersightCloudRegions()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudRegionsListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CloudCollectInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCloudCollectInventory")]
+    public class NewIntersightCloudCollectInventory:NewCmdletBase
+	{
+		public NewIntersightCloudCollectInventory()
+		{
+			ApiInstance = new CloudApi(Config);
+            ModelObject = new CloudCollectInventory();
+            MethodName = "CreateCloudCollectInventoryWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTargetRelationship Target {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The id of the new Terraform cloud asset which was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TargetId {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudAwsKeyPair.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsKeyPair", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudAwsKeyPair:GetCmdletBase
+	{
+		public GetIntersightCloudAwsKeyPair()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudAwsKeyPairListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudTfcOrganization.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcOrganization", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudTfcOrganization:GetCmdletBase
+	{
+		public GetIntersightCloudTfcOrganization()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudTfcOrganizationListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CloudAwsNetworkInterface.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsNetworkInterface", DefaultParameterSetName = "CmdletParam")]
@@ -382,6 +370,30 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CloudApi(Config);
             MethodName = "GetCloudAwsNetworkInterfaceListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudAwsOrganizationalUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsOrganizationalUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudAwsOrganizationalUnit:GetCmdletBase
+	{
+		public GetIntersightCloudAwsOrganizationalUnit()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudAwsOrganizationalUnitListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CloudAwsBillingUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsBillingUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudAwsBillingUnit:GetCmdletBase
+	{
+		public GetIntersightCloudAwsBillingUnit()
+		{
+			ApiInstance = new CloudApi(Config);
+            MethodName = "GetCloudAwsBillingUnitListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -397,27 +409,15 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudAwsSubnet.</para>
+    /// <para type="synopsis">This is the cmdlet to Get CloudSkuInstanceType.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudAwsSubnet", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudAwsSubnet:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuInstanceType", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCloudSkuInstanceType:GetCmdletBase
 	{
-		public GetIntersightCloudAwsSubnet()
+		public GetIntersightCloudSkuInstanceType()
 		{
 			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudAwsSubnetListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get CloudSkuDatabaseType.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudSkuDatabaseType", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightCloudSkuDatabaseType:GetCmdletBase
-	{
-		public GetIntersightCloudSkuDatabaseType()
-		{
-			ApiInstance = new CloudApi(Config);
-            MethodName = "GetCloudSkuDatabaseTypeListWithHttpInfo";
+            MethodName = "GetCloudSkuInstanceTypeListWithHttpInfo";
 		}
     }
 }

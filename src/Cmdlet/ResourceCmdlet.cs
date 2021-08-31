@@ -8,39 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceMembershipHolder.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceLicenseResourceCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembershipHolder", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceMembershipHolder:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceLicenseResourceCount", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceLicenseResourceCount:GetCmdletBase
 	{
-		public GetIntersightResourceMembershipHolder()
+		public GetIntersightResourceLicenseResourceCount()
 		{
 			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceMembershipHolderListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceMembership.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembership", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceMembership:GetCmdletBase
-	{
-		public GetIntersightResourceMembership()
-		{
-			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceMembershipListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceGroupMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroupMember", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceGroupMember:GetCmdletBase
-	{
-		public GetIntersightResourceGroupMember()
-		{
-			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceGroupMemberListWithHttpInfo";
+            MethodName = "GetResourceLicenseResourceCountListWithHttpInfo";
 		}
     }
     /// <summary>
@@ -53,7 +29,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ResourceApi(Config);
             ModelObject = new ResourceGroup();
-            MethodName = "UpdateResourceGroupWithHttpInfo";
+            MethodName = "PatchResourceGroupWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -141,15 +117,39 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceLicenseResourceCount.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceMembershipHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceLicenseResourceCount", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceLicenseResourceCount:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembershipHolder", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceMembershipHolder:GetCmdletBase
 	{
-		public GetIntersightResourceLicenseResourceCount()
+		public GetIntersightResourceMembershipHolder()
 		{
 			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceLicenseResourceCountListWithHttpInfo";
+            MethodName = "GetResourceMembershipHolderListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceGroupMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroupMember", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceGroupMember:GetCmdletBase
+	{
+		public GetIntersightResourceGroupMember()
+		{
+			ApiInstance = new ResourceApi(Config);
+            MethodName = "GetResourceGroupMemberListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceMembership.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembership", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceMembership:GetCmdletBase
+	{
+		public GetIntersightResourceMembership()
+		{
+			ApiInstance = new ResourceApi(Config);
+            MethodName = "GetResourceMembershipListWithHttpInfo";
 		}
     }
     /// <summary>

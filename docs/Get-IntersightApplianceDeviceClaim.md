@@ -25,7 +25,7 @@ Get-IntersightApplianceDeviceClaim [-Count <Boolean>] [-InlineCount <String>] [-
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ApplianceDeviceClaim&apos; resource.,
+Read a &amp;apos;ApplianceDeviceClaim&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightApplianceDeviceClaim](./New-IntersightApplianceDeviceClaim.md)
-
 [Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)
+
+[New-IntersightApplianceDeviceClaim](./New-IntersightApplianceDeviceClaim.md)
 

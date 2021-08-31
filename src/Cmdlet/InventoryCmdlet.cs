@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get InventoryDeviceInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightInventoryDeviceInfo:GetCmdletBase
+	{
+		public GetIntersightInventoryDeviceInfo()
+		{
+			ApiInstance = new InventoryApi(Config);
+            MethodName = "GetInventoryDeviceInfoListWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventoryHolder.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder")]
@@ -34,6 +46,64 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New InventoryRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightInventoryRequest")]
+    public class NewIntersightInventoryRequest:NewCmdletBase
+	{
+		public NewIntersightInventoryRequest()
+		{
+			ApiInstance = new InventoryApi(Config);
+            ModelObject = new InventoryRequest();
+            MethodName = "CreateInventoryRequestWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship Device {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InventoryInventoryMo> Mos {
             get;
             set;
         }
@@ -100,88 +170,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventory.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventory", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightInventoryGenericInventory:GetCmdletBase
-	{
-		public GetIntersightInventoryGenericInventory()
-		{
-			ApiInstance = new InventoryApi(Config);
-            MethodName = "GetInventoryGenericInventoryListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New InventoryRequest.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightInventoryRequest")]
-    public class NewIntersightInventoryRequest:NewCmdletBase
-	{
-		public NewIntersightInventoryRequest()
-		{
-			ApiInstance = new InventoryApi(Config);
-            ModelObject = new InventoryRequest();
-            MethodName = "CreateInventoryRequestWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship Device {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InventoryInventoryMo> Mos {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get InventoryDeviceInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightInventoryDeviceInfo:GetCmdletBase
-	{
-		public GetIntersightInventoryDeviceInfo()
-		{
-			ApiInstance = new InventoryApi(Config);
-            MethodName = "GetInventoryDeviceInfoListWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryDnMoBinding.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam")]
@@ -191,6 +179,18 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new InventoryApi(Config);
             MethodName = "GetInventoryDnMoBindingListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventory", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightInventoryGenericInventory:GetCmdletBase
+	{
+		public GetIntersightInventoryGenericInventory()
+		{
+			ApiInstance = new InventoryApi(Config);
+            MethodName = "GetInventoryGenericInventoryListWithHttpInfo";
 		}
     }
 }

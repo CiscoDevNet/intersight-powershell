@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BlLLrS5mQkvQs3vG2RuYr78pnza2ZCFegcJk4rILbgxguBZzcCDbVdn8jxHseukXVZN3I3IAtxc4Hw3qAfBQpg==",
+  "dgSpecHash": "b4Gfk0l+8BaaQgLiux4rPdztSr+Mr58nE/SK5jVb09XL5ZYKKNWZWI3LWEnsAb2Tfs0G2Qlg1ntFjVJaUA6hug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4430\\src\\Intersight.PowerShell.csproj",
+  "projectFilePath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\powershell-generator-intersight\\generated\\Intersight.PowerShell_1.0.9.4437\\src\\Intersight.PowerShell.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gzahidi\\.nuget\\packages\\comparenetobjects\\4.61.0\\comparenetobjects.4.61.0.nupkg.sha512",
     "C:\\Users\\gzahidi\\.nuget\\packages\\jsonsubtypes\\1.7.0\\jsonsubtypes.1.7.0.nupkg.sha512",

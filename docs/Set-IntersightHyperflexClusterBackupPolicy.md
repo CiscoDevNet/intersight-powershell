@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterBackupPolicy [-AdditionalProperties< Dictionary<st
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterBackupPolicy&apos; resource.
+Update a &amp;apos;HyperflexClusterBackupPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

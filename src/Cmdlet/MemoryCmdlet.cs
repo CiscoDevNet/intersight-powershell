@@ -8,16 +8,80 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryArray.</para>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryArray", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryArray:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryUnit:GetCmdletBase
 	{
-		public GetIntersightMemoryArray()
+		public GetIntersightMemoryPersistentMemoryUnit()
 		{
 			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryArrayListWithHttpInfo";
+            MethodName = "GetMemoryPersistentMemoryUnitListWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryUnit", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryUnit:GetCmdletBase
+	{
+		public GetIntersightMemoryUnit()
+		{
+			ApiInstance = new MemoryApi(Config);
+            MethodName = "GetMemoryUnitListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryNamespaceConfigResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespaceConfigResult", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryNamespaceConfigResult:GetCmdletBase
+	{
+		public GetIntersightMemoryPersistentMemoryNamespaceConfigResult()
+		{
+			ApiInstance = new MemoryApi(Config);
+            MethodName = "GetMemoryPersistentMemoryNamespaceConfigResultListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryNamespaceConfigResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryNamespaceConfigResult")]
+    public class SetIntersightMemoryPersistentMemoryNamespaceConfigResult:SetCmdletBase
+	{
+		public SetIntersightMemoryPersistentMemoryNamespaceConfigResult()
+		{
+			ApiInstance = new MemoryApi(Config);
+            ModelObject = new MemoryPersistentMemoryNamespaceConfigResult();
+            MethodName = "UpdateMemoryPersistentMemoryNamespaceConfigResultWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryPolicy.</para>
@@ -153,162 +217,28 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryConfiguration.</para>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfiguration", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryConfiguration:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfigResult", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryConfigResult:GetCmdletBase
 	{
-		public GetIntersightMemoryPersistentMemoryConfiguration()
+		public GetIntersightMemoryPersistentMemoryConfigResult()
 		{
 			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryConfigurationListWithHttpInfo";
+            MethodName = "GetMemoryPersistentMemoryConfigResultListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryNamespaceConfigResult.</para>
+    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryRegion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryNamespaceConfigResult")]
-    public class SetIntersightMemoryPersistentMemoryNamespaceConfigResult:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryRegion")]
+    public class SetIntersightMemoryPersistentMemoryRegion:SetCmdletBase
 	{
-		public SetIntersightMemoryPersistentMemoryNamespaceConfigResult()
+		public SetIntersightMemoryPersistentMemoryRegion()
 		{
 			ApiInstance = new MemoryApi(Config);
-            ModelObject = new MemoryPersistentMemoryNamespaceConfigResult();
-            MethodName = "PatchMemoryPersistentMemoryNamespaceConfigResultWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryNamespaceConfigResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespaceConfigResult", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryNamespaceConfigResult:GetCmdletBase
-	{
-		public GetIntersightMemoryPersistentMemoryNamespaceConfigResult()
-		{
-			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryNamespaceConfigResultListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryNamespace.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespace", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryNamespace:GetCmdletBase
-	{
-		public GetIntersightMemoryPersistentMemoryNamespace()
-		{
-			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryNamespaceListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryRegion.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryRegion", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryRegion:GetCmdletBase
-	{
-		public GetIntersightMemoryPersistentMemoryRegion()
-		{
-			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryRegionListWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set MemoryUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryUnit")]
-    public class SetIntersightMemoryUnit:SetCmdletBase
-	{
-		public SetIntersightMemoryUnit()
-		{
-			ApiInstance = new MemoryApi(Config);
-            ModelObject = new MemoryUnit();
-            MethodName = "UpdateMemoryUnitWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> OperReason {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryConfiguration")]
-    public class SetIntersightMemoryPersistentMemoryConfiguration:SetCmdletBase
-	{
-		public SetIntersightMemoryPersistentMemoryConfiguration()
-		{
-			ApiInstance = new MemoryApi(Config);
-            ModelObject = new MemoryPersistentMemoryConfiguration();
-            MethodName = "UpdateMemoryPersistentMemoryConfigurationWithHttpInfo";
+            ModelObject = new MemoryPersistentMemoryRegion();
+            MethodName = "UpdateMemoryPersistentMemoryRegionWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -379,16 +309,156 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryUnit.</para>
+    /// <para type="synopsis">This is the cmdlet to Set MemoryUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryUnit:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryUnit")]
+    public class SetIntersightMemoryUnit:SetCmdletBase
 	{
-		public GetIntersightMemoryPersistentMemoryUnit()
+		public SetIntersightMemoryUnit()
 		{
 			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryUnitListWithHttpInfo";
+            ModelObject = new MemoryUnit();
+            MethodName = "UpdateMemoryUnitWithHttpInfo";
 		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> OperReason {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryArray.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryArray", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryArray:GetCmdletBase
+	{
+		public GetIntersightMemoryArray()
+		{
+			ApiInstance = new MemoryApi(Config);
+            MethodName = "GetMemoryArrayListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfiguration", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryConfiguration:GetCmdletBase
+	{
+		public GetIntersightMemoryPersistentMemoryConfiguration()
+		{
+			ApiInstance = new MemoryApi(Config);
+            MethodName = "GetMemoryPersistentMemoryConfigurationListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryRegion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryRegion", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryRegion:GetCmdletBase
+	{
+		public GetIntersightMemoryPersistentMemoryRegion()
+		{
+			ApiInstance = new MemoryApi(Config);
+            MethodName = "GetMemoryPersistentMemoryRegionListWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryUnit")]
+    public class SetIntersightMemoryPersistentMemoryUnit:SetCmdletBase
+	{
+		public SetIntersightMemoryPersistentMemoryUnit()
+		{
+			ApiInstance = new MemoryApi(Config);
+            ModelObject = new MemoryPersistentMemoryUnit();
+            MethodName = "UpdateMemoryPersistentMemoryUnitWithHttpInfo";
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> OperReason {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryNamespace.</para>
@@ -498,28 +568,28 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryUnit.</para>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryNamespace.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryUnit", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryUnit:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespace", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryNamespace:GetCmdletBase
 	{
-		public GetIntersightMemoryUnit()
+		public GetIntersightMemoryPersistentMemoryNamespace()
 		{
 			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryUnitListWithHttpInfo";
+            MethodName = "GetMemoryPersistentMemoryNamespaceListWithHttpInfo";
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryRegion.</para>
+    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryRegion")]
-    public class SetIntersightMemoryPersistentMemoryRegion:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryConfiguration")]
+    public class SetIntersightMemoryPersistentMemoryConfiguration:SetCmdletBase
 	{
-		public SetIntersightMemoryPersistentMemoryRegion()
+		public SetIntersightMemoryPersistentMemoryConfiguration()
 		{
 			ApiInstance = new MemoryApi(Config);
-            ModelObject = new MemoryPersistentMemoryRegion();
-            MethodName = "UpdateMemoryPersistentMemoryRegionWithHttpInfo";
+            ModelObject = new MemoryPersistentMemoryConfiguration();
+            MethodName = "UpdateMemoryPersistentMemoryConfigurationWithHttpInfo";
 		}
         // <summary>
         /// <para type="description"></para>
@@ -548,18 +618,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryPolicy", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryPolicy:GetCmdletBase
-	{
-		public GetIntersightMemoryPersistentMemoryPolicy()
-		{
-			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryPolicyListWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MemoryPersistentMemoryPolicy.</para>
@@ -683,73 +741,15 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryConfigResult.</para>
+    /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfigResult", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightMemoryPersistentMemoryConfigResult:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightMemoryPersistentMemoryPolicy:GetCmdletBase
 	{
-		public GetIntersightMemoryPersistentMemoryConfigResult()
+		public GetIntersightMemoryPersistentMemoryPolicy()
 		{
 			ApiInstance = new MemoryApi(Config);
-            MethodName = "GetMemoryPersistentMemoryConfigResultListWithHttpInfo";
+            MethodName = "GetMemoryPersistentMemoryPolicyListWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryUnit")]
-    public class SetIntersightMemoryPersistentMemoryUnit:SetCmdletBase
-	{
-		public SetIntersightMemoryPersistentMemoryUnit()
-		{
-			ApiInstance = new MemoryApi(Config);
-            ModelObject = new MemoryPersistentMemoryUnit();
-            MethodName = "UpdateMemoryPersistentMemoryUnitWithHttpInfo";
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> OperReason {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
     }
 }

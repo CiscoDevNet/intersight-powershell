@@ -25,7 +25,7 @@ Get-IntersightSdcardPolicy [-Count <Boolean>] [-InlineCount <String>] [-Select <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;SdcardPolicy&apos; resource.,
+Read a &amp;apos;SdcardPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
-
 [Set-IntersightSdcardPolicy](./Set-IntersightSdcardPolicy.md)
 
 [Remove-IntersightSdcardPolicy](./Remove-IntersightSdcardPolicy.md)
+
+[New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
 

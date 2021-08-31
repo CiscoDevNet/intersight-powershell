@@ -19,7 +19,7 @@ Set-IntersightBootSdDevice [-AdditionalProperties< Dictionary<string,object>>][-
 ```
 
 ## DESCRIPTION
-Update a &apos;BootSdDevice&apos; resource.
+Update a &amp;apos;BootSdDevice&amp;apos; resource.
 
 ## PARAMETERS
 

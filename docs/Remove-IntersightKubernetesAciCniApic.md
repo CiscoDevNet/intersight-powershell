@@ -17,7 +17,7 @@ Remove-IntersightKubernetesAciCniApic -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesAciCniApic&amp;apos; resource.
+Delete a &apos;KubernetesAciCniApic&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesAciCniApic](./Set-IntersightKubernetesAciCniApic.md)
+
 [Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)
 
 [New-IntersightKubernetesAciCniApic](./New-IntersightKubernetesAciCniApic.md)
-
-[Set-IntersightKubernetesAciCniApic](./Set-IntersightKubernetesAciCniApic.md)
 

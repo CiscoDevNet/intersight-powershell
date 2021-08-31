@@ -132,9 +132,9 @@ PS C:\> Set-IntersightIamPrivateKeySpec
 
 ## RELATED LINKS
 
-[Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
-
 [New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
+
+[Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
 
 [Remove-IntersightIamPrivateKeySpec](./Remove-IntersightIamPrivateKeySpec.md)
 

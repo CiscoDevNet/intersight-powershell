@@ -19,7 +19,7 @@ New-IntersightFirmwareUpgrade [-AdditionalProperties< Dictionary<string,object>>
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareUpgrade&apos; resource.
+Create a &amp;apos;FirmwareUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 

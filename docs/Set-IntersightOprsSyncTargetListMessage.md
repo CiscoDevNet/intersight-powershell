@@ -160,6 +160,6 @@ PS C:\> Set-IntersightOprsSyncTargetListMessage
 
 ## RELATED LINKS
 
-[Remove-IntersightOprsSyncTargetListMessage](./Remove-IntersightOprsSyncTargetListMessage.md)
-
 [New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
+
+[Remove-IntersightOprsSyncTargetListMessage](./Remove-IntersightOprsSyncTargetListMessage.md)

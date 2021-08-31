@@ -19,7 +19,7 @@ Set-IntersightPowerPolicy [-AdditionalProperties< Dictionary<string,object>>][-A
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;PowerPolicy&amp;apos; resource.
+Update a &apos;PowerPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -223,8 +223,8 @@ PS C:\> Set-IntersightPowerPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)
+
 [Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
 
 [New-IntersightPowerPolicy](./New-IntersightPowerPolicy.md)
-
-[Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)

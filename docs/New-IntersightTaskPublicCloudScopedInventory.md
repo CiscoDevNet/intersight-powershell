@@ -19,7 +19,7 @@ New-IntersightTaskPublicCloudScopedInventory [-AdditionalProperties< Dictionary<
 ```
 
 ## DESCRIPTION
-Create a &apos;TaskPublicCloudScopedInventory&apos; resource.
+Create a &amp;apos;TaskPublicCloudScopedInventory&amp;apos; resource.
 
 ## PARAMETERS
 

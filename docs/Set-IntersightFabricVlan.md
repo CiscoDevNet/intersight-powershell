@@ -193,8 +193,8 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
+
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
 [New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
-
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)

@@ -316,8 +316,8 @@ PS C:\> Set-IntersightNetworkconfigPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
+
 [New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
 
 [Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
-
-[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)

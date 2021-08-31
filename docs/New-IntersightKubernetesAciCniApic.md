@@ -181,8 +181,8 @@ PS C:\> New-IntersightKubernetesAciCniApic
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)
-
 [Set-IntersightKubernetesAciCniApic](./Set-IntersightKubernetesAciCniApic.md)
 
 [Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
+
+[Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)

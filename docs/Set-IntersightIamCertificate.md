@@ -19,7 +19,7 @@ Set-IntersightIamCertificate [-AdditionalProperties< Dictionary<string,object>>]
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamCertificate&amp;apos; resource.
+Update a &apos;IamCertificate&apos; resource.
 
 ## PARAMETERS
 

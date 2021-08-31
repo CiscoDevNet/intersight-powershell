@@ -25,7 +25,7 @@ Get-IntersightBiosVfSelectMemoryRasConfiguration [-Count <Boolean>] [-InlineCoun
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;BiosVfSelectMemoryRasConfiguration&apos; resource.,
+Read a &amp;apos;BiosVfSelectMemoryRasConfiguration&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
