@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricPortPolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-DeviceModel< FabricPortPolicy.DeviceModelEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<FabricSwitchProfileRelationship>>][-Tags< List<MoTag>>]
+Set-IntersightFabricPortPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-DeviceModel< FabricPortPolicy.DeviceModelEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricPortPolicy&apos; resource.
+Update a &amp;apos;FabricPortPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -151,6 +151,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -178,8 +208,10 @@ PS C:\> Set-IntersightFabricPortPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
+[Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
 
 [New-IntersightFabricPortPolicy](./New-IntersightFabricPortPolicy.md)
 
-[Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
+[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -4,18 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.Management.Automation;
 using System.Text;
+using System.Reflection;
+using System.Runtime.Serialization;
+
 
 namespace Intersight.PowerShell
 {
     public class GetCmdletBase : CmdletBase
     {
         #region
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ParameterSetName = "CmdletParam")]
-        public string Name { get; set; }
-
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        public OrganizationOrganizationRelationship Organization { get; set; }
-
+        
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
         public bool? Count { get; set; } = null;
 
@@ -55,14 +53,6 @@ namespace Intersight.PowerShell
 
         public GetCmdletBase()
         {
-        }
-
-        protected override void BeginProcessing()
-        {
-            if (CmdletBase.Config == null || CmdletBase.Config.HttpSigningConfiguration == null)
-            {
-                throw new Exception("Intersight environment is not configured. Use the cmdlet Set-IntersightConfiguration to configure the Intersight environment it.");
-            }
             result = new List<object>();
         }
 
@@ -74,26 +64,7 @@ namespace Intersight.PowerShell
                 Object[] argList = null;
                 if (this.ParameterSetName.Equals("CmdletParam", StringComparison.OrdinalIgnoreCase))
                 {
-                    string queryString = null;
-                    if (!string.IsNullOrEmpty(Name))
-                    {
-                        queryString += string.Format("Name eq \'{0}\'", Name);
-                    }
-                    else if (Organization != null)
-                    {
-                        if (Organization.ActualInstance is OrganizationOrganization)
-                        {
-                            OrganizationOrganization organization = Organization.ActualInstance as OrganizationOrganization;
-                            queryString += string.Format("Organization/Moid eq \'{0}\'", organization.Moid);
-                        }
-                        else if (Organization.ActualInstance is MoMoRef)
-                        {
-                            MoMoRef organizationRef = Organization.ActualInstance as MoMoRef;
-                            queryString += string.Format("Organization/Moid eq \'{0}\'", organizationRef.Moid);
-                        }
-
-                    }
-
+                    var queryString = CreateFilterQuery();
                     argList = new object[] { queryString, null, null, null, null, null, null, null, null, null, null };
 
                 }
@@ -101,11 +72,17 @@ namespace Intersight.PowerShell
                 {
                     argList = new object[] { Filter, Orderby, Top, Skip, Select, Expand, Apply, Count, InlineCount, At, Tag };
                 }
+                
                 var methodResult = methodInfo.Invoke(ApiInstance, argList);
+                
                 if (Json.IsPresent)
                 {
                     WriteResponseJson(methodResult);
                 }
+                else if(WithHttpInfo.IsPresent)
+				{
+					WriteObject(methodResult);
+				}
                 else
                 {
                     methodResult = WriteResponseData(methodResult, false);
@@ -146,6 +123,85 @@ namespace Intersight.PowerShell
                     WriteObject(result.ToArray(), true);
                 }
             }
+        }
+
+        private string CreateFilterQuery()
+        {
+            StringBuilder queryString = new StringBuilder();
+            int i = 0;
+            foreach(var item in  this.MyInvocation.BoundParameters)
+            {
+                
+                if(item.Value != null && item.Value.GetType().Name == "SwitchParameter")
+                {
+                    continue;
+                }
+
+                if (i != 0)
+                {
+                    queryString.Append(" and ");
+                }
+
+                if (item.Value != null &&  item.Value.GetType().Name.EndsWith("Relationship"))
+                {
+                    var actualInstance = item.Value.GetType().GetProperty("ActualInstance").GetValue(item.Value);
+                    if (actualInstance != null)
+                    {
+                        var moid = actualInstance.GetType().GetProperty("Moid").GetValue(actualInstance);
+                        queryString.Append(string.Format("{0}/Moid eq \'{1}\'", item.Key, moid));
+                    }
+
+                }
+                else if (item.Value != null &&  item.Value.GetType().Name == "Boolean")
+                {
+                    queryString.Append(string.Format("{0} eq {1}", item.Key, item.Value.ToString().ToLower()));
+                }
+                else if (item.Value != null && item.Value.GetType().Name.EndsWith("Enum"))
+                {
+                    string enumValue = item.Value.ToString();
+                    if (item.Value.ToString().StartsWith("NUMBER_"))
+                    {
+                        var tempList = item.Value.ToString().Split("_");
+                        int tempVal;
+                        if(tempList.Length == 2 && int.TryParse(tempList[1],out tempVal))
+                        {
+                            enumValue = tempList[1];
+                            queryString.Append(string.Format("{0} eq {1}", item.Key, enumValue));
+                        }
+                        else
+                        {
+                            queryString.Append(string.Format("{0} eq \'{1}\'", item.Key, enumValue));
+                        }
+                        
+                    }
+                    else
+                    {
+                        FieldInfo info = item.Value.GetType().GetField(item.Value.ToString());
+                        EnumMemberAttribute[] attributes = (EnumMemberAttribute[])info.GetCustomAttributes(typeof(EnumMemberAttribute), false);
+                        if (attributes != null && attributes.Length > 0)
+                        {
+                            enumValue = attributes[0].Value;
+                        }
+                        queryString.Append(string.Format("{0} eq \'{1}\'", item.Key, enumValue));
+                    }
+                }
+                else if (item.Value != null && item.Value.GetType().Name == "DateTime")
+                {
+                    var tempDate = (DateTime)item.Value;
+                    queryString.Append(string.Format("{0} eq {1}", item.Key, tempDate.ToUniversalTime().ToString("o")));
+                }
+                else if (item.Value != null && item.Value.GetType().Name == "String")
+                {
+                    queryString.Append(string.Format("{0} eq \'{1}\'", item.Key, item.Value));
+                }
+                else
+                {
+                    queryString.Append(string.Format("{0} eq {1}", item.Key, item.Value));
+                }
+                              
+                i++;
+            }
+            return queryString.ToString();
         }
     }
 }

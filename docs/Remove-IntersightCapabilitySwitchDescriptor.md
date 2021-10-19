@@ -17,7 +17,7 @@ Remove-IntersightCapabilitySwitchDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilitySwitchDescriptor&apos; resource.
+Delete a &amp;apos;CapabilitySwitchDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

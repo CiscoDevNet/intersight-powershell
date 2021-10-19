@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorHttpRequest [-AdditionalProperties< Dictionary<string,object>>][-AssetTargetMoid< string>][-Body< byte[]>][-ClassId< ConnectorHttpRequest.ClassIdEnum>][-DialTimeout< long>][-EncryptedAesKey< string>][-EncryptionKey< string>][-EndpointMoid< string>][-Header< object>][-Internal< bool>][-Method< string>][-ObjectType< ConnectorHttpRequest.ObjectTypeEnum>][-SecureProperties< object>][-Timeout< long>][-Url< Model.ConnectorUrl>]
+Initialize-IntersightConnectorHttpRequest [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssetTargetMoid< string>][-Body< byte[]>][-ClassId< ConnectorHttpRequest.ClassIdEnum>][-DialTimeout< long>][-EncryptedAesKey< string>][-EncryptionKey< string>][-EndpointMoid< string>][-Header< object>][-Internal< bool>][-Method< string>][-ObjectType< ConnectorHttpRequest.ObjectTypeEnum>][-SecureProperties< object>][-Timeout< long>][-Url< Model.ConnectorUrl>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -254,6 +254,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

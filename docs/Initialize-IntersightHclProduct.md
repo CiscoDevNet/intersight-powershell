@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHclProduct [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HclProduct.ClassIdEnum>][-DriverNames< List<string>>][-Firmwares< List<Model.HclFirmware>>][-Id< string>][-Model< string>][-ObjectType< HclProduct.ObjectTypeEnum>][-Revision< string>][-Type< HclProduct.TypeEnum>][-Vendor< string>]
+Initialize-IntersightHclProduct [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclProduct.ClassIdEnum>][-DriverNames< System.Collections.Generic.List`1[string]>][-Firmwares< System.Collections.Generic.List`1[Model.HclFirmware]>][-Id< string>][-Model< string>][-ObjectType< HclProduct.ObjectTypeEnum>][-Revision< string>][-Type< HclProduct.TypeEnum>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: HclProduct.ObjectTypeEnum
@@ -173,6 +173,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

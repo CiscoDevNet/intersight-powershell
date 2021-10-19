@@ -25,7 +25,7 @@ Get-IntersightTamAdvisoryDefinition [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;TamAdvisoryDefinition&apos; resource.,
+Read a &amp;apos;TamAdvisoryDefinition&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
+[New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
 
 [Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
-[New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
+[Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
 

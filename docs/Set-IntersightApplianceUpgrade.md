@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceUpgrade [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-CompletedPhases< List<OnpremUpgradePhase>>][-Messages< List<string>>][[-Moid]< string>][-RollbackNeeded< bool>][-RollbackPhases< List<OnpremUpgradePhase>>][-Services< List<string>>][-StartTime< DateTime>][-Tags< List<MoTag>>][-UiPackages< List<string>>]
+Set-IntersightApplianceUpgrade [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-RollbackNeeded< bool>][-StartTime< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -56,38 +56,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -CompletedPhases
-
-
-Note :- Use Initialize-IntersightOnpremUpgradePhase to create the object of complex type OnpremUpgradePhase
-
-```yaml
-Type: System.Collections.Generic.List`1[OnpremUpgradePhase]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Messages
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -108,38 +76,6 @@ Track if rollback is needed.
 
 ```yaml
 Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RollbackPhases
-
-
-Note :- Use Initialize-IntersightOnpremUpgradePhase to create the object of complex type OnpremUpgradePhase
-
-```yaml
-Type: System.Collections.Generic.List`1[OnpremUpgradePhase]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Services
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -182,18 +118,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -UiPackages
-
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -226,6 +177,8 @@ PS C:\> Set-IntersightApplianceUpgrade
 
 [Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
 
+[Remove-IntersightApplianceUpgrade](./Remove-IntersightApplianceUpgrade.md)
+
 [Initialize-IntersightOnpremUpgradePhase](./Initialize-IntersightOnpremUpgradePhase.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

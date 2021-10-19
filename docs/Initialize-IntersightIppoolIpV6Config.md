@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpV6Config [-AdditionalProperties< Dictionary<string,object>>][-ClassId< IppoolIpV6Config.ClassIdEnum>][-Gateway< string>][-ObjectType< IppoolIpV6Config.ObjectTypeEnum>][-Prefix< long>][-PrimaryDns< string>][-SecondaryDns< string>]
+Initialize-IntersightIppoolIpV6Config [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV6Config.ClassIdEnum>][-Gateway< string>][-ObjectType< IppoolIpV6Config.ObjectTypeEnum>][-Prefix< long>][-PrimaryDns< string>][-SecondaryDns< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -126,6 +126,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

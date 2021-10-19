@@ -17,7 +17,7 @@ Remove-IntersightKubernetesVersionPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesVersionPolicy&apos; resource.
+Delete a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
+
 [Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
 
 [New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
-
-[Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
 

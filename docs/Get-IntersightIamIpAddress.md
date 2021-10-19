@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamIpAddress](./New-IntersightIamIpAddress.md)
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
 
 [Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)
 
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
+[New-IntersightIamIpAddress](./New-IntersightIamIpAddress.md)
 

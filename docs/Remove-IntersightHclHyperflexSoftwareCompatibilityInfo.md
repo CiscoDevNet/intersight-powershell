@@ -17,7 +17,7 @@ Remove-IntersightHclHyperflexSoftwareCompatibilityInfo -Moid <String> [<CommonPa
 ```
 
 ## DESCRIPTION
-Delete a &apos;HclHyperflexSoftwareCompatibilityInfo&apos; resource.
+Delete a &amp;apos;HclHyperflexSoftwareCompatibilityInfo&amp;apos; resource.
 
 ## EXAMPLES
 

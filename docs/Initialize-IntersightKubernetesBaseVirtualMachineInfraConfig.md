@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesBaseVirtualMachineInfraConfig [-AdditionalProperties< Dictionary<string,object>>][-ClassId< KubernetesBaseVirtualMachineInfraConfig.ClassIdEnum>][-Interfaces< List<string>>][-ObjectType< KubernetesBaseVirtualMachineInfraConfig.ObjectTypeEnum>]
+Initialize-IntersightKubernetesBaseVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesBaseVirtualMachineInfraConfig.ClassIdEnum>][-Interfaces< System.Collections.Generic.List`1[string]>][-ObjectType< KubernetesBaseVirtualMachineInfraConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
 Type: KubernetesBaseVirtualMachineInfraConfig.ObjectTypeEnum
@@ -81,6 +81,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

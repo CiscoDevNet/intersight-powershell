@@ -25,7 +25,7 @@ Get-IntersightFabricPortOperation [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FabricPortOperation&apos; resource.,
+Read a &amp;apos;FabricPortOperation&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
+[New-IntersightFabricPortOperation](./New-IntersightFabricPortOperation.md)
 
 [Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
 
-[New-IntersightFabricPortOperation](./New-IntersightFabricPortOperation.md)
+[Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
 

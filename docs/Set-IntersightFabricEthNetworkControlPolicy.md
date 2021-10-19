@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricEthNetworkControlPolicy [-AdditionalProperties< Dictionary<string,object>>][-CdpEnabled< bool>][-Description< string>][-ForgeMac< FabricEthNetworkControlPolicy.ForgeMacEnum>][-LldpSettings< FabricLldpSettings>][-MacRegistrationMode< FabricEthNetworkControlPolicy.MacRegistrationModeEnum>][[-Moid]< string>][-Name< string>][-NetworkPolicy< List<VnicEthNetworkPolicyRelationship>>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>][-UplinkFailAction< FabricEthNetworkControlPolicy.UplinkFailActionEnum>]
+Set-IntersightFabricEthNetworkControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CdpEnabled< bool>][-Description< string>][-ForgeMac< FabricEthNetworkControlPolicy.ForgeMacEnum>][-LldpSettings< FabricLldpSettings>][-MacRegistrationMode< FabricEthNetworkControlPolicy.MacRegistrationModeEnum>][[-Moid]< string>][-Name< string>][-NetworkPolicy< System.Collections.Generic.List`1[VnicEthNetworkPolicyRelationship]>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UplinkFailAction< FabricEthNetworkControlPolicy.UplinkFailActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricEthNetworkControlPolicy&amp;apos; resource.
+Update a &apos;FabricEthNetworkControlPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -213,6 +213,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -240,10 +270,12 @@ PS C:\> Set-IntersightFabricEthNetworkControlPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
+
 [Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
 
 [New-IntersightFabricEthNetworkControlPolicy](./New-IntersightFabricEthNetworkControlPolicy.md)
 
-[Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
-
 [Initialize-IntersightFabricLldpSettings](./Initialize-IntersightFabricLldpSettings.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

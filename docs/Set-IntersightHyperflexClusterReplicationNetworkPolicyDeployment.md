@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment [-AdditionalProperties< Dictionary<string,object>>][-Cluster< HyperflexClusterRelationship>][-Discovered< bool>][[-Moid]< string>][-Organization< OrganizationOrganizationRelationship>][-ReplicationIpranges< List<HyperflexIpAddrRange>>][-Tags< List<MoTag>>]
+Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cluster< HyperflexClusterRelationship>][-Discovered< bool>][[-Moid]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,23 +104,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ReplicationIpranges
-
-
-Note :- Use Initialize-IntersightHyperflexIpAddrRange to create the object of complex type HyperflexIpAddrRange
-
-```yaml
-Type: System.Collections.Generic.List`1[HyperflexIpAddrRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -135,6 +118,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -172,3 +185,7 @@ PS C:\> Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
 [New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
+
+[Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

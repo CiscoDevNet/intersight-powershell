@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSnmpPolicy [-AccessCommunityString< string>][-AdditionalProperties< Dictionary<string,object>>][-CommunityAccess< SnmpPolicy.CommunityAccessEnum>][-Description< string>][-Enabled< bool>][-EngineId< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-SnmpPort< long>][-SnmpTraps< List<SnmpTrap>>][-SnmpUsers< List<SnmpUser>>][-SysContact< string>][-SysLocation< string>][-Tags< List<MoTag>>][-TrapCommunity< string>][-V2Enabled< bool>][-V3Enabled< bool>]
+New-IntersightSnmpPolicy [-AccessCommunityString< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CommunityAccess< SnmpPolicy.CommunityAccessEnum>][-Description< string>][-Enabled< bool>][-EngineId< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-SnmpPort< long>][-SnmpTraps< System.Collections.Generic.List`1[SnmpTrap]>][-SnmpUsers< System.Collections.Generic.List`1[SnmpUser]>][-SysContact< string>][-SysLocation< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrapCommunity< string>][-V2Enabled< bool>][-V3Enabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SnmpPolicy&amp;apos; resource.
+Create a &apos;SnmpPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -320,6 +320,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -347,12 +377,14 @@ PS C:\> New-IntersightSnmpPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
+
 [Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
 
 [Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
 
-[Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
-
 [Initialize-IntersightSnmpTrap](./Initialize-IntersightSnmpTrap.md)
 
 [Initialize-IntersightSnmpUser](./Initialize-IntersightSnmpUser.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

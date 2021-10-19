@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightServerProfileTemplate [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-Type< ServerProfileTemplate.TypeEnum>]
+Set-IntersightServerProfileTemplate [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -216,6 +216,69 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UuidAddressType
+UUID address allocation type selected to assign an UUID address for the server.\n* `NONE` - The user did not assign any UUID address.\n* `STATIC` - The user assigns a static UUID address.\n* `POOL` - The user selects a pool from which the address will be leased.
+
+```yaml
+Type: ServerProfileTemplate.UuidAddressTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UuidPool
+A reference to a uuidpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: UuidpoolPoolRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -250,3 +313,5 @@ PS C:\> Set-IntersightServerProfileTemplate
 [New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamResourceRoles [-AdditionalProperties< Dictionary<string,object>>][[-Moid]< string>][-Permission< IamPermissionRelationship>][-Roles< List<IamRoleRelationship>>][-Tags< List<MoTag>>]
+Set-IntersightIamResourceRoles [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Permission< IamPermissionRelationship>][-Resource< MoBaseMoRelationship>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Resource
+A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: MoBaseMoRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Roles
 An array of relationships to iamRole resources.
 
@@ -106,6 +124,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -133,8 +181,10 @@ PS C:\> Set-IntersightIamResourceRoles
 
 ## RELATED LINKS
 
+[Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
+
 [Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
 
 [New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
 
-[Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

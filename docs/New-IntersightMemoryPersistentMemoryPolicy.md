@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightMemoryPersistentMemoryPolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-Goals< List<MemoryPersistentMemoryGoal>>][-LocalSecurity< MemoryPersistentMemoryLocalSecurity>][-LogicalNamespaces< List<MemoryPersistentMemoryLogicalNamespace>>][-ManagementMode< MemoryPersistentMemoryPolicy.ManagementModeEnum>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-RetainNamespaces< bool>][-Tags< List<MoTag>>]
+New-IntersightMemoryPersistentMemoryPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Goals< System.Collections.Generic.List`1[MemoryPersistentMemoryGoal]>][-LocalSecurity< MemoryPersistentMemoryLocalSecurity>][-LogicalNamespaces< System.Collections.Generic.List`1[MemoryPersistentMemoryLogicalNamespace]>][-ManagementMode< MemoryPersistentMemoryPolicy.ManagementModeEnum>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RetainNamespaces< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -217,6 +217,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -244,9 +274,9 @@ PS C:\> New-IntersightMemoryPersistentMemoryPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)
-
 [Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
+
+[Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)
 
 [Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
 
@@ -255,3 +285,5 @@ PS C:\> New-IntersightMemoryPersistentMemoryPolicy
 [Initialize-IntersightMemoryPersistentMemoryLocalSecurity](./Initialize-IntersightMemoryPersistentMemoryLocalSecurity.md)
 
 [Initialize-IntersightMemoryPersistentMemoryLogicalNamespace](./Initialize-IntersightMemoryPersistentMemoryLogicalNamespace.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

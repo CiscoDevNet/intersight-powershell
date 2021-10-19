@@ -17,7 +17,7 @@ Remove-IntersightFirmwareBoardControllerDescriptor -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareBoardControllerDescriptor&amp;apos; resource.
+Delete a &apos;FirmwareBoardControllerDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)
-
 [New-IntersightFirmwareBoardControllerDescriptor](./New-IntersightFirmwareBoardControllerDescriptor.md)
+
+[Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)
 
 [Set-IntersightFirmwareBoardControllerDescriptor](./Set-IntersightFirmwareBoardControllerDescriptor.md)
 

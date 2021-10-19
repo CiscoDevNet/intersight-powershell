@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
+
 [Set-IntersightIamQualifier](./Set-IntersightIamQualifier.md)
 
 [Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
-
-[New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
 

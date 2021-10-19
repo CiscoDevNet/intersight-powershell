@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< Dictionary<string,object>>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< List<MoTag>>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>]
+Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-The URL to access this datastore (example - &amp;apos;ds:///vmfs/volumes/562a4e8a-0eeb5372-dd61-78baf9cb9afa/&amp;apos;).
+The URL to access this datastore (example - &apos;ds:///vmfs/volumes/562a4e8a-0eeb5372-dd61-78baf9cb9afa/&apos;).
 
 ```yaml
 Type: string
@@ -333,6 +333,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -366,3 +396,5 @@ PS C:\> Set-IntersightVirtualizationVmwareDatastore
 [Get-IntersightVirtualizationVmwareDatastore](./Get-IntersightVirtualizationVmwareDatastore.md)
 
 [Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

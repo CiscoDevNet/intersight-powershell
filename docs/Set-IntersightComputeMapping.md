@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeMapping [-AdditionalProperties< Dictionary<string,object>>][-FileLocation< string>][-MediaTypes< List<string>>][[-Moid]< string>][-Tags< List<MoTag>>]
+Set-IntersightComputeMapping [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FileLocation< string>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ComputeMapping&amp;apos; resource.
+Update a &apos;ComputeMapping&apos; resource.
 
 ## PARAMETERS
 
@@ -43,21 +43,6 @@ Remote image location from where the image is uploaded to server.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MediaTypes
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -100,6 +85,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -128,3 +143,5 @@ PS C:\> Set-IntersightComputeMapping
 ## RELATED LINKS
 
 [Get-IntersightComputeMapping](./Get-IntersightComputeMapping.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

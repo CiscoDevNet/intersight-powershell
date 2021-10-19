@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightOsBulkInstallInfo [-AdditionalProperties< Dictionary<string,object>>][-ConfigurationFile< OsConfigurationFileRelationship>][-FileContent< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-OsImage< SoftwarerepositoryOperatingSystemFileRelationship>][-ScuImage< FirmwareServerConfigurationUtilityDistributableRelationship>][-ServerConfigs< List<OsServerConfig>>][-Servers< List<ComputePhysicalRelationship>>][-Tags< List<MoTag>>][-ValidationInfos< List<OsValidationInformation>>]
+New-IntersightOsBulkInstallInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigurationFile< OsConfigurationFileRelationship>][-FileContent< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-OsImage< SoftwarerepositoryOperatingSystemFileRelationship>][-ScuImage< FirmwareServerConfigurationUtilityDistributableRelationship>][-Servers< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ValidationInfos< System.Collections.Generic.List`1[OsValidationInformation]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -155,23 +155,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerConfigs
-
-
-Note :- Use Initialize-IntersightOsServerConfig to create the object of complex type OsServerConfig
-
-```yaml
-Type: System.Collections.Generic.List`1[OsServerConfig]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Servers
 An array of relationships to computePhysical resources.
 
@@ -224,6 +207,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -253,6 +266,10 @@ PS C:\> New-IntersightOsBulkInstallInfo
 
 [Get-IntersightOsBulkInstallInfo](./Get-IntersightOsBulkInstallInfo.md)
 
+[Initialize-IntersightOsGlobalConfig](./Initialize-IntersightOsGlobalConfig.md)
+
 [Initialize-IntersightOsServerConfig](./Initialize-IntersightOsServerConfig.md)
 
 [Initialize-IntersightOsValidationInformation](./Initialize-IntersightOsValidationInformation.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

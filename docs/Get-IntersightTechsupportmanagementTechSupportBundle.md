@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightTechsupportmanagementTechSupportBundle](./Remove-IntersightTechsupportmanagementTechSupportBundle.md)
-
 [New-IntersightTechsupportmanagementTechSupportBundle](./New-IntersightTechsupportmanagementTechSupportBundle.md)
+
+[Remove-IntersightTechsupportmanagementTechSupportBundle](./Remove-IntersightTechsupportmanagementTechSupportBundle.md)
 

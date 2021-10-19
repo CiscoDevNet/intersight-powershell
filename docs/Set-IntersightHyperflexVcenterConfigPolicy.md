@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexVcenterConfigPolicy [-AdditionalProperties< Dictionary<string,object>>][-ClusterProfiles< List<HyperflexClusterProfileRelationship>>][-DataCenter< string>][-Description< string>][-Hostname< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Password< string>][-SsoUrl< string>][-Tags< List<MoTag>>][-Username< string>]
+Set-IntersightHyperflexVcenterConfigPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-DataCenter< string>][-Description< string>][-Hostname< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Password< string>][-SsoUrl< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
+Update a &apos;HyperflexVcenterConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -211,6 +211,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -238,8 +268,10 @@ PS C:\> Set-IntersightHyperflexVcenterConfigPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexVcenterConfigPolicy](./Remove-IntersightHyperflexVcenterConfigPolicy.md)
+
 [Get-IntersightHyperflexVcenterConfigPolicy](./Get-IntersightHyperflexVcenterConfigPolicy.md)
 
 [New-IntersightHyperflexVcenterConfigPolicy](./New-IntersightHyperflexVcenterConfigPolicy.md)
 
-[Remove-IntersightHyperflexVcenterConfigPolicy](./Remove-IntersightHyperflexVcenterConfigPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

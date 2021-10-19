@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexExtIscsiStoragePolicy [-AdditionalProperties< Dictionary<string,object>>][-AdminState< bool>][-ClusterProfiles< List<HyperflexClusterProfileRelationship>>][-Description< string>][-ExtaTraffic< HyperflexNamedVlan>][-ExtbTraffic< HyperflexNamedVlan>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>]
+New-IntersightHyperflexExtIscsiStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< bool>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-Description< string>][-ExtaTraffic< HyperflexNamedVlan>][-ExtbTraffic< HyperflexNamedVlan>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexExtIscsiStoragePolicy&apos; resource.
+Create a &amp;apos;HyperflexExtIscsiStoragePolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -185,6 +185,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -212,10 +242,12 @@ PS C:\> New-IntersightHyperflexExtIscsiStoragePolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexExtIscsiStoragePolicy](./Get-IntersightHyperflexExtIscsiStoragePolicy.md)
-
 [Set-IntersightHyperflexExtIscsiStoragePolicy](./Set-IntersightHyperflexExtIscsiStoragePolicy.md)
 
 [Remove-IntersightHyperflexExtIscsiStoragePolicy](./Remove-IntersightHyperflexExtIscsiStoragePolicy.md)
 
+[Get-IntersightHyperflexExtIscsiStoragePolicy](./Get-IntersightHyperflexExtIscsiStoragePolicy.md)
+
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

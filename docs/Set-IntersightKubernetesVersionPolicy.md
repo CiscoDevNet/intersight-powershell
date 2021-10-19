@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesVersionPolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<KubernetesNodeGroupProfileRelationship>>][-Tags< List<MoTag>>][-Version< KubernetesVersionRelationship>]
+Set-IntersightKubernetesVersionPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< KubernetesVersionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
+Update a &apos;KubernetesVersionPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -154,6 +154,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -181,8 +211,10 @@ PS C:\> Set-IntersightKubernetesVersionPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
+
 [Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
 
 [New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
 
-[Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

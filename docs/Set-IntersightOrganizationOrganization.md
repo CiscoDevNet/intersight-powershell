@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightOrganizationOrganization [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][[-Moid]< string>][-Name< string>][-ResourceGroups< List<ResourceGroupRelationship>>][-Tags< List<MoTag>>]
+Set-IntersightOrganizationOrganization [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-ResourceGroups< System.Collections.Generic.List`1[ResourceGroupRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;OrganizationOrganization&apos; resource.
+Update a &amp;apos;OrganizationOrganization&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -118,6 +118,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -145,8 +175,10 @@ PS C:\> Set-IntersightOrganizationOrganization
 
 ## RELATED LINKS
 
-[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
+[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
 
 [New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
-[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
+[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

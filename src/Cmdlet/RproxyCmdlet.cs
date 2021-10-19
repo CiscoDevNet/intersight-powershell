@@ -19,6 +19,7 @@ namespace Intersight.PowerShell
             ModelObject = new RproxyReverseProxy();
             MethodName = "CreateRproxyReverseProxyWithHttpInfo";
 		}
+        
         // <summary>
         /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -28,6 +29,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -37,6 +40,11 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        
+        
+        
+        
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -46,6 +54,11 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        
+        
+        
+        
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -55,5 +68,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
     }
 }

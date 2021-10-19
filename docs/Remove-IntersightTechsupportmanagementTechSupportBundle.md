@@ -17,7 +17,7 @@ Remove-IntersightTechsupportmanagementTechSupportBundle -Moid <String> [<CommonP
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;TechsupportmanagementTechSupportBundle&amp;apos; resource.
+Delete a &apos;TechsupportmanagementTechSupportBundle&apos; resource.
 
 ## EXAMPLES
 

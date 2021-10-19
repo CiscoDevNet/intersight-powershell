@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexSnapshotFiles [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexSnapshotFiles.ClassIdEnum>][-NameTrackedFiles< List<Model.HyperflexFilePath>>][-ObjectType< HyperflexSnapshotFiles.ObjectTypeEnum>][-UuidTrackedDisksMap< List<Model.HyperflexMapUuidToTrackedDisk>>]
+Initialize-IntersightHyperflexSnapshotFiles [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexSnapshotFiles.ClassIdEnum>][-ObjectType< HyperflexSnapshotFiles.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,23 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NameTrackedFiles
-
-
-Note :- Use Initialize-IntersightHyperflexFilePath to create the object of complex type HyperflexFilePath
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.HyperflexFilePath]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -86,20 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -UuidTrackedDisksMap
-
-
-Note :- Use Initialize-IntersightHyperflexMapUuidToTrackedDisk to create the object of complex type HyperflexMapUuidToTrackedDisk
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.HyperflexMapUuidToTrackedDisk]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -129,7 +125,3 @@ PS C:\> Initialize-IntersightHyperflexSnapshotFiles
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightHyperflexFilePath](./Initialize-IntersightHyperflexFilePath.md)
-
-[Initialize-IntersightHyperflexMapUuidToTrackedDisk](./Initialize-IntersightHyperflexMapUuidToTrackedDisk.md)

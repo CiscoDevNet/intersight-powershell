@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWebApi [-AdditionalProperties< Dictionary<string,object>>][-Body< string>][-ClassId< WorkflowWebApi.ClassIdEnum>][-ContentType< string>][-Cookies< object>][-Description< string>][-EndpointRequestType< WorkflowWebApi.EndpointRequestTypeEnum>][-ErrorContentType< string>][-Headers< object>][-Label< string>][-Method< string>][-MoType< string>][-Name< string>][-ObjectType< WorkflowWebApi.ObjectTypeEnum>][-Outcomes< object>][-Protocol< string>][-ResponseSpec< object>][-SkipOnCondition< string>][-StartDelay< long>][-TargetType< string>][-Timeout< long>][-Url< string>]
+Initialize-IntersightWorkflowWebApi [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< WorkflowWebApi.ClassIdEnum>][-ContentType< string>][-Cookies< object>][-Description< string>][-EndpointRequestType< WorkflowWebApi.EndpointRequestTypeEnum>][-ErrorContentType< string>][-Headers< object>][-Label< string>][-Method< string>][-MoType< string>][-Name< string>][-ObjectType< WorkflowWebApi.ObjectTypeEnum>][-Outcomes< object>][-Protocol< string>][-ResponseSpec< object>][-SkipOnCondition< string>][-StartDelay< long>][-TargetType< string>][-Timeout< long>][-Url< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -359,6 +359,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< Dictionary<string,object>>][-Category< string>][-CommonCauses< string>][-Configuration< string>][-Description< string>][-HealthCheckScriptInfos< List<HyperflexHealthCheckScriptInfo>>][-HealthImpact< string>][-InternalName< string>][-MinimumHyperFlexVersion< string>][-Moid< string>][[-Name]< string>][-Reference< string>][-Resolution< string>][-ScriptExecutionMode< HyperflexHealthCheckDefinition.ScriptExecutionModeEnum>][-ScriptExecutionOnComputeNodes< bool>][-Tags< List<MoTag>>][-TargetExecutionType< HyperflexHealthCheckDefinition.TargetExecutionTypeEnum>][-Timeout< long>][-UnsupportedHyperFlexVersions< List<string>>]
+New-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-CommonCauses< string>][-Configuration< string>][-Description< string>][-HealthImpact< string>][-InternalName< string>][-MinimumHyperFlexVersion< string>][-Moid< string>][[-Name]< string>][-Reference< string>][-Resolution< string>][-ScriptExecutionMode< HyperflexHealthCheckDefinition.ScriptExecutionModeEnum>][-ScriptExecutionOnComputeNodes< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetExecutionType< HyperflexHealthCheckDefinition.TargetExecutionTypeEnum>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexHealthCheckDefinition&apos; resource.
+Create a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -88,23 +88,6 @@ Description of the health check definition.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -HealthCheckScriptInfos
-
-
-Note :- Use Initialize-IntersightHyperflexHealthCheckScriptInfo to create the object of complex type HyperflexHealthCheckScriptInfo
-
-```yaml
-Type: System.Collections.Generic.List`1[HyperflexHealthCheckScriptInfo]
 Parameter Sets: (All)
 Aliases:
 
@@ -297,18 +280,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -UnsupportedHyperFlexVersions
-
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -339,10 +337,12 @@ PS C:\> New-IntersightHyperflexHealthCheckDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
-
 [Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
 
 [Remove-IntersightHyperflexHealthCheckDefinition](./Remove-IntersightHyperflexHealthCheckDefinition.md)
 
+[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
+
 [Initialize-IntersightHyperflexHealthCheckScriptInfo](./Initialize-IntersightHyperflexHealthCheckScriptInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

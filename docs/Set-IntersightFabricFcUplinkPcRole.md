@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricFcUplinkPcRole [-AdditionalProperties< Dictionary<string,object>>][-AdminSpeed< FabricFcUplinkPcRole.AdminSpeedEnum>][-FillPattern< FabricFcUplinkPcRole.FillPatternEnum>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< List<FabricPortIdentifier>>][-Tags< List<MoTag>>][-VsanId< long>]
+Set-IntersightFabricFcUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcUplinkPcRole.AdminSpeedEnum>][-FillPattern< FabricFcUplinkPcRole.FillPatternEnum>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VsanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricFcUplinkPcRole&amp;apos; resource.
+Update a &apos;FabricFcUplinkPcRole&apos; resource.
 
 ## PARAMETERS
 
@@ -165,6 +165,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -199,3 +229,5 @@ PS C:\> Set-IntersightFabricFcUplinkPcRole
 [Remove-IntersightFabricFcUplinkPcRole](./Remove-IntersightFabricFcUplinkPcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

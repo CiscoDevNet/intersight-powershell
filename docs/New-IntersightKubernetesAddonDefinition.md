@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKubernetesAddonDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< List<string>>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Platforms< List<string>>][-Tags< List<MoTag>>][-Version< string>]
+New-IntersightKubernetesAddonDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< System.Collections.Generic.List`1[string]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Overrides< string>][-Platforms< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesAddonDefinition&amp;apos; resource.
+Create a &apos;KubernetesAddonDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -224,6 +224,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Overrides
+Properties that can be overridden for an addon.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Platforms
 
 
@@ -271,6 +286,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -298,8 +343,10 @@ PS C:\> New-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
+
 [Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)
 
 [Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
 
-[Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

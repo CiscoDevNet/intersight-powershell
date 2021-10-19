@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorStartStreamFromDevice [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorStartStreamFromDevice.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-MemberId< string>][-MemberStream< bool>][-ObjectType< ConnectorStartStreamFromDevice.ObjectTypeEnum>][-SecureProperties< object>][-StreamConfig< object>][-StreamName< string>][-StreamType< string>][-Topic< string>]
+Initialize-IntersightConnectorStartStreamFromDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorStartStreamFromDevice.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-MemberId< string>][-MemberStream< bool>][-ObjectType< ConnectorStartStreamFromDevice.ObjectTypeEnum>][-SecureProperties< object>][-StreamConfig< object>][-StreamName< string>][-StreamType< string>][-Topic< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: ConnectorStartStreamFromDevice.ObjectTypeEnum
@@ -205,6 +205,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

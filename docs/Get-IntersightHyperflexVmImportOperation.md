@@ -25,7 +25,7 @@ Get-IntersightHyperflexVmImportOperation [-Count <Boolean>] [-InlineCount <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;HyperflexVmImportOperation&apos; resource.,
+Read a &amp;apos;HyperflexVmImportOperation&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexVmImportOperation](./Remove-IntersightHyperflexVmImportOperation.md)
-
 [New-IntersightHyperflexVmImportOperation](./New-IntersightHyperflexVmImportOperation.md)
+
+[Remove-IntersightHyperflexVmImportOperation](./Remove-IntersightHyperflexVmImportOperation.md)
 

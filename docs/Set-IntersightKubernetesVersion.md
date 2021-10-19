@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesVersion [-AdditionalProperties< Dictionary<string,object>>][-BootIso< SoftwareSolutionDistributableRelationship>][-Catalog< KubernetesCatalogRelationship>][-KubernetesVersion< string>][[-Moid]< string>][-Name< string>][-OvaImageTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2NodeTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2VirtualMachineTemplate< SoftwareSolutionDistributableRelationship>][-Tags< List<MoTag>>]
+Set-IntersightKubernetesVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootIso< SoftwareSolutionDistributableRelationship>][-Catalog< KubernetesCatalogRelationship>][-KubernetesVersion< string>][[-Moid]< string>][-Name< string>][-OvaImageTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2NodeTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2VirtualMachineTemplate< SoftwareSolutionDistributableRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesVersion&amp;apos; resource.
+Update a &apos;KubernetesVersion&apos; resource.
 
 ## PARAMETERS
 
@@ -190,6 +190,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -222,3 +252,5 @@ PS C:\> Set-IntersightKubernetesVersion
 [New-IntersightKubernetesVersion](./New-IntersightKubernetesVersion.md)
 
 [Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

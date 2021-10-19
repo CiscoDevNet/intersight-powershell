@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricPortOperation [-AdditionalProperties< Dictionary<string,object>>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< List<MoTag>>]
+Set-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricPortOperation&amp;apos; resource.
+Update a &apos;FabricPortOperation&apos; resource.
 
 ## PARAMETERS
 
@@ -163,6 +163,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -190,8 +220,10 @@ PS C:\> Set-IntersightFabricPortOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
-
 [Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
 
 [New-IntersightFabricPortOperation](./New-IntersightFabricPortOperation.md)
+
+[Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

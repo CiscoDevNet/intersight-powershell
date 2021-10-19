@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesSysConfigPolicy [-AdditionalProperties< Dictionary<string,object>>][-ClusterProfiles< List<KubernetesClusterProfileRelationship>>][-Description< string>][-DnsDomainName< string>][-DnsServers< List<string>>][[-Moid]< string>][-Name< string>][-NtpServers< List<string>>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>][-Timezone< KubernetesSysConfigPolicy.TimezoneEnum>]
+Set-IntersightKubernetesSysConfigPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfiles< System.Collections.Generic.List`1[KubernetesClusterProfileRelationship]>][-Description< string>][-DnsDomainName< string>][-DnsServers< System.Collections.Generic.List`1[string]>][[-Moid]< string>][-Name< string>][-NtpServers< System.Collections.Generic.List`1[string]>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Timezone< KubernetesSysConfigPolicy.TimezoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesSysConfigPolicy&amp;apos; resource.
+Update a &apos;KubernetesSysConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -196,6 +196,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -223,8 +253,10 @@ PS C:\> Set-IntersightKubernetesSysConfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
-
 [Get-IntersightKubernetesSysConfigPolicy](./Get-IntersightKubernetesSysConfigPolicy.md)
 
 [New-IntersightKubernetesSysConfigPolicy](./New-IntersightKubernetesSysConfigPolicy.md)
+
+[Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetSudiInfo [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetSudiInfo.ClassIdEnum>][-ObjectType< AssetSudiInfo.ObjectTypeEnum>][-Pid< string>][-SerialNumber< string>][-Signature< string>][-Status< AssetSudiInfo.StatusEnum>][-SudiCertificate< Model.X509Certificate>]
+Initialize-IntersightAssetSudiInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetSudiInfo.ClassIdEnum>][-ObjectType< AssetSudiInfo.ObjectTypeEnum>][-Pid< string>][-SerialNumber< string>][-Signature< string>][-Status< AssetSudiInfo.StatusEnum>][-SudiCertificate< Model.X509Certificate>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -143,6 +143,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

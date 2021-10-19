@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< Dictionary<string,object>>][-AssociatedObject< MoBaseMoRelationship>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Internal< bool>][-Message< List<WorkflowMessage>>][-MetaVersion< long>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PauseReason< WorkflowWorkflowInfo.PauseReasonEnum>][-Permission< IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< List<MoTag>>][-WaitReason< WorkflowWorkflowInfo.WaitReasonEnum>][-WorkflowCtx< WorkflowWorkflowCtx>][-WorkflowDefinition< WorkflowWorkflowDefinitionRelationship>][-WorkflowMetaType< WorkflowWorkflowInfo.WorkflowMetaTypeEnum>]
+Set-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< MoBaseMoRelationship>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Internal< bool>][-Message< System.Collections.Generic.List`1[WorkflowMessage]>][-MetaVersion< long>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PauseReason< WorkflowWorkflowInfo.PauseReasonEnum>][-Permission< IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WaitReason< WorkflowWorkflowInfo.WaitReasonEnum>][-WorkflowCtx< WorkflowWorkflowCtx>][-WorkflowDefinition< WorkflowWorkflowDefinitionRelationship>][-WorkflowMetaType< WorkflowWorkflowInfo.WorkflowMetaTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowWorkflowInfo&apos; resource.
+Update a &amp;apos;WorkflowWorkflowInfo&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryFromTaskName
-This field is applicable when Retry action is issued for a workflow which is in &amp;apos;final&amp;apos; state. When this field is not specified, the workflow will be retried from the start i.e., the first task. When this field is specified then the workflow will be retried from the specified task. This field should specify the task name which is the unique name of the task within the workflow. The task name must be one of the tasks that completed or failed in the previous run. It is not possible to retry a workflow from a task which wasn&amp;apos;t run in the previous iteration.
+This field is applicable when Retry action is issued for a workflow which is in &apos;final&apos; state. When this field is not specified, the workflow will be retried from the start i.e., the first task. When this field is specified then the workflow will be retried from the specified task. This field should specify the task name which is the unique name of the task within the workflow. The task name must be one of the tasks that completed or failed in the previous run. It is not possible to retry a workflow from a task which wasn&apos;t run in the previous iteration.
 
 ```yaml
 Type: string
@@ -361,6 +361,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -388,14 +418,18 @@ PS C:\> Set-IntersightWorkflowWorkflowInfo
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowWorkflowInfo](./Remove-IntersightWorkflowWorkflowInfo.md)
+
 [Get-IntersightWorkflowWorkflowInfo](./Get-IntersightWorkflowWorkflowInfo.md)
 
 [New-IntersightWorkflowWorkflowInfo](./New-IntersightWorkflowWorkflowInfo.md)
 
-[Remove-IntersightWorkflowWorkflowInfo](./Remove-IntersightWorkflowWorkflowInfo.md)
-
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 
 [Initialize-IntersightWorkflowMessage](./Initialize-IntersightWorkflowMessage.md)
+
+[Initialize-IntersightWorkflowWorkflowInfoProperties](./Initialize-IntersightWorkflowWorkflowInfoProperties.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowWorkflowCtx](./Initialize-IntersightWorkflowWorkflowCtx.md)

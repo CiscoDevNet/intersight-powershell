@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricVlan [-AdditionalProperties< Dictionary<string,object>>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][[-Moid]< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][-Name< string>][-Tags< List<MoTag>>][-VlanId< long>]
+Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][[-Moid]< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &apos;name&apos; used to identify this VLAN.
+The &amp;apos;name&amp;apos; used to identify this VLAN.
 
 ```yaml
 Type: string
@@ -166,6 +166,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -193,8 +223,10 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
-
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
 [New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

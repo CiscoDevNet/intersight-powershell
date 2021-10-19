@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightSdwanRouterNode](./New-IntersightSdwanRouterNode.md)
 
-[Remove-IntersightSdwanRouterNode](./Remove-IntersightSdwanRouterNode.md)
-
 [Set-IntersightSdwanRouterNode](./Set-IntersightSdwanRouterNode.md)
+
+[Remove-IntersightSdwanRouterNode](./Remove-IntersightSdwanRouterNode.md)
 

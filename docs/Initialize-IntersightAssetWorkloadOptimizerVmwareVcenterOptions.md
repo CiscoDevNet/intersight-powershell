@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetWorkloadOptimizerVmwareVcenterOptions [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetWorkloadOptimizerVmwareVcenterOptions.ClassIdEnum>][-DatastoreBrowsingEnabled< bool>][-ObjectType< AssetWorkloadOptimizerVmwareVcenterOptions.ObjectTypeEnum>]
+Initialize-IntersightAssetWorkloadOptimizerVmwareVcenterOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetWorkloadOptimizerVmwareVcenterOptions.ClassIdEnum>][-DatastoreBrowsingEnabled< bool>][-GuestMetricsEnabled< bool>][-ObjectType< AssetWorkloadOptimizerVmwareVcenterOptions.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,6 +69,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -GuestMetricsEnabled
+Enable retrieval of advanced memory metrics. Only supported on vCenter Server version 6.5U3 or later. Guest VMs must run VMWare Tools 10.3.2 Build 10338 or later.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
@@ -81,6 +96,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

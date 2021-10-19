@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightNetworkconfigPolicy [-AdditionalProperties< Dictionary<string,object>>][-AlternateIpv4dnsServer< string>][-AlternateIpv6dnsServer< string>][-ApplianceAccount< IamAccountRelationship>][-Description< string>][-DynamicDnsDomain< string>][-EnableDynamicDns< bool>][-EnableIpv4dnsFromDhcp< bool>][-EnableIpv6< bool>][-EnableIpv6dnsFromDhcp< bool>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PreferredIpv4dnsServer< string>][-PreferredIpv6dnsServer< string>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-Tags< List<MoTag>>]
+New-IntersightNetworkconfigPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlternateIpv4dnsServer< string>][-AlternateIpv6dnsServer< string>][-ApplianceAccount< IamAccountRelationship>][-Description< string>][-DynamicDnsDomain< string>][-EnableDynamicDns< bool>][-EnableIpv4dnsFromDhcp< bool>][-EnableIpv6< bool>][-EnableIpv6dnsFromDhcp< bool>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PreferredIpv4dnsServer< string>][-PreferredIpv6dnsServer< string>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;NetworkconfigPolicy&amp;apos; resource.
+Create a &apos;NetworkconfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -289,6 +289,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -316,8 +346,10 @@ PS C:\> New-IntersightNetworkconfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
+[Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
 
 [Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
 
-[Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
+[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

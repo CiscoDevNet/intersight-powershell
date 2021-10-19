@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowMoReferenceDataType [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowMoReferenceDataType.ClassIdEnum>][-Default< Model.WorkflowDefaultValue>][-Description< string>][-DisplayMeta< Model.WorkflowDisplayMeta>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowMoReferenceDataType.ObjectTypeEnum>][-Properties< List<Model.WorkflowMoReferenceProperty>>][-Required< bool>]
+Initialize-IntersightWorkflowMoReferenceDataType [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowMoReferenceDataType.ClassIdEnum>][-Default< Model.WorkflowDefaultValue>][-Description< string>][-DisplayMeta< Model.WorkflowDisplayMeta>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowMoReferenceDataType.ObjectTypeEnum>][-Properties< System.Collections.Generic.List`1[Model.WorkflowMoReferenceProperty]>][-Required< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowMoReferenceDataType.ObjectTypeEnum
@@ -194,6 +194,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

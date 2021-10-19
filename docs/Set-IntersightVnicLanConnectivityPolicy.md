@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicLanConnectivityPolicy [-AdditionalProperties< Dictionary<string,object>>][-AzureQosEnabled< bool>][-Description< string>][-EthIfs< List<VnicEthIfRelationship>>][-IqnAllocationType< VnicLanConnectivityPolicy.IqnAllocationTypeEnum>][-IqnPool< IqnpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PlacementMode< VnicLanConnectivityPolicy.PlacementModeEnum>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-StaticIqnName< string>][-Tags< List<MoTag>>][-TargetPlatform< VnicLanConnectivityPolicy.TargetPlatformEnum>]
+Set-IntersightVnicLanConnectivityPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AzureQosEnabled< bool>][-Description< string>][-EthIfs< System.Collections.Generic.List`1[VnicEthIfRelationship]>][-IqnAllocationType< VnicLanConnectivityPolicy.IqnAllocationTypeEnum>][-IqnPool< IqnpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PlacementMode< VnicLanConnectivityPolicy.PlacementModeEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-StaticIqnName< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< VnicLanConnectivityPolicy.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicLanConnectivityPolicy&amp;apos; resource.
+Update a &apos;VnicLanConnectivityPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -247,6 +247,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -274,8 +304,10 @@ PS C:\> Set-IntersightVnicLanConnectivityPolicy
 
 ## RELATED LINKS
 
-[New-IntersightVnicLanConnectivityPolicy](./New-IntersightVnicLanConnectivityPolicy.md)
-
 [Get-IntersightVnicLanConnectivityPolicy](./Get-IntersightVnicLanConnectivityPolicy.md)
 
+[New-IntersightVnicLanConnectivityPolicy](./New-IntersightVnicLanConnectivityPolicy.md)
+
 [Remove-IntersightVnicLanConnectivityPolicy](./Remove-IntersightVnicLanConnectivityPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

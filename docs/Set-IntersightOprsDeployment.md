@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightOprsDeployment [-AdditionalProperties< Dictionary<string,object>>][-Assist< AssetDeviceRegistrationRelationship>][-AvailableReplicas< long>][-DesiredReplicas< long>][-Event< string>][-Labels< List<OprsKvpair>>][[-Moid]< string>][-Name< string>][-Namespace< string>][-Status< OprsDeployment.StatusEnum>][-Tags< List<MoTag>>][-UnavailableReplicas< long>]
+Set-IntersightOprsDeployment [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assist< AssetDeviceRegistrationRelationship>][-AvailableReplicas< long>][-DesiredReplicas< long>][-Event< string>][-Labels< System.Collections.Generic.List`1[OprsKvpair]>][[-Moid]< string>][-Name< string>][-Namespace< string>][-Status< OprsDeployment.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TimeStamp< DateTime>][-UnavailableReplicas< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -195,6 +195,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TimeStamp
+The time at which the event was generated. Date is accurate to Intersights clock. This time will be used to identify order of events.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -UnavailableReplicas
 Number of replicas Unavailable.
 
@@ -207,6 +222,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -237,10 +282,12 @@ PS C:\> Set-IntersightOprsDeployment
 
 ## RELATED LINKS
 
-[Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
-
 [Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
 
 [New-IntersightOprsDeployment](./New-IntersightOprsDeployment.md)
 
+[Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
+
 [Initialize-IntersightOprsKvpair](./Initialize-IntersightOprsKvpair.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

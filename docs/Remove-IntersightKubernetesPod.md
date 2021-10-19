@@ -17,7 +17,7 @@ Remove-IntersightKubernetesPod -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesPod&amp;apos; resource.
+Delete a &apos;KubernetesPod&apos; resource.
 
 ## EXAMPLES
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageR0Drive [-AdditionalProperties< Dictionary<string,object>>][-ClassId< StorageR0Drive.ClassIdEnum>][-DriveSlots< string>][-Enable< bool>][-ObjectType< StorageR0Drive.ObjectTypeEnum>][-VirtualDrivePolicy< Model.StorageVirtualDrivePolicy>]
+Initialize-IntersightStorageR0Drive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageR0Drive.ClassIdEnum>][-DriveSlots< string>][-Enable< bool>][-ObjectType< StorageR0Drive.ObjectTypeEnum>][-VirtualDrivePolicy< Model.StorageVirtualDrivePolicy>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -113,6 +113,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

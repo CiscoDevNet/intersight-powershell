@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightTaskHitachiScopedInventory [-AdditionalProperties< Dictionary<string,object>>][-Moid< string>][-NamingProperty< string>][-Queries< object>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< List<MoTag>>][-Type< string>][-Values< List<string>>]
+New-IntersightTaskHitachiScopedInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-NamingProperty< string>][-Queries< object>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< string>][-Values< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;TaskHitachiScopedInventory&apos; resource.
+Create a &amp;apos;TaskHitachiScopedInventory&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -150,6 +150,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -178,3 +208,5 @@ PS C:\> New-IntersightTaskHitachiScopedInventory
 ## RELATED LINKS
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

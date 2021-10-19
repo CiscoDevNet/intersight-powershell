@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightContentTextParameter [-AcceptSingleValue< bool>][-AdditionalProperties< Dictionary<string,object>>][-ClassId< ContentTextParameter.ClassIdEnum>][-ComplexType< string>][-IsDelimiter< bool>][-IsNextCaptureOnSameLine< bool>][-ItemType< ContentTextParameter.ItemTypeEnum>][-Name< string>][-ObjectType< ContentTextParameter.ObjectTypeEnum>][-Path< string>][-RegexLine< string>][-Secure< bool>][-Type< ContentTextParameter.TypeEnum>]
+Initialize-IntersightContentTextParameter [-AcceptSingleValue< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ContentTextParameter.ClassIdEnum>][-ComplexType< string>][-IsDelimiter< bool>][-IsNextCaptureOnSameLine< bool>][-ItemType< ContentTextParameter.ItemTypeEnum>][-Name< string>][-ObjectType< ContentTextParameter.ObjectTypeEnum>][-Path< string>][-RegexLine< string>][-Secure< bool>][-Type< ContentTextParameter.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -216,6 +216,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

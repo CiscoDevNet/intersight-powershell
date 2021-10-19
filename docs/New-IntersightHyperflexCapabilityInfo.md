@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexCapabilityInfo [-AdditionalProperties< Dictionary<string,object>>][-AppCatalog< HyperflexAppCatalogRelationship>][-CapabilityConstraints< List<HclConstraint>>][-Moid< string>][[-Name]< string>][-Tags< List<MoTag>>]
+New-IntersightHyperflexCapabilityInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCatalog< HyperflexAppCatalogRelationship>][-CapabilityConstraints< System.Collections.Generic.List`1[HclConstraint]>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexCapabilityInfo&amp;apos; resource.
+Create a &apos;HyperflexCapabilityInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -120,6 +120,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -147,10 +177,12 @@ PS C:\> New-IntersightHyperflexCapabilityInfo
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
+
 [Set-IntersightHyperflexCapabilityInfo](./Set-IntersightHyperflexCapabilityInfo.md)
 
 [Remove-IntersightHyperflexCapabilityInfo](./Remove-IntersightHyperflexCapabilityInfo.md)
 
-[Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
-
 [Initialize-IntersightHclConstraint](./Initialize-IntersightHclConstraint.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

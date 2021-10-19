@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowRollbackWorkflow [-Action< WorkflowRollbackWorkflow.ActionEnum>][-AdditionalProperties< Dictionary<string,object>>][-ContinueOnTaskFailure< bool>][-Moid< string>][-PrimaryWorkflow< WorkflowWorkflowInfoRelationship>][-RollbackTasks< List<WorkflowRollbackWorkflowTask>>][-SelectedTasks< List<WorkflowRollbackWorkflowTask>>][-Tags< List<MoTag>>]
+New-IntersightWorkflowRollbackWorkflow [-Action< WorkflowRollbackWorkflow.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ContinueOnTaskFailure< bool>][-Moid< string>][-PrimaryWorkflow< WorkflowWorkflowInfoRelationship>][-SelectedTasks< System.Collections.Generic.List`1[WorkflowRollbackWorkflowTask]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowRollbackWorkflow&apos; resource.
+Create a &amp;apos;WorkflowRollbackWorkflow&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -101,23 +101,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RollbackTasks
-
-
-Note :- Use Initialize-IntersightWorkflowRollbackWorkflowTask to create the object of complex type WorkflowRollbackWorkflowTask
-
-```yaml
-Type: System.Collections.Generic.List`1[WorkflowRollbackWorkflowTask]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -SelectedTasks
 
 
@@ -152,6 +135,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -179,10 +192,12 @@ PS C:\> New-IntersightWorkflowRollbackWorkflow
 
 ## RELATED LINKS
 
+[Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
+
 [Set-IntersightWorkflowRollbackWorkflow](./Set-IntersightWorkflowRollbackWorkflow.md)
 
 [Remove-IntersightWorkflowRollbackWorkflow](./Remove-IntersightWorkflowRollbackWorkflow.md)
 
-[Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
-
 [Initialize-IntersightWorkflowRollbackWorkflowTask](./Initialize-IntersightWorkflowRollbackWorkflowTask.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

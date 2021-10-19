@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNetworkElement [-AdditionalProperties< Dictionary<string,object>>][-AlarmSummary< ComputeAlarmSummary>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PortMacBindings< List<PortMacBindingRelationship>>][-PreviousFru< EquipmentFruRelationship>][-Tags< List<MoTag>>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>]
+Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PortMacBindings< System.Collections.Generic.List`1[PortMacBindingRelationship]>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;NetworkElement&apos; resource.
+Update a &amp;apos;NetworkElement&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thermal
-The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor&apos;s temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range.
+The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor&amp;apos;s temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range.
 
 ```yaml
 Type: NetworkElement.ThermalEnum
@@ -249,6 +249,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -279,3 +309,5 @@ PS C:\> Set-IntersightNetworkElement
 [Get-IntersightNetworkElement](./Get-IntersightNetworkElement.md)
 
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

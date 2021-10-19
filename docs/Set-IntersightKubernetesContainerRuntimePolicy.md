@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesContainerRuntimePolicy [-AdditionalProperties< Dictionary<string,object>>][-ClusterProfiles< List<KubernetesClusterProfileRelationship>>][-Description< string>][-DockerBridgeNetworkCidr< string>][-DockerHttpProxy< KubernetesProxyConfig>][-DockerHttpsProxy< KubernetesProxyConfig>][-DockerNoProxy< List<string>>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>]
+Set-IntersightKubernetesContainerRuntimePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfiles< System.Collections.Generic.List`1[KubernetesClusterProfileRelationship]>][-Description< string>][-DockerBridgeNetworkCidr< string>][-DockerHttpProxy< KubernetesProxyConfig>][-DockerHttpsProxy< KubernetesProxyConfig>][-DockerNoProxy< System.Collections.Generic.List`1[string]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -DockerBridgeNetworkCidr
-Bridge IP (--bip) including Prefix (e.g., 172.17.0.5/24) that Docker will use for the default bridge network (docker0). Containers will connect to this if no other network is configured, not used by kubernetes pods because their network is managed by CNI. However this address space must not collide with other CIDRs on your networks, including the cluster&apos;s Service CIDR, Pod Network CIDR and IP Pools.
+Bridge IP (--bip) including Prefix (e.g., 172.17.0.5/24) that Docker will use for the default bridge network (docker0). Containers will connect to this if no other network is configured, not used by kubernetes pods because their network is managed by CNI. However this address space must not collide with other CIDRs on your networks, including the cluster&amp;apos;s Service CIDR, Pod Network CIDR and IP Pools.
 
 ```yaml
 Type: string
@@ -200,6 +200,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -234,3 +264,5 @@ PS C:\> Set-IntersightKubernetesContainerRuntimePolicy
 [Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
 
 [Initialize-IntersightKubernetesProxyConfig](./Initialize-IntersightKubernetesProxyConfig.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPkixSubjectAlternateName [-AdditionalProperties< Dictionary<string,object>>][-ClassId< PkixSubjectAlternateName.ClassIdEnum>][-DnsName< List<string>>][-EmailAddress< List<string>>][-IpAddress< List<string>>][-ObjectType< PkixSubjectAlternateName.ObjectTypeEnum>][-Uri< List<string>>]
+Initialize-IntersightPkixSubjectAlternateName [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PkixSubjectAlternateName.ClassIdEnum>][-ObjectType< PkixSubjectAlternateName.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,51 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DnsName
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EmailAddress
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpAddress
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -114,18 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Uri
-
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

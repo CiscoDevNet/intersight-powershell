@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightSoftwarerepositoryRelease [-AdditionalProperties< Dictionary<string,object>>][-Catalog< SoftwarerepositoryCatalogRelationship>][[-Moid]< string>][-ReleaseNotesUrl< string>][-SupportedModels< List<string>>][-Tags< List<MoTag>>][-Type< SoftwarerepositoryRelease.TypeEnum>][-Version< string>]
+Set-IntersightSoftwarerepositoryRelease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][[-Moid]< string>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< SoftwarerepositoryRelease.TypeEnum>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwarerepositoryRelease&amp;apos; resource.
+Update a &apos;SoftwarerepositoryRelease&apos; resource.
 
 ## PARAMETERS
 
@@ -65,6 +65,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReleaseDate
+The date when the file was released or distributed by its vendor.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
@@ -148,6 +163,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -175,8 +220,10 @@ PS C:\> Set-IntersightSoftwarerepositoryRelease
 
 ## RELATED LINKS
 
+[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
+
 [New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
 
 [Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
 
-[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

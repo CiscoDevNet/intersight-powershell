@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkRestSubRequest [-AdditionalProperties< Dictionary<string,object>>][-Body< Model.MoBaseMo>][-ClassId< BulkRestSubRequest.ClassIdEnum>][-ObjectType< BulkRestSubRequest.ObjectTypeEnum>][-TargetMoid< string>]
+Initialize-IntersightBulkRestSubRequest [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< Model.MoBaseMo>][-ClassId< BulkRestSubRequest.ClassIdEnum>][-ObjectType< BulkRestSubRequest.ObjectTypeEnum>][-TargetMoid< string>][-Uri< string>][-Verb< BulkRestSubRequest.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -98,6 +98,66 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Uri
+The URI on which this action is to be performed.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Verb
+The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\nThe value is used to override the top level verb.\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource.
+
+```yaml
+Type: BulkRestSubRequest.VerbEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

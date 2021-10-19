@@ -17,7 +17,7 @@ Remove-IntersightSoftwareUcsdBundleDistributable -Moid <String> [<CommonParamete
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareUcsdBundleDistributable&amp;apos; resource.
+Delete a &apos;SoftwareUcsdBundleDistributable&apos; resource.
 
 ## EXAMPLES
 

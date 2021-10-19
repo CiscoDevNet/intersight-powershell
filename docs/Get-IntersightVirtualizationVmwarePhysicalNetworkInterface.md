@@ -25,7 +25,7 @@ Get-IntersightVirtualizationVmwarePhysicalNetworkInterface [-Count <Boolean>] [-
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;VirtualizationVmwarePhysicalNetworkInterface&amp;apos; resource.,
+Read a &apos;VirtualizationVmwarePhysicalNetworkInterface&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

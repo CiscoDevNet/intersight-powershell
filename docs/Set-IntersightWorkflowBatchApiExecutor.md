@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowBatchApiExecutor [-AdditionalProperties< Dictionary<string,object>>][-Batch< List<Intersight.Model.WorkflowApi>>][-Constraints< WorkflowTaskConstraints>][-Description< string>][-ErrorResponseHandler< WorkflowErrorResponseHandlerRelationship>][[-Moid]< string>][-Name< string>][-Outcomes< object>][-Output< object>][-RetryFromFailedApi< bool>][-SkipOnCondition< string>][-Tags< List<MoTag>>][-TaskDefinition< WorkflowTaskDefinitionRelationship>]
+Set-IntersightWorkflowBatchApiExecutor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Batch< System.Collections.Generic.List`1[Intersight.Model.WorkflowApi]>][-Constraints< WorkflowTaskConstraints>][-Description< string>][-ErrorResponseHandler< WorkflowErrorResponseHandlerRelationship>][[-Moid]< string>][-Name< string>][-Outcomes< object>][-Output< object>][-RetryFromFailedApi< bool>][-SkipOnCondition< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefinition< WorkflowTaskDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Outcomes
-All the possible outcomes of this task are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &amp;apos;true&amp;apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
+All the possible outcomes of this task are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &apos;true&apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -234,6 +234,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -261,14 +291,16 @@ PS C:\> Set-IntersightWorkflowBatchApiExecutor
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
+
 [Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
 
 [New-IntersightWorkflowBatchApiExecutor](./New-IntersightWorkflowBatchApiExecutor.md)
-
-[Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 
 [Initialize-IntersightWorkflowTaskConstraints](./Initialize-IntersightWorkflowTaskConstraints.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

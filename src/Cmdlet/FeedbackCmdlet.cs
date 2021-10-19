@@ -19,6 +19,9 @@ namespace Intersight.PowerShell
             ModelObject = new FeedbackFeedbackPost();
             MethodName = "CreateFeedbackFeedbackPostWithHttpInfo";
 		}
+        
+        
+        
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -28,6 +31,10 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        
+        
+        
         // <summary>
         /// <para type="description">"Feedback collected from the user and latest activity."</para>
         /// </summary>
@@ -37,6 +44,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -46,6 +55,11 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        
+        
+        
+        
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -55,5 +69,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
     }
 }

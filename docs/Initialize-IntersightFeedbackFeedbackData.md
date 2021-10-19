@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFeedbackFeedbackData [-AccountName< string>][-AdditionalProperties< Dictionary<string,object>>][-AlternativeFollowUpEmails< List<string>>][-ClassId< FeedbackFeedbackData.ClassIdEnum>][-Comment< string>][-Email< string>][-Evaluation< FeedbackFeedbackData.EvaluationEnum>][-FollowUp< bool>][-ObjectType< FeedbackFeedbackData.ObjectTypeEnum>][-TraceIds< object>][-Type< FeedbackFeedbackData.TypeEnum>]
+Initialize-IntersightFeedbackFeedbackData [-AccountName< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlternativeFollowUpEmails< System.Collections.Generic.List`1[string]>][-ClassId< FeedbackFeedbackData.ClassIdEnum>][-Comment< string>][-Email< string>][-Evaluation< FeedbackFeedbackData.EvaluationEnum>][-FollowUp< bool>][-ObjectType< FeedbackFeedbackData.ObjectTypeEnum>][-TraceIds< object>][-Type< FeedbackFeedbackData.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Evaluation
-Evalation rating as provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option that specifies user&apos;s excelent evaluation.\n* `Poor` - Option that specifies user&apos;s poor evaluation.\n* `Fair` - Option that specifies user&apos;s fair evaluation.\n* `Good` - Option that specifies user&apos;s good evaluation.
+Evalation rating as provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option that specifies user&amp;apos;s excelent evaluation.\n* `Poor` - Option that specifies user&amp;apos;s poor evaluation.\n* `Fair` - Option that specifies user&amp;apos;s fair evaluation.\n* `Good` - Option that specifies user&amp;apos;s good evaluation.
 
 ```yaml
 Type: FeedbackFeedbackData.EvaluationEnum
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: FeedbackFeedbackData.ObjectTypeEnum
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Type of the feedback from user.\n* `Evaluation` - User&apos;s feedback classified as an evaluation.\n* `Bug` - User&apos;s feedback classified as a bug.
+Type of the feedback from user.\n* `Evaluation` - User&amp;apos;s feedback classified as an evaluation.\n* `Bug` - User&amp;apos;s feedback classified as a bug.
 
 ```yaml
 Type: FeedbackFeedbackData.TypeEnum
@@ -188,6 +188,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

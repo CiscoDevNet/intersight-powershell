@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
-
 [New-IntersightSnmpPolicy](./New-IntersightSnmpPolicy.md)
 
 [Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
+
+[Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
 

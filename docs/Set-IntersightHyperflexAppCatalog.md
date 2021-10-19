@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexAppCatalog [-AdditionalProperties< Dictionary<string,object>>][-FeatureLimitExternal< HyperflexFeatureLimitExternalRelationship>][-FeatureLimitInternal< HyperflexFeatureLimitInternalRelationship>][-HxdpVersions< List<HyperflexHxdpVersionRelationship>>][-HyperflexCapabilityInfos< List<HyperflexCapabilityInfoRelationship>>][-HyperflexSoftwareCompatibilityInfos< List<HclHyperflexSoftwareCompatibilityInfoRelationship>>][[-Moid]< string>][-ServerFirmwareVersion< HyperflexServerFirmwareVersionRelationship>][-ServerModel< HyperflexServerModelRelationship>][-SoftwareDistributions< List<HyperflexSoftwareDistributionEntryRelationship>>][-Tags< List<MoTag>>][-Version< string>]
+Set-IntersightHyperflexAppCatalog [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FeatureLimitExternal< HyperflexFeatureLimitExternalRelationship>][-FeatureLimitInternal< HyperflexFeatureLimitInternalRelationship>][-HxdpVersions< System.Collections.Generic.List`1[HyperflexHxdpVersionRelationship]>][-HyperflexCapabilityInfos< System.Collections.Generic.List`1[HyperflexCapabilityInfoRelationship]>][-HyperflexSoftwareCompatibilityInfos< System.Collections.Generic.List`1[HclHyperflexSoftwareCompatibilityInfoRelationship]>][[-Moid]< string>][-ServerFirmwareVersion< HyperflexServerFirmwareVersionRelationship>][-ServerModel< HyperflexServerModelRelationship>][-SoftwareDistributions< System.Collections.Generic.List`1[HyperflexSoftwareDistributionEntryRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -229,6 +229,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -256,8 +286,10 @@ PS C:\> Set-IntersightHyperflexAppCatalog
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexAppCatalog](./Remove-IntersightHyperflexAppCatalog.md)
+
 [Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)
 
 [New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
 
-[Remove-IntersightHyperflexAppCatalog](./Remove-IntersightHyperflexAppCatalog.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

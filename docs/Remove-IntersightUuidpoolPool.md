@@ -17,7 +17,7 @@ Remove-IntersightUuidpoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;UuidpoolPool&apos; resource.
+Delete a &amp;apos;UuidpoolPool&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowCustomDataTypeDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< WorkflowCatalogRelationship>][-CompositeType< bool>][-Description< string>][-Label< string>][-Moid< string>][[-Name]< string>][-ParameterSet< List<WorkflowParameterSet>>][-Properties< WorkflowCustomDataTypeProperties>][-Tags< List<MoTag>>][-TypeDefinition< List<WorkflowBaseDataType>>]
+New-IntersightWorkflowCustomDataTypeDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-CompositeType< bool>][-Description< string>][-Label< string>][-Moid< string>][[-Name]< string>][-ParameterSet< System.Collections.Generic.List`1[WorkflowParameterSet]>][-Properties< WorkflowCustomDataTypeProperties>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TypeDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-A user friendly short name to identify the custom data type definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&amp;apos;), or an underscore (_).
+A user friendly short name to identify the custom data type definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), or an underscore (_) and must be at least 2 characters.
 
 ```yaml
 Type: string
@@ -199,6 +199,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -237,3 +267,5 @@ PS C:\> New-IntersightWorkflowCustomDataTypeDefinition
 [Initialize-IntersightWorkflowCustomDataTypeProperties](./Initialize-IntersightWorkflowCustomDataTypeProperties.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

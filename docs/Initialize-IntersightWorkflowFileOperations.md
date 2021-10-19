@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowFileOperations [-AdditionalProperties< Dictionary<string,object>>][-Body< string>][-ClassId< WorkflowFileOperations.ClassIdEnum>][-ContentType< string>][-Description< string>][-ErrorContentType< string>][-FileDownload< Model.WorkflowFileDownloadOp>][-FileTemplate< Model.WorkflowFileTemplateOp>][-Label< string>][-Name< string>][-ObjectType< WorkflowFileOperations.ObjectTypeEnum>][-OperationType< WorkflowFileOperations.OperationTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-StartDelay< long>][-Timeout< long>]
+Initialize-IntersightWorkflowFileOperations [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< WorkflowFileOperations.ClassIdEnum>][-ContentType< string>][-Description< string>][-ErrorContentType< string>][-FileDownload< Model.WorkflowFileDownloadOp>][-FileTemplate< Model.WorkflowFileTemplateOp>][-Label< string>][-Name< string>][-ObjectType< WorkflowFileOperations.ObjectTypeEnum>][-OperationType< WorkflowFileOperations.OperationTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-StartDelay< long>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -284,6 +284,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

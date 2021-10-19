@@ -17,7 +17,7 @@ Remove-IntersightFirmwareGpuDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareGpuDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareGpuDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
+[Set-IntersightFirmwareGpuDescriptor](./Set-IntersightFirmwareGpuDescriptor.md)
 
 [New-IntersightFirmwareGpuDescriptor](./New-IntersightFirmwareGpuDescriptor.md)
 
-[Set-IntersightFirmwareGpuDescriptor](./Set-IntersightFirmwareGpuDescriptor.md)
+[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
 

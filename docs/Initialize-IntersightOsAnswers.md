@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsAnswers [-AdditionalProperties< Dictionary<string,object>>][-AnswerFile< string>][-ClassId< OsAnswers.ClassIdEnum>][-Hostname< string>][-IpConfigType< OsAnswers.IpConfigTypeEnum>][-IpConfiguration< Model.OsIpConfiguration>][-IsRootPasswordCrypted< bool>][-Nameserver< string>][-ObjectType< OsAnswers.ObjectTypeEnum>][-ProductKey< string>][-RootPassword< string>][-Source< OsAnswers.SourceEnum>]
+Initialize-IntersightOsAnswers [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnswerFile< string>][-ClassId< OsAnswers.ClassIdEnum>][-Hostname< string>][-IpConfigType< OsAnswers.IpConfigTypeEnum>][-IpConfiguration< Model.OsIpConfiguration>][-IsRootPasswordCrypted< bool>][-Nameserver< string>][-ObjectType< OsAnswers.ObjectTypeEnum>][-ProductKey< string>][-RootPassword< string>][-Source< OsAnswers.SourceEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnswerFile
-If the source of the answers is a static file, the content of the file is stored as value\nin this property.\nThe value is mandatory only when the &apos;Source&apos; property has been set to &apos;File&apos;.
+If the source of the answers is a static file, the content of the file is stored as value\nin this property.\nThe value is mandatory only when the &amp;apos;Source&amp;apos; property has been set to &amp;apos;File&amp;apos;.
 
 ```yaml
 Type: string
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: OsAnswers.ObjectTypeEnum
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Answer values can be provided from three sources - Embedded in OS image, static file,\nor as placeholder values for an answer file template.\nSource of the answers is given as value, Embedded/File/Template.\n&apos;Embedded&apos; option indicates that the answer file is embedded within the OS Image. &apos;File&apos;\noption indicates that the answers are provided as a file. &apos;Template&apos; indicates that the\nplaceholders in the selected os.ConfigurationFile MO are replaced with values provided\nas os.Answers MO.\n* `None` - Indicates that answers is not sent and values must be populated from Install Template.  \n* `Embedded` - Indicates that the answer file is embedded within OS image.\n* `File` - Indicates that the answer file is a static content that has all thevalues populated.\n* `Template` - Indicates that the given answers are used to populate the answer filetemplate. The template allows the users to refer some server specificanswers as fields/placeholders and replace these placeholders with theactual values for each Server during OS installation using &apos;Answers&apos; and&apos;AdditionalParameters&apos; properties in os.Install MO.The answer file templates can be created by users as os.ConfigurationFile objects.
+Answer values can be provided from three sources - Embedded in OS image, static file,\nor as placeholder values for an answer file template.\nSource of the answers is given as value, Embedded/File/Template.\n&amp;apos;Embedded&amp;apos; option indicates that the answer file is embedded within the OS Image. &amp;apos;File&amp;apos;\noption indicates that the answers are provided as a file. &amp;apos;Template&amp;apos; indicates that the\nplaceholders in the selected os.ConfigurationFile MO are replaced with values provided\nas os.Answers MO.\n* `None` - Indicates that answers is not sent and values must be populated from Install Template.  \n* `Embedded` - Indicates that the answer file is embedded within OS image.\n* `File` - Indicates that the answer file is a static content that has all thevalues populated.\n* `Template` - Indicates that the given answers are used to populate the answer filetemplate. The template allows the users to refer some server specificanswers as fields/placeholders and replace these placeholders with theactual values for each Server during OS installation using &amp;apos;Answers&amp;apos; and&amp;apos;AdditionalParameters&amp;apos; properties in os.Install MO.The answer file templates can be created by users as os.ConfigurationFile objects.
 
 ```yaml
 Type: OsAnswers.SourceEnum
@@ -203,6 +203,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

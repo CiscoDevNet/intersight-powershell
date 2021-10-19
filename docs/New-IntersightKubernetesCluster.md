@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKubernetesCluster [-AdditionalProperties< Dictionary<string,object>>][-ClusterAddonProfile< KubernetesClusterAddonProfileRelationship>][-ConnectionStatus< KubernetesCluster.ConnectionStatusEnum>][-KubeConfig< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-RegisteredDevices< List<AssetDeviceRegistrationRelationship>>][-Tags< List<MoTag>>]
+New-IntersightKubernetesCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterAddonProfile< KubernetesClusterAddonProfileRelationship>][-ConnectionStatus< KubernetesCluster.ConnectionStatusEnum>][-KubeConfig< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-RegisteredDevices< System.Collections.Generic.List`1[AssetDeviceRegistrationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesCluster&amp;apos; resource.
+Create a &apos;KubernetesCluster&apos; resource.
 
 ## PARAMETERS
 
@@ -169,6 +169,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -201,3 +231,5 @@ PS C:\> New-IntersightKubernetesCluster
 [Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
 
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

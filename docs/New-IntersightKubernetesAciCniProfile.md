@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKubernetesAciCniProfile [-AaepName< string>][-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-ExtSvcDynSubnetStart< string>][-ExtSvcStaticSubnetStart< string>][-L3OutNetworkName< string>][-L3OutPolicyName< string>][-L3OutTenant< string>][-Moid< string>][[-Name]< string>][-NestedVmmDomain< string>][-NodeSvcSubnetStart< string>][-NodeVlanRangeEnd< long>][-NodeVlanRangeStart< long>][-OpflexMulticastAddressRange< string>][-Organization< OrganizationOrganizationRelationship>][-PodSubnetStart< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-Type< KubernetesAciCniProfile.TypeEnum>][-Vrf< string>]
+New-IntersightKubernetesAciCniProfile [-AaepName< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-ExtSvcDynSubnetStart< string>][-ExtSvcStaticSubnetStart< string>][-L3OutNetworkName< string>][-L3OutPolicyName< string>][-L3OutTenant< string>][-Moid< string>][[-Name]< string>][-NestedVmmDomain< string>][-NodeSvcSubnetStart< string>][-NodeVlanRangeEnd< long>][-NodeVlanRangeStart< long>][-OpflexMulticastAddressRange< string>][-Organization< OrganizationOrganizationRelationship>][-PodSubnetStart< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< KubernetesAciCniProfile.TypeEnum>][-Vrf< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -364,6 +364,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -391,8 +421,10 @@ PS C:\> New-IntersightKubernetesAciCniProfile
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
-
 [Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
 
 [Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
+
+[Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

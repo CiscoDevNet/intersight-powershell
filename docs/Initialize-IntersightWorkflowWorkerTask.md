@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkerTask [-AdditionalProperties< Dictionary<string,object>>][-CatalogMoid< string>][-ClassId< WorkflowWorkerTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWorkerTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-RollbackDisabled< bool>][-TaskDefinitionName< string>][-UseDefault< bool>][-Version< long>]
+Initialize-IntersightWorkflowWorkerTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CatalogMoid< string>][-ClassId< WorkflowWorkerTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWorkerTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-RollbackDisabled< bool>][-TaskDefinitionName< string>][-UseDefault< bool>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputParameters
-JSON formatted map that defines the input given to the task. JSONPath is used for chaining output from previous tasks as inputs into the current task. The format to specify the mapping is &amp;apos;${Source.input/output.JsonPath}&amp;apos;. &amp;apos;Source&amp;apos; can be either workflow or the name of the task within the workflow. You can map the task input to either a workflow input or a task output. Following this is JSON path expression to extract JSON fragment from source&amp;apos;s input/output.
+JSON formatted map that defines the input given to the task. JSONPath is used for chaining output from previous tasks as inputs into the current task. The format to specify the mapping is &apos;${Source.input/output.JsonPath}&apos;. &apos;Source&apos; can be either workflow or the name of the task within the workflow. You can map the task input to either a workflow input or a task output. Following this is JSON path expression to extract JSON fragment from source&apos;s input/output.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -233,6 +233,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetClaimSignature [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetClaimSignature.ClassIdEnum>][-ObjectType< AssetClaimSignature.ObjectTypeEnum>][-Signature< byte[]>]
+Initialize-IntersightAssetClaimSignature [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetClaimSignature.ClassIdEnum>][-ObjectType< AssetClaimSignature.ObjectTypeEnum>][-Signature< byte[]>][-TimeStamp< DateTime>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
 Type: AssetClaimSignature.ObjectTypeEnum
@@ -83,6 +83,51 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeStamp
+The time at which the signature was generated. Date is accurate to Intersights clock. Used to expire the signature.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -114,3 +159,5 @@ PS C:\> Initialize-IntersightAssetClaimSignature
 ## RELATED LINKS
 
 [Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
+
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)

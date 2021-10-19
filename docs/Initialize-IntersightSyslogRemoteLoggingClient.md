@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSyslogRemoteLoggingClient [-AdditionalProperties< Dictionary<string,object>>][-ClassId< SyslogRemoteLoggingClient.ClassIdEnum>][-Enabled< bool>][-Hostname< string>][-MinSeverity< SyslogRemoteLoggingClient.MinSeverityEnum>][-ObjectType< SyslogRemoteLoggingClient.ObjectTypeEnum>][-Port< long>][-Protocol< SyslogRemoteLoggingClient.ProtocolEnum>]
+Initialize-IntersightSyslogRemoteLoggingClient [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SyslogRemoteLoggingClient.ClassIdEnum>][-Enabled< bool>][-Hostname< string>][-MinSeverity< SyslogRemoteLoggingClient.MinSeverityEnum>][-ObjectType< SyslogRemoteLoggingClient.ObjectTypeEnum>][-Port< long>][-Protocol< SyslogRemoteLoggingClient.ProtocolEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
 Type: SyslogRemoteLoggingClient.ObjectTypeEnum
@@ -141,6 +141,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

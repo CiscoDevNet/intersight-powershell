@@ -15,14 +15,6 @@ namespace Intersight.PowerShell
 			
 		}
 
-		protected override void BeginProcessing()
-		{
-			if (CmdletBase.Config == null || CmdletBase.Config.HttpSigningConfiguration == null)
-			{
-				throw new Exception("Intersight environment is not configured. Use the cmdlet Set-IntersightConfiguration to configure it.");
-			}
-		}
-
 		protected override void ProcessRecord()
 		{
 			try
@@ -60,6 +52,10 @@ namespace Intersight.PowerShell
 				if (Json.IsPresent)
 				{
 					WriteResponseJson(result);
+				}
+				else if(WithHttpInfo.IsPresent)
+				{
+					WriteObject(result);
 				}
 				else
 				{

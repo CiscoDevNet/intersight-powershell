@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightSdwanRouterPolicy [-AdditionalProperties< Dictionary<string,object>>][-DeploymentSize< SdwanRouterPolicy.DeploymentSizeEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<SdwanProfileRelationship>>][-SolutionImage< SoftwareSolutionDistributableRelationship>][-Tags< List<MoTag>>][-WanCount< long>][-WanTerminationType< SdwanRouterPolicy.WanTerminationTypeEnum>]
+Set-IntersightSdwanRouterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DeploymentSize< SdwanRouterPolicy.DeploymentSizeEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[SdwanProfileRelationship]>][-SolutionImage< SoftwareSolutionDistributableRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WanCount< long>][-WanTerminationType< SdwanRouterPolicy.WanTerminationTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;SdwanRouterPolicy&apos; resource.
+Update a &amp;apos;SdwanRouterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -199,6 +199,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -231,3 +261,5 @@ PS C:\> Set-IntersightSdwanRouterPolicy
 [New-IntersightSdwanRouterPolicy](./New-IntersightSdwanRouterPolicy.md)
 
 [Remove-IntersightSdwanRouterPolicy](./Remove-IntersightSdwanRouterPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

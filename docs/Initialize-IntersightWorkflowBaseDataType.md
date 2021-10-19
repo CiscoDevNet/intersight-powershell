@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowBaseDataType [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowBaseDataType.ClassIdEnum>][-Default< Model.WorkflowDefaultValue>][-Description< string>][-DisplayMeta< Model.WorkflowDisplayMeta>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowBaseDataType.ObjectTypeEnum>][-Required< bool>]
+Initialize-IntersightWorkflowBaseDataType [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowBaseDataType.ClassIdEnum>][-Default< Model.WorkflowDefaultValue>][-Description< string>][-DisplayMeta< Model.WorkflowDisplayMeta>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowBaseDataType.ObjectTypeEnum>][-Required< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
 Type: WorkflowBaseDataType.ObjectTypeEnum
@@ -177,6 +177,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

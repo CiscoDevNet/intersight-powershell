@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareNetworkShare [-AdditionalProperties< Dictionary<string,object>>][-CifsServer< Model.FirmwareCifsServer>][-ClassId< FirmwareNetworkShare.ClassIdEnum>][-HttpServer< Model.FirmwareHttpServer>][-MapType< FirmwareNetworkShare.MapTypeEnum>][-NfsServer< Model.FirmwareNfsServer>][-ObjectType< FirmwareNetworkShare.ObjectTypeEnum>][-Password< string>][-Upgradeoption< FirmwareNetworkShare.UpgradeoptionEnum>][-Username< string>]
+Initialize-IntersightFirmwareNetworkShare [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CifsServer< Model.FirmwareCifsServer>][-ClassId< FirmwareNetworkShare.ClassIdEnum>][-HttpServer< Model.FirmwareHttpServer>][-MapType< FirmwareNetworkShare.MapTypeEnum>][-NfsServer< Model.FirmwareNfsServer>][-ObjectType< FirmwareNetworkShare.ObjectTypeEnum>][-Password< string>][-Upgradeoption< FirmwareNetworkShare.UpgradeoptionEnum>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -177,6 +177,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

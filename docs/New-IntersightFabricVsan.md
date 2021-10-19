@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricVsan [-AdditionalProperties< Dictionary<string,object>>][-DefaultZoning< FabricVsan.DefaultZoningEnum>][-FcNetworkPolicy< FabricFcNetworkPolicyRelationship>][-FcZoneSharingMode< string>][-FcoeVlan< long>][-Moid< string>][[-Name]< string>][-Tags< List<MoTag>>][-VsanId< long>]
+New-IntersightFabricVsan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DefaultZoning< FabricVsan.DefaultZoningEnum>][-FcNetworkPolicy< FabricFcNetworkPolicyRelationship>][-FcZoneSharingMode< string>][-FcoeVlan< long>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VsanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricVsan&apos; resource.
+Create a &amp;apos;FabricVsan&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -163,6 +163,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -190,8 +220,10 @@ PS C:\> New-IntersightFabricVsan
 
 ## RELATED LINKS
 
-[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
-
 [Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
 
 [Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
+
+[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

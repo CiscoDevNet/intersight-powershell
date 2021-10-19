@@ -8,86 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SdcardPartition.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSdcardPartition")]
-    public class InitializeIntersightSdcardPartition:PSCmdlet
-	{
-		public InitializeIntersightSdcardPartition()
-		{
-            ClassId = SdcardPartition.ClassIdEnum.SdcardPartition;
-            ObjectType = SdcardPartition.ObjectTypeEnum.SdcardPartition;
-            Type = SdcardPartition.TypeEnum.OS;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdcardPartition.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdcardPartition.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This specifies the type of the partition. Allowed values are OS, Utility.\n* `OS` - This partition contains virtual drives where user can install operating system.\n* `Utility` - This partition contains virtual drives for utilities such as SCU, HUU, Drivers and Diagnostics."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdcardPartition.TypeEnum Type {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.SdcardVirtualDrive> VirtualDrives {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SdcardPartition initObject = new Intersight.Model.SdcardPartition();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDrives"))
-            {
-                initObject.VirtualDrives = this.VirtualDrives;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SdcardDrivers.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSdcardDrivers")]
@@ -231,12 +151,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SdcardServerConfigurationUtility.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize SdcardHostUpgradeUtility.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSdcardServerConfigurationUtility")]
-    public class InitializeIntersightSdcardServerConfigurationUtility:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightSdcardHostUpgradeUtility")]
+    public class InitializeIntersightSdcardHostUpgradeUtility:PSCmdlet
 	{
-		public InitializeIntersightSdcardServerConfigurationUtility()
+		public InitializeIntersightSdcardHostUpgradeUtility()
 		{
             
 		}
@@ -254,7 +174,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SdcardServerConfigurationUtility.ClassIdEnum ClassId {
+        public SdcardHostUpgradeUtility.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -272,14 +192,78 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SdcardServerConfigurationUtility.ObjectTypeEnum ObjectType {
+        public SdcardHostUpgradeUtility.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.SdcardServerConfigurationUtility initObject = new Intersight.Model.SdcardServerConfigurationUtility();
+             Intersight.Model.SdcardHostUpgradeUtility initObject = new Intersight.Model.SdcardHostUpgradeUtility();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enable"))
+            {
+                initObject.Enable = this.Enable;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SdcardVirtualDrive.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSdcardVirtualDrive")]
+    public class InitializeIntersightSdcardVirtualDrive:PSCmdlet
+	{
+		public InitializeIntersightSdcardVirtualDrive()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdcardVirtualDrive.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable the respective virtual drive to be available to the host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enable {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdcardVirtualDrive.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SdcardVirtualDrive initObject = new Intersight.Model.SdcardVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -374,12 +358,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SdcardVirtualDrive.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize SdcardServerConfigurationUtility.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSdcardVirtualDrive")]
-    public class InitializeIntersightSdcardVirtualDrive:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightSdcardServerConfigurationUtility")]
+    public class InitializeIntersightSdcardServerConfigurationUtility:PSCmdlet
 	{
-		public InitializeIntersightSdcardVirtualDrive()
+		public InitializeIntersightSdcardServerConfigurationUtility()
 		{
             
 		}
@@ -397,7 +381,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SdcardVirtualDrive.ClassIdEnum ClassId {
+        public SdcardServerConfigurationUtility.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -415,78 +399,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public SdcardVirtualDrive.ObjectTypeEnum ObjectType {
+        public SdcardServerConfigurationUtility.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.SdcardVirtualDrive initObject = new Intersight.Model.SdcardVirtualDrive();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enable"))
-            {
-                initObject.Enable = this.Enable;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SdcardHostUpgradeUtility.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSdcardHostUpgradeUtility")]
-    public class InitializeIntersightSdcardHostUpgradeUtility:PSCmdlet
-	{
-		public InitializeIntersightSdcardHostUpgradeUtility()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdcardHostUpgradeUtility.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable the respective virtual drive to be available to the host."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enable {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SdcardHostUpgradeUtility.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SdcardHostUpgradeUtility initObject = new Intersight.Model.SdcardHostUpgradeUtility();
+             Intersight.Model.SdcardServerConfigurationUtility initObject = new Intersight.Model.SdcardServerConfigurationUtility();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -561,6 +481,86 @@ namespace Intersight.PowerShell
                 initObject.Enable = this.Enable;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SdcardPartition.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSdcardPartition")]
+    public class InitializeIntersightSdcardPartition:PSCmdlet
+	{
+		public InitializeIntersightSdcardPartition()
+		{
+            ClassId = SdcardPartition.ClassIdEnum.SdcardPartition;
+            ObjectType = SdcardPartition.ObjectTypeEnum.SdcardPartition;
+            Type = SdcardPartition.TypeEnum.OS;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdcardPartition.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdcardPartition.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This specifies the type of the partition. Allowed values are OS, Utility.\n* `OS` - This partition contains virtual drives where user can install operating system.\n* `Utility` - This partition contains virtual drives for utilities such as SCU, HUU, Drivers and Diagnostics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SdcardPartition.TypeEnum Type {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.SdcardVirtualDrive> VirtualDrives {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SdcardPartition initObject = new Intersight.Model.SdcardPartition();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDrives"))
+            {
+                initObject.VirtualDrives = this.VirtualDrives;
+            }
             WriteObject(initObject);
         }
 

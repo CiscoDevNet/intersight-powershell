@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexReplicationPeerInfo [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexReplicationPeerInfo.ClassIdEnum>][-Datastores< List<Model.HyperflexReplicationPlatDatastorePair>>][-ObjectType< HyperflexReplicationPeerInfo.ObjectTypeEnum>][-Ports< List<Model.HyperflexPortTypeToPortNumberMap>>]
+Initialize-IntersightHyperflexReplicationPeerInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexReplicationPeerInfo.ClassIdEnum>][-ObjectType< HyperflexReplicationPeerInfo.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,23 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Datastores
-
-
-Note :- Use Initialize-IntersightHyperflexReplicationPlatDatastorePair to create the object of complex type HyperflexReplicationPlatDatastorePair
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.HyperflexReplicationPlatDatastorePair]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -86,20 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Ports
-
-
-Note :- Use Initialize-IntersightHyperflexPortTypeToPortNumberMap to create the object of complex type HyperflexPortTypeToPortNumberMap
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.HyperflexPortTypeToPortNumberMap]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -129,7 +125,3 @@ PS C:\> Initialize-IntersightHyperflexReplicationPeerInfo
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightHyperflexReplicationPlatDatastorePair](./Initialize-IntersightHyperflexReplicationPlatDatastorePair.md)
-
-[Initialize-IntersightHyperflexPortTypeToPortNumberMap](./Initialize-IntersightHyperflexPortTypeToPortNumberMap.md)

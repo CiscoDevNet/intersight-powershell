@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCloudSecurityGroupRule [-AdditionalProperties< Dictionary<string,object>>][-ClassId< CloudSecurityGroupRule.ClassIdEnum>][-ObjectType< CloudSecurityGroupRule.ObjectTypeEnum>][-PortList< List<long>>][-SourceCidr< List<string>>]
+Initialize-IntersightCloudSecurityGroupRule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CloudSecurityGroupRule.ClassIdEnum>][-ObjectType< CloudSecurityGroupRule.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: CloudSecurityGroupRule.ObjectTypeEnum
@@ -69,33 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PortList
-
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[long]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
-### -SourceCidr
-
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

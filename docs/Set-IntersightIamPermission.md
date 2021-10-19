@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamPermission [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][[-Moid]< string>][-Name< string>][-ResourceRoles< List<IamResourceRolesRelationship>>][-Roles< List<IamRoleRelationship>>][-SessionLimits< IamSessionLimitsRelationship>][-Tags< List<MoTag>>][-UserGroups< List<IamUserGroupRelationship>>][-Users< List<IamUserRelationship>>]
+Set-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-ResourceRoles< System.Collections.Generic.List`1[IamResourceRolesRelationship]>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-SessionLimits< IamSessionLimitsRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserGroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamPermission&amp;apos; resource.
+Update a &apos;IamPermission&apos; resource.
 
 ## PARAMETERS
 
@@ -190,6 +190,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -219,6 +249,8 @@ PS C:\> Set-IntersightIamPermission
 
 [Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
 
+[Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
+
 [New-IntersightIamPermission](./New-IntersightIamPermission.md)
 
-[Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicFcQosPolicy [-AdditionalProperties< Dictionary<string,object>>][-Burst< long>][-Cos< long>][-Description< string>][-MaxDataFieldSize< long>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-RateLimit< long>][-Tags< List<MoTag>>]
+Set-IntersightVnicFcQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Burst< long>][-Cos< long>][-Description< string>][-MaxDataFieldSize< long>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-RateLimit< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicFcQosPolicy&amp;apos; resource.
+Update a &apos;VnicFcQosPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -Burst
-The burst traffic, in bytes, allowed on the vNIC.
+The burst traffic, in bytes, allowed on the vHBA.
 
 ```yaml
 Type: long
@@ -178,6 +178,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -205,8 +235,10 @@ PS C:\> Set-IntersightVnicFcQosPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
+
 [Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
 
 [New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
 
-[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

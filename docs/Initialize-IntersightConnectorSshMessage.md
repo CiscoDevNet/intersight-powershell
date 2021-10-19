@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorSshMessage [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorSshMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ExpectPrompts< List<Model.ConnectorExpectPrompt>>][-MsgType< long>][-ObjectType< ConnectorSshMessage.ObjectTypeEnum>][-SecureProperties< object>][-SessionId< string>][-ShellPrompt< string>][-Stream< byte[]>][-Timeout< long>]
+Initialize-IntersightConnectorSshMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorSshMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ExpectPrompts< System.Collections.Generic.List`1[Model.ConnectorExpectPrompt]>][-MsgType< long>][-ObjectType< ConnectorSshMessage.ObjectTypeEnum>][-SecureProperties< object>][-SessionId< string>][-ShellPrompt< string>][-Stream< byte[]>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &amp;apos;AES&amp;apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -207,6 +207,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -56,6 +56,15 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Number of identifiers this block can hold."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 1000)]
+        public long Size {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Ending address of the block must be in hexadecimal format xx:xx:xx:xx:xx:xx."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -78,6 +87,10 @@ namespace Intersight.PowerShell
                 initObject.From = this.From;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Size"))
+            {
+                initObject.Size = this.Size;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("To"))
             {
                 initObject.To = this.To;

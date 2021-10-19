@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexHxapCluster [-AdditionalProperties< Dictionary<string,object>>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< List<HyperflexBaseClusterRelationship>>][-ClusterPurpose< HyperflexHxapCluster.ClusterPurposeEnum>][-ConfiguredCpuOverSubFactor< double>][-CpuAllocation< VirtualizationCpuAllocation>][-CurrentCpuOverSubFactor< double>][-DatacenterName< string>][-FailureReason< string>][-HypervisorBuild< string>][-HypervisorType< HyperflexHxapCluster.HypervisorTypeEnum>][-ManagementIpAddress< string>][-MemoryAllocation< VirtualizationMemoryAllocation>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ParentCluster< HyperflexBaseClusterRelationship>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< List<MoTag>>][-TotalCores< long>]
+Set-IntersightHyperflexHxapCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< System.Collections.Generic.List`1[HyperflexBaseClusterRelationship]>][-ClusterPurpose< HyperflexHxapCluster.ClusterPurposeEnum>][-ConfiguredCpuOverSubFactor< double>][-CpuAllocation< VirtualizationCpuAllocation>][-CurrentCpuOverSubFactor< double>][-DatacenterName< string>][-FailureReason< string>][-HypervisorBuild< string>][-HypervisorType< HyperflexHxapCluster.HypervisorTypeEnum>][-ManagementIpAddress< string>][-MemoryAllocation< VirtualizationMemoryAllocation>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ParentCluster< HyperflexBaseClusterRelationship>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorType
-Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
+Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
 
 ```yaml
 Type: HyperflexHxapCluster.HypervisorTypeEnum
@@ -345,6 +345,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -376,6 +406,8 @@ PS C:\> Set-IntersightHyperflexHxapCluster
 
 [Get-IntersightHyperflexHxapCluster](./Get-IntersightHyperflexHxapCluster.md)
 
+[Initialize-IntersightHyperflexAlarmSummary](./Initialize-IntersightHyperflexAlarmSummary.md)
+
 [Initialize-IntersightVirtualizationCpuAllocation](./Initialize-IntersightVirtualizationCpuAllocation.md)
 
 [Initialize-IntersightVirtualizationMemoryAllocation](./Initialize-IntersightVirtualizationMemoryAllocation.md)
@@ -383,3 +415,5 @@ PS C:\> Set-IntersightHyperflexHxapCluster
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

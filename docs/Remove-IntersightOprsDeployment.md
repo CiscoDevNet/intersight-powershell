@@ -17,7 +17,7 @@ Remove-IntersightOprsDeployment -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;OprsDeployment&amp;apos; resource.
+Delete a &apos;OprsDeployment&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
-
 [Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
 
 [New-IntersightOprsDeployment](./New-IntersightOprsDeployment.md)
+
+[Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowDecisionTask [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowDecisionTask.ClassIdEnum>][-Condition< string>][-DecisionCases< List<Model.WorkflowDecisionCase>>][-DefaultTask< string>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowDecisionTask.ObjectTypeEnum>]
+Initialize-IntersightWorkflowDecisionTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowDecisionTask.ClassIdEnum>][-Condition< string>][-DecisionCases< System.Collections.Generic.List`1[Model.WorkflowDecisionCase]>][-DefaultTask< string>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowDecisionTask.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-The condition to evaluate for this decision task. The condition can be a workflow or task variable or an JavaScript expression. Example value for condition could be a variable like \&quot;${task1.output.var1} or ${workflow.input.var2}\&quot; which evaluates to a value matching any of the decision case values. Example value for condition if it&apos;s an expression - \&quot;if ( ${task1.output.var1} ! = null &amp;&amp; ${task1.output.var1} &amp;gt; 0 ) &apos;true&apos;; else &apos;false&apos;; \&quot; which evaluates to &apos;true&apos; or &apos;false&apos; and will match one of the decision case values. You can also use JavaScript functions like indexOf, toUpperCase in the expression which will be evaluated by the expression evaluator.
+The condition to evaluate for this decision task. The condition can be a workflow or task variable or an JavaScript expression. Example value for condition could be a variable like \&quot;${task1.output.var1} or ${workflow.input.var2}\&quot; which evaluates to a value matching any of the decision case values. Example value for condition if it&apos;s an expression - \&quot;if ( ${task1.output.var1} ! = null &amp;&amp; ${task1.output.var1} &gt; 0 ) &apos;true&apos;; else &apos;false&apos;; \&quot; which evaluates to &apos;true&apos; or &apos;false&apos; and will match one of the decision case values. You can also use JavaScript functions like indexOf, toUpperCase in the expression which will be evaluated by the expression evaluator.
 
 ```yaml
 Type: string
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowDecisionTask.ObjectTypeEnum
@@ -175,6 +175,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

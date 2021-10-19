@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowUiInputFilter [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowUiInputFilter.ClassIdEnum>][-Filters< List<string>>][-Name< string>][-ObjectType< WorkflowUiInputFilter.ObjectTypeEnum>][-UserHelpMessage< string>]
+Initialize-IntersightWorkflowUiInputFilter [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowUiInputFilter.ClassIdEnum>][-Filters< System.Collections.Generic.List`1[string]>][-Name< string>][-ObjectType< WorkflowUiInputFilter.ObjectTypeEnum>][-UserHelpMessage< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name for the input definition to which this filter applies. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_). The first and last character in name must be an alphanumeric character. When defining the cascade filter for a sub property, use a period (.) to seperate each section of the name like \&quot;StorageConfig.Volume\&quot; where &apos;StorageConfig&apos; is an input name and &apos;Volume&apos; is a sub property defined through custom data type definition.
+Name for the input definition to which this filter applies. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_). The first and last character in name must be an alphanumeric character. When defining the cascade filter for a sub property, use a period (.) to seperate each section of the name like \&amp;quot;StorageConfig.Volume\&amp;quot; where &amp;apos;StorageConfig&amp;apos; is an input name and &amp;apos;Volume&amp;apos; is a sub property defined through custom data type definition.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowUiInputFilter.ObjectTypeEnum
@@ -111,6 +111,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

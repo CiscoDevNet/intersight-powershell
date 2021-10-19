@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowEnumEntry [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowEnumEntry.ClassIdEnum>][-Label< string>][-ObjectType< WorkflowEnumEntry.ObjectTypeEnum>][-Value< string>]
+Initialize-IntersightWorkflowEnumEntry [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowEnumEntry.ClassIdEnum>][-Label< string>][-ObjectType< WorkflowEnumEntry.ObjectTypeEnum>][-Value< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-Label for the enum value. A user friendly short string to identify the enum value. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), forward slash (/), or an underscore (_).
+Label for the enum value. A user friendly short string to identify the enum value. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), forward slash (/), or an underscore (_) and must be at least 2 characters.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowEnumEntry.ObjectTypeEnum
@@ -96,6 +96,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

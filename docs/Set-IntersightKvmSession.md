@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKvmSession [-AdditionalProperties< Dictionary<string,object>>][[-Moid]< string>][-OneTimePassword< string>][-Server< ComputePhysicalRelationship>][-Status< KvmSession.StatusEnum>][-Tags< List<MoTag>>][-Tunnel< KvmTunnelRelationship>][-Username< string>]
+Set-IntersightKvmSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-KvmLaunchUrlPath< string>][[-Moid]< string>][-OneTimePassword< string>][-Server< ComputePhysicalRelationship>][-Status< KvmSession.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tunnel< KvmTunnelRelationship>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;KvmSession&apos; resource.
+Update a &amp;apos;KvmSession&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -28,6 +28,21 @@ Update a &apos;KvmSession&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KvmLaunchUrlPath
+One time URL that is used to launch the KVM console.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -151,6 +166,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -181,3 +226,5 @@ PS C:\> Set-IntersightKvmSession
 [New-IntersightKvmSession](./New-IntersightKvmSession.md)
 
 [Get-IntersightKvmSession](./Get-IntersightKvmSession.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

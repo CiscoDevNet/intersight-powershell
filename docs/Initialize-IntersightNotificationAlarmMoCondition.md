@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNotificationAlarmMoCondition [-AdditionalProperties< Dictionary<string,object>>][-ClassId< NotificationAlarmMoCondition.ClassIdEnum>][-Enabled< bool>][-ObjectType< NotificationAlarmMoCondition.ObjectTypeEnum>][-Severity< List<NotificationAlarmMoCondition.SeverityEnum>>]
+Initialize-IntersightNotificationAlarmMoCondition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationAlarmMoCondition.ClassIdEnum>][-Enabled< bool>][-ObjectType< NotificationAlarmMoCondition.ObjectTypeEnum>][-Severity< System.Collections.Generic.List`1[NotificationAlarmMoCondition.SeverityEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -96,6 +96,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

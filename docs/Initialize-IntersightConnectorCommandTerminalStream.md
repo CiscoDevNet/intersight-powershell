@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorCommandTerminalStream [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorCommandTerminalStream.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-MsgType< string>][-ObjectType< ConnectorCommandTerminalStream.ObjectTypeEnum>][-SecureProperties< object>][-Sequence< long>][-Stream< byte[]>]
+Initialize-IntersightConnectorCommandTerminalStream [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorCommandTerminalStream.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-MsgType< string>][-ObjectType< ConnectorCommandTerminalStream.ObjectTypeEnum>][-SecureProperties< object>][-Sequence< long>][-Stream< byte[]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &amp;apos;AES&amp;apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -160,6 +160,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

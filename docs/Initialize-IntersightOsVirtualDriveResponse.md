@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsVirtualDriveResponse [-AdditionalProperties< Dictionary<string,object>>][-Bootable< string>][-ClassId< OsVirtualDriveResponse.ClassIdEnum>][-Id< string>][-Name< string>][-ObjectType< OsVirtualDriveResponse.ObjectTypeEnum>][-SourceMo< Model.MoMoRef>][-StorageControllerSlotId< string>]
+Initialize-IntersightOsVirtualDriveResponse [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootable< string>][-ClassId< OsVirtualDriveResponse.ClassIdEnum>][-Id< string>][-Name< string>][-ObjectType< OsVirtualDriveResponse.ObjectTypeEnum>][-SourceMo< Model.MoMoRef>][-StorageControllerSlotId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -143,6 +143,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

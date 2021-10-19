@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDatastoreCluster [-AdditionalProperties< Dictionary<string,object>>][-AutomationLevel< string>][-Capacity< VirtualizationStorageCapacity>][-DatastoreCount< long>][-FreeSpaceThreshold< long>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-IoLatencyThreshold< int>][-IoLoadBalanceAutomationMode< string>][-IoLoadImbalanceThreshold< int>][-IoMetricsEnabled< bool>][-MinSpaceUtilizationDifference< int>][[-Moid]< string>][-Name< string>][-PolicyEnforcementAutomationMode< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-ReservablePercentThreshold< int>][-RuleEnforcementAutomationMode< string>][-SpaceLoadBalanceAutomationMode< string>][-SpaceThresholdMode< string>][-Status< VirtualizationVmwareDatastoreCluster.StatusEnum>][-StorageDrsEnabled< bool>][-Tags< List<MoTag>>][-Type< VirtualizationVmwareDatastoreCluster.TypeEnum>][-UtilizedSpaceThreshold< int>][-VmCount< long>][-VmEvacuationAutomationMode< string>]
+Set-IntersightVirtualizationVmwareDatastoreCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutomationLevel< string>][-Capacity< VirtualizationStorageCapacity>][-DatastoreCount< long>][-FreeSpaceThreshold< long>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-IoLatencyThreshold< int>][-IoLoadBalanceAutomationMode< string>][-IoLoadImbalanceThreshold< int>][-IoMetricsEnabled< bool>][-MinSpaceUtilizationDifference< int>][[-Moid]< string>][-Name< string>][-PolicyEnforcementAutomationMode< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-ReservablePercentThreshold< int>][-RuleEnforcementAutomationMode< string>][-SpaceLoadBalanceAutomationMode< string>][-SpaceThresholdMode< string>][-Status< VirtualizationVmwareDatastoreCluster.StatusEnum>][-StorageDrsEnabled< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VirtualizationVmwareDatastoreCluster.TypeEnum>][-UtilizedSpaceThreshold< int>][-VmCount< long>][-VmEvacuationAutomationMode< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDatastoreCluster&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDatastoreCluster&apos; resource.
 
 ## PARAMETERS
 
@@ -450,6 +450,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -480,3 +510,5 @@ PS C:\> Set-IntersightVirtualizationVmwareDatastoreCluster
 [Get-IntersightVirtualizationVmwareDatastoreCluster](./Get-IntersightVirtualizationVmwareDatastoreCluster.md)
 
 [Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

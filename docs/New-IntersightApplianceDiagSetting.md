@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightApplianceDiagSetting [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-Message< string>][-Moid< string>][-Password< string>][-Tags< List<MoTag>>]
+New-IntersightApplianceDiagSetting [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Message< string>][-Moid< string>][-Password< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceDiagSetting&amp;apos; resource.
+Create a &apos;ApplianceDiagSetting&apos; resource.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password of the Intersight Appliance&amp;apos;s OS diagnostic user account.
+Password of the Intersight Appliance&apos;s OS diagnostic user account.
 
 ```yaml
 Type: string
@@ -115,6 +115,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -148,3 +178,5 @@ PS C:\> New-IntersightApplianceDiagSetting
 [Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
 
 [Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

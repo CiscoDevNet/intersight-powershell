@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFirmwareUnsupportedVersionUpgrade [-AdditionalProperties< Dictionary<string,object>>][-Checksum< ConnectorFileChecksum>][-Distributable< FirmwareDistributableRelationship>][-DownloadError< string>][-DownloadProgress< long>][-DownloadRetries< long>][[-Moid]< string>][-PhysicalIdentity< EquipmentPhysicalIdentityRelationship>][-Sha256checksum< byte>][-Tags< List<MoTag>>][-UpgradeStatus< FirmwareUnsupportedVersionUpgrade.UpgradeStatusEnum>]
+Set-IntersightFirmwareUnsupportedVersionUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Checksum< ConnectorFileChecksum>][-Distributable< FirmwareDistributableRelationship>][-DownloadError< string>][-DownloadProgress< long>][-DownloadRetries< long>][[-Moid]< string>][-PhysicalIdentity< EquipmentPhysicalIdentityRelationship>][-Sha256checksum< byte>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeStatus< FirmwareUnsupportedVersionUpgrade.UpgradeStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -154,8 +154,6 @@ Accept wildcard characters: False
 ### -Sha256checksum
 The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file.
 
-Note :- Use Initialize-Intersightbyte to create the object of complex type byte
-
 ```yaml
 Type: byte
 Parameter Sets: (All)
@@ -200,6 +198,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -227,12 +255,12 @@ PS C:\> Set-IntersightFirmwareUnsupportedVersionUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareUnsupportedVersionUpgrade](./Remove-IntersightFirmwareUnsupportedVersionUpgrade.md)
-
 [Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [New-IntersightFirmwareUnsupportedVersionUpgrade](./New-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
+[Remove-IntersightFirmwareUnsupportedVersionUpgrade](./Remove-IntersightFirmwareUnsupportedVersionUpgrade.md)
+
 [Initialize-IntersightConnectorFileChecksum](./Initialize-IntersightConnectorFileChecksum.md)
 
-[Initialize-Intersightbyte](./Initialize-Intersightbyte.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

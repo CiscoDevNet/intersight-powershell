@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowParameterSet [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowParameterSet.ClassIdEnum>][-Condition< WorkflowParameterSet.ConditionEnum>][-ControlParameter< string>][-EnableParameters< List<string>>][-Name< string>][-ObjectType< WorkflowParameterSet.ObjectTypeEnum>][-Value< string>]
+Initialize-IntersightWorkflowParameterSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowParameterSet.ClassIdEnum>][-Condition< WorkflowParameterSet.ConditionEnum>][-ControlParameter< string>][-EnableParameters< System.Collections.Generic.List`1[string]>][-Name< string>][-ObjectType< WorkflowParameterSet.ObjectTypeEnum>][-Value< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The controlling parameter will be evaluated against this &amp;apos;value&amp;apos;.
+The controlling parameter will be evaluated against this &apos;value&apos;.
 
 ```yaml
 Type: string
@@ -141,6 +141,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

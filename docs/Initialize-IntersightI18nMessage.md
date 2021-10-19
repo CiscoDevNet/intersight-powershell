@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightI18nMessage [-AdditionalProperties< Dictionary<string,object>>][-ClassId< I18nMessage.ClassIdEnum>][-MessageParams< List<Model.I18nMessageParam>>][-ObjectType< I18nMessage.ObjectTypeEnum>]
+Initialize-IntersightI18nMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< I18nMessage.ClassIdEnum>][-MessageParams< System.Collections.Generic.List`1[Model.I18nMessageParam]>][-ObjectType< I18nMessage.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: I18nMessage.ObjectTypeEnum
@@ -83,6 +83,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

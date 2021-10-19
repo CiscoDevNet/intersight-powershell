@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightServerProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-AssignedServer< ComputePhysicalRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>]
+Set-IntersightServerProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-LeasedServer< ComputePhysicalRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AssociatedServerPool
+A reference to a resourcepoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: ResourcepoolPoolRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ConfigChanges
 Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object.
 
@@ -110,6 +128,24 @@ Description of the profile.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LeasedServer
+A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: ComputePhysicalRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -201,6 +237,39 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ServerAssignmentMode
+Source of the server assigned to the server profile. Values can be Static, Pool or None. Static is used if a server is attached directly to server profile. Pool is used if a resource pool is attached to server profile. None is used if no server or resource pool is attached to server profile.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool.
+
+```yaml
+Type: ServerProfile.ServerAssignmentModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerPool
+A reference to a resourcepoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: ResourcepoolPoolRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -209,6 +278,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: PolicyAbstractProfileRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StaticUuidAddress
+The UUID address for the server must include UUID prefix xxxxxxxx-xxxx-xxxx along with the UUID suffix of format xxxx-xxxxxxxxxxxx.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -266,6 +350,69 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UuidAddressType
+UUID address allocation type selected to assign an UUID address for the server.\n* `NONE` - The user did not assign any UUID address.\n* `STATIC` - The user assigns a static UUID address.\n* `POOL` - The user selects a pool from which the address will be leased.
+
+```yaml
+Type: ServerProfile.UuidAddressTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UuidPool
+A reference to a uuidpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: UuidpoolPoolRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -299,6 +446,10 @@ PS C:\> Set-IntersightServerProfile
 
 [Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
 
+[Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
+
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

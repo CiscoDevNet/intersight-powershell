@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorSshConfig [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorSshConfig.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-JumpHost< string>][-ObjectType< ConnectorSshConfig.ObjectTypeEnum>][-Password< string>][-Pkey< byte[]>][-SecureProperties< object>][-Target< string>][-User< string>]
+Initialize-IntersightConnectorSshConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorSshConfig.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-JumpHost< string>][-ObjectType< ConnectorSshConfig.ObjectTypeEnum>][-Passphrase< string>][-Password< string>][-Pkey< byte[]>][-SecureProperties< object>][-Target< string>][-User< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -104,6 +104,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: ConnectorSshConfig.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Passphrase
+Optional passphrase if provided while creating the private key.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -190,6 +205,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

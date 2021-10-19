@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightLicenseIwoLicenseCount [-AccountLicenseData< LicenseAccountLicenseDataRelationship>][-AdditionalProperties< Dictionary<string,object>>][[-Moid]< string>][-Tags< List<MoTag>>]
+Set-IntersightLicenseIwoLicenseCount [-AccountLicenseData< LicenseAccountLicenseDataRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseIwoLicenseCount&amp;apos; resource.
+Update a &apos;LicenseIwoLicenseCount&apos; resource.
 
 ## PARAMETERS
 
@@ -88,6 +88,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -115,6 +145,8 @@ PS C:\> Set-IntersightLicenseIwoLicenseCount
 
 ## RELATED LINKS
 
+[New-IntersightLicenseIwoLicenseCount](./New-IntersightLicenseIwoLicenseCount.md)
+
 [Get-IntersightLicenseIwoLicenseCount](./Get-IntersightLicenseIwoLicenseCount.md)
 
-[New-IntersightLicenseIwoLicenseCount](./New-IntersightLicenseIwoLicenseCount.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

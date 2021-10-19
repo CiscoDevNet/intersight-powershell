@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamUserGroup [-AdditionalProperties< Dictionary<string,object>>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-Moid< string>][[-Name]< string>][-Permissions< List<IamPermissionRelationship>>][-Qualifier< IamQualifierRelationship>][-Tags< List<MoTag>>]
+New-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-Moid< string>][[-Name]< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Qualifier< IamQualifierRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -157,6 +157,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -184,8 +214,10 @@ PS C:\> New-IntersightIamUserGroup
 
 ## RELATED LINKS
 
-[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
+[Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
 
 [Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
 
-[Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
+[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

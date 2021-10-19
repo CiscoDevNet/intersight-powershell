@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHxapCluster -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexHxapCluster&apos; resource.
+Delete a &amp;apos;HyperflexHxapCluster&amp;apos; resource.
 
 ## EXAMPLES
 

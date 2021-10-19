@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCapabilityIoCardCapabilityDef [-AdditionalProperties< Dictionary<string,object>>][-DcSupported< bool>][-Moid< string>][[-Name]< string>][-Tags< List<MoTag>>]
+New-IntersightCapabilityIoCardCapabilityDef [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DcSupported< bool>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityIoCardCapabilityDef&amp;apos; resource.
+Create a &apos;CapabilityIoCardCapabilityDef&apos; resource.
 
 ## PARAMETERS
 
@@ -100,6 +100,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -129,6 +159,8 @@ PS C:\> New-IntersightCapabilityIoCardCapabilityDef
 
 [Get-IntersightCapabilityIoCardCapabilityDef](./Get-IntersightCapabilityIoCardCapabilityDef.md)
 
+[Set-IntersightCapabilityIoCardCapabilityDef](./Set-IntersightCapabilityIoCardCapabilityDef.md)
+
 [Remove-IntersightCapabilityIoCardCapabilityDef](./Remove-IntersightCapabilityIoCardCapabilityDef.md)
 
-[Set-IntersightCapabilityIoCardCapabilityDef](./Set-IntersightCapabilityIoCardCapabilityDef.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

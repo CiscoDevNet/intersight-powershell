@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexIpAddrRange [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexIpAddrRange.ClassIdEnum>][-EndAddr< string>][-Gateway< string>][-IpAddrBlocks< List<Model.CommIpV4AddressBlock>>][-Netmask< string>][-ObjectType< HyperflexIpAddrRange.ObjectTypeEnum>][-StartAddr< string>]
+Initialize-IntersightHyperflexIpAddrRange [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexIpAddrRange.ClassIdEnum>][-EndAddr< string>][-Gateway< string>][-IpAddrBlocks< System.Collections.Generic.List`1[Model.CommIpV4AddressBlock]>][-Netmask< string>][-ObjectType< HyperflexIpAddrRange.ObjectTypeEnum>][-StartAddr< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: HyperflexIpAddrRange.ObjectTypeEnum
@@ -143,6 +143,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

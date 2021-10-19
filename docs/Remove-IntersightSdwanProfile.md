@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSdwanProfile](./Set-IntersightSdwanProfile.md)
-
 [Get-IntersightSdwanProfile](./Get-IntersightSdwanProfile.md)
 
 [New-IntersightSdwanProfile](./New-IntersightSdwanProfile.md)
+
+[Set-IntersightSdwanProfile](./Set-IntersightSdwanProfile.md)
 

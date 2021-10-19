@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFirmwareDistributable [-AdditionalProperties< Dictionary<string,object>>][-Catalog< SoftwarerepositoryCatalogRelationship>][-ComponentMeta< List<FirmwareComponentMeta>>][-Description< string>][-DistributableMetas< List<FirmwareDistributableMetaRelationship>>][-FileLocation< string>][-ImageCategory< string>][-ImageType< string>][-ImportAction< FirmwareDistributable.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][[-Moid]< string>][-Name< string>][-Origin< FirmwareDistributable.OriginEnum>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-SupportedModels< List<string>>][-Tags< List<MoTag>>][-Vendor< string>][-Version< string>]
+Set-IntersightFirmwareDistributable [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][-ComponentMeta< System.Collections.Generic.List`1[FirmwareComponentMeta]>][-Description< string>][-DistributableMetas< System.Collections.Generic.List`1[FirmwareDistributableMetaRelationship]>][-FileLocation< string>][-ImageCategory< string>][-ImageType< string>][-ImportAction< FirmwareDistributable.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][[-Moid]< string>][-Name< string>][-Origin< FirmwareDistributable.OriginEnum>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -304,6 +304,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ReleaseDate
+The date on which the file was released or distributed by its vendor.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ReleaseNotesUrl
 The url for the release notes of this image.
 
@@ -443,6 +458,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -479,3 +524,5 @@ PS C:\> Set-IntersightFirmwareDistributable
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

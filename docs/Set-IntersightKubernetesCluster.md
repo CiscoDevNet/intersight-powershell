@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesCluster [-AdditionalProperties< Dictionary<string,object>>][-ClusterAddonProfile< KubernetesClusterAddonProfileRelationship>][-ConnectionStatus< KubernetesCluster.ConnectionStatusEnum>][-KubeConfig< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-RegisteredDevices< List<AssetDeviceRegistrationRelationship>>][-Tags< List<MoTag>>]
+Set-IntersightKubernetesCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterAddonProfile< KubernetesClusterAddonProfileRelationship>][-ConnectionStatus< KubernetesCluster.ConnectionStatusEnum>][-KubeConfig< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-RegisteredDevices< System.Collections.Generic.List`1[AssetDeviceRegistrationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -169,6 +169,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -196,8 +226,10 @@ PS C:\> Set-IntersightKubernetesCluster
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
-
 [New-IntersightKubernetesCluster](./New-IntersightKubernetesCluster.md)
 
+[Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
+
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

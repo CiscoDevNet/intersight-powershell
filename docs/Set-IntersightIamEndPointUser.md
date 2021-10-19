@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamEndPointUser [-AdditionalProperties< Dictionary<string,object>>][-EndPointUserRole< List<IamEndPointUserRoleRelationship>>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>]
+Set-IntersightIamEndPointUser [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EndPointUserRole< System.Collections.Generic.List`1[IamEndPointUserRoleRelationship]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -121,6 +121,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -148,8 +178,10 @@ PS C:\> Set-IntersightIamEndPointUser
 
 ## RELATED LINKS
 
+[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
+
 [Get-IntersightIamEndPointUser](./Get-IntersightIamEndPointUser.md)
 
 [New-IntersightIamEndPointUser](./New-IntersightIamEndPointUser.md)
 
-[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

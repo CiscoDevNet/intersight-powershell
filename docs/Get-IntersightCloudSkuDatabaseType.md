@@ -25,7 +25,7 @@ Get-IntersightCloudSkuDatabaseType [-Count <Boolean>] [-InlineCount <String>] [-
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CloudSkuDatabaseType&apos; resource.,
+Read a &amp;apos;CloudSkuDatabaseType&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

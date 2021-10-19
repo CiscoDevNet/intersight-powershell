@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareBaseImpact [-AdditionalProperties< Dictionary<string,object>>][-ClassId< FirmwareBaseImpact.ClassIdEnum>][-ComputationError< string>][-ComputationStatusDetail< FirmwareBaseImpact.ComputationStatusDetailEnum>][-DomainName< string>][-EndPoint< string>][-FirmwareVersion< string>][-ImpactType< FirmwareBaseImpact.ImpactTypeEnum>][-Model< string>][-ObjectType< FirmwareBaseImpact.ObjectTypeEnum>][-TargetFirmwareVersion< string>][-VersionImpact< FirmwareBaseImpact.VersionImpactEnum>]
+Initialize-IntersightFirmwareBaseImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareBaseImpact.ClassIdEnum>][-ComputationError< string>][-ComputationStatusDetail< FirmwareBaseImpact.ComputationStatusDetailEnum>][-DomainName< string>][-EndPoint< string>][-FirmwareVersion< string>][-ImpactType< FirmwareBaseImpact.ImpactTypeEnum>][-Model< string>][-ObjectType< FirmwareBaseImpact.ObjectTypeEnum>][-TargetFirmwareVersion< string>][-VersionImpact< FirmwareBaseImpact.VersionImpactEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -201,6 +201,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

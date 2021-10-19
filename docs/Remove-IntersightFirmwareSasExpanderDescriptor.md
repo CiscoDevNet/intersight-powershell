@@ -17,7 +17,7 @@ Remove-IntersightFirmwareSasExpanderDescriptor -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareSasExpanderDescriptor&amp;apos; resource.
+Delete a &apos;FirmwareSasExpanderDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareSasExpanderDescriptor](./Get-IntersightFirmwareSasExpanderDescriptor.md)
+[Set-IntersightFirmwareSasExpanderDescriptor](./Set-IntersightFirmwareSasExpanderDescriptor.md)
 
 [New-IntersightFirmwareSasExpanderDescriptor](./New-IntersightFirmwareSasExpanderDescriptor.md)
 
-[Set-IntersightFirmwareSasExpanderDescriptor](./Set-IntersightFirmwareSasExpanderDescriptor.md)
+[Get-IntersightFirmwareSasExpanderDescriptor](./Get-IntersightFirmwareSasExpanderDescriptor.md)
 

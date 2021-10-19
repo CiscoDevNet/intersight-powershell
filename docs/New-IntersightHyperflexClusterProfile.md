@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexClusterProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-AssociatedCluster< HyperflexClusterRelationship>][-AutoSupport< HyperflexAutoSupportPolicyRelationship>][-ClusterInternalSubnet< CommIpV4Interface>][-ClusterNetwork< HyperflexClusterNetworkPolicyRelationship>][-ClusterStorage< HyperflexClusterStoragePolicyRelationship>][-ConfigContext< PolicyConfigContext>][-DataIpAddress< string>][-Description< string>][-ExtFcStorage< HyperflexExtFcStoragePolicyRelationship>][-ExtIscsiStorage< HyperflexExtIscsiStoragePolicyRelationship>][-HostNamePrefix< string>][-Httpproxypolicy< CommHttpProxyPolicyRelationship>][-HypervisorControlIpAddress< string>][-HypervisorType< HyperflexClusterProfile.HypervisorTypeEnum>][-LocalCredential< HyperflexLocalCredentialPolicyRelationship>][-MacAddressPrefix< string>][-MgmtIpAddress< string>][-MgmtPlatform< HyperflexClusterProfile.MgmtPlatformEnum>][-Moid< string>][[-Name]< string>][-NodeConfig< HyperflexNodeConfigPolicyRelationship>][-NodeProfileConfig< List<HyperflexNodeProfileRelationship>>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-ProxySetting< HyperflexProxySettingPolicyRelationship>][-Replication< long>][-SoftwareVersion< HyperflexSoftwareVersionPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StorageClientIpAddress< string>][-StorageClientNetmask< string>][-StorageClientVlan< HyperflexNamedVlan>][-StorageClusterAuxiliaryIp< string>][-StorageDataVlan< HyperflexNamedVlan>][-StorageType< HyperflexClusterProfile.StorageTypeEnum>][-SysConfig< HyperflexSysConfigPolicyRelationship>][-Tags< List<MoTag>>][-Type< HyperflexClusterProfile.TypeEnum>][-UcsmConfig< HyperflexUcsmConfigPolicyRelationship>][-VcenterConfig< HyperflexVcenterConfigPolicyRelationship>][-WwxnPrefix< string>]
+New-IntersightHyperflexClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedCluster< HyperflexClusterRelationship>][-AutoSupport< HyperflexAutoSupportPolicyRelationship>][-ClusterInternalSubnet< CommIpV4Interface>][-ClusterNetwork< HyperflexClusterNetworkPolicyRelationship>][-ClusterStorage< HyperflexClusterStoragePolicyRelationship>][-ConfigContext< PolicyConfigContext>][-DataIpAddress< string>][-Description< string>][-ExtFcStorage< HyperflexExtFcStoragePolicyRelationship>][-ExtIscsiStorage< HyperflexExtIscsiStoragePolicyRelationship>][-HostNamePrefix< string>][-Httpproxypolicy< CommHttpProxyPolicyRelationship>][-HypervisorControlIpAddress< string>][-HypervisorType< HyperflexClusterProfile.HypervisorTypeEnum>][-LocalCredential< HyperflexLocalCredentialPolicyRelationship>][-MacAddressPrefix< string>][-MgmtIpAddress< string>][-MgmtPlatform< HyperflexClusterProfile.MgmtPlatformEnum>][-Moid< string>][[-Name]< string>][-NodeConfig< HyperflexNodeConfigPolicyRelationship>][-NodeProfileConfig< System.Collections.Generic.List`1[HyperflexNodeProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ProxySetting< HyperflexProxySettingPolicyRelationship>][-Replication< long>][-SoftwareVersion< HyperflexSoftwareVersionPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StorageClientIpAddress< string>][-StorageClientNetmask< string>][-StorageClientVlan< HyperflexNamedVlan>][-StorageClusterAuxiliaryIp< string>][-StorageDataVlan< HyperflexNamedVlan>][-StorageType< HyperflexClusterProfile.StorageTypeEnum>][-SysConfig< HyperflexSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexClusterProfile.TypeEnum>][-UcsmConfig< HyperflexUcsmConfigPolicyRelationship>][-VcenterConfig< HyperflexVcenterConfigPolicyRelationship>][-WwxnPrefix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorType
-The hypervisor type for the HyperFlex cluster.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
+The hypervisor type for the HyperFlex cluster.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
 
 ```yaml
 Type: HyperflexClusterProfile.HypervisorTypeEnum
@@ -553,7 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageClientVlan
-The named VLAN associated with this cluster&amp;apos;s storage client network. This applies to Intersight Workload Engine clusters only.
+The named VLAN associated with this cluster&apos;s storage client network. This applies to Intersight Workload Engine clusters only.
 
 Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
 
@@ -717,6 +717,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -755,3 +785,5 @@ PS C:\> New-IntersightHyperflexClusterProfile
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

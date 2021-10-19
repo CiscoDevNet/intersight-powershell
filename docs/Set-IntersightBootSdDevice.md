@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightBootSdDevice [-AdditionalProperties< Dictionary<string,object>>][-ComputePhysical< ComputePhysicalRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PreviousFru< EquipmentFruRelationship>][-State< string>][-Tags< List<MoTag>>][-Type< string>]
+Set-IntersightBootSdDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ComputePhysical< ComputePhysicalRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PreviousFru< EquipmentFruRelationship>][-State< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BootSdDevice&amp;apos; resource.
+Update a &apos;BootSdDevice&apos; resource.
 
 ## PARAMETERS
 
@@ -166,6 +166,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -194,3 +224,5 @@ PS C:\> Set-IntersightBootSdDevice
 ## RELATED LINKS
 
 [Get-IntersightBootSdDevice](./Get-IntersightBootSdDevice.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

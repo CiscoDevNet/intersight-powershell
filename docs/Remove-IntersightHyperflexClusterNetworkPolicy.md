@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)
+
 [Get-IntersightHyperflexClusterNetworkPolicy](./Get-IntersightHyperflexClusterNetworkPolicy.md)
 
 [New-IntersightHyperflexClusterNetworkPolicy](./New-IntersightHyperflexClusterNetworkPolicy.md)
-
-[Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourceSourceToPermissionResourcesHolder [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ResourceSourceToPermissionResourcesHolder.ClassIdEnum>][-ObjectType< ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum>][-SourceToPermissionResources< List<Model.ResourceSourceToPermissionResources>>]
+Initialize-IntersightResourceSourceToPermissionResourcesHolder [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceSourceToPermissionResourcesHolder.ClassIdEnum>][-ObjectType< ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum
@@ -69,20 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SourceToPermissionResources
-
-
-Note :- Use Initialize-IntersightResourceSourceToPermissionResources to create the object of complex type ResourceSourceToPermissionResources
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.ResourceSourceToPermissionResources]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -112,5 +125,3 @@ PS C:\> Initialize-IntersightResourceSourceToPermissionResourcesHolder
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightResourceSourceToPermissionResources](./Initialize-IntersightResourceSourceToPermissionResources.md)

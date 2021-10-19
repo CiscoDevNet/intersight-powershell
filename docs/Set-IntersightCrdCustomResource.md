@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-DcLauncher< string>][-Image< string>][[-Moid]< string>][-Name< string>][-Namespace< string>][-Port< long>][-Properties< List<CrdCustomResourceConfigProperty>>][-Tags< List<MoTag>>][-TargetId< string>][-TargetMoid< string>][-TargetType< string>]
+Set-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DcLauncher< string>][-Image< string>][[-Moid]< string>][-Name< string>][-Namespace< string>][-Port< long>][-Properties< System.Collections.Generic.List`1[CrdCustomResourceConfigProperty]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetId< string>][-TargetMoid< string>][-TargetType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A string property called name which is used as part of a uniqueness constraint. See &amp;apos;identity&amp;apos; specification in this MO definition.
+A string property called name which is used as part of a uniqueness constraint. See &apos;identity&apos; specification in this MO definition.
 
 ```yaml
 Type: string
@@ -225,6 +225,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -252,10 +282,12 @@ PS C:\> Set-IntersightCrdCustomResource
 
 ## RELATED LINKS
 
-[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
-
 [Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
 
+[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
+
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

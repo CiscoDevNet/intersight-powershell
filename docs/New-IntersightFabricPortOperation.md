@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricPortOperation [-AdditionalProperties< Dictionary<string,object>>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][-Moid< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< List<MoTag>>]
+New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][-Moid< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregatePortId
-Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &apos;aggregatePortId&apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
+Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &amp;apos;aggregatePortId&amp;apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
 
 ```yaml
 Type: long
@@ -163,6 +163,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -190,8 +220,10 @@ PS C:\> New-IntersightFabricPortOperation
 
 ## RELATED LINKS
 
-[Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
+[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
 
 [Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
 
-[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
+[Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

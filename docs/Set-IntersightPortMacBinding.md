@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPortMacBinding [-AdditionalProperties< Dictionary<string,object>>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< List<MoTag>>]
+Set-IntersightPortMacBinding [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;PortMacBinding&apos; resource.
+Update a &amp;apos;PortMacBinding&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -343,6 +343,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -371,3 +401,5 @@ PS C:\> Set-IntersightPortMacBinding
 ## RELATED LINKS
 
 [Get-IntersightPortMacBinding](./Get-IntersightPortMacBinding.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesVirtualMachineNodeProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-CloudProvider< KubernetesVirtualMachineNodeProfile.CloudProviderEnum>][-ConfigContext< PolicyConfigContext>][-Description< string>][-IpAddresses< List<IppoolIpLeaseRelationship>>][[-Moid]< string>][-Name< string>][-NodeGroup< KubernetesNodeGroupProfileRelationship>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< List<MoTag>>][-Target< AssetDeviceRegistrationRelationship>][-Type< KubernetesVirtualMachineNodeProfile.TypeEnum>][-VirtualMachine< VirtualizationVirtualMachineRelationship>]
+Set-IntersightKubernetesVirtualMachineNodeProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CloudProvider< KubernetesVirtualMachineNodeProfile.CloudProviderEnum>][-ConfigContext< PolicyConfigContext>][-Description< string>][-IpAddresses< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][[-Moid]< string>][-Name< string>][-NodeGroup< KubernetesNodeGroupProfileRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Target< AssetDeviceRegistrationRelationship>][-Type< KubernetesVirtualMachineNodeProfile.TypeEnum>][-VirtualMachine< VirtualizationVirtualMachineRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -270,6 +270,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -297,10 +327,12 @@ PS C:\> Set-IntersightKubernetesVirtualMachineNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)
-
 [Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
 
 [New-IntersightKubernetesVirtualMachineNodeProfile](./New-IntersightKubernetesVirtualMachineNodeProfile.md)
 
+[Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)
+
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

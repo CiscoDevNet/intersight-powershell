@@ -17,7 +17,7 @@ Remove-IntersightPowerPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;PowerPolicy&amp;apos; resource.
+Delete a &apos;PowerPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
-
 [Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
 
 [New-IntersightPowerPolicy](./New-IntersightPowerPolicy.md)
+
+[Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
 

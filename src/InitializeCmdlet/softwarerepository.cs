@@ -8,266 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryApplianceUpload.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryApplianceUpload")]
-    public class InitializeIntersightSoftwarerepositoryApplianceUpload:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryApplianceUpload()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryApplianceUpload.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryApplianceUpload.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryApplianceUpload initObject = new Intersight.Model.SoftwarerepositoryApplianceUpload();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryConstraintModels.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryConstraintModels")]
-    public class InitializeIntersightSoftwarerepositoryConstraintModels:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryConstraintModels()
-		{
-            ClassId = SoftwarerepositoryConstraintModels.ClassIdEnum.SoftwarerepositoryConstraintModels;
-            ObjectType = SoftwarerepositoryConstraintModels.ObjectTypeEnum.SoftwarerepositoryConstraintModels;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryConstraintModels.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Minimum version of the image."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string MinVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the contraint, used to identify constriant type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryConstraintModels.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Regular expression of the image name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string PlatformRegex {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> SupportedModels {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryConstraintModels initObject = new Intersight.Model.SoftwarerepositoryConstraintModels();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MinVersion"))
-            {
-                initObject.MinVersion = this.MinVersion;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PlatformRegex"))
-            {
-                initObject.PlatformRegex = this.PlatformRegex;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedModels"))
-            {
-                initObject.SupportedModels = this.SupportedModels;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryImportResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryImportResult")]
-    public class InitializeIntersightSoftwarerepositoryImportResult:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryImportResult()
-		{
-            ClassId = SoftwarerepositoryImportResult.ClassIdEnum.SoftwarerepositoryImportResult;
-            ObjectType = SoftwarerepositoryImportResult.ObjectTypeEnum.SoftwarerepositoryImportResult;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryImportResult.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryImportResult.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryImportResult initObject = new Intersight.Model.SoftwarerepositoryImportResult();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryFileServer.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryFileServer")]
-    public class InitializeIntersightSoftwarerepositoryFileServer:PSCmdlet
-	{
-		public InitializeIntersightSoftwarerepositoryFileServer()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryFileServer.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public SoftwarerepositoryFileServer.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.SoftwarerepositoryFileServer initObject = new Intersight.Model.SoftwarerepositoryFileServer();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryHttpServer.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryHttpServer")]
@@ -465,6 +205,111 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryConstraintModels.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryConstraintModels")]
+    public class InitializeIntersightSoftwarerepositoryConstraintModels:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryConstraintModels()
+		{
+            ClassId = SoftwarerepositoryConstraintModels.ClassIdEnum.SoftwarerepositoryConstraintModels;
+            ObjectType = SoftwarerepositoryConstraintModels.ObjectTypeEnum.SoftwarerepositoryConstraintModels;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryConstraintModels.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Minimum version of the image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string MinVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the contraint, used to identify constriant type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryConstraintModels.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Regular expression of the image name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PlatformRegex {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> SupportedModels {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryConstraintModels initObject = new Intersight.Model.SoftwarerepositoryConstraintModels();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MinVersion"))
+            {
+                initObject.MinVersion = this.MinVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PlatformRegex"))
+            {
+                initObject.PlatformRegex = this.PlatformRegex;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedModels"))
+            {
+                initObject.SupportedModels = this.SupportedModels;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryNfsServer.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryNfsServer")]
@@ -531,6 +376,59 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryImportResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryImportResult")]
+    public class InitializeIntersightSoftwarerepositoryImportResult:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryImportResult()
+		{
+            ClassId = SoftwarerepositoryImportResult.ClassIdEnum.SoftwarerepositoryImportResult;
+            ObjectType = SoftwarerepositoryImportResult.ObjectTypeEnum.SoftwarerepositoryImportResult;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryImportResult.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryImportResult.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryImportResult initObject = new Intersight.Model.SoftwarerepositoryImportResult();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryLocalMachine.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryLocalMachine")]
@@ -587,15 +485,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> UploadUrls {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -614,10 +503,108 @@ namespace Intersight.PowerShell
             {
                 initObject.UploadId = this.UploadId;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UploadUrls"))
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryFileServer.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryFileServer")]
+    public class InitializeIntersightSoftwarerepositoryFileServer:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryFileServer()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryFileServer.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryFileServer.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryFileServer initObject = new Intersight.Model.SoftwarerepositoryFileServer();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.UploadUrls = this.UploadUrls;
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryApplianceUpload.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryApplianceUpload")]
+    public class InitializeIntersightSoftwarerepositoryApplianceUpload:PSCmdlet
+	{
+		public InitializeIntersightSoftwarerepositoryApplianceUpload()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryApplianceUpload.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SoftwarerepositoryApplianceUpload.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SoftwarerepositoryApplianceUpload initObject = new Intersight.Model.SoftwarerepositoryApplianceUpload();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

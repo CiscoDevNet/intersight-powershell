@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamAppRegistration [-AdditionalProperties< Dictionary<string,object>>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-GrantTypes< List<string>>][-Moid< string>][-RedirectUris< List<string>>][-RenewClientSecret< bool>][-ResponseTypes< List<string>>][-Revoke< bool>][-Roles< List<IamRoleRelationship>>][-Tags< List<MoTag>>]
+New-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-Moid< string>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -98,21 +98,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GrantTypes
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -148,21 +133,6 @@ Set value to true to renew the client-secret. Applicable to client_credentials g
 
 ```yaml
 Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResponseTypes
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -223,6 +193,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -250,8 +250,10 @@ PS C:\> New-IntersightIamAppRegistration
 
 ## RELATED LINKS
 
+[Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
+
 [Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
 
 [Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
 
-[Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

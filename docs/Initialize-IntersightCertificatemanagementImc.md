@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCertificatemanagementImc [-AdditionalProperties< Dictionary<string,object>>][-Certificate< Model.X509Certificate>][-ClassId< CertificatemanagementImc.ClassIdEnum>][-Enabled< bool>][-ObjectType< CertificatemanagementImc.ObjectTypeEnum>][-Privatekey< string>]
+Initialize-IntersightCertificatemanagementImc [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Certificate< Model.X509Certificate>][-ClassId< CertificatemanagementImc.ClassIdEnum>][-Enabled< bool>][-ObjectType< CertificatemanagementImc.ObjectTypeEnum>][-Privatekey< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
 Type: CertificatemanagementImc.ObjectTypeEnum
@@ -113,6 +113,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

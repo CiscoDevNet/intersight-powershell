@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareVirtualDisk [-AdditionalProperties< Dictionary<string,object>>][-CompatibilityMode< VirtualizationVmwareVirtualDisk.CompatibilityModeEnum>][-ControllerKey< long>][-DeviceName< string>][-DiskMode< VirtualizationVmwareVirtualDisk.DiskModeEnum>][-DiskType< VirtualizationVmwareVirtualDisk.DiskTypeEnum>][-Key< long>][-Limit< long>][-LunUuid< string>][[-Moid]< string>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Serial< string>][-Shares< VirtualizationVmwareSharesInfo>][-Sharing< VirtualizationVmwareVirtualDisk.SharingEnum>][-Size< long>][-StorageAllocationType< VirtualizationVmwareVirtualDisk.StorageAllocationTypeEnum>][-Tags< List<MoTag>>][-UnitNumber< long>][-Uuid< string>][-VdiskId< string>][-Vendor< string>][-VirtualDiskPath< string>][-VmIdentity< string>]
+Set-IntersightVirtualizationVmwareVirtualDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CompatibilityMode< VirtualizationVmwareVirtualDisk.CompatibilityModeEnum>][-ControllerKey< long>][-DeviceName< string>][-DiskMode< VirtualizationVmwareVirtualDisk.DiskModeEnum>][-DiskType< VirtualizationVmwareVirtualDisk.DiskTypeEnum>][-Key< long>][-Limit< long>][-LunUuid< string>][[-Moid]< string>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Serial< string>][-Shares< VirtualizationVmwareSharesInfo>][-Sharing< VirtualizationVmwareVirtualDisk.SharingEnum>][-Size< long>][-StorageAllocationType< VirtualizationVmwareVirtualDisk.StorageAllocationTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnitNumber< long>][-Uuid< string>][-VdiskId< string>][-Vendor< string>][-VirtualDiskPath< string>][-VmIdentity< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -390,6 +390,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -420,3 +450,5 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualDisk
 [Get-IntersightVirtualizationVmwareVirtualDisk](./Get-IntersightVirtualizationVmwareVirtualDisk.md)
 
 [Initialize-IntersightVirtualizationVmwareSharesInfo](./Initialize-IntersightVirtualizationVmwareSharesInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -67,7 +67,7 @@ $onprem = @{
     BasePath = "https://intersight.com"
     ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
     ApiKeyFilePath = "C:\\secrectKey.txt" 
-    HttpSingingHeader =  @("(request-target)", "Host", "Date", "Digest")
+    HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
 }
 
 PS C:\> Set-IntersightConfiguration @onprem
@@ -80,7 +80,7 @@ ApiKeyFilePath          : C:\\secrectKey.txt
 ApiKeyPassPhrase        :
 Proxy                   :
 HashAlgorithm           : SHA256
-HttpSingingHeader       : {(request-target), Host, Date, Digest}
+HttpSigningHeader       : {(request-target), Host, Date, Digest}
 SignatureValidityPeriod : 0
 
 ```
@@ -447,3 +447,98 @@ PS c:\> $profileRef = $serverProfile | Get-IntersightMoMORef
 # use the set cmdlet to add the policy to the server profile
 PS c:\> Get-IntersightKvmPolicy -Name PSKvm | Set-IntersightKvmPolicy -Profiles $profileRef
 ```
+
+## Generic Cmdlets.
+Intersight.PowerShell module supports generic cmdlet which can be used to create, update, get and delete the MO in Intersight.
+Here is the names of the generic cmdlet
+* Get-IntersightManagedObject
+* Set-IntersightManagedObject
+* New-IntersightManagedObject
+* Remove-IntersightManagedObject
+
+***
+Note :- Generic cmdlet is useful when Intersight.Module does not support specific cmdlet for the MO where as Intersight server supports that MO, In this case we can use generic cmdlet to create/delete/update and delete the MO.
+***
+
+***
+For more details of generic cmdlet example and supported parameters please refer to Cmdlet Help.
+***
+
+### Get-IntersightManagedObject.
+Get-IntersightManagedObject cmdlet fetch the MO list based on specified ObjectType. It also supports query parameter like specific Get cmdlet.
+
+```powershell
+
+PS C:\> $result = Get-IntersightManagedObject -ObjectType server.Profile
+
+# Above cmdlet returns the list of server profile MO in json format.
+
+PS C:\> $result = Get-IntersightManagedObject -ObjectType server.Profile -Name TestSP
+
+# Above cmdlet fetch the server profile named "TestSP", $result contains single MO in json format.
+
+PS C:\> $result = Get-IntersightManagedObject -ObjectType -InlineCount allpages
+
+# Above cmdlet gets the Count, Results and ObjectType in json format.
+
+PS C:\> $Obj = $result | ConvertFrom-Json
+
+# $result  can be piped to ConvertFrom-Json to get the PSObjet.
+```
+ 
+ ### Set-IntersightManagedObject.
+ Set-IntersightManagedObject sets the MO with specified ObjectType and Moid. It also support the json payload using the parameter -JsonRequestBody.
+
+ ```powershell
+PS C:\> $result = Set-IntersightManagedObject -ObjectType ntp.Policy -Moid xxxxxxxxxxx -AdditionProperties @{ NtpServers = @("12.12.12.12") }
+
+# Above cmdlet sets the NtpServers of the specified ntp.Policy MO.
+
+PS C:\> $jsonPayload = `{
+  "ObjectType" : "ntp.Policy",
+  "Moid": "xxxxxxxxxxxxxxxxx",
+  "Description": "ntp policy created using generic cmdlet.",
+  "NtpServers": ["11.11.11.11","33.33.33.33"]
+}`
+
+PS C:\> $result = Set-IntersightManagedObject -JsonRequestBody $jsonPayload
+
+# Above cmdlet update the ntp.Policy using json payload.
+ ```
+
+### New-IntersightManagedObject
+New-IntersightManagedObject creates the MO of specified ObjectType. It also support the json payload using the parameter -JsonRequestBody to create new MO.
+
+ ```powershell
+PS C:\> $result = New-IntersightManagedObject -ObjectType ntp.Policy -AdditionProperties @{ Name = "testNtp", NtpServers = @("12.12.12.12"), Organization = @{ Moid = "xxxxxxxxxxxx", ClassId = "mo.MoRef", ObjectType = "organization.Organization"  } }
+
+# Above cmdlet creates the MO ntp policy.
+
+PS C:\> $jsonPayload = `{
+  "ObjectType" : "ntp.Policy",
+  "Description": "ntp policy created using generic cmdlet.",
+  "NtpServers": ["11.11.11.11","33.33.33.33"],
+  "Organization": {
+    "Moid" : "xxxxxxxxxxxxxx",
+    "ObjectType": "organization.Organization"
+    "ClassId":"mo.MoRef"
+  }
+}`
+
+PS C:\> $result = New-IntersightManagedObject -JsonRequestBody $jsonPayload
+
+# Above cmdlet creates the ntp.Policy MO using json payload.
+ ```
+
+ ### Remove-IntersightManagedObject
+ Remove-IntersightManagedObject deletes the MO specified by ObjectType and Moid. It also suppots piping of specific cmdlet to this cmdlet to delete the MO.
+
+ ```powershell
+PS C:\> Remove-IntersightManagedObject -ObjectType ntp.Policy -Moid xxxxxxxxxxxxxxx
+
+# Above cmdlet deletes the ntp policy.
+
+PS C:\> Get-IntersightNtpPolicy -Name TestSP | Remove-IntersightManagedObject
+
+# Above cmdlet delete the ntp policy which piped from Get-IntersightNtpPolicy.
+ ``` 

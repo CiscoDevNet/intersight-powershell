@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilitySiocModuleManufacturingDef [-AdditionalProperties< Dictionary<string,object>>][-Caption< string>][-Description< string>][[-Moid]< string>][-Name< string>][-Pid< string>][-ProductName< string>][-Sku< string>][-Tags< List<MoTag>>][-Vid< string>]
+Set-IntersightCapabilitySiocModuleManufacturingDef [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Caption< string>][-Description< string>][[-Moid]< string>][-Name< string>][-Pid< string>][-ProductName< string>][-Sku< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -175,6 +175,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -202,8 +232,10 @@ PS C:\> Set-IntersightCapabilitySiocModuleManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySiocModuleManufacturingDef](./Remove-IntersightCapabilitySiocModuleManufacturingDef.md)
-
 [Get-IntersightCapabilitySiocModuleManufacturingDef](./Get-IntersightCapabilitySiocModuleManufacturingDef.md)
 
 [New-IntersightCapabilitySiocModuleManufacturingDef](./New-IntersightCapabilitySiocModuleManufacturingDef.md)
+
+[Remove-IntersightCapabilitySiocModuleManufacturingDef](./Remove-IntersightCapabilitySiocModuleManufacturingDef.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

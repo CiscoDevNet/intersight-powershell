@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightConnectorpackConnectorPackUpgrade [-AdditionalProperties< Dictionary<string,object>>][-ConnectorPackOpType< ConnectorpackConnectorPackUpgrade.ConnectorPackOpTypeEnum>][-Moid< string>][-Tags< List<MoTag>>][-UcsdInfo< IaasUcsdInfoRelationship>]
+New-IntersightConnectorpackConnectorPackUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectorPackOpType< ConnectorpackConnectorPackUpgrade.ConnectorPackOpTypeEnum>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UcsdInfo< IaasUcsdInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;ConnectorpackConnectorPackUpgrade&apos; resource.
+Create a &amp;apos;ConnectorpackConnectorPackUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -103,6 +103,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -133,3 +163,5 @@ PS C:\> New-IntersightConnectorpackConnectorPackUpgrade
 [Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)
 
 [Get-IntersightConnectorpackConnectorPackUpgrade](./Get-IntersightConnectorpackConnectorPackUpgrade.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
