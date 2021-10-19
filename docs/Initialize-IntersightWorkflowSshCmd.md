@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowSshCmd [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowSshCmd.ClassIdEnum>][-Command< string>][-CommandType< WorkflowSshCmd.CommandTypeEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ExpectPrompts< List<Model.ConnectorExpectPrompt>>][-ObjectType< WorkflowSshCmd.ObjectTypeEnum>][-SecureProperties< object>][-ShellPrompt< string>][-ShellPromptTimeout< long>]
+Initialize-IntersightWorkflowSshCmd [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowSshCmd.ClassIdEnum>][-Command< string>][-CommandType< WorkflowSshCmd.CommandTypeEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ExpectPrompts< System.Collections.Generic.List`1[Model.ConnectorExpectPrompt]>][-ObjectType< WorkflowSshCmd.ObjectTypeEnum>][-SecureProperties< object>][-ShellPrompt< string>][-ShellPromptTimeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShellPrompt
-Regex of the remote server&apos;s shell prompt.
+Regex of the remote server&amp;apos;s shell prompt.
 
 ```yaml
 Type: string
@@ -190,6 +190,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

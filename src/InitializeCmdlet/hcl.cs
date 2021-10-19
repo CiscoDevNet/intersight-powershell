@@ -8,85 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize HclConstraint.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightHclConstraint")]
-    public class InitializeIntersightHclConstraint:PSCmdlet
-	{
-		public InitializeIntersightHclConstraint()
-		{
-            ClassId = HclConstraint.ClassIdEnum.HclConstraint;
-            ObjectType = HclConstraint.ObjectTypeEnum.HclConstraint;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HclConstraint.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name or key of the applicable compatibility constraint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ConstraintName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Value of the applicable compatibility constraint. Could either be a string value or a regex."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ConstraintValue {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HclConstraint.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.HclConstraint initObject = new Intersight.Model.HclConstraint();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintName"))
-            {
-                initObject.ConstraintName = this.ConstraintName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintValue"))
-            {
-                initObject.ConstraintValue = this.ConstraintValue;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize HclHardwareCompatibilityProfile.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightHclHardwareCompatibilityProfile")]
@@ -410,6 +331,85 @@ namespace Intersight.PowerShell
             {
                 initObject.Vendor = this.Vendor;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclConstraint.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHclConstraint")]
+    public class InitializeIntersightHclConstraint:PSCmdlet
+	{
+		public InitializeIntersightHclConstraint()
+		{
+            ClassId = HclConstraint.ClassIdEnum.HclConstraint;
+            ObjectType = HclConstraint.ObjectTypeEnum.HclConstraint;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HclConstraint.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name or key of the applicable compatibility constraint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ConstraintName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Value of the applicable compatibility constraint. Could either be a string value or a regex."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ConstraintValue {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HclConstraint.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.HclConstraint initObject = new Intersight.Model.HclConstraint();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintName"))
+            {
+                initObject.ConstraintName = this.ConstraintName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintValue"))
+            {
+                initObject.ConstraintValue = this.ConstraintValue;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightSoftwarerepositoryAuthorization [-AdditionalProperties< Dictionary<string,object>>][[-Moid]< string>][-Password< string>][-RepositoryType< SoftwarerepositoryAuthorization.RepositoryTypeEnum>][-Tags< List<MoTag>>][-UserId< string>]
+Set-IntersightSoftwarerepositoryAuthorization [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Password< string>][-RepositoryType< SoftwarerepositoryAuthorization.RepositoryTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&apos;s behalf.
+The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&amp;apos;s behalf.
 
 ```yaml
 Type: string
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&amp;apos;s behalf.
+The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&apos;s behalf.
 
 ```yaml
 Type: string
@@ -112,6 +112,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -145,3 +175,5 @@ PS C:\> Set-IntersightSoftwarerepositoryAuthorization
 [New-IntersightSoftwarerepositoryAuthorization](./New-IntersightSoftwarerepositoryAuthorization.md)
 
 [Get-IntersightSoftwarerepositoryAuthorization](./Get-IntersightSoftwarerepositoryAuthorization.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

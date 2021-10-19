@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVmediaMapping [-AdditionalProperties< Dictionary<string,object>>][-AuthenticationProtocol< VmediaMapping.AuthenticationProtocolEnum>][-ClassId< VmediaMapping.ClassIdEnum>][-DeviceType< VmediaMapping.DeviceTypeEnum>][-FileLocation< string>][-HostName< string>][-MountOptions< string>][-MountProtocol< VmediaMapping.MountProtocolEnum>][-ObjectType< VmediaMapping.ObjectTypeEnum>][-Password< string>][-RemoteFile< string>][-RemotePath< string>][-Username< string>][-VolumeName< string>]
+Initialize-IntersightVmediaMapping [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AuthenticationProtocol< VmediaMapping.AuthenticationProtocolEnum>][-ClassId< VmediaMapping.ClassIdEnum>][-DeviceType< VmediaMapping.DeviceTypeEnum>][-FileLocation< string>][-HostName< string>][-MountOptions< string>][-MountProtocol< VmediaMapping.MountProtocolEnum>][-ObjectType< VmediaMapping.ObjectTypeEnum>][-Password< string>][-RemoteFile< string>][-RemotePath< string>][-Username< string>][-VolumeName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileLocation
-Remote location of image. Preferred format is &apos;hostname/filePath/fileName&apos;.
+Remote location of image. Preferred format is &amp;apos;hostname/filePath/fileName&amp;apos;.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: VmediaMapping.ObjectTypeEnum
@@ -231,6 +231,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetApiKeyCredential [-AdditionalProperties< Dictionary<string,object>>][-ApiKey< string>][-ClassId< AssetApiKeyCredential.ClassIdEnum>][-ObjectType< AssetApiKeyCredential.ObjectTypeEnum>]
+Initialize-IntersightAssetApiKeyCredential [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApiKey< string>][-ClassId< AssetApiKeyCredential.ClassIdEnum>][-ObjectType< AssetApiKeyCredential.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -81,6 +81,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightUuidpoolPool [-AdditionalProperties< Dictionary<string,object>>][-AssignmentOrder< UuidpoolPool.AssignmentOrderEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Prefix< string>][-Tags< List<MoTag>>][-UuidSuffixBlocks< List<UuidpoolUuidBlock>>]
+Set-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< UuidpoolPool.AssignmentOrderEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Prefix< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UuidSuffixBlocks< System.Collections.Generic.List`1[UuidpoolUuidBlock]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;UuidpoolPool&amp;apos; resource.
+Update a &apos;UuidpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -165,6 +165,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -199,3 +229,5 @@ PS C:\> Set-IntersightUuidpoolPool
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
 
 [Initialize-IntersightUuidpoolUuidBlock](./Initialize-IntersightUuidpoolUuidBlock.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< Dictionary<string,object>>][-Annotation< string>][-BootTime< DateTime>][-Capacity< InfraHardwareInfo>][-ConfigName< string>][-ConnectionState< string>][-CpuHotAddEnabled< bool>][-CpuShares< VirtualizationVmwareVmCpuShareInfo>][-CpuSocketInfo< VirtualizationVmwareVmCpuSocketInfo>][-CustomAttributes< List<string>>][-DefaultPowerOffType< string>][-DhcpEnabled< bool>][-DiskCommitInfo< VirtualizationVmwareVmDiskCommitInfo>][-DnsServerList< List<string>>][-DnsSuffixList< List<string>>][-ExtraConfig< object>][-Folder< string>][-GuestInfo< VirtualizationGuestInfo>][-GuestState< VirtualizationVmwareVirtualMachine.GuestStateEnum>][-HypervisorType< VirtualizationVmwareVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-InstanceUuid< string>][-InventoryPath< string>][-IpAddress< List<string>>][-IsTemplate< bool>][-MacAddress< List<string>>][-MemShares< VirtualizationVmwareVmMemoryShareInfo>][-MemoryCapacity< VirtualizationMemoryCapacity>][-MemoryHotAddEnabled< bool>][[-Moid]< string>][-Name< string>][-NetworkCount< long>][-ParentFolder< VirtualizationVmwareFolderRelationship>][-PortGroups< List<string>>][-PowerState< VirtualizationVmwareVirtualMachine.PowerStateEnum>][-ProcessorCapacity< VirtualizationComputeCapacity>][-ProtectedVm< bool>][-Provider< VirtualizationVmwareVirtualMachine.ProviderEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-RemoteDisplayInfo< VirtualizationVmwareRemoteDisplayInfo>][-RemoteDisplayVncEnabled< bool>][-ResourcePool< string>][-ResourcePoolOwner< string>][-ResourcePoolParent< string>][-State< VirtualizationVmwareVirtualMachine.StateEnum>][-Tags< List<MoTag>>][-ToolRunningStatus< string>][-ToolsVersion< string>][-Uuid< string>][-VirtualDisks< List<long>>][-VirtualNetworkInterfaces< List<long>>][-VmCreationTime< DateTime>][-VmDiskCount< long>][-VmOverallStatus< string>][-VmPath< string>][-VmVersion< string>][-VmVnicCount< long>][-VnicDeviceConfigId< string>]
+Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Annotation< string>][-BootTime< DateTime>][-Capacity< InfraHardwareInfo>][-ConfigName< string>][-ConnectionState< string>][-CpuHotAddEnabled< bool>][-CpuShares< VirtualizationVmwareVmCpuShareInfo>][-CpuSocketInfo< VirtualizationVmwareVmCpuSocketInfo>][-CpuUtilization< float>][-CustomAttributes< System.Collections.Generic.List`1[string]>][-DefaultPowerOffType< string>][-DhcpEnabled< bool>][-DiskCommitInfo< VirtualizationVmwareVmDiskCommitInfo>][-DnsServerList< System.Collections.Generic.List`1[string]>][-DnsSuffixList< System.Collections.Generic.List`1[string]>][-ExtraConfig< object>][-Folder< string>][-GuestInfo< VirtualizationGuestInfo>][-GuestState< VirtualizationVmwareVirtualMachine.GuestStateEnum>][-HypervisorType< VirtualizationVmwareVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-InstanceUuid< string>][-InventoryPath< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-IsTemplate< bool>][-MacAddress< System.Collections.Generic.List`1[string]>][-MemShares< VirtualizationVmwareVmMemoryShareInfo>][-MemoryCapacity< VirtualizationMemoryCapacity>][-MemoryHotAddEnabled< bool>][-MemoryUtilization< float>][[-Moid]< string>][-Name< string>][-NetworkCount< long>][-ParentFolder< VirtualizationVmwareFolderRelationship>][-PortGroups< System.Collections.Generic.List`1[string]>][-PowerState< VirtualizationVmwareVirtualMachine.PowerStateEnum>][-ProcessorCapacity< VirtualizationComputeCapacity>][-ProtectedVm< bool>][-Provider< VirtualizationVmwareVirtualMachine.ProviderEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-RemoteDisplayInfo< VirtualizationVmwareRemoteDisplayInfo>][-RemoteDisplayVncEnabled< bool>][-ResourcePool< string>][-ResourcePoolOwner< string>][-ResourcePoolParent< string>][-State< VirtualizationVmwareVirtualMachine.StateEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ToolRunningStatus< string>][-ToolsVersion< string>][-Uuid< string>][-VirtualDisks< System.Collections.Generic.List`1[long]>][-VirtualNetworkInterfaces< System.Collections.Generic.List`1[long]>][-VmCreationTime< DateTime>][-VmDiskCount< long>][-VmOverallStatus< string>][-VmPath< string>][-VmVersion< string>][-VmVnicCount< long>][-VnicDeviceConfigId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -154,6 +154,21 @@ Note :- Use Initialize-IntersightVirtualizationVmwareVmCpuSocketInfo to create t
 
 ```yaml
 Type: VirtualizationVmwareVmCpuSocketInfo
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CpuUtilization
+Average CPU utilization percentage derived as a ratio of CPU used to CPU allocated. The value is calculated whenever inventory is performed.
+
+```yaml
+Type: float
 Parameter Sets: (All)
 Aliases:
 
@@ -321,7 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorType
-Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
+Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
 
 ```yaml
 Type: VirtualizationVmwareVirtualMachine.HypervisorTypeEnum
@@ -464,6 +479,21 @@ Adding memory to a running VM.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MemoryUtilization
+Average memory utilization percentage derived as a ratio of memory used to available memory. The value is calculated whenever inventory is performed.
+
+```yaml
+Type: float
 Parameter Sets: (All)
 Aliases:
 
@@ -921,6 +951,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -950,8 +1010,6 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualMachine
 
 [Get-IntersightVirtualizationVmwareVirtualMachine](./Get-IntersightVirtualizationVmwareVirtualMachine.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
-
 [Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
 
 [Initialize-IntersightVirtualizationVmwareVmCpuShareInfo](./Initialize-IntersightVirtualizationVmwareVmCpuShareInfo.md)
@@ -971,3 +1029,5 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualMachine
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
 [Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo](./Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowMoReferenceProperty [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowMoReferenceProperty.ClassIdEnum>][-DisplayAttributes< List<string>>][-ObjectType< WorkflowMoReferenceProperty.ObjectTypeEnum>][-Selector< string>][-SelectorProperty< Model.WorkflowSelectorProperty>][-ValueAttribute< string>]
+Initialize-IntersightWorkflowMoReferenceProperty [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowMoReferenceProperty.ClassIdEnum>][-DisplayAttributes< System.Collections.Generic.List`1[string]>][-ObjectType< WorkflowMoReferenceProperty.ObjectTypeEnum>][-Selector< string>][-SelectorProperty< Model.WorkflowSelectorProperty>][-ValueAttribute< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -128,6 +128,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

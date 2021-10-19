@@ -17,7 +17,7 @@ Remove-IntersightHyperflexVmImportOperation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexVmImportOperation&apos; resource.
+Delete a &amp;apos;HyperflexVmImportOperation&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
-
 [New-IntersightHyperflexVmImportOperation](./New-IntersightHyperflexVmImportOperation.md)
+
+[Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
 

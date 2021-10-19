@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesEsxiVirtualMachineInfraConfig [-AdditionalProperties< Dictionary<string,object>>][-ClassId< KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum>][-Cluster< string>][-Datastore< string>][-Interfaces< List<string>>][-ObjectType< KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum>][-Passphrase< string>][-ResourcePool< string>]
+Initialize-IntersightKubernetesEsxiVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum>][-Cluster< string>][-Datastore< string>][-Interfaces< System.Collections.Generic.List`1[string]>][-ObjectType< KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum>][-Passphrase< string>][-ResourcePool< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -141,6 +141,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

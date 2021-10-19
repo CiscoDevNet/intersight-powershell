@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesClusterManagementConfig [-AdditionalProperties< Dictionary<string,object>>][-ClassId< KubernetesClusterManagementConfig.ClassIdEnum>][-LoadBalancerCount< long>][-LoadBalancers< List<string>>][-MasterVip< string>][-ObjectType< KubernetesClusterManagementConfig.ObjectTypeEnum>][-SshKeys< List<string>>]
+Initialize-IntersightKubernetesClusterManagementConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesClusterManagementConfig.ClassIdEnum>][-LoadBalancerCount< long>][-LoadBalancers< System.Collections.Generic.List`1[string]>][-MasterVip< string>][-ObjectType< KubernetesClusterManagementConfig.ObjectTypeEnum>][-SshKeys< System.Collections.Generic.List`1[string]>][-TacPasswd< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -126,6 +126,51 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TacPasswd
+Hashed password of the TAC user.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

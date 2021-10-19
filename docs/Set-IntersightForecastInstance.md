@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightForecastInstance [-Action< ForecastInstance.ActionEnum>][-AdditionalProperties< Dictionary<string,object>>][-AltModel< List<decimal>>][-DataInterval< long>][-DataStartDate< DateTime>][[-Moid]< string>][-Tags< List<MoTag>>]
+Set-IntersightForecastInstance [-Action< ForecastInstance.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DataInterval< long>][-DataStartDate< DateTime>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;ForecastInstance&apos; resource.
+Update a &amp;apos;ForecastInstance&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -43,23 +43,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AltModel
-
-
-Note :- Use Initialize-Intersightdecimal to create the object of complex type decimal
-
-```yaml
-Type: System.Collections.Generic.List`1[decimal]
 Parameter Sets: (All)
 Aliases:
 
@@ -132,6 +115,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -163,4 +176,6 @@ PS C:\> Set-IntersightForecastInstance
 
 [Initialize-Intersightdecimal](./Initialize-Intersightdecimal.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
+[Initialize-IntersightForecastModel](./Initialize-IntersightForecastModel.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

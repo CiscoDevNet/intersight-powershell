@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowJoinTask [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowJoinTask.ClassIdEnum>][-Description< string>][-JoinOnTasks< List<string>>][-Label< string>][-Name< string>][-ObjectType< WorkflowJoinTask.ObjectTypeEnum>][-OnSuccess< string>]
+Initialize-IntersightWorkflowJoinTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowJoinTask.ClassIdEnum>][-Description< string>][-Label< string>][-Name< string>][-ObjectType< WorkflowJoinTask.ObjectTypeEnum>][-OnSuccess< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,21 +59,6 @@ The description of this task instance in the workflow.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -JoinOnTasks
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -141,6 +126,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

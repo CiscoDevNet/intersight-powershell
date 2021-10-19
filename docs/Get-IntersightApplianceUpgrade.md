@@ -286,3 +286,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightApplianceUpgrade](./Set-IntersightApplianceUpgrade.md)
 
+[Remove-IntersightApplianceUpgrade](./Remove-IntersightApplianceUpgrade.md)
+

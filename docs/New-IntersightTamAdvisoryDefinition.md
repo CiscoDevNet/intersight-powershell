@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightTamAdvisoryDefinition [-Actions< List<TamAction>>][-AdditionalProperties< Dictionary<string,object>>][-AdvisoryDetails< TamBaseAdvisoryDetails>][-AdvisoryId< string>][-ApiDataSources< List<TamApiDataSource>>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-ExternalUrl< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Recommendation< string>][-S3DataSources< List<TamS3DataSource>>][-Severity< TamSeverity>][-State< TamAdvisoryDefinition.StateEnum>][-Tags< List<MoTag>>][-Type< TamAdvisoryDefinition.TypeEnum>][-Version< string>][-Workaround< string>]
+New-IntersightTamAdvisoryDefinition [-Actions< System.Collections.Generic.List`1[TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryDetails< TamBaseAdvisoryDetails>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[TamApiDataSource]>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-ExternalUrl< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Recommendation< string>][-S3DataSources< System.Collections.Generic.List`1[TamS3DataSource]>][-Severity< TamSeverity>][-State< TamAdvisoryDefinition.StateEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< TamAdvisoryDefinition.TypeEnum>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -338,6 +338,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -365,11 +395,11 @@ PS C:\> New-IntersightTamAdvisoryDefinition
 
 ## RELATED LINKS
 
-[Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
+[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
 [Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
-[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
+[Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 
@@ -377,8 +407,8 @@ PS C:\> New-IntersightTamAdvisoryDefinition
 
 [Initialize-IntersightTamApiDataSource](./Initialize-IntersightTamApiDataSource.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
-
 [Initialize-IntersightTamS3DataSource](./Initialize-IntersightTamS3DataSource.md)
 
 [Initialize-IntersightTamSeverity](./Initialize-IntersightTamSeverity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

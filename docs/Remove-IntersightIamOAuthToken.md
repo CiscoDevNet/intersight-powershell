@@ -17,7 +17,7 @@ Remove-IntersightIamOAuthToken -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamOAuthToken&apos; resource.
+Delete a &amp;apos;IamOAuthToken&amp;apos; resource.
 
 ## EXAMPLES
 

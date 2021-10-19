@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightManagementInterface [-AdditionalProperties< Dictionary<string,object>>][-HostName< string>][-Ipv6Address< string>][-Ipv6Gateway< string>][-Ipv6Prefix< long>][[-Moid]< string>][-SwitchId< string>][-Tags< List<MoTag>>][-UemConnStatus< string>][-VirtualHostName< string>][-VlanId< long>]
+Set-IntersightManagementInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-HostName< string>][-Ipv6Address< string>][-Ipv6Gateway< string>][-Ipv6Prefix< long>][[-Moid]< string>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UemConnStatus< string>][-VirtualHostName< string>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -190,6 +190,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -218,3 +248,5 @@ PS C:\> Set-IntersightManagementInterface
 ## RELATED LINKS
 
 [Get-IntersightManagementInterface](./Get-IntersightManagementInterface.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

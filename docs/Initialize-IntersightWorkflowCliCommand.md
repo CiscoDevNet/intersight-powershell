@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowCliCommand [-AdditionalProperties< Dictionary<string,object>>][-Body< string>][-ClassId< WorkflowCliCommand.ClassIdEnum>][-Command< string>][-ContentType< string>][-Description< string>][-EndPrompt< string>][-ErrorContentType< string>][-ExpectPrompts< List<Model.WorkflowExpectPrompt>>][-ExpectedExitCodes< List<long>>][-Label< string>][-Name< string>][-ObjectType< WorkflowCliCommand.ObjectTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-SkipStatusCheck< bool>][-StartDelay< long>][-TerminalEnd< bool>][-TerminalStart< bool>][-Timeout< long>][-Type< WorkflowCliCommand.TypeEnum>]
+Initialize-IntersightWorkflowCliCommand [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< WorkflowCliCommand.ClassIdEnum>][-Command< string>][-ContentType< string>][-Description< string>][-EndPrompt< string>][-ErrorContentType< string>][-ExpectPrompts< System.Collections.Generic.List`1[Model.WorkflowExpectPrompt]>][-ExpectedExitCodes< System.Collections.Generic.List`1[long]>][-Label< string>][-Name< string>][-ObjectType< WorkflowCliCommand.ObjectTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-SkipStatusCheck< bool>][-StartDelay< long>][-TerminalEnd< bool>][-TerminalStart< bool>][-Timeout< long>][-Type< WorkflowCliCommand.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -Outcomes
-All the possible outcomes of this API are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &amp;apos;true&amp;apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
+All the possible outcomes of this API are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &apos;true&apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -357,6 +357,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

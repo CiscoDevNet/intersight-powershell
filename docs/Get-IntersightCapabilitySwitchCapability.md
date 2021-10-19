@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
+
 [Set-IntersightCapabilitySwitchCapability](./Set-IntersightCapabilitySwitchCapability.md)
 
 [Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
-
-[New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
 

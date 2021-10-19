@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareFabricUpgradeImpact [-AdditionalProperties< Dictionary<string,object>>][-ClassId< FirmwareFabricUpgradeImpact.ClassIdEnum>][-ComputationError< string>][-ComputationStatusDetail< FirmwareFabricUpgradeImpact.ComputationStatusDetailEnum>][-DomainName< string>][-EndPoint< string>][-FirmwareVersion< string>][-ImpactDetail< List<Model.FirmwareComponentImpact>>][-ImpactType< FirmwareFabricUpgradeImpact.ImpactTypeEnum>][-Model< string>][-ObjectType< FirmwareFabricUpgradeImpact.ObjectTypeEnum>][-Serial< string>][-TargetFirmwareVersion< string>][-VersionImpact< FirmwareFabricUpgradeImpact.VersionImpactEnum>]
+Initialize-IntersightFirmwareFabricUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareFabricUpgradeImpact.ClassIdEnum>][-ComputationError< string>][-ComputationStatusDetail< FirmwareFabricUpgradeImpact.ComputationStatusDetailEnum>][-DomainName< string>][-EndPoint< string>][-FirmwareVersion< string>][-ImpactDetail< System.Collections.Generic.List`1[Model.FirmwareComponentImpact]>][-ImpactType< FirmwareFabricUpgradeImpact.ImpactTypeEnum>][-Model< string>][-ObjectType< FirmwareFabricUpgradeImpact.ObjectTypeEnum>][-Serial< string>][-TargetFirmwareVersion< string>][-VersionImpact< FirmwareFabricUpgradeImpact.VersionImpactEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -233,6 +233,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

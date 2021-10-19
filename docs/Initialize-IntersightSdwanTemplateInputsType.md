@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSdwanTemplateInputsType [-AdditionalProperties< Dictionary<string,object>>][-ClassId< SdwanTemplateInputsType.ClassIdEnum>][-Editable< bool>][-Key< string>][-ObjectType< SdwanTemplateInputsType.ObjectTypeEnum>][-Required< bool>][-Title< string>][-Type< string>][-Value< string>]
+Initialize-IntersightSdwanTemplateInputsType [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SdwanTemplateInputsType.ClassIdEnum>][-Editable< bool>][-Key< string>][-ObjectType< SdwanTemplateInputsType.ObjectTypeEnum>][-Required< bool>][-Title< string>][-Type< string>][-Value< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -156,6 +156,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

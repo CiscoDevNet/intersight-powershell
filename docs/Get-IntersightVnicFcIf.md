@@ -25,7 +25,7 @@ Get-IntersightVnicFcIf [-Count <Boolean>] [-InlineCount <String>] [-Select <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VnicFcIf&apos; resource.,
+Read a &amp;apos;VnicFcIf&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
+
 [Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
 
 [Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
-
-[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
 

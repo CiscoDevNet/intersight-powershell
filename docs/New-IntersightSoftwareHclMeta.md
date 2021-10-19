@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSoftwareHclMeta [-AdditionalProperties< Dictionary<string,object>>][-Catalog< SoftwarerepositoryCatalogRelationship>][-ComponentMeta< List<FirmwareComponentMeta>>][-ContentType< SoftwareHclMeta.ContentTypeEnum>][-Description< string>][-DistributableMetas< List<FirmwareDistributableMetaRelationship>>][-ImageType< string>][-ImportAction< SoftwareHclMeta.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][[-Name]< string>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-SupportedModels< List<string>>][-Tags< List<MoTag>>][-Vendor< string>][-Version< string>]
+New-IntersightSoftwareHclMeta [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][-ComponentMeta< System.Collections.Generic.List`1[FirmwareComponentMeta]>][-ContentType< SoftwareHclMeta.ContentTypeEnum>][-Description< string>][-DistributableMetas< System.Collections.Generic.List`1[FirmwareDistributableMetaRelationship]>][-ImageType< string>][-ImportAction< SoftwareHclMeta.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][[-Name]< string>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImportAction
-The action to be performed on the imported file. If &apos;PreCache&apos; is set, the image will be cached in Appliance. Applicable in Intersight appliance deployment. If &apos;Evict&apos; is set, the cached file will be removed. Applicable in Intersight appliance deployment. If &apos;GeneratePreSignedUploadUrl&apos; is set, generates pre signed URL (s) for the file to be imported into the repository. Applicable for local machine source. The URL (s) will be populated under LocalMachine file server. If &apos;CompleteImportProcess&apos; is set, the ImportState is marked as &apos;Imported&apos;. Applicable for local machine source. If &apos;Cancel&apos; is set, the ImportState is marked as &apos;Failed&apos;. Applicable for local machine source.\n* `None` - No action should be taken on the imported file.\n* `GeneratePreSignedUploadUrl` - Generate pre signed URL of file for importing into the repository.\n* `GeneratePreSignedDownloadUrl` - Generate pre signed URL of file in the repository to download.\n* `CompleteImportProcess` - Mark that the import process of the file into the repository is complete.\n* `MarkImportFailed` - Mark to indicate that the import process of the file into the repository failed.\n* `PreCache` - Cache the file into the Intersight Appliance.\n* `Cancel` - The cancel import process for the file into the repository.\n* `Extract` - The action to extract the file in the external repository.\n* `Evict` - Evict the cached file from the Intersight Appliance.
+The action to be performed on the imported file. If &amp;apos;PreCache&amp;apos; is set, the image will be cached in Appliance. Applicable in Intersight appliance deployment. If &amp;apos;Evict&amp;apos; is set, the cached file will be removed. Applicable in Intersight appliance deployment. If &amp;apos;GeneratePreSignedUploadUrl&amp;apos; is set, generates pre signed URL (s) for the file to be imported into the repository. Applicable for local machine source. The URL (s) will be populated under LocalMachine file server. If &amp;apos;CompleteImportProcess&amp;apos; is set, the ImportState is marked as &amp;apos;Imported&amp;apos;. Applicable for local machine source. If &amp;apos;Cancel&amp;apos; is set, the ImportState is marked as &amp;apos;Failed&amp;apos;. Applicable for local machine source.\n* `None` - No action should be taken on the imported file.\n* `GeneratePreSignedUploadUrl` - Generate pre signed URL of file for importing into the repository.\n* `GeneratePreSignedDownloadUrl` - Generate pre signed URL of file in the repository to download.\n* `CompleteImportProcess` - Mark that the import process of the file into the repository is complete.\n* `MarkImportFailed` - Mark to indicate that the import process of the file into the repository failed.\n* `PreCache` - Cache the file into the Intersight Appliance.\n* `Cancel` - The cancel import process for the file into the repository.\n* `Extract` - The action to extract the file in the external repository.\n* `Evict` - Evict the cached file from the Intersight Appliance.
 
 ```yaml
 Type: SoftwareHclMeta.ImportActionEnum
@@ -264,6 +264,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: SoftwarerepositoryReleaseRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReleaseDate
+The date on which the file was released or distributed by its vendor.
+
+```yaml
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -413,6 +428,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -449,3 +494,5 @@ PS C:\> New-IntersightSoftwareHclMeta
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

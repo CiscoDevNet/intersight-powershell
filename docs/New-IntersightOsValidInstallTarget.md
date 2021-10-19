@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightOsValidInstallTarget [-AdditionalProperties< Dictionary<string,object>>][-InstallTargets< List<OsInstallTargetResponse>>][-M2Jbod< List<OsPhysicalDiskResponse>>][-M2VirtualDrives< List<OsVirtualDriveResponse>>][-Moid< string>][-MraidJbod< List<OsPhysicalDiskResponse>>][-MraidVirtualDrives< List<OsVirtualDriveResponse>>][-Servers< List<ComputePhysicalRelationship>>][-Src< string>][-Tags< List<MoTag>>]
+New-IntersightOsValidInstallTarget [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Servers< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Src< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -38,96 +38,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InstallTargets
-
-
-Note :- Use Initialize-IntersightOsInstallTargetResponse to create the object of complex type OsInstallTargetResponse
-
-```yaml
-Type: System.Collections.Generic.List`1[OsInstallTargetResponse]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -M2Jbod
-
-
-Note :- Use Initialize-IntersightOsPhysicalDiskResponse to create the object of complex type OsPhysicalDiskResponse
-
-```yaml
-Type: System.Collections.Generic.List`1[OsPhysicalDiskResponse]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -M2VirtualDrives
-
-
-Note :- Use Initialize-IntersightOsVirtualDriveResponse to create the object of complex type OsVirtualDriveResponse
-
-```yaml
-Type: System.Collections.Generic.List`1[OsVirtualDriveResponse]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MraidJbod
-
-
-Note :- Use Initialize-IntersightOsPhysicalDiskResponse to create the object of complex type OsPhysicalDiskResponse
-
-```yaml
-Type: System.Collections.Generic.List`1[OsPhysicalDiskResponse]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MraidVirtualDrives
-
-
-Note :- Use Initialize-IntersightOsVirtualDriveResponse to create the object of complex type OsVirtualDriveResponse
-
-```yaml
-Type: System.Collections.Generic.List`1[OsVirtualDriveResponse]
 Parameter Sets: (All)
 Aliases:
 
@@ -188,6 +103,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -220,3 +165,5 @@ PS C:\> New-IntersightOsValidInstallTarget
 [Initialize-IntersightOsPhysicalDiskResponse](./Initialize-IntersightOsPhysicalDiskResponse.md)
 
 [Initialize-IntersightOsVirtualDriveResponse](./Initialize-IntersightOsVirtualDriveResponse.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

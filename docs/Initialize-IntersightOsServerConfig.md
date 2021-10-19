@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsServerConfig [-AdditionalParameters< List<Model.OsPlaceHolder>>][-AdditionalProperties< Dictionary<string,object>>][-ClassId< OsServerConfig.ClassIdEnum>][-ErrorMsgs< List<string>>][-ObjectType< OsServerConfig.ObjectTypeEnum>]
+Initialize-IntersightOsServerConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OsServerConfig.ClassIdEnum>][-ObjectType< OsServerConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,23 +23,6 @@ Initialize-IntersightOsServerConfig [-AdditionalParameters< List<Model.OsPlaceHo
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
-
-### -AdditionalParameters
-
-
-Note :- Use Initialize-IntersightOsPlaceHolder to create the object of complex type OsPlaceHolder
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.OsPlaceHolder]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 
@@ -71,23 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ErrorMsgs
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: OsServerConfig.ObjectTypeEnum
@@ -98,6 +66,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -127,5 +125,3 @@ PS C:\> Initialize-IntersightOsServerConfig
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)

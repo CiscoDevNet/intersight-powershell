@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetTargetSignature [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetTargetSignature.ClassIdEnum>][-ObjectType< AssetTargetSignature.ObjectTypeEnum>][-Signature< byte[]>][-TargetId< string>]
+Initialize-IntersightAssetTargetSignature [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetTargetSignature.ClassIdEnum>][-ObjectType< AssetTargetSignature.ObjectTypeEnum>][-Signature< byte[]>][-TargetId< string>][-TimeStamp< DateTime>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: AssetTargetSignature.ObjectTypeEnum
@@ -101,6 +101,51 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TimeStamp
+The time at which the signature was generated. Date is accurate to Intersights clock. Used to expire the signature.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -129,3 +174,5 @@ PS C:\> Initialize-IntersightAssetTargetSignature
 ## RELATED LINKS
 
 [Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
+
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)

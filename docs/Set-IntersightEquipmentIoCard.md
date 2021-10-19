@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentIoCard [-AdditionalProperties< Dictionary<string,object>>][-ConnectionStatus< string>][-HostPorts< List<EtherHostPortRelationship>>][-InbandIpAddresses< List<ComputeIpAddress>>][-MgmtController< ManagementControllerRelationship>][[-Moid]< string>][-NetworkPorts< List<EtherNetworkPortRelationship>>][-OperReason< List<string>>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< List<MoTag>>]
+Set-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-MgmtController< ManagementControllerRelationship>][[-Moid]< string>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentIoCard&amp;apos; resource.
+Update a &apos;EquipmentIoCard&apos; resource.
 
 ## PARAMETERS
 
@@ -43,6 +43,24 @@ Connectivity Status of FEX/IOM to Switch - A or B or AB.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FanModules
+An array of relationships to equipmentFanModule resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[EquipmentFanModuleRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -139,21 +157,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -OperReason
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -PhysicalDeviceRegistration
 A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -207,6 +210,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -237,3 +270,5 @@ PS C:\> Set-IntersightEquipmentIoCard
 [Get-IntersightEquipmentIoCard](./Get-IntersightEquipmentIoCard.md)
 
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

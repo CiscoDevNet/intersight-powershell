@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBootIscsi [-AdditionalProperties< Dictionary<string,object>>][-Bootloader< Model.BootBootloader>][-ClassId< BootIscsi.ClassIdEnum>][-Enabled< bool>][-InterfaceName< string>][-Name< string>][-ObjectType< BootIscsi.ObjectTypeEnum>][-Port< long>][-Slot< string>]
+Initialize-IntersightBootIscsi [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootloader< Model.BootBootloader>][-ClassId< BootIscsi.ClassIdEnum>][-Enabled< bool>][-InterfaceName< string>][-Name< string>][-ObjectType< BootIscsi.ObjectTypeEnum>][-Port< long>][-Slot< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -158,6 +158,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

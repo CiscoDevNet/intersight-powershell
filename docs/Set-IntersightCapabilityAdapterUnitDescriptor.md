@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< Dictionary<string,object>>][-Capabilities< List<CapabilityCapabilityRelationship>>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-Model< string>][[-Moid]< string>][-NumDcePorts< long>][-PromCardType< string>][-Tags< List<MoTag>>][-Vendor< string>][-Version< string>]
+Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-Model< string>][[-Moid]< string>][-NumDcePorts< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -268,6 +268,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -300,3 +330,5 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

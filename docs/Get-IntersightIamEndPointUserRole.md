@@ -25,7 +25,7 @@ Get-IntersightIamEndPointUserRole [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamEndPointUserRole&amp;apos; resource.,
+Read a &apos;IamEndPointUserRole&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightIamEndPointUserRole](./New-IntersightIamEndPointUserRole.md)
+
 [Set-IntersightIamEndPointUserRole](./Set-IntersightIamEndPointUserRole.md)
 
 [Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
-
-[New-IntersightIamEndPointUserRole](./New-IntersightIamEndPointUserRole.md)
 

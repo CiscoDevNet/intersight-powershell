@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowAssociatedRoles [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowAssociatedRoles.ClassIdEnum>][-ObjectType< WorkflowAssociatedRoles.ObjectTypeEnum>][-Roles< List<string>>][-TaskNames< List<string>>][-WorkflowRoles< List<Model.WorkflowAssociatedRoles>>]
+Initialize-IntersightWorkflowAssociatedRoles [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowAssociatedRoles.ClassIdEnum>][-ObjectType< WorkflowAssociatedRoles.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,50 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Roles
-
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
-### -TaskNames
-
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkflowRoles
-
-
-Note :- Use Initialize-IntersightWorkflowAssociatedRoles to create the object of complex type WorkflowAssociatedRoles
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.WorkflowAssociatedRoles]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -142,5 +125,3 @@ PS C:\> Initialize-IntersightWorkflowAssociatedRoles
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightWorkflowAssociatedRoles](./Initialize-IntersightWorkflowAssociatedRoles.md)

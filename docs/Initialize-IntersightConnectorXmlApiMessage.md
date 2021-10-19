@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorXmlApiMessage [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorXmlApiMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ObjectType< ConnectorXmlApiMessage.ObjectTypeEnum>][-RemoteUserLocale< string>][-RemoteUserName< string>][-RemoteUserRoles< string>][-RemoteUserSessionId< string>][-SecureProperties< object>][-WithAuth< bool>][-XmlRequest< string>]
+Initialize-IntersightConnectorXmlApiMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorXmlApiMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ObjectType< ConnectorXmlApiMessage.ObjectTypeEnum>][-RemoteUserLocale< string>][-RemoteUserName< string>][-RemoteUserRoles< string>][-RemoteUserSessionId< string>][-SecureProperties< object>][-WithAuth< bool>][-XmlRequest< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptedAesKey
-The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &amp;apos;AES&amp;apos; in SecureProperties dictionary.
+The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: ConnectorXmlApiMessage.ObjectTypeEnum
@@ -203,6 +203,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

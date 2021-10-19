@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamAccountPermissions [-AdditionalProperties< Dictionary<string,object>>][-ClassId< IamAccountPermissions.ClassIdEnum>][-ObjectType< IamAccountPermissions.ObjectTypeEnum>][-Permissions< List<Model.IamPermissionReference>>]
+Initialize-IntersightIamAccountPermissions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamAccountPermissions.ClassIdEnum>][-ObjectType< IamAccountPermissions.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,20 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Permissions
-
-
-Note :- Use Initialize-IntersightIamPermissionReference to create the object of complex type IamPermissionReference
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.IamPermissionReference]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -112,5 +125,3 @@ PS C:\> Initialize-IntersightIamAccountPermissions
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightIamPermissionReference](./Initialize-IntersightIamPermissionReference.md)

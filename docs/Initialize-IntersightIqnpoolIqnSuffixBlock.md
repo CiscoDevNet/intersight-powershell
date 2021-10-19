@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIqnpoolIqnSuffixBlock [-AdditionalProperties< Dictionary<string,object>>][-ClassId< IqnpoolIqnSuffixBlock.ClassIdEnum>][-ObjectType< IqnpoolIqnSuffixBlock.ObjectTypeEnum>][-Suffix< string>]
+Initialize-IntersightIqnpoolIqnSuffixBlock [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IqnpoolIqnSuffixBlock.ClassIdEnum>][-From< long>][-ObjectType< IqnpoolIqnSuffixBlock.ObjectTypeEnum>][-Size< long>][-Suffix< string>][-To< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,11 +54,41 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -From
+The first suffix number in the block.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: IqnpoolIqnSuffixBlock.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Size
+Number of identifiers this block can hold.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -81,6 +111,51 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -To
+The last suffix number in the block.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

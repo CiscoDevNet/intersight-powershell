@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentSwitchCard [-AdditionalProperties< Dictionary<string,object>>][-FcPortChannels< List<FcPortChannelRelationship>>][[-Moid]< string>][-OutOfBandIpMask< string>][-PortChannels< List<EtherPortChannelRelationship>>][-PreviousFru< EquipmentFruRelationship>][-Tags< List<MoTag>>][-Thermal< EquipmentSwitchCard.ThermalEnum>]
+Set-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][[-Moid]< string>][-OutOfBandIpMask< string>][-PortChannels< System.Collections.Generic.List`1[EtherPortChannelRelationship]>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentSwitchCard&amp;apos; resource.
+Update a &apos;EquipmentSwitchCard&apos; resource.
 
 ## PARAMETERS
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thermal
-The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor&amp;apos;s temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range.
+The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor&apos;s temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range.
 
 ```yaml
 Type: EquipmentSwitchCard.ThermalEnum
@@ -151,6 +151,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -182,3 +212,5 @@ PS C:\> Set-IntersightEquipmentSwitchCard
 ## RELATED LINKS
 
 [Get-IntersightEquipmentSwitchCard](./Get-IntersightEquipmentSwitchCard.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

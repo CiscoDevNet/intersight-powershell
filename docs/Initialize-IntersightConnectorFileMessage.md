@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorFileMessage [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorFileMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-MsgType< ConnectorFileMessage.MsgTypeEnum>][-ObjectType< ConnectorFileMessage.ObjectTypeEnum>][-Path< string>][-SecureProperties< object>][-Stream< byte[]>]
+Initialize-IntersightConnectorFileMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorFileMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-MsgType< ConnectorFileMessage.MsgTypeEnum>][-ObjectType< ConnectorFileMessage.ObjectTypeEnum>][-Path< string>][-SecureProperties< object>][-Stream< byte[]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &amp;apos;AES&amp;apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -160,6 +160,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

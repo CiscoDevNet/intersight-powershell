@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIqnpoolPool [-AdditionalProperties< Dictionary<string,object>>][-AssignmentOrder< IqnpoolPool.AssignmentOrderEnum>][-Description< string>][-IqnSuffixBlocks< List<IqnpoolIqnSuffixBlock>>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Prefix< string>][-Tags< List<MoTag>>]
+New-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IqnpoolPool.AssignmentOrderEnum>][-Description< string>][-IqnSuffixBlocks< System.Collections.Generic.List`1[IqnpoolIqnSuffixBlock]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Prefix< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -165,6 +165,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -192,10 +222,12 @@ PS C:\> New-IntersightIqnpoolPool
 
 ## RELATED LINKS
 
+[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
+
 [Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
 
 [Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
 
-[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
-
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

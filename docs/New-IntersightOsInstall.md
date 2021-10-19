@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightOsInstall [-AdditionalParameters< List<OsPlaceHolder>>][-AdditionalProperties< Dictionary<string,object>>][-Answers< OsAnswers>][-ConfigurationFile< OsConfigurationFileRelationship>][-Description< string>][-Image< SoftwarerepositoryOperatingSystemFileRelationship>][-InstallMethod< OsInstall.InstallMethodEnum>][-InstallTarget< OsInstallTarget>][-Moid< string>][[-Name]< string>][-OperatingSystemParameters< OsOperatingSystemParameters>][-Organization< OrganizationOrganizationRelationship>][-OsduImage< FirmwareServerConfigurationUtilityDistributableRelationship>][-Server< ComputePhysicalRelationship>][-Tags< List<MoTag>>][-WorkflowInfo< WorkflowWorkflowInfoRelationship>]
+New-IntersightOsInstall [-AdditionalParameters< System.Collections.Generic.List`1[OsPlaceHolder]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Answers< OsAnswers>][-ConfigurationFile< OsConfigurationFileRelationship>][-Description< string>][-Image< SoftwarerepositoryOperatingSystemFileRelationship>][-InstallMethod< OsInstall.InstallMethodEnum>][-InstallTarget< OsInstallTarget>][-Moid< string>][[-Name]< string>][-OperatingSystemParameters< OsOperatingSystemParameters>][-Organization< OrganizationOrganizationRelationship>][-OsduImage< FirmwareServerConfigurationUtilityDistributableRelationship>][-Server< ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkflowInfo< WorkflowWorkflowInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OsInstall&amp;apos; resource.
+Create a &apos;OsInstall&apos; resource.
 
 ## PARAMETERS
 
@@ -291,6 +291,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -327,3 +357,5 @@ PS C:\> New-IntersightOsInstall
 [Initialize-IntersightOsInstallTarget](./Initialize-IntersightOsInstallTarget.md)
 
 [Initialize-IntersightOsOperatingSystemParameters](./Initialize-IntersightOsOperatingSystemParameters.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

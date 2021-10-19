@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesAddonConfiguration [-AdditionalProperties< Dictionary<string,object>>][-ClassId< KubernetesAddonConfiguration.ClassIdEnum>][-InstallStrategy< KubernetesAddonConfiguration.InstallStrategyEnum>][-ObjectType< KubernetesAddonConfiguration.ObjectTypeEnum>][-OverrideSets< List<Model.KubernetesKeyValue>>][-Overrides< string>][-ReleaseName< string>][-ReleaseNamespace< string>][-UpgradeStrategy< KubernetesAddonConfiguration.UpgradeStrategyEnum>]
+Initialize-IntersightKubernetesAddonConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesAddonConfiguration.ClassIdEnum>][-InstallStrategy< KubernetesAddonConfiguration.InstallStrategyEnum>][-ObjectType< KubernetesAddonConfiguration.ObjectTypeEnum>][-OverrideSets< System.Collections.Generic.List`1[Model.KubernetesKeyValue]>][-Overrides< string>][-ReleaseName< string>][-ReleaseNamespace< string>][-UpgradeStrategy< KubernetesAddonConfiguration.UpgradeStrategyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -158,6 +158,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

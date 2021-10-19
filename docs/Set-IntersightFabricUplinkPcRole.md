@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricUplinkPcRole [-AdditionalProperties< Dictionary<string,object>>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< List<FabricPortIdentifier>>][-Tags< List<MoTag>>]
+Set-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricUplinkPcRole&amp;apos; resource.
+Update a &apos;FabricUplinkPcRole&apos; resource.
 
 ## PARAMETERS
 
@@ -189,6 +189,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -223,3 +253,5 @@ PS C:\> Set-IntersightFabricUplinkPcRole
 [Remove-IntersightFabricUplinkPcRole](./Remove-IntersightFabricUplinkPcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

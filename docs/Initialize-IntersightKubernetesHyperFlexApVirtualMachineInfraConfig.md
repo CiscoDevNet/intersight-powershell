@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesHyperFlexApVirtualMachineInfraConfig [-AdditionalProperties< Dictionary<string,object>>][-ClassId< KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum>][-Interfaces< List<string>>][-ObjectType< KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum>]
+Initialize-IntersightKubernetesHyperFlexApVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum>][-DiskMode< KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum>][-Interfaces< System.Collections.Generic.List`1[string]>][-ObjectType< KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,10 +40,25 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiskMode
+Disk mode to use for volumes.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported.
+
+```yaml
+Type: KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -70,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum
@@ -81,6 +96,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

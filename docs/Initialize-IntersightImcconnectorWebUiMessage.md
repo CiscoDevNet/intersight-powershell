@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightImcconnectorWebUiMessage [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ImcconnectorWebUiMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ObjectType< ImcconnectorWebUiMessage.ObjectTypeEnum>][-RemoteUserLocale< string>][-RemoteUserName< string>][-RemoteUserRoles< string>][-RemoteUserSessionId< string>][-SecureProperties< object>][-WebUiRequest< string>]
+Initialize-IntersightImcconnectorWebUiMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ImcconnectorWebUiMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ObjectType< ImcconnectorWebUiMessage.ObjectTypeEnum>][-RemoteUserLocale< string>][-RemoteUserName< string>][-RemoteUserRoles< string>][-RemoteUserSessionId< string>][-SecureProperties< object>][-WebUiRequest< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -188,6 +188,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

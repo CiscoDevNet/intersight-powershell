@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorUrl [-AdditionalProperties< Dictionary<string,object>>][-ClassId< ConnectorUrl.ClassIdEnum>][-ForceQuery< bool>][-Fragment< string>][-Host< string>][-ObjectType< ConnectorUrl.ObjectTypeEnum>][-Opaque< string>][-Path< string>][-RawPath< string>][-RawQuery< string>][-Scheme< string>]
+Initialize-IntersightConnectorUrl [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorUrl.ClassIdEnum>][-ForceQuery< bool>][-Fragment< string>][-Host< string>][-ObjectType< ConnectorUrl.ObjectTypeEnum>][-Opaque< string>][-Path< string>][-RawPath< string>][-RawQuery< string>][-Scheme< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Opaque
-A URI is opaque if, and only if, it is absolute and its scheme-specific part does not begin with a slash character (&apos;/&apos;). An opaque URI has a scheme, a scheme-specific part, and possibly a fragment; all other components are undefined.
+A URI is opaque if, and only if, it is absolute and its scheme-specific part does not begin with a slash character (&amp;apos;/&amp;apos;). An opaque URI has a scheme, a scheme-specific part, and possibly a fragment; all other components are undefined.
 
 ```yaml
 Type: string
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawQuery
-The query component, as defined in RFC 3986, contains non-hierarchical data that, along with data in the path component, serves to identify a resource within the scope of the URI&amp;apos;s scheme and naming authority (if any). The query component is indicated by the first question mark character and terminated by a number sign character or by the end of the URI.\nThe rawQuery contains the URIs encoded query component, excluding the ? character.
+The query component, as defined in RFC 3986, contains non-hierarchical data that, along with data in the path component, serves to identify a resource within the scope of the URI&apos;s scheme and naming authority (if any). The query component is indicated by the first question mark character and terminated by a number sign character or by the end of the URI.\nThe rawQuery contains the URIs encoded query component, excluding the ? character.
 
 ```yaml
 Type: string
@@ -186,6 +186,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

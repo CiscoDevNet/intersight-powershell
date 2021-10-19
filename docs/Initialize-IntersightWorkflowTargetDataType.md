@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowTargetDataType [-AdditionalProperties< Dictionary<string,object>>][-ClassId< WorkflowTargetDataType.ClassIdEnum>][-CustomDataTypeProperties< Model.WorkflowCustomDataProperty>][-Default< Model.WorkflowDefaultValue>][-Description< string>][-DisplayMeta< Model.WorkflowDisplayMeta>][-InputParameters< object>][-IsArray< bool>][-Label< string>][-Max< long>][-Min< long>][-Name< string>][-ObjectType< WorkflowTargetDataType.ObjectTypeEnum>][-Properties< List<Model.WorkflowTargetProperty>>][-Required< bool>]
+Initialize-IntersightWorkflowTargetDataType [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowTargetDataType.ClassIdEnum>][-CustomDataTypeProperties< Model.WorkflowCustomDataProperty>][-Default< Model.WorkflowDefaultValue>][-Description< string>][-DisplayMeta< Model.WorkflowDisplayMeta>][-InputParameters< object>][-IsArray< bool>][-Label< string>][-Max< long>][-Min< long>][-Name< string>][-ObjectType< WorkflowTargetDataType.ObjectTypeEnum>][-Properties< System.Collections.Generic.List`1[Model.WorkflowTargetProperty]>][-Required< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowTargetDataType.ObjectTypeEnum
@@ -256,6 +256,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

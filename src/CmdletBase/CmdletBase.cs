@@ -9,8 +9,11 @@ namespace Intersight.PowerShell
 {
 	public class CmdletBase:PSCmdlet
 	{
-		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true)]
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
 		public SwitchParameter Json { get; set; }
+
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter WithHttpInfo { get; set; }
 		
 		public static Configuration Config { get; set; }
 
@@ -27,6 +30,20 @@ namespace Intersight.PowerShell
 
 		public CmdletBase()
 		{
+			
+		}
+
+		protected override void BeginProcessing()
+		{
+			if (CmdletBase.Config == null || CmdletBase.Config.HttpSigningConfiguration == null)
+			{
+				throw new Exception("Intersight environment is not configured. Use the cmdlet Set-IntersightConfiguration to configure it.");
+			}
+
+			if(this.MyInvocation.BoundParameters.ContainsKey("Json") && this.MyInvocation.BoundParameters.ContainsKey("WithHttpInfo"))
+            {
+                throw new Exception("Parameter Josn and WithHttpInfo cannot be used together");
+            }
 			
 		}
 
@@ -47,7 +64,6 @@ namespace Intersight.PowerShell
 			{
 				StringBuilder requestJson = new StringBuilder();
 				var jsonData = toJsonMethodInfo.Invoke(ModelObject, null);
-				//requestJson.Append(">>>>>>>>>>>>>>>>>>(Request)>>>>>>>>>>>>>>>>>>\n");
 				requestJson.Append((string)jsonData);
 				WriteObject(requestJson.ToString());
 			}
@@ -65,7 +81,6 @@ namespace Intersight.PowerShell
 			{
 				StringBuilder responseJson = new StringBuilder();
 				var rawContent = rawContentPropInfo.GetValue(result);
-				//responseJson.Append("\n<<<<<<<<<<<<<<<<<<<(Respone)<<<<<<<<<<<<<<<<<<<\n");
 				responseJson.Append((string)rawContent);
 				WriteObject(responseJson.ToString());
 			}

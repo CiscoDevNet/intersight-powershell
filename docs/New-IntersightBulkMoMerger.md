@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkMoMerger [-AdditionalProperties< Dictionary<string,object>>][-MergeAction< BulkMoMerger.MergeActionEnum>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Responses< List<BulkRestResult>>][-Sources< List<MoBaseMo>>][-Tags< List<MoTag>>][-TargetConfig< MoBaseMo>][-Targets< List<MoBaseMo>>]
+New-IntersightBulkMoMerger [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-MergeAction< BulkMoMerger.MergeActionEnum>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetConfig< MoBaseMo>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,23 +76,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Responses
-
-
-Note :- Use Initialize-IntersightBulkRestResult to create the object of complex type BulkRestResult
-
-```yaml
-Type: System.Collections.Generic.List`1[BulkRestResult]
 Parameter Sets: (All)
 Aliases:
 
@@ -171,6 +154,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -201,3 +214,5 @@ PS C:\> New-IntersightBulkMoMerger
 [Initialize-IntersightBulkRestResult](./Initialize-IntersightBulkRestResult.md)
 
 [Initialize-IntersightMoBaseMo](./Initialize-IntersightMoBaseMo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

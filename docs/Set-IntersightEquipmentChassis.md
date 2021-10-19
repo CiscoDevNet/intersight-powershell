@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentChassis [-AdditionalProperties< Dictionary<string,object>>][-AlarmSummary< ComputeAlarmSummary>][-FanControl< EquipmentFanControlRelationship>][-FaultSummary< long>][[-Moid]< string>][-OperReason< List<string>>][-PlatformType< string>][-PowerControlState< PowerControlStateRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< List<MoTag>>][-VirtualDriveContainer< List<StorageVirtualDriveContainerRelationship>>]
+Set-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-ExpanderModules< System.Collections.Generic.List`1[EquipmentExpanderModuleRelationship]>][-FanControl< EquipmentFanControlRelationship>][-FaultSummary< long>][[-Moid]< string>][-PlatformType< string>][-PowerControlState< PowerControlStateRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDriveContainer< System.Collections.Generic.List`1[StorageVirtualDriveContainerRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentChassis&apos; resource.
+Update a &amp;apos;EquipmentChassis&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -45,6 +45,24 @@ Note :- Use Initialize-IntersightComputeAlarmSummary to create the object of com
 
 ```yaml
 Type: ComputeAlarmSummary
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExpanderModules
+An array of relationships to equipmentExpanderModule resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[EquipmentExpanderModuleRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -97,21 +115,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OperReason
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
@@ -204,6 +207,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -234,3 +267,5 @@ PS C:\> Set-IntersightEquipmentChassis
 [Get-IntersightEquipmentChassis](./Get-IntersightEquipmentChassis.md)
 
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

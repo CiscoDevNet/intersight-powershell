@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
+[New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
 
 [Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
 
-[New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
+[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
 

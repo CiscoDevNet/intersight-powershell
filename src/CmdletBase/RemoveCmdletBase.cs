@@ -18,14 +18,6 @@ namespace Intersight.PowerShell
 		{
 		}
 
-		protected override void BeginProcessing()
-		{
-			if (CmdletBase.Config == null || CmdletBase.Config.HttpSigningConfiguration == null)
-			{
-				throw new Exception("Intersight environment is not configured. Use the cmdlet Set-IntersightConfiguration to configure it.");
-			}
-		}
-
 		protected override void ProcessRecord()
 		{
 			try
@@ -35,10 +27,13 @@ namespace Intersight.PowerShell
 				if (Json.IsPresent)
 				{
 					StringBuilder requestJson = new StringBuilder();
-					//requestJson.Append(">>>>>>>>>>>>>>>>>>(Request)>>>>>>>>>>>>>>>>>>\n");
 					requestJson.Append(string.Format("{{\n\"Moid\" : \"{0}\"\n}}",this.Moid));
 					WriteObject(requestJson.ToString());
 					WriteResponseJson(result);
+				}
+				else if(WithHttpInfo.IsPresent)
+				{
+					WriteObject(result);
 				}
 				else
 				{

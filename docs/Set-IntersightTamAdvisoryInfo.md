@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightTamAdvisoryInfo [-AdditionalProperties< Dictionary<string,object>>][-Advisory< TamBaseAdvisoryRelationship>][[-Moid]< string>][-State< TamAdvisoryInfo.StateEnum>][-Tags< List<MoTag>>]
+Set-IntersightTamAdvisoryInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Advisory< TamBaseAdvisoryRelationship>][[-Moid]< string>][-State< TamAdvisoryInfo.StateEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -103,6 +103,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -130,8 +160,10 @@ PS C:\> Set-IntersightTamAdvisoryInfo
 
 ## RELATED LINKS
 
-[New-IntersightTamAdvisoryInfo](./New-IntersightTamAdvisoryInfo.md)
+[Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)
 
 [Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)
 
-[Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)
+[New-IntersightTamAdvisoryInfo](./New-IntersightTamAdvisoryInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

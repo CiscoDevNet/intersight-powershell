@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexHxapVirtualMachine [-AdditionalProperties< Dictionary<string,object>>][-AffinitySelectors< List<InfraMetaData>>][-Age< string>][-AntiAffinitySelectors< List<InfraMetaData>>][-BootTime< DateTime>][-Capacity< InfraHardwareInfo>][-Disks< List<HyperflexVmDisk>>][-FailureReason< string>][-GuestInfo< VirtualizationGuestInfo>][-HypervisorType< HyperflexHxapVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-Interfaces< List<HyperflexVmInterface>>][-IpAddress< List<string>>][-Labels< List<InfraMetaData>>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-Name< string>][-NetworkCount< long>][-PowerState< HyperflexHxapVirtualMachine.PowerStateEnum>][-ProcessorCapacity< VirtualizationComputeCapacity>][-Provider< HyperflexHxapVirtualMachine.ProviderEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StartTime< string>][-State< HyperflexHxapVirtualMachine.StateEnum>][-Status< HyperflexHxapVirtualMachine.StatusEnum>][-Tags< List<MoTag>>][-Uuid< string>][-VmCreationTime< DateTime>]
+Set-IntersightHyperflexHxapVirtualMachine [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-Age< string>][-AntiAffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-BootTime< DateTime>][-Capacity< InfraHardwareInfo>][-CpuUtilization< float>][-Disks< System.Collections.Generic.List`1[HyperflexVmDisk]>][-FailureReason< string>][-GuestInfo< VirtualizationGuestInfo>][-HypervisorType< HyperflexHxapVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-Interfaces< System.Collections.Generic.List`1[HyperflexVmInterface]>][-IpAddress< System.Collections.Generic.List`1[string]>][-Labels< System.Collections.Generic.List`1[InfraMetaData]>][-MemoryCapacity< VirtualizationMemoryCapacity>][-MemoryUtilization< float>][[-Moid]< string>][-Name< string>][-NetworkCount< long>][-PowerState< HyperflexHxapVirtualMachine.PowerStateEnum>][-ProcessorCapacity< VirtualizationComputeCapacity>][-Provider< HyperflexHxapVirtualMachine.ProviderEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StartTime< string>][-State< HyperflexHxapVirtualMachine.StateEnum>][-Status< HyperflexHxapVirtualMachine.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-VmCreationTime< DateTime>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,6 +119,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -CpuUtilization
+Average CPU utilization percentage derived as a ratio of CPU used to CPU allocated. The value is calculated whenever inventory is performed.
+
+```yaml
+Type: float
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Disks
 
 
@@ -169,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorType
-Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
+Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
 
 ```yaml
 Type: HyperflexHxapVirtualMachine.HypervisorTypeEnum
@@ -254,6 +269,21 @@ Note :- Use Initialize-IntersightVirtualizationMemoryCapacity to create the obje
 
 ```yaml
 Type: VirtualizationMemoryCapacity
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MemoryUtilization
+Average memory utilization percentage derived as a ratio of memory used to available memory. The value is calculated whenever inventory is performed.
+
+```yaml
+Type: float
 Parameter Sets: (All)
 Aliases:
 
@@ -466,6 +496,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -497,8 +557,6 @@ PS C:\> Set-IntersightHyperflexHxapVirtualMachine
 
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
-
 [Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
 
 [Initialize-IntersightHyperflexVmDisk](./Initialize-IntersightHyperflexVmDisk.md)
@@ -510,3 +568,5 @@ PS C:\> Set-IntersightHyperflexHxapVirtualMachine
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

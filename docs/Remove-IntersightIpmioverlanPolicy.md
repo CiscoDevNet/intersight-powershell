@@ -17,7 +17,7 @@ Remove-IntersightIpmioverlanPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IpmioverlanPolicy&apos; resource.
+Delete a &amp;apos;IpmioverlanPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIpmioverlanPolicy](./Set-IntersightIpmioverlanPolicy.md)
-
 [New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
 
 [Get-IntersightIpmioverlanPolicy](./Get-IntersightIpmioverlanPolicy.md)
+
+[Set-IntersightIpmioverlanPolicy](./Set-IntersightIpmioverlanPolicy.md)
 

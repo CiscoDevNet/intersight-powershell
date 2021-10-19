@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicFcIf [-AdditionalProperties< Dictionary<string,object>>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-ScpVhba< VnicFcIfRelationship>][-SpVhbas< List<VnicFcIfRelationship>>][-StaticWwpnAddress< string>][-Tags< List<MoTag>>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>]
+Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-ScpVhba< VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicFcIf&amp;apos; resource.
+Update a &apos;VnicFcIf&apos; resource.
 
 ## PARAMETERS
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticWwpnAddress
-The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&amp;apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
+The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
 
 ```yaml
 Type: string
@@ -339,6 +339,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -366,10 +396,12 @@ PS C:\> Set-IntersightVnicFcIf
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
+[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
 
 [Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
 
-[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
+[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

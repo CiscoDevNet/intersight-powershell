@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNtpPolicy [-AdditionalProperties< Dictionary<string,object>>][-ApplianceAccount< IamAccountRelationship>][-AuthenticatedNtpServers< List<NtpAuthNtpServer>>][-Description< string>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-NtpServers< List<string>>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-Tags< List<MoTag>>][-Timezone< NtpPolicy.TimezoneEnum>]
+Set-IntersightNtpPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApplianceAccount< IamAccountRelationship>][-AuthenticatedNtpServers< System.Collections.Generic.List`1[NtpAuthNtpServer]>][-Description< string>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-NtpServers< System.Collections.Generic.List`1[string]>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Timezone< NtpPolicy.TimezoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;NtpPolicy&amp;apos; resource.
+Update a &apos;NtpPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -216,6 +216,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -243,10 +273,12 @@ PS C:\> Set-IntersightNtpPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightNtpPolicy](./Remove-IntersightNtpPolicy.md)
+
 [New-IntersightNtpPolicy](./New-IntersightNtpPolicy.md)
 
 [Get-IntersightNtpPolicy](./Get-IntersightNtpPolicy.md)
 
-[Remove-IntersightNtpPolicy](./Remove-IntersightNtpPolicy.md)
-
 [Initialize-IntersightNtpAuthNtpServer](./Initialize-IntersightNtpAuthNtpServer.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

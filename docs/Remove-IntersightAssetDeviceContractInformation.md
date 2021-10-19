@@ -17,7 +17,7 @@ Remove-IntersightAssetDeviceContractInformation -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;AssetDeviceContractInformation&apos; resource.
+Delete a &amp;apos;AssetDeviceContractInformation&amp;apos; resource.
 
 ## EXAMPLES
 

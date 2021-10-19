@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< Dictionary<string,object>>][-ClusterProfiles< List<HyperflexClusterProfileRelationship>>][-Description< string>][-HxdpVersion< string>][-HypervisorVersion< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-ServerFirmwareVersion< string>][-ServerFirmwareVersions< List<HyperflexServerFirmwareVersionInfo>>][-Tags< List<MoTag>>][-UpgradeTypes< List<string>>]
+Set-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-Description< string>][-HxdpVersion< string>][-HypervisorVersion< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-ServerFirmwareVersion< string>][-ServerFirmwareVersions< System.Collections.Generic.List`1[HyperflexServerFirmwareVersionInfo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeTypes< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -213,6 +213,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -240,10 +270,12 @@ PS C:\> Set-IntersightHyperflexSoftwareVersionPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexSoftwareVersionPolicy](./Remove-IntersightHyperflexSoftwareVersionPolicy.md)
-
 [Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [New-IntersightHyperflexSoftwareVersionPolicy](./New-IntersightHyperflexSoftwareVersionPolicy.md)
 
+[Remove-IntersightHyperflexSoftwareVersionPolicy](./Remove-IntersightHyperflexSoftwareVersionPolicy.md)
+
 [Initialize-IntersightHyperflexServerFirmwareVersionInfo](./Initialize-IntersightHyperflexServerFirmwareVersionInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

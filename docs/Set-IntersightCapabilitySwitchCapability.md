@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilitySwitchCapability [-AdditionalProperties< Dictionary<string,object>>][-DefaultFcoeVlan< long>][-DynamicVifsSupported< bool>][-FanModulesSupported< bool>][-FcEndHostModeReservedVsans< List<CapabilityPortRange>>][-FcUplinkPortsAutoNegotiationSupported< bool>][-LocatorBeaconSupported< bool>][-MaxPorts< long>][-MaxSlots< long>][[-Moid]< string>][-Name< string>][-NetworkLimits< CapabilitySwitchNetworkLimits>][-Pid< CapabilitySwitchCapability.PidEnum>][-PortsSupporting100gSpeed< List<CapabilityPortRange>>][-PortsSupporting10gSpeed< List<CapabilityPortRange>>][-PortsSupporting1gSpeed< List<CapabilityPortRange>>][-PortsSupporting25gSpeed< List<CapabilityPortRange>>][-PortsSupporting40gSpeed< List<CapabilityPortRange>>][-PortsSupportingBreakout< List<CapabilityPortRange>>][-PortsSupportingFcoe< List<CapabilityPortRange>>][-PortsSupportingServerRole< List<CapabilityPortRange>>][-ReservedVsans< List<CapabilityPortRange>>][-SerenoNetflowSupported< bool>][-Sku< string>][-StorageLimits< CapabilitySwitchStorageLimits>][-SwitchingModeCapabilities< List<CapabilitySwitchingModeCapability>>][-SystemLimits< CapabilitySwitchSystemLimits>][-Tags< List<MoTag>>][-UnifiedPorts< List<CapabilityPortRange>>][-UnifiedRule< string>][-Vid< string>]
+Set-IntersightCapabilitySwitchCapability [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DefaultFcoeVlan< long>][-DynamicVifsSupported< bool>][-FanModulesSupported< bool>][-FcEndHostModeReservedVsans< System.Collections.Generic.List`1[CapabilityPortRange]>][-FcUplinkPortsAutoNegotiationSupported< bool>][-LocatorBeaconSupported< bool>][-MaxPorts< long>][-MaxSlots< long>][[-Moid]< string>][-Name< string>][-NetworkLimits< CapabilitySwitchNetworkLimits>][-Pid< CapabilitySwitchCapability.PidEnum>][-PortsSupporting100gSpeed< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupporting10gSpeed< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupporting1gSpeed< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupporting25gSpeed< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupporting40gSpeed< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupportingBreakout< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupportingFcoe< System.Collections.Generic.List`1[CapabilityPortRange]>][-PortsSupportingServerRole< System.Collections.Generic.List`1[CapabilityPortRange]>][-ReservedVsans< System.Collections.Generic.List`1[CapabilityPortRange]>][-SerenoNetflowSupported< bool>][-Sku< string>][-StorageLimits< CapabilitySwitchStorageLimits>][-SwitchingModeCapabilities< System.Collections.Generic.List`1[CapabilitySwitchingModeCapability]>][-SystemLimits< CapabilitySwitchSystemLimits>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnifiedPorts< System.Collections.Generic.List`1[CapabilityPortRange]>][-UnifiedRule< string>][-Vid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -520,6 +520,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -547,11 +577,11 @@ PS C:\> Set-IntersightCapabilitySwitchCapability
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
-
 [Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
 
 [New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
+
+[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
 
 [Initialize-IntersightCapabilityPortRange](./Initialize-IntersightCapabilityPortRange.md)
 
@@ -562,3 +592,5 @@ PS C:\> Set-IntersightCapabilitySwitchCapability
 [Initialize-IntersightCapabilitySwitchingModeCapability](./Initialize-IntersightCapabilitySwitchingModeCapability.md)
 
 [Initialize-IntersightCapabilitySwitchSystemLimits](./Initialize-IntersightCapabilitySwitchSystemLimits.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

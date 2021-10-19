@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightTamAdvisoryInstance [-AdditionalProperties< Dictionary<string,object>>][-Advisory< TamBaseAdvisoryRelationship>][-AffectedObjectMoid< string>][-AffectedObjectType< string>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][-Moid< string>][-State< TamAdvisoryInstance.StateEnum>][-Tags< List<MoTag>>]
+New-IntersightTamAdvisoryInstance [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Advisory< TamBaseAdvisoryRelationship>][-AffectedObject< MoBaseMoRelationship>][-AffectedObjectMoid< string>][-AffectedObjectType< string>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][-Moid< string>][-State< TamAdvisoryInstance.StateEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -46,6 +46,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: TamBaseAdvisoryRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AffectedObject
+A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: MoBaseMoRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -151,6 +169,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -178,8 +226,10 @@ PS C:\> New-IntersightTamAdvisoryInstance
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
+
 [Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
 
 [Remove-IntersightTamAdvisoryInstance](./Remove-IntersightTamAdvisoryInstance.md)
 
-[Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

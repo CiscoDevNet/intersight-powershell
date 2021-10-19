@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageVirtualDrivePolicy [-AccessPolicy< StorageVirtualDrivePolicy.AccessPolicyEnum>][-AdditionalProperties< Dictionary<string,object>>][-ClassId< StorageVirtualDrivePolicy.ClassIdEnum>][-DriveCache< StorageVirtualDrivePolicy.DriveCacheEnum>][-ObjectType< StorageVirtualDrivePolicy.ObjectTypeEnum>][-ReadPolicy< StorageVirtualDrivePolicy.ReadPolicyEnum>][-StripSize< StorageVirtualDrivePolicy.StripSizeEnum>][-WritePolicy< StorageVirtualDrivePolicy.WritePolicyEnum>]
+Initialize-IntersightStorageVirtualDrivePolicy [-AccessPolicy< StorageVirtualDrivePolicy.AccessPolicyEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageVirtualDrivePolicy.ClassIdEnum>][-DriveCache< StorageVirtualDrivePolicy.DriveCacheEnum>][-ObjectType< StorageVirtualDrivePolicy.ObjectTypeEnum>][-ReadPolicy< StorageVirtualDrivePolicy.ReadPolicyEnum>][-StripSize< StorageVirtualDrivePolicy.StripSizeEnum>][-WritePolicy< StorageVirtualDrivePolicy.WritePolicyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: StorageVirtualDrivePolicy.ObjectTypeEnum
@@ -141,6 +141,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

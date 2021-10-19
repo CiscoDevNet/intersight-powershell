@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightUcsdconnectorRestClientMessage [-AdditionalProperties< Dictionary<string,object>>][-Body< string>][-ClassId< UcsdconnectorRestClientMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-Header< object>][-Method< string>][-ObjectType< UcsdconnectorRestClientMessage.ObjectTypeEnum>][-RemoteUserLocale< string>][-RemoteUserName< string>][-RemoteUserRoles< string>][-RemoteUserSessionId< string>][-RestUrl< string>][-SecureProperties< object>]
+Initialize-IntersightUcsdconnectorRestClientMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< UcsdconnectorRestClientMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-Header< object>][-Method< string>][-ObjectType< UcsdconnectorRestClientMessage.ObjectTypeEnum>][-RemoteUserLocale< string>][-RemoteUserName< string>][-RemoteUserRoles< string>][-RemoteUserSessionId< string>][-RestUrl< string>][-SecureProperties< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: UcsdconnectorRestClientMessage.ObjectTypeEnum
@@ -235,6 +235,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

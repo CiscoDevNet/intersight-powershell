@@ -17,7 +17,7 @@ Remove-IntersightOprsSyncTargetListMessage -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;OprsSyncTargetListMessage&amp;apos; resource.
+Delete a &apos;OprsSyncTargetListMessage&apos; resource.
 
 ## EXAMPLES
 
@@ -63,6 +63,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-IntersightOprsSyncTargetListMessage](./Get-IntersightOprsSyncTargetListMessage.md)
 
 [New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
 

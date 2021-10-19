@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexVmImportOperation [-AdditionalProperties< Dictionary<string,object>>][-DeviceMoid< AssetDeviceRegistrationRelationship>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>]
+New-IntersightHyperflexVmImportOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DeviceMoid< AssetDeviceRegistrationRelationship>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -106,6 +106,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -133,6 +163,8 @@ PS C:\> New-IntersightHyperflexVmImportOperation
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
+
 [Remove-IntersightHyperflexVmImportOperation](./Remove-IntersightHyperflexVmImportOperation.md)
 
-[Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

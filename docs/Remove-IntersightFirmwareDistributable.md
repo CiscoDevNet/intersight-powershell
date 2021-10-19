@@ -17,7 +17,7 @@ Remove-IntersightFirmwareDistributable -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareDistributable&apos; resource.
+Delete a &amp;apos;FirmwareDistributable&amp;apos; resource.
 
 ## EXAMPLES
 

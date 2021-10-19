@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexAppSettingConstraint [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexAppSettingConstraint.ClassIdEnum>][-DeploymentType< HyperflexAppSettingConstraint.DeploymentTypeEnum>][-HxdpVersion< string>][-HypervisorType< HyperflexAppSettingConstraint.HypervisorTypeEnum>][-MgmtPlatform< HyperflexAppSettingConstraint.MgmtPlatformEnum>][-ObjectType< HyperflexAppSettingConstraint.ObjectTypeEnum>][-ServerModel< string>]
+Initialize-IntersightHyperflexAppSettingConstraint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexAppSettingConstraint.ClassIdEnum>][-DeploymentType< HyperflexAppSettingConstraint.DeploymentTypeEnum>][-HxdpVersion< string>][-HypervisorType< HyperflexAppSettingConstraint.HypervisorTypeEnum>][-MgmtPlatform< HyperflexAppSettingConstraint.MgmtPlatformEnum>][-ObjectType< HyperflexAppSettingConstraint.ObjectTypeEnum>][-ServerModel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorType
-The hypervisor type for the HyperFlex cluster.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor running on the HyperFlex cluster is Cisco HyperFlex Application Platform.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
+The hypervisor type for the HyperFlex cluster.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
 
 ```yaml
 Type: HyperflexAppSettingConstraint.HypervisorTypeEnum
@@ -141,6 +141,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

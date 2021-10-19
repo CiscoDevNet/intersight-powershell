@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachine.ActionEnum>][-AdditionalProperties< Dictionary<string,object>>][-AffinitySelectors< List<InfraMetaData>>][-AntiAffinitySelectors< List<InfraMetaData>>][-CloudInitConfig< VirtualizationCloudInitConfig>][-Cluster< VirtualizationBaseClusterRelationship>][-ClusterEsxi< string>][-Cpu< long>][-Disk< List<VirtualizationVirtualMachineDisk>>][-ForceDelete< bool>][-GuestOs< VirtualizationVirtualMachine.GuestOsEnum>][-Host< VirtualizationBaseHostRelationship>][-HostEsxi< string>][-Interfaces< List<VirtualizationNetworkInterface>>][-Labels< List<InfraMetaData>>][-Memory< long>][-Moid< string>][[-Name]< string>][-PowerState< VirtualizationVirtualMachine.PowerStateEnum>][-ProvisionType< VirtualizationVirtualMachine.ProvisionTypeEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< List<MoTag>>][-VmConfig< VirtualizationBaseVmConfiguration>]
+New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachine.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-AntiAffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-CloudInitConfig< VirtualizationCloudInitConfig>][-Cluster< VirtualizationBaseClusterRelationship>][-ClusterEsxi< string>][-Cpu< long>][-Disk< System.Collections.Generic.List`1[VirtualizationVirtualMachineDisk]>][-ForceDelete< bool>][-GuestOs< VirtualizationVirtualMachine.GuestOsEnum>][-Host< VirtualizationBaseHostRelationship>][-HostEsxi< string>][-Interfaces< System.Collections.Generic.List`1[VirtualizationNetworkInterface]>][-Labels< System.Collections.Generic.List`1[InfraMetaData]>][-Memory< long>][-Moid< string>][[-Name]< string>][-PowerState< VirtualizationVirtualMachine.PowerStateEnum>][-ProvisionType< VirtualizationVirtualMachine.ProvisionTypeEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmConfig< VirtualizationBaseVmConfiguration>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;VirtualizationVirtualMachine&apos; resource.
+Create a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionType
-Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &amp;apos;discovered&amp;apos; and not created from Intersight. No provisioning information is available.
+Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &apos;discovered&apos; and not created from Intersight. No provisioning information is available.
 
 ```yaml
 Type: VirtualizationVirtualMachine.ProvisionTypeEnum
@@ -393,6 +393,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -420,11 +450,13 @@ PS C:\> New-IntersightVirtualizationVirtualMachine
 
 ## RELATED LINKS
 
-[Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
-
 [Set-IntersightVirtualizationVirtualMachine](./Set-IntersightVirtualizationVirtualMachine.md)
 
 [Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
+
+[Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
+
+[Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
 
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
 
@@ -433,5 +465,7 @@ PS C:\> New-IntersightVirtualizationVirtualMachine
 [Initialize-IntersightVirtualizationVirtualMachineDisk](./Initialize-IntersightVirtualizationVirtualMachineDisk.md)
 
 [Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVirtualizationBaseVmConfiguration](./Initialize-IntersightVirtualizationBaseVmConfiguration.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiaapiRevisionInfo [-AdditionalProperties< Dictionary<string,object>>][-ClassId< NiaapiRevisionInfo.ClassIdEnum>][-DatePublished< DateTime>][-ObjectType< NiaapiRevisionInfo.ObjectTypeEnum>][-RevisionComment< string>][-RevisionNo< string>]
+Initialize-IntersightNiaapiRevisionInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiaapiRevisionInfo.ClassIdEnum>][-DatePublished< DateTime>][-ObjectType< NiaapiRevisionInfo.ObjectTypeEnum>][-RevisionComment< string>][-RevisionNo< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -111,6 +111,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowRollbackTask [-AdditionalProperties< Dictionary<string,object>>][-CatalogMoid< string>][-ClassId< WorkflowRollbackTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Name< string>][-ObjectType< WorkflowRollbackTask.ObjectTypeEnum>][-TaskMoid< string>][-Version< long>]
+Initialize-IntersightWorkflowRollbackTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CatalogMoid< string>][-ClassId< WorkflowRollbackTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Name< string>][-ObjectType< WorkflowRollbackTask.ObjectTypeEnum>][-TaskMoid< string>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowRollbackTask.ObjectTypeEnum
@@ -158,6 +158,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

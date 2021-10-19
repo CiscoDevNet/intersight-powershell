@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryCategoryMapperModel -Moid <String> [<CommonPa
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwarerepositoryCategoryMapperModel&amp;apos; resource.
+Delete a &apos;SoftwarerepositoryCategoryMapperModel&apos; resource.
 
 ## EXAMPLES
 

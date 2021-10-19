@@ -8,16 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterDceInterfaceSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterFcSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterDceInterfaceSettings")]
-    public class InitializeIntersightAdapterDceInterfaceSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterFcSettings")]
+    public class InitializeIntersightAdapterFcSettings:PSCmdlet
 	{
-		public InitializeIntersightAdapterDceInterfaceSettings()
+		public InitializeIntersightAdapterFcSettings()
 		{
-            ClassId = AdapterDceInterfaceSettings.ClassIdEnum.AdapterDceInterfaceSettings;
-            FecMode = AdapterDceInterfaceSettings.FecModeEnum.Cl91;
-            ObjectType = AdapterDceInterfaceSettings.ObjectTypeEnum.AdapterDceInterfaceSettings;
+            ClassId = AdapterFcSettings.ClassIdEnum.AdapterFcSettings;
+            ObjectType = AdapterFcSettings.ObjectTypeEnum.AdapterFcSettings;
             
 		}
         // <summary>
@@ -34,25 +33,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterDceInterfaceSettings.ClassIdEnum ClassId {
+        public AdapterFcSettings.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Forward Error Correction (FEC) mode setting for the DCE interfaces of the adapter. FEC mode setting is supported only for Cisco VIC 14xx adapters. FEC mode 'cl74' is unsupported for Cisco VIC 1495/1497. This setting will be ignored for unsupported adapters and for unavailable DCE interfaces.\n* `cl91` - Use cl91 standard as FEC mode setting. 'Clause 91' aka RS-FEC ('ReedSolomon' FEC) offers better error protection against bursty and random errors but adds latency.\n* `cl74` - Use cl74 standard as FEC mode setting. 'Clause 74' aka FC-FEC ('FireCode' FEC) offers simple, low-latency protection against 1 burst/sparse bit error, but it is not good for random errors.\n* `Off` - Disable FEC mode on the DCE Interface."</para>
+        /// <para type="description">"Status of FIP protocol on the adapter interfaces."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterDceInterfaceSettings.FecModeEnum FecMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"DCE interface id on which settings needs to be configured. Supported values are (0-3)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long InterfaceId {
+        public bool FipEnabled {
             get;
             set;
         }
@@ -61,26 +51,88 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterDceInterfaceSettings.ObjectTypeEnum ObjectType {
+        public AdapterFcSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AdapterDceInterfaceSettings initObject = new Intersight.Model.AdapterDceInterfaceSettings();
+             Intersight.Model.AdapterFcSettings initObject = new Intersight.Model.AdapterFcSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("FecMode"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("FipEnabled"))
             {
-                initObject.FecMode = this.FecMode;
+                initObject.FipEnabled = this.FipEnabled;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceId"))
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterPortChannelSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterPortChannelSettings")]
+    public class InitializeIntersightAdapterPortChannelSettings:PSCmdlet
+	{
+		public InitializeIntersightAdapterPortChannelSettings()
+		{
+            ClassId = AdapterPortChannelSettings.ClassIdEnum.AdapterPortChannelSettings;
+            ObjectType = AdapterPortChannelSettings.ObjectTypeEnum.AdapterPortChannelSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AdapterPortChannelSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When Port Channel is enabled, two vNICs and two vHBAs are available for use on the adapter card. When disabled, four vNICs and four vHBAs are available for use on the adapter card. Disabling port channel reboots the server. Port Channel is supported only for Cisco VIC 1455/1457 adapters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AdapterPortChannelSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AdapterPortChannelSettings initObject = new Intersight.Model.AdapterPortChannelSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.InterfaceId = this.InterfaceId;
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -206,72 +258,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterPortChannelSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterPortChannelSettings")]
-    public class InitializeIntersightAdapterPortChannelSettings:PSCmdlet
-	{
-		public InitializeIntersightAdapterPortChannelSettings()
-		{
-            ClassId = AdapterPortChannelSettings.ClassIdEnum.AdapterPortChannelSettings;
-            ObjectType = AdapterPortChannelSettings.ObjectTypeEnum.AdapterPortChannelSettings;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AdapterPortChannelSettings.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When Port Channel is enabled, two vNICs and two vHBAs are available for use on the adapter card. When disabled, four vNICs and four vHBAs are available for use on the adapter card. Disabling port channel reboots the server. Port Channel is supported only for Cisco VIC 1455/1457 adapters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AdapterPortChannelSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AdapterPortChannelSettings initObject = new Intersight.Model.AdapterPortChannelSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize AdapterEthSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightAdapterEthSettings")]
@@ -338,15 +324,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterFcSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterDceInterfaceSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterFcSettings")]
-    public class InitializeIntersightAdapterFcSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterDceInterfaceSettings")]
+    public class InitializeIntersightAdapterDceInterfaceSettings:PSCmdlet
 	{
-		public InitializeIntersightAdapterFcSettings()
+		public InitializeIntersightAdapterDceInterfaceSettings()
 		{
-            ClassId = AdapterFcSettings.ClassIdEnum.AdapterFcSettings;
-            ObjectType = AdapterFcSettings.ObjectTypeEnum.AdapterFcSettings;
+            ClassId = AdapterDceInterfaceSettings.ClassIdEnum.AdapterDceInterfaceSettings;
+            FecMode = AdapterDceInterfaceSettings.FecModeEnum.Cl91;
+            ObjectType = AdapterDceInterfaceSettings.ObjectTypeEnum.AdapterDceInterfaceSettings;
             
 		}
         // <summary>
@@ -363,16 +350,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterFcSettings.ClassIdEnum ClassId {
+        public AdapterDceInterfaceSettings.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Status of FIP protocol on the adapter interfaces."</para>
+        /// <para type="description">"Forward Error Correction (FEC) mode setting for the DCE interfaces of the adapter. FEC mode setting is supported only for Cisco VIC 14xx adapters. FEC mode 'cl74' is unsupported for Cisco VIC 1495/1497. This setting will be ignored for unsupported adapters and for unavailable DCE interfaces.\n* `cl91` - Use cl91 standard as FEC mode setting. 'Clause 91' aka RS-FEC ('ReedSolomon' FEC) offers better error protection against bursty and random errors but adds latency.\n* `cl74` - Use cl74 standard as FEC mode setting. 'Clause 74' aka FC-FEC ('FireCode' FEC) offers simple, low-latency protection against 1 burst/sparse bit error, but it is not good for random errors.\n* `Off` - Disable FEC mode on the DCE Interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool FipEnabled {
+        public AdapterDceInterfaceSettings.FecModeEnum FecMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"DCE interface id on which settings needs to be configured. Supported values are (0-3)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long InterfaceId {
             get;
             set;
         }
@@ -381,22 +377,26 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterFcSettings.ObjectTypeEnum ObjectType {
+        public AdapterDceInterfaceSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AdapterFcSettings initObject = new Intersight.Model.AdapterFcSettings();
+             Intersight.Model.AdapterDceInterfaceSettings initObject = new Intersight.Model.AdapterDceInterfaceSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("FipEnabled"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("FecMode"))
             {
-                initObject.FipEnabled = this.FipEnabled;
+                initObject.FecMode = this.FecMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceId"))
+            {
+                initObject.InterfaceId = this.InterfaceId;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamSessionLimits [-AdditionalProperties< Dictionary<string,object>>][-IdleTimeOut< long>][-MaximumLimit< long>][[-Moid]< string>][-PerUserLimit< long>][-Permission< IamPermissionRelationship>][-SessionTimeOut< long>][-Tags< List<MoTag>>]
+Set-IntersightIamSessionLimits [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-IdleTimeOut< long>][-MaximumLimit< long>][[-Moid]< string>][-PerUserLimit< long>][-Permission< IamPermissionRelationship>][-SessionTimeOut< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;IamSessionLimits&apos; resource.
+Update a &amp;apos;IamSessionLimits&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -148,6 +148,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -175,8 +205,10 @@ PS C:\> Set-IntersightIamSessionLimits
 
 ## RELATED LINKS
 
+[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
+
 [Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
 
 [New-IntersightIamSessionLimits](./New-IntersightIamSessionLimits.md)
 
-[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

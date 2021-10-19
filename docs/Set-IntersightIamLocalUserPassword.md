@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamLocalUserPassword [-AdditionalProperties< Dictionary<string,object>>][-CurrentPassword< string>][[-Moid]< string>][-NewPassword< string>][-Password< byte>][-Tags< List<MoTag>>]
+Set-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CurrentPassword< string>][[-Moid]< string>][-NewPassword< string>][-Password< byte>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,8 +86,6 @@ Accept wildcard characters: False
 ### -Password
 User&apos;s current valid passsord.
 
-Note :- Use Initialize-Intersightbyte to create the object of complex type byte
-
 ```yaml
 Type: byte
 Parameter Sets: (All)
@@ -114,6 +112,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -144,4 +172,4 @@ PS C:\> Set-IntersightIamLocalUserPassword
 
 ## RELATED LINKS
 
-[Initialize-Intersightbyte](./Initialize-Intersightbyte.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

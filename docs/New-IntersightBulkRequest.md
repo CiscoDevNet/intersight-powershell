@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkRequest [-AdditionalProperties< Dictionary<string,object>>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Requests< List<BulkSubRequest>>][-Results< List<BulkApiResult>>][-Tags< List<MoTag>>][-Uri< string>][-Verb< BulkRequest.VerbEnum>]
+New-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[string]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,36 @@ New-IntersightBulkRequest [-AdditionalProperties< Dictionary<string,object>>][-M
 Create a &apos;BulkRequest&apos; resource.
 
 ## PARAMETERS
+
+### -ActionOnError
+The action to be taken when an error occurs during processing of the request.\n* `Stop` - Stop the processing of the request after the first error.\n* `Proceed` - Proceed with the processing of the request even when an error occurs.
+
+```yaml
+Type: BulkRequest.ActionOnErrorEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Actions
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -88,13 +118,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Results
-
-
-Note :- Use Initialize-IntersightBulkApiResult to create the object of complex type BulkApiResult
+### -SkipDuplicates
+Skip the already present objects.
 
 ```yaml
-Type: System.Collections.Generic.List`1[BulkApiResult]
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -123,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The URI on which this bulk action is to be performed.
+The URI on which this bulk action is to be performed.\nThe value will be used when there is no override in the SubRequest.
 
 ```yaml
 Type: string
@@ -138,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Verb
-The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource.
+The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\nThe value will be used when there is no override in the SubRequest.\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource.
 
 ```yaml
 Type: BulkRequest.VerbEnum
@@ -149,6 +177,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -179,6 +237,12 @@ PS C:\> New-IntersightBulkRequest
 
 ## RELATED LINKS
 
+[Get-IntersightBulkRequest](./Get-IntersightBulkRequest.md)
+
+[Initialize-IntersightBulkHttpHeader](./Initialize-IntersightBulkHttpHeader.md)
+
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
 
 [Initialize-IntersightBulkApiResult](./Initialize-IntersightBulkApiResult.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< Dictionary<string,object>>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-InputDefinition< List<WorkflowBaseDataType>>][-InputParameterSet< List<WorkflowParameterSet>>][-Label< string>][[-Moid]< string>][-Name< string>][-OutputDefinition< List<WorkflowBaseDataType>>][-OutputParameters< object>][-Properties< WorkflowWorkflowProperties>][-Tags< List<MoTag>>][-Tasks< List<WorkflowWorkflowTask>>][-UiInputFilters< List<WorkflowUiInputFilter>>][-UiRenderingData< object>][-Version< long>][-WorkflowMetadata< WorkflowWorkflowMetadataRelationship>]
+Set-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputParameterSet< System.Collections.Generic.List`1[WorkflowParameterSet]>][-Label< string>][[-Moid]< string>][-Name< string>][-OutputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-OutputParameters< object>][-Properties< WorkflowWorkflowProperties>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tasks< System.Collections.Generic.List`1[WorkflowWorkflowTask]>][-UiInputFilters< System.Collections.Generic.List`1[WorkflowUiInputFilter]>][-UiRenderingData< object>][-Version< long>][-WorkflowMetadata< WorkflowWorkflowMetadataRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowWorkflowDefinition&amp;apos; resource.
+Update a &apos;WorkflowWorkflowDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputParameters
-The output mappings for the workflow. The outputs for workflows will generally be task output variables that we want to export out at the end of the workflow. The format to specify the mapping is &amp;apos;${Source.output.JsonPath}&amp;apos;, where &amp;apos;Source&amp;apos; is the name of the task within the workflow. Any task output can be mapped to a workflow output as long as the types are compatible. It&amp;apos;s followed by a JSON path expression to extract JSON fragment from source&amp;apos;s output.
+The output mappings for the workflow. The outputs for workflows will generally be task output variables that we want to export out at the end of the workflow. The format to specify the mapping is &apos;${Source.output.JsonPath}&apos;, where &apos;Source&apos; is the name of the task within the workflow. Any task output can be mapped to a workflow output as long as the types are compatible. It&apos;s followed by a JSON path expression to extract JSON fragment from source&apos;s output.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -317,6 +317,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -344,11 +374,11 @@ PS C:\> Set-IntersightWorkflowWorkflowDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
-
 [Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [New-IntersightWorkflowWorkflowDefinition](./New-IntersightWorkflowWorkflowDefinition.md)
+
+[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 
@@ -361,3 +391,7 @@ PS C:\> Set-IntersightWorkflowWorkflowDefinition
 [Initialize-IntersightWorkflowWorkflowTask](./Initialize-IntersightWorkflowWorkflowTask.md)
 
 [Initialize-IntersightWorkflowUiInputFilter](./Initialize-IntersightWorkflowUiInputFilter.md)
+
+[Initialize-IntersightWorkflowValidationInformation](./Initialize-IntersightWorkflowValidationInformation.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

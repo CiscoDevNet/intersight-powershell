@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightOsConfigurationFile [-AdditionalProperties< Dictionary<string,object>>][-Catalog< OsCatalogRelationship>][-Description< string>][-Distributions< List<HclOperatingSystemRelationship>>][-FileContent< string>][-Internal< bool>][[-Moid]< string>][-Name< string>][-Placeholders< List<OsPlaceHolder>>][-Tags< List<MoTag>>]
+Set-IntersightOsConfigurationFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< OsCatalogRelationship>][-Description< string>][-Distributions< System.Collections.Generic.List`1[HclOperatingSystemRelationship]>][-FileContent< string>][-Internal< bool>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -149,23 +149,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Placeholders
-
-
-Note :- Use Initialize-IntersightOsPlaceHolder to create the object of complex type OsPlaceHolder
-
-```yaml
-Type: System.Collections.Generic.List`1[OsPlaceHolder]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -180,6 +163,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -212,8 +225,10 @@ PS C:\> Set-IntersightOsConfigurationFile
 
 [Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
 
-[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
-
 [New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
 
+[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
+
 [Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

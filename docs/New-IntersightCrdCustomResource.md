@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-DcLauncher< string>][-Image< string>][-Moid< string>][[-Name]< string>][-Namespace< string>][-Port< long>][-Properties< List<CrdCustomResourceConfigProperty>>][-Tags< List<MoTag>>][-TargetId< string>][-TargetMoid< string>][-TargetType< string>]
+New-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DcLauncher< string>][-Image< string>][-Moid< string>][[-Name]< string>][-Namespace< string>][-Port< long>][-Properties< System.Collections.Generic.List`1[CrdCustomResourceConfigProperty]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetId< string>][-TargetMoid< string>][-TargetType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CrdCustomResource&amp;apos; resource.
+Create a &apos;CrdCustomResource&apos; resource.
 
 ## PARAMETERS
 
@@ -225,6 +225,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -252,10 +282,12 @@ PS C:\> New-IntersightCrdCustomResource
 
 ## RELATED LINKS
 
-[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
+[Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
 
-[Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
+[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
 
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

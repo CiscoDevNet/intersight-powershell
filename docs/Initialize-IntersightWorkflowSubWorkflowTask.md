@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowSubWorkflowTask [-AdditionalProperties< Dictionary<string,object>>][-CatalogMoid< string>][-ClassId< WorkflowSubWorkflowTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowSubWorkflowTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-RollbackDisabled< bool>][-UseDefault< bool>][-Version< long>][-WorkflowDefinitionName< string>]
+Initialize-IntersightWorkflowSubWorkflowTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CatalogMoid< string>][-ClassId< WorkflowSubWorkflowTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowSubWorkflowTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-RollbackDisabled< bool>][-UseDefault< bool>][-Version< long>][-WorkflowDefinitionName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowSubWorkflowTask.ObjectTypeEnum
@@ -233,6 +233,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

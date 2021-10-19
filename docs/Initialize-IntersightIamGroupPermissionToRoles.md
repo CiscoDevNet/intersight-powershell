@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamGroupPermissionToRoles [-AdditionalProperties< Dictionary<string,object>>][-ClassId< IamGroupPermissionToRoles.ClassIdEnum>][-ObjectType< IamGroupPermissionToRoles.ObjectTypeEnum>][-Orgs< List<Model.MoMoRef>>]
+Initialize-IntersightIamGroupPermissionToRoles [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamGroupPermissionToRoles.ClassIdEnum>][-ObjectType< IamGroupPermissionToRoles.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,20 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Orgs
-
-
-Note :- Use Initialize-IntersightMoMoRef to create the object of complex type MoMoRef
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.MoMoRef]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -112,5 +125,3 @@ PS C:\> Initialize-IntersightIamGroupPermissionToRoles
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)

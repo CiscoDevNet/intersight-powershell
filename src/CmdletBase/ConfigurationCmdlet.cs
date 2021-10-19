@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		public SecureString ApiKeyPassPhrase { get; set; }
 		public WebProxy Proxy {get;set;}
 		public string HashAlgorithm { get; set; }
-		public List<string> HttpSingingHeader { get; set; }
+		public List<string> HttpSigningHeader { get; set; }
 		public int SignatureValidityPeriod { get; set; }
 
 	}
@@ -44,7 +44,7 @@ namespace Intersight.PowerShell
 		public string HashAlgorithm { get; set; } = "sha256";
 
 		[Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
-		public List<string> HttpSingingHeader { get; set; }
+		public List<string> HttpSigningHeader { get; set; }
 
 		[Parameter(Mandatory = false,ValueFromPipelineByPropertyName = true)]
 		public int SignatureValidityPeriod { get; set; }
@@ -58,10 +58,10 @@ namespace Intersight.PowerShell
 			{
 				KeyId = this.ApiKeyId,
 				KeyFilePath = this.ApiKeyFilePath,
-				HttpSigningHeader = this.HttpSingingHeader
+				HttpSigningHeader = this.HttpSigningHeader
 			};
 
-			if(this.HttpSingingHeader.Contains("(expires)"))
+			if(this.HttpSigningHeader.Contains("(expires)"))
 			{
 				if (SignatureValidityPeriod <= 0) {
 					throw new Exception("SignatureValidityPeriod must be greater than 0 seconds.");
@@ -123,7 +123,7 @@ namespace Intersight.PowerShell
 					configInfo.ApiKeyId = CmdletBase.Config.HttpSigningConfiguration.KeyId;
 					configInfo.ApiKeyFilePath = CmdletBase.Config.HttpSigningConfiguration.KeyFilePath;
 					configInfo.ApiKeyPassPhrase = CmdletBase.Config.HttpSigningConfiguration.KeyPassPhrase;
-					configInfo.HttpSingingHeader = CmdletBase.Config.HttpSigningConfiguration.HttpSigningHeader;
+					configInfo.HttpSigningHeader = CmdletBase.Config.HttpSigningConfiguration.HttpSigningHeader;
 					configInfo.HashAlgorithm = CmdletBase.Config.HttpSigningConfiguration.HashAlgorithm.Name;
 					configInfo.SignatureValidityPeriod = CmdletBase.Config.HttpSigningConfiguration.SignatureValidityPeriod;
 				}

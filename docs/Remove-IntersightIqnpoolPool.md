@@ -17,7 +17,7 @@ Remove-IntersightIqnpoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IqnpoolPool&amp;apos; resource.
+Delete a &apos;IqnpoolPool&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
+[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
 [New-IntersightIqnpoolPool](./New-IntersightIqnpoolPool.md)
 
-[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
+[Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSysConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexSysConfigPolicy&amp;apos; resource.
+Delete a &apos;HyperflexSysConfigPolicy&apos; resource.
 
 ## EXAMPLES
 

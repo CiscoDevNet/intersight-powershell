@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSoftwareVersionPolicy -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexSoftwareVersionPolicy&apos; resource.
+Delete a &amp;apos;HyperflexSoftwareVersionPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)
-
 [Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [New-IntersightHyperflexSoftwareVersionPolicy](./New-IntersightHyperflexSoftwareVersionPolicy.md)
+
+[Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)
 

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightLicenseIwoCustomerOp [-AccountLicenseData< LicenseAccountLicenseDataRelationship>][-ActiveAdmin< bool>][-ActiveLicenseType< LicenseIwoCustomerOp.ActiveLicenseTypeEnum>][-AdditionalProperties< Dictionary<string,object>>][-EnableTrial< bool>][-EvaluationPeriod< long>][-ExtraEvaluation< long>][[-Moid]< string>][-Tags< List<MoTag>>]
+Set-IntersightLicenseIwoCustomerOp [-AccountLicenseData< LicenseAccountLicenseDataRelationship>][-ActiveAdmin< bool>][-ActiveLicenseType< LicenseIwoCustomerOp.ActiveLicenseTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EnableTrial< bool>][-EvaluationPeriod< long>][-ExtraEvaluation< long>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseIwoCustomerOp&amp;apos; resource.
+Update a &apos;LicenseIwoCustomerOp&apos; resource.
 
 ## PARAMETERS
 
@@ -42,7 +42,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveAdmin
-The workload optimizer license administrative state.\nSet this property to &apos;true&apos; to activate the workload optimizer license entitlements.
+The workload optimizer license administrative state.\nSet this property to &amp;apos;true&amp;apos; to activate the workload optimizer license entitlements.
 
 ```yaml
 Type: bool
@@ -163,6 +163,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -191,3 +221,5 @@ PS C:\> Set-IntersightLicenseIwoCustomerOp
 ## RELATED LINKS
 
 [Get-IntersightLicenseIwoCustomerOp](./Get-IntersightLicenseIwoCustomerOp.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

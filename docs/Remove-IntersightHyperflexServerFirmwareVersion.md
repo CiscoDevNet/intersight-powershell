@@ -17,7 +17,7 @@ Remove-IntersightHyperflexServerFirmwareVersion -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexServerFirmwareVersion&apos; resource.
+Delete a &amp;apos;HyperflexServerFirmwareVersion&amp;apos; resource.
 
 ## EXAMPLES
 

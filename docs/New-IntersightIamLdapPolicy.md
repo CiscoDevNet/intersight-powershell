@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamLdapPolicy [-AdditionalProperties< Dictionary<string,object>>][-ApplianceAccount< IamAccountRelationship>][-BaseProperties< IamLdapBaseProperties>][-Description< string>][-DnsParameters< IamLdapDnsParameters>][-EnableDns< bool>][-Enabled< bool>][-Groups< List<IamLdapGroupRelationship>>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-Providers< List<IamLdapProviderRelationship>>][-Tags< List<MoTag>>][-UserSearchPrecedence< IamLdapPolicy.UserSearchPrecedenceEnum>]
+New-IntersightIamLdapPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApplianceAccount< IamAccountRelationship>][-BaseProperties< IamLdapBaseProperties>][-Description< string>][-DnsParameters< IamLdapDnsParameters>][-EnableDns< bool>][-Enabled< bool>][-Groups< System.Collections.Generic.List`1[IamLdapGroupRelationship]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Providers< System.Collections.Generic.List`1[IamLdapProviderRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserSearchPrecedence< IamLdapPolicy.UserSearchPrecedenceEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -269,6 +269,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -296,12 +326,14 @@ PS C:\> New-IntersightIamLdapPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
+
 [Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
 
 [Remove-IntersightIamLdapPolicy](./Remove-IntersightIamLdapPolicy.md)
 
-[Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
-
 [Initialize-IntersightIamLdapBaseProperties](./Initialize-IntersightIamLdapBaseProperties.md)
 
 [Initialize-IntersightIamLdapDnsParameters](./Initialize-IntersightIamLdapDnsParameters.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

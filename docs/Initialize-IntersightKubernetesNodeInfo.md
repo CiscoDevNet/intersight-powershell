@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesNodeInfo [-AdditionalProperties< Dictionary<string,object>>][-Architecture< string>][-BootId< string>][-ClassId< KubernetesNodeInfo.ClassIdEnum>][-ContainerRuntimeVersion< string>][-KernelVersion< string>][-KubeProxyVersion< string>][-KubeletVersion< string>][-MachineId< string>][-ObjectType< KubernetesNodeInfo.ObjectTypeEnum>][-OperatingSystem< string>][-OsImage< string>][-SystemUuid< string>]
+Initialize-IntersightKubernetesNodeInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Architecture< string>][-BootId< string>][-ClassId< KubernetesNodeInfo.ClassIdEnum>][-ContainerRuntimeVersion< string>][-KernelVersion< string>][-KubeProxyVersion< string>][-KubeletVersion< string>][-MachineId< string>][-ObjectType< KubernetesNodeInfo.ObjectTypeEnum>][-OperatingSystem< string>][-OsImage< string>][-SystemUuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -KubeletVersion
-The kubelet is the primary \&amp;quot;node agent\&amp;quot; that runs on each node. It can register the node with the apiserver using one of such as the hostname; a flag to override the hostname; or specific logic for a cloud provider. This field describes the kubelet version the node currently using.
+The kubelet is the primary \&quot;node agent\&quot; that runs on each node. It can register the node with the apiserver using one of such as the hostname; a flag to override the hostname; or specific logic for a cloud provider. This field describes the kubelet version the node currently using.
 
 ```yaml
 Type: string
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: KubernetesNodeInfo.ObjectTypeEnum
@@ -216,6 +216,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

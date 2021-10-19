@@ -17,7 +17,7 @@ Remove-IntersightCapabilityPsuManufacturingDef -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilityPsuManufacturingDef&amp;apos; resource.
+Delete a &apos;CapabilityPsuManufacturingDef&apos; resource.
 
 ## EXAMPLES
 

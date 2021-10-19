@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowTaskInfo [-AdditionalProperties< Dictionary<string,object>>][-Message< List<WorkflowMessage>>][[-Moid]< string>][-Status< string>][-Tags< List<MoTag>>][-TaskDefinition< WorkflowTaskDefinitionRelationship>][-TaskInstIdList< List<WorkflowTaskRetryInfo>>]
+Set-IntersightWorkflowTaskInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Status< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefinition< WorkflowTaskDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,23 +28,6 @@ Update a &apos;WorkflowTaskInfo&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Message
-
-
-Note :- Use Initialize-IntersightWorkflowMessage to create the object of complex type WorkflowMessage
-
-```yaml
-Type: System.Collections.Generic.List`1[WorkflowMessage]
 Parameter Sets: (All)
 Aliases:
 
@@ -120,20 +103,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TaskInstIdList
-
-
-Note :- Use Initialize-IntersightWorkflowTaskRetryInfo to create the object of complex type WorkflowTaskRetryInfo
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[WorkflowTaskRetryInfo]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -166,6 +162,10 @@ PS C:\> Set-IntersightWorkflowTaskInfo
 
 [Get-IntersightWorkflowTaskInfo](./Get-IntersightWorkflowTaskInfo.md)
 
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)
+
 [Initialize-IntersightWorkflowMessage](./Initialize-IntersightWorkflowMessage.md)
 
 [Initialize-IntersightWorkflowTaskRetryInfo](./Initialize-IntersightWorkflowTaskRetryInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

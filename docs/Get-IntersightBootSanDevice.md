@@ -25,7 +25,7 @@ Get-IntersightBootSanDevice [-Count <Boolean>] [-InlineCount <String>] [-Select 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;BootSanDevice&amp;apos; resource.,
+Read a &apos;BootSanDevice&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

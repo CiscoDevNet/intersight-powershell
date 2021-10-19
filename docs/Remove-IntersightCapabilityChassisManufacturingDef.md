@@ -17,7 +17,7 @@ Remove-IntersightCapabilityChassisManufacturingDef -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilityChassisManufacturingDef&amp;apos; resource.
+Delete a &apos;CapabilityChassisManufacturingDef&apos; resource.
 
 ## EXAMPLES
 

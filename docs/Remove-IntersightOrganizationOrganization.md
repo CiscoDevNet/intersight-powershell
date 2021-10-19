@@ -17,7 +17,7 @@ Remove-IntersightOrganizationOrganization -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;OrganizationOrganization&amp;apos; resource.
+Delete a &apos;OrganizationOrganization&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
+[Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
 
 [New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
-[Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
+[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
 

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricAppliancePcRole [-AdditionalProperties< Dictionary<string,object>>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-EthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< FabricEthNetworkGroupPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< List<FabricPortIdentifier>>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< List<MoTag>>]
+Set-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-EthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< FabricEthNetworkGroupPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricAppliancePcRole&apos; resource.
+Update a &amp;apos;FabricAppliancePcRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -201,6 +201,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -228,10 +258,12 @@ PS C:\> Set-IntersightFabricAppliancePcRole
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
+
 [Get-IntersightFabricAppliancePcRole](./Get-IntersightFabricAppliancePcRole.md)
 
 [New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
 
-[Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
-
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

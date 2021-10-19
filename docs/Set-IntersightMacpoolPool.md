@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightMacpoolPool [-AdditionalProperties< Dictionary<string,object>>][-AssignmentOrder< MacpoolPool.AssignmentOrderEnum>][-Description< string>][-MacBlocks< List<MacpoolBlock>>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< List<MoTag>>]
+Set-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< MacpoolPool.AssignmentOrderEnum>][-Description< string>][-MacBlocks< System.Collections.Generic.List`1[MacpoolBlock]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -150,6 +150,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -177,10 +207,12 @@ PS C:\> Set-IntersightMacpoolPool
 
 ## RELATED LINKS
 
+[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
+
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
 
 [New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
 
-[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
-
 [Initialize-IntersightMacpoolBlock](./Initialize-IntersightMacpoolBlock.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesClusterProfile [-Action< string>][-AdditionalProperties< Dictionary<string,object>>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< List<IppoolPoolRelationship>>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-Description< string>][-EssentialAddons< List<KubernetesEssentialAddon>>][-LoadbalancerIpLeases< List<IppoolIpLeaseRelationship>>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][[-Moid]< string>][-Name< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< List<KubernetesNodeGroupProfileRelationship>>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< List<PolicyAbstractPolicyRelationship>>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< List<MoTag>>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>]
+Set-IntersightKubernetesClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-Description< string>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][[-Moid]< string>][-Name< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -307,6 +307,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ParentSolutionProfile
+A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: MoBaseMoRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PolicyBucket
 An array of relationships to policyAbstractPolicy resources.
 
@@ -426,6 +444,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -459,10 +507,16 @@ PS C:\> Set-IntersightKubernetesClusterProfile
 
 [New-IntersightKubernetesClusterProfile](./New-IntersightKubernetesClusterProfile.md)
 
+[Initialize-IntersightKubernetesActionInfo](./Initialize-IntersightKubernetesActionInfo.md)
+
 [Initialize-IntersightKubernetesClusterCertificateConfiguration](./Initialize-IntersightKubernetesClusterCertificateConfiguration.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
 [Initialize-IntersightKubernetesEssentialAddon](./Initialize-IntersightKubernetesEssentialAddon.md)
 
+[Initialize-IntersightKubernetesConfiguration](./Initialize-IntersightKubernetesConfiguration.md)
+
 [Initialize-IntersightKubernetesClusterManagementConfig](./Initialize-IntersightKubernetesClusterManagementConfig.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

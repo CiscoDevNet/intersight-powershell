@@ -17,7 +17,7 @@ Remove-IntersightFabricSwitchClusterProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricSwitchClusterProfile&apos; resource.
+Delete a &amp;apos;FabricSwitchClusterProfile&amp;apos; resource.
 
 ## EXAMPLES
 

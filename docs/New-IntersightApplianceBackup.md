@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightApplianceBackup [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-Filename< string>][-Messages< List<string>>][-Moid< string>][-Password< string>][-Protocol< ApplianceBackup.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< List<MoTag>>][-Username< string>]
+New-IntersightApplianceBackup [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-Moid< string>][-Password< string>][-Protocol< ApplianceBackup.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -61,21 +61,6 @@ Backup filename to backup or restore.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Messages
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -208,6 +193,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -235,6 +250,8 @@ PS C:\> New-IntersightApplianceBackup
 
 ## RELATED LINKS
 
+[Get-IntersightApplianceBackup](./Get-IntersightApplianceBackup.md)
+
 [Remove-IntersightApplianceBackup](./Remove-IntersightApplianceBackup.md)
 
-[Get-IntersightApplianceBackup](./Get-IntersightApplianceBackup.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

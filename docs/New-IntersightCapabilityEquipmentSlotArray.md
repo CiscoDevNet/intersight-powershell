@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCapabilityEquipmentSlotArray [-AdditionalProperties< Dictionary<string,object>>][-FirstIndex< float>][-Height< float>][-HorizontalStartOffset< float>][-InlineGroupSeparation< float>][-InlineGroupSize< float>][-InlineOffset< float>][-Location< string>][-Moid< string>][[-Name]< string>][-NumberOfSlots< long>][-Orientation< string>][-Pid< CapabilityEquipmentSlotArray.PidEnum>][-Selector< string>][-Sku< string>][-SlotsPerLine< long>][-Tags< List<MoTag>>][-TransverseGroupSeparation< float>][-TransverseGroupSize< float>][-TransverseOffset< float>][-VerticalStartOffset< float>][-Vid< string>][-Width< float>]
+New-IntersightCapabilityEquipmentSlotArray [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FirstIndex< float>][-Height< float>][-HorizontalStartOffset< float>][-InlineGroupSeparation< float>][-InlineGroupSize< float>][-InlineOffset< float>][-Location< string>][-Moid< string>][[-Name]< string>][-NumberOfSlots< long>][-Orientation< string>][-Pid< CapabilityEquipmentSlotArray.PidEnum>][-Selector< string>][-Sku< string>][-SlotsPerLine< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TransverseGroupSeparation< float>][-TransverseGroupSize< float>][-TransverseOffset< float>][-VerticalStartOffset< float>][-Vid< string>][-Width< float>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityEquipmentSlotArray&amp;apos; resource.
+Create a &apos;CapabilityEquipmentSlotArray&apos; resource.
 
 ## PARAMETERS
 
@@ -370,6 +370,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -397,8 +427,10 @@ PS C:\> New-IntersightCapabilityEquipmentSlotArray
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
-
 [Set-IntersightCapabilityEquipmentSlotArray](./Set-IntersightCapabilityEquipmentSlotArray.md)
 
 [Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
+
+[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

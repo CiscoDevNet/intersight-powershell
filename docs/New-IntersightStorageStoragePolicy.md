@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightStorageStoragePolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-DriveGroup< List<StorageDriveGroupRelationship>>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-Raid0Drive< StorageR0Drive>][-Tags< List<MoTag>>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>]
+New-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< StorageR0Drive>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -233,6 +233,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -260,12 +290,14 @@ PS C:\> New-IntersightStorageStoragePolicy
 
 ## RELATED LINKS
 
-[Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
-
 [Set-IntersightStorageStoragePolicy](./Set-IntersightStorageStoragePolicy.md)
 
 [Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
 
+[Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
+
 [Initialize-IntersightStorageM2VirtualDriveConfig](./Initialize-IntersightStorageM2VirtualDriveConfig.md)
 
 [Initialize-IntersightStorageR0Drive](./Initialize-IntersightStorageR0Drive.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

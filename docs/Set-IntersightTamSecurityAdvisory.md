@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightTamSecurityAdvisory [-Actions< List<TamAction>>][-AdditionalProperties< Dictionary<string,object>>][-AdvisoryId< string>][-ApiDataSources< List<TamApiDataSource>>][-BaseScore< float>][-CveIds< List<string>>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-EnvironmentalScore< float>][-ExternalUrl< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Recommendation< string>][-Severity< TamSeverity>][-State< TamSecurityAdvisory.StateEnum>][-Status< TamSecurityAdvisory.StatusEnum>][-Tags< List<MoTag>>][-TemporalScore< float>][-Version< string>][-Workaround< string>]
+Set-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[TamApiDataSource]>][-BaseScore< float>][-CveIds< System.Collections.Generic.List`1[string]>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-EnvironmentalScore< float>][-ExternalUrl< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Recommendation< string>][-Severity< TamSeverity>][-State< TamSecurityAdvisory.StateEnum>][-Status< TamSecurityAdvisory.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemporalScore< float>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;TamSecurityAdvisory&apos; resource.
+Update a &amp;apos;TamSecurityAdvisory&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -364,6 +364,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -391,16 +421,16 @@ PS C:\> Set-IntersightTamSecurityAdvisory
 
 ## RELATED LINKS
 
+[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
+
 [Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 
 [New-IntersightTamSecurityAdvisory](./New-IntersightTamSecurityAdvisory.md)
-
-[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 
 [Initialize-IntersightTamApiDataSource](./Initialize-IntersightTamApiDataSource.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
-
 [Initialize-IntersightTamSeverity](./Initialize-IntersightTamSeverity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

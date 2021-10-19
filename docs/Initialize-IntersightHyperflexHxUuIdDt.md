@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexHxUuIdDt [-AdditionalProperties< Dictionary<string,object>>][-ClassId< HyperflexHxUuIdDt.ClassIdEnum>][-Links< List<Model.HyperflexHxLinkDt>>][-ObjectType< HyperflexHxUuIdDt.ObjectTypeEnum>]
+Initialize-IntersightHyperflexHxUuIdDt [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexHxUuIdDt.ClassIdEnum>][-ObjectType< HyperflexHxUuIdDt.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,23 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Links
-
-
-Note :- Use Initialize-IntersightHyperflexHxLinkDt to create the object of complex type HyperflexHxLinkDt
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.HyperflexHxLinkDt]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -83,6 +66,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -112,5 +125,3 @@ PS C:\> Initialize-IntersightHyperflexHxUuIdDt
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightHyperflexHxLinkDt](./Initialize-IntersightHyperflexHxLinkDt.md)

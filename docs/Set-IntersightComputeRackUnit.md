@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeRackUnit [-AdditionalProperties< Dictionary<string,object>>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< List<BootCddDeviceRelationship>>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< List<BootHddDeviceRelationship>>][-BootIscsiDevices< List<BootIscsiDeviceRelationship>>][-BootNvmeDevices< List<BootNvmeDeviceRelationship>>][-BootPchStorageDevices< List<BootPchStorageDeviceRelationship>>][-BootPxeDevices< List<BootPxeDeviceRelationship>>][-BootSanDevices< List<BootSanDeviceRelationship>>][-BootSdDevices< List<BootSdDeviceRelationship>>][-BootUefiShellDevices< List<BootUefiShellDeviceRelationship>>][-BootUsbDevices< List<BootUsbDeviceRelationship>>][-BootVmediaDevices< List<BootVmediaDeviceRelationship>>][-FaultSummary< long>][-GraphicsCards< List<GraphicsCardRelationship>>][-KvmIpAddresses< List<ComputeIpAddress>>][-ManagementMode< ComputeRackUnit.ManagementModeEnum>][-MemoryArrays< List<MemoryArrayRelationship>>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-OperReason< List<string>>][-PlatformType< string>][-PreviousFru< EquipmentFruRelationship>][-Processors< List<ProcessorUnitRelationship>>][-SasExpanders< List<StorageSasExpanderRelationship>>][-StorageControllers< List<StorageControllerRelationship>>][-Tags< List<MoTag>>][-TopologyScanStatus< string>][-Vmedia< ComputeVmediaRelationship>]
+Set-IntersightComputeRackUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeRackUnit.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-OperReason< System.Collections.Generic.List`1[string]>][-PlatformType< string>][-PreviousFru< EquipmentFruRelationship>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-SasExpanders< System.Collections.Generic.List`1[StorageSasExpanderRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopologyScanStatus< string>][-Vmedia< ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -373,6 +373,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -HardwareUuid
+The universally unique hardware identity of the server provided by the manufacturer.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -KvmIpAddresses
 
 
@@ -623,6 +638,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -655,3 +700,5 @@ PS C:\> Set-IntersightComputeRackUnit
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
 
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

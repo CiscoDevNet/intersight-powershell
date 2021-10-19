@@ -38,11 +38,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The first suffix number in the block."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long From {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public IqnpoolIqnSuffixBlock.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of identifiers this block can hold."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 1000)]
+        public long Size {
             get;
             set;
         }
@@ -55,6 +73,15 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The last suffix number in the block."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long To {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -64,10 +91,22 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("From"))
+            {
+                initObject.From = this.From;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Size"))
+            {
+                initObject.Size = this.Size;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Suffix"))
             {
                 initObject.Suffix = this.Suffix;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("To"))
+            {
+                initObject.To = this.To;
             }
             WriteObject(initObject);
         }

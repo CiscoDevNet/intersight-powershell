@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilitySwitchSystemLimits [-AdditionalProperties< Dictionary<string,object>>][-ClassId< CapabilitySwitchSystemLimits.ClassIdEnum>][-MaximumChassisCount< long>][-MaximumFexPerDomain< long>][-MaximumServersPerDomain< long>][-ObjectType< CapabilitySwitchSystemLimits.ObjectTypeEnum>]
+Initialize-IntersightCapabilitySwitchSystemLimits [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilitySwitchSystemLimits.ClassIdEnum>][-MaximumChassisCount< long>][-MaximumFexPerDomain< long>][-MaximumServersPerDomain< long>][-ObjectType< CapabilitySwitchSystemLimits.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: CapabilitySwitchSystemLimits.ObjectTypeEnum
@@ -111,6 +111,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDistributedSwitch [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-Identity< string>][-MaxPort< long>][[-Moid]< string>][-Mtu< long>][-Name< string>][-NicTeamingAndFailover< VirtualizationVmwareTeamingAndFailover>][-NumHosts< long>][-NumNetworks< long>][-NumStandAlonePorts< long>][-NumUplinks< long>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SwitchCapacity< VirtualizationStorageCapacity>][-Tags< List<MoTag>>][-Uuid< string>][-Version< string>]
+Set-IntersightVirtualizationVmwareDistributedSwitch [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Identity< string>][-MaxPort< long>][[-Moid]< string>][-Mtu< long>][-Name< string>][-NicTeamingAndFailover< VirtualizationVmwareTeamingAndFailover>][-NumHosts< long>][-NumNetworks< long>][-NumStandAlonePorts< long>][-NumUplinks< long>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SwitchCapacity< VirtualizationStorageCapacity>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDistributedSwitch&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDistributedSwitch&apos; resource.
 
 ## PARAMETERS
 
@@ -287,6 +287,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -319,3 +349,5 @@ PS C:\> Set-IntersightVirtualizationVmwareDistributedSwitch
 [Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)
 
 [Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

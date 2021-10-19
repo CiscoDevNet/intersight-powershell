@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceUpgradePolicy [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-AutoUpgrade< bool>][-BlackoutDatesEnabled< bool>][-BlackoutEndDate< DateTime>][-BlackoutStartDate< DateTime>][-EnableMetaDataSync< bool>][[-Moid]< string>][-Schedule< OnpremSchedule>][-Tags< List<MoTag>>]
+Set-IntersightApplianceUpgradePolicy [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoUpgrade< bool>][-BlackoutDatesEnabled< bool>][-BlackoutEndDate< DateTime>][-BlackoutStartDate< DateTime>][-EnableMetaDataSync< bool>][-ManualInstallationStartTime< DateTime>][[-Moid]< string>][-Schedule< OnpremSchedule>][-SoftwareDownloadType< ApplianceUpgradePolicy.SoftwareDownloadTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceUpgradePolicy&amp;apos; resource.
+Update a &apos;ApplianceUpgradePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -131,6 +131,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ManualInstallationStartTime
+Intersight Appliance manual upgrade start time.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -163,6 +178,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SoftwareDownloadType
+SoftwareDownloadType is used to indicate the kind of software download.\n* `connected` - Indicates if the upgrade service is set to upload software to latest version automatically.\n* `manual` - Indicates if the upgrade service is set to upload software to user picked verison manually .
+
+```yaml
+Type: ApplianceUpgradePolicy.SoftwareDownloadTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -177,6 +207,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -209,6 +269,6 @@ PS C:\> Set-IntersightApplianceUpgradePolicy
 
 [Get-IntersightApplianceUpgradePolicy](./Get-IntersightApplianceUpgradePolicy.md)
 
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
-
 [Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

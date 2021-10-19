@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsIpv6Configuration [-AdditionalProperties< Dictionary<string,object>>][-ClassId< OsIpv6Configuration.ClassIdEnum>][-IpV6Config< Model.CommIpV6Interface>][-ObjectType< OsIpv6Configuration.ObjectTypeEnum>]
+Initialize-IntersightOsIpv6Configuration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OsIpv6Configuration.ClassIdEnum>][-IpV6Config< Model.CommIpV6Interface>][-ObjectType< OsIpv6Configuration.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -83,6 +83,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-Filename< string>][-ManualBackup< bool>][[-Moid]< string>][-Password< string>][-Protocol< ApplianceBackupPolicy.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Schedule< OnpremSchedule>][-Tags< List<MoTag>>][-Username< string>]
+Set-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-ManualBackup< bool>][[-Moid]< string>][-Password< string>][-Protocol< ApplianceBackupPolicy.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Schedule< OnpremSchedule>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceBackupPolicy&amp;apos; resource.
+Update a &apos;ApplianceBackupPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManualBackup
-Backup mode of the appliance. Automatic backups of the appliance are not initiated if this property is set to &apos;true&apos; and the backup schedule field is ignored.
+Backup mode of the appliance. Automatic backups of the appliance are not initiated if this property is set to &amp;apos;true&amp;apos; and the backup schedule field is ignored.
 
 ```yaml
 Type: bool
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &apos;false&apos; for this schedule to be active.
+Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &amp;apos;false&amp;apos; for this schedule to be active.
 
 Note :- Use Initialize-IntersightOnpremSchedule to create the object of complex type OnpremSchedule
 
@@ -225,6 +225,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -257,3 +287,5 @@ PS C:\> Set-IntersightApplianceBackupPolicy
 [New-IntersightApplianceBackupPolicy](./New-IntersightApplianceBackupPolicy.md)
 
 [Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

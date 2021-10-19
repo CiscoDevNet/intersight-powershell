@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesStatefulSetStatus [-AdditionalProperties< Dictionary<string,object>>][-AvailableReplicas< long>][-ClassId< KubernetesStatefulSetStatus.ClassIdEnum>][-CollisionCount< long>][-CurrentRevision< string>][-ObjectType< KubernetesStatefulSetStatus.ObjectTypeEnum>][-ObservedGeneration< long>][-ReadyReplicas< long>][-Replicas< long>][-UpdateRevision< string>][-UpdatedReplicas< long>]
+Initialize-IntersightKubernetesStatefulSetStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AvailableReplicas< long>][-ClassId< KubernetesStatefulSetStatus.ClassIdEnum>][-CollisionCount< long>][-CurrentRevision< string>][-ObjectType< KubernetesStatefulSetStatus.ObjectTypeEnum>][-ObservedGeneration< long>][-ReadyReplicas< long>][-Replicas< long>][-UpdateRevision< string>][-UpdatedReplicas< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateRevision
-UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &lt;replicas&gt; - &lt;updatedReplicas&gt;, until pod number &lt;replicas&gt;.
+UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &lt;replicas&amp;gt; - &lt;updatedReplicas&amp;gt;, until pod number &lt;replicas&amp;gt;.
 
 ```yaml
 Type: string
@@ -186,6 +186,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

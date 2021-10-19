@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesAciCniProfile](./New-IntersightKubernetesAciCniProfile.md)
-
 [Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
 
 [Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
+
+[New-IntersightKubernetesAciCniProfile](./New-IntersightKubernetesAciCniProfile.md)
 

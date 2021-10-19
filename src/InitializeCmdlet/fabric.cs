@@ -8,6 +8,86 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldGlobalSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldGlobalSettings")]
+    public class InitializeIntersightFabricUdldGlobalSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricUdldGlobalSettings()
+		{
+            ClassId = FabricUdldGlobalSettings.ClassIdEnum.FabricUdldGlobalSettings;
+            ObjectType = FabricUdldGlobalSettings.ObjectTypeEnum.FabricUdldGlobalSettings;
+            RecoveryAction = FabricUdldGlobalSettings.RecoveryActionEnum.None;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldGlobalSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 7 to 90 seconds."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(7, 90)]
+        public long MessageInterval {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldGlobalSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UDLD recovery when enabled, attempts to bring an UDLD error-disabled port out of reset.\n* `none` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `reset` - The expanded 4th generation UCS Fabric Interconnect with 108 ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldGlobalSettings.RecoveryActionEnum RecoveryAction {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricUdldGlobalSettings initObject = new Intersight.Model.FabricUdldGlobalSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MessageInterval"))
+            {
+                initObject.MessageInterval = this.MessageInterval;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecoveryAction"))
+            {
+                initObject.RecoveryAction = this.RecoveryAction;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricVlanSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricVlanSettings")]
@@ -80,167 +160,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("NativeVlan"))
             {
                 initObject.NativeVlan = this.NativeVlan;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
-    public class InitializeIntersightFabricUdldSettings:PSCmdlet
-	{
-		public InitializeIntersightFabricUdldSettings()
-		{
-            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
-            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
-            Mode = FabricUdldSettings.ModeEnum.Normal;
-            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.AdminStateEnum AdminState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ModeEnum Mode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
-            {
-                initObject.AdminState = this.AdminState;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricMacAgingSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricMacAgingSettings")]
-    public class InitializeIntersightFabricMacAgingSettings:PSCmdlet
-	{
-		public InitializeIntersightFabricMacAgingSettings()
-		{
-            ClassId = FabricMacAgingSettings.ClassIdEnum.FabricMacAgingSettings;
-            MacAgingOption = FabricMacAgingSettings.MacAgingOptionEnum.Default;
-            ObjectType = FabricMacAgingSettings.ObjectTypeEnum.FabricMacAgingSettings;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricMacAgingSettings.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This specifies one of the option to configure the MAC address aging time.\n* `Default` - This option sets the default MAC address aging time to 14500 seconds for End Host mode.\n* `Custom` - This option allows the the user to configure the MAC address aging time on the switch. For Switch Model UCS-FI-6454 or higher, the valid range is 120 to 918000 seconds and the switch will set the lower multiple of 5 of the given time.\n* `Never` - This option disables the MAC address aging process and never allows the MAC address entries to get removed from the table."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricMacAgingSettings.MacAgingOptionEnum MacAgingOption {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Define the MAC address aging time in seconds. This field is valid when the \"Custom\" MAC address aging option is selected."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 1e+06)]
-        public int MacAgingTime {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricMacAgingSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.FabricMacAgingSettings initObject = new Intersight.Model.FabricMacAgingSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingOption"))
-            {
-                initObject.MacAgingOption = this.MacAgingOption;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingTime"))
-            {
-                initObject.MacAgingTime = this.MacAgingTime;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -486,16 +405,17 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldGlobalSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldGlobalSettings")]
-    public class InitializeIntersightFabricUdldGlobalSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
+    public class InitializeIntersightFabricUdldSettings:PSCmdlet
 	{
-		public InitializeIntersightFabricUdldGlobalSettings()
+		public InitializeIntersightFabricUdldSettings()
 		{
-            ClassId = FabricUdldGlobalSettings.ClassIdEnum.FabricUdldGlobalSettings;
-            ObjectType = FabricUdldGlobalSettings.ObjectTypeEnum.FabricUdldGlobalSettings;
-            RecoveryAction = FabricUdldGlobalSettings.RecoveryActionEnum.None;
+            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
+            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
+            Mode = FabricUdldSettings.ModeEnum.Normal;
+            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
             
 		}
         // <summary>
@@ -508,20 +428,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldGlobalSettings.ClassIdEnum ClassId {
+        public FabricUdldSettings.AdminStateEnum AdminState {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 7 to 90 seconds."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(7, 90)]
-        public long MessageInterval {
+        
+        public FabricUdldSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ModeEnum Mode {
             get;
             set;
         }
@@ -530,37 +459,28 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldGlobalSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"UDLD recovery when enabled, attempts to bring an UDLD error-disabled port out of reset.\n* `none` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `reset` - The expanded 4th generation UCS Fabric Interconnect with 108 ports."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldGlobalSettings.RecoveryActionEnum RecoveryAction {
+        public FabricUdldSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricUdldGlobalSettings initObject = new Intersight.Model.FabricUdldGlobalSettings();
+             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MessageInterval"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
             {
-                initObject.MessageInterval = this.MessageInterval;
+                initObject.AdminState = this.AdminState;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RecoveryAction"))
-            {
-                initObject.RecoveryAction = this.RecoveryAction;
-            }
             WriteObject(initObject);
         }
 
@@ -653,6 +573,86 @@ namespace Intersight.PowerShell
             {
                 initObject.SlotId = this.SlotId;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricMacAgingSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricMacAgingSettings")]
+    public class InitializeIntersightFabricMacAgingSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricMacAgingSettings()
+		{
+            ClassId = FabricMacAgingSettings.ClassIdEnum.FabricMacAgingSettings;
+            MacAgingOption = FabricMacAgingSettings.MacAgingOptionEnum.Default;
+            ObjectType = FabricMacAgingSettings.ObjectTypeEnum.FabricMacAgingSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMacAgingSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This specifies one of the option to configure the MAC address aging time.\n* `Default` - This option sets the default MAC address aging time to 14500 seconds for End Host mode.\n* `Custom` - This option allows the the user to configure the MAC address aging time on the switch. For Switch Model UCS-FI-6454 or higher, the valid range is 120 to 918000 seconds and the switch will set the lower multiple of 5 of the given time.\n* `Never` - This option disables the MAC address aging process and never allows the MAC address entries to get removed from the table."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMacAgingSettings.MacAgingOptionEnum MacAgingOption {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Define the MAC address aging time in seconds. This field is valid when the \"Custom\" MAC address aging option is selected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 1e+06)]
+        public int MacAgingTime {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMacAgingSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricMacAgingSettings initObject = new Intersight.Model.FabricMacAgingSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingOption"))
+            {
+                initObject.MacAgingOption = this.MacAgingOption;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingTime"))
+            {
+                initObject.MacAgingTime = this.MacAgingTime;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

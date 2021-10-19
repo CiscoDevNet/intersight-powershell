@@ -17,7 +17,7 @@ Remove-IntersightFabricLinkAggregationPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricLinkAggregationPolicy&apos; resource.
+Delete a &amp;apos;FabricLinkAggregationPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

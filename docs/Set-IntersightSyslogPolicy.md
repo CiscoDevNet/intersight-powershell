@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightSyslogPolicy [-AdditionalProperties< Dictionary<string,object>>][-Description< string>][-LocalClients< List<SyslogLocalClientBase>>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< List<PolicyAbstractConfigProfileRelationship>>][-RemoteClients< List<SyslogRemoteClientBase>>][-Tags< List<MoTag>>]
+Set-IntersightSyslogPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-LocalClients< System.Collections.Generic.List`1[SyslogLocalClientBase]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RemoteClients< System.Collections.Generic.List`1[SyslogRemoteClientBase]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;SyslogPolicy&apos; resource.
+Update a &amp;apos;SyslogPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -176,6 +176,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -203,12 +233,14 @@ PS C:\> Set-IntersightSyslogPolicy
 
 ## RELATED LINKS
 
-[New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
+[Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
 
 [Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
 
-[Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
+[New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
 
 [Initialize-IntersightSyslogLocalClientBase](./Initialize-IntersightSyslogLocalClientBase.md)
 
 [Initialize-IntersightSyslogRemoteClientBase](./Initialize-IntersightSyslogRemoteClientBase.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

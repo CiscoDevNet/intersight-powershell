@@ -17,7 +17,7 @@ Remove-IntersightSoftwareHclMeta -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwareHclMeta&apos; resource.
+Delete a &amp;apos;SoftwareHclMeta&amp;apos; resource.
 
 ## EXAMPLES
 

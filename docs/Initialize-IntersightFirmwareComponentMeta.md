@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareComponentMeta [-AdditionalProperties< Dictionary<string,object>>][-ClassId< FirmwareComponentMeta.ClassIdEnum>][-ComponentLabel< string>][-ComponentType< FirmwareComponentMeta.ComponentTypeEnum>][-Description< string>][-Disruption< FirmwareComponentMeta.DisruptionEnum>][-ImagePath< string>][-IsOobSupported< bool>][-Model< string>][-ObjectType< FirmwareComponentMeta.ObjectTypeEnum>][-OobManageability< List<FirmwareComponentMeta.OobManageabilityEnum>>][-PackedVersion< string>][-RedfishUrl< string>][-Vendor< string>]
+Initialize-IntersightFirmwareComponentMeta [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareComponentMeta.ClassIdEnum>][-ComponentLabel< string>][-ComponentType< FirmwareComponentMeta.ComponentTypeEnum>][-Description< string>][-Disruption< FirmwareComponentMeta.DisruptionEnum>][-ImagePath< string>][-IsOobSupported< bool>][-Model< string>][-ObjectType< FirmwareComponentMeta.ObjectTypeEnum>][-OobManageability< System.Collections.Generic.List`1[FirmwareComponentMeta.OobManageabilityEnum]>][-PackedVersion< string>][-RedfishUrl< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: FirmwareComponentMeta.ObjectTypeEnum
@@ -231,6 +231,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

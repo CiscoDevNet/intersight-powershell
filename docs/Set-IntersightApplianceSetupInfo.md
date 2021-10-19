@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceSetupInfo [-Account< IamAccountRelationship>][-AdditionalProperties< Dictionary<string,object>>][-Capabilities< List<ApplianceKeyValuePair>>][[-Moid]< string>][-SetupStates< List<string>>][-Tags< List<MoTag>>]
+Set-IntersightApplianceSetupInfo [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-SetupStates< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -46,23 +46,6 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Capabilities
-
-
-Note :- Use Initialize-IntersightApplianceKeyValuePair to create the object of complex type ApplianceKeyValuePair
-
-```yaml
-Type: System.Collections.Generic.List`1[ApplianceKeyValuePair]
 Parameter Sets: (All)
 Aliases:
 
@@ -120,6 +103,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
@@ -150,3 +163,5 @@ PS C:\> Set-IntersightApplianceSetupInfo
 [Get-IntersightApplianceSetupInfo](./Get-IntersightApplianceSetupInfo.md)
 
 [Initialize-IntersightApplianceKeyValuePair](./Initialize-IntersightApplianceKeyValuePair.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCloudNetworkInterfaceAttachment [-AdditionalProperties< Dictionary<string,object>>][-ClassId< CloudNetworkInterfaceAttachment.ClassIdEnum>][-ObjectType< CloudNetworkInterfaceAttachment.ObjectTypeEnum>][-PrivateAddress< List<Model.CloudNetworkAddress>>][-PublicAddress< List<Model.CloudNetworkAddress>>][-SecurityGroups< List<string>>]
+Initialize-IntersightCloudNetworkInterfaceAttachment [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CloudNetworkInterfaceAttachment.ClassIdEnum>][-ObjectType< CloudNetworkInterfaceAttachment.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,52 +69,33 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PrivateAddress
-
-
-Note :- Use Initialize-IntersightCloudNetworkAddress to create the object of complex type CloudNetworkAddress
+### -Json
+Returns the json payload received in response.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.CloudNetworkAddress]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
-### -PublicAddress
-
-
-Note :- Use Initialize-IntersightCloudNetworkAddress to create the object of complex type CloudNetworkAddress
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.CloudNetworkAddress]
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: false
 Position: Named
 Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SecurityGroups
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -144,5 +125,3 @@ PS C:\> Initialize-IntersightCloudNetworkInterfaceAttachment
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightCloudNetworkAddress](./Initialize-IntersightCloudNetworkAddress.md)

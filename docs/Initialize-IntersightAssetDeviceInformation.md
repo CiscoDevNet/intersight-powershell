@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetDeviceInformation [-AdditionalProperties< Dictionary<string,object>>][-ClassId< AssetDeviceInformation.ClassIdEnum>][-DeviceTransactions< List<Model.AssetDeviceTransaction>>][-ObjectType< AssetDeviceInformation.ObjectTypeEnum>]
+Initialize-IntersightAssetDeviceInformation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetDeviceInformation.ClassIdEnum>][-ObjectType< AssetDeviceInformation.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,23 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DeviceTransactions
-
-
-Note :- Use Initialize-IntersightAssetDeviceTransaction to create the object of complex type AssetDeviceTransaction
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.AssetDeviceTransaction]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
@@ -83,6 +66,36 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
@@ -112,5 +125,3 @@ PS C:\> Initialize-IntersightAssetDeviceInformation
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightAssetDeviceTransaction](./Initialize-IntersightAssetDeviceTransaction.md)

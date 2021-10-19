@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
-
 [Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
 
 [New-IntersightChassisProfile](./New-IntersightChassisProfile.md)
+
+[Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
 
