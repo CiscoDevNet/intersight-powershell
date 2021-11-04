@@ -19,7 +19,7 @@ New-IntersightServerConfigImport [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ServerConfigImport&amp;apos; resource.
+Create a &apos;ServerConfigImport&apos; resource.
 
 ## PARAMETERS
 

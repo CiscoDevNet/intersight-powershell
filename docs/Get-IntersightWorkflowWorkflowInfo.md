@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowWorkflowInfo](./Set-IntersightWorkflowWorkflowInfo.md)
-
 [Remove-IntersightWorkflowWorkflowInfo](./Remove-IntersightWorkflowWorkflowInfo.md)
+
+[Set-IntersightWorkflowWorkflowInfo](./Set-IntersightWorkflowWorkflowInfo.md)
 
 [New-IntersightWorkflowWorkflowInfo](./New-IntersightWorkflowWorkflowInfo.md)
 

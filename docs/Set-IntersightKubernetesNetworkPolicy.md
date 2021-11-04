@@ -255,9 +255,9 @@ PS C:\> Set-IntersightKubernetesNetworkPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesNetworkPolicy](./Get-IntersightKubernetesNetworkPolicy.md)
-
 [New-IntersightKubernetesNetworkPolicy](./New-IntersightKubernetesNetworkPolicy.md)
+
+[Get-IntersightKubernetesNetworkPolicy](./Get-IntersightKubernetesNetworkPolicy.md)
 
 [Remove-IntersightKubernetesNetworkPolicy](./Remove-IntersightKubernetesNetworkPolicy.md)
 

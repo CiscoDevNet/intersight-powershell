@@ -19,7 +19,7 @@ Set-IntersightFabricPortPolicy [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricPortPolicy&amp;apos; resource.
+Update a &apos;FabricPortPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -208,10 +208,10 @@ PS C:\> Set-IntersightFabricPortPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
+[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
 
 [New-IntersightFabricPortPolicy](./New-IntersightFabricPortPolicy.md)
 
-[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
+[Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

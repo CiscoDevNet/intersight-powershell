@@ -19,7 +19,7 @@ Set-IntersightIamLdapProvider [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLdapProvider&amp;apos; resource.
+Update a &apos;IamLdapProvider&apos; resource.
 
 ## PARAMETERS
 

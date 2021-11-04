@@ -17,7 +17,7 @@ Remove-IntersightKubernetesVirtualMachineNodeProfile -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesVirtualMachineNodeProfile&apos; resource.
+Delete a &amp;apos;KubernetesVirtualMachineNodeProfile&amp;apos; resource.
 
 ## EXAMPLES
 

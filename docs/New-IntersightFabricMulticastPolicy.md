@@ -19,7 +19,7 @@ New-IntersightFabricMulticastPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricMulticastPolicy&apos; resource.
+Create a &amp;apos;FabricMulticastPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -235,9 +235,9 @@ PS C:\> New-IntersightFabricMulticastPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightFabricMulticastPolicy](./Set-IntersightFabricMulticastPolicy.md)
-
 [Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
+
+[Set-IntersightFabricMulticastPolicy](./Set-IntersightFabricMulticastPolicy.md)
 
 [Get-IntersightFabricMulticastPolicy](./Get-IntersightFabricMulticastPolicy.md)
 

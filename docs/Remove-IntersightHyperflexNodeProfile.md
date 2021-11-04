@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)
 
-[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
-
 [Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
+
+[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
 

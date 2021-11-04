@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationNetworkInterface [-AdaptorType< VirtualizationNetworkInterface.AdaptorTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bridge< string>][-ClassId< VirtualizationNetworkInterface.ClassIdEnum>][-ConnectAtPowerOn< bool>][-DirectPathIo< bool>][-MacAddress< string>][-Name< string>][-ObjectType< VirtualizationNetworkInterface.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationNetworkInterface [-AdaptorType< VirtualizationNetworkInterface.AdaptorTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bridge< string>][-ClassId< VirtualizationNetworkInterface.ClassIdEnum>][-ConnectAtPowerOn< bool>][-DirectPathIo< bool>][-IpForwardingEnabled< bool>][-Ipv6Address< bool>][-MacAddress< string>][-Name< string>][-NetworkId< string>][-NicId< string>][-ObjectType< VirtualizationNetworkInterface.ObjectTypeEnum>][-Order< long>][-PrivateIpAllocationMode< VirtualizationNetworkInterface.PrivateIpAllocationModeEnum>][-PublicIpAllocate< bool>][-SecurityGroups< System.Collections.Generic.List`1[string]>][-StaticIpAddress< System.Collections.Generic.List`1[Model.VirtualizationIpAddressInfo]>][-SubnetId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -114,6 +114,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -IpForwardingEnabled
+Set to true, if IP forwarding is enabled on the NIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Ipv6Address
+Set to true, if IPv6 address should be allocated for the NIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -MacAddress
 Virtual machine network mac address.
 
@@ -130,7 +160,37 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the network interface. This may be different from guest operating assigned.
+Name of the network interface. This may be different from guest operating system assigned.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkId
+Identity of the network to which this network interface belongs.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NicId
+Identity of the network interface.
 
 ```yaml
 Type: string
@@ -145,10 +205,102 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: VirtualizationNetworkInterface.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Order
+Order of the NIC attachment to the VM.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PrivateIpAllocationMode
+Allocation mode for NIC addresses e.g. DHCP or static.\n* `DHCP` - Dynamic IP address allocation using DHCP protocol.\n* `STATIC_IP` - Assign fixed / static IPs to resources for use.\n* `IPAM_CALLOUT` - Use callout scripts to query cloud IP allocation tools to assign network parameters.\n* `PREALLOCATE_IP` - Allows the cloud infrastructure IP allocation to be dynamically provided before the server boots up.
+
+```yaml
+Type: VirtualizationNetworkInterface.PrivateIpAllocationModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PublicIpAllocate
+Set to true, if public IP should be allocated for the NIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SecurityGroups
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StaticIpAddress
+
+
+Note :- Use Initialize-IntersightVirtualizationIpAddressInfo to create the object of complex type VirtualizationIpAddressInfo
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.VirtualizationIpAddressInfo]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SubnetId
+Subnet identifier for the NIC.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -215,3 +367,5 @@ PS C:\> Initialize-IntersightVirtualizationNetworkInterface
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightVirtualizationIpAddressInfo](./Initialize-IntersightVirtualizationIpAddressInfo.md)

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexVcenterConfigPolicy -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
+Delete a &apos;HyperflexVcenterConfigPolicy&apos; resource.
 
 ## EXAMPLES
 

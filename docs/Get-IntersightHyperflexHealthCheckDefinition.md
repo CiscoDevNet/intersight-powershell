@@ -25,7 +25,7 @@ Get-IntersightHyperflexHealthCheckDefinition [-Count <Boolean>] [-InlineCount <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;HyperflexHealthCheckDefinition&apos; resource.,
+Read a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

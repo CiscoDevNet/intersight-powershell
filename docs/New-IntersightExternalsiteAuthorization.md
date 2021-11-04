@@ -172,8 +172,8 @@ PS C:\> New-IntersightExternalsiteAuthorization
 
 ## RELATED LINKS
 
-[Get-IntersightExternalsiteAuthorization](./Get-IntersightExternalsiteAuthorization.md)
-
 [Set-IntersightExternalsiteAuthorization](./Set-IntersightExternalsiteAuthorization.md)
+
+[Get-IntersightExternalsiteAuthorization](./Get-IntersightExternalsiteAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

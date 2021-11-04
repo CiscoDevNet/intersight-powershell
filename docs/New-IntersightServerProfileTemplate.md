@@ -306,9 +306,9 @@ PS C:\> New-IntersightServerProfileTemplate
 
 ## RELATED LINKS
 
-[Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
-
 [Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
+
+[Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
 
 [Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 

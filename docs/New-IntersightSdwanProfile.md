@@ -19,7 +19,7 @@ New-IntersightSdwanProfile [-Action< string>][-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SdwanProfile&amp;apos; resource.
+Create a &apos;SdwanProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -312,11 +312,11 @@ PS C:\> New-IntersightSdwanProfile
 
 ## RELATED LINKS
 
-[Get-IntersightSdwanProfile](./Get-IntersightSdwanProfile.md)
+[Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
 
 [Set-IntersightSdwanProfile](./Set-IntersightSdwanProfile.md)
 
-[Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
+[Get-IntersightSdwanProfile](./Get-IntersightSdwanProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

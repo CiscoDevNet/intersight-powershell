@@ -19,7 +19,7 @@ New-IntersightKubernetesNodeGroupProfile [-Action< string>][-AdditionalPropertie
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesNodeGroupProfile&apos; resource.
+Create a &amp;apos;KubernetesNodeGroupProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -Maxsize
-Maximum number of nodes desired in this node group.
+Maximum number of nodes this node group can scale up to during repair, replacement or upgrade operations.
 
 ```yaml
 Type: long
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -Minsize
-Minimum number of nodes desired in this node group.
+Minimum number of available nodes this node group can scale down to during repair, replacement or upgrade operations.
 
 ```yaml
 Type: long

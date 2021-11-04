@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManualBackup
-Backup mode of the appliance. Automatic backups of the appliance are not initiated if this property is set to &amp;apos;true&amp;apos; and the backup schedule field is ignored.
+Backup mode of the appliance. Automatic backups of the appliance are not initiated if this property is set to &apos;true&apos; and the backup schedule field is ignored.
 
 ```yaml
 Type: bool
@@ -282,9 +282,9 @@ PS C:\> Set-IntersightApplianceBackupPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceBackupPolicy](./Get-IntersightApplianceBackupPolicy.md)
-
 [New-IntersightApplianceBackupPolicy](./New-IntersightApplianceBackupPolicy.md)
+
+[Get-IntersightApplianceBackupPolicy](./Get-IntersightApplianceBackupPolicy.md)
 
 [Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)
 

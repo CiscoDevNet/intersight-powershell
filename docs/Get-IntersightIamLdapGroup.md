@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
+[New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
 
 [Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
 
-[New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
+[Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
 

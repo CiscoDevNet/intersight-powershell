@@ -19,7 +19,7 @@ New-IntersightOsConfigurationFile [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OsConfigurationFile&amp;apos; resource.
+Create a &apos;OsConfigurationFile&apos; resource.
 
 ## PARAMETERS
 

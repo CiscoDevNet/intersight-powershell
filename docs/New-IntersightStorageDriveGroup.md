@@ -19,7 +19,7 @@ New-IntersightStorageDriveGroup [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;StorageDriveGroup&amp;apos; resource.
+Create a &apos;StorageDriveGroup&apos; resource.
 
 ## PARAMETERS
 
@@ -228,9 +228,9 @@ PS C:\> New-IntersightStorageDriveGroup
 
 [Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
 
-[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
-
 [Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
+
+[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
 
 [Initialize-IntersightStorageAutomaticDriveGroup](./Initialize-IntersightStorageAutomaticDriveGroup.md)
 

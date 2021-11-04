@@ -19,7 +19,7 @@ New-IntersightNotificationAccountSubscription [-Actions< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;NotificationAccountSubscription&amp;apos; resource.
+Create a &apos;NotificationAccountSubscription&apos; resource.
 
 ## PARAMETERS
 

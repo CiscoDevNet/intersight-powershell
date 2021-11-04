@@ -19,7 +19,7 @@ New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachin
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
+Create a &apos;VirtualizationVirtualMachine&apos; resource.
 
 ## PARAMETERS
 

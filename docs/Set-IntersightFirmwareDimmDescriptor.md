@@ -19,7 +19,7 @@ Set-IntersightFirmwareDimmDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareDimmDescriptor&amp;apos; resource.
+Update a &apos;FirmwareDimmDescriptor&apos; resource.
 
 ## PARAMETERS
 

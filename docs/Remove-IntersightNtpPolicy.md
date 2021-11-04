@@ -17,7 +17,7 @@ Remove-IntersightNtpPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;NtpPolicy&amp;apos; resource.
+Delete a &apos;NtpPolicy&apos; resource.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Remove-IntersightIamLdapProvider -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamLdapProvider&amp;apos; resource.
+Delete a &apos;IamLdapProvider&apos; resource.
 
 ## EXAMPLES
 

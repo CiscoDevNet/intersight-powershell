@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSoftwareVersionPolicy -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexSoftwareVersionPolicy&amp;apos; resource.
+Delete a &apos;HyperflexSoftwareVersionPolicy&apos; resource.
 
 ## EXAMPLES
 

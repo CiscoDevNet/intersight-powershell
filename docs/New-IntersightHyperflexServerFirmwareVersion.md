@@ -19,7 +19,7 @@ New-IntersightHyperflexServerFirmwareVersion [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexServerFirmwareVersion&amp;apos; resource.
+Create a &apos;HyperflexServerFirmwareVersion&apos; resource.
 
 ## PARAMETERS
 
@@ -163,10 +163,10 @@ PS C:\> New-IntersightHyperflexServerFirmwareVersion
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
+
 [Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
 
 [Remove-IntersightHyperflexServerFirmwareVersion](./Remove-IntersightHyperflexServerFirmwareVersion.md)
-
-[Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightIamEndPointUserPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;IamEndPointUserPolicy&apos; resource.
+Create a &amp;apos;IamEndPointUserPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -228,11 +228,11 @@ PS C:\> New-IntersightIamEndPointUserPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightIamEndPointUserPolicy](./Get-IntersightIamEndPointUserPolicy.md)
+
 [Set-IntersightIamEndPointUserPolicy](./Set-IntersightIamEndPointUserPolicy.md)
 
 [Remove-IntersightIamEndPointUserPolicy](./Remove-IntersightIamEndPointUserPolicy.md)
-
-[Get-IntersightIamEndPointUserPolicy](./Get-IntersightIamEndPointUserPolicy.md)
 
 [Initialize-IntersightIamEndPointPasswordProperties](./Initialize-IntersightIamEndPointPasswordProperties.md)
 

@@ -19,7 +19,7 @@ Set-IntersightFirmwarePcieDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwarePcieDescriptor&amp;apos; resource.
+Update a &apos;FirmwarePcieDescriptor&apos; resource.
 
 ## PARAMETERS
 

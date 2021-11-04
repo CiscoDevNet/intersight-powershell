@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
-
 [Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 
 [New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
+
+[Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 

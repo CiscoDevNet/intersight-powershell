@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowSshCmd [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowSshCmd.ClassIdEnum>][-Command< string>][-CommandType< WorkflowSshCmd.CommandTypeEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ExpectPrompts< System.Collections.Generic.List`1[Model.ConnectorExpectPrompt]>][-ObjectType< WorkflowSshCmd.ObjectTypeEnum>][-SecureProperties< object>][-ShellPrompt< string>][-ShellPromptTimeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowSshCmd [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowSshCmd.ClassIdEnum>][-Command< string>][-CommandType< string>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ExpectPrompts< object>][-ObjectType< WorkflowSshCmd.ObjectTypeEnum>][-SecureProperties< object>][-ShellPrompt< string>][-ShellPromptTimeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,10 +70,10 @@ Accept wildcard characters: False
 ```
 
 ### -CommandType
-SSH command type to execute on the remote server.\n* `NonInteractiveCmd` - Execute a non-interactive SSH command on the remote server.\n* `InteractiveCmd` - Execute an interactive SSH command on the remote server.
+SSH command type to execute on the remote server.
 
 ```yaml
-Type: WorkflowSshCmd.CommandTypeEnum
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -115,12 +115,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectPrompts
+SSH prompts required as part of command execution. It is a collection of ExpectPrompt complex type.
 
-
-Note :- Use Initialize-IntersightConnectorExpectPrompt to create the object of complex type ConnectorExpectPrompt
+Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.ConnectorExpectPrompt]
+Type: object
 Parameter Sets: (All)
 Aliases:
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &amp;apos;AES&amp;apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShellPrompt
-Regex of the remote server&amp;apos;s shell prompt.
+Regex of the remote server&apos;s shell prompt.
 
 ```yaml
 Type: string
@@ -249,7 +249,5 @@ PS C:\> Initialize-IntersightWorkflowSshCmd
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightConnectorExpectPrompt](./Initialize-IntersightConnectorExpectPrompt.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)

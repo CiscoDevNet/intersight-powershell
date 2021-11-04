@@ -308,9 +308,9 @@ PS C:\> Set-IntersightServerProfileTemplate
 
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
 
-[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
-
 [New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
+
+[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

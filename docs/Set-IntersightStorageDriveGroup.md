@@ -19,7 +19,7 @@ Set-IntersightStorageDriveGroup [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageDriveGroup&apos; resource.
+Update a &amp;apos;StorageDriveGroup&amp;apos; resource.
 
 ## PARAMETERS
 

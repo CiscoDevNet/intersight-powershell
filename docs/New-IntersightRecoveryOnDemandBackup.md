@@ -19,7 +19,7 @@ New-IntersightRecoveryOnDemandBackup [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &apos;RecoveryOnDemandBackup&apos; resource.
+Create a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -298,10 +298,10 @@ PS C:\> New-IntersightRecoveryOnDemandBackup
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
+[Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
 
 [Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
 
-[Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
+[Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

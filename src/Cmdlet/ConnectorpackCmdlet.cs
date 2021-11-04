@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ConnectorpackConnectorPackUpgrade.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightConnectorpackConnectorPackUpgrade")]
-    public class RemoveIntersightConnectorpackConnectorPackUpgrade:RemoveCmdletBase
-	{
-		public RemoveIntersightConnectorpackConnectorPackUpgrade()
-		{
-			ApiInstance = new ConnectorpackApi(Config);
-            MethodName = "DeleteConnectorpackConnectorPackUpgradeWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConnectorpackConnectorPackUpgrade.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackConnectorPackUpgrade", DefaultParameterSetName = "CmdletParam")]
@@ -212,6 +200,18 @@ namespace Intersight.PowerShell
         }
         
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ConnectorpackConnectorPackUpgrade.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightConnectorpackConnectorPackUpgrade")]
+    public class RemoveIntersightConnectorpackConnectorPackUpgrade:RemoveCmdletBase
+	{
+		public RemoveIntersightConnectorpackConnectorPackUpgrade()
+		{
+			ApiInstance = new ConnectorpackApi(Config);
+            MethodName = "DeleteConnectorpackConnectorPackUpgradeWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConnectorpackUpgradeImpact.</para>

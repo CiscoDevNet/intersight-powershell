@@ -19,7 +19,7 @@ New-IntersightCloudCollectInventory [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;CloudCollectInventory&apos; resource.
+Create a &amp;apos;CloudCollectInventory&amp;apos; resource.
 
 ## PARAMETERS
 

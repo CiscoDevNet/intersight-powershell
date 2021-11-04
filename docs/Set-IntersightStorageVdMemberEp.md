@@ -19,7 +19,7 @@ Set-IntersightStorageVdMemberEp [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageVdMemberEp&apos; resource.
+Update a &amp;apos;StorageVdMemberEp&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightFirmwareCimcDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareCimcDescriptor&amp;apos; resource.
+Update a &apos;FirmwareCimcDescriptor&apos; resource.
 
 ## PARAMETERS
 

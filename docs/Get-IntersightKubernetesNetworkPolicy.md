@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightKubernetesNetworkPolicy](./New-IntersightKubernetesNetworkPolicy.md)
 
-[Set-IntersightKubernetesNetworkPolicy](./Set-IntersightKubernetesNetworkPolicy.md)
-
 [Remove-IntersightKubernetesNetworkPolicy](./Remove-IntersightKubernetesNetworkPolicy.md)
+
+[Set-IntersightKubernetesNetworkPolicy](./Set-IntersightKubernetesNetworkPolicy.md)
 

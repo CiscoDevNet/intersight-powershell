@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New AccessPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set AccessPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAccessPolicy")]
-    public class NewIntersightAccessPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightAccessPolicy")]
+    public class SetIntersightAccessPolicy:SetCmdletBase
 	{
-		public NewIntersightAccessPolicy()
+		public SetIntersightAccessPolicy()
 		{
 			ApiInstance = new AccessApi(Config);
             ModelObject = new AccessPolicy();
-            MethodName = "CreateAccessPolicyWithHttpInfo";
+            MethodName = "PatchAccessPolicyWithHttpInfo";
 		}
         
         
@@ -88,7 +88,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -98,7 +98,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -139,6 +139,18 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove AccessPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightAccessPolicy")]
+    public class RemoveIntersightAccessPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightAccessPolicy()
+		{
+			ApiInstance = new AccessApi(Config);
+            MethodName = "DeleteAccessPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AccessPolicy.</para>
@@ -293,16 +305,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set AccessPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New AccessPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAccessPolicy")]
-    public class SetIntersightAccessPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightAccessPolicy")]
+    public class NewIntersightAccessPolicy:NewCmdletBase
 	{
-		public SetIntersightAccessPolicy()
+		public NewIntersightAccessPolicy()
 		{
 			ApiInstance = new AccessApi(Config);
             ModelObject = new AccessPolicy();
-            MethodName = "UpdateAccessPolicyWithHttpInfo";
+            MethodName = "CreateAccessPolicyWithHttpInfo";
 		}
         
         
@@ -373,7 +385,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -383,7 +395,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -424,17 +436,5 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AccessPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAccessPolicy")]
-    public class RemoveIntersightAccessPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightAccessPolicy()
-		{
-			ApiInstance = new AccessApi(Config);
-            MethodName = "DeleteAccessPolicyWithHttpInfo";
-		}
     }
 }

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareDatastore&apos; resource.
+Update a &amp;apos;VirtualizationVmwareDatastore&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -323,6 +323,21 @@ Accept wildcard characters: False
 
 ### -VmCount
 Number of virtual machines relying on (using) this datastore.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VmTemplateCount
+Number of virtual machine templates relying on (using) this datastore.
 
 ```yaml
 Type: long

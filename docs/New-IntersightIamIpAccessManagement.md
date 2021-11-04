@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Flag stores the state of IP address based access management. Access management is enabled when it&apos;s true.
+Flag stores the state of IP address based access management. Access management is enabled when it&amp;apos;s true.
 
 ```yaml
 Type: bool
@@ -142,8 +142,8 @@ PS C:\> New-IntersightIamIpAccessManagement
 
 ## RELATED LINKS
 
-[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
-
 [Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)
+
+[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

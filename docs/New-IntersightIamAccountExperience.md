@@ -19,7 +19,7 @@ New-IntersightIamAccountExperience [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Create a &apos;IamAccountExperience&apos; resource.
+Create a &amp;apos;IamAccountExperience&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightFabricFcoeUplinkPcRole [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricFcoeUplinkPcRole&amp;apos; resource.
+Create a &apos;FabricFcoeUplinkPcRole&apos; resource.
 
 ## PARAMETERS
 
@@ -228,9 +228,9 @@ PS C:\> New-IntersightFabricFcoeUplinkPcRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricFcoeUplinkPcRole](./Remove-IntersightFabricFcoeUplinkPcRole.md)
-
 [Set-IntersightFabricFcoeUplinkPcRole](./Set-IntersightFabricFcoeUplinkPcRole.md)
+
+[Remove-IntersightFabricFcoeUplinkPcRole](./Remove-IntersightFabricFcoeUplinkPcRole.md)
 
 [Get-IntersightFabricFcoeUplinkPcRole](./Get-IntersightFabricFcoeUplinkPcRole.md)
 

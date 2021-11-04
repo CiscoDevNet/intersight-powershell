@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileLocation
-Remote location of image. Preferred format is &amp;apos;hostname/filePath/fileName&amp;apos;.
+Remote location of image. Preferred format is &apos;hostname/filePath/fileName&apos;.
 
 ```yaml
 Type: string

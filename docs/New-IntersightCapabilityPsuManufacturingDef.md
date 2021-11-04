@@ -19,7 +19,7 @@ New-IntersightCapabilityPsuManufacturingDef [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityPsuManufacturingDef&amp;apos; resource.
+Create a &apos;CapabilityPsuManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

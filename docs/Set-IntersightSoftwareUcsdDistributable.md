@@ -472,9 +472,9 @@ PS C:\> Set-IntersightSoftwareUcsdDistributable
 
 [Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
 
-[New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
-
 [Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
+
+[New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareGpuDescriptor](./Set-IntersightFirmwareGpuDescriptor.md)
+[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
 
 [New-IntersightFirmwareGpuDescriptor](./New-IntersightFirmwareGpuDescriptor.md)
 
-[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
+[Set-IntersightFirmwareGpuDescriptor](./Set-IntersightFirmwareGpuDescriptor.md)
 

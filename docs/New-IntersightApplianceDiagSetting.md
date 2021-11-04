@@ -175,8 +175,8 @@ PS C:\> New-IntersightApplianceDiagSetting
 
 ## RELATED LINKS
 
-[Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
-
 [Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)
+
+[Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

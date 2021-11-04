@@ -19,7 +19,7 @@ Set-IntersightWorkflowTaskInfo [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowTaskInfo&apos; resource.
+Update a &amp;apos;WorkflowTaskInfo&amp;apos; resource.
 
 ## PARAMETERS
 

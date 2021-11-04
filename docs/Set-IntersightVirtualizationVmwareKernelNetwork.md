@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareKernelNetwork [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareKernelNetwork&apos; resource.
+Update a &amp;apos;VirtualizationVmwareKernelNetwork&amp;apos; resource.
 
 ## PARAMETERS
 

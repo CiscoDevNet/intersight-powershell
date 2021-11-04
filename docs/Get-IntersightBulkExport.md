@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightBulkExport](./New-IntersightBulkExport.md)
 
-[Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
-
 [Set-IntersightBulkExport](./Set-IntersightBulkExport.md)
+
+[Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
 

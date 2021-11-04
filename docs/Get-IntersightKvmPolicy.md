@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightKvmPolicy](./New-IntersightKvmPolicy.md)
+
 [Set-IntersightKvmPolicy](./Set-IntersightKvmPolicy.md)
 
 [Remove-IntersightKvmPolicy](./Remove-IntersightKvmPolicy.md)
-
-[New-IntersightKvmPolicy](./New-IntersightKvmPolicy.md)
 

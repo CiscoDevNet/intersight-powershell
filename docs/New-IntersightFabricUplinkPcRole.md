@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,24 @@ Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO (
 
 ```yaml
 Type: FabricUplinkPcRole.AdminSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EthNetworkGroupPolicy
+An array of relationships to fabricEthNetworkGroupPolicy resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -246,11 +264,11 @@ PS C:\> New-IntersightFabricUplinkPcRole
 
 ## RELATED LINKS
 
-[Get-IntersightFabricUplinkPcRole](./Get-IntersightFabricUplinkPcRole.md)
+[Set-IntersightFabricUplinkPcRole](./Set-IntersightFabricUplinkPcRole.md)
 
 [Remove-IntersightFabricUplinkPcRole](./Remove-IntersightFabricUplinkPcRole.md)
 
-[Set-IntersightFabricUplinkPcRole](./Set-IntersightFabricUplinkPcRole.md)
+[Get-IntersightFabricUplinkPcRole](./Get-IntersightFabricUplinkPcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
 

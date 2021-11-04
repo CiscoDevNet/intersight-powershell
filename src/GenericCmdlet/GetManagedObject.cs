@@ -6,7 +6,7 @@ using System.Management.Automation;
 namespace Intersight.PowerShell
 {
     [Cmdlet(VerbsCommon.Get, "IntersightManagedObject",DefaultParameterSetName = "CmdletParam")]
-    public class GetCmdlet : GetCmdletBase
+    public class GetCmdlet : CmdletBase
     {
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ParameterSetName = "CmdletParam")]
         public string Moid
@@ -27,6 +27,41 @@ namespace Intersight.PowerShell
         {
             get;set;
         }
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public bool? Count { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public string InlineCount { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string Select { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string Filter { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string Expand { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public int? Skip { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public int? Top { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string At { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string Orderby { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string Apply { get; set; } = null;
+
+        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        public string Tag { get; set; } = null;
+
 
         [Parameter(Mandatory = false,ValueFromPipelineByPropertyName = false)]
         public Dictionary<string,object> AdditionalProperties

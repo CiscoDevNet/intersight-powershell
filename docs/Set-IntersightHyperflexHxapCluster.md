@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapCluster [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexHxapCluster&apos; resource.
+Update a &amp;apos;HyperflexHxapCluster&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -402,9 +402,9 @@ PS C:\> Set-IntersightHyperflexHxapCluster
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexHxapCluster](./Remove-IntersightHyperflexHxapCluster.md)
-
 [Get-IntersightHyperflexHxapCluster](./Get-IntersightHyperflexHxapCluster.md)
+
+[Remove-IntersightHyperflexHxapCluster](./Remove-IntersightHyperflexHxapCluster.md)
 
 [Initialize-IntersightHyperflexAlarmSummary](./Initialize-IntersightHyperflexAlarmSummary.md)
 

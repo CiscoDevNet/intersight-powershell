@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexClusterBackupPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackupDataStoreName< string>][-BackupDataStoreSize< long>][-BackupDataStoreSizeUnit< string>][-BackupTarget< HyperflexClusterRelationship>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-ReplicationPairNamePrefix< string>][-ReplicationSchedule< HyperflexReplicationSchedule>][-SnapshotRetentionCount< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightHyperflexClusterBackupPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackupDataStoreName< string>][-BackupDataStoreSize< long>][-BackupDataStoreSizeUnit< string>][-BackupTarget< HyperflexClusterRelationship>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-DataStoreEncryptionEnabled< bool>][-Description< string>][-LocalSnapshotRetentionCount< long>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-ReplicationPairNamePrefix< string>][-ReplicationSchedule< HyperflexReplicationSchedule>][-SnapshotRetentionCount< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,11 +119,41 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DataStoreEncryptionEnabled
+Whether the datastore is encrypted or not.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Description
 Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LocalSnapshotRetentionCount
+Number of snapshots that will be retained as part of the Multi Point in Time support.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

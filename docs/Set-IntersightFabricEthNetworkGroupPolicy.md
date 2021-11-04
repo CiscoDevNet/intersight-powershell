@@ -19,7 +19,7 @@ Set-IntersightFabricEthNetworkGroupPolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricEthNetworkGroupPolicy&apos; resource.
+Update a &amp;apos;FabricEthNetworkGroupPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -194,9 +194,9 @@ PS C:\> Set-IntersightFabricEthNetworkGroupPolicy
 
 [Remove-IntersightFabricEthNetworkGroupPolicy](./Remove-IntersightFabricEthNetworkGroupPolicy.md)
 
-[Get-IntersightFabricEthNetworkGroupPolicy](./Get-IntersightFabricEthNetworkGroupPolicy.md)
-
 [New-IntersightFabricEthNetworkGroupPolicy](./New-IntersightFabricEthNetworkGroupPolicy.md)
+
+[Get-IntersightFabricEthNetworkGroupPolicy](./Get-IntersightFabricEthNetworkGroupPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

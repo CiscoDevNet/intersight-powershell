@@ -35,7 +35,7 @@ namespace Intersight.PowerShell
                 string responseBody = string.Empty;
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(GetUrl(requestOption));
                 httpWebRequest.Method = requestOption.Method;
-                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.ContentType = requestOption.ContentType;
 
                 var signedHeaders = HttpSigningAuthConfig.GetHttpSignedHeader(requestOption);
                 foreach(var item in signedHeaders)

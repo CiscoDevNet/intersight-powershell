@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudVolumeIopsInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudNetworkAddress.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudVolumeIopsInfo")]
-    public class InitializeIntersightCloudVolumeIopsInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudNetworkAddress")]
+    public class InitializeIntersightCloudNetworkAddress:PSCmdlet
 	{
-		public InitializeIntersightCloudVolumeIopsInfo()
+		public InitializeIntersightCloudNetworkAddress()
 		{
-            ClassId = CloudVolumeIopsInfo.ClassIdEnum.CloudVolumeIopsInfo;
-            ObjectType = CloudVolumeIopsInfo.ObjectTypeEnum.CloudVolumeIopsInfo;
+            ClassId = CloudNetworkAddress.ClassIdEnum.CloudNetworkAddress;
+            ObjectType = CloudNetworkAddress.ObjectTypeEnum.CloudNetworkAddress;
             
 		}
         // <summary>
@@ -33,7 +33,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CloudVolumeIopsInfo.ClassIdEnum ClassId {
+        public CloudNetworkAddress.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -42,14 +42,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CloudVolumeIopsInfo.ObjectTypeEnum ObjectType {
+        public CloudNetworkAddress.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.CloudVolumeIopsInfo initObject = new Intersight.Model.CloudVolumeIopsInfo();
+             Intersight.Model.CloudNetworkAddress initObject = new Intersight.Model.CloudNetworkAddress();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -61,15 +61,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudNetworkInterfaceAttachment.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudCloudRegion.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudNetworkInterfaceAttachment")]
-    public class InitializeIntersightCloudNetworkInterfaceAttachment:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudCloudRegion")]
+    public class InitializeIntersightCloudCloudRegion:PSCmdlet
 	{
-		public InitializeIntersightCloudNetworkInterfaceAttachment()
+		public InitializeIntersightCloudCloudRegion()
 		{
-            ClassId = CloudNetworkInterfaceAttachment.ClassIdEnum.CloudNetworkInterfaceAttachment;
-            ObjectType = CloudNetworkInterfaceAttachment.ObjectTypeEnum.CloudNetworkInterfaceAttachment;
+            ClassId = CloudCloudRegion.ClassIdEnum.CloudCloudRegion;
+            ObjectType = CloudCloudRegion.ObjectTypeEnum.CloudCloudRegion;
             
 		}
         // <summary>
@@ -86,7 +86,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CloudNetworkInterfaceAttachment.ClassIdEnum ClassId {
+        public CloudCloudRegion.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -95,265 +95,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CloudNetworkInterfaceAttachment.ObjectTypeEnum ObjectType {
+        public CloudCloudRegion.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.CloudNetworkInterfaceAttachment initObject = new Intersight.Model.CloudNetworkInterfaceAttachment();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudCloudTag.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudCloudTag")]
-    public class InitializeIntersightCloudCloudTag:PSCmdlet
-	{
-		public InitializeIntersightCloudCloudTag()
-		{
-            ClassId = CloudCloudTag.ClassIdEnum.CloudCloudTag;
-            ObjectType = CloudCloudTag.ObjectTypeEnum.CloudCloudTag;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudCloudTag.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudCloudTag.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudCloudTag initObject = new Intersight.Model.CloudCloudTag();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudCustomAttributes.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudCustomAttributes")]
-    public class InitializeIntersightCloudCustomAttributes:PSCmdlet
-	{
-		public InitializeIntersightCloudCustomAttributes()
-		{
-            ClassId = CloudCustomAttributes.ClassIdEnum.CloudCustomAttributes;
-            ObjectType = CloudCustomAttributes.ObjectTypeEnum.CloudCustomAttributes;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of an attribute. If used as a key-value pair then this field represents the key."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string AttributeName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The data type for attributeValue. For e.g. string, int, float."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string AttributeType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The attribute value. If used as a key-value pair then this field represents the value."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string AttributeValue {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudCustomAttributes.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudCustomAttributes.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudCustomAttributes initObject = new Intersight.Model.CloudCustomAttributes();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AttributeName"))
-            {
-                initObject.AttributeName = this.AttributeName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AttributeType"))
-            {
-                initObject.AttributeType = this.AttributeType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AttributeValue"))
-            {
-                initObject.AttributeValue = this.AttributeValue;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudVolumeType.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudVolumeType")]
-    public class InitializeIntersightCloudVolumeType:PSCmdlet
-	{
-		public InitializeIntersightCloudVolumeType()
-		{
-            ClassId = CloudVolumeType.ClassIdEnum.CloudVolumeType;
-            ObjectType = CloudVolumeType.ObjectTypeEnum.CloudVolumeType;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudVolumeType.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudVolumeType.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudVolumeType initObject = new Intersight.Model.CloudVolumeType();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudVolumeInstanceAttachment.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudVolumeInstanceAttachment")]
-    public class InitializeIntersightCloudVolumeInstanceAttachment:PSCmdlet
-	{
-		public InitializeIntersightCloudVolumeInstanceAttachment()
-		{
-            ClassId = CloudVolumeInstanceAttachment.ClassIdEnum.CloudVolumeInstanceAttachment;
-            ObjectType = CloudVolumeInstanceAttachment.ObjectTypeEnum.CloudVolumeInstanceAttachment;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudVolumeInstanceAttachment.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudVolumeInstanceAttachment.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudVolumeInstanceAttachment initObject = new Intersight.Model.CloudVolumeInstanceAttachment();
+             Intersight.Model.CloudCloudRegion initObject = new Intersight.Model.CloudCloudRegion();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -509,15 +258,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudImageReference.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudVolumeIopsInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudImageReference")]
-    public class InitializeIntersightCloudImageReference:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudVolumeIopsInfo")]
+    public class InitializeIntersightCloudVolumeIopsInfo:PSCmdlet
 	{
-		public InitializeIntersightCloudImageReference()
+		public InitializeIntersightCloudVolumeIopsInfo()
 		{
-            ClassId = CloudImageReference.ClassIdEnum.CloudImageReference;
-            ObjectType = CloudImageReference.ObjectTypeEnum.CloudImageReference;
+            ClassId = CloudVolumeIopsInfo.ClassIdEnum.CloudVolumeIopsInfo;
+            ObjectType = CloudVolumeIopsInfo.ObjectTypeEnum.CloudVolumeIopsInfo;
             
 		}
         // <summary>
@@ -534,7 +283,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CloudImageReference.ClassIdEnum ClassId {
+        public CloudVolumeIopsInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -543,67 +292,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public CloudImageReference.ObjectTypeEnum ObjectType {
+        public CloudVolumeIopsInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.CloudImageReference initObject = new Intersight.Model.CloudImageReference();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudCloudRegion.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudCloudRegion")]
-    public class InitializeIntersightCloudCloudRegion:PSCmdlet
-	{
-		public InitializeIntersightCloudCloudRegion()
-		{
-            ClassId = CloudCloudRegion.ClassIdEnum.CloudCloudRegion;
-            ObjectType = CloudCloudRegion.ObjectTypeEnum.CloudCloudRegion;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudCloudRegion.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudCloudRegion.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudCloudRegion initObject = new Intersight.Model.CloudCloudRegion();
+             Intersight.Model.CloudVolumeIopsInfo initObject = new Intersight.Model.CloudVolumeIopsInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -681,112 +377,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudAvailabilityZone.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudAvailabilityZone")]
-    public class InitializeIntersightCloudAvailabilityZone:PSCmdlet
-	{
-		public InitializeIntersightCloudAvailabilityZone()
-		{
-            ClassId = CloudAvailabilityZone.ClassIdEnum.CloudAvailabilityZone;
-            ObjectType = CloudAvailabilityZone.ObjectTypeEnum.CloudAvailabilityZone;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudAvailabilityZone.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudAvailabilityZone.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudAvailabilityZone initObject = new Intersight.Model.CloudAvailabilityZone();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudNetworkAccessConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudNetworkAccessConfig")]
-    public class InitializeIntersightCloudNetworkAccessConfig:PSCmdlet
-	{
-		public InitializeIntersightCloudNetworkAccessConfig()
-		{
-            ClassId = CloudNetworkAccessConfig.ClassIdEnum.CloudNetworkAccessConfig;
-            ObjectType = CloudNetworkAccessConfig.ObjectTypeEnum.CloudNetworkAccessConfig;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudNetworkAccessConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudNetworkAccessConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudNetworkAccessConfig initObject = new Intersight.Model.CloudNetworkAccessConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CloudSecurityGroupRule.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCloudSecurityGroupRule")]
@@ -829,59 +419,6 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.CloudSecurityGroupRule initObject = new Intersight.Model.CloudSecurityGroupRule();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CloudNetworkAddress.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCloudNetworkAddress")]
-    public class InitializeIntersightCloudNetworkAddress:PSCmdlet
-	{
-		public InitializeIntersightCloudNetworkAddress()
-		{
-            ClassId = CloudNetworkAddress.ClassIdEnum.CloudNetworkAddress;
-            ObjectType = CloudNetworkAddress.ObjectTypeEnum.CloudNetworkAddress;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudNetworkAddress.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public CloudNetworkAddress.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.CloudNetworkAddress initObject = new Intersight.Model.CloudNetworkAddress();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -999,6 +536,59 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudCloudTag.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudCloudTag")]
+    public class InitializeIntersightCloudCloudTag:PSCmdlet
+	{
+		public InitializeIntersightCloudCloudTag()
+		{
+            ClassId = CloudCloudTag.ClassIdEnum.CloudCloudTag;
+            ObjectType = CloudCloudTag.ObjectTypeEnum.CloudCloudTag;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudCloudTag.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudCloudTag.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudCloudTag initObject = new Intersight.Model.CloudCloudTag();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CloudBillingUnit.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCloudBillingUnit")]
@@ -1041,6 +631,416 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.CloudBillingUnit initObject = new Intersight.Model.CloudBillingUnit();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudNetworkInterfaceAttachment.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudNetworkInterfaceAttachment")]
+    public class InitializeIntersightCloudNetworkInterfaceAttachment:PSCmdlet
+	{
+		public InitializeIntersightCloudNetworkInterfaceAttachment()
+		{
+            ClassId = CloudNetworkInterfaceAttachment.ClassIdEnum.CloudNetworkInterfaceAttachment;
+            ObjectType = CloudNetworkInterfaceAttachment.ObjectTypeEnum.CloudNetworkInterfaceAttachment;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudNetworkInterfaceAttachment.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudNetworkInterfaceAttachment.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudNetworkInterfaceAttachment initObject = new Intersight.Model.CloudNetworkInterfaceAttachment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudVolumeInstanceAttachment.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudVolumeInstanceAttachment")]
+    public class InitializeIntersightCloudVolumeInstanceAttachment:PSCmdlet
+	{
+		public InitializeIntersightCloudVolumeInstanceAttachment()
+		{
+            ClassId = CloudVolumeInstanceAttachment.ClassIdEnum.CloudVolumeInstanceAttachment;
+            ObjectType = CloudVolumeInstanceAttachment.ObjectTypeEnum.CloudVolumeInstanceAttachment;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudVolumeInstanceAttachment.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudVolumeInstanceAttachment.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudVolumeInstanceAttachment initObject = new Intersight.Model.CloudVolumeInstanceAttachment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudCustomAttributes.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudCustomAttributes")]
+    public class InitializeIntersightCloudCustomAttributes:PSCmdlet
+	{
+		public InitializeIntersightCloudCustomAttributes()
+		{
+            ClassId = CloudCustomAttributes.ClassIdEnum.CloudCustomAttributes;
+            ObjectType = CloudCustomAttributes.ObjectTypeEnum.CloudCustomAttributes;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of an attribute. If used as a key-value pair then this field represents the key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AttributeName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The data type for attributeValue. For e.g. string, int, float."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AttributeType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The attribute value. If used as a key-value pair then this field represents the value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AttributeValue {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudCustomAttributes.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudCustomAttributes.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudCustomAttributes initObject = new Intersight.Model.CloudCustomAttributes();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AttributeName"))
+            {
+                initObject.AttributeName = this.AttributeName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AttributeType"))
+            {
+                initObject.AttributeType = this.AttributeType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AttributeValue"))
+            {
+                initObject.AttributeValue = this.AttributeValue;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudAvailabilityZone.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudAvailabilityZone")]
+    public class InitializeIntersightCloudAvailabilityZone:PSCmdlet
+	{
+		public InitializeIntersightCloudAvailabilityZone()
+		{
+            ClassId = CloudAvailabilityZone.ClassIdEnum.CloudAvailabilityZone;
+            ObjectType = CloudAvailabilityZone.ObjectTypeEnum.CloudAvailabilityZone;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudAvailabilityZone.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudAvailabilityZone.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudAvailabilityZone initObject = new Intersight.Model.CloudAvailabilityZone();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudImageReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudImageReference")]
+    public class InitializeIntersightCloudImageReference:PSCmdlet
+	{
+		public InitializeIntersightCloudImageReference()
+		{
+            ClassId = CloudImageReference.ClassIdEnum.CloudImageReference;
+            ObjectType = CloudImageReference.ObjectTypeEnum.CloudImageReference;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudImageReference.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudImageReference.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudImageReference initObject = new Intersight.Model.CloudImageReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudVolumeType.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudVolumeType")]
+    public class InitializeIntersightCloudVolumeType:PSCmdlet
+	{
+		public InitializeIntersightCloudVolumeType()
+		{
+            ClassId = CloudVolumeType.ClassIdEnum.CloudVolumeType;
+            ObjectType = CloudVolumeType.ObjectTypeEnum.CloudVolumeType;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudVolumeType.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudVolumeType.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudVolumeType initObject = new Intersight.Model.CloudVolumeType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CloudNetworkAccessConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCloudNetworkAccessConfig")]
+    public class InitializeIntersightCloudNetworkAccessConfig:PSCmdlet
+	{
+		public InitializeIntersightCloudNetworkAccessConfig()
+		{
+            ClassId = CloudNetworkAccessConfig.ClassIdEnum.CloudNetworkAccessConfig;
+            ObjectType = CloudNetworkAccessConfig.ObjectTypeEnum.CloudNetworkAccessConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudNetworkAccessConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public CloudNetworkAccessConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.CloudNetworkAccessConfig initObject = new Intersight.Model.CloudNetworkAccessConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObservedGeneration
-ObservedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&apos;s generation, which is updated on mutation by the API Server.
+ObservedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet&amp;apos;s generation, which is updated on mutation by the API Server.
 
 ```yaml
 Type: long
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateRevision
-UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &lt;replicas&amp;gt; - &lt;updatedReplicas&amp;gt;, until pod number &lt;replicas&amp;gt;.
+UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &amp;lt;replicas&amp;gt; - &amp;lt;updatedReplicas&amp;gt;, until pod number &amp;lt;replicas&amp;gt;.
 
 ```yaml
 Type: string

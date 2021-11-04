@@ -17,7 +17,7 @@ Remove-IntersightVnicEthQosPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicEthQosPolicy&apos; resource.
+Delete a &amp;apos;VnicEthQosPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightVnicEthQosPolicy](./Set-IntersightVnicEthQosPolicy.md)
 
-[Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
-
 [New-IntersightVnicEthQosPolicy](./New-IntersightVnicEthQosPolicy.md)
+
+[Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
 

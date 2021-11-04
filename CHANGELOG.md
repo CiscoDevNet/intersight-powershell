@@ -1,3 +1,6 @@
+## Intersight.PowerShell_v1.0.9.4870
+Release Date: 4th November 2021
+- Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4870)
 ## Intersight.PowerShell_v1.0.9.4663
 Release Date: 19th October 2021
 - Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4437)

@@ -396,9 +396,9 @@ PS C:\> Set-IntersightVnicFcIf
 
 ## RELATED LINKS
 
-[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
-
 [Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
+
+[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
 
 [Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
 

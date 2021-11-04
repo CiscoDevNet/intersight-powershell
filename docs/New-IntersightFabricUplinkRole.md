@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-Fec< FabricUplinkRole.FecEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkRole.FecEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricUplinkRole&amp;apos; resource.
+Create a &apos;FabricUplinkRole&apos; resource.
 
 ## PARAMETERS
 
@@ -58,6 +58,24 @@ Breakout port Identifier of the Switch Interface.\nWhen a port is not configured
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EthNetworkGroupPolicy
+An array of relationships to fabricEthNetworkGroupPolicy resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -135,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortId
-Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &amp;apos;portId&amp;apos; represents the port id on the fanout side of the breakout cable.
+Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &apos;portId&apos; represents the port id on the fanout side of the breakout cable.
 
 ```yaml
 Type: long

@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVirtualDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< string>][-Cluster< VirtualizationBaseClusterRelationship>][-Mode< VirtualizationVirtualDisk.ModeEnum>][[-Moid]< string>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SourceCerts< string>][-SourceDiskToClone< string>][-SourceFilePath< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVirtualDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BillingUnitId< string>][-Capacity< string>][-Cluster< VirtualizationBaseClusterRelationship>][-EncryptionKey< string>][-EncryptionType< string>][-Mode< VirtualizationVirtualDisk.ModeEnum>][[-Moid]< string>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SourceCerts< string>][-SourceDiskToClone< string>][-SourceFilePath< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VolumeIopsInfo< CloudVolumeIopsInfo>][-Zone< CloudAvailabilityZone>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVirtualDisk&amp;apos; resource.
+Update a &apos;VirtualizationVirtualDisk&apos; resource.
 
 ## PARAMETERS
 
@@ -28,6 +28,21 @@ Update a &amp;apos;VirtualizationVirtualDisk&amp;apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BillingUnitId
+Billing rate for this resource.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -61,6 +76,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: VirtualizationBaseClusterRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EncryptionKey
+Encryption key used if volume is encrypted.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EncryptionType
+Encryption method used to encrypt the volume.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -196,6 +241,40 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -VolumeIopsInfo
+Iops (input-output operations per sec) info for the volume.
+
+Note :- Use Initialize-IntersightCloudVolumeIopsInfo to create the object of complex type CloudVolumeIopsInfo
+
+```yaml
+Type: CloudVolumeIopsInfo
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Zone
+Aws specific availabilty zone in a region.
+
+Note :- Use Initialize-IntersightCloudAvailabilityZone to create the object of complex type CloudAvailabilityZone
+
+```yaml
+Type: CloudAvailabilityZone
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -260,3 +339,7 @@ PS C:\> Set-IntersightVirtualizationVirtualDisk
 [Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightCloudVolumeIopsInfo](./Initialize-IntersightCloudVolumeIopsInfo.md)
+
+[Initialize-IntersightCloudAvailabilityZone](./Initialize-IntersightCloudAvailabilityZone.md)

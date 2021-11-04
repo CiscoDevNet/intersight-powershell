@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
+[New-IntersightSoftwareApplianceDistributable](./New-IntersightSoftwareApplianceDistributable.md)
 
 [Remove-IntersightSoftwareApplianceDistributable](./Remove-IntersightSoftwareApplianceDistributable.md)
 
-[New-IntersightSoftwareApplianceDistributable](./New-IntersightSoftwareApplianceDistributable.md)
+[Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
 

@@ -11,6 +11,7 @@ namespace Intersight.PowerShell
             QueryParameters = new Dictionary<string, string>();
             PathParameters = new Dictionary<string, string>();
             HeaderParameters = new Dictionary<string, string>();
+            ContentType = "application/json";
         }
 
         internal string Method { get; set; }
@@ -26,5 +27,7 @@ namespace Intersight.PowerShell
         internal object RequestBody { get; set; }
 
         internal string RequestData { get; set; } = string.Empty;
+
+        internal string ContentType {get;set;}
     }
 }

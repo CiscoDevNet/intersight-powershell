@@ -19,7 +19,7 @@ New-IntersightHyperflexNodeConfigPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexNodeConfigPolicy&amp;apos; resource.
+Create a &apos;HyperflexNodeConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -276,11 +276,11 @@ PS C:\> New-IntersightHyperflexNodeConfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexNodeConfigPolicy](./Get-IntersightHyperflexNodeConfigPolicy.md)
-
 [Set-IntersightHyperflexNodeConfigPolicy](./Set-IntersightHyperflexNodeConfigPolicy.md)
 
 [Remove-IntersightHyperflexNodeConfigPolicy](./Remove-IntersightHyperflexNodeConfigPolicy.md)
+
+[Get-IntersightHyperflexNodeConfigPolicy](./Get-IntersightHyperflexNodeConfigPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 

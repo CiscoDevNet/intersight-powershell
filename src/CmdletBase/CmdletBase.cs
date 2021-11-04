@@ -9,12 +9,6 @@ namespace Intersight.PowerShell
 {
 	public class CmdletBase:PSCmdlet
 	{
-		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-		public SwitchParameter Json { get; set; }
-
-		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-		public SwitchParameter WithHttpInfo { get; set; }
-		
 		public static Configuration Config { get; set; }
 
 		public Object ApiInstance { get; set; }

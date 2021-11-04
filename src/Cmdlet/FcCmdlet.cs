@@ -248,6 +248,83 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FcPhysicalPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort")]
+    public class SetIntersightFcPhysicalPort:SetCmdletBase
+	{
+		public SetIntersightFcPhysicalPort()
+		{
+			ApiInstance = new FcApi(Config);
+            ModelObject = new FcPhysicalPort();
+            MethodName = "UpdateFcPhysicalPortWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        
+        
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcPhysicalPort.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFcPhysicalPort", DefaultParameterSetName = "CmdletParam")]
@@ -575,83 +652,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set FcPhysicalPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort")]
-    public class SetIntersightFcPhysicalPort:SetCmdletBase
-	{
-		public SetIntersightFcPhysicalPort()
-		{
-			ApiInstance = new FcApi(Config);
-            ModelObject = new FcPhysicalPort();
-            MethodName = "PatchFcPhysicalPortWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        
-        
         
     }
 }

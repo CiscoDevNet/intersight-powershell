@@ -19,7 +19,7 @@ Set-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;IppoolPool&apos; resource.
+Update a &amp;apos;IppoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

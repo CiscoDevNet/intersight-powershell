@@ -312,11 +312,11 @@ PS C:\> Set-IntersightSdwanProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
+
 [Get-IntersightSdwanProfile](./Get-IntersightSdwanProfile.md)
 
 [New-IntersightSdwanProfile](./New-IntersightSdwanProfile.md)
-
-[Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

@@ -94,6 +94,80 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New VrfVrf.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightVrfVrf")]
+    public class NewIntersightVrfVrf:NewCmdletBase
+	{
+		public NewIntersightVrfVrf()
+		{
+			ApiInstance = new VrfApi(Config);
+            ModelObject = new VrfVrf();
+            MethodName = "CreateVrfVrfWithHttpInfo";
+		}
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Description to help identify or describe this VRF."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Name of the Virtual Routing and Forwarding Instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VrfVrf.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightVrfVrf", DefaultParameterSetName = "CmdletParam")]
@@ -211,80 +285,6 @@ namespace Intersight.PowerShell
         
         
 
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New VrfVrf.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVrfVrf")]
-    public class NewIntersightVrfVrf:NewCmdletBase
-	{
-		public NewIntersightVrfVrf()
-		{
-			ApiInstance = new VrfApi(Config);
-            ModelObject = new VrfVrf();
-            MethodName = "CreateVrfVrfWithHttpInfo";
-		}
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Description to help identify or describe this VRF."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Name of the Virtual Routing and Forwarding Instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
         
     }
 }

@@ -12,6 +12,12 @@ namespace Intersight.PowerShell
 		#region Parameter
 		[Parameter(Mandatory = true,ValueFromPipelineByPropertyName = true)]
 		public string Moid { get; set; }
+
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter Json { get; set; }
+
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter WithHttpInfo { get; set; }
 		#endregion
 
 		public RemoveCmdletBase()

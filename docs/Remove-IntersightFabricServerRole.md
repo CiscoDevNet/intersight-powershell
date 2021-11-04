@@ -17,7 +17,7 @@ Remove-IntersightFabricServerRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricServerRole&amp;apos; resource.
+Delete a &apos;FabricServerRole&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricServerRole](./Set-IntersightFabricServerRole.md)
 
-[New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
-
 [Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
+
+[New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
 

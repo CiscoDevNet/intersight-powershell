@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove DeviceconnectorPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightDeviceconnectorPolicy")]
-    public class RemoveIntersightDeviceconnectorPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightDeviceconnectorPolicy()
-		{
-			ApiInstance = new DeviceconnectorApi(Config);
-            MethodName = "DeleteDeviceconnectorPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set DeviceconnectorPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightDeviceconnectorPolicy")]
@@ -121,6 +109,18 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove DeviceconnectorPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightDeviceconnectorPolicy")]
+    public class RemoveIntersightDeviceconnectorPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightDeviceconnectorPolicy()
+		{
+			ApiInstance = new DeviceconnectorApi(Config);
+            MethodName = "DeleteDeviceconnectorPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New DeviceconnectorPolicy.</para>

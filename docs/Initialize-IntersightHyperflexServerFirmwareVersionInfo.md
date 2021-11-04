@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerPlatform
-The platform type for UCS server.\n* `M5` - M5 generation of UCS server.\n* `M3` - M3 generation of UCS server.\n* `M4` - M4 generation of UCS server.
+The platform type for UCS server.\n* `M5` - M5 generation of UCS server.\n* `M3` - M3 generation of UCS server.\n* `M4` - M4 generation of UCS server.\n* `M6` - M6 generation of UCS server.
 
 ```yaml
 Type: HyperflexServerFirmwareVersionInfo.ServerPlatformEnum

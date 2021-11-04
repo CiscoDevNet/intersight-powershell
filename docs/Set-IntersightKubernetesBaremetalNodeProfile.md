@@ -19,7 +19,7 @@ Set-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-AdditionalPrope
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
+Update a &apos;KubernetesBaremetalNodeProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -341,9 +341,9 @@ PS C:\> Set-IntersightKubernetesBaremetalNodeProfile
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
-
 [Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
+
+[New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
 
 [Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
 

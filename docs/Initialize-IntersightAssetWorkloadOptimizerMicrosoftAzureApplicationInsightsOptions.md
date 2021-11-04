@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -OfferId
-The offer ID of this account. Default value is \&quot;MS-AZR-0003P\&quot;, a pay-as-you-go subscription lets you pay for the services and resources that you use on a monthly basis.
+The offer ID of this account. Default value is \&amp;quot;MS-AZR-0003P\&amp;quot;, a pay-as-you-go subscription lets you pay for the services and resources that you use on a monthly basis.
 
 ```yaml
 Type: string

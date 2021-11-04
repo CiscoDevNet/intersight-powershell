@@ -17,7 +17,7 @@ Remove-IntersightWorkflowBatchApiExecutor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowBatchApiExecutor&apos; resource.
+Delete a &amp;apos;WorkflowBatchApiExecutor&amp;apos; resource.
 
 ## EXAMPLES
 

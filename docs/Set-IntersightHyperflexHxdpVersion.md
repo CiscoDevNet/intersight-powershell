@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxdpVersion [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxdpVersion&amp;apos; resource.
+Update a &apos;HyperflexHxdpVersion&apos; resource.
 
 ## PARAMETERS
 
@@ -160,10 +160,10 @@ PS C:\> Set-IntersightHyperflexHxdpVersion
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
-
 [Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
 
 [New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
+
+[Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

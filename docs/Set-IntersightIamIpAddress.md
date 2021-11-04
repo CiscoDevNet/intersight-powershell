@@ -19,7 +19,7 @@ Set-IntersightIamIpAddress [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamIpAddress&amp;apos; resource.
+Update a &apos;IamIpAddress&apos; resource.
 
 ## PARAMETERS
 

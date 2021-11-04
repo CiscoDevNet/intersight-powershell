@@ -19,7 +19,7 @@ Set-IntersightPortMacBinding [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;PortMacBinding&amp;apos; resource.
+Update a &apos;PortMacBinding&apos; resource.
 
 ## PARAMETERS
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStorageNetAppCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStorageNetAppCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterEfficiency< StorageNetAppStorageClusterEfficiency>][[-Moid]< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,23 @@ Update a &apos;StorageNetAppCluster&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterEfficiency
+Cluster storage efficiency savings, ratio, and logical used.
+
+Note :- Use Initialize-IntersightStorageNetAppStorageClusterEfficiency to create the object of complex type StorageNetAppStorageClusterEfficiency
+
+```yaml
+Type: StorageNetAppStorageClusterEfficiency
 Parameter Sets: (All)
 Aliases:
 
@@ -146,6 +163,10 @@ PS C:\> Set-IntersightStorageNetAppCluster
 ## RELATED LINKS
 
 [Get-IntersightStorageNetAppCluster](./Get-IntersightStorageNetAppCluster.md)
+
+[Initialize-IntersightStorageNetAppPerformanceMetricsAverage](./Initialize-IntersightStorageNetAppPerformanceMetricsAverage.md)
+
+[Initialize-IntersightStorageNetAppStorageClusterEfficiency](./Initialize-IntersightStorageNetAppStorageClusterEfficiency.md)
 
 [Initialize-IntersightStorageBaseCapacity](./Initialize-IntersightStorageBaseCapacity.md)
 

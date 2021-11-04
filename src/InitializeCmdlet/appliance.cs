@@ -8,59 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ApplianceKeyValuePair.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightApplianceKeyValuePair")]
-    public class InitializeIntersightApplianceKeyValuePair:PSCmdlet
-	{
-		public InitializeIntersightApplianceKeyValuePair()
-		{
-            ClassId = ApplianceKeyValuePair.ClassIdEnum.ApplianceKeyValuePair;
-            ObjectType = ApplianceKeyValuePair.ObjectTypeEnum.ApplianceKeyValuePair;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ApplianceKeyValuePair.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ApplianceKeyValuePair.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ApplianceKeyValuePair initObject = new Intersight.Model.ApplianceKeyValuePair();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ApplianceStatusCheck.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightApplianceStatusCheck")]
@@ -236,6 +183,59 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.ApplianceCertRenewalPhase initObject = new Intersight.Model.ApplianceCertRenewalPhase();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ApplianceKeyValuePair.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightApplianceKeyValuePair")]
+    public class InitializeIntersightApplianceKeyValuePair:PSCmdlet
+	{
+		public InitializeIntersightApplianceKeyValuePair()
+		{
+            ClassId = ApplianceKeyValuePair.ClassIdEnum.ApplianceKeyValuePair;
+            ObjectType = ApplianceKeyValuePair.ObjectTypeEnum.ApplianceKeyValuePair;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ApplianceKeyValuePair.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ApplianceKeyValuePair.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ApplianceKeyValuePair initObject = new Intersight.Model.ApplianceKeyValuePair();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

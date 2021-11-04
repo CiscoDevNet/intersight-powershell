@@ -19,7 +19,7 @@ New-IntersightSoftwareHyperflexBundleDistributable [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareHyperflexBundleDistributable&amp;apos; resource.
+Create a &apos;SoftwareHyperflexBundleDistributable&apos; resource.
 
 ## PARAMETERS
 

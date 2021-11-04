@@ -17,7 +17,7 @@ Remove-IntersightFirmwareChassisUpgrade -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareChassisUpgrade&apos; resource.
+Delete a &amp;apos;FirmwareChassisUpgrade&amp;apos; resource.
 
 ## EXAMPLES
 

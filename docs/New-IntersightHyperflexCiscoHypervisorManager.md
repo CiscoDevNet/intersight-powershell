@@ -160,8 +160,8 @@ PS C:\> New-IntersightHyperflexCiscoHypervisorManager
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexCiscoHypervisorManager](./Set-IntersightHyperflexCiscoHypervisorManager.md)
-
 [Get-IntersightHyperflexCiscoHypervisorManager](./Get-IntersightHyperflexCiscoHypervisorManager.md)
+
+[Set-IntersightHyperflexCiscoHypervisorManager](./Set-IntersightHyperflexCiscoHypervisorManager.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

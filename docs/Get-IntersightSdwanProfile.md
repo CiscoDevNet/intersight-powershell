@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSdwanProfile](./New-IntersightSdwanProfile.md)
+[Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
 
 [Set-IntersightSdwanProfile](./Set-IntersightSdwanProfile.md)
 
-[Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
+[New-IntersightSdwanProfile](./New-IntersightSdwanProfile.md)
 

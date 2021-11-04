@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
+[Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
 
 [New-IntersightPowerPolicy](./New-IntersightPowerPolicy.md)
 
-[Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
+[Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
 

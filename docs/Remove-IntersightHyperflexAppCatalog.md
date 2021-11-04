@@ -17,7 +17,7 @@ Remove-IntersightHyperflexAppCatalog -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexAppCatalog&apos; resource.
+Delete a &amp;apos;HyperflexAppCatalog&amp;apos; resource.
 
 ## EXAMPLES
 

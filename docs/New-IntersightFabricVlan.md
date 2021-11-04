@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAllowOnUplinks
-Used to determine whether this VLAN will be allowed on all uplink ports and PCs in this FI.
+Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN.
 
 ```yaml
 Type: bool
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &amp;apos;name&amp;apos; used to identify this VLAN.
+The &apos;name&apos; used to identify this VLAN.
 
 ```yaml
 Type: string

@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexCiscoHypervisorManager](./Set-IntersightHyperflexCiscoHypervisorManager.md)
-
 [New-IntersightHyperflexCiscoHypervisorManager](./New-IntersightHyperflexCiscoHypervisorManager.md)
+
+[Set-IntersightHyperflexCiscoHypervisorManager](./Set-IntersightHyperflexCiscoHypervisorManager.md)
 

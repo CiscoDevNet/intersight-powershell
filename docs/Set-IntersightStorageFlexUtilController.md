@@ -19,7 +19,7 @@ Set-IntersightStorageFlexUtilController [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageFlexUtilController&apos; resource.
+Update a &amp;apos;StorageFlexUtilController&amp;apos; resource.
 
 ## PARAMETERS
 

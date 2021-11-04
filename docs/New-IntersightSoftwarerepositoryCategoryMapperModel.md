@@ -232,10 +232,10 @@ PS C:\> New-IntersightSoftwarerepositoryCategoryMapperModel
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwarerepositoryCategoryMapperModel](./Get-IntersightSoftwarerepositoryCategoryMapperModel.md)
+[Set-IntersightSoftwarerepositoryCategoryMapperModel](./Set-IntersightSoftwarerepositoryCategoryMapperModel.md)
 
 [Remove-IntersightSoftwarerepositoryCategoryMapperModel](./Remove-IntersightSoftwarerepositoryCategoryMapperModel.md)
 
-[Set-IntersightSoftwarerepositoryCategoryMapperModel](./Set-IntersightSoftwarerepositoryCategoryMapperModel.md)
+[Get-IntersightSoftwarerepositoryCategoryMapperModel](./Get-IntersightSoftwarerepositoryCategoryMapperModel.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

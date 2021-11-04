@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
+[New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
 [Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
 
-[New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
+[Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
 

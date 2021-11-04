@@ -19,7 +19,7 @@ New-IntersightHyperflexAppCatalog [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexAppCatalog&amp;apos; resource.
+Create a &apos;HyperflexAppCatalog&apos; resource.
 
 ## PARAMETERS
 

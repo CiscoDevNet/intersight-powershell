@@ -17,7 +17,7 @@ Remove-IntersightApplianceRestore -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ApplianceRestore&amp;apos; resource.
+Delete a &apos;ApplianceRestore&apos; resource.
 
 ## EXAMPLES
 
