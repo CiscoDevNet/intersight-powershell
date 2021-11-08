@@ -48,6 +48,12 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
         public string Tag { get; set; } = null;
 
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter Json { get; set; }
+
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter WithHttpInfo { get; set; }
+
         private List<object> result;
         #endregion
 

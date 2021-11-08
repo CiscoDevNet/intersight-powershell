@@ -163,8 +163,8 @@ PS C:\> New-IntersightHyperflexVmImportOperation
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
-
 [Remove-IntersightHyperflexVmImportOperation](./Remove-IntersightHyperflexVmImportOperation.md)
+
+[Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

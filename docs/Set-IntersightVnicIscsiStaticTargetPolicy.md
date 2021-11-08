@@ -19,7 +19,7 @@ Set-IntersightVnicIscsiStaticTargetPolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicIscsiStaticTargetPolicy&apos; resource.
+Update a &amp;apos;VnicIscsiStaticTargetPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

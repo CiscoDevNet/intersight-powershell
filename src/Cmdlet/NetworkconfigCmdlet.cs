@@ -431,7 +431,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new NetworkconfigApi(Config);
             ModelObject = new NetworkconfigPolicy();
-            MethodName = "UpdateNetworkconfigPolicyWithHttpInfo";
+            MethodName = "PatchNetworkconfigPolicyWithHttpInfo";
 		}
         
         

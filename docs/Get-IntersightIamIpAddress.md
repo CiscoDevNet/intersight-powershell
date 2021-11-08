@@ -25,7 +25,7 @@ Get-IntersightIamIpAddress [-Count <Boolean>] [-InlineCount <String>] [-Select <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamIpAddress&apos; resource.,
+Read a &amp;apos;IamIpAddress&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
-
 [Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)
+
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
 
 [New-IntersightIamIpAddress](./New-IntersightIamIpAddress.md)
 

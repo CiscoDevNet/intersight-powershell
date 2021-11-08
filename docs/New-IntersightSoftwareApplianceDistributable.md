@@ -470,11 +470,11 @@ PS C:\> New-IntersightSoftwareApplianceDistributable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
+[Get-IntersightSoftwareApplianceDistributable](./Get-IntersightSoftwareApplianceDistributable.md)
 
 [Remove-IntersightSoftwareApplianceDistributable](./Remove-IntersightSoftwareApplianceDistributable.md)
 
-[Get-IntersightSoftwareApplianceDistributable](./Get-IntersightSoftwareApplianceDistributable.md)
+[Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

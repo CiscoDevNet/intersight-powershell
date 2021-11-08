@@ -17,7 +17,7 @@ Remove-IntersightUuidpoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;UuidpoolPool&amp;apos; resource.
+Delete a &apos;UuidpoolPool&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
-
 [Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
+
+[Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
 

@@ -25,7 +25,7 @@ Get-IntersightIaasDiagnosticMessages [-Count <Boolean>] [-InlineCount <String>] 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IaasDiagnosticMessages&apos; resource.,
+Read a &amp;apos;IaasDiagnosticMessages&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

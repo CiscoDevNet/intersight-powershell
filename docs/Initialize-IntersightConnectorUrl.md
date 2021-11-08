@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fragment
-The fragment identifier component of a URI allows indirect identification of a secondary resource by reference to a primary resource and additional identifying information. The identified secondary resource may be some portion or subset of the primary resource, some view on representations of the primary resource, or some other resource defined or described by those representations. A fragment identifier component is indicated by the presence of a number sign (\&quot;#\&quot;) character and terminated by the end of the URI.
+The fragment identifier component of a URI allows indirect identification of a secondary resource by reference to a primary resource and additional identifying information. The identified secondary resource may be some portion or subset of the primary resource, some view on representations of the primary resource, or some other resource defined or described by those representations. A fragment identifier component is indicated by the presence of a number sign (\&amp;quot;#\&amp;quot;) character and terminated by the end of the URI.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: ConnectorUrl.ObjectTypeEnum
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Opaque
-A URI is opaque if, and only if, it is absolute and its scheme-specific part does not begin with a slash character (&amp;apos;/&amp;apos;). An opaque URI has a scheme, a scheme-specific part, and possibly a fragment; all other components are undefined.
+A URI is opaque if, and only if, it is absolute and its scheme-specific part does not begin with a slash character (&apos;/&apos;). An opaque URI has a scheme, a scheme-specific part, and possibly a fragment; all other components are undefined.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawPath
-The URI encoded form of the path property. e.g. &apos;%2Fapi%2Fv1%2F&apos;.
+The URI encoded form of the path property. e.g. &amp;apos;%2Fapi%2Fv1%2F&amp;apos;.
 
 ```yaml
 Type: string
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawQuery
-The query component, as defined in RFC 3986, contains non-hierarchical data that, along with data in the path component, serves to identify a resource within the scope of the URI&apos;s scheme and naming authority (if any). The query component is indicated by the first question mark character and terminated by a number sign character or by the end of the URI.\nThe rawQuery contains the URIs encoded query component, excluding the ? character.
+The query component, as defined in RFC 3986, contains non-hierarchical data that, along with data in the path component, serves to identify a resource within the scope of the URI&amp;apos;s scheme and naming authority (if any). The query component is indicated by the first question mark character and terminated by a number sign character or by the end of the URI.\nThe rawQuery contains the URIs encoded query component, excluding the ? character.
 
 ```yaml
 Type: string

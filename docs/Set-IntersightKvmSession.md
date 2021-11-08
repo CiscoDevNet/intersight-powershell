@@ -19,7 +19,7 @@ Set-IntersightKvmSession [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KvmSession&amp;apos; resource.
+Update a &apos;KvmSession&apos; resource.
 
 ## PARAMETERS
 

@@ -8,6 +8,12 @@ namespace Intersight.PowerShell
 {
 	public class SetCmdletBase:CmdletBase
 	{
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter Json { get; set; }
+
+		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+		public SwitchParameter WithHttpInfo { get; set; }
+		
 		public SetCmdletBase()
 		{
 		}

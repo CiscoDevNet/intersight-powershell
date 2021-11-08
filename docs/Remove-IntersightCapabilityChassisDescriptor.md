@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)
-
 [Get-IntersightCapabilityChassisDescriptor](./Get-IntersightCapabilityChassisDescriptor.md)
 
 [New-IntersightCapabilityChassisDescriptor](./New-IntersightCapabilityChassisDescriptor.md)
+
+[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)
 

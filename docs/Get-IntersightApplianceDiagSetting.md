@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
-
 [New-IntersightApplianceDiagSetting](./New-IntersightApplianceDiagSetting.md)
+
+[Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
 

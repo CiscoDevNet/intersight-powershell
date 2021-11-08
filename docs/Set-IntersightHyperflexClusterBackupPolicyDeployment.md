@@ -226,11 +226,11 @@ PS C:\> Set-IntersightHyperflexClusterBackupPolicyDeployment
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterBackupPolicyDeployment](./Remove-IntersightHyperflexClusterBackupPolicyDeployment.md)
-
 [Get-IntersightHyperflexClusterBackupPolicyDeployment](./Get-IntersightHyperflexClusterBackupPolicyDeployment.md)
 
 [New-IntersightHyperflexClusterBackupPolicyDeployment](./New-IntersightHyperflexClusterBackupPolicyDeployment.md)
+
+[Remove-IntersightHyperflexClusterBackupPolicyDeployment](./Remove-IntersightHyperflexClusterBackupPolicyDeployment.md)
 
 [Initialize-IntersightHyperflexReplicationSchedule](./Initialize-IntersightHyperflexReplicationSchedule.md)
 

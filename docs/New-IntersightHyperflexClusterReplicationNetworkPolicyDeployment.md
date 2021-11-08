@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment [-AdditionalPro
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexClusterReplicationNetworkPolicyDeployment&apos; resource.
+Create a &amp;apos;HyperflexClusterReplicationNetworkPolicyDeployment&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -178,9 +178,9 @@ PS C:\> New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
-
 [Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
+
+[Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 
 [Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 

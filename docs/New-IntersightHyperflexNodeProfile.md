@@ -19,7 +19,7 @@ New-IntersightHyperflexNodeProfile [-Action< string>][-AdditionalProperties< Sys
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexNodeProfile&apos; resource.
+Create a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 

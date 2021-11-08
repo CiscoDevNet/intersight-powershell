@@ -17,7 +17,7 @@ Remove-IntersightVnicIscsiAdapterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicIscsiAdapterPolicy&apos; resource.
+Delete a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicIscsiAdapterPolicy](./Set-IntersightVnicIscsiAdapterPolicy.md)
+[Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
 
 [New-IntersightVnicIscsiAdapterPolicy](./New-IntersightVnicIscsiAdapterPolicy.md)
 
-[Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
+[Set-IntersightVnicIscsiAdapterPolicy](./Set-IntersightVnicIscsiAdapterPolicy.md)
 

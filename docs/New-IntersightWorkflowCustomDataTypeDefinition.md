@@ -256,11 +256,11 @@ PS C:\> New-IntersightWorkflowCustomDataTypeDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
-
 [Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
+
+[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Initialize-IntersightWorkflowParameterSet](./Initialize-IntersightWorkflowParameterSet.md)
 

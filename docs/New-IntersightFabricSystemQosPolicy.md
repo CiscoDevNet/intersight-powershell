@@ -210,11 +210,11 @@ PS C:\> New-IntersightFabricSystemQosPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
+[Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
 
 [Set-IntersightFabricSystemQosPolicy](./Set-IntersightFabricSystemQosPolicy.md)
 
-[Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
+[Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
 
 [Initialize-IntersightFabricQosClass](./Initialize-IntersightFabricQosClass.md)
 

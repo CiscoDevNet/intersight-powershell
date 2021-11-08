@@ -19,7 +19,7 @@ Set-IntersightTerraformExecutor [-Account< IamAccountRelationship>][-AdditionalP
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;TerraformExecutor&amp;apos; resource.
+Update a &apos;TerraformExecutor&apos; resource.
 
 ## PARAMETERS
 

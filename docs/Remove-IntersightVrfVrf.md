@@ -17,7 +17,7 @@ Remove-IntersightVrfVrf -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VrfVrf&apos; resource.
+Delete a &amp;apos;VrfVrf&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightVrfVrf](./Set-IntersightVrfVrf.md)
 
-[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
-
 [New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
+
+[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
 

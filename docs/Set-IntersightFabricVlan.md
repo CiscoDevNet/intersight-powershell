@@ -19,7 +19,7 @@ Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricVlan&amp;apos; resource.
+Update a &apos;FabricVlan&apos; resource.
 
 ## PARAMETERS
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAllowOnUplinks
-Used to determine whether this VLAN will be allowed on all uplink ports and PCs in this FI.
+Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN.
 
 ```yaml
 Type: bool
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsNative
-Used to define whether this VLAN is to be classified as &apos;native&apos; for traffic in this FI.
+Used to define whether this VLAN is to be classified as &amp;apos;native&amp;apos; for traffic in this FI.
 
 ```yaml
 Type: bool

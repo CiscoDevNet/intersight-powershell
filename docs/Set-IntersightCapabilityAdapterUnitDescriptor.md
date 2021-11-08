@@ -19,7 +19,7 @@ Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
+Update a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -325,10 +325,10 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+
 [Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
-
-[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ Set-IntersightBiosUnit [-AdditionalProperties< System.Collections.Generic.Dictio
 ```
 
 ## DESCRIPTION
-Update a &apos;BiosUnit&apos; resource.
+Update a &amp;apos;BiosUnit&amp;apos; resource.
 
 ## PARAMETERS
 

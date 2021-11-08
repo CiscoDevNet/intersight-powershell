@@ -19,7 +19,7 @@ Set-IntersightIamApiKey [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;IamApiKey&apos; resource.
+Update a &amp;apos;IamApiKey&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -204,11 +204,11 @@ PS C:\> Set-IntersightIamApiKey
 
 ## RELATED LINKS
 
-[Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
-
 [Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
 
 [New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
+
+[Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
 
 [Initialize-IntersightPkixKeyGenerationSpec](./Initialize-IntersightPkixKeyGenerationSpec.md)
 

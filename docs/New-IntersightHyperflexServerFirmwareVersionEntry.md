@@ -19,7 +19,7 @@ New-IntersightHyperflexServerFirmwareVersionEntry [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexServerFirmwareVersionEntry&amp;apos; resource.
+Create a &apos;HyperflexServerFirmwareVersionEntry&apos; resource.
 
 ## PARAMETERS
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerPlatform
-The server platform type that is applicable for the server firmware bundle version.\n* `M5` - M5 generation of UCS server.\n* `M3` - M3 generation of UCS server.\n* `M4` - M4 generation of UCS server.
+The server platform type that is applicable for the server firmware bundle version.\n* `M5` - M5 generation of UCS server.\n* `M3` - M3 generation of UCS server.\n* `M4` - M4 generation of UCS server.\n* `M6` - M6 generation of UCS server.
 
 ```yaml
 Type: HyperflexServerFirmwareVersionEntry.ServerPlatformEnum
@@ -192,11 +192,11 @@ PS C:\> New-IntersightHyperflexServerFirmwareVersionEntry
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
+[Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Set-IntersightHyperflexServerFirmwareVersionEntry](./Set-IntersightHyperflexServerFirmwareVersionEntry.md)
 
-[Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
+[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Initialize-IntersightHyperflexAppSettingConstraint](./Initialize-IntersightHyperflexAppSettingConstraint.md)
 

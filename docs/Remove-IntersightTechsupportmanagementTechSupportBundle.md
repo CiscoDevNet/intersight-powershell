@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightTechsupportmanagementTechSupportBundle](./Get-IntersightTechsupportmanagementTechSupportBundle.md)
-
 [New-IntersightTechsupportmanagementTechSupportBundle](./New-IntersightTechsupportmanagementTechSupportBundle.md)
+
+[Get-IntersightTechsupportmanagementTechSupportBundle](./Get-IntersightTechsupportmanagementTechSupportBundle.md)
 

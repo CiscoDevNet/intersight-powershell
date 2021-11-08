@@ -17,7 +17,7 @@ Remove-IntersightMacpoolLease -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;MacpoolLease&apos; resource.
+Delete a &amp;apos;MacpoolLease&amp;apos; resource.
 
 ## EXAMPLES
 

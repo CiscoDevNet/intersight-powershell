@@ -19,7 +19,7 @@ Set-IntersightFirmwareUnsupportedVersionUpgrade [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareUnsupportedVersionUpgrade&apos; resource.
+Update a &amp;apos;FirmwareUnsupportedVersionUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 

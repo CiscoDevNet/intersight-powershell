@@ -19,7 +19,7 @@ Set-IntersightWorkflowRollbackWorkflow [-Action< WorkflowRollbackWorkflow.Action
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowRollbackWorkflow&amp;apos; resource.
+Update a &apos;WorkflowRollbackWorkflow&apos; resource.
 
 ## PARAMETERS
 
@@ -192,11 +192,11 @@ PS C:\> Set-IntersightWorkflowRollbackWorkflow
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowRollbackWorkflow](./Remove-IntersightWorkflowRollbackWorkflow.md)
+
 [Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
 
 [New-IntersightWorkflowRollbackWorkflow](./New-IntersightWorkflowRollbackWorkflow.md)
-
-[Remove-IntersightWorkflowRollbackWorkflow](./Remove-IntersightWorkflowRollbackWorkflow.md)
 
 [Initialize-IntersightWorkflowRollbackWorkflowTask](./Initialize-IntersightWorkflowRollbackWorkflowTask.md)
 

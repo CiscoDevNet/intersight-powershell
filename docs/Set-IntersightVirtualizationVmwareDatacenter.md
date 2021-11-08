@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDatacenter [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterCount< long>][-DatastoreCount< long>][-HostCount< long>][-InventoryPath< string>][[-Moid]< string>][-NetworkCount< long>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareDatacenter [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterCount< long>][-DatastoreCount< long>][-HostCount< long>][-InventoryPath< string>][[-Moid]< string>][-NetworkCount< long>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareDatacenter&apos; resource.
+Update a &amp;apos;VirtualizationVmwareDatacenter&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -165,6 +165,21 @@ Accept wildcard characters: False
 
 ### -VmCount
 Count of all virtual machines (VMs) associated with this DC.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VmTemplateCount
+Count of all virtual machines templates associated with this DC.
 
 ```yaml
 Type: long

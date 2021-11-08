@@ -25,7 +25,7 @@ Get-IntersightIamAppRegistration [-Count <Boolean>] [-InlineCount <String>] [-Se
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamAppRegistration&amp;apos; resource.,
+Read a &apos;IamAppRegistration&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamAppRegistration](./New-IntersightIamAppRegistration.md)
-
 [Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
 
 [Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
+
+[New-IntersightIamAppRegistration](./New-IntersightIamAppRegistration.md)
 

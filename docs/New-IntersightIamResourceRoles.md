@@ -181,10 +181,10 @@ PS C:\> New-IntersightIamResourceRoles
 
 ## RELATED LINKS
 
+[Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
+
 [Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)
 
 [Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
-
-[Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

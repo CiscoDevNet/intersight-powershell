@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment [-AdditionalPro
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterReplicationNetworkPolicyDeployment&amp;apos; resource.
+Update a &apos;HyperflexClusterReplicationNetworkPolicyDeployment&apos; resource.
 
 ## PARAMETERS
 

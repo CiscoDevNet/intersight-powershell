@@ -25,7 +25,7 @@ Get-IntersightKubernetesSysConfigPolicy [-Count <Boolean>] [-InlineCount <String
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;KubernetesSysConfigPolicy&apos; resource.,
+Read a &amp;apos;KubernetesSysConfigPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesSysConfigPolicy](./New-IntersightKubernetesSysConfigPolicy.md)
-
 [Set-IntersightKubernetesSysConfigPolicy](./Set-IntersightKubernetesSysConfigPolicy.md)
 
 [Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
+
+[New-IntersightKubernetesSysConfigPolicy](./New-IntersightKubernetesSysConfigPolicy.md)
 

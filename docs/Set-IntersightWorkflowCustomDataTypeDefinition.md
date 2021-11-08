@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-A user friendly short name to identify the custom data type definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), or an underscore (_) and must be at least 2 characters.
+A user friendly short name to identify the custom data type definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&amp;apos;), or an underscore (_) and must be at least 2 characters.
 
 ```yaml
 Type: string
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of custom data type definition. The valid name can contain lower case and upper case alphabetic characters, digits and special characters &apos;-&apos; and &apos;_&apos;.
+The name of custom data type definition. The valid name can contain lower case and upper case alphabetic characters, digits and special characters &amp;apos;-&amp;apos; and &amp;apos;_&amp;apos;.
 
 ```yaml
 Type: string
@@ -256,11 +256,11 @@ PS C:\> Set-IntersightWorkflowCustomDataTypeDefinition
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
+
 [Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [New-IntersightWorkflowCustomDataTypeDefinition](./New-IntersightWorkflowCustomDataTypeDefinition.md)
-
-[Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Initialize-IntersightWorkflowParameterSet](./Initialize-IntersightWorkflowParameterSet.md)
 

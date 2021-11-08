@@ -17,7 +17,7 @@ Remove-IntersightSdwanRouterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SdwanRouterPolicy&apos; resource.
+Delete a &amp;apos;SdwanRouterPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

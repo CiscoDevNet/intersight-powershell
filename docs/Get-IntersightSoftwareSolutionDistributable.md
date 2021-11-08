@@ -25,7 +25,7 @@ Get-IntersightSoftwareSolutionDistributable [-Count <Boolean>] [-InlineCount <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;SoftwareSolutionDistributable&apos; resource.,
+Read a &amp;apos;SoftwareSolutionDistributable&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

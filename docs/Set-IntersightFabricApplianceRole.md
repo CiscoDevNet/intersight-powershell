@@ -322,9 +322,9 @@ PS C:\> Set-IntersightFabricApplianceRole
 
 ## RELATED LINKS
 
-[Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
-
 [New-IntersightFabricApplianceRole](./New-IntersightFabricApplianceRole.md)
+
+[Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 
 [Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
 

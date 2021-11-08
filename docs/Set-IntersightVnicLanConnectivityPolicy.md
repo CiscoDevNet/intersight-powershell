@@ -19,7 +19,7 @@ Set-IntersightVnicLanConnectivityPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicLanConnectivityPolicy&apos; resource.
+Update a &amp;apos;VnicLanConnectivityPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

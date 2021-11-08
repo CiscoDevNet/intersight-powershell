@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSoftwareDistributionEntry -Moid <String> [<CommonParam
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexSoftwareDistributionEntry&amp;apos; resource.
+Delete a &apos;HyperflexSoftwareDistributionEntry&apos; resource.
 
 ## EXAMPLES
 

@@ -157,9 +157,9 @@ PS C:\> New-IntersightIamIpAddress
 
 ## RELATED LINKS
 
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
-
 [Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)
+
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
 
 [Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
 

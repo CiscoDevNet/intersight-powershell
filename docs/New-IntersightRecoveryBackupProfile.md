@@ -327,9 +327,9 @@ PS C:\> New-IntersightRecoveryBackupProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
-
 [Set-IntersightRecoveryBackupProfile](./Set-IntersightRecoveryBackupProfile.md)
+
+[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
 
 [Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
 

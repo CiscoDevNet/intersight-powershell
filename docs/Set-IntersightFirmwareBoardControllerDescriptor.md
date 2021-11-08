@@ -19,7 +19,7 @@ Set-IntersightFirmwareBoardControllerDescriptor [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareBoardControllerDescriptor&apos; resource.
+Update a &amp;apos;FirmwareBoardControllerDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightCondAlarm [-Acknowledge< CondAlarm.AcknowledgeEnum>][-AdditionalPr
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CondAlarm&amp;apos; resource.
+Update a &apos;CondAlarm&apos; resource.
 
 ## PARAMETERS
 

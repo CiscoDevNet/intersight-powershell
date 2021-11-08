@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSdwanRouterNode](./Set-IntersightSdwanRouterNode.md)
+
 [Get-IntersightSdwanRouterNode](./Get-IntersightSdwanRouterNode.md)
 
 [New-IntersightSdwanRouterNode](./New-IntersightSdwanRouterNode.md)
-
-[Set-IntersightSdwanRouterNode](./Set-IntersightSdwanRouterNode.md)
 

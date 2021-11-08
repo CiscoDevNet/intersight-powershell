@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
-
 [Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
 
 [New-IntersightKubernetesAciCniProfile](./New-IntersightKubernetesAciCniProfile.md)
+
+[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
 

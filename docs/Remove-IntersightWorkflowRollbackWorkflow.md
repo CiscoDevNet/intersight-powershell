@@ -17,7 +17,7 @@ Remove-IntersightWorkflowRollbackWorkflow -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowRollbackWorkflow&apos; resource.
+Delete a &amp;apos;WorkflowRollbackWorkflow&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightWorkflowRollbackWorkflow](./Set-IntersightWorkflowRollbackWorkflow.md)
+
 [Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
 
 [New-IntersightWorkflowRollbackWorkflow](./New-IntersightWorkflowRollbackWorkflow.md)
-
-[Set-IntersightWorkflowRollbackWorkflow](./Set-IntersightWorkflowRollbackWorkflow.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightCertificatemanagementPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CertificatemanagementPolicy&amp;apos; resource.
+Delete a &apos;CertificatemanagementPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCertificatemanagementPolicy](./New-IntersightCertificatemanagementPolicy.md)
-
 [Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
+
+[New-IntersightCertificatemanagementPolicy](./New-IntersightCertificatemanagementPolicy.md)
 
 [Set-IntersightCertificatemanagementPolicy](./Set-IntersightCertificatemanagementPolicy.md)
 

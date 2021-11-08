@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
-
 [Set-IntersightIamPrivateKeySpec](./Set-IntersightIamPrivateKeySpec.md)
 
 [Remove-IntersightIamPrivateKeySpec](./Remove-IntersightIamPrivateKeySpec.md)
+
+[New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
 

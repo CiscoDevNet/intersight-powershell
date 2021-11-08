@@ -25,7 +25,7 @@ Get-IntersightStorageDriveGroup [-Count <Boolean>] [-InlineCount <String>] [-Sel
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;StorageDriveGroup&amp;apos; resource.,
+Read a &apos;StorageDriveGroup&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
 
-[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
-
 [Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
+
+[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
 

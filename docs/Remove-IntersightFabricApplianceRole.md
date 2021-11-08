@@ -17,7 +17,7 @@ Remove-IntersightFabricApplianceRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricApplianceRole&apos; resource.
+Delete a &amp;apos;FabricApplianceRole&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
-
 [New-IntersightFabricApplianceRole](./New-IntersightFabricApplianceRole.md)
+
+[Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 
 [Set-IntersightFabricApplianceRole](./Set-IntersightFabricApplianceRole.md)
 

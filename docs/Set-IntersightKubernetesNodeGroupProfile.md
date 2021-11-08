@@ -19,7 +19,7 @@ Set-IntersightKubernetesNodeGroupProfile [-Action< string>][-AdditionalPropertie
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesNodeGroupProfile&apos; resource.
+Update a &amp;apos;KubernetesNodeGroupProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -Maxsize
-Maximum number of nodes desired in this node group.
+Maximum number of nodes this node group can scale up to during repair, replacement or upgrade operations.
 
 ```yaml
 Type: long
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -Minsize
-Minimum number of nodes desired in this node group.
+Minimum number of available nodes this node group can scale down to during repair, replacement or upgrade operations.
 
 ```yaml
 Type: long
@@ -424,9 +424,9 @@ PS C:\> Set-IntersightKubernetesNodeGroupProfile
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesNodeGroupProfile](./New-IntersightKubernetesNodeGroupProfile.md)
-
 [Get-IntersightKubernetesNodeGroupProfile](./Get-IntersightKubernetesNodeGroupProfile.md)
+
+[New-IntersightKubernetesNodeGroupProfile](./New-IntersightKubernetesNodeGroupProfile.md)
 
 [Remove-IntersightKubernetesNodeGroupProfile](./Remove-IntersightKubernetesNodeGroupProfile.md)
 

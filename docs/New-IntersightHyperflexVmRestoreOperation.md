@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexVmRestoreOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-NewName< string>][-Organization< OrganizationOrganizationRelationship>][-PowerOn< bool>][-RestoreEdgeClusterMoid< HyperflexClusterRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmBackupInfoMoid< HyperflexVmBackupInfoRelationship>][-VmSnapshotInfoMoid< HyperflexVmSnapshotInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightHyperflexVmRestoreOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-NewName< string>][-Organization< OrganizationOrganizationRelationship>][-PowerOn< bool>][-RestoreEdgeClusterMoid< HyperflexClusterRelationship>][-StartTime< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmBackupInfoMoid< HyperflexVmBackupInfoRelationship>][-VmSnapshotInfoMoid< HyperflexVmSnapshotInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -109,6 +109,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: HyperflexClusterRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTime
+Start time for the replication.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -229,8 +244,8 @@ PS C:\> New-IntersightHyperflexVmRestoreOperation
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexVmRestoreOperation](./Get-IntersightHyperflexVmRestoreOperation.md)
-
 [Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
+
+[Get-IntersightHyperflexVmRestoreOperation](./Get-IntersightHyperflexVmRestoreOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

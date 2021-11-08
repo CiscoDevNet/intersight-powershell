@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
+[New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
 
 [Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
 
-[New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
+[Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
 

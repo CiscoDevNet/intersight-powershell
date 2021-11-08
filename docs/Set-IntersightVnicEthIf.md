@@ -19,7 +19,7 @@ Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicEthIf&apos; resource.
+Update a &amp;apos;VnicEthIf&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverEnabled
-Setting this to true esnures that the traffic failsover from one uplink to another auotmatically in case of an uplink failure. It is applicable for Cisco VIC adapters only which are connected to Fabric Interconnect cluster. The uplink if specified determines the primary uplink in case of a failover.
+Enabling failover ensures that traffic from the vNIC automatically fails over to the secondary Fabric Interconnect, in case the specified Fabric Interconnect path goes down. Failover applies only to Cisco VICs that are connected to a Fabric Interconnect cluster.
 
 ```yaml
 Type: bool

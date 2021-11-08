@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowSshSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< WorkflowSshSession.ClassIdEnum>][-ContentType< string>][-Description< string>][-ErrorContentType< string>][-FileTransferToRemote< Model.WorkflowFileTransfer>][-Label< string>][-MessageType< WorkflowSshSession.MessageTypeEnum>][-Name< string>][-ObjectType< WorkflowSshSession.ObjectTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-SshCommand< Model.WorkflowSshCmd>][-SshConfiguration< Model.WorkflowSshConfig>][-StartDelay< long>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowSshSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< WorkflowSshSession.ClassIdEnum>][-ContentType< string>][-Description< string>][-ErrorContentType< string>][-FileTransferToRemote< Model.WorkflowFileTransfer>][-Label< string>][-MessageType< WorkflowSshSession.MessageTypeEnum>][-Name< string>][-ObjectType< WorkflowSshSession.ObjectTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-SshCommand< object>][-SshConfiguration< Model.WorkflowSshConfig>][-StartDelay< long>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -243,10 +243,10 @@ Accept wildcard characters: False
 ### -SshCommand
 SSH command to execute on the remote server.
 
-Note :- Use Initialize-IntersightWorkflowSshCmd to create the object of complex type WorkflowSshCmd
+Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
-Type: Model.WorkflowSshCmd
+Type: object
 Parameter Sets: (All)
 Aliases:
 
@@ -364,7 +364,5 @@ PS C:\> Initialize-IntersightWorkflowSshSession
 [Initialize-IntersightWorkflowFileTransfer](./Initialize-IntersightWorkflowFileTransfer.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
-[Initialize-IntersightWorkflowSshCmd](./Initialize-IntersightWorkflowSshCmd.md)
 
 [Initialize-IntersightWorkflowSshConfig](./Initialize-IntersightWorkflowSshConfig.md)

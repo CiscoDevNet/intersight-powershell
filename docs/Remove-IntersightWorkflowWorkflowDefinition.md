@@ -17,7 +17,7 @@ Remove-IntersightWorkflowWorkflowDefinition -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowWorkflowDefinition&amp;apos; resource.
+Delete a &apos;WorkflowWorkflowDefinition&apos; resource.
 
 ## EXAMPLES
 

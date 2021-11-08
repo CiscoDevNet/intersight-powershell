@@ -17,7 +17,7 @@ Remove-IntersightFabricSwitchControlPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricSwitchControlPolicy&apos; resource.
+Delete a &amp;apos;FabricSwitchControlPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricSwitchControlPolicy](./Set-IntersightFabricSwitchControlPolicy.md)
 
-[New-IntersightFabricSwitchControlPolicy](./New-IntersightFabricSwitchControlPolicy.md)
-
 [Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
+
+[New-IntersightFabricSwitchControlPolicy](./New-IntersightFabricSwitchControlPolicy.md)
 

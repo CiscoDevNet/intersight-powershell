@@ -19,7 +19,7 @@ New-IntersightCapabilityPortGroupAggregationDef [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityPortGroupAggregationDef&amp;apos; resource.
+Create a &apos;CapabilityPortGroupAggregationDef&apos; resource.
 
 ## PARAMETERS
 
@@ -187,10 +187,10 @@ PS C:\> New-IntersightCapabilityPortGroupAggregationDef
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
-
 [Set-IntersightCapabilityPortGroupAggregationDef](./Set-IntersightCapabilityPortGroupAggregationDef.md)
 
 [Remove-IntersightCapabilityPortGroupAggregationDef](./Remove-IntersightCapabilityPortGroupAggregationDef.md)
+
+[Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

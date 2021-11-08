@@ -19,7 +19,7 @@ Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;NetworkElement&amp;apos; resource.
+Update a &apos;NetworkElement&apos; resource.
 
 ## PARAMETERS
 

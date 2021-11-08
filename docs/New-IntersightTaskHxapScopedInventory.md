@@ -19,7 +19,7 @@ New-IntersightTaskHxapScopedInventory [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TaskHxapScopedInventory&amp;apos; resource.
+Create a &apos;TaskHxapScopedInventory&apos; resource.
 
 ## PARAMETERS
 

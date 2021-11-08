@@ -19,7 +19,7 @@ New-IntersightIamAccount [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamAccount&amp;apos; resource.
+Create a &apos;IamAccount&apos; resource.
 
 ## PARAMETERS
 
@@ -142,10 +142,10 @@ PS C:\> New-IntersightIamAccount
 
 ## RELATED LINKS
 
+[Get-IntersightIamAccount](./Get-IntersightIamAccount.md)
+
 [Set-IntersightIamAccount](./Set-IntersightIamAccount.md)
 
 [Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)
-
-[Get-IntersightIamAccount](./Get-IntersightIamAccount.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

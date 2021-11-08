@@ -19,7 +19,7 @@ Set-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicEthAdapterPolicy&apos; resource.
+Update a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -420,11 +420,11 @@ PS C:\> Set-IntersightVnicEthAdapterPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)
+
 [Get-IntersightVnicEthAdapterPolicy](./Get-IntersightVnicEthAdapterPolicy.md)
 
 [New-IntersightVnicEthAdapterPolicy](./New-IntersightVnicEthAdapterPolicy.md)
-
-[Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)
 
 [Initialize-IntersightVnicArfsSettings](./Initialize-IntersightVnicArfsSettings.md)
 

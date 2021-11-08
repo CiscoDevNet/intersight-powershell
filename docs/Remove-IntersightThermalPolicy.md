@@ -17,7 +17,7 @@ Remove-IntersightThermalPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ThermalPolicy&apos; resource.
+Delete a &amp;apos;ThermalPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

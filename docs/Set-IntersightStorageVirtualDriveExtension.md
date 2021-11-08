@@ -19,7 +19,7 @@ Set-IntersightStorageVirtualDriveExtension [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageVirtualDriveExtension&apos; resource.
+Update a &amp;apos;StorageVirtualDriveExtension&amp;apos; resource.
 
 ## PARAMETERS
 

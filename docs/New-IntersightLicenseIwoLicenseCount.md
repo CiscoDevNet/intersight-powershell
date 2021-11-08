@@ -19,7 +19,7 @@ New-IntersightLicenseIwoLicenseCount [-AccountLicenseData< LicenseAccountLicense
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;LicenseIwoLicenseCount&amp;apos; resource.
+Create a &apos;LicenseIwoLicenseCount&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareVirtualSwitch [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareVirtualSwitch&amp;apos; resource.
+Update a &apos;VirtualizationVmwareVirtualSwitch&apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightFirmwareDimmDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareDimmDescriptor&amp;apos; resource.
+Delete a &apos;FirmwareDimmDescriptor&apos; resource.
 
 ## EXAMPLES
 

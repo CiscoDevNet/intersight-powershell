@@ -19,7 +19,7 @@ New-IntersightKvmSession [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &apos;KvmSession&apos; resource.
+Create a &amp;apos;KvmSession&amp;apos; resource.
 
 ## PARAMETERS
 

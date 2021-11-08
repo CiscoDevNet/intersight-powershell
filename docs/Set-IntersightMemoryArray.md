@@ -19,7 +19,7 @@ Set-IntersightMemoryArray [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryArray&amp;apos; resource.
+Update a &apos;MemoryArray&apos; resource.
 
 ## PARAMETERS
 

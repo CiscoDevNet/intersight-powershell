@@ -25,7 +25,7 @@ Get-IntersightIamSession [-Count <Boolean>] [-InlineCount <String>] [-Select <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamSession&apos; resource.,
+Read a &amp;apos;IamSession&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

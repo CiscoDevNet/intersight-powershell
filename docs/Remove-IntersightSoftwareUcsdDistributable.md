@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
 
-[New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
-
 [Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
+
+[New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
 

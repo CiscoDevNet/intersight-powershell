@@ -17,7 +17,7 @@ Remove-IntersightComputeRackUnitIdentity -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ComputeRackUnitIdentity&amp;apos; resource.
+Delete a &apos;ComputeRackUnitIdentity&apos; resource.
 
 ## EXAMPLES
 

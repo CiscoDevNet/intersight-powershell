@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareNxosDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
-
 [Get-IntersightFirmwareNxosDescriptor](./Get-IntersightFirmwareNxosDescriptor.md)
 
 [New-IntersightFirmwareNxosDescriptor](./New-IntersightFirmwareNxosDescriptor.md)
+
+[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

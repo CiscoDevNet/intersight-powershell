@@ -19,7 +19,7 @@ Set-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;UuidpoolPool&apos; resource.
+Update a &amp;apos;UuidpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -222,11 +222,11 @@ PS C:\> Set-IntersightUuidpoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
-
 [Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
+
+[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
 
 [Initialize-IntersightUuidpoolUuidBlock](./Initialize-IntersightUuidpoolUuidBlock.md)
 

@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticWwnnAddress
-The WWNN address for the server node must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
+The WWNN address for the server node must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&amp;apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
 
 ```yaml
 Type: string
@@ -289,10 +289,10 @@ PS C:\> Set-IntersightVnicSanConnectivityPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
+[Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
 
 [New-IntersightVnicSanConnectivityPolicy](./New-IntersightVnicSanConnectivityPolicy.md)
 
-[Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
+[Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

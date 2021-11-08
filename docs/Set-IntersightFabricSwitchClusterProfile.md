@@ -19,7 +19,7 @@ Set-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricSwitchClusterProfile&amp;apos; resource.
+Update a &apos;FabricSwitchClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -226,11 +226,11 @@ PS C:\> Set-IntersightFabricSwitchClusterProfile
 
 ## RELATED LINKS
 
-[Get-IntersightFabricSwitchClusterProfile](./Get-IntersightFabricSwitchClusterProfile.md)
+[Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)
 
 [New-IntersightFabricSwitchClusterProfile](./New-IntersightFabricSwitchClusterProfile.md)
 
-[Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)
+[Get-IntersightFabricSwitchClusterProfile](./Get-IntersightFabricSwitchClusterProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

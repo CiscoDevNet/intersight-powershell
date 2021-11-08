@@ -19,7 +19,7 @@ New-IntersightFabricVsan [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricVsan&amp;apos; resource.
+Create a &apos;FabricVsan&apos; resource.
 
 ## PARAMETERS
 
@@ -220,10 +220,10 @@ PS C:\> New-IntersightFabricVsan
 
 ## RELATED LINKS
 
+[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
+
 [Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
 
 [Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
-
-[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

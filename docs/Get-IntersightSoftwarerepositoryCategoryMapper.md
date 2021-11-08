@@ -25,7 +25,7 @@ Get-IntersightSoftwarerepositoryCategoryMapper [-Count <Boolean>] [-InlineCount 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.,
+Read a &apos;SoftwarerepositoryCategoryMapper&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightSoftwarerepositoryCategoryMapper](./New-IntersightSoftwarerepositoryCategoryMapper.md)
+
 [Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)
 
 [Remove-IntersightSoftwarerepositoryCategoryMapper](./Remove-IntersightSoftwarerepositoryCategoryMapper.md)
-
-[New-IntersightSoftwarerepositoryCategoryMapper](./New-IntersightSoftwarerepositoryCategoryMapper.md)
 

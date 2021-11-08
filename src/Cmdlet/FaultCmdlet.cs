@@ -327,7 +327,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new FaultApi(Config);
             ModelObject = new FaultInstance();
-            MethodName = "UpdateFaultInstanceWithHttpInfo";
+            MethodName = "PatchFaultInstanceWithHttpInfo";
 		}
         
         

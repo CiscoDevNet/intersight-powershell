@@ -25,7 +25,7 @@ Get-IntersightNiatelemetryNiaInventoryDcnm [-Count <Boolean>] [-InlineCount <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;NiatelemetryNiaInventoryDcnm&amp;apos; resource.,
+Read a &apos;NiatelemetryNiaInventoryDcnm&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

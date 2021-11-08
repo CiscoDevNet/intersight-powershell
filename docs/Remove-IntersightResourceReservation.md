@@ -17,7 +17,7 @@ Remove-IntersightResourceReservation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ResourceReservation&apos; resource.
+Delete a &amp;apos;ResourceReservation&amp;apos; resource.
 
 ## EXAMPLES
 

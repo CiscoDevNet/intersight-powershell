@@ -19,7 +19,7 @@ Set-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[T
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;TamSecurityAdvisory&amp;apos; resource.
+Update a &apos;TamSecurityAdvisory&apos; resource.
 
 ## PARAMETERS
 

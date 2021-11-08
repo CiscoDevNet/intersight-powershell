@@ -327,11 +327,11 @@ PS C:\> Set-IntersightSoftwarerepositoryOperatingSystemFile
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwarerepositoryOperatingSystemFile](./Get-IntersightSoftwarerepositoryOperatingSystemFile.md)
+[Remove-IntersightSoftwarerepositoryOperatingSystemFile](./Remove-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
 [New-IntersightSoftwarerepositoryOperatingSystemFile](./New-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
-[Remove-IntersightSoftwarerepositoryOperatingSystemFile](./Remove-IntersightSoftwarerepositoryOperatingSystemFile.md)
+[Get-IntersightSoftwarerepositoryOperatingSystemFile](./Get-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 

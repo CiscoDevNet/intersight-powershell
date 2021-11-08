@@ -19,7 +19,7 @@ Set-IntersightSolPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SolPolicy&amp;apos; resource.
+Update a &apos;SolPolicy&apos; resource.
 
 ## PARAMETERS
 

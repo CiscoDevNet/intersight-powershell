@@ -8,66 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageInitiator.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageAutomaticDriveGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageInitiator")]
-    public class InitializeIntersightStorageInitiator:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageAutomaticDriveGroup")]
+    public class InitializeIntersightStorageAutomaticDriveGroup:PSCmdlet
 	{
-		public InitializeIntersightStorageInitiator()
+		public InitializeIntersightStorageAutomaticDriveGroup()
 		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageInitiator.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageInitiator.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageInitiator initObject = new Intersight.Model.StorageInitiator();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageRemoteKeySetting.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageRemoteKeySetting")]
-    public class InitializeIntersightStorageRemoteKeySetting:PSCmdlet
-	{
-		public InitializeIntersightStorageRemoteKeySetting()
-		{
-            ClassId = StorageRemoteKeySetting.ClassIdEnum.StorageRemoteKeySetting;
-            ObjectType = StorageRemoteKeySetting.ObjectTypeEnum.StorageRemoteKeySetting;
+            ClassId = StorageAutomaticDriveGroup.ClassIdEnum.StorageAutomaticDriveGroup;
+            DriveType = StorageAutomaticDriveGroup.DriveTypeEnum.Any;
+            ObjectType = StorageAutomaticDriveGroup.ObjectTypeEnum.StorageAutomaticDriveGroup;
             
 		}
         // <summary>
@@ -84,7 +34,52 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageRemoteKeySetting.ClassIdEnum ClassId {
+        public StorageAutomaticDriveGroup.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of drive that should be used for this RAID group.\n* `Any` - Any type of drive can be used for virtual drive creation.\n* `HDD` - Hard disk drives should be used for virtual drive creation.\n* `SSD` - Solid state drives should be used for virtual drive creation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageAutomaticDriveGroup.DriveTypeEnum DriveType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of drives within this span group. The minimum number of disks needed in a span group varies based on RAID level. RAID0 requires at least one disk. RAID1 and RAID10 requires at least 2 and in multiples of . RAID5 and RAID50 require at least 3 disks in a span group. RAID6 and RAID60 require atleast 4 disks in a span."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 100)]
+        public long DrivesPerSpan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Minimum size of the drive to be used for creating this RAID group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MinimumDriveSize {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of dedicated hot spare disks for this RAID group. Allowed value is a comma or hyphen separated number range."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
+        public string NumDedicatedHotSpares {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of span groups to be created for this RAID group. Non-nested RAID levels have a single span."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumberOfSpans {
             get;
             set;
         }
@@ -93,112 +88,68 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageRemoteKeySetting.ObjectTypeEnum ObjectType {
+        public StorageAutomaticDriveGroup.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The password for the KMIP server login."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("[!\"#%&'\\(\\)\\*\\+,\\-\\./:;<>@\\[\\\\\\]\\^_`\\{\\|\\}~a-zA-Z0-9]{0,80}")]
-        public string Password {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The port to which the KMIP client should connect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1024, 65535)]
-        public long Port {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The IP address of the primary KMIP server. It could be an IPv4 address, an IPv6 address, or a hostname. Hostnames are valid only when Inband is configured for the CIMC address."</para>
+        /// <para type="description">"This flag enables the drive group to use all the remaining drives on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string PrimaryServer {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The IP address of the secondary KMIP server. It could be an IPv4 address, an IPv6 address, or a hostname. Hostnames are valid only when Inband is configured for the CIMC address."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SecondaryServer {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The certificate/ public key of the KMIP server. It is required for initiating secure communication with the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ServerCertificate {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The user name for the KMIP server login."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|[a-zA-Z][a-zA-Z0-9_.-]{0,31}")]
-        public string Username {
+        public bool UseRemainingDrives {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageRemoteKeySetting initObject = new Intersight.Model.StorageRemoteKeySetting();
+             Intersight.Model.StorageAutomaticDriveGroup initObject = new Intersight.Model.StorageAutomaticDriveGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DriveType"))
+            {
+                initObject.DriveType = this.DriveType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DrivesPerSpan"))
+            {
+                initObject.DrivesPerSpan = this.DrivesPerSpan;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MinimumDriveSize"))
+            {
+                initObject.MinimumDriveSize = this.MinimumDriveSize;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumDedicatedHotSpares"))
+            {
+                initObject.NumDedicatedHotSpares = this.NumDedicatedHotSpares;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumberOfSpans"))
+            {
+                initObject.NumberOfSpans = this.NumberOfSpans;
+            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("UseRemainingDrives"))
             {
-                initObject.Password = this.Password;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
-            {
-                initObject.Port = this.Port;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PrimaryServer"))
-            {
-                initObject.PrimaryServer = this.PrimaryServer;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecondaryServer"))
-            {
-                initObject.SecondaryServer = this.SecondaryServer;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ServerCertificate"))
-            {
-                initObject.ServerCertificate = this.ServerCertificate;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Username"))
-            {
-                initObject.Username = this.Username;
+                initObject.UseRemainingDrives = this.UseRemainingDrives;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageR0Drive.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageM2VirtualDriveConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageR0Drive")]
-    public class InitializeIntersightStorageR0Drive:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageM2VirtualDriveConfig")]
+    public class InitializeIntersightStorageM2VirtualDriveConfig:PSCmdlet
 	{
-		public InitializeIntersightStorageR0Drive()
+		public InitializeIntersightStorageM2VirtualDriveConfig()
 		{
-            ClassId = StorageR0Drive.ClassIdEnum.StorageR0Drive;
-            ObjectType = StorageR0Drive.ObjectTypeEnum.StorageR0Drive;
+            ClassId = StorageM2VirtualDriveConfig.ClassIdEnum.StorageM2VirtualDriveConfig;
+            ControllerSlot = StorageM2VirtualDriveConfig.ControllerSlotEnum.MSTORRAID1;
+            ObjectType = StorageM2VirtualDriveConfig.ObjectTypeEnum.StorageM2VirtualDriveConfig;
             
 		}
         // <summary>
@@ -215,21 +166,21 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageR0Drive.ClassIdEnum ClassId {
+        public StorageM2VirtualDriveConfig.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The set of drive slots where RAID0 virtual drives must be created."</para>
+        /// <para type="description">"Select the M.2 RAID controller slot on which the virtual drive is to be created. For example, MSTOR-RAID-1 means that the virtual drive is to be created on the M.2 RAID controller in the first slot. Select MSTOR-RAID-2 only when there is a M.2 RAID controller in the second slot.\n* `MSTOR-RAID-1` - Virtual drive  will be created on the M.2 RAID controller in the first slot.\n* `MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in the second slot, if available.\n* `MSTOR-RAID-1,MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in both the slots, if available."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
-        public string DriveSlots {
+        
+        public StorageM2VirtualDriveConfig.ControllerSlotEnum ControllerSlot {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"If enabled, this will create a RAID0 virtual drive per disk and encompassing the whole disk."</para>
+        /// <para type="description">"If enabled, this will create a virtual drive on the M.2 RAID controller."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -242,248 +193,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageR0Drive.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This defines the characteristics of a specific virtual drive."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.StorageVirtualDrivePolicy VirtualDrivePolicy {
+        public StorageM2VirtualDriveConfig.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageR0Drive initObject = new Intersight.Model.StorageR0Drive();
+             Intersight.Model.StorageM2VirtualDriveConfig initObject = new Intersight.Model.StorageM2VirtualDriveConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriveSlots"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ControllerSlot"))
             {
-                initObject.DriveSlots = this.DriveSlots;
+                initObject.ControllerSlot = this.ControllerSlot;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Enable"))
             {
                 initObject.Enable = this.Enable;
             }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDrivePolicy"))
-            {
-                initObject.VirtualDrivePolicy = this.VirtualDrivePolicy;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureDiskUtilization.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureDiskUtilization")]
-    public class InitializeIntersightStoragePureDiskUtilization:PSCmdlet
-	{
-		public InitializeIntersightStoragePureDiskUtilization()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureDiskUtilization.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureDiskUtilization.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StoragePureDiskUtilization initObject = new Intersight.Model.StoragePureDiskUtilization();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureReplicationBlackout.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureReplicationBlackout")]
-    public class InitializeIntersightStoragePureReplicationBlackout:PSCmdlet
-	{
-		public InitializeIntersightStoragePureReplicationBlackout()
-		{
-            ClassId = StoragePureReplicationBlackout.ClassIdEnum.StoragePureReplicationBlackout;
-            ObjectType = StoragePureReplicationBlackout.ObjectTypeEnum.StoragePureReplicationBlackout;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureReplicationBlackout.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureReplicationBlackout.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StoragePureReplicationBlackout initObject = new Intersight.Model.StoragePureReplicationBlackout();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppStorageUtilization.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppStorageUtilization")]
-    public class InitializeIntersightStorageNetAppStorageUtilization:PSCmdlet
-	{
-		public InitializeIntersightStorageNetAppStorageUtilization()
-		{
-            ClassId = StorageNetAppStorageUtilization.ClassIdEnum.StorageNetAppStorageUtilization;
-            ObjectType = StorageNetAppStorageUtilization.ObjectTypeEnum.StorageNetAppStorageUtilization;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageNetAppStorageUtilization.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageNetAppStorageUtilization.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageNetAppStorageUtilization initObject = new Intersight.Model.StorageNetAppStorageUtilization();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageStorageContainerUtilization.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageStorageContainerUtilization")]
-    public class InitializeIntersightStorageStorageContainerUtilization:PSCmdlet
-	{
-		public InitializeIntersightStorageStorageContainerUtilization()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageStorageContainerUtilization.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageStorageContainerUtilization.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageStorageContainerUtilization initObject = new Intersight.Model.StorageStorageContainerUtilization();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -621,6 +351,412 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageHitachiArrayUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageHitachiArrayUtilization")]
+    public class InitializeIntersightStorageHitachiArrayUtilization:PSCmdlet
+	{
+		public InitializeIntersightStorageHitachiArrayUtilization()
+		{
+            ClassId = StorageHitachiArrayUtilization.ClassIdEnum.StorageHitachiArrayUtilization;
+            ObjectType = StorageHitachiArrayUtilization.ObjectTypeEnum.StorageHitachiArrayUtilization;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageHitachiArrayUtilization.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageHitachiArrayUtilization.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageHitachiArrayUtilization initObject = new Intersight.Model.StorageHitachiArrayUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageBaseInitiator.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageBaseInitiator")]
+    public class InitializeIntersightStorageBaseInitiator:PSCmdlet
+	{
+		public InitializeIntersightStorageBaseInitiator()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageBaseInitiator.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageBaseInitiator.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageBaseInitiator initObject = new Intersight.Model.StorageBaseInitiator();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageInitiator.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageInitiator")]
+    public class InitializeIntersightStorageInitiator:PSCmdlet
+	{
+		public InitializeIntersightStorageInitiator()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageInitiator.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageInitiator.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageInitiator initObject = new Intersight.Model.StorageInitiator();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppPerformanceMetricsAverage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppPerformanceMetricsAverage")]
+    public class InitializeIntersightStorageNetAppPerformanceMetricsAverage:PSCmdlet
+	{
+		public InitializeIntersightStorageNetAppPerformanceMetricsAverage()
+		{
+            ClassId = StorageNetAppPerformanceMetricsAverage.ClassIdEnum.StorageNetAppPerformanceMetricsAverage;
+            ObjectType = StorageNetAppPerformanceMetricsAverage.ObjectTypeEnum.StorageNetAppPerformanceMetricsAverage;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppPerformanceMetricsAverage.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppPerformanceMetricsAverage.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppPerformanceMetricsAverage initObject = new Intersight.Model.StorageNetAppPerformanceMetricsAverage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppHighAvailability.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppHighAvailability")]
+    public class InitializeIntersightStorageNetAppHighAvailability:PSCmdlet
+	{
+		public InitializeIntersightStorageNetAppHighAvailability()
+		{
+            ClassId = StorageNetAppHighAvailability.ClassIdEnum.StorageNetAppHighAvailability;
+            ObjectType = StorageNetAppHighAvailability.ObjectTypeEnum.StorageNetAppHighAvailability;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppHighAvailability.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppHighAvailability.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppHighAvailability initObject = new Intersight.Model.StorageNetAppHighAvailability();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageR0Drive.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageR0Drive")]
+    public class InitializeIntersightStorageR0Drive:PSCmdlet
+	{
+		public InitializeIntersightStorageR0Drive()
+		{
+            ClassId = StorageR0Drive.ClassIdEnum.StorageR0Drive;
+            ObjectType = StorageR0Drive.ObjectTypeEnum.StorageR0Drive;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageR0Drive.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The set of drive slots where RAID0 virtual drives must be created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
+        public string DriveSlots {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If enabled, this will create a RAID0 virtual drive per disk and encompassing the whole disk."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enable {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageR0Drive.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This defines the characteristics of a specific virtual drive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.StorageVirtualDrivePolicy VirtualDrivePolicy {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageR0Drive initObject = new Intersight.Model.StorageR0Drive();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DriveSlots"))
+            {
+                initObject.DriveSlots = this.DriveSlots;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enable"))
+            {
+                initObject.Enable = this.Enable;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDrivePolicy"))
+            {
+                initObject.VirtualDrivePolicy = this.VirtualDrivePolicy;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppStorageUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppStorageUtilization")]
+    public class InitializeIntersightStorageNetAppStorageUtilization:PSCmdlet
+	{
+		public InitializeIntersightStorageNetAppStorageUtilization()
+		{
+            ClassId = StorageNetAppStorageUtilization.ClassIdEnum.StorageNetAppStorageUtilization;
+            ObjectType = StorageNetAppStorageUtilization.ObjectTypeEnum.StorageNetAppStorageUtilization;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppStorageUtilization.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppStorageUtilization.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppStorageUtilization initObject = new Intersight.Model.StorageNetAppStorageUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize StorageSpanDrives.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightStorageSpanDrives")]
@@ -687,15 +823,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageLocalKeySetting.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureArrayUtilization.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageLocalKeySetting")]
-    public class InitializeIntersightStorageLocalKeySetting:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureArrayUtilization")]
+    public class InitializeIntersightStoragePureArrayUtilization:PSCmdlet
 	{
-		public InitializeIntersightStorageLocalKeySetting()
+		public InitializeIntersightStoragePureArrayUtilization()
 		{
-            ClassId = StorageLocalKeySetting.ClassIdEnum.StorageLocalKeySetting;
-            ObjectType = StorageLocalKeySetting.ObjectTypeEnum.StorageLocalKeySetting;
+            ClassId = StoragePureArrayUtilization.ClassIdEnum.StoragePureArrayUtilization;
+            ObjectType = StoragePureArrayUtilization.ObjectTypeEnum.StoragePureArrayUtilization;
             
 		}
         // <summary>
@@ -712,25 +848,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageLocalKeySetting.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Existing key which is already configured on the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
-        public string ExistingKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"New key to be configured on the controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
-        public string NewKey {
+        public StoragePureArrayUtilization.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -739,28 +857,112 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageLocalKeySetting.ObjectTypeEnum ObjectType {
+        public StoragePureArrayUtilization.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageLocalKeySetting initObject = new Intersight.Model.StorageLocalKeySetting();
+             Intersight.Model.StoragePureArrayUtilization initObject = new Intersight.Model.StoragePureArrayUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExistingKey"))
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppPort")]
+    public class InitializeIntersightStorageNetAppPort:PSCmdlet
+	{
+		public InitializeIntersightStorageNetAppPort()
+		{
+            ClassId = StorageNetAppPort.ClassIdEnum.StorageNetAppPort;
+            ObjectType = StorageNetAppPort.ObjectTypeEnum.StorageNetAppPort;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppPort.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name associated with this port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the node associated with this port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string NodeName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppPort.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique identifier of the port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Uuid {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppPort initObject = new Intersight.Model.StorageNetAppPort();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.ExistingKey = this.ExistingKey;
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NewKey"))
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
-                initObject.NewKey = this.NewKey;
+                initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NodeName"))
+            {
+                initObject.NodeName = this.NodeName;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uuid"))
+            {
+                initObject.Uuid = this.Uuid;
+            }
             WriteObject(initObject);
         }
 
@@ -817,12 +1019,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureHostUtilization.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageHitachiCapacity.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureHostUtilization")]
-    public class InitializeIntersightStoragePureHostUtilization:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageHitachiCapacity")]
+    public class InitializeIntersightStorageHitachiCapacity:PSCmdlet
 	{
-		public InitializeIntersightStoragePureHostUtilization()
+		public InitializeIntersightStorageHitachiCapacity()
 		{
             
 		}
@@ -840,7 +1042,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StoragePureHostUtilization.ClassIdEnum ClassId {
+        public StorageHitachiCapacity.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -849,14 +1051,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StoragePureHostUtilization.ObjectTypeEnum ObjectType {
+        public StorageHitachiCapacity.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StoragePureHostUtilization initObject = new Intersight.Model.StoragePureHostUtilization();
+             Intersight.Model.StorageHitachiCapacity initObject = new Intersight.Model.StorageHitachiCapacity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -868,15 +1070,576 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageHitachiInitiator.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppEthernetPortVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageHitachiInitiator")]
-    public class InitializeIntersightStorageHitachiInitiator:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppEthernetPortVlan")]
+    public class InitializeIntersightStorageNetAppEthernetPortVlan:PSCmdlet
 	{
-		public InitializeIntersightStorageHitachiInitiator()
+		public InitializeIntersightStorageNetAppEthernetPortVlan()
 		{
-            ClassId = StorageHitachiInitiator.ClassIdEnum.StorageHitachiInitiator;
-            ObjectType = StorageHitachiInitiator.ObjectTypeEnum.StorageHitachiInitiator;
+            ClassId = StorageNetAppEthernetPortVlan.ClassIdEnum.StorageNetAppEthernetPortVlan;
+            ObjectType = StorageNetAppEthernetPortVlan.ObjectTypeEnum.StorageNetAppEthernetPortVlan;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port UUID along with readable names."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.StorageNetAppPort BasePort {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppEthernetPortVlan.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppEthernetPortVlan.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The ID tag of the VLAN for this port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Tag {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppEthernetPortVlan initObject = new Intersight.Model.StorageNetAppEthernetPortVlan();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BasePort"))
+            {
+                initObject.BasePort = this.BasePort;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tag"))
+            {
+                initObject.Tag = this.Tag;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageVirtualDriveConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageVirtualDriveConfiguration")]
+    public class InitializeIntersightStorageVirtualDriveConfiguration:PSCmdlet
+	{
+		public InitializeIntersightStorageVirtualDriveConfiguration()
+		{
+            ClassId = StorageVirtualDriveConfiguration.ClassIdEnum.StorageVirtualDriveConfiguration;
+            ObjectType = StorageVirtualDriveConfiguration.ObjectTypeEnum.StorageVirtualDriveConfiguration;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This flag enables this virtual drive to be used as a boot drive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool BootDrive {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageVirtualDriveConfiguration.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This flag enables the virtual drive to use all the space available in the disk group. When this flag is enabled, the size property is ignored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ExpandToAvailable {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the virtual drive. The name can be between 1 and 15 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9\\-\\._:]*$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageVirtualDriveConfiguration.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual drive size in MebiBytes. Size is mandatory field except when the Expand to Available option is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Size {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This defines the characteristics of a specific virtual drive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.StorageVirtualDrivePolicy VirtualDrivePolicy {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageVirtualDriveConfiguration initObject = new Intersight.Model.StorageVirtualDriveConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BootDrive"))
+            {
+                initObject.BootDrive = this.BootDrive;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExpandToAvailable"))
+            {
+                initObject.ExpandToAvailable = this.ExpandToAvailable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Size"))
+            {
+                initObject.Size = this.Size;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDrivePolicy"))
+            {
+                initObject.VirtualDrivePolicy = this.VirtualDrivePolicy;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureVolumeUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureVolumeUtilization")]
+    public class InitializeIntersightStoragePureVolumeUtilization:PSCmdlet
+	{
+		public InitializeIntersightStoragePureVolumeUtilization()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureVolumeUtilization.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureVolumeUtilization.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StoragePureVolumeUtilization initObject = new Intersight.Model.StoragePureVolumeUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageBaseCapacity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageBaseCapacity")]
+    public class InitializeIntersightStorageBaseCapacity:PSCmdlet
+	{
+		public InitializeIntersightStorageBaseCapacity()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageBaseCapacity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageBaseCapacity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageBaseCapacity initObject = new Intersight.Model.StorageBaseCapacity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppEthernetPortLag.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppEthernetPortLag")]
+    public class InitializeIntersightStorageNetAppEthernetPortLag:PSCmdlet
+	{
+		public InitializeIntersightStorageNetAppEthernetPortLag()
+		{
+            ClassId = StorageNetAppEthernetPortLag.ClassIdEnum.StorageNetAppEthernetPortLag;
+            DistributionPolicy = StorageNetAppEthernetPortLag.DistributionPolicyEnum.None;
+            Mode = StorageNetAppEthernetPortLag.ModeEnum.None;
+            ObjectType = StorageNetAppEthernetPortLag.ObjectTypeEnum.StorageNetAppEthernetPortLag;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.StorageNetAppPort> ActivePorts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppEthernetPortLag.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Policy for mapping flows to ports for outbound packets through a LAG (ifgrp).\n* `none` - Default unknown distribution policy type.\n* `port` - Network traffic is distributed based on the transport layer (TCP/UDP) ports.\n* `ip` - Network traffic is distributed based on IP addresses.\n* `mac` - Network traffic is distributed based on MAC addresses.\n* `sequential` - Network traffic is distributed in round-robin fashion from the list of configured, available ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppEthernetPortLag.DistributionPolicyEnum DistributionPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.StorageNetAppPort> MemberPorts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines how the ports interact with the switch.\n* `none` - Default unknown lag mode type.\n* `multimode_lacp` - Bundle multiple member ports of the interface group using Link Aggregation Control Protocol.\n* `multimode` - Bundle multiple member ports of the interface group to act as a single trunked port.\n* `singlemode` - Provide port redundancy using member ports of the interface group for failover."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppEthernetPortLag.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppEthernetPortLag.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppEthernetPortLag initObject = new Intersight.Model.StorageNetAppEthernetPortLag();
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActivePorts"))
+            {
+                initObject.ActivePorts = this.ActivePorts;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DistributionPolicy"))
+            {
+                initObject.DistributionPolicy = this.DistributionPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemberPorts"))
+            {
+                initObject.MemberPorts = this.MemberPorts;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureDiskUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureDiskUtilization")]
+    public class InitializeIntersightStoragePureDiskUtilization:PSCmdlet
+	{
+		public InitializeIntersightStoragePureDiskUtilization()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureDiskUtilization.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureDiskUtilization.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StoragePureDiskUtilization initObject = new Intersight.Model.StoragePureDiskUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageStorageContainerUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageStorageContainerUtilization")]
+    public class InitializeIntersightStorageStorageContainerUtilization:PSCmdlet
+	{
+		public InitializeIntersightStorageStorageContainerUtilization()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageStorageContainerUtilization.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageStorageContainerUtilization.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageStorageContainerUtilization initObject = new Intersight.Model.StorageStorageContainerUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureReplicationBlackout.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureReplicationBlackout")]
+    public class InitializeIntersightStoragePureReplicationBlackout:PSCmdlet
+	{
+		public InitializeIntersightStoragePureReplicationBlackout()
+		{
+            ClassId = StoragePureReplicationBlackout.ClassIdEnum.StoragePureReplicationBlackout;
+            ObjectType = StoragePureReplicationBlackout.ObjectTypeEnum.StoragePureReplicationBlackout;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureReplicationBlackout.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureReplicationBlackout.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StoragePureReplicationBlackout initObject = new Intersight.Model.StoragePureReplicationBlackout();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageStorageContainerHostMountStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageStorageContainerHostMountStatus")]
+    public class InitializeIntersightStorageStorageContainerHostMountStatus:PSCmdlet
+	{
+		public InitializeIntersightStorageStorageContainerHostMountStatus()
+		{
+            ClassId = StorageStorageContainerHostMountStatus.ClassIdEnum.StorageStorageContainerHostMountStatus;
+            ObjectType = StorageStorageContainerHostMountStatus.ObjectTypeEnum.StorageStorageContainerHostMountStatus;
             
 		}
         // <summary>
@@ -893,7 +1656,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageHitachiInitiator.ClassIdEnum ClassId {
+        public StorageStorageContainerHostMountStatus.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -902,67 +1665,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageHitachiInitiator.ObjectTypeEnum ObjectType {
+        public StorageStorageContainerHostMountStatus.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageHitachiInitiator initObject = new Intersight.Model.StorageHitachiInitiator();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageHitachiArrayUtilization.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageHitachiArrayUtilization")]
-    public class InitializeIntersightStorageHitachiArrayUtilization:PSCmdlet
-	{
-		public InitializeIntersightStorageHitachiArrayUtilization()
-		{
-            ClassId = StorageHitachiArrayUtilization.ClassIdEnum.StorageHitachiArrayUtilization;
-            ObjectType = StorageHitachiArrayUtilization.ObjectTypeEnum.StorageHitachiArrayUtilization;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageHitachiArrayUtilization.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageHitachiArrayUtilization.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageHitachiArrayUtilization initObject = new Intersight.Model.StorageHitachiArrayUtilization();
+             Intersight.Model.StorageStorageContainerHostMountStatus initObject = new Intersight.Model.StorageStorageContainerHostMountStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1097,15 +1807,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageStorageContainerHostMountStatus.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageRemoteKeySetting.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageStorageContainerHostMountStatus")]
-    public class InitializeIntersightStorageStorageContainerHostMountStatus:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageRemoteKeySetting")]
+    public class InitializeIntersightStorageRemoteKeySetting:PSCmdlet
 	{
-		public InitializeIntersightStorageStorageContainerHostMountStatus()
+		public InitializeIntersightStorageRemoteKeySetting()
 		{
-            ClassId = StorageStorageContainerHostMountStatus.ClassIdEnum.StorageStorageContainerHostMountStatus;
-            ObjectType = StorageStorageContainerHostMountStatus.ObjectTypeEnum.StorageStorageContainerHostMountStatus;
+            ClassId = StorageRemoteKeySetting.ClassIdEnum.StorageRemoteKeySetting;
+            ObjectType = StorageRemoteKeySetting.ObjectTypeEnum.StorageRemoteKeySetting;
             
 		}
         // <summary>
@@ -1122,7 +1832,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageStorageContainerHostMountStatus.ClassIdEnum ClassId {
+        public StorageRemoteKeySetting.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1131,32 +1841,112 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageStorageContainerHostMountStatus.ObjectTypeEnum ObjectType {
+        public StorageRemoteKeySetting.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password for the KMIP server login."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("[!\"#%&'\\(\\)\\*\\+,\\-\\./:;<>@\\[\\\\\\]\\^_`\\{\\|\\}~a-zA-Z0-9]{0,80}")]
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The port to which the KMIP client should connect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1024, 65535)]
+        public long Port {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The IP address of the primary KMIP server. It could be an IPv4 address, an IPv6 address, or a hostname. Hostnames are valid only when Inband is configured for the CIMC address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PrimaryServer {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The IP address of the secondary KMIP server. It could be an IPv4 address, an IPv6 address, or a hostname. Hostnames are valid only when Inband is configured for the CIMC address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SecondaryServer {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The certificate/ public key of the KMIP server. It is required for initiating secure communication with the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ServerCertificate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The user name for the KMIP server login."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|[a-zA-Z][a-zA-Z0-9_.-]{0,31}")]
+        public string Username {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageStorageContainerHostMountStatus initObject = new Intersight.Model.StorageStorageContainerHostMountStatus();
+             Intersight.Model.StorageRemoteKeySetting initObject = new Intersight.Model.StorageRemoteKeySetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            {
+                initObject.Password = this.Password;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
+            {
+                initObject.Port = this.Port;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrimaryServer"))
+            {
+                initObject.PrimaryServer = this.PrimaryServer;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecondaryServer"))
+            {
+                initObject.SecondaryServer = this.SecondaryServer;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerCertificate"))
+            {
+                initObject.ServerCertificate = this.ServerCertificate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Username"))
+            {
+                initObject.Username = this.Username;
+            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageBaseCapacity.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageLocalKeySetting.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageBaseCapacity")]
-    public class InitializeIntersightStorageBaseCapacity:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageLocalKeySetting")]
+    public class InitializeIntersightStorageLocalKeySetting:PSCmdlet
 	{
-		public InitializeIntersightStorageBaseCapacity()
+		public InitializeIntersightStorageLocalKeySetting()
 		{
+            ClassId = StorageLocalKeySetting.ClassIdEnum.StorageLocalKeySetting;
+            ObjectType = StorageLocalKeySetting.ObjectTypeEnum.StorageLocalKeySetting;
             
 		}
         // <summary>
@@ -1165,119 +1955,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageBaseCapacity.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageBaseCapacity.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageBaseCapacity initObject = new Intersight.Model.StorageBaseCapacity();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureVolumeUtilization.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureVolumeUtilization")]
-    public class InitializeIntersightStoragePureVolumeUtilization:PSCmdlet
-	{
-		public InitializeIntersightStoragePureVolumeUtilization()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureVolumeUtilization.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureVolumeUtilization.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StoragePureVolumeUtilization initObject = new Intersight.Model.StoragePureVolumeUtilization();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageVirtualDriveConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageVirtualDriveConfiguration")]
-    public class InitializeIntersightStorageVirtualDriveConfiguration:PSCmdlet
-	{
-		public InitializeIntersightStorageVirtualDriveConfiguration()
-		{
-            ClassId = StorageVirtualDriveConfiguration.ClassIdEnum.StorageVirtualDriveConfiguration;
-            ObjectType = StorageVirtualDriveConfiguration.ObjectTypeEnum.StorageVirtualDriveConfiguration;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This flag enables this virtual drive to be used as a boot drive."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool BootDrive {
             get;
             set;
         }
@@ -1286,25 +1963,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageVirtualDriveConfiguration.ClassIdEnum ClassId {
+        public StorageLocalKeySetting.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"This flag enables the virtual drive to use all the space available in the disk group. When this flag is enabled, the size property is ignored."</para>
+        /// <para type="description">"Existing key which is already configured on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool ExpandToAvailable {
+        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
+        public string ExistingKey {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The name of the virtual drive. The name can be between 1 and 15 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed."</para>
+        /// <para type="description">"New key to be configured on the controller."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9\\-\\._:]*$")]
-        public string Name {
+        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
+        public string NewKey {
             get;
             set;
         }
@@ -1313,58 +1990,28 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageVirtualDriveConfiguration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual drive size in MebiBytes. Size is mandatory field except when the Expand to Available option is enabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Size {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This defines the characteristics of a specific virtual drive."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.StorageVirtualDrivePolicy VirtualDrivePolicy {
+        public StorageLocalKeySetting.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageVirtualDriveConfiguration initObject = new Intersight.Model.StorageVirtualDriveConfiguration();
+             Intersight.Model.StorageLocalKeySetting initObject = new Intersight.Model.StorageLocalKeySetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("BootDrive"))
-            {
-                initObject.BootDrive = this.BootDrive;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExpandToAvailable"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExistingKey"))
             {
-                initObject.ExpandToAvailable = this.ExpandToAvailable;
+                initObject.ExistingKey = this.ExistingKey;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("NewKey"))
             {
-                initObject.Name = this.Name;
+                initObject.NewKey = this.NewKey;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Size"))
-            {
-                initObject.Size = this.Size;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDrivePolicy"))
-            {
-                initObject.VirtualDrivePolicy = this.VirtualDrivePolicy;
-            }
             WriteObject(initObject);
         }
 
@@ -1463,67 +2110,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageHitachiCapacity.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageHitachiInitiator.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageHitachiCapacity")]
-    public class InitializeIntersightStorageHitachiCapacity:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageHitachiInitiator")]
+    public class InitializeIntersightStorageHitachiInitiator:PSCmdlet
 	{
-		public InitializeIntersightStorageHitachiCapacity()
+		public InitializeIntersightStorageHitachiInitiator()
 		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageHitachiCapacity.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageHitachiCapacity.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageHitachiCapacity initObject = new Intersight.Model.StorageHitachiCapacity();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageM2VirtualDriveConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageM2VirtualDriveConfig")]
-    public class InitializeIntersightStorageM2VirtualDriveConfig:PSCmdlet
-	{
-		public InitializeIntersightStorageM2VirtualDriveConfig()
-		{
-            ClassId = StorageM2VirtualDriveConfig.ClassIdEnum.StorageM2VirtualDriveConfig;
-            ControllerSlot = StorageM2VirtualDriveConfig.ControllerSlotEnum.MSTORRAID1;
-            ObjectType = StorageM2VirtualDriveConfig.ObjectTypeEnum.StorageM2VirtualDriveConfig;
+            ClassId = StorageHitachiInitiator.ClassIdEnum.StorageHitachiInitiator;
+            ObjectType = StorageHitachiInitiator.ObjectTypeEnum.StorageHitachiInitiator;
             
 		}
         // <summary>
@@ -1540,25 +2135,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageM2VirtualDriveConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Select the M.2 RAID controller slot on which the virtual drive is to be created. For example, MSTOR-RAID-1 means that the virtual drive is to be created on the M.2 RAID controller in the first slot. Select MSTOR-RAID-2 only when there is a M.2 RAID controller in the second slot.\n* `MSTOR-RAID-1` - Virtual drive  will be created on the M.2 RAID controller in the first slot.\n* `MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in the second slot, if available.\n* `MSTOR-RAID-1,MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in both the slots, if available."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageM2VirtualDriveConfig.ControllerSlotEnum ControllerSlot {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If enabled, this will create a virtual drive on the M.2 RAID controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enable {
+        public StorageHitachiInitiator.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1567,264 +2144,20 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public StorageM2VirtualDriveConfig.ObjectTypeEnum ObjectType {
+        public StorageHitachiInitiator.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.StorageM2VirtualDriveConfig initObject = new Intersight.Model.StorageM2VirtualDriveConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ControllerSlot"))
-            {
-                initObject.ControllerSlot = this.ControllerSlot;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enable"))
-            {
-                initObject.Enable = this.Enable;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureArrayUtilization.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureArrayUtilization")]
-    public class InitializeIntersightStoragePureArrayUtilization:PSCmdlet
-	{
-		public InitializeIntersightStoragePureArrayUtilization()
-		{
-            ClassId = StoragePureArrayUtilization.ClassIdEnum.StoragePureArrayUtilization;
-            ObjectType = StoragePureArrayUtilization.ObjectTypeEnum.StoragePureArrayUtilization;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureArrayUtilization.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StoragePureArrayUtilization.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StoragePureArrayUtilization initObject = new Intersight.Model.StoragePureArrayUtilization();
+             Intersight.Model.StorageHitachiInitiator initObject = new Intersight.Model.StorageHitachiInitiator();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageBaseInitiator.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageBaseInitiator")]
-    public class InitializeIntersightStorageBaseInitiator:PSCmdlet
-	{
-		public InitializeIntersightStorageBaseInitiator()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageBaseInitiator.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageBaseInitiator.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageBaseInitiator initObject = new Intersight.Model.StorageBaseInitiator();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize StorageAutomaticDriveGroup.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightStorageAutomaticDriveGroup")]
-    public class InitializeIntersightStorageAutomaticDriveGroup:PSCmdlet
-	{
-		public InitializeIntersightStorageAutomaticDriveGroup()
-		{
-            ClassId = StorageAutomaticDriveGroup.ClassIdEnum.StorageAutomaticDriveGroup;
-            DriveType = StorageAutomaticDriveGroup.DriveTypeEnum.Any;
-            ObjectType = StorageAutomaticDriveGroup.ObjectTypeEnum.StorageAutomaticDriveGroup;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageAutomaticDriveGroup.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of drive that should be used for this RAID group.\n* `Any` - Any type of drive can be used for virtual drive creation.\n* `HDD` - Hard disk drives should be used for virtual drive creation.\n* `SSD` - Solid state drives should be used for virtual drive creation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageAutomaticDriveGroup.DriveTypeEnum DriveType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of drives within this span group. The minimum number of disks needed in a span group varies based on RAID level. RAID0 requires at least one disk. RAID1 and RAID10 requires at least 2 and in multiples of . RAID5 and RAID50 require at least 3 disks in a span group. RAID6 and RAID60 require atleast 4 disks in a span."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 100)]
-        public long DrivesPerSpan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Minimum size of the drive to be used for creating this RAID group."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long MinimumDriveSize {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of dedicated hot spare disks for this RAID group. Allowed value is a comma or hyphen separated number range."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
-        public string NumDedicatedHotSpares {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of span groups to be created for this RAID group. Non-nested RAID levels have a single span."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumberOfSpans {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public StorageAutomaticDriveGroup.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This flag enables the drive group to use all the remaining drives on the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool UseRemainingDrives {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.StorageAutomaticDriveGroup initObject = new Intersight.Model.StorageAutomaticDriveGroup();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriveType"))
-            {
-                initObject.DriveType = this.DriveType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DrivesPerSpan"))
-            {
-                initObject.DrivesPerSpan = this.DrivesPerSpan;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MinimumDriveSize"))
-            {
-                initObject.MinimumDriveSize = this.MinimumDriveSize;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumDedicatedHotSpares"))
-            {
-                initObject.NumDedicatedHotSpares = this.NumDedicatedHotSpares;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumberOfSpans"))
-            {
-                initObject.NumberOfSpans = this.NumberOfSpans;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("UseRemainingDrives"))
-            {
-                initObject.UseRemainingDrives = this.UseRemainingDrives;
-            }
             WriteObject(initObject);
         }
 
@@ -1904,6 +2237,110 @@ namespace Intersight.PowerShell
             {
                 initObject.SpanGroups = this.SpanGroups;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppStorageClusterEfficiency.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppStorageClusterEfficiency")]
+    public class InitializeIntersightStorageNetAppStorageClusterEfficiency:PSCmdlet
+	{
+		public InitializeIntersightStorageNetAppStorageClusterEfficiency()
+		{
+            ClassId = StorageNetAppStorageClusterEfficiency.ClassIdEnum.StorageNetAppStorageClusterEfficiency;
+            ObjectType = StorageNetAppStorageClusterEfficiency.ObjectTypeEnum.StorageNetAppStorageClusterEfficiency;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppStorageClusterEfficiency.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StorageNetAppStorageClusterEfficiency.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StorageNetAppStorageClusterEfficiency initObject = new Intersight.Model.StorageNetAppStorageClusterEfficiency();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StoragePureHostUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStoragePureHostUtilization")]
+    public class InitializeIntersightStoragePureHostUtilization:PSCmdlet
+	{
+		public InitializeIntersightStoragePureHostUtilization()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureHostUtilization.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public StoragePureHostUtilization.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.StoragePureHostUtilization initObject = new Intersight.Model.StoragePureHostUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

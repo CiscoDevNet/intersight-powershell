@@ -19,7 +19,7 @@ Set-IntersightPortSubGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;PortSubGroup&apos; resource.
+Update a &amp;apos;PortSubGroup&amp;apos; resource.
 
 ## PARAMETERS
 

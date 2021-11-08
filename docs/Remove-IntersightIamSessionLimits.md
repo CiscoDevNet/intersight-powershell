@@ -17,7 +17,7 @@ Remove-IntersightIamSessionLimits -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamSessionLimits&amp;apos; resource.
+Delete a &apos;IamSessionLimits&apos; resource.
 
 ## EXAMPLES
 

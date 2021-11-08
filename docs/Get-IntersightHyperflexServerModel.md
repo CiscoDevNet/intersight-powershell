@@ -25,7 +25,7 @@ Get-IntersightHyperflexServerModel [-Count <Boolean>] [-InlineCount <String>] [-
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;HyperflexServerModel&amp;apos; resource.,
+Read a &apos;HyperflexServerModel&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
+
 [Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 
 [Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
-
-[New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
 

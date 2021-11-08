@@ -192,8 +192,8 @@ PS C:\> Set-IntersightFabricServerRole
 
 [Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
 
-[New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
-
 [Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
+
+[New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

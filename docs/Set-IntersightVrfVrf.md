@@ -159,8 +159,8 @@ PS C:\> Set-IntersightVrfVrf
 
 [Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
 
-[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
-
 [New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
+
+[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

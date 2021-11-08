@@ -19,7 +19,7 @@ New-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalP
 ```
 
 ## DESCRIPTION
-Create a &apos;CrdCustomResource&apos; resource.
+Create a &amp;apos;CrdCustomResource&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A string property called name which is used as part of a uniqueness constraint. See &apos;identity&apos; specification in this MO definition.
+A string property called name which is used as part of a uniqueness constraint. See &amp;apos;identity&amp;apos; specification in this MO definition.
 
 ```yaml
 Type: string
@@ -282,11 +282,11 @@ PS C:\> New-IntersightCrdCustomResource
 
 ## RELATED LINKS
 
-[Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
+[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
 
 [Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
 
-[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
+[Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
 

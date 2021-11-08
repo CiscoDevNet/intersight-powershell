@@ -17,7 +17,7 @@ Remove-IntersightSyslogPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SyslogPolicy&apos; resource.
+Delete a &amp;apos;SyslogPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
+[New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
 
 [Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
 
-[New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
+[Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
 

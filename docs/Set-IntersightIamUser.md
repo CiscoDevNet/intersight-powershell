@@ -19,7 +19,7 @@ Set-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Diction
 ```
 
 ## DESCRIPTION
-Update a &apos;IamUser&apos; resource.
+Update a &amp;apos;IamUser&amp;apos; resource.
 
 ## PARAMETERS
 

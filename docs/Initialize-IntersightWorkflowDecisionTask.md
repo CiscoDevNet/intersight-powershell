@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-The condition to evaluate for this decision task. The condition can be a workflow or task variable or an JavaScript expression. Example value for condition could be a variable like \&quot;${task1.output.var1} or ${workflow.input.var2}\&quot; which evaluates to a value matching any of the decision case values. Example value for condition if it&apos;s an expression - \&quot;if ( ${task1.output.var1} ! = null &amp;&amp; ${task1.output.var1} &gt; 0 ) &apos;true&apos;; else &apos;false&apos;; \&quot; which evaluates to &apos;true&apos; or &apos;false&apos; and will match one of the decision case values. You can also use JavaScript functions like indexOf, toUpperCase in the expression which will be evaluated by the expression evaluator.
+The condition to evaluate for this decision task. The condition can be a workflow or task variable or an JavaScript expression. Example value for condition could be a variable like \&quot;${task1.output.var1} or ${workflow.input.var2}\&quot; which evaluates to a value matching any of the decision case values. Example value for condition if it&amp;apos;s an expression - \&quot;if ( ${task1.output.var1} ! = null &amp;&amp; ${task1.output.var1} &amp;gt; 0 ) &amp;apos;true&amp;apos;; else &amp;apos;false&amp;apos;; \&quot; which evaluates to &amp;apos;true&amp;apos; or &amp;apos;false&amp;apos; and will match one of the decision case values. You can also use JavaScript functions like indexOf, toUpperCase in the expression which will be evaluated by the expression evaluator.
 
 ```yaml
 Type: string
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowDecisionTask.ObjectTypeEnum

@@ -210,11 +210,11 @@ PS C:\> Set-IntersightSdcardPolicy
 
 ## RELATED LINKS
 
-[New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
+[Remove-IntersightSdcardPolicy](./Remove-IntersightSdcardPolicy.md)
 
 [Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
 
-[Remove-IntersightSdcardPolicy](./Remove-IntersightSdcardPolicy.md)
+[New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
 
 [Initialize-IntersightSdcardPartition](./Initialize-IntersightSdcardPartition.md)
 

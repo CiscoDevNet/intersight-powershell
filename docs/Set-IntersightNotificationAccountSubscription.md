@@ -19,7 +19,7 @@ Set-IntersightNotificationAccountSubscription [-Actions< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;NotificationAccountSubscription&amp;apos; resource.
+Update a &apos;NotificationAccountSubscription&apos; resource.
 
 ## PARAMETERS
 
@@ -193,9 +193,9 @@ PS C:\> Set-IntersightNotificationAccountSubscription
 
 [Remove-IntersightNotificationAccountSubscription](./Remove-IntersightNotificationAccountSubscription.md)
 
-[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
-
 [Get-IntersightNotificationAccountSubscription](./Get-IntersightNotificationAccountSubscription.md)
+
+[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
 
 [Initialize-IntersightNotificationAction](./Initialize-IntersightNotificationAction.md)
 

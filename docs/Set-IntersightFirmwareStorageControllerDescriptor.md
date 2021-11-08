@@ -19,7 +19,7 @@ Set-IntersightFirmwareStorageControllerDescriptor [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareStorageControllerDescriptor&amp;apos; resource.
+Update a &apos;FirmwareStorageControllerDescriptor&apos; resource.
 
 ## PARAMETERS
 

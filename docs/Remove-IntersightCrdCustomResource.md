@@ -17,7 +17,7 @@ Remove-IntersightCrdCustomResource -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CrdCustomResource&amp;apos; resource.
+Delete a &apos;CrdCustomResource&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
+
 [Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
-
-[Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
 

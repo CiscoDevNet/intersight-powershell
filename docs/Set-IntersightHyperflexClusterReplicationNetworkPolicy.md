@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterReplicationNetworkPolicy [-AdditionalProperties< S
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterReplicationNetworkPolicy&amp;apos; resource.
+Update a &apos;HyperflexClusterReplicationNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -257,11 +257,11 @@ PS C:\> Set-IntersightHyperflexClusterReplicationNetworkPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterReplicationNetworkPolicy](./Remove-IntersightHyperflexClusterReplicationNetworkPolicy.md)
-
 [Get-IntersightHyperflexClusterReplicationNetworkPolicy](./Get-IntersightHyperflexClusterReplicationNetworkPolicy.md)
 
 [New-IntersightHyperflexClusterReplicationNetworkPolicy](./New-IntersightHyperflexClusterReplicationNetworkPolicy.md)
+
+[Remove-IntersightHyperflexClusterReplicationNetworkPolicy](./Remove-IntersightHyperflexClusterReplicationNetworkPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 
