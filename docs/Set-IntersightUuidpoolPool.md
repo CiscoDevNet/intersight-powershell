@@ -222,11 +222,11 @@ PS C:\> Set-IntersightUuidpoolPool
 
 ## RELATED LINKS
 
+[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
+
 [Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
-
-[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
 
 [Initialize-IntersightUuidpoolUuidBlock](./Initialize-IntersightUuidpoolUuidBlock.md)
 

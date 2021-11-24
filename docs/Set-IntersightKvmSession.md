@@ -223,8 +223,8 @@ PS C:\> Set-IntersightKvmSession
 
 ## RELATED LINKS
 
-[New-IntersightKvmSession](./New-IntersightKvmSession.md)
-
 [Get-IntersightKvmSession](./Get-IntersightKvmSession.md)
+
+[New-IntersightKvmSession](./New-IntersightKvmSession.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

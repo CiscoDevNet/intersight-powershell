@@ -17,7 +17,7 @@ Remove-IntersightRecoveryBackupConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;RecoveryBackupConfigPolicy&apos; resource.
+Delete a &amp;apos;RecoveryBackupConfigPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

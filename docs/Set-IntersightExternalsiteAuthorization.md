@@ -19,7 +19,7 @@ Set-IntersightExternalsiteAuthorization [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ExternalsiteAuthorization&amp;apos; resource.
+Update a &apos;ExternalsiteAuthorization&apos; resource.
 
 ## PARAMETERS
 

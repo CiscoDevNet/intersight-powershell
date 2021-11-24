@@ -220,9 +220,9 @@ PS C:\> New-IntersightCapabilityCimcFirmwareDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityCimcFirmwareDescriptor](./Set-IntersightCapabilityCimcFirmwareDescriptor.md)
-
 [Remove-IntersightCapabilityCimcFirmwareDescriptor](./Remove-IntersightCapabilityCimcFirmwareDescriptor.md)
+
+[Set-IntersightCapabilityCimcFirmwareDescriptor](./Set-IntersightCapabilityCimcFirmwareDescriptor.md)
 
 [Get-IntersightCapabilityCimcFirmwareDescriptor](./Get-IntersightCapabilityCimcFirmwareDescriptor.md)
 

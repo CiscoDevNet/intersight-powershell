@@ -19,7 +19,7 @@ New-IntersightRecoveryOnDemandBackup [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
+Create a &apos;RecoveryOnDemandBackup&apos; resource.
 
 ## PARAMETERS
 

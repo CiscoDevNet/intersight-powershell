@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightStorageStoragePolicy](./Set-IntersightStorageStoragePolicy.md)
 
-[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
-
 [Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
+
+[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
 

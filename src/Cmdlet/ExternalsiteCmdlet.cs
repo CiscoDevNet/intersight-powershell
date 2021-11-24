@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ExternalsiteApi(Config);
             ModelObject = new ExternalsiteAuthorization();
-            MethodName = "PatchExternalsiteAuthorizationWithHttpInfo";
+            MethodName = "UpdateExternalsiteAuthorizationWithHttpInfo";
 		}
         
         

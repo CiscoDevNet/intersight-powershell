@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Moid <Strin
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexClusterReplicationNetworkPolicyDeployment&apos; resource.
+Delete a &amp;apos;HyperflexClusterReplicationNetworkPolicyDeployment&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
-
 [Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 
 [New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
+
+[Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightWorkflowSolutionOutput -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowSolutionOutput&amp;apos; resource.
+Delete a &apos;WorkflowSolutionOutput&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightWorkflowSolutionOutput](./Set-IntersightWorkflowSolutionOutput.md)
+
 [Get-IntersightWorkflowSolutionOutput](./Get-IntersightWorkflowSolutionOutput.md)
 
 [New-IntersightWorkflowSolutionOutput](./New-IntersightWorkflowSolutionOutput.md)
-
-[Set-IntersightWorkflowSolutionOutput](./Set-IntersightWorkflowSolutionOutput.md)
 

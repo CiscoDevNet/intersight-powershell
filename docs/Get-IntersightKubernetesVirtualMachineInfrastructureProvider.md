@@ -25,7 +25,7 @@ Get-IntersightKubernetesVirtualMachineInfrastructureProvider [-Count <Boolean>] 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KubernetesVirtualMachineInfrastructureProvider&amp;apos; resource.,
+Read a &apos;KubernetesVirtualMachineInfrastructureProvider&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesVirtualMachineInfrastructureProvider](./New-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
-
 [Set-IntersightKubernetesVirtualMachineInfrastructureProvider](./Set-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
+
+[New-IntersightKubernetesVirtualMachineInfrastructureProvider](./New-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
 

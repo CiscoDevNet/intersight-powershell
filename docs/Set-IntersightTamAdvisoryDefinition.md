@@ -395,11 +395,11 @@ PS C:\> Set-IntersightTamAdvisoryDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
+[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
 [New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
 
-[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
+[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

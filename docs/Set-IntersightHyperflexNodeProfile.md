@@ -366,11 +366,11 @@ PS C:\> Set-IntersightHyperflexNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
-
 [Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
 
 [New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+
+[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

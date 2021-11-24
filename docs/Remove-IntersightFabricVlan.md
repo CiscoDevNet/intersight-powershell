@@ -17,7 +17,7 @@ Remove-IntersightFabricVlan -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricVlan&amp;apos; resource.
+Delete a &apos;FabricVlan&apos; resource.
 
 ## EXAMPLES
 

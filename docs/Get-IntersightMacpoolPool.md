@@ -25,7 +25,7 @@ Get-IntersightMacpoolPool [-Count <Boolean>] [-InlineCount <String>] [-Select <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;MacpoolPool&amp;apos; resource.,
+Read a &apos;MacpoolPool&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
 
-[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
-
 [Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
+
+[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
 

@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryConfiguration [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryConfiguration&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryConfiguration&apos; resource.
 
 ## PARAMETERS
 

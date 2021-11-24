@@ -17,7 +17,7 @@ Remove-IntersightIamEndPointUserRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamEndPointUserRole&apos; resource.
+Delete a &amp;apos;IamEndPointUserRole&amp;apos; resource.
 
 ## EXAMPLES
 

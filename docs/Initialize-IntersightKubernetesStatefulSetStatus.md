@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateRevision
-UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &amp;lt;replicas&amp;gt; - &amp;lt;updatedReplicas&amp;gt;, until pod number &amp;lt;replicas&amp;gt;.
+UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number &lt;replicas&amp;gt; - &lt;updatedReplicas&amp;gt;, until pod number &lt;replicas&amp;gt;.
 
 ```yaml
 Type: string

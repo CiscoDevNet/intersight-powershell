@@ -17,7 +17,7 @@ Remove-IntersightBulkExport -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;BulkExport&amp;apos; resource.
+Delete a &apos;BulkExport&apos; resource.
 
 ## EXAMPLES
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightConvergedinfraHealthCheckDefinition](./New-IntersightConvergedinfraHealthCheckDefinition.md)
+
 [Set-IntersightConvergedinfraHealthCheckDefinition](./Set-IntersightConvergedinfraHealthCheckDefinition.md)
 
 [Remove-IntersightConvergedinfraHealthCheckDefinition](./Remove-IntersightConvergedinfraHealthCheckDefinition.md)
-
-[New-IntersightConvergedinfraHealthCheckDefinition](./New-IntersightConvergedinfraHealthCheckDefinition.md)
 

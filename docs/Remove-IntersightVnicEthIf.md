@@ -17,7 +17,7 @@ Remove-IntersightVnicEthIf -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VnicEthIf&amp;apos; resource.
+Delete a &apos;VnicEthIf&apos; resource.
 
 ## EXAMPLES
 

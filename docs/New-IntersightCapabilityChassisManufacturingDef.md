@@ -247,10 +247,10 @@ PS C:\> New-IntersightCapabilityChassisManufacturingDef
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityChassisManufacturingDef](./Set-IntersightCapabilityChassisManufacturingDef.md)
+[Get-IntersightCapabilityChassisManufacturingDef](./Get-IntersightCapabilityChassisManufacturingDef.md)
 
 [Remove-IntersightCapabilityChassisManufacturingDef](./Remove-IntersightCapabilityChassisManufacturingDef.md)
 
-[Get-IntersightCapabilityChassisManufacturingDef](./Get-IntersightCapabilityChassisManufacturingDef.md)
+[Set-IntersightCapabilityChassisManufacturingDef](./Set-IntersightCapabilityChassisManufacturingDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSoftwareDistributionVersion -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexSoftwareDistributionVersion&amp;apos; resource.
+Delete a &apos;HyperflexSoftwareDistributionVersion&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexSoftwareDistributionVersion](./Set-IntersightHyperflexSoftwareDistributionVersion.md)
-
 [Get-IntersightHyperflexSoftwareDistributionVersion](./Get-IntersightHyperflexSoftwareDistributionVersion.md)
 
 [New-IntersightHyperflexSoftwareDistributionVersion](./New-IntersightHyperflexSoftwareDistributionVersion.md)
+
+[Set-IntersightHyperflexSoftwareDistributionVersion](./Set-IntersightHyperflexSoftwareDistributionVersion.md)
 

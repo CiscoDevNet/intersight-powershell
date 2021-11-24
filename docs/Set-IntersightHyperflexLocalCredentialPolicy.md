@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorAdminPwd
-The Hypervisor root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \&amp;quot;Cisco123\&amp;quot; for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment.
+The Hypervisor root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \&quot;Cisco123\&quot; for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment.
 
 ```yaml
 Type: string
@@ -253,10 +253,10 @@ PS C:\> Set-IntersightHyperflexLocalCredentialPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
+[Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
 
 [New-IntersightHyperflexLocalCredentialPolicy](./New-IntersightHyperflexLocalCredentialPolicy.md)
 
-[Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
+[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

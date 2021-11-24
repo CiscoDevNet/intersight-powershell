@@ -19,7 +19,7 @@ Set-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamAppRegistration&amp;apos; resource.
+Update a &apos;IamAppRegistration&apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightKubernetesTrustedRegistriesPolicy -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesTrustedRegistriesPolicy&amp;apos; resource.
+Delete a &apos;KubernetesTrustedRegistriesPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesTrustedRegistriesPolicy](./Set-IntersightKubernetesTrustedRegistriesPolicy.md)
+
 [Get-IntersightKubernetesTrustedRegistriesPolicy](./Get-IntersightKubernetesTrustedRegistriesPolicy.md)
 
 [New-IntersightKubernetesTrustedRegistriesPolicy](./New-IntersightKubernetesTrustedRegistriesPolicy.md)
-
-[Set-IntersightKubernetesTrustedRegistriesPolicy](./Set-IntersightKubernetesTrustedRegistriesPolicy.md)
 

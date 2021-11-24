@@ -178,10 +178,10 @@ PS C:\> New-IntersightHyperflexSoftwareDistributionVersion
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexSoftwareDistributionVersion](./Get-IntersightHyperflexSoftwareDistributionVersion.md)
+
 [Set-IntersightHyperflexSoftwareDistributionVersion](./Set-IntersightHyperflexSoftwareDistributionVersion.md)
 
 [Remove-IntersightHyperflexSoftwareDistributionVersion](./Remove-IntersightHyperflexSoftwareDistributionVersion.md)
-
-[Get-IntersightHyperflexSoftwareDistributionVersion](./Get-IntersightHyperflexSoftwareDistributionVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

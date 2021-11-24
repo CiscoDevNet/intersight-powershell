@@ -19,7 +19,7 @@ Set-IntersightKubernetesSysConfigPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesSysConfigPolicy&amp;apos; resource.
+Update a &apos;KubernetesSysConfigPolicy&apos; resource.
 
 ## PARAMETERS
 

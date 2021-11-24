@@ -259,11 +259,11 @@ PS C:\> Set-IntersightHyperflexExtFcStoragePolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
-
 [Get-IntersightHyperflexExtFcStoragePolicy](./Get-IntersightHyperflexExtFcStoragePolicy.md)
 
 [New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
+
+[Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
 
 [Initialize-IntersightHyperflexNamedVsan](./Initialize-IntersightHyperflexNamedVsan.md)
 

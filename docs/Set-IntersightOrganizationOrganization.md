@@ -175,10 +175,10 @@ PS C:\> Set-IntersightOrganizationOrganization
 
 ## RELATED LINKS
 
+[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
+
 [New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
 [Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
-
-[Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

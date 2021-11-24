@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
-
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
 [New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
+
+[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
 

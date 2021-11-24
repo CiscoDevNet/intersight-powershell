@@ -17,7 +17,7 @@ Remove-IntersightSdwanRouterNode -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SdwanRouterNode&apos; resource.
+Delete a &amp;apos;SdwanRouterNode&amp;apos; resource.
 
 ## EXAMPLES
 

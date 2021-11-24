@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightTerraformExecutor](./New-IntersightTerraformExecutor.md)
-
 [Set-IntersightTerraformExecutor](./Set-IntersightTerraformExecutor.md)
 
 [Remove-IntersightTerraformExecutor](./Remove-IntersightTerraformExecutor.md)
+
+[New-IntersightTerraformExecutor](./New-IntersightTerraformExecutor.md)
 

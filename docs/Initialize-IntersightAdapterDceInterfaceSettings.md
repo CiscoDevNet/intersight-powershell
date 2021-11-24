@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -FecMode
-Forward Error Correction (FEC) mode setting for the DCE interfaces of the adapter. FEC mode setting is supported only for Cisco VIC 14xx adapters. FEC mode &amp;apos;cl74&amp;apos; is unsupported for Cisco VIC 1495/1497. This setting will be ignored for unsupported adapters and for unavailable DCE interfaces.\n* `cl91` - Use cl91 standard as FEC mode setting. &amp;apos;Clause 91&amp;apos; aka RS-FEC (&amp;apos;ReedSolomon&amp;apos; FEC) offers better error protection against bursty and random errors but adds latency.\n* `cl74` - Use cl74 standard as FEC mode setting. &amp;apos;Clause 74&amp;apos; aka FC-FEC (&amp;apos;FireCode&amp;apos; FEC) offers simple, low-latency protection against 1 burst/sparse bit error, but it is not good for random errors.\n* `Off` - Disable FEC mode on the DCE Interface.
+Forward Error Correction (FEC) mode setting for the DCE interfaces of the adapter. FEC mode setting is supported only for Cisco VIC 14xx adapters. FEC mode &apos;cl74&apos; is unsupported for Cisco VIC 1495/1497. This setting will be ignored for unsupported adapters and for unavailable DCE interfaces.\n* `cl91` - Use cl91 standard as FEC mode setting. &apos;Clause 91&apos; aka RS-FEC (&apos;ReedSolomon&apos; FEC) offers better error protection against bursty and random errors but adds latency.\n* `cl74` - Use cl74 standard as FEC mode setting. &apos;Clause 74&apos; aka FC-FEC (&apos;FireCode&apos; FEC) offers simple, low-latency protection against 1 burst/sparse bit error, but it is not good for random errors.\n* `Off` - Disable FEC mode on the DCE Interface.
 
 ```yaml
 Type: AdapterDceInterfaceSettings.FecModeEnum

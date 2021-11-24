@@ -19,7 +19,7 @@ New-IntersightSearchSuggestItem [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &apos;SearchSuggestItem&apos; resource.
+Create a &amp;apos;SearchSuggestItem&amp;apos; resource.
 
 ## PARAMETERS
 

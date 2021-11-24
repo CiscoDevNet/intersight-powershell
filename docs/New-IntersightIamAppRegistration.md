@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientSecret
-The OAuth2 client secret.\nThe value of this property is generated when grantType includes &amp;apos;client-credentials&amp;apos;.\nOtherwise, no client-secret is generated.
+The OAuth2 client secret.\nThe value of this property is generated when grantType includes &apos;client-credentials&apos;.\nOtherwise, no client-secret is generated.
 
 ```yaml
 Type: string
@@ -250,9 +250,9 @@ PS C:\> New-IntersightIamAppRegistration
 
 ## RELATED LINKS
 
-[Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
-
 [Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
+
+[Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
 
 [Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
 

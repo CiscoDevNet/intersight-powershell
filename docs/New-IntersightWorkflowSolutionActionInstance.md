@@ -19,7 +19,7 @@ New-IntersightWorkflowSolutionActionInstance [-Action< WorkflowSolutionActionIns
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowSolutionActionInstance&amp;apos; resource.
+Create a &apos;WorkflowSolutionActionInstance&apos; resource.
 
 ## PARAMETERS
 

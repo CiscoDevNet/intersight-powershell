@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHxapVirtualMachineNetworkInterface -Moid <String> [<Co
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexHxapVirtualMachineNetworkInterface&apos; resource.
+Delete a &amp;apos;HyperflexHxapVirtualMachineNetworkInterface&amp;apos; resource.
 
 ## EXAMPLES
 

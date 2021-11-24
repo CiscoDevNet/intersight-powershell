@@ -19,7 +19,7 @@ Set-IntersightVrfVrf [-AdditionalProperties< System.Collections.Generic.Dictiona
 ```
 
 ## DESCRIPTION
-Update a &apos;VrfVrf&apos; resource.
+Update a &amp;apos;VrfVrf&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -157,10 +157,10 @@ PS C:\> Set-IntersightVrfVrf
 
 ## RELATED LINKS
 
-[Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
+[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
 
 [New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
 
-[Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
+[Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

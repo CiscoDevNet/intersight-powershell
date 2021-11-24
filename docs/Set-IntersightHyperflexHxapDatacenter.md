@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapDatacenter [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexHxapDatacenter&apos; resource.
+Update a &amp;apos;HyperflexHxapDatacenter&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -145,10 +145,10 @@ PS C:\> Set-IntersightHyperflexHxapDatacenter
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)
+
 [Get-IntersightHyperflexHxapDatacenter](./Get-IntersightHyperflexHxapDatacenter.md)
 
 [New-IntersightHyperflexHxapDatacenter](./New-IntersightHyperflexHxapDatacenter.md)
-
-[Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

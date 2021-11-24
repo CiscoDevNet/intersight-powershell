@@ -1,10 +1,13 @@
+## Intersight.PowerShell_v1.0.9.4903
+Release Date: 24th November 2021
+- Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4903)
 ## Intersight.PowerShell_v1.0.9.4870
 Release Date: 4th November 2021
 - Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4870)
 - Content type application/json-patch+json support using the cmdlet Invoke-IntersightPatchDocument for all MO.
 ## Intersight.PowerShell_v1.0.9.4663
 Release Date: 19th October 2021
-- Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4437)
+- Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4663)
 - Generic cmdlet to perform Get/Set/New and Remove operation on any supported MO.
 - Provided WithHttpInfo switch parameter to get the result with http response headers and content.
 - Get cmdlet exposes all the primitive type properties as parameter, which helps user to filter out the result based on specified   parameter value.  

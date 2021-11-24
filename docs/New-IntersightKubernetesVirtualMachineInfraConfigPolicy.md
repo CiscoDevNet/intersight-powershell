@@ -19,7 +19,7 @@ New-IntersightKubernetesVirtualMachineInfraConfigPolicy [-AdditionalProperties< 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesVirtualMachineInfraConfigPolicy&amp;apos; resource.
+Create a &apos;KubernetesVirtualMachineInfraConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -228,9 +228,9 @@ PS C:\> New-IntersightKubernetesVirtualMachineInfraConfigPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Set-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
-
 [Remove-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Remove-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
+
+[Set-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Set-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
 
 [Get-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Get-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
 

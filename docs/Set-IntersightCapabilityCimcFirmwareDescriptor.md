@@ -19,7 +19,7 @@ Set-IntersightCapabilityCimcFirmwareDescriptor [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityCimcFirmwareDescriptor&amp;apos; resource.
+Update a &apos;CapabilityCimcFirmwareDescriptor&apos; resource.
 
 ## PARAMETERS
 

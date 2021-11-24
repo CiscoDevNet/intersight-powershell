@@ -19,7 +19,7 @@ Set-IntersightBootPrecisionPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;BootPrecisionPolicy&apos; resource.
+Update a &amp;apos;BootPrecisionPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

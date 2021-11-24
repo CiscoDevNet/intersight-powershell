@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesTrustedRegistriesPolicy](./New-IntersightKubernetesTrustedRegistriesPolicy.md)
-
 [Set-IntersightKubernetesTrustedRegistriesPolicy](./Set-IntersightKubernetesTrustedRegistriesPolicy.md)
 
 [Remove-IntersightKubernetesTrustedRegistriesPolicy](./Remove-IntersightKubernetesTrustedRegistriesPolicy.md)
+
+[New-IntersightKubernetesTrustedRegistriesPolicy](./New-IntersightKubernetesTrustedRegistriesPolicy.md)
 

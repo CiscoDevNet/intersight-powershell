@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFabricLinkAggregationPolicy](./New-IntersightFabricLinkAggregationPolicy.md)
+
 [Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
 
 [Remove-IntersightFabricLinkAggregationPolicy](./Remove-IntersightFabricLinkAggregationPolicy.md)
-
-[New-IntersightFabricLinkAggregationPolicy](./New-IntersightFabricLinkAggregationPolicy.md)
 

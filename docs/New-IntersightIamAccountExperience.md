@@ -19,7 +19,7 @@ New-IntersightIamAccountExperience [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamAccountExperience&amp;apos; resource.
+Create a &apos;IamAccountExperience&apos; resource.
 
 ## PARAMETERS
 
@@ -162,9 +162,9 @@ PS C:\> New-IntersightIamAccountExperience
 
 ## RELATED LINKS
 
-[Get-IntersightIamAccountExperience](./Get-IntersightIamAccountExperience.md)
-
 [Set-IntersightIamAccountExperience](./Set-IntersightIamAccountExperience.md)
+
+[Get-IntersightIamAccountExperience](./Get-IntersightIamAccountExperience.md)
 
 [Initialize-IntersightIamFeatureDefinition](./Initialize-IntersightIamFeatureDefinition.md)
 

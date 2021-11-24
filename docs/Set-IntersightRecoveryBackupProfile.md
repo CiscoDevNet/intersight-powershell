@@ -327,11 +327,11 @@ PS C:\> Set-IntersightRecoveryBackupProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
+[Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
 
 [New-IntersightRecoveryBackupProfile](./New-IntersightRecoveryBackupProfile.md)
 
-[Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
+[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

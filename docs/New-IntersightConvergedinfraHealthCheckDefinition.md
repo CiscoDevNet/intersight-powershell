@@ -232,10 +232,10 @@ PS C:\> New-IntersightConvergedinfraHealthCheckDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
+
 [Set-IntersightConvergedinfraHealthCheckDefinition](./Set-IntersightConvergedinfraHealthCheckDefinition.md)
 
 [Remove-IntersightConvergedinfraHealthCheckDefinition](./Remove-IntersightConvergedinfraHealthCheckDefinition.md)
-
-[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

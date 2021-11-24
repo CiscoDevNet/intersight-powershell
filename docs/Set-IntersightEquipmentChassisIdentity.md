@@ -19,7 +19,7 @@ Set-IntersightEquipmentChassisIdentity [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentChassisIdentity&amp;apos; resource.
+Update a &apos;EquipmentChassisIdentity&apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightComputeServerPowerPolicy [-Count <Boolean>] [-InlineCount <String>
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;ComputeServerPowerPolicy&amp;apos; resource.,
+Read a &apos;ComputeServerPowerPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

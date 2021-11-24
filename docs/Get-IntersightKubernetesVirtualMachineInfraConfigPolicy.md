@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Set-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
-
 [Remove-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Remove-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
+
+[Set-IntersightKubernetesVirtualMachineInfraConfigPolicy](./Set-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
 
 [New-IntersightKubernetesVirtualMachineInfraConfigPolicy](./New-IntersightKubernetesVirtualMachineInfraConfigPolicy.md)
 

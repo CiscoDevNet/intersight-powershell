@@ -19,7 +19,7 @@ Set-IntersightSoftwareUcsdBundleDistributable [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwareUcsdBundleDistributable&amp;apos; resource.
+Update a &apos;SoftwareUcsdBundleDistributable&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightSmtpPolicy [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;SmtpPolicy&apos; resource.
+Update a &amp;apos;SmtpPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

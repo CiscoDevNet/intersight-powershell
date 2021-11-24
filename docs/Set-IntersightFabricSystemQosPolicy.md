@@ -19,7 +19,7 @@ Set-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricSystemQosPolicy&apos; resource.
+Update a &amp;apos;FabricSystemQosPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -210,11 +210,11 @@ PS C:\> Set-IntersightFabricSystemQosPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
+
 [Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
 
 [New-IntersightFabricSystemQosPolicy](./New-IntersightFabricSystemQosPolicy.md)
-
-[Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
 
 [Initialize-IntersightFabricQosClass](./Initialize-IntersightFabricQosClass.md)
 

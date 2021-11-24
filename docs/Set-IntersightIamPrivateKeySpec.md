@@ -162,11 +162,11 @@ PS C:\> Set-IntersightIamPrivateKeySpec
 
 ## RELATED LINKS
 
-[Remove-IntersightIamPrivateKeySpec](./Remove-IntersightIamPrivateKeySpec.md)
-
 [Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
 
 [New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
+
+[Remove-IntersightIamPrivateKeySpec](./Remove-IntersightIamPrivateKeySpec.md)
 
 [Initialize-IntersightPkixKeyGenerationSpec](./Initialize-IntersightPkixKeyGenerationSpec.md)
 

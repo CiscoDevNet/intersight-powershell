@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The port number to be used to connect to the managed target. Values 1-65535 indicate a port number to be used. A value of 0 is not a valid port number and instead indicates that the default management port, as defined by the documentation of the managed target, should be used to establish a connection.
+The port number to be used to connect to the managed target. Valid values are 1 - 65535. If not provided, a default port of 22 is used to establish the SSH connection to the given target.
 
 ```yaml
 Type: long

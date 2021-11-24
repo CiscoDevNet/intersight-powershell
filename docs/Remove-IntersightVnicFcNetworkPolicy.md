@@ -17,7 +17,7 @@ Remove-IntersightVnicFcNetworkPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicFcNetworkPolicy&apos; resource.
+Delete a &amp;apos;VnicFcNetworkPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

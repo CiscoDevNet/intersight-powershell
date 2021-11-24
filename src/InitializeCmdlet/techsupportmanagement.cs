@@ -8,15 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementApplianceParam.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementPlatformParam.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementApplianceParam")]
-    public class InitializeIntersightTechsupportmanagementApplianceParam:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementPlatformParam")]
+    public class InitializeIntersightTechsupportmanagementPlatformParam:PSCmdlet
 	{
-		public InitializeIntersightTechsupportmanagementApplianceParam()
+		public InitializeIntersightTechsupportmanagementPlatformParam()
 		{
-            ClassId = TechsupportmanagementApplianceParam.ClassIdEnum.TechsupportmanagementApplianceParam;
-            ObjectType = TechsupportmanagementApplianceParam.ObjectTypeEnum.TechsupportmanagementApplianceParam;
+            ClassId = TechsupportmanagementPlatformParam.ClassIdEnum.TechsupportmanagementPlatformParam;
+            CollectionType = TechsupportmanagementPlatformParam.CollectionTypeEnum.NUMBER_1;
+            ObjectType = TechsupportmanagementPlatformParam.ObjectTypeEnum.TechsupportmanagementPlatformParam;
             
 		}
         // <summary>
@@ -33,16 +34,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TechsupportmanagementApplianceParam.ClassIdEnum ClassId {
+        public TechsupportmanagementPlatformParam.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Specifies whether the techsupport request is from the cloud or by the appliance."</para>
+        /// <para type="description">"CollectionType specifies if basic or detailed techsupport needs to be collected.\n* `1` - Collect basic techsupport.\n* `2` - Collect detailed techsupport."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool IsApplianceRequest {
+        public TechsupportmanagementPlatformParam.CollectionTypeEnum CollectionType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Controls whether to include core file in the techsupport bundle."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool IncludeCore {
             get;
             set;
         }
@@ -51,22 +61,26 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TechsupportmanagementApplianceParam.ObjectTypeEnum ObjectType {
+        public TechsupportmanagementPlatformParam.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.TechsupportmanagementApplianceParam initObject = new Intersight.Model.TechsupportmanagementApplianceParam();
+             Intersight.Model.TechsupportmanagementPlatformParam initObject = new Intersight.Model.TechsupportmanagementPlatformParam();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IsApplianceRequest"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CollectionType"))
             {
-                initObject.IsApplianceRequest = this.IsApplianceRequest;
+                initObject.CollectionType = this.CollectionType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IncludeCore"))
+            {
+                initObject.IncludeCore = this.IncludeCore;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -193,16 +207,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementPlatformParam.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementApplianceParam.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementPlatformParam")]
-    public class InitializeIntersightTechsupportmanagementPlatformParam:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementApplianceParam")]
+    public class InitializeIntersightTechsupportmanagementApplianceParam:PSCmdlet
 	{
-		public InitializeIntersightTechsupportmanagementPlatformParam()
+		public InitializeIntersightTechsupportmanagementApplianceParam()
 		{
-            ClassId = TechsupportmanagementPlatformParam.ClassIdEnum.TechsupportmanagementPlatformParam;
-            CollectionType = TechsupportmanagementPlatformParam.CollectionTypeEnum.NUMBER_1;
-            ObjectType = TechsupportmanagementPlatformParam.ObjectTypeEnum.TechsupportmanagementPlatformParam;
+            ClassId = TechsupportmanagementApplianceParam.ClassIdEnum.TechsupportmanagementApplianceParam;
+            ObjectType = TechsupportmanagementApplianceParam.ObjectTypeEnum.TechsupportmanagementApplianceParam;
             
 		}
         // <summary>
@@ -219,25 +232,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TechsupportmanagementPlatformParam.ClassIdEnum ClassId {
+        public TechsupportmanagementApplianceParam.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"CollectionType specifies if basic or detailed techsupport needs to be collected.\n* `1` - Collect basic techsupport.\n* `2` - Collect detailed techsupport."</para>
+        /// <para type="description">"Specifies whether the techsupport request is from the cloud or by the appliance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TechsupportmanagementPlatformParam.CollectionTypeEnum CollectionType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Controls whether to include core file in the techsupport bundle."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool IncludeCore {
+        public bool IsApplianceRequest {
             get;
             set;
         }
@@ -246,26 +250,22 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public TechsupportmanagementPlatformParam.ObjectTypeEnum ObjectType {
+        public TechsupportmanagementApplianceParam.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.TechsupportmanagementPlatformParam initObject = new Intersight.Model.TechsupportmanagementPlatformParam();
+             Intersight.Model.TechsupportmanagementApplianceParam initObject = new Intersight.Model.TechsupportmanagementApplianceParam();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CollectionType"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsApplianceRequest"))
             {
-                initObject.CollectionType = this.CollectionType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IncludeCore"))
-            {
-                initObject.IncludeCore = this.IncludeCore;
+                initObject.IsApplianceRequest = this.IsApplianceRequest;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);

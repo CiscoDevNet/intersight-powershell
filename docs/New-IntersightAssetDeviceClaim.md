@@ -19,7 +19,7 @@ New-IntersightAssetDeviceClaim [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AssetDeviceClaim&amp;apos; resource.
+Create a &apos;AssetDeviceClaim&apos; resource.
 
 ## PARAMETERS
 

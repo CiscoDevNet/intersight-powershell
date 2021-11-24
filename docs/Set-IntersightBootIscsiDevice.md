@@ -19,7 +19,7 @@ Set-IntersightBootIscsiDevice [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;BootIscsiDevice&apos; resource.
+Update a &amp;apos;BootIscsiDevice&amp;apos; resource.
 
 ## PARAMETERS
 

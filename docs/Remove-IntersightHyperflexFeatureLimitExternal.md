@@ -17,7 +17,7 @@ Remove-IntersightHyperflexFeatureLimitExternal -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexFeatureLimitExternal&amp;apos; resource.
+Delete a &apos;HyperflexFeatureLimitExternal&apos; resource.
 
 ## EXAMPLES
 

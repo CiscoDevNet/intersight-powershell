@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -OauthAuthenticationCredential
-Optional client id/secret credential used for oAuth authentication with ServiceNow target. ServiceNow requires this to be used for oAuth authentication combining with user/password credential.
+Optional client id/secret credential used for OAuth authentication with ServiceNow target. ServiceNow requires this to be used for OAuth authentication combining with user/password credential.
 
 Note :- Use Initialize-IntersightAssetOauthClientIdSecretCredential to create the object of complex type AssetOauthClientIdSecretCredential
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: AssetServiceNowCredential.ObjectTypeEnum

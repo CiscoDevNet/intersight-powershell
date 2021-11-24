@@ -19,7 +19,7 @@ Set-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &apos;IqnpoolPool&apos; resource.
+Update a &amp;apos;IqnpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

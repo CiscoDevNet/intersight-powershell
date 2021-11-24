@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightCapabilitySiocModuleDescriptor](./Set-IntersightCapabilitySiocModuleDescriptor.md)
 
-[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
-
 [New-IntersightCapabilitySiocModuleDescriptor](./New-IntersightCapabilitySiocModuleDescriptor.md)
+
+[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
 

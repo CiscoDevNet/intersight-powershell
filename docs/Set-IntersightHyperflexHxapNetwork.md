@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkType
-Network attachment type, only \&quot;L2\&quot; is available now.\n* `unknown` - This network is of an unknown network type.\n* `L2` - A Layer 2 switching network type.
+Network attachment type, only \&amp;quot;L2\&amp;quot; is available now.\n* `unknown` - This network is of an unknown network type.\n* `L2` - A Layer 2 switching network type.
 
 ```yaml
 Type: HyperflexHxapNetwork.NetworkTypeEnum

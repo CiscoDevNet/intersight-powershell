@@ -19,7 +19,7 @@ Set-IntersightCapabilityEquipmentSlotArray [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityEquipmentSlotArray&amp;apos; resource.
+Update a &apos;CapabilityEquipmentSlotArray&apos; resource.
 
 ## PARAMETERS
 
@@ -427,10 +427,10 @@ PS C:\> Set-IntersightCapabilityEquipmentSlotArray
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
-
 [Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
 
 [New-IntersightCapabilityEquipmentSlotArray](./New-IntersightCapabilityEquipmentSlotArray.md)
+
+[Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

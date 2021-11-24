@@ -19,7 +19,7 @@ Set-IntersightOsConfigurationFile [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;OsConfigurationFile&apos; resource.
+Update a &amp;apos;OsConfigurationFile&amp;apos; resource.
 
 ## PARAMETERS
 

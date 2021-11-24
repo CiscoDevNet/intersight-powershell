@@ -19,7 +19,7 @@ Set-IntersightFirmwareSasExpanderDescriptor [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareSasExpanderDescriptor&amp;apos; resource.
+Update a &apos;FirmwareSasExpanderDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareSasExpanderDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareSasExpanderDescriptor](./Remove-IntersightFirmwareSasExpanderDescriptor.md)
-
 [Get-IntersightFirmwareSasExpanderDescriptor](./Get-IntersightFirmwareSasExpanderDescriptor.md)
 
 [New-IntersightFirmwareSasExpanderDescriptor](./New-IntersightFirmwareSasExpanderDescriptor.md)
+
+[Remove-IntersightFirmwareSasExpanderDescriptor](./Remove-IntersightFirmwareSasExpanderDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

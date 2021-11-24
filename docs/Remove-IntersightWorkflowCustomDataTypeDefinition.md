@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
-
 [Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [New-IntersightWorkflowCustomDataTypeDefinition](./New-IntersightWorkflowCustomDataTypeDefinition.md)
+
+[Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
 

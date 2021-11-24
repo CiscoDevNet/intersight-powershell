@@ -19,7 +19,7 @@ Set-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageStoragePolicy&apos; resource.
+Update a &amp;apos;StorageStoragePolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -292,9 +292,9 @@ PS C:\> Set-IntersightStorageStoragePolicy
 
 [Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
 
-[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
-
 [Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
+
+[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
 
 [Initialize-IntersightStorageM2VirtualDriveConfig](./Initialize-IntersightStorageM2VirtualDriveConfig.md)
 

@@ -19,7 +19,7 @@ New-IntersightResourcepoolPool [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &apos;ResourcepoolPool&apos; resource.
+Create a &amp;apos;ResourcepoolPool&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -256,9 +256,9 @@ PS C:\> New-IntersightResourcepoolPool
 
 [Get-IntersightResourcepoolPool](./Get-IntersightResourcepoolPool.md)
 
-[Set-IntersightResourcepoolPool](./Set-IntersightResourcepoolPool.md)
-
 [Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)
+
+[Set-IntersightResourcepoolPool](./Set-IntersightResourcepoolPool.md)
 
 [Initialize-IntersightResourcepoolResourcePoolParameters](./Initialize-IntersightResourcepoolResourcePoolParameters.md)
 

@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamAccountExperience](./New-IntersightIamAccountExperience.md)
-
 [Set-IntersightIamAccountExperience](./Set-IntersightIamAccountExperience.md)
+
+[New-IntersightIamAccountExperience](./New-IntersightIamAccountExperience.md)
 

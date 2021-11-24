@@ -25,7 +25,7 @@ Get-IntersightFirmwareSasExpanderDescriptor [-Count <Boolean>] [-InlineCount <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FirmwareSasExpanderDescriptor&amp;apos; resource.,
+Read a &apos;FirmwareSasExpanderDescriptor&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFirmwareSasExpanderDescriptor](./New-IntersightFirmwareSasExpanderDescriptor.md)
+
 [Set-IntersightFirmwareSasExpanderDescriptor](./Set-IntersightFirmwareSasExpanderDescriptor.md)
 
 [Remove-IntersightFirmwareSasExpanderDescriptor](./Remove-IntersightFirmwareSasExpanderDescriptor.md)
-
-[New-IntersightFirmwareSasExpanderDescriptor](./New-IntersightFirmwareSasExpanderDescriptor.md)
 

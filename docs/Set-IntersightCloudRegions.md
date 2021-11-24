@@ -19,7 +19,7 @@ Set-IntersightCloudRegions [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;CloudRegions&apos; resource.
+Update a &amp;apos;CloudRegions&amp;apos; resource.
 
 ## PARAMETERS
 

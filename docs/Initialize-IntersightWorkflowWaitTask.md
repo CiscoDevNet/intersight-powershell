@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputParameters
-JSON formatted map that defines the input given to the task. JSONPath is used for chaining output from previous tasks as inputs into the current task. The format to specify the mapping is &apos;${Source.input/output.JsonPath}&apos;. &apos;Source&apos; can be either workflow or the name of the task within the workflow. You can map the task input to either a workflow input or a task output. Following this is JSON path expression to extract JSON fragment from source&apos;s input/output.
+JSON formatted map that defines the input given to the task. JSONPath is used for chaining output from previous tasks as inputs into the current task. The format to specify the mapping is &amp;apos;${Source.input/output.JsonPath}&amp;apos;. &amp;apos;Source&amp;apos; can be either workflow or the name of the task within the workflow. You can map the task input to either a workflow input or a task output. Following this is JSON path expression to extract JSON fragment from source&amp;apos;s input/output.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

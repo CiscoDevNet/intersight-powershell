@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterBackupPolicyInventory -Moid <String> [<CommonPa
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexClusterBackupPolicyInventory&apos; resource.
+Delete a &amp;apos;HyperflexClusterBackupPolicyInventory&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Remove-IntersightMetaDefinition -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;MetaDefinition&apos; resource.
+Delete a &amp;apos;MetaDefinition&amp;apos; resource.
 
 ## EXAMPLES
 

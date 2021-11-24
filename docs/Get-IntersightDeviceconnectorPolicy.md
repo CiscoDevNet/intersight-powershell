@@ -25,7 +25,7 @@ Get-IntersightDeviceconnectorPolicy [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;DeviceconnectorPolicy&apos; resource.,
+Read a &amp;apos;DeviceconnectorPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
+
 [Set-IntersightDeviceconnectorPolicy](./Set-IntersightDeviceconnectorPolicy.md)
 
 [Remove-IntersightDeviceconnectorPolicy](./Remove-IntersightDeviceconnectorPolicy.md)
-
-[New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
 

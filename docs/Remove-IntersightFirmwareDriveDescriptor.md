@@ -17,7 +17,7 @@ Remove-IntersightFirmwareDriveDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareDriveDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareDriveDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

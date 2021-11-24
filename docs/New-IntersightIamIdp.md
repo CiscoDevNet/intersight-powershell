@@ -238,10 +238,10 @@ PS C:\> New-IntersightIamIdp
 
 ## RELATED LINKS
 
+[Get-IntersightIamIdp](./Get-IntersightIamIdp.md)
+
 [Set-IntersightIamIdp](./Set-IntersightIamIdp.md)
 
 [Remove-IntersightIamIdp](./Remove-IntersightIamIdp.md)
-
-[Get-IntersightIamIdp](./Get-IntersightIamIdp.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

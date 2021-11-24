@@ -292,9 +292,9 @@ PS C:\> New-IntersightFirmwareChassisUpgrade
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
-
 [Remove-IntersightFirmwareChassisUpgrade](./Remove-IntersightFirmwareChassisUpgrade.md)
+
+[Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 

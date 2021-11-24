@@ -87,87 +87,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
-    public class InitializeIntersightFabricUdldSettings:PSCmdlet
-	{
-		public InitializeIntersightFabricUdldSettings()
-		{
-            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
-            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
-            Mode = FabricUdldSettings.ModeEnum.Normal;
-            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.AdminStateEnum AdminState {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ModeEnum Mode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
-            {
-                initObject.AdminState = this.AdminState;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricMacAgingSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricMacAgingSettings")]
@@ -243,6 +162,85 @@ namespace Intersight.PowerShell
                 initObject.MacAgingTime = this.MacAgingTime;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
+    public class InitializeIntersightFabricLldpSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricLldpSettings()
+		{
+            ClassId = FabricLldpSettings.ClassIdEnum.FabricLldpSettings;
+            ObjectType = FabricLldpSettings.ObjectTypeEnum.FabricLldpSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLldpSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLldpSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the LLDP frames can be received by an interface on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ReceiveEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the LLDP frames can be transmitted by an interface on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool TransmitEnabled {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricLldpSettings initObject = new Intersight.Model.FabricLldpSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveEnabled"))
+            {
+                initObject.ReceiveEnabled = this.ReceiveEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TransmitEnabled"))
+            {
+                initObject.TransmitEnabled = this.TransmitEnabled;
+            }
             WriteObject(initObject);
         }
 
@@ -579,15 +577,17 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
-    public class InitializeIntersightFabricLldpSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
+    public class InitializeIntersightFabricUdldSettings:PSCmdlet
 	{
-		public InitializeIntersightFabricLldpSettings()
+		public InitializeIntersightFabricUdldSettings()
 		{
-            ClassId = FabricLldpSettings.ClassIdEnum.FabricLldpSettings;
-            ObjectType = FabricLldpSettings.ObjectTypeEnum.FabricLldpSettings;
+            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
+            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
+            Mode = FabricUdldSettings.ModeEnum.Normal;
+            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
             
 		}
         // <summary>
@@ -600,11 +600,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.AdminStateEnum AdminState {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricLldpSettings.ClassIdEnum ClassId {
+        public FabricUdldSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ModeEnum Mode {
             get;
             set;
         }
@@ -613,46 +631,28 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricLldpSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Determines if the LLDP frames can be received by an interface on the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool ReceiveEnabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Determines if the LLDP frames can be transmitted by an interface on the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool TransmitEnabled {
+        public FabricUdldSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricLldpSettings initObject = new Intersight.Model.FabricLldpSettings();
+             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            {
+                initObject.AdminState = this.AdminState;
+            }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveEnabled"))
-            {
-                initObject.ReceiveEnabled = this.ReceiveEnabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TransmitEnabled"))
-            {
-                initObject.TransmitEnabled = this.TransmitEnabled;
-            }
             WriteObject(initObject);
         }
 

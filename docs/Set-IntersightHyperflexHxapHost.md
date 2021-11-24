@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapHost [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxapHost&amp;apos; resource.
+Update a &apos;HyperflexHxapHost&apos; resource.
 
 ## PARAMETERS
 

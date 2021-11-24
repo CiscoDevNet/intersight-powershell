@@ -19,7 +19,7 @@ Set-IntersightComputeServerPowerPolicy [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeServerPowerPolicy&apos; resource.
+Update a &amp;apos;ComputeServerPowerPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

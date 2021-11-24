@@ -25,7 +25,7 @@ Get-IntersightFcPhysicalPort [-Count <Boolean>] [-InlineCount <String>] [-Select
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FcPhysicalPort&apos; resource.,
+Read a &amp;apos;FcPhysicalPort&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Type of the feedback from user.\n* `Evaluation` - User&apos;s feedback classified as an evaluation.\n* `Bug` - User&apos;s feedback classified as a bug.
+Type of the feedback from user.\n* `Evaluation` - User&amp;apos;s feedback classified as an evaluation.\n* `Bug` - User&amp;apos;s feedback classified as a bug.
 
 ```yaml
 Type: FeedbackFeedbackData.TypeEnum

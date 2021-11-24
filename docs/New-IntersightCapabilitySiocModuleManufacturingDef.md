@@ -19,7 +19,7 @@ New-IntersightCapabilitySiocModuleManufacturingDef [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilitySiocModuleManufacturingDef&amp;apos; resource.
+Create a &apos;CapabilitySiocModuleManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

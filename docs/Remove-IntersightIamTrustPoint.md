@@ -17,7 +17,7 @@ Remove-IntersightIamTrustPoint -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamTrustPoint&apos; resource.
+Delete a &amp;apos;IamTrustPoint&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightConvergedinfraPod [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;ConvergedinfraPod&apos; resource.
+Update a &amp;apos;ConvergedinfraPod&amp;apos; resource.
 
 ## PARAMETERS
 

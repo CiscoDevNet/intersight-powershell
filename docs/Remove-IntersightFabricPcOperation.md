@@ -17,7 +17,7 @@ Remove-IntersightFabricPcOperation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricPcOperation&apos; resource.
+Delete a &amp;apos;FabricPcOperation&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
 
-[Get-IntersightFabricPcOperation](./Get-IntersightFabricPcOperation.md)
-
 [New-IntersightFabricPcOperation](./New-IntersightFabricPcOperation.md)
+
+[Get-IntersightFabricPcOperation](./Get-IntersightFabricPcOperation.md)
 

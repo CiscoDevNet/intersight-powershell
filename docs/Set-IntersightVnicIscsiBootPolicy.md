@@ -19,7 +19,7 @@ Set-IntersightVnicIscsiBootPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicIscsiBootPolicy&apos; resource.
+Update a &amp;apos;VnicIscsiBootPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

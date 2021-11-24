@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightOprsSyncTargetListMessage](./Set-IntersightOprsSyncTargetListMessage.md)
+
 [Get-IntersightOprsSyncTargetListMessage](./Get-IntersightOprsSyncTargetListMessage.md)
 
 [New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
-
-[Set-IntersightOprsSyncTargetListMessage](./Set-IntersightOprsSyncTargetListMessage.md)
 

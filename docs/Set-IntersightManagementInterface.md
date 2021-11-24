@@ -19,7 +19,7 @@ Set-IntersightManagementInterface [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;ManagementInterface&apos; resource.
+Update a &amp;apos;ManagementInterface&amp;apos; resource.
 
 ## PARAMETERS
 

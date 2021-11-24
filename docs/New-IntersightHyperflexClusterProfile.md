@@ -774,11 +774,11 @@ PS C:\> New-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
+[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
 [Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
 
-[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
+[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
 
 [Initialize-IntersightCommIpV4Interface](./Initialize-IntersightCommIpV4Interface.md)
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareReleaseMeta](./Set-IntersightSoftwareReleaseMeta.md)
+
 [Get-IntersightSoftwareReleaseMeta](./Get-IntersightSoftwareReleaseMeta.md)
 
 [New-IntersightSoftwareReleaseMeta](./New-IntersightSoftwareReleaseMeta.md)
-
-[Set-IntersightSoftwareReleaseMeta](./Set-IntersightSoftwareReleaseMeta.md)
 

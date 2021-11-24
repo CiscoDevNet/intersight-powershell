@@ -17,7 +17,7 @@ Remove-IntersightComputeBiosPostPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ComputeBiosPostPolicy&amp;apos; resource.
+Delete a &apos;ComputeBiosPostPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightComputeBiosPostPolicy](./Get-IntersightComputeBiosPostPolicy.md)
-
 [Set-IntersightComputeBiosPostPolicy](./Set-IntersightComputeBiosPostPolicy.md)
+
+[Get-IntersightComputeBiosPostPolicy](./Get-IntersightComputeBiosPostPolicy.md)
 

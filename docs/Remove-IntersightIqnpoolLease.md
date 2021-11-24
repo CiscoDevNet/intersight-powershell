@@ -17,7 +17,7 @@ Remove-IntersightIqnpoolLease -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IqnpoolLease&apos; resource.
+Delete a &amp;apos;IqnpoolLease&amp;apos; resource.
 
 ## EXAMPLES
 

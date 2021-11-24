@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-FileServer< SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-FileServer< SoftwarerepositoryFileServer>][-IncludeComponentList< FirmwareIncludeComponentListType>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -95,6 +95,23 @@ Note :- Use Initialize-IntersightSoftwarerepositoryFileServer to create the obje
 
 ```yaml
 Type: SoftwarerepositoryFileServer
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IncludeComponentList
+The components which are not to be excluded for server firmware upgrade.
+
+Note :- Use Initialize-IntersightFirmwareIncludeComponentListType to create the object of complex type FirmwareIncludeComponentListType
+
+```yaml
+Type: FirmwareIncludeComponentListType
 Parameter Sets: (All)
 Aliases:
 
@@ -292,13 +309,15 @@ PS C:\> New-IntersightFirmwareUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
-
 [Get-IntersightFirmwareUpgrade](./Get-IntersightFirmwareUpgrade.md)
+
+[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+
+[Initialize-IntersightFirmwareIncludeComponentListType](./Initialize-IntersightFirmwareIncludeComponentListType.md)
 
 [Initialize-IntersightFirmwareNetworkShare](./Initialize-IntersightFirmwareNetworkShare.md)
 

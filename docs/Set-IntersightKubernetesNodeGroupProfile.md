@@ -19,7 +19,7 @@ Set-IntersightKubernetesNodeGroupProfile [-Action< string>][-AdditionalPropertie
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesNodeGroupProfile&amp;apos; resource.
+Update a &apos;KubernetesNodeGroupProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -424,9 +424,9 @@ PS C:\> Set-IntersightKubernetesNodeGroupProfile
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesNodeGroupProfile](./Get-IntersightKubernetesNodeGroupProfile.md)
-
 [New-IntersightKubernetesNodeGroupProfile](./New-IntersightKubernetesNodeGroupProfile.md)
+
+[Get-IntersightKubernetesNodeGroupProfile](./Get-IntersightKubernetesNodeGroupProfile.md)
 
 [Remove-IntersightKubernetesNodeGroupProfile](./Remove-IntersightKubernetesNodeGroupProfile.md)
 

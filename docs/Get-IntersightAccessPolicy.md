@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightAccessPolicy](./New-IntersightAccessPolicy.md)
+
 [Set-IntersightAccessPolicy](./Set-IntersightAccessPolicy.md)
 
 [Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
-
-[New-IntersightAccessPolicy](./New-IntersightAccessPolicy.md)
 

@@ -19,7 +19,7 @@ Set-IntersightWorkflowErrorResponseHandler [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowErrorResponseHandler&amp;apos; resource.
+Update a &apos;WorkflowErrorResponseHandler&apos; resource.
 
 ## PARAMETERS
 
@@ -224,11 +224,11 @@ PS C:\> Set-IntersightWorkflowErrorResponseHandler
 
 ## RELATED LINKS
 
-[New-IntersightWorkflowErrorResponseHandler](./New-IntersightWorkflowErrorResponseHandler.md)
+[Remove-IntersightWorkflowErrorResponseHandler](./Remove-IntersightWorkflowErrorResponseHandler.md)
 
 [Get-IntersightWorkflowErrorResponseHandler](./Get-IntersightWorkflowErrorResponseHandler.md)
 
-[Remove-IntersightWorkflowErrorResponseHandler](./Remove-IntersightWorkflowErrorResponseHandler.md)
+[New-IntersightWorkflowErrorResponseHandler](./New-IntersightWorkflowErrorResponseHandler.md)
 
 [Initialize-IntersightContentParameter](./Initialize-IntersightContentParameter.md)
 

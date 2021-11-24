@@ -19,7 +19,7 @@ Set-IntersightFabricEthNetworkPolicy [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricEthNetworkPolicy&amp;apos; resource.
+Update a &apos;FabricEthNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 

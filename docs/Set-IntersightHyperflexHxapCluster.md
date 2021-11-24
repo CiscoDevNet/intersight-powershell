@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapCluster [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxapCluster&amp;apos; resource.
+Update a &apos;HyperflexHxapCluster&apos; resource.
 
 ## PARAMETERS
 

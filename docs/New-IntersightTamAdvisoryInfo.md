@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryInfo [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TamAdvisoryInfo&amp;apos; resource.
+Create a &apos;TamAdvisoryInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -160,10 +160,10 @@ PS C:\> New-IntersightTamAdvisoryInfo
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)
+
 [Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)
 
 [Set-IntersightTamAdvisoryInfo](./Set-IntersightTamAdvisoryInfo.md)
-
-[Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

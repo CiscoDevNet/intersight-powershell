@@ -337,11 +337,11 @@ PS C:\> New-IntersightHyperflexHealthCheckDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
+
 [Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
 
 [Remove-IntersightHyperflexHealthCheckDefinition](./Remove-IntersightHyperflexHealthCheckDefinition.md)
-
-[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
 
 [Initialize-IntersightHyperflexHealthCheckScriptInfo](./Initialize-IntersightHyperflexHealthCheckScriptInfo.md)
 

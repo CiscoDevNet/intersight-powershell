@@ -17,7 +17,7 @@ Remove-IntersightIamQualifier -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamQualifier&amp;apos; resource.
+Delete a &apos;IamQualifier&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamQualifier](./Set-IntersightIamQualifier.md)
-
 [Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
 
 [New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
+
+[Set-IntersightIamQualifier](./Set-IntersightIamQualifier.md)
 

@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: VnicPlacementSettings.ObjectTypeEnum
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SwitchId
-The fabric port to which the vNICs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value &amp;apos;None&amp;apos; should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster.
+The fabric port to which the vNICs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value &apos;None&apos; should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster.
 
 ```yaml
 Type: VnicPlacementSettings.SwitchIdEnum

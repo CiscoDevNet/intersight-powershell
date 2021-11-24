@@ -17,7 +17,7 @@ Remove-IntersightCapabilityPortGroupAggregationDef -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityPortGroupAggregationDef&apos; resource.
+Delete a &amp;apos;CapabilityPortGroupAggregationDef&amp;apos; resource.
 
 ## EXAMPLES
 

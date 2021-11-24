@@ -17,7 +17,7 @@ Remove-IntersightIamLdapPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamLdapPolicy&apos; resource.
+Delete a &amp;apos;IamLdapPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

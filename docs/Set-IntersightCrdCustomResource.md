@@ -19,7 +19,7 @@ Set-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalP
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CrdCustomResource&amp;apos; resource.
+Update a &apos;CrdCustomResource&apos; resource.
 
 ## PARAMETERS
 
