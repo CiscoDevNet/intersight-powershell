@@ -160,8 +160,8 @@ PS C:\> Set-IntersightVmrcConsole
 
 ## RELATED LINKS
 
-[Get-IntersightVmrcConsole](./Get-IntersightVmrcConsole.md)
-
 [New-IntersightVmrcConsole](./New-IntersightVmrcConsole.md)
+
+[Get-IntersightVmrcConsole](./Get-IntersightVmrcConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

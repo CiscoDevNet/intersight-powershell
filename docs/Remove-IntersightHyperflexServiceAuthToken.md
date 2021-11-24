@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexServiceAuthToken](./Set-IntersightHyperflexServiceAuthToken.md)
+
 [Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
 
 [New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
-
-[Set-IntersightHyperflexServiceAuthToken](./Set-IntersightHyperflexServiceAuthToken.md)
 

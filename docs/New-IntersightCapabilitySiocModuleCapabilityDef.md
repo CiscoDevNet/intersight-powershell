@@ -19,7 +19,7 @@ New-IntersightCapabilitySiocModuleCapabilityDef [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilitySiocModuleCapabilityDef&amp;apos; resource.
+Create a &apos;CapabilitySiocModuleCapabilityDef&apos; resource.
 
 ## PARAMETERS
 

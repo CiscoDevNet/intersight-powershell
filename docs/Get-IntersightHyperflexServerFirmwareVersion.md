@@ -25,7 +25,7 @@ Get-IntersightHyperflexServerFirmwareVersion [-Count <Boolean>] [-InlineCount <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;HyperflexServerFirmwareVersion&amp;apos; resource.,
+Read a &apos;HyperflexServerFirmwareVersion&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexServerFirmwareVersion](./New-IntersightHyperflexServerFirmwareVersion.md)
-
 [Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
 
 [Remove-IntersightHyperflexServerFirmwareVersion](./Remove-IntersightHyperflexServerFirmwareVersion.md)
+
+[New-IntersightHyperflexServerFirmwareVersion](./New-IntersightHyperflexServerFirmwareVersion.md)
 

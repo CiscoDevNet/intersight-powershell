@@ -19,7 +19,7 @@ Set-IntersightCapabilityIoCardManufacturingDef [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityIoCardManufacturingDef&apos; resource.
+Update a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -232,10 +232,10 @@ PS C:\> Set-IntersightCapabilityIoCardManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityIoCardManufacturingDef](./Remove-IntersightCapabilityIoCardManufacturingDef.md)
-
 [Get-IntersightCapabilityIoCardManufacturingDef](./Get-IntersightCapabilityIoCardManufacturingDef.md)
 
 [New-IntersightCapabilityIoCardManufacturingDef](./New-IntersightCapabilityIoCardManufacturingDef.md)
+
+[Remove-IntersightCapabilityIoCardManufacturingDef](./Remove-IntersightCapabilityIoCardManufacturingDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

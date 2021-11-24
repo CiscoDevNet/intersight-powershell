@@ -369,11 +369,11 @@ PS C:\> New-IntersightVnicFcAdapterPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightVnicFcAdapterPolicy](./Get-IntersightVnicFcAdapterPolicy.md)
+
 [Set-IntersightVnicFcAdapterPolicy](./Set-IntersightVnicFcAdapterPolicy.md)
 
 [Remove-IntersightVnicFcAdapterPolicy](./Remove-IntersightVnicFcAdapterPolicy.md)
-
-[Get-IntersightVnicFcAdapterPolicy](./Get-IntersightVnicFcAdapterPolicy.md)
 
 [Initialize-IntersightVnicFcErrorRecoverySettings](./Initialize-IntersightVnicFcErrorRecoverySettings.md)
 

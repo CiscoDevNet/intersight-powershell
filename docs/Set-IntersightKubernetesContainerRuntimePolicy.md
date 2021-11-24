@@ -19,7 +19,7 @@ Set-IntersightKubernetesContainerRuntimePolicy [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesContainerRuntimePolicy&apos; resource.
+Update a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -257,11 +257,11 @@ PS C:\> Set-IntersightKubernetesContainerRuntimePolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
-
 [Get-IntersightKubernetesContainerRuntimePolicy](./Get-IntersightKubernetesContainerRuntimePolicy.md)
 
 [New-IntersightKubernetesContainerRuntimePolicy](./New-IntersightKubernetesContainerRuntimePolicy.md)
+
+[Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
 
 [Initialize-IntersightKubernetesProxyConfig](./Initialize-IntersightKubernetesProxyConfig.md)
 

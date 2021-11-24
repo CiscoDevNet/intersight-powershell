@@ -19,7 +19,7 @@ New-IntersightFirmwareServerConfigurationUtilityDistributable [-AdditionalProper
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareServerConfigurationUtilityDistributable&amp;apos; resource.
+Create a &apos;FirmwareServerConfigurationUtilityDistributable&apos; resource.
 
 ## PARAMETERS
 

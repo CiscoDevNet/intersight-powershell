@@ -19,7 +19,7 @@ Set-IntersightIamApiKey [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamApiKey&amp;apos; resource.
+Update a &apos;IamApiKey&apos; resource.
 
 ## PARAMETERS
 

@@ -470,9 +470,9 @@ PS C:\> New-IntersightSoftwareUcsdDistributable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
-
 [Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
+
+[Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
 
 [Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
 

@@ -19,7 +19,7 @@ Set-IntersightStorageDriveGroup [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageDriveGroup&amp;apos; resource.
+Update a &apos;StorageDriveGroup&apos; resource.
 
 ## PARAMETERS
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the drive group. The name can be between 1 and 15 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed.
+The name of the drive group. The name can be between 1 and 64 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed.
 
 ```yaml
 Type: string

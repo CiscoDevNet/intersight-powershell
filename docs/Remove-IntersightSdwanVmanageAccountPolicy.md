@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightSdwanVmanageAccountPolicy](./Set-IntersightSdwanVmanageAccountPolicy.md)
 
-[New-IntersightSdwanVmanageAccountPolicy](./New-IntersightSdwanVmanageAccountPolicy.md)
-
 [Get-IntersightSdwanVmanageAccountPolicy](./Get-IntersightSdwanVmanageAccountPolicy.md)
+
+[New-IntersightSdwanVmanageAccountPolicy](./New-IntersightSdwanVmanageAccountPolicy.md)
 

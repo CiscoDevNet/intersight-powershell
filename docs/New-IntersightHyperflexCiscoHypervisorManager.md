@@ -19,7 +19,7 @@ New-IntersightHyperflexCiscoHypervisorManager [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexCiscoHypervisorManager&amp;apos; resource.
+Create a &apos;HyperflexCiscoHypervisorManager&apos; resource.
 
 ## PARAMETERS
 

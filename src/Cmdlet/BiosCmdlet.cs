@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosSystemBootOrder.</para>
+    /// <para type="synopsis">This is the cmdlet to Get BiosBootMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosSystemBootOrder", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosSystemBootOrder:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootMode", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosBootMode:GetCmdletBase
 	{
-		public GetIntersightBiosSystemBootOrder()
+		public GetIntersightBiosBootMode()
 		{
 			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosSystemBootOrderListWithHttpInfo";
+            MethodName = "GetBiosBootModeListWithHttpInfo";
 		}
         
         // <summary>
@@ -28,504 +28,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a biosUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public BiosUnitRelationship BiosUnit {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The BIOS boot mode. UEFI uses the GUID Partition Table (GPT) whereas Legacy mode uses the Master Boot Record (MBR) partitioning scheme.\n* `Legacy` - Legacy mode refers to the traditional process of booting from BIOS. Legacy mode uses the Master Boot Record (MBR) to locate the bootloader.\n* `Uefi` - UEFI mode uses the GUID Partition Table (GPT) to locate EFI Service Partitions to boot from."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public BiosSystemBootOrder.BootModeEnum BootMode {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Distinguished Name for this object, used to uniquely identify this object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Dn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Secure boot if set to enabled, enforces that device boots using only software that is trusted by the Original Equipment Manufacturer (OEM).\n* `NotAvailable` - Set the state of Secure Boot to Not Available.\n* `Disabled` - Set the state of Secure Boot to Disabled.\n* `Enabled` - Set the state of Secure Boot to Enabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public BiosSystemBootOrder.SecureBootEnum SecureBoot {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosVfSelectMemoryRasConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosVfSelectMemoryRasConfiguration", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosVfSelectMemoryRasConfiguration:GetCmdletBase
-	{
-		public GetIntersightBiosVfSelectMemoryRasConfiguration()
-		{
-			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosVfSelectMemoryRasConfigurationListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public ComputeBladeRelationship ComputeBlade {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public ComputeRackUnitRelationship ComputeRackUnit {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The database identifier of the registered device of an object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DeviceMoId {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Dn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public InventoryDeviceInfoRelationship InventoryDeviceInfo {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Rn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Parent server serial number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Serial {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The actual BIOS memory RAS configuration as reported by the platform BIOS. Possible values are \"maximum-performance\", \"mirror-mode-1lm\", \"adddc-sparing\", \"platform-default\", \"lockstep\", \"sparing\", \"mirroring\"."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string VpSelectMemoryRasConfiguration {
-            get;
-            set;
-        }
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BiosBootMode.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosBootMode")]
-    public class SetIntersightBiosBootMode:SetCmdletBase
-	{
-		public SetIntersightBiosBootMode()
-		{
-			ApiInstance = new BiosApi(Config);
-            ModelObject = new BiosBootMode();
-            MethodName = "UpdateBiosBootModeWithHttpInfo";
-		}
-        
         
         // <summary>
         /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string ActualBootMode {
             get;
             set;
         }
         
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeBladeRelationship ComputeBlade {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeRackUnitRelationship ComputeRackUnit {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set BiosUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosUnit")]
-    public class SetIntersightBiosUnit:SetCmdletBase
-	{
-		public SetIntersightBiosUnit()
-		{
-			ApiInstance = new BiosApi(Config);
-            ModelObject = new BiosUnit();
-            MethodName = "UpdateBiosUnitWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BiosSystemBootOrderRelationship SystemBootOrder {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosTokenSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosTokenSettings", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosTokenSettings:GetCmdletBase
-	{
-		public GetIntersightBiosTokenSettings()
-		{
-			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosTokenSettingsListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
         
         
         // <summary>
@@ -599,16 +112,6 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Value that represents if the BIOS configuration is active. Possible values are \"yes\" and \"no\"."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string IsAssigned {
-            get;
-            set;
-        }
-        
-        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -656,26 +159,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string Rn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Parent server serial number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Serial {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"BIOS configuration name as found in dn. Possible values are \"ADDDC-Sparing\", \"Maximum-Performance\", \"Partial-Mirror-mode-1LM\", \"Mirror-Mode-1LM\", \"Mirroring\", \"Lockstep\", \"Sparing\", \"Platform-Default\"."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SettingsMoRn {
             get;
             set;
         }
@@ -12714,15 +12197,15 @@ namespace Intersight.PowerShell
 		}
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosBootMode.</para>
+    /// <para type="synopsis">This is the cmdlet to Get BiosBootDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootMode", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosBootMode:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootDevice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosBootDevice:GetCmdletBase
 	{
-		public GetIntersightBiosBootMode()
+		public GetIntersightBiosBootDevice()
 		{
 			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosBootModeListWithHttpInfo";
+            MethodName = "GetBiosBootDeviceListWithHttpInfo";
 		}
         
         // <summary>
@@ -12735,12 +12218,132 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        
         // <summary>
-        /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
+        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public BiosSystemBootOrderRelationship BiosSystemBootOrder {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Name of the Configured Boot Device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string ActualBootMode {
+        public string DeviceName {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Type of the Configured Boot Device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DeviceType {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BiosVfSelectMemoryRasConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosVfSelectMemoryRasConfiguration", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosVfSelectMemoryRasConfiguration:GetCmdletBase
+	{
+		public GetIntersightBiosVfSelectMemoryRasConfiguration()
+		{
+			ApiInstance = new BiosApi(Config);
+            MethodName = "GetBiosVfSelectMemoryRasConfigurationListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
             get;
             set;
         }
@@ -12870,6 +12473,216 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
+        /// <para type="description">"Parent server serial number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Serial {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The actual BIOS memory RAS configuration as reported by the platform BIOS. Possible values are \"maximum-performance\", \"mirror-mode-1lm\", \"adddc-sparing\", \"platform-default\", \"lockstep\", \"sparing\", \"mirroring\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string VpSelectMemoryRasConfiguration {
+            get;
+            set;
+        }
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BiosTokenSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosTokenSettings", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosTokenSettings:GetCmdletBase
+	{
+		public GetIntersightBiosTokenSettings()
+		{
+			ApiInstance = new BiosApi(Config);
+            MethodName = "GetBiosTokenSettingsListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public ComputeBladeRelationship ComputeBlade {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public ComputeRackUnitRelationship ComputeRackUnit {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DeviceMoId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Dn {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public InventoryDeviceInfoRelationship InventoryDeviceInfo {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Value that represents if the BIOS configuration is active. Possible values are \"yes\" and \"no\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string IsAssigned {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Rn {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Parent server serial number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Serial {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"BIOS configuration name as found in dn. Possible values are \"ADDDC-Sparing\", \"Maximum-Performance\", \"Partial-Mirror-mode-1LM\", \"Mirror-Mode-1LM\", \"Mirroring\", \"Lockstep\", \"Sparing\", \"Platform-Default\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SettingsMoRn {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12881,6 +12694,182 @@ namespace Intersight.PowerShell
         
         
 
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BiosBootMode.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosBootMode")]
+    public class SetIntersightBiosBootMode:SetCmdletBase
+	{
+		public SetIntersightBiosBootMode()
+		{
+			ApiInstance = new BiosApi(Config);
+            ModelObject = new BiosBootMode();
+            MethodName = "UpdateBiosBootModeWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ActualBootMode {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeBladeRelationship ComputeBlade {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeRackUnitRelationship ComputeRackUnit {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set BiosUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosUnit")]
+    public class SetIntersightBiosUnit:SetCmdletBase
+	{
+		public SetIntersightBiosUnit()
+		{
+			ApiInstance = new BiosApi(Config);
+            ModelObject = new BiosUnit();
+            MethodName = "UpdateBiosUnitWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BiosSystemBootOrderRelationship SystemBootOrder {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
         
     }
     /// <summary>
@@ -13135,15 +13124,15 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BiosBootDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Get BiosSystemBootOrder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootDevice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBiosBootDevice:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosSystemBootOrder", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBiosSystemBootOrder:GetCmdletBase
 	{
-		public GetIntersightBiosBootDevice()
+		public GetIntersightBiosSystemBootOrder()
 		{
 			ApiInstance = new BiosApi(Config);
-            MethodName = "GetBiosBootDeviceListWithHttpInfo";
+            MethodName = "GetBiosSystemBootOrderListWithHttpInfo";
 		}
         
         // <summary>
@@ -13159,11 +13148,22 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a biosUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
         
-        public BiosSystemBootOrderRelationship BiosSystemBootOrder {
+        public BiosUnitRelationship BiosUnit {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The BIOS boot mode. UEFI uses the GUID Partition Table (GPT) whereas Legacy mode uses the Master Boot Record (MBR) partitioning scheme.\n* `Legacy` - Legacy mode refers to the traditional process of booting from BIOS. Legacy mode uses the Master Boot Record (MBR) to locate the bootloader.\n* `Uefi` - UEFI mode uses the GUID Partition Table (GPT) to locate EFI Service Partitions to boot from."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public BiosSystemBootOrder.BootModeEnum BootMode {
             get;
             set;
         }
@@ -13179,21 +13179,11 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Name of the Configured Boot Device."</para>
+        /// <para type="description">"The Distinguished Name for this object, used to uniquely identify this object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string DeviceName {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Type of the Configured Boot Device."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DeviceType {
+        public string Dn {
             get;
             set;
         }
@@ -13246,6 +13236,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
         
         public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Secure boot if set to enabled, enforces that device boots using only software that is trusted by the Original Equipment Manufacturer (OEM).\n* `NotAvailable` - Set the state of Secure Boot to Not Available.\n* `Disabled` - Set the state of Secure Boot to Disabled.\n* `Enabled` - Set the state of Secure Boot to Enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public BiosSystemBootOrder.SecureBootEnum SecureBoot {
             get;
             set;
         }

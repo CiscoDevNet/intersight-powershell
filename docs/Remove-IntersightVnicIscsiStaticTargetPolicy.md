@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicIscsiStaticTargetPolicy](./Set-IntersightVnicIscsiStaticTargetPolicy.md)
+[New-IntersightVnicIscsiStaticTargetPolicy](./New-IntersightVnicIscsiStaticTargetPolicy.md)
 
 [Get-IntersightVnicIscsiStaticTargetPolicy](./Get-IntersightVnicIscsiStaticTargetPolicy.md)
 
-[New-IntersightVnicIscsiStaticTargetPolicy](./New-IntersightVnicIscsiStaticTargetPolicy.md)
+[Set-IntersightVnicIscsiStaticTargetPolicy](./Set-IntersightVnicIscsiStaticTargetPolicy.md)
 

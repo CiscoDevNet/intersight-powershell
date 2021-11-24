@@ -19,7 +19,7 @@ New-IntersightOsValidInstallTarget [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &apos;OsValidInstallTarget&apos; resource.
+Create a &amp;apos;OsValidInstallTarget&amp;apos; resource.
 
 ## PARAMETERS
 

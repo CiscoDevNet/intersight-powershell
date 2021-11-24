@@ -17,7 +17,7 @@ Remove-IntersightKubernetesAddonDefinition -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesAddonDefinition&amp;apos; resource.
+Delete a &apos;KubernetesAddonDefinition&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)
-
 [Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
 
 [New-IntersightKubernetesAddonDefinition](./New-IntersightKubernetesAddonDefinition.md)
+
+[Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)
 

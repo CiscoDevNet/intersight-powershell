@@ -19,7 +19,7 @@ Set-IntersightBootDeviceBootSecurity [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BootDeviceBootSecurity&amp;apos; resource.
+Update a &apos;BootDeviceBootSecurity&apos; resource.
 
 ## PARAMETERS
 

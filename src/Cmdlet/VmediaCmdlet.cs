@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new VmediaApi(Config);
             ModelObject = new VmediaPolicy();
-            MethodName = "UpdateVmediaPolicyWithHttpInfo";
+            MethodName = "PatchVmediaPolicyWithHttpInfo";
 		}
         
         

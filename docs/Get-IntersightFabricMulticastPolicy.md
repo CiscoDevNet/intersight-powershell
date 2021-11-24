@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
-
 [Set-IntersightFabricMulticastPolicy](./Set-IntersightFabricMulticastPolicy.md)
+
+[Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
 
 [New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
 

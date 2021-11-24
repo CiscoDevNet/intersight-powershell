@@ -19,7 +19,7 @@ Set-IntersightWorkflowSolutionOutput [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowSolutionOutput&apos; resource.
+Update a &amp;apos;WorkflowSolutionOutput&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -177,11 +177,11 @@ PS C:\> Set-IntersightWorkflowSolutionOutput
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowSolutionOutput](./Remove-IntersightWorkflowSolutionOutput.md)
+
 [Get-IntersightWorkflowSolutionOutput](./Get-IntersightWorkflowSolutionOutput.md)
 
 [New-IntersightWorkflowSolutionOutput](./New-IntersightWorkflowSolutionOutput.md)
-
-[Remove-IntersightWorkflowSolutionOutput](./Remove-IntersightWorkflowSolutionOutput.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 

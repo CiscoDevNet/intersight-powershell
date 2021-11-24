@@ -19,7 +19,7 @@ New-IntersightAssetTarget [-Account< IamAccountRelationship>][-AdditionalPropert
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AssetTarget&amp;apos; resource.
+Create a &apos;AssetTarget&apos; resource.
 
 ## PARAMETERS
 

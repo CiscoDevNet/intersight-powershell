@@ -256,10 +256,10 @@ PS C:\> New-IntersightSdwanRouterPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSdwanRouterPolicy](./Get-IntersightSdwanRouterPolicy.md)
-
 [Set-IntersightSdwanRouterPolicy](./Set-IntersightSdwanRouterPolicy.md)
 
 [Remove-IntersightSdwanRouterPolicy](./Remove-IntersightSdwanRouterPolicy.md)
+
+[Get-IntersightSdwanRouterPolicy](./Get-IntersightSdwanRouterPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

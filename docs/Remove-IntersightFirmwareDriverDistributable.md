@@ -17,7 +17,7 @@ Remove-IntersightFirmwareDriverDistributable -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareDriverDistributable&apos; resource.
+Delete a &amp;apos;FirmwareDriverDistributable&amp;apos; resource.
 
 ## EXAMPLES
 

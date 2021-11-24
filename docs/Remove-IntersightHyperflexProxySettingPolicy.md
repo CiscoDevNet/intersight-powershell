@@ -17,7 +17,7 @@ Remove-IntersightHyperflexProxySettingPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexProxySettingPolicy&apos; resource.
+Delete a &amp;apos;HyperflexProxySettingPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexProxySettingPolicy](./Set-IntersightHyperflexProxySettingPolicy.md)
+
 [Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
 
 [New-IntersightHyperflexProxySettingPolicy](./New-IntersightHyperflexProxySettingPolicy.md)
-
-[Set-IntersightHyperflexProxySettingPolicy](./Set-IntersightHyperflexProxySettingPolicy.md)
 

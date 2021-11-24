@@ -17,7 +17,7 @@ Remove-IntersightWorkflowBatchApiExecutor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowBatchApiExecutor&amp;apos; resource.
+Delete a &apos;WorkflowBatchApiExecutor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
-
 [Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
 
 [New-IntersightWorkflowBatchApiExecutor](./New-IntersightWorkflowBatchApiExecutor.md)
+
+[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
 

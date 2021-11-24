@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryCategorySupportConstraint -Moid <String> [<Co
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwarerepositoryCategorySupportConstraint&amp;apos; resource.
+Delete a &apos;SoftwarerepositoryCategorySupportConstraint&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)
-
 [Get-IntersightSoftwarerepositoryCategorySupportConstraint](./Get-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
 [New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+
+[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 

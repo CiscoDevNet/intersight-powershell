@@ -160,10 +160,10 @@ PS C:\> Set-IntersightIamQualifier
 
 ## RELATED LINKS
 
-[Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
-
 [Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
 
 [New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
+
+[Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

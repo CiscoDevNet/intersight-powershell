@@ -17,7 +17,7 @@ Remove-IntersightKubernetesSysConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesSysConfigPolicy&apos; resource.
+Delete a &amp;apos;KubernetesSysConfigPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

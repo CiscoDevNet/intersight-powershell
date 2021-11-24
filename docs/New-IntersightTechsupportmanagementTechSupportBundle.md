@@ -207,9 +207,9 @@ PS C:\> New-IntersightTechsupportmanagementTechSupportBundle
 
 ## RELATED LINKS
 
-[Remove-IntersightTechsupportmanagementTechSupportBundle](./Remove-IntersightTechsupportmanagementTechSupportBundle.md)
-
 [Get-IntersightTechsupportmanagementTechSupportBundle](./Get-IntersightTechsupportmanagementTechSupportBundle.md)
+
+[Remove-IntersightTechsupportmanagementTechSupportBundle](./Remove-IntersightTechsupportmanagementTechSupportBundle.md)
 
 [Initialize-IntersightConnectorPlatformParamBase](./Initialize-IntersightConnectorPlatformParamBase.md)
 

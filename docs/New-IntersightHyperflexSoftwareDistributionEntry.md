@@ -19,7 +19,7 @@ New-IntersightHyperflexSoftwareDistributionEntry [-AdditionalProperties< System.
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexSoftwareDistributionEntry&apos; resource.
+Create a &amp;apos;HyperflexSoftwareDistributionEntry&amp;apos; resource.
 
 ## PARAMETERS
 

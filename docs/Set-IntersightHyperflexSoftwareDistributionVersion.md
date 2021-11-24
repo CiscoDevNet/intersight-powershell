@@ -19,7 +19,7 @@ Set-IntersightHyperflexSoftwareDistributionVersion [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexSoftwareDistributionVersion&apos; resource.
+Update a &amp;apos;HyperflexSoftwareDistributionVersion&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -178,10 +178,10 @@ PS C:\> Set-IntersightHyperflexSoftwareDistributionVersion
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexSoftwareDistributionVersion](./Remove-IntersightHyperflexSoftwareDistributionVersion.md)
-
 [Get-IntersightHyperflexSoftwareDistributionVersion](./Get-IntersightHyperflexSoftwareDistributionVersion.md)
 
 [New-IntersightHyperflexSoftwareDistributionVersion](./New-IntersightHyperflexSoftwareDistributionVersion.md)
+
+[Remove-IntersightHyperflexSoftwareDistributionVersion](./Remove-IntersightHyperflexSoftwareDistributionVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

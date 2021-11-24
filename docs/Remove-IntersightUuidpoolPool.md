@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
+
 [Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
-
-[Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
 

@@ -19,7 +19,7 @@ Set-IntersightSdwanProfile [-Action< string>][-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;SdwanProfile&apos; resource.
+Update a &amp;apos;SdwanProfile&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightWorkflowSolutionInstance -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowSolutionInstance&amp;apos; resource.
+Delete a &apos;WorkflowSolutionInstance&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowSolutionInstance](./Set-IntersightWorkflowSolutionInstance.md)
-
 [Get-IntersightWorkflowSolutionInstance](./Get-IntersightWorkflowSolutionInstance.md)
 
 [New-IntersightWorkflowSolutionInstance](./New-IntersightWorkflowSolutionInstance.md)
+
+[Set-IntersightWorkflowSolutionInstance](./Set-IntersightWorkflowSolutionInstance.md)
 

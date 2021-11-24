@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHealthCheckPackageChecksum -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexHealthCheckPackageChecksum&apos; resource.
+Delete a &amp;apos;HyperflexHealthCheckPackageChecksum&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexHealthCheckPackageChecksum](./Get-IntersightHyperflexHealthCheckPackageChecksum.md)
+[Set-IntersightHyperflexHealthCheckPackageChecksum](./Set-IntersightHyperflexHealthCheckPackageChecksum.md)
 
 [New-IntersightHyperflexHealthCheckPackageChecksum](./New-IntersightHyperflexHealthCheckPackageChecksum.md)
 
-[Set-IntersightHyperflexHealthCheckPackageChecksum](./Set-IntersightHyperflexHealthCheckPackageChecksum.md)
+[Get-IntersightHyperflexHealthCheckPackageChecksum](./Get-IntersightHyperflexHealthCheckPackageChecksum.md)
 

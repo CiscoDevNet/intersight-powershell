@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
+
 [Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
 
 [New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
-
-[Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
 

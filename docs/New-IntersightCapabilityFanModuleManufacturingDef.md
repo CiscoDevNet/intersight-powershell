@@ -19,7 +19,7 @@ New-IntersightCapabilityFanModuleManufacturingDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityFanModuleManufacturingDef&apos; resource.
+Create a &amp;apos;CapabilityFanModuleManufacturingDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -232,9 +232,9 @@ PS C:\> New-IntersightCapabilityFanModuleManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityFanModuleManufacturingDef](./Remove-IntersightCapabilityFanModuleManufacturingDef.md)
-
 [Set-IntersightCapabilityFanModuleManufacturingDef](./Set-IntersightCapabilityFanModuleManufacturingDef.md)
+
+[Remove-IntersightCapabilityFanModuleManufacturingDef](./Remove-IntersightCapabilityFanModuleManufacturingDef.md)
 
 [Get-IntersightCapabilityFanModuleManufacturingDef](./Get-IntersightCapabilityFanModuleManufacturingDef.md)
 

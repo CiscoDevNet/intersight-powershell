@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareHbaDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareHbaDescriptor](./Get-IntersightFirmwareHbaDescriptor.md)
+[Remove-IntersightFirmwareHbaDescriptor](./Remove-IntersightFirmwareHbaDescriptor.md)
 
 [New-IntersightFirmwareHbaDescriptor](./New-IntersightFirmwareHbaDescriptor.md)
 
-[Remove-IntersightFirmwareHbaDescriptor](./Remove-IntersightFirmwareHbaDescriptor.md)
+[Get-IntersightFirmwareHbaDescriptor](./Get-IntersightFirmwareHbaDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

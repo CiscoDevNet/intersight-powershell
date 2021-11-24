@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set NotificationAccountSubscription.</para>
+    /// <para type="synopsis">This is the cmdlet to New NotificationAccountSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNotificationAccountSubscription")]
-    public class SetIntersightNotificationAccountSubscription:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightNotificationAccountSubscription")]
+    public class NewIntersightNotificationAccountSubscription:NewCmdletBase
 	{
-		public SetIntersightNotificationAccountSubscription()
+		public NewIntersightNotificationAccountSubscription()
 		{
 			ApiInstance = new NotificationApi(Config);
             ModelObject = new NotificationAccountSubscription();
-            MethodName = "UpdateNotificationAccountSubscriptionWithHttpInfo";
+            MethodName = "CreateNotificationAccountSubscriptionWithHttpInfo";
 		}
         
         
@@ -69,7 +69,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -79,7 +79,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The subscription name."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         
         public string Name {
             get;
@@ -100,18 +100,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove NotificationAccountSubscription.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightNotificationAccountSubscription")]
-    public class RemoveIntersightNotificationAccountSubscription:RemoveCmdletBase
-	{
-		public RemoveIntersightNotificationAccountSubscription()
-		{
-			ApiInstance = new NotificationApi(Config);
-            MethodName = "DeleteNotificationAccountSubscriptionWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NotificationAccountSubscription.</para>
@@ -236,16 +224,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New NotificationAccountSubscription.</para>
+    /// <para type="synopsis">This is the cmdlet to Set NotificationAccountSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightNotificationAccountSubscription")]
-    public class NewIntersightNotificationAccountSubscription:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightNotificationAccountSubscription")]
+    public class SetIntersightNotificationAccountSubscription:SetCmdletBase
 	{
-		public NewIntersightNotificationAccountSubscription()
+		public SetIntersightNotificationAccountSubscription()
 		{
 			ApiInstance = new NotificationApi(Config);
             ModelObject = new NotificationAccountSubscription();
-            MethodName = "CreateNotificationAccountSubscriptionWithHttpInfo";
+            MethodName = "UpdateNotificationAccountSubscriptionWithHttpInfo";
 		}
         
         
@@ -297,7 +285,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -307,7 +295,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The subscription name."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Name {
             get;
@@ -328,5 +316,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove NotificationAccountSubscription.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightNotificationAccountSubscription")]
+    public class RemoveIntersightNotificationAccountSubscription:RemoveCmdletBase
+	{
+		public RemoveIntersightNotificationAccountSubscription()
+		{
+			ApiInstance = new NotificationApi(Config);
+            MethodName = "DeleteNotificationAccountSubscriptionWithHttpInfo";
+		}
     }
 }

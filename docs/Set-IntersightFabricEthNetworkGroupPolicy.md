@@ -192,11 +192,11 @@ PS C:\> Set-IntersightFabricEthNetworkGroupPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricEthNetworkGroupPolicy](./Remove-IntersightFabricEthNetworkGroupPolicy.md)
+[Get-IntersightFabricEthNetworkGroupPolicy](./Get-IntersightFabricEthNetworkGroupPolicy.md)
 
 [New-IntersightFabricEthNetworkGroupPolicy](./New-IntersightFabricEthNetworkGroupPolicy.md)
 
-[Get-IntersightFabricEthNetworkGroupPolicy](./Get-IntersightFabricEthNetworkGroupPolicy.md)
+[Remove-IntersightFabricEthNetworkGroupPolicy](./Remove-IntersightFabricEthNetworkGroupPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

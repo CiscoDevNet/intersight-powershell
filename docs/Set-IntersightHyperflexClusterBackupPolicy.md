@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterBackupPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterBackupPolicy&amp;apos; resource.
+Update a &apos;HyperflexClusterBackupPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -335,9 +335,9 @@ PS C:\> Set-IntersightHyperflexClusterBackupPolicy
 
 [Remove-IntersightHyperflexClusterBackupPolicy](./Remove-IntersightHyperflexClusterBackupPolicy.md)
 
-[New-IntersightHyperflexClusterBackupPolicy](./New-IntersightHyperflexClusterBackupPolicy.md)
-
 [Get-IntersightHyperflexClusterBackupPolicy](./Get-IntersightHyperflexClusterBackupPolicy.md)
+
+[New-IntersightHyperflexClusterBackupPolicy](./New-IntersightHyperflexClusterBackupPolicy.md)
 
 [Initialize-IntersightHyperflexReplicationSchedule](./Initialize-IntersightHyperflexReplicationSchedule.md)
 

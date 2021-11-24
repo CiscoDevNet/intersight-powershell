@@ -440,11 +440,11 @@ PS C:\> New-IntersightServerProfile
 
 ## RELATED LINKS
 
-[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
+[Set-IntersightServerProfile](./Set-IntersightServerProfile.md)
 
 [Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
 
-[Set-IntersightServerProfile](./Set-IntersightServerProfile.md)
+[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
 
 [Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
 

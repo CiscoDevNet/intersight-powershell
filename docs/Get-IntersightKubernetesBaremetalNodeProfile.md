@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
-
 [Set-IntersightKubernetesBaremetalNodeProfile](./Set-IntersightKubernetesBaremetalNodeProfile.md)
 
 [Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
+
+[New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
 

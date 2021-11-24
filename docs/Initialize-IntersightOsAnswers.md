@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsAnswers [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnswerFile< string>][-ClassId< OsAnswers.ClassIdEnum>][-Hostname< string>][-IpConfigType< OsAnswers.IpConfigTypeEnum>][-IpConfiguration< Model.OsIpConfiguration>][-IsRootPasswordCrypted< bool>][-Nameserver< string>][-ObjectType< OsAnswers.ObjectTypeEnum>][-ProductKey< string>][-RootPassword< string>][-Source< OsAnswers.SourceEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOsAnswers [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnswerFile< string>][-ClassId< OsAnswers.ClassIdEnum>][-Hostname< string>][-IpConfigType< OsAnswers.IpConfigTypeEnum>][-IpConfiguration< Model.OsIpConfiguration>][-IsRootPasswordCrypted< bool>][-Nameserver< string>][-NetworkDevice< string>][-ObjectType< OsAnswers.ObjectTypeEnum>][-ProductKey< string>][-RootPassword< string>][-Source< OsAnswers.SourceEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -133,6 +133,21 @@ Accept wildcard characters: False
 
 ### -Nameserver
 IP address of the name server to be configured in the OS.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkDevice
+Network Device where the IP address must be configured. Network Interface names and MAC address are supported.
 
 ```yaml
 Type: string

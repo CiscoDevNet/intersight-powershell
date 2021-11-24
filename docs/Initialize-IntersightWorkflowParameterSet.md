@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name for the parameter set.  Limited to 64 alphanumeric characters (upper and lower case), and special characters &amp;apos;-&amp;apos; and &amp;apos;_&amp;apos;.
+Name for the parameter set.  Limited to 64 alphanumeric characters (upper and lower case), and special characters &apos;-&apos; and &apos;_&apos;.
 
 ```yaml
 Type: string
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The controlling parameter will be evaluated against this &apos;value&apos;.
+The controlling parameter will be evaluated against this &amp;apos;value&amp;apos;.
 
 ```yaml
 Type: string

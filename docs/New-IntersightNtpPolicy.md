@@ -19,7 +19,7 @@ New-IntersightNtpPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &apos;NtpPolicy&apos; resource.
+Create a &amp;apos;NtpPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

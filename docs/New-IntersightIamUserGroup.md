@@ -19,7 +19,7 @@ New-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamUserGroup&amp;apos; resource.
+Create a &apos;IamUserGroup&apos; resource.
 
 ## PARAMETERS
 

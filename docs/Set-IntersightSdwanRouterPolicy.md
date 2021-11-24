@@ -19,7 +19,7 @@ Set-IntersightSdwanRouterPolicy [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;SdwanRouterPolicy&apos; resource.
+Update a &amp;apos;SdwanRouterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -256,10 +256,10 @@ PS C:\> Set-IntersightSdwanRouterPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightSdwanRouterPolicy](./Remove-IntersightSdwanRouterPolicy.md)
+
 [Get-IntersightSdwanRouterPolicy](./Get-IntersightSdwanRouterPolicy.md)
 
 [New-IntersightSdwanRouterPolicy](./New-IntersightSdwanRouterPolicy.md)
-
-[Remove-IntersightSdwanRouterPolicy](./Remove-IntersightSdwanRouterPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

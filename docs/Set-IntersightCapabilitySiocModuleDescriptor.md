@@ -19,7 +19,7 @@ Set-IntersightCapabilitySiocModuleDescriptor [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilitySiocModuleDescriptor&apos; resource.
+Update a &amp;apos;CapabilitySiocModuleDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -222,8 +222,8 @@ PS C:\> Set-IntersightCapabilitySiocModuleDescriptor
 
 [Remove-IntersightCapabilitySiocModuleDescriptor](./Remove-IntersightCapabilitySiocModuleDescriptor.md)
 
-[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
-
 [New-IntersightCapabilitySiocModuleDescriptor](./New-IntersightCapabilitySiocModuleDescriptor.md)
+
+[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

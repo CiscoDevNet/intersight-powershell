@@ -19,7 +19,7 @@ Set-IntersightHyperflexCiscoHypervisorManager [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexCiscoHypervisorManager&apos; resource.
+Update a &amp;apos;HyperflexCiscoHypervisorManager&amp;apos; resource.
 
 ## PARAMETERS
 

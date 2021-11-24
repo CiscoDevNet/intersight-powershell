@@ -19,7 +19,7 @@ Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicEthIf&amp;apos; resource.
+Update a &apos;VnicEthIf&apos; resource.
 
 ## PARAMETERS
 

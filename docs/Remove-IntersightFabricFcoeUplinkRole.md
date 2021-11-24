@@ -17,7 +17,7 @@ Remove-IntersightFabricFcoeUplinkRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricFcoeUplinkRole&apos; resource.
+Delete a &amp;apos;FabricFcoeUplinkRole&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricFcoeUplinkRole](./Set-IntersightFabricFcoeUplinkRole.md)
-
 [Get-IntersightFabricFcoeUplinkRole](./Get-IntersightFabricFcoeUplinkRole.md)
 
 [New-IntersightFabricFcoeUplinkRole](./New-IntersightFabricFcoeUplinkRole.md)
+
+[Set-IntersightFabricFcoeUplinkRole](./Set-IntersightFabricFcoeUplinkRole.md)
 

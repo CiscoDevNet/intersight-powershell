@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareDimmDescriptor](./Set-IntersightFirmwareDimmDescriptor.md)
-
 [Get-IntersightFirmwareDimmDescriptor](./Get-IntersightFirmwareDimmDescriptor.md)
 
 [New-IntersightFirmwareDimmDescriptor](./New-IntersightFirmwareDimmDescriptor.md)
+
+[Set-IntersightFirmwareDimmDescriptor](./Set-IntersightFirmwareDimmDescriptor.md)
 

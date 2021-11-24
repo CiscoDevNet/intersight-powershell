@@ -17,7 +17,7 @@ Remove-IntersightIamIdp -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamIdp&amp;apos; resource.
+Delete a &apos;IamIdp&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamIdp](./Set-IntersightIamIdp.md)
-
 [Get-IntersightIamIdp](./Get-IntersightIamIdp.md)
 
 [New-IntersightIamIdp](./New-IntersightIamIdp.md)
+
+[Set-IntersightIamIdp](./Set-IntersightIamIdp.md)
 

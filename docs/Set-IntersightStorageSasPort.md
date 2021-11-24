@@ -19,7 +19,7 @@ Set-IntersightStorageSasPort [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageSasPort&amp;apos; resource.
+Update a &apos;StorageSasPort&apos; resource.
 
 ## PARAMETERS
 

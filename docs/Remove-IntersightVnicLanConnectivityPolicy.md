@@ -17,7 +17,7 @@ Remove-IntersightVnicLanConnectivityPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicLanConnectivityPolicy&apos; resource.
+Delete a &amp;apos;VnicLanConnectivityPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

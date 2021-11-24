@@ -19,7 +19,7 @@ Set-IntersightHyperflexHxapVirtualMachine [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHxapVirtualMachine&amp;apos; resource.
+Update a &apos;HyperflexHxapVirtualMachine&apos; resource.
 
 ## PARAMETERS
 

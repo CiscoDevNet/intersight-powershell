@@ -25,7 +25,7 @@ Get-IntersightFirmwareUpgrade [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FirmwareUpgrade&apos; resource.,
+Read a &amp;apos;FirmwareUpgrade&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
-
 [New-IntersightFirmwareUpgrade](./New-IntersightFirmwareUpgrade.md)
+
+[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
 

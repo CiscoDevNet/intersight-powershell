@@ -246,9 +246,9 @@ PS C:\> New-IntersightKubernetesVirtualMachineInfrastructureProvider
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesVirtualMachineInfrastructureProvider](./Get-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
-
 [Set-IntersightKubernetesVirtualMachineInfrastructureProvider](./Set-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
+
+[Get-IntersightKubernetesVirtualMachineInfrastructureProvider](./Get-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
 
 [Initialize-IntersightKubernetesBaseVirtualMachineInfraConfig](./Initialize-IntersightKubernetesBaseVirtualMachineInfraConfig.md)
 

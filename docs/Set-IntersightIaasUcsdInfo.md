@@ -127,8 +127,8 @@ PS C:\> Set-IntersightIaasUcsdInfo
 
 ## RELATED LINKS
 
-[Get-IntersightIaasUcsdInfo](./Get-IntersightIaasUcsdInfo.md)
-
 [Remove-IntersightIaasUcsdInfo](./Remove-IntersightIaasUcsdInfo.md)
+
+[Get-IntersightIaasUcsdInfo](./Get-IntersightIaasUcsdInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

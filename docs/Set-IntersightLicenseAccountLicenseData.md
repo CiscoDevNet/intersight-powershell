@@ -19,7 +19,7 @@ Set-IntersightLicenseAccountLicenseData [-Account< IamAccountRelationship>][-Add
 ```
 
 ## DESCRIPTION
-Update a &apos;LicenseAccountLicenseData&apos; resource.
+Update a &amp;apos;LicenseAccountLicenseData&amp;apos; resource.
 
 ## PARAMETERS
 

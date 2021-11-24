@@ -25,7 +25,7 @@ Get-IntersightKubernetesAddonPolicy [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KubernetesAddonPolicy&amp;apos; resource.,
+Read a &apos;KubernetesAddonPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesAddonPolicy](./New-IntersightKubernetesAddonPolicy.md)
+[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
 
 [Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)
 
-[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
+[New-IntersightKubernetesAddonPolicy](./New-IntersightKubernetesAddonPolicy.md)
 

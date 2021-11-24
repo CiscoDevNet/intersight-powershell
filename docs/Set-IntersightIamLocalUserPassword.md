@@ -19,7 +19,7 @@ Set-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;IamLocalUserPassword&apos; resource.
+Update a &amp;apos;IamLocalUserPassword&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
+[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
 
 [Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
 
-[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
+[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
 

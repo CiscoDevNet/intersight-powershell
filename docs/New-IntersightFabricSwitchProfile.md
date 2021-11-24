@@ -19,7 +19,7 @@ New-IntersightFabricSwitchProfile [-Action< string>][-AdditionalProperties< Syst
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricSwitchProfile&apos; resource.
+Create a &amp;apos;FabricSwitchProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -293,11 +293,11 @@ PS C:\> New-IntersightFabricSwitchProfile
 
 ## RELATED LINKS
 
+[Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
+
 [Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
 
 [Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
-
-[Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 

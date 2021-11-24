@@ -19,7 +19,7 @@ New-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricAppliancePcRole&apos; resource.
+Create a &amp;apos;FabricAppliancePcRole&amp;apos; resource.
 
 ## PARAMETERS
 

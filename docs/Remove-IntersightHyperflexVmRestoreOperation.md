@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexVmRestoreOperation](./New-IntersightHyperflexVmRestoreOperation.md)
-
 [Get-IntersightHyperflexVmRestoreOperation](./Get-IntersightHyperflexVmRestoreOperation.md)
+
+[New-IntersightHyperflexVmRestoreOperation](./New-IntersightHyperflexVmRestoreOperation.md)
 

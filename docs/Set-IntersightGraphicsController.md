@@ -19,7 +19,7 @@ Set-IntersightGraphicsController [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;GraphicsController&amp;apos; resource.
+Update a &apos;GraphicsController&apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightNetworkconfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;NetworkconfigPolicy&apos; resource.
+Delete a &amp;apos;NetworkconfigPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

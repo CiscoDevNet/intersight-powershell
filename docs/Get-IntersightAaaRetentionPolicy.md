@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
-
 [New-IntersightAaaRetentionPolicy](./New-IntersightAaaRetentionPolicy.md)
+
+[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
 

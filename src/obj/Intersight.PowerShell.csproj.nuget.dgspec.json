@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj": {
-      "version": "1.0.9.4870",
+      "version": "1.0.9.4903",
       "restore": {
         "projectUniqueName": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj",
         "projectName": "PSIntersight",
@@ -29,7 +29,6 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
-            "targetAlias": "netcoreapp3.0",
             "projectReferences": {}
           }
         },
@@ -41,7 +40,6 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "targetAlias": "netcoreapp3.0",
           "dependencies": {
             "CompareNETObjects": {
               "target": "Package",
@@ -102,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -19,7 +19,7 @@ Set-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[T
 ```
 
 ## DESCRIPTION
-Update a &apos;TamSecurityAdvisory&apos; resource.
+Update a &amp;apos;TamSecurityAdvisory&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -421,11 +421,11 @@ PS C:\> Set-IntersightTamSecurityAdvisory
 
 ## RELATED LINKS
 
-[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
-
 [Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 
 [New-IntersightTamSecurityAdvisory](./New-IntersightTamSecurityAdvisory.md)
+
+[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

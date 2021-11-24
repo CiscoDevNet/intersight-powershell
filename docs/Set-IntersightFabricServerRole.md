@@ -19,7 +19,7 @@ Set-IntersightFabricServerRole [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricServerRole&apos; resource.
+Update a &amp;apos;FabricServerRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -190,10 +190,10 @@ PS C:\> Set-IntersightFabricServerRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
-
 [Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
 
 [New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
+
+[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

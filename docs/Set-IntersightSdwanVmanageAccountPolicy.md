@@ -255,8 +255,8 @@ PS C:\> Set-IntersightSdwanVmanageAccountPolicy
 
 [Remove-IntersightSdwanVmanageAccountPolicy](./Remove-IntersightSdwanVmanageAccountPolicy.md)
 
-[New-IntersightSdwanVmanageAccountPolicy](./New-IntersightSdwanVmanageAccountPolicy.md)
-
 [Get-IntersightSdwanVmanageAccountPolicy](./Get-IntersightSdwanVmanageAccountPolicy.md)
+
+[New-IntersightSdwanVmanageAccountPolicy](./New-IntersightSdwanVmanageAccountPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

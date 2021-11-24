@@ -19,7 +19,7 @@ New-IntersightHyperflexHxapDatacenter [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexHxapDatacenter&apos; resource.
+Create a &amp;apos;HyperflexHxapDatacenter&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -145,10 +145,10 @@ PS C:\> New-IntersightHyperflexHxapDatacenter
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexHxapDatacenter](./Get-IntersightHyperflexHxapDatacenter.md)
+[Set-IntersightHyperflexHxapDatacenter](./Set-IntersightHyperflexHxapDatacenter.md)
 
 [Remove-IntersightHyperflexHxapDatacenter](./Remove-IntersightHyperflexHxapDatacenter.md)
 
-[Set-IntersightHyperflexHxapDatacenter](./Set-IntersightHyperflexHxapDatacenter.md)
+[Get-IntersightHyperflexHxapDatacenter](./Get-IntersightHyperflexHxapDatacenter.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

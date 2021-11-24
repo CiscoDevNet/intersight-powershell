@@ -19,7 +19,7 @@ Set-IntersightStorageNetAppVolume [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageNetAppVolume&apos; resource.
+Update a &amp;apos;StorageNetAppVolume&amp;apos; resource.
 
 ## PARAMETERS
 

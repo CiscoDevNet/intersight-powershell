@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightSdcardPolicy](./Set-IntersightSdcardPolicy.md)
 
-[Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
-
 [New-IntersightSdcardPolicy](./New-IntersightSdcardPolicy.md)
+
+[Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
 

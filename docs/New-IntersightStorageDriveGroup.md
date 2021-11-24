@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the drive group. The name can be between 1 and 15 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed.
+The name of the drive group. The name can be between 1 and 64 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed.
 
 ```yaml
 Type: string
@@ -228,9 +228,9 @@ PS C:\> New-IntersightStorageDriveGroup
 
 [Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
 
-[Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
-
 [Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
+
+[Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
 
 [Initialize-IntersightStorageAutomaticDriveGroup](./Initialize-IntersightStorageAutomaticDriveGroup.md)
 

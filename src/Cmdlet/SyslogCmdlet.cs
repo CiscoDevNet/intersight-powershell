@@ -244,6 +244,18 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove SyslogPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightSyslogPolicy")]
+    public class RemoveIntersightSyslogPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightSyslogPolicy()
+		{
+			ApiInstance = new SyslogApi(Config);
+            MethodName = "DeleteSyslogPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SyslogPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSyslogPolicy")]
@@ -355,17 +367,5 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SyslogPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSyslogPolicy")]
-    public class RemoveIntersightSyslogPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightSyslogPolicy()
-		{
-			ApiInstance = new SyslogApi(Config);
-            MethodName = "DeleteSyslogPolicyWithHttpInfo";
-		}
     }
 }

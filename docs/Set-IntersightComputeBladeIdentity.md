@@ -160,8 +160,8 @@ PS C:\> Set-IntersightComputeBladeIdentity
 
 ## RELATED LINKS
 
-[Get-IntersightComputeBladeIdentity](./Get-IntersightComputeBladeIdentity.md)
-
 [Remove-IntersightComputeBladeIdentity](./Remove-IntersightComputeBladeIdentity.md)
+
+[Get-IntersightComputeBladeIdentity](./Get-IntersightComputeBladeIdentity.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

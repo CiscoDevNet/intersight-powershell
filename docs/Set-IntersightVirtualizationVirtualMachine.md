@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachin
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVirtualMachine&apos; resource.
+Update a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## PARAMETERS
 

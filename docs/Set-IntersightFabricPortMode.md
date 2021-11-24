@@ -19,7 +19,7 @@ Set-IntersightFabricPortMode [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricPortMode&apos; resource.
+Update a &amp;apos;FabricPortMode&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -205,10 +205,10 @@ PS C:\> Set-IntersightFabricPortMode
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)
+
 [Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)
 
 [New-IntersightFabricPortMode](./New-IntersightFabricPortMode.md)
-
-[Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

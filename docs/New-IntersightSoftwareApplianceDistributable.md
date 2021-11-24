@@ -19,7 +19,7 @@ New-IntersightSoftwareApplianceDistributable [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareApplianceDistributable&amp;apos; resource.
+Create a &apos;SoftwareApplianceDistributable&apos; resource.
 
 ## PARAMETERS
 

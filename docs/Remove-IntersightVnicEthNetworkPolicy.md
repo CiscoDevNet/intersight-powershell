@@ -17,7 +17,7 @@ Remove-IntersightVnicEthNetworkPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicEthNetworkPolicy&apos; resource.
+Delete a &amp;apos;VnicEthNetworkPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicEthNetworkPolicy](./Set-IntersightVnicEthNetworkPolicy.md)
-
 [Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
 
 [New-IntersightVnicEthNetworkPolicy](./New-IntersightVnicEthNetworkPolicy.md)
+
+[Set-IntersightVnicEthNetworkPolicy](./Set-IntersightVnicEthNetworkPolicy.md)
 

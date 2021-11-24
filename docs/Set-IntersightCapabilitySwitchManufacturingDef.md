@@ -247,10 +247,10 @@ PS C:\> Set-IntersightCapabilitySwitchManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySwitchManufacturingDef](./Remove-IntersightCapabilitySwitchManufacturingDef.md)
-
 [Get-IntersightCapabilitySwitchManufacturingDef](./Get-IntersightCapabilitySwitchManufacturingDef.md)
 
 [New-IntersightCapabilitySwitchManufacturingDef](./New-IntersightCapabilitySwitchManufacturingDef.md)
+
+[Remove-IntersightCapabilitySwitchManufacturingDef](./Remove-IntersightCapabilitySwitchManufacturingDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

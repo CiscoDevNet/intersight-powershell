@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilitySwitchManufacturingDef](./Set-IntersightCapabilitySwitchManufacturingDef.md)
-
 [Get-IntersightCapabilitySwitchManufacturingDef](./Get-IntersightCapabilitySwitchManufacturingDef.md)
 
 [New-IntersightCapabilitySwitchManufacturingDef](./New-IntersightCapabilitySwitchManufacturingDef.md)
+
+[Set-IntersightCapabilitySwitchManufacturingDef](./Set-IntersightCapabilitySwitchManufacturingDef.md)
 

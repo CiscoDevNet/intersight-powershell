@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightCapabilityPsuManufacturingDef](./New-IntersightCapabilityPsuManufacturingDef.md)
+
 [Set-IntersightCapabilityPsuManufacturingDef](./Set-IntersightCapabilityPsuManufacturingDef.md)
 
 [Remove-IntersightCapabilityPsuManufacturingDef](./Remove-IntersightCapabilityPsuManufacturingDef.md)
-
-[New-IntersightCapabilityPsuManufacturingDef](./New-IntersightCapabilityPsuManufacturingDef.md)
 

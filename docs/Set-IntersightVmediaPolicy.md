@@ -19,7 +19,7 @@ Set-IntersightVmediaPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;VmediaPolicy&apos; resource.
+Update a &amp;apos;VmediaPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

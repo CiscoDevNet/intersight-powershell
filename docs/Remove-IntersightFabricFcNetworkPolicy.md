@@ -17,7 +17,7 @@ Remove-IntersightFabricFcNetworkPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricFcNetworkPolicy&amp;apos; resource.
+Delete a &apos;FabricFcNetworkPolicy&apos; resource.
 
 ## EXAMPLES
 

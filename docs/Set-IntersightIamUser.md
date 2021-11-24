@@ -19,7 +19,7 @@ Set-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Diction
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamUser&amp;apos; resource.
+Update a &apos;IamUser&apos; resource.
 
 ## PARAMETERS
 
@@ -211,10 +211,10 @@ PS C:\> Set-IntersightIamUser
 
 ## RELATED LINKS
 
-[Remove-IntersightIamUser](./Remove-IntersightIamUser.md)
-
 [Get-IntersightIamUser](./Get-IntersightIamUser.md)
 
 [New-IntersightIamUser](./New-IntersightIamUser.md)
+
+[Remove-IntersightIamUser](./Remove-IntersightIamUser.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

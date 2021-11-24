@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexLocalCredentialPolicy](./Set-IntersightHyperflexLocalCredentialPolicy.md)
+[Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
 
 [New-IntersightHyperflexLocalCredentialPolicy](./New-IntersightHyperflexLocalCredentialPolicy.md)
 
-[Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
+[Set-IntersightHyperflexLocalCredentialPolicy](./Set-IntersightHyperflexLocalCredentialPolicy.md)
 

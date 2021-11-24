@@ -19,7 +19,7 @@ New-IntersightFirmwareBoardControllerDescriptor [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareBoardControllerDescriptor&amp;apos; resource.
+Create a &apos;FirmwareBoardControllerDescriptor&apos; resource.
 
 ## PARAMETERS
 

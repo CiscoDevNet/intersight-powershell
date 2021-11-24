@@ -19,7 +19,7 @@ New-IntersightAaaRetentionPolicy [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Create a &apos;AaaRetentionPolicy&apos; resource.
+Create a &amp;apos;AaaRetentionPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -172,8 +172,8 @@ PS C:\> New-IntersightAaaRetentionPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
-
 [Get-IntersightAaaRetentionPolicy](./Get-IntersightAaaRetentionPolicy.md)
+
+[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

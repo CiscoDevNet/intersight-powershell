@@ -19,7 +19,7 @@ Set-IntersightFirmwareDriveDescriptor [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareDriveDescriptor&amp;apos; resource.
+Update a &apos;FirmwareDriveDescriptor&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightSecurityUnit [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;SecurityUnit&apos; resource.
+Update a &amp;apos;SecurityUnit&amp;apos; resource.
 
 ## PARAMETERS
 

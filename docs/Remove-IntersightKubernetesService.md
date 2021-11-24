@@ -17,7 +17,7 @@ Remove-IntersightKubernetesService -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesService&amp;apos; resource.
+Delete a &apos;KubernetesService&apos; resource.
 
 ## EXAMPLES
 

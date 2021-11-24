@@ -17,7 +17,7 @@ Remove-IntersightCapabilityServerSchemaDescriptor -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityServerSchemaDescriptor&apos; resource.
+Delete a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -17,7 +17,7 @@ Remove-IntersightWorkflowWorkflowInfo -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowWorkflowInfo&apos; resource.
+Delete a &amp;apos;WorkflowWorkflowInfo&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowWorkflowInfo](./Set-IntersightWorkflowWorkflowInfo.md)
-
 [Get-IntersightWorkflowWorkflowInfo](./Get-IntersightWorkflowWorkflowInfo.md)
 
 [New-IntersightWorkflowWorkflowInfo](./New-IntersightWorkflowWorkflowInfo.md)
+
+[Set-IntersightWorkflowWorkflowInfo](./Set-IntersightWorkflowWorkflowInfo.md)
 

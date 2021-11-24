@@ -192,11 +192,11 @@ PS C:\> New-IntersightFabricLinkControlPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightFabricLinkControlPolicy](./Get-IntersightFabricLinkControlPolicy.md)
-
 [Set-IntersightFabricLinkControlPolicy](./Set-IntersightFabricLinkControlPolicy.md)
 
 [Remove-IntersightFabricLinkControlPolicy](./Remove-IntersightFabricLinkControlPolicy.md)
+
+[Get-IntersightFabricLinkControlPolicy](./Get-IntersightFabricLinkControlPolicy.md)
 
 [Initialize-IntersightFabricUdldSettings](./Initialize-IntersightFabricUdldSettings.md)
 

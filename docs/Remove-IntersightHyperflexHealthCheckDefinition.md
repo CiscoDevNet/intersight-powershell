@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHealthCheckDefinition -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
+Delete a &apos;HyperflexHealthCheckDefinition&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
-
 [Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
 
 [New-IntersightHyperflexHealthCheckDefinition](./New-IntersightHyperflexHealthCheckDefinition.md)
+
+[Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
 

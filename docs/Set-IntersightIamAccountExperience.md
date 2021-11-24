@@ -19,7 +19,7 @@ Set-IntersightIamAccountExperience [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamAccountExperience&amp;apos; resource.
+Update a &apos;IamAccountExperience&apos; resource.
 
 ## PARAMETERS
 

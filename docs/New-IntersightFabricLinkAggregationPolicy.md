@@ -205,10 +205,10 @@ PS C:\> New-IntersightFabricLinkAggregationPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightFabricLinkAggregationPolicy](./Get-IntersightFabricLinkAggregationPolicy.md)
+
 [Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
 
 [Remove-IntersightFabricLinkAggregationPolicy](./Remove-IntersightFabricLinkAggregationPolicy.md)
-
-[Get-IntersightFabricLinkAggregationPolicy](./Get-IntersightFabricLinkAggregationPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

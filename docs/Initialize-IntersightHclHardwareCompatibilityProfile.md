@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHclHardwareCompatibilityProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclHardwareCompatibilityProfile.ClassIdEnum>][-DriverIsoUrl< string>][-Id< string>][-ObjectType< HclHardwareCompatibilityProfile.ObjectTypeEnum>][-OsVendor< string>][-OsVersion< string>][-ProcessorModel< string>][-Products< System.Collections.Generic.List`1[Model.HclProduct]>][-ServerModel< string>][-ServerRevision< string>][-UcsVersion< string>][-VersionType< HclHardwareCompatibilityProfile.VersionTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHclHardwareCompatibilityProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclHardwareCompatibilityProfile.ClassIdEnum>][-DriverIsoUrl< string>][-Id< string>][-ObjectType< HclHardwareCompatibilityProfile.ObjectTypeEnum>][-OsVendor< string>][-OsVersion< string>][-Personality< string>][-ProcessorModel< string>][-Products< System.Collections.Generic.List`1[Model.HclProduct]>][-ServerModel< string>][-ServerRevision< string>][-UcsVersion< string>][-VersionType< HclHardwareCompatibilityProfile.VersionTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -116,6 +116,21 @@ Accept wildcard characters: False
 
 ### -OsVersion
 Version of the Operating System running on the server.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Personality
+Personality indicating the personality with the which the sever is used in a Hyperflex environment.
 
 ```yaml
 Type: string

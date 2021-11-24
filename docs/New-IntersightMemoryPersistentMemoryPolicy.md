@@ -274,11 +274,11 @@ PS C:\> New-IntersightMemoryPersistentMemoryPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
+[Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
 
 [Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)
 
-[Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
+[Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
 
 [Initialize-IntersightMemoryPersistentMemoryGoal](./Initialize-IntersightMemoryPersistentMemoryGoal.md)
 

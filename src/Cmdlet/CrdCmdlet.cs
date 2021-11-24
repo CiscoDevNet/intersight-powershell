@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new CrdApi(Config);
             ModelObject = new CrdCustomResource();
-            MethodName = "PatchCrdCustomResourceWithHttpInfo";
+            MethodName = "UpdateCrdCustomResourceWithHttpInfo";
 		}
         
         // <summary>

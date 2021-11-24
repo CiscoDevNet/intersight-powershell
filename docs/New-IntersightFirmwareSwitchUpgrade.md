@@ -292,9 +292,9 @@ PS C:\> New-IntersightFirmwareSwitchUpgrade
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
-
 [Remove-IntersightFirmwareSwitchUpgrade](./Remove-IntersightFirmwareSwitchUpgrade.md)
+
+[Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 
