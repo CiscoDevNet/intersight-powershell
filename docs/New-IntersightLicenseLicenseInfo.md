@@ -19,7 +19,7 @@ New-IntersightLicenseLicenseInfo [-AccountLicenseData< LicenseAccountLicenseData
 ```
 
 ## DESCRIPTION
-Create a &apos;LicenseLicenseInfo&apos; resource.
+Create a &amp;apos;LicenseLicenseInfo&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -175,8 +175,8 @@ PS C:\> New-IntersightLicenseLicenseInfo
 
 ## RELATED LINKS
 
-[Set-IntersightLicenseLicenseInfo](./Set-IntersightLicenseLicenseInfo.md)
-
 [Get-IntersightLicenseLicenseInfo](./Get-IntersightLicenseLicenseInfo.md)
+
+[Set-IntersightLicenseLicenseInfo](./Set-IntersightLicenseLicenseInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

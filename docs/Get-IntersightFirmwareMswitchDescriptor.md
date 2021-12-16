@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightFirmwareMswitchDescriptor](./New-IntersightFirmwareMswitchDescriptor.md)
+
 [Set-IntersightFirmwareMswitchDescriptor](./Set-IntersightFirmwareMswitchDescriptor.md)
 
 [Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
-
-[New-IntersightFirmwareMswitchDescriptor](./New-IntersightFirmwareMswitchDescriptor.md)
 

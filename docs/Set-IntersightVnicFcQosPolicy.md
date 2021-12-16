@@ -237,8 +237,8 @@ PS C:\> Set-IntersightVnicFcQosPolicy
 
 [Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
 
-[Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
-
 [New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
+
+[Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

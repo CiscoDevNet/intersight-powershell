@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightRecoveryRestore](./New-IntersightRecoveryRestore.md)
-
 [Get-IntersightRecoveryRestore](./Get-IntersightRecoveryRestore.md)
+
+[New-IntersightRecoveryRestore](./New-IntersightRecoveryRestore.md)
 

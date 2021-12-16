@@ -19,7 +19,7 @@ Set-IntersightCapabilityServerModelsCapabilityDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityServerModelsCapabilityDef&apos; resource.
+Update a &amp;apos;CapabilityServerModelsCapabilityDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -172,10 +172,10 @@ PS C:\> Set-IntersightCapabilityServerModelsCapabilityDef
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityServerModelsCapabilityDef](./Remove-IntersightCapabilityServerModelsCapabilityDef.md)
+
 [Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
 
 [New-IntersightCapabilityServerModelsCapabilityDef](./New-IntersightCapabilityServerModelsCapabilityDef.md)
-
-[Remove-IntersightCapabilityServerModelsCapabilityDef](./Remove-IntersightCapabilityServerModelsCapabilityDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

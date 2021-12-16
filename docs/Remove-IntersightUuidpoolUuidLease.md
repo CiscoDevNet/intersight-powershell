@@ -17,7 +17,7 @@ Remove-IntersightUuidpoolUuidLease -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;UuidpoolUuidLease&amp;apos; resource.
+Delete a &apos;UuidpoolUuidLease&apos; resource.
 
 ## EXAMPLES
 

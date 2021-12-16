@@ -25,7 +25,7 @@ Get-IntersightHyperflexServiceAuthToken [-Count <Boolean>] [-InlineCount <String
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;HyperflexServiceAuthToken&amp;apos; resource.,
+Read a &apos;HyperflexServiceAuthToken&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
+[New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
 
 [Set-IntersightHyperflexServiceAuthToken](./Set-IntersightHyperflexServiceAuthToken.md)
 
-[New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
+[Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
 

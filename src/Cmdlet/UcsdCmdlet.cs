@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove UcsdBackupInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightUcsdBackupInfo")]
+    public class RemoveIntersightUcsdBackupInfo:RemoveCmdletBase
+	{
+		public RemoveIntersightUcsdBackupInfo()
+		{
+			ApiInstance = new UcsdApi(Config);
+            MethodName = "DeleteUcsdBackupInfoWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UcsdBackupInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightUcsdBackupInfo", DefaultParameterSetName = "CmdletParam")]
@@ -257,17 +269,5 @@ namespace Intersight.PowerShell
         
 
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove UcsdBackupInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightUcsdBackupInfo")]
-    public class RemoveIntersightUcsdBackupInfo:RemoveCmdletBase
-	{
-		public RemoveIntersightUcsdBackupInfo()
-		{
-			ApiInstance = new UcsdApi(Config);
-            MethodName = "DeleteUcsdBackupInfoWithHttpInfo";
-		}
     }
 }

@@ -25,7 +25,7 @@ Get-IntersightTechsupportmanagementDownload [-Count <Boolean>] [-InlineCount <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;TechsupportmanagementDownload&amp;apos; resource.,
+Read a &apos;TechsupportmanagementDownload&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

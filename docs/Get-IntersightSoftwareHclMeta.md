@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
 
-[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
-
 [Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
+
+[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
 

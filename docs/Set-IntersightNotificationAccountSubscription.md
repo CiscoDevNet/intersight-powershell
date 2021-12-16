@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The subscription name.
+The name of the subscription.
 
 ```yaml
 Type: string
@@ -191,9 +191,9 @@ PS C:\> Set-IntersightNotificationAccountSubscription
 
 ## RELATED LINKS
 
-[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
-
 [Get-IntersightNotificationAccountSubscription](./Get-IntersightNotificationAccountSubscription.md)
+
+[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
 
 [Remove-IntersightNotificationAccountSubscription](./Remove-IntersightNotificationAccountSubscription.md)
 

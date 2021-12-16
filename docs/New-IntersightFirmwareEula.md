@@ -19,7 +19,7 @@ New-IntersightFirmwareEula [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareEula&amp;apos; resource.
+Create a &apos;FirmwareEula&apos; resource.
 
 ## PARAMETERS
 

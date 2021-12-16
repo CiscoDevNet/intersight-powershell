@@ -19,7 +19,7 @@ New-IntersightWorkflowTemplateEvaluation [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowTemplateEvaluation&amp;apos; resource.
+Create a &apos;WorkflowTemplateEvaluation&apos; resource.
 
 ## PARAMETERS
 

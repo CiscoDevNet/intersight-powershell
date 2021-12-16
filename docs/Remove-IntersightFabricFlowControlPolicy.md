@@ -17,7 +17,7 @@ Remove-IntersightFabricFlowControlPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricFlowControlPolicy&amp;apos; resource.
+Delete a &apos;FabricFlowControlPolicy&apos; resource.
 
 ## EXAMPLES
 

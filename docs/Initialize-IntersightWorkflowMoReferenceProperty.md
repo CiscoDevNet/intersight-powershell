@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SelectorProperty
-Selector properties to define HTTP method and &amp;apos;body&amp;apos; in case of upsert operation.
+Selector properties to define HTTP method and &apos;body&apos; in case of upsert operation.
 
 Note :- Use Initialize-IntersightWorkflowSelectorProperty to create the object of complex type WorkflowSelectorProperty
 

@@ -19,7 +19,7 @@ Set-IntersightAaaRetentionPolicy [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;AaaRetentionPolicy&amp;apos; resource.
+Update a &apos;AaaRetentionPolicy&apos; resource.
 
 ## PARAMETERS
 

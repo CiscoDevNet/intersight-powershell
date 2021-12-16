@@ -17,7 +17,7 @@ Remove-IntersightBootPrecisionPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;BootPrecisionPolicy&amp;apos; resource.
+Delete a &apos;BootPrecisionPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightBootPrecisionPolicy](./Set-IntersightBootPrecisionPolicy.md)
+
 [Get-IntersightBootPrecisionPolicy](./Get-IntersightBootPrecisionPolicy.md)
 
 [New-IntersightBootPrecisionPolicy](./New-IntersightBootPrecisionPolicy.md)
-
-[Set-IntersightBootPrecisionPolicy](./Set-IntersightBootPrecisionPolicy.md)
 

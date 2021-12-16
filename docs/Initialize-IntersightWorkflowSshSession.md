@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowSshSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-ClassId< WorkflowSshSession.ClassIdEnum>][-ContentType< string>][-Description< string>][-ErrorContentType< string>][-FileTransferToRemote< Model.WorkflowFileTransfer>][-Label< string>][-MessageType< WorkflowSshSession.MessageTypeEnum>][-Name< string>][-ObjectType< WorkflowSshSession.ObjectTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-SshCommand< object>][-SshConfiguration< Model.WorkflowSshConfig>][-StartDelay< long>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowSshSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< string>][-CaptureCompleteResponse< string>][-ClassId< WorkflowSshSession.ClassIdEnum>][-ContentType< string>][-Description< string>][-ErrorContentType< string>][-ExpectedExitCodes< object>][-FileTransferToRemote< Model.WorkflowFileTransfer>][-Label< string>][-MessageType< WorkflowSshSession.MessageTypeEnum>][-Name< string>][-ObjectType< WorkflowSshSession.ObjectTypeEnum>][-Outcomes< object>][-ResponseSpec< object>][-SkipOnCondition< string>][-SshCommand< object>][-SshConfiguration< Model.WorkflowSshConfig>][-SshOpTimeout< string>][-StartDelay< long>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -41,6 +41,21 @@ Accept wildcard characters: False
 
 ### -Body
 The optional request body that is sent as part of this API request.\nThe request body can contain a golang template that can be populated with task input\nparameters and previous API output parameters.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CaptureCompleteResponse
+Flag to allow capturing entire command response as batch API output.
 
 ```yaml
 Type: string
@@ -114,6 +129,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ExpectedExitCodes
+Optional array of integer values to specify the expected exit codes of a SSH command execution. SSH command\nexecution is marked success upon receiving any of the expected exit code from command execution. If not set, success\nexit code of 0 is expected from command execution.
+
+Note :- Use Initialize-Intersightobject to create the object of complex type object
+
+```yaml
+Type: object
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FileTransferToRemote
 Message to transfer a file from Intersight connected device to remote server.
 
@@ -147,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageType
-The type of SSH message to send to the remote server.\n* `ExecuteCommand` - Execute a SSH command on the remote server.\n* `NewSession` - Open a new SSH connection to the remote server.\n* `FileTransfer` - Transfer a file from Intersight connected device to the remote server.\n* `CloseSession` - Close the SSH connection to the remote server.
+The type of SSH message to be sent to the remote server.\n* `ExecuteCommand` - Execute a SSH command on the remote server.\n* `NewSession` - Open a new SSH connection to the remote server.\n* `FileTransfer` - Transfer a file from Intersight connected device to the remote server.\n* `CloseSession` - Close the SSH connection to the remote server.
 
 ```yaml
 Type: WorkflowSshSession.MessageTypeEnum
@@ -177,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowSshSession.ObjectTypeEnum
@@ -264,6 +296,21 @@ Note :- Use Initialize-IntersightWorkflowSshConfig to create the object of compl
 
 ```yaml
 Type: Model.WorkflowSshConfig
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SshOpTimeout
+SSH operation timeout value in seconds. The provided string value should be able to convert to\nrespective integer value.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -361,8 +408,8 @@ PS C:\> Initialize-IntersightWorkflowSshSession
 
 ## RELATED LINKS
 
-[Initialize-IntersightWorkflowFileTransfer](./Initialize-IntersightWorkflowFileTransfer.md)
-
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
+
+[Initialize-IntersightWorkflowFileTransfer](./Initialize-IntersightWorkflowFileTransfer.md)
 
 [Initialize-IntersightWorkflowSshConfig](./Initialize-IntersightWorkflowSshConfig.md)

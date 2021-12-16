@@ -19,7 +19,7 @@ New-IntersightSdwanRouterPolicy [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &apos;SdwanRouterPolicy&apos; resource.
+Create a &amp;apos;SdwanRouterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

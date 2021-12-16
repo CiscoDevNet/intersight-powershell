@@ -233,18 +233,6 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove CertificatemanagementPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCertificatemanagementPolicy")]
-    public class RemoveIntersightCertificatemanagementPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightCertificatemanagementPolicy()
-		{
-			ApiInstance = new CertificatemanagementApi(Config);
-            MethodName = "DeleteCertificatemanagementPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CertificatemanagementPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightCertificatemanagementPolicy")]
@@ -346,5 +334,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CertificatemanagementPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCertificatemanagementPolicy")]
+    public class RemoveIntersightCertificatemanagementPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightCertificatemanagementPolicy()
+		{
+			ApiInstance = new CertificatemanagementApi(Config);
+            MethodName = "DeleteCertificatemanagementPolicyWithHttpInfo";
+		}
     }
 }

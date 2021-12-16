@@ -17,7 +17,7 @@ Remove-IntersightFabricSwitchControlPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricSwitchControlPolicy&amp;apos; resource.
+Delete a &apos;FabricSwitchControlPolicy&apos; resource.
 
 ## EXAMPLES
 

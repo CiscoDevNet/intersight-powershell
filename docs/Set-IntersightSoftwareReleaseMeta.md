@@ -19,7 +19,7 @@ Set-IntersightSoftwareReleaseMeta [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwareReleaseMeta&amp;apos; resource.
+Update a &apos;SoftwareReleaseMeta&apos; resource.
 
 ## PARAMETERS
 

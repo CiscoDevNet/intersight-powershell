@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationVirtualNetwork -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &apos;VirtualizationVirtualNetwork&apos; resource.
+Delete a &amp;apos;VirtualizationVirtualNetwork&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
+
 [Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
 
 [New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
-
-[Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
 

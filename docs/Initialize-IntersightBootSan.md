@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-Slot ID of the device. Supported values are ( 1 - 255, \&quot;MLOM\&quot;, \&quot;L1\&quot;, \&quot;L2\&quot; ).
+Slot ID of the device. Supported values are ( 1 - 255, \&amp;quot;MLOM\&amp;quot;, \&amp;quot;L1\&amp;quot;, \&amp;quot;L2\&amp;quot; ).
 
 ```yaml
 Type: string

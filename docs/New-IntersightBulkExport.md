@@ -207,11 +207,11 @@ PS C:\> New-IntersightBulkExport
 
 ## RELATED LINKS
 
-[Get-IntersightBulkExport](./Get-IntersightBulkExport.md)
-
 [Set-IntersightBulkExport](./Set-IntersightBulkExport.md)
 
 [Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
+
+[Get-IntersightBulkExport](./Get-IntersightBulkExport.md)
 
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
 

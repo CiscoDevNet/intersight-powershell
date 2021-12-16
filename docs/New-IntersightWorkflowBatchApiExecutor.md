@@ -291,11 +291,11 @@ PS C:\> New-IntersightWorkflowBatchApiExecutor
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
-
 [Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
 
 [Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
+
+[Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

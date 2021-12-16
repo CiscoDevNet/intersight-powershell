@@ -17,7 +17,7 @@ Remove-IntersightKubernetesStatefulSet -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesStatefulSet&amp;apos; resource.
+Delete a &apos;KubernetesStatefulSet&apos; resource.
 
 ## EXAMPLES
 

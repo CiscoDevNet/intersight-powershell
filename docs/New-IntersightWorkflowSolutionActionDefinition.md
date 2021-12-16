@@ -354,11 +354,11 @@ PS C:\> New-IntersightWorkflowSolutionActionDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowSolutionActionDefinition](./Remove-IntersightWorkflowSolutionActionDefinition.md)
+[Get-IntersightWorkflowSolutionActionDefinition](./Get-IntersightWorkflowSolutionActionDefinition.md)
 
 [Set-IntersightWorkflowSolutionActionDefinition](./Set-IntersightWorkflowSolutionActionDefinition.md)
 
-[Get-IntersightWorkflowSolutionActionDefinition](./Get-IntersightWorkflowSolutionActionDefinition.md)
+[Remove-IntersightWorkflowSolutionActionDefinition](./Remove-IntersightWorkflowSolutionActionDefinition.md)
 
 [Initialize-IntersightWorkflowActionWorkflowDefinition](./Initialize-IntersightWorkflowActionWorkflowDefinition.md)
 

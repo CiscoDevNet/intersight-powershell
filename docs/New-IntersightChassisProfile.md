@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightChassisProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,23 @@ User initiated action. Each profile type has its own supported actions. For Hype
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionParams
+
+
+Note :- Use Initialize-IntersightPolicyActionParam to create the object of complex type PolicyActionParam
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyActionParam]
 Parameter Sets: (All)
 Aliases:
 
@@ -308,11 +325,13 @@ PS C:\> New-IntersightChassisProfile
 
 ## RELATED LINKS
 
-[Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
-
 [Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
 
 [Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
+
+[Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 

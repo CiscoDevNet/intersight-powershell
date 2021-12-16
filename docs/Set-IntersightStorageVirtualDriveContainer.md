@@ -19,7 +19,7 @@ Set-IntersightStorageVirtualDriveContainer [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageVirtualDriveContainer&apos; resource.
+Update a &amp;apos;StorageVirtualDriveContainer&amp;apos; resource.
 
 ## PARAMETERS
 

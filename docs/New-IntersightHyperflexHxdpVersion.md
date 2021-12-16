@@ -19,7 +19,7 @@ New-IntersightHyperflexHxdpVersion [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexHxdpVersion&amp;apos; resource.
+Create a &apos;HyperflexHxdpVersion&apos; resource.
 
 ## PARAMETERS
 
@@ -160,9 +160,9 @@ PS C:\> New-IntersightHyperflexHxdpVersion
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
-
 [Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
+
+[Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
 
 [Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
 

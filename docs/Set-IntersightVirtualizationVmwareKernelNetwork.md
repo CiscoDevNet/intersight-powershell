@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareKernelNetwork [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FaultToleranceLogging< bool>][-Identity< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-MacAddress< string>][-Management< bool>][[-Moid]< string>][-Mtu< long>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vmotion< bool>][-Vsan< bool>][-VsphereProvisioning< bool>][-VsphereReplication< bool>][-VsphereReplicationNfc< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareKernelNetwork [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FaultToleranceLogging< bool>][-Identity< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-MacAddress< string>][-Management< bool>][[-Moid]< string>][-Mtu< long>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SubnetMask< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TcpIpStack< string>][-Vmotion< bool>][-Vsan< bool>][-VsphereProvisioning< bool>][-VsphereReplication< bool>][-VsphereReplicationNfc< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareKernelNetwork&apos; resource.
+Update a &amp;apos;VirtualizationVmwareKernelNetwork&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -176,6 +176,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SubnetMask
+Subnet mask of the kernel network.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -183,6 +198,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TcpIpStack
+Type of stack for the kernel network. It can be custom, default, vMotion or provisioning.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

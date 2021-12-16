@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterNetworkPolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
+Create a &apos;HyperflexClusterNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -JumboFrame
-Enable or disable jumbo frames.
+Enable or disable Jumbo Frames (MTU=9000). Jumbo Frames are used by Storage Network, VM Migration Network.
 
 ```yaml
 Type: bool

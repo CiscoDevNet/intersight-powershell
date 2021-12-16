@@ -19,7 +19,7 @@ New-IntersightWorkflowSolutionInstance [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowSolutionInstance&apos; resource.
+Create a &amp;apos;WorkflowSolutionInstance&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -193,10 +193,10 @@ PS C:\> New-IntersightWorkflowSolutionInstance
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowSolutionInstance](./Get-IntersightWorkflowSolutionInstance.md)
-
 [Set-IntersightWorkflowSolutionInstance](./Set-IntersightWorkflowSolutionInstance.md)
 
 [Remove-IntersightWorkflowSolutionInstance](./Remove-IntersightWorkflowSolutionInstance.md)
+
+[Get-IntersightWorkflowSolutionInstance](./Get-IntersightWorkflowSolutionInstance.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

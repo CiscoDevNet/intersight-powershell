@@ -19,7 +19,7 @@ Set-IntersightApplianceUpgrade [-Account< IamAccountRelationship>][-AdditionalPr
 ```
 
 ## DESCRIPTION
-Update a &apos;ApplianceUpgrade&apos; resource.
+Update a &amp;apos;ApplianceUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -175,9 +175,9 @@ PS C:\> Set-IntersightApplianceUpgrade
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
-
 [Remove-IntersightApplianceUpgrade](./Remove-IntersightApplianceUpgrade.md)
+
+[Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
 
 [Initialize-IntersightOnpremUpgradePhase](./Initialize-IntersightOnpremUpgradePhase.md)
 

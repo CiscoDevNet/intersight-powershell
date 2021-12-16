@@ -19,7 +19,7 @@ New-IntersightCapabilityPsuDescriptor [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityPsuDescriptor&apos; resource.
+Create a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

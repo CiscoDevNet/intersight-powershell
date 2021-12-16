@@ -19,7 +19,7 @@ Set-IntersightStorageFlexFlashControllerProps [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageFlexFlashControllerProps&apos; resource.
+Update a &amp;apos;StorageFlexFlashControllerProps&amp;apos; resource.
 
 ## PARAMETERS
 

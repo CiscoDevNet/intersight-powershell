@@ -421,10 +421,10 @@ PS C:\> New-IntersightKubernetesAciCniProfile
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
+[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
 
 [Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
 
-[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
+[Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

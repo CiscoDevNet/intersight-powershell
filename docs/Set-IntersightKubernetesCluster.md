@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterAddonProfile< KubernetesClusterAddonProfileRelationship>][-ConnectionStatus< KubernetesCluster.ConnectionStatusEnum>][-KubeConfig< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-RegisteredDevices< System.Collections.Generic.List`1[AssetDeviceRegistrationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightKubernetesCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterAddonProfile< KubernetesClusterAddonProfileRelationship>][-ConnectionStatus< KubernetesCluster.ConnectionStatusEnum>][-KubeConfig< string>][[-Moid]< string>][-Organization< OrganizationOrganizationRelationship>][-RegisteredDevices< System.Collections.Generic.List`1[AssetDeviceRegistrationRelationship]>][-StorageClusters< System.Collections.Generic.List`1[StorageBaseClusterRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -101,21 +101,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Name of the Kubernetes cluster.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Organization
 A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -142,6 +127,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[AssetDeviceRegistrationRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageClusters
+An array of relationships to storageBaseCluster resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[StorageBaseClusterRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -285,8 +285,8 @@ PS C:\> New-IntersightSmtpPolicy
 
 [Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
-
 [Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
+
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

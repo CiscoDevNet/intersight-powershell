@@ -17,7 +17,7 @@ Remove-IntersightRecoveryBackupProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
+Delete a &apos;RecoveryBackupProfile&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
-
 [New-IntersightRecoveryBackupProfile](./New-IntersightRecoveryBackupProfile.md)
+
+[Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
 
 [Set-IntersightRecoveryBackupProfile](./Set-IntersightRecoveryBackupProfile.md)
 

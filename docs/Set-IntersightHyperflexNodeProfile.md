@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexNodeProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexNodeProfile&apos; resource.
+Update a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -28,6 +28,23 @@ User initiated action. Each profile type has its own supported actions. For Hype
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionParams
+
+
+Note :- Use Initialize-IntersightPolicyActionParam to create the object of complex type PolicyActionParam
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyActionParam]
 Parameter Sets: (All)
 Aliases:
 
@@ -371,6 +388,8 @@ PS C:\> Set-IntersightHyperflexNodeProfile
 [New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
 
 [Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

@@ -500,11 +500,11 @@ PS C:\> New-IntersightSoftwareSolutionDistributable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwareSolutionDistributable](./Set-IntersightSoftwareSolutionDistributable.md)
+[Get-IntersightSoftwareSolutionDistributable](./Get-IntersightSoftwareSolutionDistributable.md)
 
 [Remove-IntersightSoftwareSolutionDistributable](./Remove-IntersightSoftwareSolutionDistributable.md)
 
-[Get-IntersightSoftwareSolutionDistributable](./Get-IntersightSoftwareSolutionDistributable.md)
+[Set-IntersightSoftwareSolutionDistributable](./Set-IntersightSoftwareSolutionDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

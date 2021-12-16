@@ -19,7 +19,7 @@ New-IntersightKvmPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KvmPolicy&amp;apos; resource.
+Create a &apos;KvmPolicy&apos; resource.
 
 ## PARAMETERS
 

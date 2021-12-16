@@ -19,7 +19,7 @@ Set-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-Additio
 ```
 
 ## DESCRIPTION
-Update a &apos;ApplianceBackupPolicy&apos; resource.
+Update a &amp;apos;ApplianceBackupPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManualBackup
-Backup mode of the appliance. Automatic backups of the appliance are not initiated if this property is set to &amp;apos;true&amp;apos; and the backup schedule field is ignored.
+Backup mode of the appliance. Automatic backups of the appliance are not initiated if this property is set to &apos;true&apos; and the backup schedule field is ignored.
 
 ```yaml
 Type: bool
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &amp;apos;false&amp;apos; for this schedule to be active.
+Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &apos;false&apos; for this schedule to be active.
 
 Note :- Use Initialize-IntersightOnpremSchedule to create the object of complex type OnpremSchedule
 

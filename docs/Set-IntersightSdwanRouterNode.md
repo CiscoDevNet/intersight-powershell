@@ -19,7 +19,7 @@ Set-IntersightSdwanRouterNode [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;SdwanRouterNode&apos; resource.
+Update a &amp;apos;SdwanRouterNode&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -260,11 +260,11 @@ PS C:\> Set-IntersightSdwanRouterNode
 
 ## RELATED LINKS
 
-[Remove-IntersightSdwanRouterNode](./Remove-IntersightSdwanRouterNode.md)
-
 [Get-IntersightSdwanRouterNode](./Get-IntersightSdwanRouterNode.md)
 
 [New-IntersightSdwanRouterNode](./New-IntersightSdwanRouterNode.md)
+
+[Remove-IntersightSdwanRouterNode](./Remove-IntersightSdwanRouterNode.md)
 
 [Initialize-IntersightSdwanNetworkConfigurationType](./Initialize-IntersightSdwanNetworkConfigurationType.md)
 

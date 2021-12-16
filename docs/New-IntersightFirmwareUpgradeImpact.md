@@ -19,7 +19,7 @@ New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareUpgradeImpact&apos; resource.
+Create a &amp;apos;FirmwareUpgradeImpact&amp;apos; resource.
 
 ## PARAMETERS
 

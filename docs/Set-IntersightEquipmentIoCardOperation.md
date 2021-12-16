@@ -19,7 +19,7 @@ Set-IntersightEquipmentIoCardOperation [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentIoCardOperation&apos; resource.
+Update a &amp;apos;EquipmentIoCardOperation&amp;apos; resource.
 
 ## PARAMETERS
 

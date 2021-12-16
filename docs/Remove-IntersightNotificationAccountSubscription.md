@@ -17,7 +17,7 @@ Remove-IntersightNotificationAccountSubscription -Moid <String> [<CommonParamete
 ```
 
 ## DESCRIPTION
-Delete a &apos;NotificationAccountSubscription&apos; resource.
+Delete a &amp;apos;NotificationAccountSubscription&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
-
 [Get-IntersightNotificationAccountSubscription](./Get-IntersightNotificationAccountSubscription.md)
+
+[New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
 
 [Set-IntersightNotificationAccountSubscription](./Set-IntersightNotificationAccountSubscription.md)
 

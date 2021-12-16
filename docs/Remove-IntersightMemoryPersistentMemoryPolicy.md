@@ -17,7 +17,7 @@ Remove-IntersightMemoryPersistentMemoryPolicy -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;MemoryPersistentMemoryPolicy&amp;apos; resource.
+Delete a &apos;MemoryPersistentMemoryPolicy&apos; resource.
 
 ## EXAMPLES
 

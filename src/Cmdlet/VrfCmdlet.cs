@@ -202,6 +202,18 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove VrfVrf.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightVrfVrf")]
+    public class RemoveIntersightVrfVrf:RemoveCmdletBase
+	{
+		public RemoveIntersightVrfVrf()
+		{
+			ApiInstance = new VrfApi(Config);
+            MethodName = "DeleteVrfVrfWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VrfVrf.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightVrfVrf")]
@@ -211,7 +223,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new VrfApi(Config);
             ModelObject = new VrfVrf();
-            MethodName = "PatchVrfVrfWithHttpInfo";
+            MethodName = "UpdateVrfVrfWithHttpInfo";
 		}
         
         
@@ -274,17 +286,5 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove VrfVrf.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVrfVrf")]
-    public class RemoveIntersightVrfVrf:RemoveCmdletBase
-	{
-		public RemoveIntersightVrfVrf()
-		{
-			ApiInstance = new VrfApi(Config);
-            MethodName = "DeleteVrfVrfWithHttpInfo";
-		}
     }
 }

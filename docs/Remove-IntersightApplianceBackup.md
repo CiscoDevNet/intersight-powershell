@@ -17,7 +17,7 @@ Remove-IntersightApplianceBackup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ApplianceBackup&amp;apos; resource.
+Delete a &apos;ApplianceBackup&apos; resource.
 
 ## EXAMPLES
 

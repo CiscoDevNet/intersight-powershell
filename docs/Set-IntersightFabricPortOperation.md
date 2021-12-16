@@ -220,10 +220,10 @@ PS C:\> Set-IntersightFabricPortOperation
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
+
 [Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
 
 [New-IntersightFabricPortOperation](./New-IntersightFabricPortOperation.md)
-
-[Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

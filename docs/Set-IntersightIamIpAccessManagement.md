@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Flag stores the state of IP address based access management. Access management is enabled when it&apos;s true.
+Flag stores the state of IP address based access management. Access management is enabled when it&amp;apos;s true.
 
 ```yaml
 Type: bool

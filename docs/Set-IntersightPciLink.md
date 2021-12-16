@@ -19,7 +19,7 @@ Set-IntersightPciLink [-AdditionalProperties< System.Collections.Generic.Diction
 ```
 
 ## DESCRIPTION
-Update a &apos;PciLink&apos; resource.
+Update a &amp;apos;PciLink&amp;apos; resource.
 
 ## PARAMETERS
 

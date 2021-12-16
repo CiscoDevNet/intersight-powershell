@@ -19,7 +19,7 @@ New-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowWorkflowInfo&amp;apos; resource.
+Create a &apos;WorkflowWorkflowInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -418,11 +418,11 @@ PS C:\> New-IntersightWorkflowWorkflowInfo
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowWorkflowInfo](./Get-IntersightWorkflowWorkflowInfo.md)
+[Remove-IntersightWorkflowWorkflowInfo](./Remove-IntersightWorkflowWorkflowInfo.md)
 
 [Set-IntersightWorkflowWorkflowInfo](./Set-IntersightWorkflowWorkflowInfo.md)
 
-[Remove-IntersightWorkflowWorkflowInfo](./Remove-IntersightWorkflowWorkflowInfo.md)
+[Get-IntersightWorkflowWorkflowInfo](./Get-IntersightWorkflowWorkflowInfo.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 

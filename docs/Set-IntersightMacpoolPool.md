@@ -207,11 +207,11 @@ PS C:\> Set-IntersightMacpoolPool
 
 ## RELATED LINKS
 
-[Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
+[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
 
 [New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
 
-[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
+[Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
 
 [Initialize-IntersightMacpoolBlock](./Initialize-IntersightMacpoolBlock.md)
 

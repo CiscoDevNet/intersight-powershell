@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamCertificate](./New-IntersightIamCertificate.md)
+[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
 
 [Set-IntersightIamCertificate](./Set-IntersightIamCertificate.md)
 
-[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
+[New-IntersightIamCertificate](./New-IntersightIamCertificate.md)
 

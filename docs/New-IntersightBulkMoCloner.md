@@ -19,7 +19,7 @@ New-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &apos;BulkMoCloner&apos; resource.
+Create a &amp;apos;BulkMoCloner&amp;apos; resource.
 
 ## PARAMETERS
 

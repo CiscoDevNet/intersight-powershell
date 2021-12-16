@@ -25,7 +25,7 @@ Get-IntersightCapabilitySiocModuleDescriptor [-Count <Boolean>] [-InlineCount <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;CapabilitySiocModuleDescriptor&amp;apos; resource.,
+Read a &apos;CapabilitySiocModuleDescriptor&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilitySiocModuleDescriptor](./Set-IntersightCapabilitySiocModuleDescriptor.md)
+[New-IntersightCapabilitySiocModuleDescriptor](./New-IntersightCapabilitySiocModuleDescriptor.md)
 
 [Remove-IntersightCapabilitySiocModuleDescriptor](./Remove-IntersightCapabilitySiocModuleDescriptor.md)
 
-[New-IntersightCapabilitySiocModuleDescriptor](./New-IntersightCapabilitySiocModuleDescriptor.md)
+[Set-IntersightCapabilitySiocModuleDescriptor](./Set-IntersightCapabilitySiocModuleDescriptor.md)
 

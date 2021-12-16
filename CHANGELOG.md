@@ -1,3 +1,7 @@
+## Intersight.PowerShell_v1.0.9.4950
+Release Date: 16th December 2021
+- Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4950)
+- Fixed the Set Cmdlets pipeline issue.
 ## Intersight.PowerShell_v1.0.9.4903
 Release Date: 24th November 2021
 - Refreshes the Intersight.PowerShell module to be in sync with the latest Cisco Intersight model (build 4903)

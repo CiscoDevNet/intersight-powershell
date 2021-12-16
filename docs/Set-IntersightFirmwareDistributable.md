@@ -19,7 +19,7 @@ Set-IntersightFirmwareDistributable [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareDistributable&apos; resource.
+Update a &amp;apos;FirmwareDistributable&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -515,11 +515,11 @@ PS C:\> Set-IntersightFirmwareDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
-
 [Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
 
 [New-IntersightFirmwareDistributable](./New-IntersightFirmwareDistributable.md)
+
+[Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

@@ -19,7 +19,7 @@ New-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &apos;UuidpoolPool&apos; resource.
+Create a &amp;apos;UuidpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSnmpPolicy](./New-IntersightSnmpPolicy.md)
-
 [Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
 
 [Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
+
+[New-IntersightSnmpPolicy](./New-IntersightSnmpPolicy.md)
 

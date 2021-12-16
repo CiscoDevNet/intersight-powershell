@@ -19,7 +19,7 @@ Set-IntersightSdwanRouterPolicy [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SdwanRouterPolicy&amp;apos; resource.
+Update a &apos;SdwanRouterPolicy&apos; resource.
 
 ## PARAMETERS
 

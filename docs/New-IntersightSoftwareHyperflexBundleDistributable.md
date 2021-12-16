@@ -19,7 +19,7 @@ New-IntersightSoftwareHyperflexBundleDistributable [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareHyperflexBundleDistributable&amp;apos; resource.
+Create a &apos;SoftwareHyperflexBundleDistributable&apos; resource.
 
 ## PARAMETERS
 
@@ -470,11 +470,11 @@ PS C:\> New-IntersightSoftwareHyperflexBundleDistributable
 
 ## RELATED LINKS
 
+[Get-IntersightSoftwareHyperflexBundleDistributable](./Get-IntersightSoftwareHyperflexBundleDistributable.md)
+
 [Set-IntersightSoftwareHyperflexBundleDistributable](./Set-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [Remove-IntersightSoftwareHyperflexBundleDistributable](./Remove-IntersightSoftwareHyperflexBundleDistributable.md)
-
-[Get-IntersightSoftwareHyperflexBundleDistributable](./Get-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

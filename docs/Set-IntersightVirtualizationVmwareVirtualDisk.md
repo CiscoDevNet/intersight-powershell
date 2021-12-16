@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareVirtualDisk [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareVirtualDisk&amp;apos; resource.
+Update a &apos;VirtualizationVmwareVirtualDisk&apos; resource.
 
 ## PARAMETERS
 

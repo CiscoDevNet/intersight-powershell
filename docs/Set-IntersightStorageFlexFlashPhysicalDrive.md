@@ -19,7 +19,7 @@ Set-IntersightStorageFlexFlashPhysicalDrive [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageFlexFlashPhysicalDrive&apos; resource.
+Update a &amp;apos;StorageFlexFlashPhysicalDrive&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -233,11 +233,11 @@ PS C:\> New-IntersightSyslogPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
+[Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
 
 [Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
 
-[Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
+[Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
 
 [Initialize-IntersightSyslogLocalClientBase](./Initialize-IntersightSyslogLocalClientBase.md)
 

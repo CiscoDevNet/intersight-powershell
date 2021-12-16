@@ -19,7 +19,7 @@ Set-IntersightIamPrivateKeySpec [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;IamPrivateKeySpec&apos; resource.
+Update a &amp;apos;IamPrivateKeySpec&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -162,11 +162,11 @@ PS C:\> Set-IntersightIamPrivateKeySpec
 
 ## RELATED LINKS
 
+[Remove-IntersightIamPrivateKeySpec](./Remove-IntersightIamPrivateKeySpec.md)
+
 [Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
 
 [New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
-
-[Remove-IntersightIamPrivateKeySpec](./Remove-IntersightIamPrivateKeySpec.md)
 
 [Initialize-IntersightPkixKeyGenerationSpec](./Initialize-IntersightPkixKeyGenerationSpec.md)
 

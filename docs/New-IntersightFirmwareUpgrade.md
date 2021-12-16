@@ -19,7 +19,7 @@ New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareUpgrade&amp;apos; resource.
+Create a &apos;FirmwareUpgrade&apos; resource.
 
 ## PARAMETERS
 
@@ -309,9 +309,9 @@ PS C:\> New-IntersightFirmwareUpgrade
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareUpgrade](./Get-IntersightFirmwareUpgrade.md)
-
 [Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
+
+[Get-IntersightFirmwareUpgrade](./Get-IntersightFirmwareUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 

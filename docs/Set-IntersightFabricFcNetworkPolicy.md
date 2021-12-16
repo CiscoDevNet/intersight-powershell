@@ -19,7 +19,7 @@ Set-IntersightFabricFcNetworkPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricFcNetworkPolicy&apos; resource.
+Update a &amp;apos;FabricFcNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -208,9 +208,9 @@ PS C:\> Set-IntersightFabricFcNetworkPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightFabricFcNetworkPolicy](./Get-IntersightFabricFcNetworkPolicy.md)
-
 [New-IntersightFabricFcNetworkPolicy](./New-IntersightFabricFcNetworkPolicy.md)
+
+[Get-IntersightFabricFcNetworkPolicy](./Get-IntersightFabricFcNetworkPolicy.md)
 
 [Remove-IntersightFabricFcNetworkPolicy](./Remove-IntersightFabricFcNetworkPolicy.md)
 

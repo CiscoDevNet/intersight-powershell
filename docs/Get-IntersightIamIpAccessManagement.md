@@ -25,7 +25,7 @@ Get-IntersightIamIpAccessManagement [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamIpAccessManagement&amp;apos; resource.,
+Read a &apos;IamIpAccessManagement&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
-
 [New-IntersightIamIpAccessManagement](./New-IntersightIamIpAccessManagement.md)
+
+[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
 

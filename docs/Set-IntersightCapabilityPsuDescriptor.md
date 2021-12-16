@@ -19,7 +19,7 @@ Set-IntersightCapabilityPsuDescriptor [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityPsuDescriptor&apos; resource.
+Update a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

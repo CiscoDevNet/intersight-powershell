@@ -190,8 +190,8 @@ PS C:\> New-IntersightLicenseLicenseReservationOp
 
 ## RELATED LINKS
 
-[Get-IntersightLicenseLicenseReservationOp](./Get-IntersightLicenseLicenseReservationOp.md)
-
 [Set-IntersightLicenseLicenseReservationOp](./Set-IntersightLicenseLicenseReservationOp.md)
+
+[Get-IntersightLicenseLicenseReservationOp](./Get-IntersightLicenseLicenseReservationOp.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

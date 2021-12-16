@@ -19,12 +19,12 @@ New-IntersightWorkflowSolutionActionInstance [-Action< WorkflowSolutionActionIns
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowSolutionActionInstance&apos; resource.
+Create a &amp;apos;WorkflowSolutionActionInstance&amp;apos; resource.
 
 ## PARAMETERS
 
 ### -Action
-Name of the action that needs to be performed on the solution instance.\n* `None` - No action is set, this is the default value for action field.\n* `Validate` - Validation the action instance inputs and run the validation workflows.\n* `Start` - Start a new execution of the action instance.\n* `Retry` - Retry the solution action instance from the beginning.\n* `RetryFailed` - Retry the workflow that has failed from the failure point.\n* `Cancel` - Cancel the core workflow that is in running or waiting state. This action can be used when the workflows are stuck and not progressing.\n* `Stop` - Stop the action instance which is in progress and didn&apos;t complete successfully. Use this action to clear the state and then delete the action instance. A completed action cannot be stopped.
+Name of the action that needs to be performed on the solution instance.\n* `None` - No action is set, this is the default value for action field.\n* `Validate` - Validation the action instance inputs and run the validation workflows.\n* `Start` - Start a new execution of the action instance.\n* `Retry` - Retry the solution action instance from the beginning.\n* `RetryFailed` - Retry the workflow that has failed from the failure point.\n* `Cancel` - Cancel the core workflow that is in running or waiting state. This action can be used when the workflows are stuck and not progressing.\n* `Stop` - Stop the action instance which is in progress and didn&amp;apos;t complete successfully. Use this action to clear the state and then delete the action instance. A completed action cannot be stopped.
 
 ```yaml
 Type: WorkflowSolutionActionInstance.ActionEnum

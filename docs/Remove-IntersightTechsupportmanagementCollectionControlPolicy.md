@@ -17,7 +17,7 @@ Remove-IntersightTechsupportmanagementCollectionControlPolicy -Moid <String> [<C
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;TechsupportmanagementCollectionControlPolicy&amp;apos; resource.
+Delete a &apos;TechsupportmanagementCollectionControlPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightTechsupportmanagementCollectionControlPolicy](./Set-IntersightTechsupportmanagementCollectionControlPolicy.md)
-
 [Get-IntersightTechsupportmanagementCollectionControlPolicy](./Get-IntersightTechsupportmanagementCollectionControlPolicy.md)
 
 [New-IntersightTechsupportmanagementCollectionControlPolicy](./New-IntersightTechsupportmanagementCollectionControlPolicy.md)
+
+[Set-IntersightTechsupportmanagementCollectionControlPolicy](./Set-IntersightTechsupportmanagementCollectionControlPolicy.md)
 

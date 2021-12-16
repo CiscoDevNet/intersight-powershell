@@ -211,10 +211,10 @@ PS C:\> Set-IntersightKubernetesAciCniApic
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)
+[Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
 
 [New-IntersightKubernetesAciCniApic](./New-IntersightKubernetesAciCniApic.md)
 
-[Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
+[Get-IntersightKubernetesAciCniApic](./Get-IntersightKubernetesAciCniApic.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

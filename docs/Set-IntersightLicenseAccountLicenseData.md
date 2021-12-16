@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightLicenseAccountLicenseData [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CustomerOp< LicenseCustomerOpRelationship>][-DefaultLicenseType< LicenseAccountLicenseData.DefaultLicenseTypeEnum>][-IwoCustomerOp< LicenseIwoCustomerOpRelationship>][-IwoLicenseCount< LicenseIwoLicenseCountRelationship>][-Licenseinfos< System.Collections.Generic.List`1[LicenseLicenseInfoRelationship]>][[-Moid]< string>][-SmartlicenseToken< LicenseSmartlicenseTokenRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightLicenseAccountLicenseData [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CustomerOp< LicenseCustomerOpRelationship>][-DefaultLicenseType< LicenseAccountLicenseData.DefaultLicenseTypeEnum>][-IksCustomerOp< LicenseIksCustomerOpRelationship>][-IksLicenseCount< LicenseIksLicenseCountRelationship>][-IwoCustomerOp< LicenseIwoCustomerOpRelationship>][-IwoLicenseCount< LicenseIwoLicenseCountRelationship>][-Licenseinfos< System.Collections.Generic.List`1[LicenseLicenseInfoRelationship]>][[-Moid]< string>][-SmartlicenseToken< LicenseSmartlicenseTokenRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -75,10 +75,46 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLicenseType
-Default license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.
+Default license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type.
 
 ```yaml
 Type: LicenseAccountLicenseData.DefaultLicenseTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IksCustomerOp
+A reference to a licenseIksCustomerOp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: LicenseIksCustomerOpRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IksLicenseCount
+A reference to a licenseIksLicenseCount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: LicenseIksLicenseCountRelationship
 Parameter Sets: (All)
 Aliases:
 

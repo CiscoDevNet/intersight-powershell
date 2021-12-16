@@ -19,7 +19,7 @@ New-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IppoolPool&amp;apos; resource.
+Create a &apos;IppoolPool&apos; resource.
 
 ## PARAMETERS
 

@@ -8,6 +8,112 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourceSourceToPermissionResourcesHolder.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourceSourceToPermissionResourcesHolder")]
+    public class InitializeIntersightResourceSourceToPermissionResourcesHolder:PSCmdlet
+	{
+		public InitializeIntersightResourceSourceToPermissionResourcesHolder()
+		{
+            ClassId = ResourceSourceToPermissionResourcesHolder.ClassIdEnum.ResourceSourceToPermissionResourcesHolder;
+            ObjectType = ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum.ResourceSourceToPermissionResourcesHolder;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourceSourceToPermissionResourcesHolder.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ResourceSourceToPermissionResourcesHolder initObject = new Intersight.Model.ResourceSourceToPermissionResourcesHolder();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcePerTypeCombinedSelector.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcePerTypeCombinedSelector")]
+    public class InitializeIntersightResourcePerTypeCombinedSelector:PSCmdlet
+	{
+		public InitializeIntersightResourcePerTypeCombinedSelector()
+		{
+            ClassId = ResourcePerTypeCombinedSelector.ClassIdEnum.ResourcePerTypeCombinedSelector;
+            ObjectType = ResourcePerTypeCombinedSelector.ObjectTypeEnum.ResourcePerTypeCombinedSelector;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourcePerTypeCombinedSelector.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourcePerTypeCombinedSelector.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ResourcePerTypeCombinedSelector initObject = new Intersight.Model.ResourcePerTypeCombinedSelector();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ResourceSelector.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightResourceSelector")]
@@ -116,112 +222,6 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.ResourceSourceToPermissionResources initObject = new Intersight.Model.ResourceSourceToPermissionResources();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ResourcePerTypeCombinedSelector.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightResourcePerTypeCombinedSelector")]
-    public class InitializeIntersightResourcePerTypeCombinedSelector:PSCmdlet
-	{
-		public InitializeIntersightResourcePerTypeCombinedSelector()
-		{
-            ClassId = ResourcePerTypeCombinedSelector.ClassIdEnum.ResourcePerTypeCombinedSelector;
-            ObjectType = ResourcePerTypeCombinedSelector.ObjectTypeEnum.ResourcePerTypeCombinedSelector;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourcePerTypeCombinedSelector.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourcePerTypeCombinedSelector.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ResourcePerTypeCombinedSelector initObject = new Intersight.Model.ResourcePerTypeCombinedSelector();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ResourceSourceToPermissionResourcesHolder.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightResourceSourceToPermissionResourcesHolder")]
-    public class InitializeIntersightResourceSourceToPermissionResourcesHolder:PSCmdlet
-	{
-		public InitializeIntersightResourceSourceToPermissionResourcesHolder()
-		{
-            ClassId = ResourceSourceToPermissionResourcesHolder.ClassIdEnum.ResourceSourceToPermissionResourcesHolder;
-            ObjectType = ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum.ResourceSourceToPermissionResourcesHolder;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourceSourceToPermissionResourcesHolder.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourceSourceToPermissionResourcesHolder.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ResourceSourceToPermissionResourcesHolder initObject = new Intersight.Model.ResourceSourceToPermissionResourcesHolder();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

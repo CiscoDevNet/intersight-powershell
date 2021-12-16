@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterStoragePolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterStoragePolicy&apos; resource.
+Update a &amp;apos;HyperflexClusterStoragePolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -240,11 +240,11 @@ PS C:\> Set-IntersightHyperflexClusterStoragePolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterStoragePolicy](./Remove-IntersightHyperflexClusterStoragePolicy.md)
+[Get-IntersightHyperflexClusterStoragePolicy](./Get-IntersightHyperflexClusterStoragePolicy.md)
 
 [New-IntersightHyperflexClusterStoragePolicy](./New-IntersightHyperflexClusterStoragePolicy.md)
 
-[Get-IntersightHyperflexClusterStoragePolicy](./Get-IntersightHyperflexClusterStoragePolicy.md)
+[Remove-IntersightHyperflexClusterStoragePolicy](./Remove-IntersightHyperflexClusterStoragePolicy.md)
 
 [Initialize-IntersightHyperflexLogicalAvailabilityZone](./Initialize-IntersightHyperflexLogicalAvailabilityZone.md)
 

@@ -19,7 +19,7 @@ New-IntersightHyperflexServiceAuthToken [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexServiceAuthToken&amp;apos; resource.
+Create a &apos;HyperflexServiceAuthToken&apos; resource.
 
 ## PARAMETERS
 
@@ -211,10 +211,10 @@ PS C:\> New-IntersightHyperflexServiceAuthToken
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
+[Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
 
 [Set-IntersightHyperflexServiceAuthToken](./Set-IntersightHyperflexServiceAuthToken.md)
 
-[Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
+[Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ Set-IntersightFabricFcUplinkRole [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricFcUplinkRole&amp;apos; resource.
+Update a &apos;FabricFcUplinkRole&apos; resource.
 
 ## PARAMETERS
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortId
-Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &amp;apos;portId&amp;apos; represents the port id on the fanout side of the breakout cable.
+Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &apos;portId&apos; represents the port id on the fanout side of the breakout cable.
 
 ```yaml
 Type: long
@@ -235,10 +235,10 @@ PS C:\> Set-IntersightFabricFcUplinkRole
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricFcUplinkRole](./Remove-IntersightFabricFcUplinkRole.md)
+
 [Get-IntersightFabricFcUplinkRole](./Get-IntersightFabricFcUplinkRole.md)
 
 [New-IntersightFabricFcUplinkRole](./New-IntersightFabricFcUplinkRole.md)
-
-[Remove-IntersightFabricFcUplinkRole](./Remove-IntersightFabricFcUplinkRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

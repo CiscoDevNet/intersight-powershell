@@ -19,7 +19,7 @@ Set-IntersightTamAdvisoryCount [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;TamAdvisoryCount&amp;apos; resource.
+Update a &apos;TamAdvisoryCount&apos; resource.
 
 ## PARAMETERS
 

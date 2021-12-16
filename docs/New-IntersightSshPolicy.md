@@ -19,7 +19,7 @@ New-IntersightSshPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &apos;SshPolicy&apos; resource.
+Create a &amp;apos;SshPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

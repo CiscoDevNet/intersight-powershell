@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CloudProvider< KubernetesBaremetalNodeProfile.CloudProviderEnum>][-ConfigContext< PolicyConfigContext>][-Description< string>][-KubernetesNic< string>][[-Moid]< string>][-Name< string>][-NetworkInfo< KubernetesBaremetalNetworkInfo>][-NodeGroup< KubernetesNodeGroupProfileRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-Server< ComputeRackUnitRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Target< AssetDeviceRegistrationRelationship>][-Type< KubernetesBaremetalNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CloudProvider< KubernetesBaremetalNodeProfile.CloudProviderEnum>][-ConfigContext< PolicyConfigContext>][-Description< string>][-KubernetesNic< string>][[-Moid]< string>][-Name< string>][-NetworkInfo< KubernetesBaremetalNetworkInfo>][-NodeGroup< KubernetesNodeGroupProfileRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-Server< ComputeRackUnitRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Target< AssetDeviceRegistrationRelationship>][-Type< KubernetesBaremetalNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
+Update a &apos;KubernetesBaremetalNodeProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -28,6 +28,23 @@ User initiated action. Each profile type has its own supported actions. For Hype
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionParams
+
+
+Note :- Use Initialize-IntersightPolicyActionParam to create the object of complex type PolicyActionParam
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyActionParam]
 Parameter Sets: (All)
 Aliases:
 
@@ -341,11 +358,13 @@ PS C:\> Set-IntersightKubernetesBaremetalNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
-
 [Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
 
 [New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
+
+[Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

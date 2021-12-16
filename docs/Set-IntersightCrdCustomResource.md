@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DcLauncher
-Type of custom resource or &apos;kind&apos; in K8s.
+Type of custom resource or &amp;apos;kind&amp;apos; in K8s.
 
 ```yaml
 Type: string

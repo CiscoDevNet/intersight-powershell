@@ -268,10 +268,10 @@ PS C:\> New-IntersightHyperflexVcenterConfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexVcenterConfigPolicy](./Get-IntersightHyperflexVcenterConfigPolicy.md)
-
 [Set-IntersightHyperflexVcenterConfigPolicy](./Set-IntersightHyperflexVcenterConfigPolicy.md)
 
 [Remove-IntersightHyperflexVcenterConfigPolicy](./Remove-IntersightHyperflexVcenterConfigPolicy.md)
+
+[Get-IntersightHyperflexVcenterConfigPolicy](./Get-IntersightHyperflexVcenterConfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

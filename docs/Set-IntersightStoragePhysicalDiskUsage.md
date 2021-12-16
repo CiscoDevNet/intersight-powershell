@@ -19,7 +19,7 @@ Set-IntersightStoragePhysicalDiskUsage [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StoragePhysicalDiskUsage&amp;apos; resource.
+Update a &apos;StoragePhysicalDiskUsage&apos; resource.
 
 ## PARAMETERS
 

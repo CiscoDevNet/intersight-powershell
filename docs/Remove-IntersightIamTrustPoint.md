@@ -17,7 +17,7 @@ Remove-IntersightIamTrustPoint -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamTrustPoint&amp;apos; resource.
+Delete a &apos;IamTrustPoint&apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightIamTrustPoint](./Get-IntersightIamTrustPoint.md)
-
 [New-IntersightIamTrustPoint](./New-IntersightIamTrustPoint.md)
+
+[Get-IntersightIamTrustPoint](./Get-IntersightIamTrustPoint.md)
 

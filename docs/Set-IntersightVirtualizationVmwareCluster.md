@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CpuOverCommitment< long>][-DatastoreCount< long>][-HypervisorType< VirtualizationVmwareCluster.HypervisorTypeEnum>][-InventoryPath< string>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CpuOverCommitment< long>][-DatastoreCount< long>][-HypervisorType< VirtualizationVmwareCluster.HypervisorTypeEnum>][-Identity< string>][-InventoryPath< string>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StorageClusters< System.Collections.Generic.List`1[StorageBaseClusterRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervis
 
 ```yaml
 Type: VirtualizationVmwareCluster.HypervisorTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Identity
+The internally generated identity of this cluster. This entity is not manipulated by users.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -155,6 +170,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: AssetDeviceRegistrationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageClusters
+An array of relationships to storageBaseCluster resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[StorageBaseClusterRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -255,6 +288,8 @@ PS C:\> Set-IntersightVirtualizationVmwareCluster
 ## RELATED LINKS
 
 [Get-IntersightVirtualizationVmwareCluster](./Get-IntersightVirtualizationVmwareCluster.md)
+
+[Initialize-IntersightCondAlarmSummary](./Initialize-IntersightCondAlarmSummary.md)
 
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 

@@ -255,11 +255,11 @@ PS C:\> New-IntersightFirmwareUnsupportedVersionUpgrade
 
 ## RELATED LINKS
 
+[Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
+
 [Set-IntersightFirmwareUnsupportedVersionUpgrade](./Set-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [Remove-IntersightFirmwareUnsupportedVersionUpgrade](./Remove-IntersightFirmwareUnsupportedVersionUpgrade.md)
-
-[Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [Initialize-IntersightConnectorFileChecksum](./Initialize-IntersightConnectorFileChecksum.md)
 

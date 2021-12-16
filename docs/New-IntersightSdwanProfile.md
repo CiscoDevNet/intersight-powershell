@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSdwanProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-RouterNodes< System.Collections.Generic.List`1[SdwanRouterNodeRelationship]>][-RouterPolicy< SdwanRouterPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< SdwanProfile.TypeEnum>][-VmanageAccount< SdwanVmanageAccountPolicyRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightSdwanProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-RouterNodes< System.Collections.Generic.List`1[SdwanRouterNodeRelationship]>][-RouterPolicy< SdwanRouterPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< SdwanProfile.TypeEnum>][-VmanageAccount< SdwanVmanageAccountPolicyRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SdwanProfile&amp;apos; resource.
+Create a &apos;SdwanProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -28,6 +28,23 @@ User initiated action. Each profile type has its own supported actions. For Hype
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionParams
+
+
+Note :- Use Initialize-IntersightPolicyActionParam to create the object of complex type PolicyActionParam
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyActionParam]
 Parameter Sets: (All)
 Aliases:
 
@@ -317,6 +334,8 @@ PS C:\> New-IntersightSdwanProfile
 [Remove-IntersightSdwanProfile](./Remove-IntersightSdwanProfile.md)
 
 [Get-IntersightSdwanProfile](./Get-IntersightSdwanProfile.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

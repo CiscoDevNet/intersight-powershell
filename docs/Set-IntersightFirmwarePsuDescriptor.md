@@ -19,7 +19,7 @@ Set-IntersightFirmwarePsuDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwarePsuDescriptor&apos; resource.
+Update a &amp;apos;FirmwarePsuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwarePsuDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)
-
 [Get-IntersightFirmwarePsuDescriptor](./Get-IntersightFirmwarePsuDescriptor.md)
 
 [New-IntersightFirmwarePsuDescriptor](./New-IntersightFirmwarePsuDescriptor.md)
+
+[Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
