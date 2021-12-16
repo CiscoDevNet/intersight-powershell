@@ -198,9 +198,9 @@ PS C:\> New-IntersightRecoveryRestore
 
 ## RELATED LINKS
 
-[Get-IntersightRecoveryRestore](./Get-IntersightRecoveryRestore.md)
-
 [Remove-IntersightRecoveryRestore](./Remove-IntersightRecoveryRestore.md)
+
+[Get-IntersightRecoveryRestore](./Get-IntersightRecoveryRestore.md)
 
 [Initialize-IntersightRecoveryConfigParams](./Initialize-IntersightRecoveryConfigParams.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityServerModelsCapabilityDef](./New-IntersightCapabilityServerModelsCapabilityDef.md)
+[Set-IntersightCapabilityServerModelsCapabilityDef](./Set-IntersightCapabilityServerModelsCapabilityDef.md)
 
 [Remove-IntersightCapabilityServerModelsCapabilityDef](./Remove-IntersightCapabilityServerModelsCapabilityDef.md)
 
-[Set-IntersightCapabilityServerModelsCapabilityDef](./Set-IntersightCapabilityServerModelsCapabilityDef.md)
+[New-IntersightCapabilityServerModelsCapabilityDef](./New-IntersightCapabilityServerModelsCapabilityDef.md)
 

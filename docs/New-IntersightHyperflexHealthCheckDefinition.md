@@ -19,7 +19,7 @@ New-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexHealthCheckDefinition&apos; resource.
+Create a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -337,11 +337,11 @@ PS C:\> New-IntersightHyperflexHealthCheckDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
-
 [Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
 
 [Remove-IntersightHyperflexHealthCheckDefinition](./Remove-IntersightHyperflexHealthCheckDefinition.md)
+
+[Get-IntersightHyperflexHealthCheckDefinition](./Get-IntersightHyperflexHealthCheckDefinition.md)
 
 [Initialize-IntersightHyperflexHealthCheckScriptInfo](./Initialize-IntersightHyperflexHealthCheckScriptInfo.md)
 

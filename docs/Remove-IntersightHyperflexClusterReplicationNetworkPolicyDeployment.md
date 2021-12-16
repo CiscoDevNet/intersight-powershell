@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment -Moid <Strin
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexClusterReplicationNetworkPolicyDeployment&amp;apos; resource.
+Delete a &apos;HyperflexClusterReplicationNetworkPolicyDeployment&apos; resource.
 
 ## EXAMPLES
 

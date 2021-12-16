@@ -19,7 +19,7 @@ Set-IntersightApplianceSetupInfo [-Account< IamAccountRelationship>][-Additional
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceSetupInfo&amp;apos; resource.
+Update a &apos;ApplianceSetupInfo&apos; resource.
 
 ## PARAMETERS
 

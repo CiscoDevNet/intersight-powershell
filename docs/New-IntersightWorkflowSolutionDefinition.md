@@ -19,7 +19,7 @@ New-IntersightWorkflowSolutionDefinition [-ActionDefinitions< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowSolutionDefinition&amp;apos; resource.
+Create a &apos;WorkflowSolutionDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -285,11 +285,11 @@ PS C:\> New-IntersightWorkflowSolutionDefinition
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowSolutionDefinition](./Set-IntersightWorkflowSolutionDefinition.md)
+[Get-IntersightWorkflowSolutionDefinition](./Get-IntersightWorkflowSolutionDefinition.md)
 
 [Remove-IntersightWorkflowSolutionDefinition](./Remove-IntersightWorkflowSolutionDefinition.md)
 
-[Get-IntersightWorkflowSolutionDefinition](./Get-IntersightWorkflowSolutionDefinition.md)
+[Set-IntersightWorkflowSolutionDefinition](./Set-IntersightWorkflowSolutionDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

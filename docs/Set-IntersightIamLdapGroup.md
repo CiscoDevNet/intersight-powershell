@@ -19,7 +19,7 @@ Set-IntersightIamLdapGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;IamLdapGroup&apos; resource.
+Update a &amp;apos;IamLdapGroup&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -195,8 +195,8 @@ PS C:\> Set-IntersightIamLdapGroup
 
 [Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
 
-[Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
-
 [New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
+
+[Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

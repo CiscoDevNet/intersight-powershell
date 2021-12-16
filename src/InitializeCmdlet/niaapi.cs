@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiNewReleaseDetail.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiRevisionInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiNewReleaseDetail")]
-    public class InitializeIntersightNiaapiNewReleaseDetail:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiRevisionInfo")]
+    public class InitializeIntersightNiaapiRevisionInfo:PSCmdlet
 	{
-		public InitializeIntersightNiaapiNewReleaseDetail()
+		public InitializeIntersightNiaapiRevisionInfo()
 		{
-            ClassId = NiaapiNewReleaseDetail.ClassIdEnum.NiaapiNewReleaseDetail;
-            ObjectType = NiaapiNewReleaseDetail.ObjectTypeEnum.NiaapiNewReleaseDetail;
+            ClassId = NiaapiRevisionInfo.ClassIdEnum.NiaapiRevisionInfo;
+            ObjectType = NiaapiRevisionInfo.ObjectTypeEnum.NiaapiRevisionInfo;
             
 		}
         // <summary>
@@ -33,25 +33,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public NiaapiNewReleaseDetail.ClassIdEnum ClassId {
+        public NiaapiRevisionInfo.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Description of this new verison release post."</para>
+        /// <para type="description">"The date the revision is made."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Link of downloading the release file."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Link {
+        public DateTime DatePublished {
             get;
             set;
         }
@@ -60,105 +51,49 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public NiaapiNewReleaseDetail.ObjectTypeEnum ObjectType {
+        public NiaapiRevisionInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The link used to provide a gateway for customer to review the release note."</para>
+        /// <para type="description">"The changes made in this revision."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ReleaseNoteLink {
+        public string RevisionComment {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The link title used to provide a gateway for customer to review the release note."</para>
+        /// <para type="description">"The Revision No. of this revision."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ReleaseNoteLinkTitle {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The link used to provide a gateway for customer to download the release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SoftwareDownloadLink {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The link title used to provide a gateway for customer to download the release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SoftwareDownloadLinkTitle {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Title of the new verison release post."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Title {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Version number Associate with this Post."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
+        public string RevisionNo {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.NiaapiNewReleaseDetail initObject = new Intersight.Model.NiaapiNewReleaseDetail();
+             Intersight.Model.NiaapiRevisionInfo initObject = new Intersight.Model.NiaapiRevisionInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DatePublished"))
             {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Link"))
-            {
-                initObject.Link = this.Link;
+                initObject.DatePublished = this.DatePublished;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNoteLink"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionComment"))
             {
-                initObject.ReleaseNoteLink = this.ReleaseNoteLink;
+                initObject.RevisionComment = this.RevisionComment;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNoteLinkTitle"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionNo"))
             {
-                initObject.ReleaseNoteLinkTitle = this.ReleaseNoteLinkTitle;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareDownloadLink"))
-            {
-                initObject.SoftwareDownloadLink = this.SoftwareDownloadLink;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareDownloadLinkTitle"))
-            {
-                initObject.SoftwareDownloadLinkTitle = this.SoftwareDownloadLinkTitle;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Title"))
-            {
-                initObject.Title = this.Title;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
+                initObject.RevisionNo = this.RevisionNo;
             }
             WriteObject(initObject);
         }
@@ -252,98 +187,6 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiRevisionInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiRevisionInfo")]
-    public class InitializeIntersightNiaapiRevisionInfo:PSCmdlet
-	{
-		public InitializeIntersightNiaapiRevisionInfo()
-		{
-            ClassId = NiaapiRevisionInfo.ClassIdEnum.NiaapiRevisionInfo;
-            ObjectType = NiaapiRevisionInfo.ObjectTypeEnum.NiaapiRevisionInfo;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiRevisionInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The date the revision is made."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime DatePublished {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NiaapiRevisionInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The changes made in this revision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RevisionComment {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Revision No. of this revision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RevisionNo {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.NiaapiRevisionInfo initObject = new Intersight.Model.NiaapiRevisionInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DatePublished"))
-            {
-                initObject.DatePublished = this.DatePublished;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionComment"))
-            {
-                initObject.RevisionComment = this.RevisionComment;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RevisionNo"))
-            {
-                initObject.RevisionNo = this.RevisionNo;
-            }
             WriteObject(initObject);
         }
 
@@ -540,6 +383,163 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Upcominglltrain"))
             {
                 initObject.Upcominglltrain = this.Upcominglltrain;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiNewReleaseDetail.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiNewReleaseDetail")]
+    public class InitializeIntersightNiaapiNewReleaseDetail:PSCmdlet
+	{
+		public InitializeIntersightNiaapiNewReleaseDetail()
+		{
+            ClassId = NiaapiNewReleaseDetail.ClassIdEnum.NiaapiNewReleaseDetail;
+            ObjectType = NiaapiNewReleaseDetail.ObjectTypeEnum.NiaapiNewReleaseDetail;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiNewReleaseDetail.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of this new verison release post."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Link of downloading the release file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Link {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NiaapiNewReleaseDetail.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The link used to provide a gateway for customer to review the release note."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ReleaseNoteLink {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The link title used to provide a gateway for customer to review the release note."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ReleaseNoteLinkTitle {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The link used to provide a gateway for customer to download the release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SoftwareDownloadLink {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The link title used to provide a gateway for customer to download the release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SoftwareDownloadLinkTitle {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Title of the new verison release post."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Title {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version number Associate with this Post."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.NiaapiNewReleaseDetail initObject = new Intersight.Model.NiaapiNewReleaseDetail();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Link"))
+            {
+                initObject.Link = this.Link;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNoteLink"))
+            {
+                initObject.ReleaseNoteLink = this.ReleaseNoteLink;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNoteLinkTitle"))
+            {
+                initObject.ReleaseNoteLinkTitle = this.ReleaseNoteLinkTitle;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareDownloadLink"))
+            {
+                initObject.SoftwareDownloadLink = this.SoftwareDownloadLink;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareDownloadLinkTitle"))
+            {
+                initObject.SoftwareDownloadLinkTitle = this.SoftwareDownloadLinkTitle;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Title"))
+            {
+                initObject.Title = this.Title;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
             }
             WriteObject(initObject);
         }

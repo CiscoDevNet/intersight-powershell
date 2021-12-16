@@ -17,7 +17,7 @@ Remove-IntersightFabricEthNetworkGroupPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricEthNetworkGroupPolicy&amp;apos; resource.
+Delete a &apos;FabricEthNetworkGroupPolicy&apos; resource.
 
 ## EXAMPLES
 

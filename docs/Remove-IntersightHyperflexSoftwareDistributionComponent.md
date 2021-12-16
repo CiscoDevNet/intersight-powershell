@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSoftwareDistributionComponent -Moid <String> [<CommonP
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexSoftwareDistributionComponent&amp;apos; resource.
+Delete a &apos;HyperflexSoftwareDistributionComponent&apos; resource.
 
 ## EXAMPLES
 

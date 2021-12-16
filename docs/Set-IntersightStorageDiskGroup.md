@@ -19,7 +19,7 @@ Set-IntersightStorageDiskGroup [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageDiskGroup&amp;apos; resource.
+Update a &apos;StorageDiskGroup&apos; resource.
 
 ## PARAMETERS
 

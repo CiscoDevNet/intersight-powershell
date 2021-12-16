@@ -19,7 +19,7 @@ New-IntersightBulkMoMerger [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;BulkMoMerger&amp;apos; resource.
+Create a &apos;BulkMoMerger&apos; resource.
 
 ## PARAMETERS
 

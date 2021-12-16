@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The subscription name.
+The name of the subscription.
 
 ```yaml
 Type: string

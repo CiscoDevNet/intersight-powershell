@@ -212,9 +212,9 @@ PS C:\> New-IntersightRecoveryScheduleConfigPolicy
 
 [Get-IntersightRecoveryScheduleConfigPolicy](./Get-IntersightRecoveryScheduleConfigPolicy.md)
 
-[Remove-IntersightRecoveryScheduleConfigPolicy](./Remove-IntersightRecoveryScheduleConfigPolicy.md)
-
 [Set-IntersightRecoveryScheduleConfigPolicy](./Set-IntersightRecoveryScheduleConfigPolicy.md)
+
+[Remove-IntersightRecoveryScheduleConfigPolicy](./Remove-IntersightRecoveryScheduleConfigPolicy.md)
 
 [Initialize-IntersightRecoveryBackupSchedule](./Initialize-IntersightRecoveryBackupSchedule.md)
 

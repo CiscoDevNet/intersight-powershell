@@ -19,7 +19,7 @@ Set-IntersightComputeMapping [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ComputeMapping&amp;apos; resource.
+Update a &apos;ComputeMapping&apos; resource.
 
 ## PARAMETERS
 

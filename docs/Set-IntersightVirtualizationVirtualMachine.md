@@ -450,11 +450,11 @@ PS C:\> Set-IntersightVirtualizationVirtualMachine
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
-
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
 [New-IntersightVirtualizationVirtualMachine](./New-IntersightVirtualizationVirtualMachine.md)
+
+[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
 
 [Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
 

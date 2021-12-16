@@ -19,7 +19,7 @@ Set-IntersightTopSystem [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;TopSystem&apos; resource.
+Update a &amp;apos;TopSystem&amp;apos; resource.
 
 ## PARAMETERS
 

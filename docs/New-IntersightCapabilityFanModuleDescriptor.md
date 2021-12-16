@@ -19,7 +19,7 @@ New-IntersightCapabilityFanModuleDescriptor [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityFanModuleDescriptor&amp;apos; resource.
+Create a &apos;CapabilityFanModuleDescriptor&apos; resource.
 
 ## PARAMETERS
 

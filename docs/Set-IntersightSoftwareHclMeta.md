@@ -19,7 +19,7 @@ Set-IntersightSoftwareHclMeta [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwareHclMeta&amp;apos; resource.
+Update a &apos;SoftwareHclMeta&apos; resource.
 
 ## PARAMETERS
 
@@ -485,9 +485,9 @@ PS C:\> Set-IntersightSoftwareHclMeta
 
 ## RELATED LINKS
 
-[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
-
 [Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
+
+[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
 
 [Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
 

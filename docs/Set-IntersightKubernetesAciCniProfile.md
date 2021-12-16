@@ -19,7 +19,7 @@ Set-IntersightKubernetesAciCniProfile [-AaepName< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAciCniProfile&amp;apos; resource.
+Update a &apos;KubernetesAciCniProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -421,10 +421,10 @@ PS C:\> Set-IntersightKubernetesAciCniProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
+
 [Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
 
 [New-IntersightKubernetesAciCniProfile](./New-IntersightKubernetesAciCniProfile.md)
-
-[Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

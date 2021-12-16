@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
-
 [Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
+
+[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
 
 [Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
 

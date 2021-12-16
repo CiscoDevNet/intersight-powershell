@@ -17,7 +17,7 @@ Remove-IntersightFirmwareChassisUpgrade -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareChassisUpgrade&amp;apos; resource.
+Delete a &apos;FirmwareChassisUpgrade&apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareChassisUpgrade](./New-IntersightFirmwareChassisUpgrade.md)
-
 [Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
+
+[New-IntersightFirmwareChassisUpgrade](./New-IntersightFirmwareChassisUpgrade.md)
 

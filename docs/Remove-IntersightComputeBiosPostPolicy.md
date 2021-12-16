@@ -17,7 +17,7 @@ Remove-IntersightComputeBiosPostPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ComputeBiosPostPolicy&apos; resource.
+Delete a &amp;apos;ComputeBiosPostPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

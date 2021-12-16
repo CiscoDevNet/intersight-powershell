@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryCount [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &apos;TamAdvisoryCount&apos; resource.
+Create a &amp;apos;TamAdvisoryCount&amp;apos; resource.
 
 ## PARAMETERS
 

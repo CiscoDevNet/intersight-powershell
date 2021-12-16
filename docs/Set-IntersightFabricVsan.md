@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricVsan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DefaultZoning< FabricVsan.DefaultZoningEnum>][-FcNetworkPolicy< FabricFcNetworkPolicyRelationship>][-FcZoneSharingMode< string>][-FcoeVlan< long>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VsanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricVsan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DefaultZoning< FabricVsan.DefaultZoningEnum>][-FcNetworkPolicy< FabricFcNetworkPolicyRelationship>][-FcZoneSharingMode< string>][-FcoeVlan< long>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VsanId< long>][-VsanScope< FabricVsan.VsanScopeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricVsan&apos; resource.
+Update a &amp;apos;FabricVsan&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -153,6 +153,21 @@ Virtual San Identifier in the switch.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VsanScope
+Used to indicate whether the VSAN Id is defined for storage or uplink or both traffics in FI.\n* `Uplink` - Vsan associated with uplink network.\n* `Storage` - Vsan associated with storage network.\n* `Common` - Vsan that is common for uplink and storage network.
+
+```yaml
+Type: FabricVsan.VsanScopeEnum
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetPrivateKeyCredential [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetPrivateKeyCredential.ClassIdEnum>][-ObjectType< AssetPrivateKeyCredential.ObjectTypeEnum>][-Passphrase< string>][-PrivateKey< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetPrivateKeyCredential [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetPrivateKeyCredential.ClassIdEnum>][-ObjectType< AssetPrivateKeyCredential.ObjectTypeEnum>][-Passphrase< string>][-PrivateKey< string>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,6 +86,21 @@ Accept wildcard characters: False
 
 ### -PrivateKey
 The private key used to authenticate with a managed target. The corresponding public key needs to be added in the auth list of the remote endpoint.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Username
+The username used to authenticate with a managed target.
 
 ```yaml
 Type: string

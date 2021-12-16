@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareServerConfigurationUtilityDistributable](./Set-IntersightFirmwareServerConfigurationUtilityDistributable.md)
+[New-IntersightFirmwareServerConfigurationUtilityDistributable](./New-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 
 [Remove-IntersightFirmwareServerConfigurationUtilityDistributable](./Remove-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 
-[New-IntersightFirmwareServerConfigurationUtilityDistributable](./New-IntersightFirmwareServerConfigurationUtilityDistributable.md)
+[Set-IntersightFirmwareServerConfigurationUtilityDistributable](./Set-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 

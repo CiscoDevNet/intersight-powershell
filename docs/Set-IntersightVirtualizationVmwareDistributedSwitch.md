@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareDistributedSwitch [-AdditionalProperties< Syst
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDistributedSwitch&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDistributedSwitch&apos; resource.
 
 ## PARAMETERS
 
@@ -273,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-The running config&amp;apos;s version details are represented.
+The running config&apos;s version details are represented.
 
 ```yaml
 Type: string

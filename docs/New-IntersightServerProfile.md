@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightServerProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-LeasedServer< ComputePhysicalRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-LeasedServer< ComputePhysicalRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,23 @@ User initiated action. Each profile type has its own supported actions. For Hype
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionParams
+
+
+Note :- Use Initialize-IntersightPolicyActionParam to create the object of complex type PolicyActionParam
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyActionParam]
 Parameter Sets: (All)
 Aliases:
 
@@ -445,6 +462,8 @@ PS C:\> New-IntersightServerProfile
 [Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
 
 [Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
 

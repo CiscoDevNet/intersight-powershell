@@ -242,9 +242,9 @@ PS C:\> Set-IntersightIamCertificateRequest
 
 ## RELATED LINKS
 
-[New-IntersightIamCertificateRequest](./New-IntersightIamCertificateRequest.md)
-
 [Get-IntersightIamCertificateRequest](./Get-IntersightIamCertificateRequest.md)
+
+[New-IntersightIamCertificateRequest](./New-IntersightIamCertificateRequest.md)
 
 [Remove-IntersightIamCertificateRequest](./Remove-IntersightIamCertificateRequest.md)
 

@@ -19,7 +19,7 @@ Set-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IqnpoolPool&amp;apos; resource.
+Update a &apos;IqnpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-The prefix for any IQN blocks created for this pool. IQN Prefix must have the following format \&quot;iqn.yyyy-mm.naming-authority\&quot;, where naming-authority is usually the reverse syntax of the Internet domain name of the naming authority.
+The prefix for any IQN blocks created for this pool. IQN Prefix must have the following format \&amp;quot;iqn.yyyy-mm.naming-authority\&amp;quot;, where naming-authority is usually the reverse syntax of the Internet domain name of the naming authority.
 
 ```yaml
 Type: string

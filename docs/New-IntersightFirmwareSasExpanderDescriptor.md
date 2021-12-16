@@ -19,7 +19,7 @@ New-IntersightFirmwareSasExpanderDescriptor [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareSasExpanderDescriptor&apos; resource.
+Create a &amp;apos;FirmwareSasExpanderDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

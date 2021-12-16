@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesEthernet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Addresses< System.Collections.Generic.List`1[string]>][-ClassId< KubernetesEthernet.ClassIdEnum>][-Gateway< string>][-Matcher< Model.KubernetesEthernetMatcher>][-Mtu< long>][-Name< string>][-ObjectType< KubernetesEthernet.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesEthernet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Addresses< System.Collections.Generic.List`1[string]>][-ClassId< KubernetesEthernet.ClassIdEnum>][-Gateway< string>][-IpV4Configs< System.Collections.Generic.List`1[Model.KubernetesIpV4Config]>][-Matcher< Model.KubernetesEthernetMatcher>][-Mtu< long>][-Name< string>][-ObjectType< KubernetesEthernet.ObjectTypeEnum>][-ProviderName< string>][-Routes< System.Collections.Generic.List`1[Model.KubernetesRoute]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,10 +70,27 @@ Accept wildcard characters: False
 ```
 
 ### -Gateway
-The Network Gateway for the Network Interface.
+Deprecated. This will add a default route as long as the first default route in Routes is not different. If is different, Gateway will be replaced with that default route. If there is no default Route and this is set, then Routes will be updated with the first entry as a default with this default gateway. If there is only one default Route and this gateway becomes empty, then the default routes will all be removed. Do not set if using Ip Pools, as the gateway is configured in the pool. This will be removed in the future.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IpV4Configs
+
+
+Note :- Use Initialize-IntersightKubernetesIpV4Config to create the object of complex type KubernetesIpV4Config
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.KubernetesIpV4Config]
 Parameter Sets: (All)
 Aliases:
 
@@ -146,6 +163,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ProviderName
+If the infrastructure network is selectable, this indicates which network to attach to the port.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Routes
+
+
+Note :- Use Initialize-IntersightKubernetesRoute to create the object of complex type KubernetesRoute
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.KubernetesRoute]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -203,4 +252,8 @@ PS C:\> Initialize-IntersightKubernetesEthernet
 
 ## RELATED LINKS
 
+[Initialize-IntersightKubernetesIpV4Config](./Initialize-IntersightKubernetesIpV4Config.md)
+
 [Initialize-IntersightKubernetesEthernetMatcher](./Initialize-IntersightKubernetesEthernetMatcher.md)
+
+[Initialize-IntersightKubernetesRoute](./Initialize-IntersightKubernetesRoute.md)

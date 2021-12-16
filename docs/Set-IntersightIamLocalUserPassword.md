@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User&amp;apos;s current valid passsord.
+User&apos;s current valid passsord.
 
 ```yaml
 Type: byte

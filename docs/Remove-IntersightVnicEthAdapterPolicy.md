@@ -17,7 +17,7 @@ Remove-IntersightVnicEthAdapterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicEthAdapterPolicy&apos; resource.
+Delete a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

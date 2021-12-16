@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-Admin configured UDLD Mode for this port.\n* `normal` - Admin configured &amp;apos;normal&amp;apos; UDLD mode.\n* `aggressive` - Admin configured &amp;apos;aggressive&amp;apos; UDLD mode.
+Admin configured UDLD Mode for this port.\n* `normal` - Admin configured &apos;normal&apos; UDLD mode.\n* `aggressive` - Admin configured &apos;aggressive&apos; UDLD mode.
 
 ```yaml
 Type: FabricUdldSettings.ModeEnum
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: FabricUdldSettings.ObjectTypeEnum

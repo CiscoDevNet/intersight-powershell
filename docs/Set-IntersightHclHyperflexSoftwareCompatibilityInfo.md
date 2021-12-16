@@ -19,7 +19,7 @@ Set-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< Syst
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HclHyperflexSoftwareCompatibilityInfo&amp;apos; resource.
+Update a &apos;HclHyperflexSoftwareCompatibilityInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -222,11 +222,11 @@ PS C:\> Set-IntersightHclHyperflexSoftwareCompatibilityInfo
 
 ## RELATED LINKS
 
-[New-IntersightHclHyperflexSoftwareCompatibilityInfo](./New-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
+[Remove-IntersightHclHyperflexSoftwareCompatibilityInfo](./Remove-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [Get-IntersightHclHyperflexSoftwareCompatibilityInfo](./Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
-[Remove-IntersightHclHyperflexSoftwareCompatibilityInfo](./Remove-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
+[New-IntersightHclHyperflexSoftwareCompatibilityInfo](./New-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [Initialize-IntersightHclConstraint](./Initialize-IntersightHclConstraint.md)
 

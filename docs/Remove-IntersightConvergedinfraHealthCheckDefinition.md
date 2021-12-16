@@ -17,7 +17,7 @@ Remove-IntersightConvergedinfraHealthCheckDefinition -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ConvergedinfraHealthCheckDefinition&amp;apos; resource.
+Delete a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
-
 [New-IntersightConvergedinfraHealthCheckDefinition](./New-IntersightConvergedinfraHealthCheckDefinition.md)
+
+[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
 
 [Set-IntersightConvergedinfraHealthCheckDefinition](./Set-IntersightConvergedinfraHealthCheckDefinition.md)
 

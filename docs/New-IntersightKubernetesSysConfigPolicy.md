@@ -19,7 +19,7 @@ New-IntersightKubernetesSysConfigPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesSysConfigPolicy&amp;apos; resource.
+Create a &apos;KubernetesSysConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -253,10 +253,10 @@ PS C:\> New-IntersightKubernetesSysConfigPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesSysConfigPolicy](./Get-IntersightKubernetesSysConfigPolicy.md)
+
 [Set-IntersightKubernetesSysConfigPolicy](./Set-IntersightKubernetesSysConfigPolicy.md)
 
 [Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
-
-[Get-IntersightKubernetesSysConfigPolicy](./Get-IntersightKubernetesSysConfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

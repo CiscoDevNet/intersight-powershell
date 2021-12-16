@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricPortMode](./Set-IntersightFabricPortMode.md)
-
 [Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)
 
 [New-IntersightFabricPortMode](./New-IntersightFabricPortMode.md)
+
+[Set-IntersightFabricPortMode](./Set-IntersightFabricPortMode.md)
 

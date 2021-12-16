@@ -141,59 +141,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkHttpHeader.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkHttpHeader")]
-    public class InitializeIntersightBulkHttpHeader:PSCmdlet
-	{
-		public InitializeIntersightBulkHttpHeader()
-		{
-            ClassId = BulkHttpHeader.ClassIdEnum.BulkHttpHeader;
-            ObjectType = BulkHttpHeader.ObjectTypeEnum.BulkHttpHeader;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BulkHttpHeader.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BulkHttpHeader.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BulkRestResult.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBulkRestResult")]
@@ -348,6 +295,59 @@ namespace Intersight.PowerShell
             {
                 initObject.Verb = this.Verb;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkHttpHeader.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkHttpHeader")]
+    public class InitializeIntersightBulkHttpHeader:PSCmdlet
+	{
+		public InitializeIntersightBulkHttpHeader()
+		{
+            ClassId = BulkHttpHeader.ClassIdEnum.BulkHttpHeader;
+            ObjectType = BulkHttpHeader.ObjectTypeEnum.BulkHttpHeader;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BulkHttpHeader.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BulkHttpHeader.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

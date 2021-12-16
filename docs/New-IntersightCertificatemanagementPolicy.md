@@ -19,7 +19,7 @@ New-IntersightCertificatemanagementPolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CertificatemanagementPolicy&amp;apos; resource.
+Create a &apos;CertificatemanagementPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -215,9 +215,9 @@ PS C:\> New-IntersightCertificatemanagementPolicy
 
 [Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
 
-[Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)
-
 [Set-IntersightCertificatemanagementPolicy](./Set-IntersightCertificatemanagementPolicy.md)
+
+[Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)
 
 [Initialize-IntersightCertificatemanagementCertificateBase](./Initialize-IntersightCertificatemanagementCertificateBase.md)
 

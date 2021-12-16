@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesEsxiVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum>][-Cluster< string>][-Datastore< string>][-Interfaces< System.Collections.Generic.List`1[string]>][-ObjectType< KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum>][-Passphrase< string>][-ResourcePool< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesEsxiVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum>][-Cluster< string>][-Datastore< string>][-Interfaces< System.Collections.Generic.List`1[string]>][-NetworkInterfaces< System.Collections.Generic.List`1[Model.KubernetesNetworkInterfaceSpec]>][-ObjectType< KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum>][-Passphrase< string>][-ResourcePool< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,23 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkInterfaces
+
+
+Note :- Use Initialize-IntersightKubernetesNetworkInterfaceSpec to create the object of complex type KubernetesNetworkInterfaceSpec
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.KubernetesNetworkInterfaceSpec]
 Parameter Sets: (All)
 Aliases:
 
@@ -200,3 +217,5 @@ PS C:\> Initialize-IntersightKubernetesEsxiVirtualMachineInfraConfig
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightKubernetesNetworkInterfaceSpec](./Initialize-IntersightKubernetesNetworkInterfaceSpec.md)

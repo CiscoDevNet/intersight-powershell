@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexAutoSupportPolicy](./Set-IntersightHyperflexAutoSupportPolicy.md)
+[New-IntersightHyperflexAutoSupportPolicy](./New-IntersightHyperflexAutoSupportPolicy.md)
 
 [Get-IntersightHyperflexAutoSupportPolicy](./Get-IntersightHyperflexAutoSupportPolicy.md)
 
-[New-IntersightHyperflexAutoSupportPolicy](./New-IntersightHyperflexAutoSupportPolicy.md)
+[Set-IntersightHyperflexAutoSupportPolicy](./Set-IntersightHyperflexAutoSupportPolicy.md)
 

@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Management.Automation;
 using System.Text;
+using System.Reflection;
+using System.Linq;
 
 namespace Intersight.PowerShell
 {
@@ -31,20 +33,14 @@ namespace Intersight.PowerShell
 				{
 					throw new Exception("Moid cannot be empty or null.");
 				}
-
-				this.ModelObject = GetMoByMoid(this.MyInvocation.BoundParameters["Moid"]);
-				var propertyList = this.ModelObject.GetType().GetProperties();
-				foreach (var item in propertyList)
+				
+				var changedPropeties = GetChangedProperty();
+				foreach(var item in changedPropeties)
 				{
-					var propName = item.Name;
-					if (item.Name.StartsWith("_"))
+					PropertyInfo propertyInfo = this.ModelObject.GetType().GetProperty(item.Key);
+					if(propertyInfo != null)
 					{
-						propName = item.Name.TrimStart('_');
-					}
-
-					if (this.MyInvocation.BoundParameters.ContainsKey(propName))
-					{
-						item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
+						propertyInfo.SetValue(this.ModelObject, this.MyInvocation.BoundParameters[item.Key]);
 					}
 				}
 
@@ -87,6 +83,81 @@ namespace Intersight.PowerShell
 				return result;
 			}
 			return ModelObject;
+		}
+
+		private Dictionary<string,object> GetChangedProperty()
+		{
+			var changedProperties = new Dictionary<string, object>();
+			if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+			{
+				changedProperties.Add("Moid", this.MyInvocation.BoundParameters["Moid"]);
+			}
+
+			if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+			{
+				changedProperties.Add("Name", this.MyInvocation.BoundParameters["Name"]);
+			}
+			
+			var getObject = GetMoByMoid(this.MyInvocation.BoundParameters["Moid"]);
+			foreach(var propName in this.MyInvocation.BoundParameters)
+			{
+				var getPropertyInfo = getObject.GetType().GetProperty(propName.Key);
+				if (getPropertyInfo != null)
+				{
+					var getVal = getPropertyInfo.GetValue(getObject);
+					if (getVal == null)
+					{
+						if (getVal != propName.Value)
+						{
+							changedProperties.Add(propName.Key, propName.Value);
+						}
+						continue;
+					}
+
+					if (propName.Value == null)
+					{
+						if (getVal != propName.Value)
+						{
+							changedProperties.Add(propName.Key, propName.Value);
+						}
+						continue;
+					}
+					
+					if ((getVal.GetType().Name =="String" || getVal.GetType().IsPrimitive))
+					{
+						if (!(getVal.Equals(propName.Value)))
+						{
+							changedProperties.Add(propName.Key, propName.Value);
+						}
+					}
+					else if(getVal.GetType().Name == "List`1")
+					{
+						List<Object> getCollection = new List<Object>((IEnumerable<Object>)getVal);
+						List<Object> paramCollection = new List<Object>((IEnumerable<Object>)propName.Value);
+						if(!Enumerable.SequenceEqual(paramCollection, getCollection))
+						{
+							changedProperties.Add(propName.Key, propName.Value);
+						}
+
+					}
+					else if(getVal.GetType().IsEnum)
+					{
+						if(getVal != propName.Value)
+						{
+							changedProperties.Add(propName.Key, propName.Value);
+						}
+					}
+					else
+					{
+						if (getVal != propName.Value)
+						{
+							changedProperties.Add(propName.Key, propName.Value);
+						}
+					}
+				}		
+			}
+
+			return changedProperties;
 		}
 	}
 }

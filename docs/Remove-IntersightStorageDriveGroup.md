@@ -17,7 +17,7 @@ Remove-IntersightStorageDriveGroup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;StorageDriveGroup&amp;apos; resource.
+Delete a &apos;StorageDriveGroup&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
+
 [Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
 
 [New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
-
-[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
 

@@ -228,9 +228,9 @@ PS C:\> New-IntersightFabricFcoeUplinkPcRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricFcoeUplinkPcRole](./Remove-IntersightFabricFcoeUplinkPcRole.md)
-
 [Set-IntersightFabricFcoeUplinkPcRole](./Set-IntersightFabricFcoeUplinkPcRole.md)
+
+[Remove-IntersightFabricFcoeUplinkPcRole](./Remove-IntersightFabricFcoeUplinkPcRole.md)
 
 [Get-IntersightFabricFcoeUplinkPcRole](./Get-IntersightFabricFcoeUplinkPcRole.md)
 

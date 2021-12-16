@@ -589,702 +589,6 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NetworkFcZoneInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFcZoneInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNetworkFcZoneInfo:GetCmdletBase
-	{
-		public GetIntersightNetworkFcZoneInfo()
-		{
-			ApiInstance = new NetworkApi(Config);
-            MethodName = "GetNetworkFcZoneInfoListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The database identifier of the registered device of an object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DeviceMoId {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Dn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public InventoryDeviceInfoRelationship InventoryDeviceInfo {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public NetworkElementRelationship NetworkElement {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Rn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The number of Fibre Channel user zones defined on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long UserZoneCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The maximum number of Fibre Channel user zones allowed on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long UserZoneLimit {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The number of Fibre Channel zones defined on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long ZoneCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The maximum number of Fibre Channel zones allowed on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long ZoneLimit {
-            get;
-            set;
-        }
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NetworkVlanPortInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVlanPortInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNetworkVlanPortInfo:GetCmdletBase
-	{
-		public GetIntersightNetworkVlanPortInfo()
-		{
-			ApiInstance = new NetworkApi(Config);
-            MethodName = "GetNetworkVlanPortInfoListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The number of available VLAN access ports on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long AccessVlanPortCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The number of available VLAN border ports on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long BorderVlanPortCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The number of compressed VLAN Group count on a Fabric Interconnect calculated by VLAN port group library."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long CompressedOptimizationSetsValue {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The number of compressed VLAN ports on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string CompressedVlanPortCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The number of compressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long CompressedVlanPortCountValue {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The database identifier of the registered device of an object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DeviceMoId {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Dn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public InventoryDeviceInfoRelationship InventoryDeviceInfo {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public NetworkElementRelationship NetworkElement {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Rn {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The total number of VLAN ports on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long TotalVlanPortCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The number of uncompressed VLAN ports on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string UncompressedVlanPortCount {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The number of uncompressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long UncompressedVlanPortCountValue {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The maximum number of VLAN ports allowed on a Fabric Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long VlanPortLimit {
-            get;
-            set;
-        }
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set NetworkElement.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkElement")]
-    public class SetIntersightNetworkElement:SetCmdletBase
-	{
-		public SetIntersightNetworkElement()
-		{
-			ApiInstance = new NetworkApi(Config);
-            ModelObject = new NetworkElement();
-            MethodName = "UpdateNetworkElementWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The summary of alarm counts based on the severity types (Critical or Warning)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeAlarmSummary AlarmSummary {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The fault summary of the network Element out-of-band management interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long FaultSummary {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The management mode of the fabric interconnect.\n* `IntersightStandalone` - Intersight Standalone mode of operation.\n* `UCSM` - Unified Computing System Manager mode of operation.\n* `Intersight` - Intersight managed mode of operation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NetworkElement.ManagementModeEnum ManagementMode {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The IPv6 address of the network Element out-of-band management interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OutOfBandIpv6Address {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The default IPv6 gateway of the network Element out-of-band management interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OutOfBandIpv6Gateway {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The network mask of the network Element out-of-band management interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OutOfBandIpv6Prefix {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"An array of relationships to portMacBinding resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<PortMacBindingRelationship> PortMacBindings {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor's temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public NetworkElement.ThermalEnum Thermal {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a topSystem resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TopSystemRelationship TopSystem {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a firmwareRunningFirmware resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FirmwareRunningFirmwareRelationship UcsmRunningFirmware {
-            get;
-            set;
-        }
-        
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set NetworkFcZoneInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkFcZoneInfo")]
-    public class SetIntersightNetworkFcZoneInfo:SetCmdletBase
-	{
-		public SetIntersightNetworkFcZoneInfo()
-		{
-			ApiInstance = new NetworkApi(Config);
-            ModelObject = new NetworkFcZoneInfo();
-            MethodName = "PatchNetworkFcZoneInfoWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkElement.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNetworkElement", DefaultParameterSetName = "CmdletParam")]
@@ -1831,6 +1135,462 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkFcZoneInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFcZoneInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNetworkFcZoneInfo:GetCmdletBase
+	{
+		public GetIntersightNetworkFcZoneInfo()
+		{
+			ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkFcZoneInfoListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DeviceMoId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Dn {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public InventoryDeviceInfoRelationship InventoryDeviceInfo {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public NetworkElementRelationship NetworkElement {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Rn {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The number of Fibre Channel user zones defined on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long UserZoneCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The maximum number of Fibre Channel user zones allowed on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long UserZoneLimit {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The number of Fibre Channel zones defined on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long ZoneCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The maximum number of Fibre Channel zones allowed on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long ZoneLimit {
+            get;
+            set;
+        }
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkFcZoneInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkFcZoneInfo")]
+    public class SetIntersightNetworkFcZoneInfo:SetCmdletBase
+	{
+		public SetIntersightNetworkFcZoneInfo()
+		{
+			ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkFcZoneInfo();
+            MethodName = "UpdateNetworkFcZoneInfoWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkElement.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkElement")]
+    public class SetIntersightNetworkElement:SetCmdletBase
+	{
+		public SetIntersightNetworkElement()
+		{
+			ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkElement();
+            MethodName = "UpdateNetworkElementWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The summary of alarm counts based on the severity types (Critical or Warning)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeAlarmSummary AlarmSummary {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The fault summary of the network Element out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long FaultSummary {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The management mode of the fabric interconnect.\n* `IntersightStandalone` - Intersight Standalone mode of operation.\n* `UCSM` - Unified Computing System Manager mode of operation.\n* `Intersight` - Intersight managed mode of operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NetworkElement.ManagementModeEnum ManagementMode {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The IPv6 address of the network Element out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OutOfBandIpv6Address {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The default IPv6 gateway of the network Element out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OutOfBandIpv6Gateway {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The network mask of the network Element out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OutOfBandIpv6Prefix {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"An array of relationships to portMacBinding resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<PortMacBindingRelationship> PortMacBindings {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor's temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NetworkElement.ThermalEnum Thermal {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a topSystem resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TopSystemRelationship TopSystem {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a firmwareRunningFirmware resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FirmwareRunningFirmwareRelationship UcsmRunningFirmware {
+            get;
+            set;
+        }
+        
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkVlanPortInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightNetworkVlanPortInfo")]
@@ -1923,6 +1683,246 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkVlanPortInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVlanPortInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNetworkVlanPortInfo:GetCmdletBase
+	{
+		public GetIntersightNetworkVlanPortInfo()
+		{
+			ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkVlanPortInfoListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The number of available VLAN access ports on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long AccessVlanPortCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The number of available VLAN border ports on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long BorderVlanPortCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The number of compressed VLAN Group count on a Fabric Interconnect calculated by VLAN port group library."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long CompressedOptimizationSetsValue {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The number of compressed VLAN ports on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string CompressedVlanPortCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The number of compressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long CompressedVlanPortCountValue {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DeviceMoId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Dn {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public InventoryDeviceInfoRelationship InventoryDeviceInfo {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public NetworkElementRelationship NetworkElement {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Rn {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The total number of VLAN ports on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long TotalVlanPortCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The number of uncompressed VLAN ports on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string UncompressedVlanPortCount {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The number of uncompressed VLAN port count on a Fabric Interconnect calculated by VLAN port group library."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long UncompressedVlanPortCountValue {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The maximum number of VLAN ports allowed on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long VlanPortLimit {
+            get;
+            set;
+        }
+
         
     }
 }

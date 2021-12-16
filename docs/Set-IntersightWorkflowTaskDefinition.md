@@ -19,7 +19,7 @@ Set-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowTaskDefinition&apos; resource.
+Update a &amp;apos;WorkflowTaskDefinition&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightCertificatemanagementPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;CertificatemanagementPolicy&apos; resource.
+Delete a &amp;apos;CertificatemanagementPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

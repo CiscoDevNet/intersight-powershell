@@ -19,7 +19,7 @@ Set-IntersightEquipmentPsuControl [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentPsuControl&apos; resource.
+Update a &amp;apos;EquipmentPsuControl&amp;apos; resource.
 
 ## PARAMETERS
 

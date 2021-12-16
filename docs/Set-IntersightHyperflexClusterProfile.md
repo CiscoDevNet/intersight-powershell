@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedCluster< HyperflexClusterRelationship>][-AutoSupport< HyperflexAutoSupportPolicyRelationship>][-ClusterInternalSubnet< CommIpV4Interface>][-ClusterNetwork< HyperflexClusterNetworkPolicyRelationship>][-ClusterStorage< HyperflexClusterStoragePolicyRelationship>][-ConfigContext< PolicyConfigContext>][-DataIpAddress< string>][-Description< string>][-ExtFcStorage< HyperflexExtFcStoragePolicyRelationship>][-ExtIscsiStorage< HyperflexExtIscsiStoragePolicyRelationship>][-HostNamePrefix< string>][-Httpproxypolicy< CommHttpProxyPolicyRelationship>][-HypervisorControlIpAddress< string>][-HypervisorType< HyperflexClusterProfile.HypervisorTypeEnum>][-LocalCredential< HyperflexLocalCredentialPolicyRelationship>][-MacAddressPrefix< string>][-MgmtIpAddress< string>][-MgmtPlatform< HyperflexClusterProfile.MgmtPlatformEnum>][[-Moid]< string>][-Name< string>][-NodeConfig< HyperflexNodeConfigPolicyRelationship>][-NodeProfileConfig< System.Collections.Generic.List`1[HyperflexNodeProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ProxySetting< HyperflexProxySettingPolicyRelationship>][-Replication< long>][-SoftwareVersion< HyperflexSoftwareVersionPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StorageClientIpAddress< string>][-StorageClientNetmask< string>][-StorageClientVlan< HyperflexNamedVlan>][-StorageClusterAuxiliaryIp< string>][-StorageDataVlan< HyperflexNamedVlan>][-StorageType< HyperflexClusterProfile.StorageTypeEnum>][-SysConfig< HyperflexSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexClusterProfile.TypeEnum>][-UcsmConfig< HyperflexUcsmConfigPolicyRelationship>][-VcenterConfig< HyperflexVcenterConfigPolicyRelationship>][-WwxnPrefix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHyperflexClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedCluster< HyperflexClusterRelationship>][-AutoSupport< HyperflexAutoSupportPolicyRelationship>][-ClusterInternalSubnet< CommIpV4Interface>][-ClusterNetwork< HyperflexClusterNetworkPolicyRelationship>][-ClusterStorage< HyperflexClusterStoragePolicyRelationship>][-ConfigContext< PolicyConfigContext>][-DataIpAddress< string>][-Description< string>][-ExtFcStorage< HyperflexExtFcStoragePolicyRelationship>][-ExtIscsiStorage< HyperflexExtIscsiStoragePolicyRelationship>][-HostNamePrefix< string>][-Httpproxypolicy< CommHttpProxyPolicyRelationship>][-HypervisorControlIpAddress< string>][-HypervisorType< HyperflexClusterProfile.HypervisorTypeEnum>][-LocalCredential< HyperflexLocalCredentialPolicyRelationship>][-MacAddressPrefix< string>][-MgmtIpAddress< string>][-MgmtPlatform< HyperflexClusterProfile.MgmtPlatformEnum>][[-Moid]< string>][-Name< string>][-NodeConfig< HyperflexNodeConfigPolicyRelationship>][-NodeProfileConfig< System.Collections.Generic.List`1[HyperflexNodeProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ProxySetting< HyperflexProxySettingPolicyRelationship>][-Replication< long>][-SoftwareVersion< HyperflexSoftwareVersionPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StorageClientIpAddress< string>][-StorageClientNetmask< string>][-StorageClientVlan< HyperflexNamedVlan>][-StorageClusterAuxiliaryIp< string>][-StorageDataVlan< HyperflexNamedVlan>][-StorageType< HyperflexClusterProfile.StorageTypeEnum>][-SysConfig< HyperflexSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexClusterProfile.TypeEnum>][-UcsmConfig< HyperflexUcsmConfigPolicyRelationship>][-VcenterConfig< HyperflexVcenterConfigPolicyRelationship>][-WwxnPrefix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterProfile&apos; resource.
+Update a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -28,6 +28,23 @@ User initiated action. Each profile type has its own supported actions. For Hype
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionParams
+
+
+Note :- Use Initialize-IntersightPolicyActionParam to create the object of complex type PolicyActionParam
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyActionParam]
 Parameter Sets: (All)
 Aliases:
 
@@ -553,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageClientVlan
-The named VLAN associated with this cluster&apos;s storage client network. This applies to Intersight Workload Engine clusters only.
+The named VLAN associated with this cluster&amp;apos;s storage client network. This applies to Intersight Workload Engine clusters only.
 
 Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
 
@@ -774,11 +791,13 @@ PS C:\> Set-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
+
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
 [New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
-[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightCommIpV4Interface](./Initialize-IntersightCommIpV4Interface.md)
 

@@ -19,7 +19,7 @@ Set-IntersightApplianceUpgradePolicy [-Account< IamAccountRelationship>][-Additi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceUpgradePolicy&amp;apos; resource.
+Update a &apos;ApplianceUpgradePolicy&apos; resource.
 
 ## PARAMETERS
 

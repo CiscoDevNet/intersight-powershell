@@ -19,7 +19,7 @@ Set-IntersightAdapterConfigPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;AdapterConfigPolicy&apos; resource.
+Update a &amp;apos;AdapterConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

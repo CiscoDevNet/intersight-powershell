@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryAuthorization [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryAuthorization&apos; resource.
+Update a &amp;apos;SoftwarerepositoryAuthorization&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -172,8 +172,8 @@ PS C:\> Set-IntersightSoftwarerepositoryAuthorization
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryAuthorization](./New-IntersightSoftwarerepositoryAuthorization.md)
-
 [Get-IntersightSoftwarerepositoryAuthorization](./Get-IntersightSoftwarerepositoryAuthorization.md)
+
+[New-IntersightSoftwarerepositoryAuthorization](./New-IntersightSoftwarerepositoryAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

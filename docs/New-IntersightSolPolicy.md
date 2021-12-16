@@ -19,7 +19,7 @@ New-IntersightSolPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &apos;SolPolicy&apos; resource.
+Create a &amp;apos;SolPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

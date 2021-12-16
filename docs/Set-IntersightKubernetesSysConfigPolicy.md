@@ -253,10 +253,10 @@ PS C:\> Set-IntersightKubernetesSysConfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
+[New-IntersightKubernetesSysConfigPolicy](./New-IntersightKubernetesSysConfigPolicy.md)
 
 [Get-IntersightKubernetesSysConfigPolicy](./Get-IntersightKubernetesSysConfigPolicy.md)
 
-[New-IntersightKubernetesSysConfigPolicy](./New-IntersightKubernetesSysConfigPolicy.md)
+[Remove-IntersightKubernetesSysConfigPolicy](./Remove-IntersightKubernetesSysConfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

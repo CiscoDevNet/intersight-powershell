@@ -257,11 +257,11 @@ PS C:\> Set-IntersightKubernetesContainerRuntimePolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
+
 [Get-IntersightKubernetesContainerRuntimePolicy](./Get-IntersightKubernetesContainerRuntimePolicy.md)
 
 [New-IntersightKubernetesContainerRuntimePolicy](./New-IntersightKubernetesContainerRuntimePolicy.md)
-
-[Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
 
 [Initialize-IntersightKubernetesProxyConfig](./Initialize-IntersightKubernetesProxyConfig.md)
 

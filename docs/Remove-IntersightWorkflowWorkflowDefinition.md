@@ -17,7 +17,7 @@ Remove-IntersightWorkflowWorkflowDefinition -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowWorkflowDefinition&amp;apos; resource.
+Delete a &apos;WorkflowWorkflowDefinition&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowWorkflowDefinition](./Set-IntersightWorkflowWorkflowDefinition.md)
-
 [Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [New-IntersightWorkflowWorkflowDefinition](./New-IntersightWorkflowWorkflowDefinition.md)
+
+[Set-IntersightWorkflowWorkflowDefinition](./Set-IntersightWorkflowWorkflowDefinition.md)
 

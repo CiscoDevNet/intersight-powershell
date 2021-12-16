@@ -19,7 +19,7 @@ Set-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentSwitchCard&amp;apos; resource.
+Update a &apos;EquipmentSwitchCard&apos; resource.
 
 ## PARAMETERS
 

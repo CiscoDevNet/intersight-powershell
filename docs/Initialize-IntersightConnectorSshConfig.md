@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorSshConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorSshConfig.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-JumpHost< string>][-ObjectType< ConnectorSshConfig.ObjectTypeEnum>][-Passphrase< string>][-Password< string>][-Pkey< byte[]>][-SecureProperties< object>][-Target< string>][-User< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightConnectorSshConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorSshConfig.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-JumpHost< string>][-ObjectType< ConnectorSshConfig.ObjectTypeEnum>][-Passphrase< string>][-Password< string>][-Pkey< byte[]>][-PkeyString< string>][-SecureProperties< object>][-Target< string>][-User< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -151,6 +151,21 @@ Note :- Use Initialize-Intersightbyte[] to create the object of complex type byt
 
 ```yaml
 Type: byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PkeyString
+The private key to use in the connection credentials in string format.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

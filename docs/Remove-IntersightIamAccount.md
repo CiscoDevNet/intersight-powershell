@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightIamAccount](./Set-IntersightIamAccount.md)
 
-[New-IntersightIamAccount](./New-IntersightIamAccount.md)
-
 [Get-IntersightIamAccount](./Get-IntersightIamAccount.md)
+
+[New-IntersightIamAccount](./New-IntersightIamAccount.md)
 

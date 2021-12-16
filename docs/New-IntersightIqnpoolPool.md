@@ -19,7 +19,7 @@ New-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Create a &apos;IqnpoolPool&apos; resource.
+Create a &amp;apos;IqnpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

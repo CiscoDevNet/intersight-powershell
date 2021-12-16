@@ -19,7 +19,7 @@ Set-IntersightPciSwitch [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;PciSwitch&amp;apos; resource.
+Update a &apos;PciSwitch&apos; resource.
 
 ## PARAMETERS
 

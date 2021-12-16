@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryOperatingSystemFile -Moid <String> [<CommonPa
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwarerepositoryOperatingSystemFile&amp;apos; resource.
+Delete a &apos;SoftwarerepositoryOperatingSystemFile&apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryInstance [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &apos;TamAdvisoryInstance&apos; resource.
+Create a &amp;apos;TamAdvisoryInstance&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -226,10 +226,10 @@ PS C:\> New-IntersightTamAdvisoryInstance
 
 ## RELATED LINKS
 
-[Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
-
 [Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
 
 [Remove-IntersightTamAdvisoryInstance](./Remove-IntersightTamAdvisoryInstance.md)
+
+[Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

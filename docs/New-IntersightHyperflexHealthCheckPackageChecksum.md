@@ -202,10 +202,10 @@ PS C:\> New-IntersightHyperflexHealthCheckPackageChecksum
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexHealthCheckPackageChecksum](./Remove-IntersightHyperflexHealthCheckPackageChecksum.md)
+[Get-IntersightHyperflexHealthCheckPackageChecksum](./Get-IntersightHyperflexHealthCheckPackageChecksum.md)
 
 [Set-IntersightHyperflexHealthCheckPackageChecksum](./Set-IntersightHyperflexHealthCheckPackageChecksum.md)
 
-[Get-IntersightHyperflexHealthCheckPackageChecksum](./Get-IntersightHyperflexHealthCheckPackageChecksum.md)
+[Remove-IntersightHyperflexHealthCheckPackageChecksum](./Remove-IntersightHyperflexHealthCheckPackageChecksum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

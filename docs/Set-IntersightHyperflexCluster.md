@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< System.Collections.Generic.List`1[HyperflexBaseClusterRelationship]>][-ClusterPurpose< HyperflexCluster.ClusterPurposeEnum>][-HypervisorType< HyperflexCluster.HypervisorTypeEnum>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ParentCluster< HyperflexBaseClusterRelationship>][-ProcessorCapacity< VirtualizationComputeCapacity>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHyperflexCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< System.Collections.Generic.List`1[HyperflexBaseClusterRelationship]>][-ClusterPurpose< HyperflexCluster.ClusterPurposeEnum>][-HypervisorType< HyperflexCluster.HypervisorTypeEnum>][[-Moid]< string>][-ParentCluster< ComputeBaseClusterRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,23 +104,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -MemoryCapacity
-The capacity and usage information for memory on this cluster.
-
-Note :- Use Initialize-IntersightVirtualizationMemoryCapacity to create the object of complex type VirtualizationMemoryCapacity
-
-```yaml
-Type: VirtualizationMemoryCapacity
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -137,30 +120,13 @@ Accept wildcard characters: False
 ```
 
 ### -ParentCluster
-A reference to a hyperflexBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+A reference to a computeBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: HyperflexBaseClusterRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ProcessorCapacity
-The capacity and usage information for CPU power on this cluster.
-
-Note :- Use Initialize-IntersightVirtualizationComputeCapacity to create the object of complex type VirtualizationComputeCapacity
-
-```yaml
-Type: VirtualizationComputeCapacity
+Type: ComputeBaseClusterRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -178,21 +144,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TotalCores
-Total number of CPU cores in this cluster. It is a cumulative number across all hosts in the cluster.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -263,10 +214,6 @@ PS C:\> Set-IntersightHyperflexCluster
 [Get-IntersightHyperflexCluster](./Get-IntersightHyperflexCluster.md)
 
 [Initialize-IntersightHyperflexAlarmSummary](./Initialize-IntersightHyperflexAlarmSummary.md)
-
-[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
-
-[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
 [Initialize-IntersightHyperflexSummary](./Initialize-IntersightHyperflexSummary.md)
 

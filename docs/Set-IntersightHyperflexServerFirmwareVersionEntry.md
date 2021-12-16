@@ -192,11 +192,11 @@ PS C:\> Set-IntersightHyperflexServerFirmwareVersionEntry
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
+
 [Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [New-IntersightHyperflexServerFirmwareVersionEntry](./New-IntersightHyperflexServerFirmwareVersionEntry.md)
-
-[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Initialize-IntersightHyperflexAppSettingConstraint](./Initialize-IntersightHyperflexAppSettingConstraint.md)
 

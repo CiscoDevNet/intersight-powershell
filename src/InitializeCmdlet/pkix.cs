@@ -75,13 +75,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PkixKeyGenerationSpec.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PkixSubjectAlternateName.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPkixKeyGenerationSpec")]
-    public class InitializeIntersightPkixKeyGenerationSpec:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPkixSubjectAlternateName")]
+    public class InitializeIntersightPkixSubjectAlternateName:PSCmdlet
 	{
-		public InitializeIntersightPkixKeyGenerationSpec()
+		public InitializeIntersightPkixSubjectAlternateName()
 		{
+            ClassId = PkixSubjectAlternateName.ClassIdEnum.PkixSubjectAlternateName;
+            ObjectType = PkixSubjectAlternateName.ObjectTypeEnum.PkixSubjectAlternateName;
             
 		}
         // <summary>
@@ -94,27 +96,27 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PkixKeyGenerationSpec.ClassIdEnum ClassId {
+        public PkixSubjectAlternateName.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PkixKeyGenerationSpec.ObjectTypeEnum ObjectType {
+        public PkixSubjectAlternateName.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PkixKeyGenerationSpec initObject = new Intersight.Model.PkixKeyGenerationSpec();
+             Intersight.Model.PkixSubjectAlternateName initObject = new Intersight.Model.PkixSubjectAlternateName();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -193,15 +195,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PkixSubjectAlternateName.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PkixDistinguishedName.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPkixSubjectAlternateName")]
-    public class InitializeIntersightPkixSubjectAlternateName:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPkixDistinguishedName")]
+    public class InitializeIntersightPkixDistinguishedName:PSCmdlet
 	{
-		public InitializeIntersightPkixSubjectAlternateName()
+		public InitializeIntersightPkixDistinguishedName()
 		{
-            ClassId = PkixSubjectAlternateName.ClassIdEnum.PkixSubjectAlternateName;
-            ObjectType = PkixSubjectAlternateName.ObjectTypeEnum.PkixSubjectAlternateName;
+            ClassId = PkixDistinguishedName.ClassIdEnum.PkixDistinguishedName;
+            ObjectType = PkixDistinguishedName.ObjectTypeEnum.PkixDistinguishedName;
             
 		}
         // <summary>
@@ -218,7 +220,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PkixSubjectAlternateName.ClassIdEnum ClassId {
+        public PkixDistinguishedName.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -227,14 +229,65 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PkixSubjectAlternateName.ObjectTypeEnum ObjectType {
+        public PkixDistinguishedName.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PkixSubjectAlternateName initObject = new Intersight.Model.PkixSubjectAlternateName();
+             Intersight.Model.PkixDistinguishedName initObject = new Intersight.Model.PkixDistinguishedName();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PkixKeyGenerationSpec.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPkixKeyGenerationSpec")]
+    public class InitializeIntersightPkixKeyGenerationSpec:PSCmdlet
+	{
+		public InitializeIntersightPkixKeyGenerationSpec()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixKeyGenerationSpec.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixKeyGenerationSpec.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.PkixKeyGenerationSpec initObject = new Intersight.Model.PkixKeyGenerationSpec();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -305,59 +358,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Algorithm"))
             {
                 initObject.Algorithm = this.Algorithm;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PkixDistinguishedName.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPkixDistinguishedName")]
-    public class InitializeIntersightPkixDistinguishedName:PSCmdlet
-	{
-		public InitializeIntersightPkixDistinguishedName()
-		{
-            ClassId = PkixDistinguishedName.ClassIdEnum.PkixDistinguishedName;
-            ObjectType = PkixDistinguishedName.ObjectTypeEnum.PkixDistinguishedName;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixDistinguishedName.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixDistinguishedName.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.PkixDistinguishedName initObject = new Intersight.Model.PkixDistinguishedName();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;

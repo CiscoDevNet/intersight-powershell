@@ -19,7 +19,7 @@ Set-IntersightStorageEnclosure [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageEnclosure&amp;apos; resource.
+Update a &apos;StorageEnclosure&apos; resource.
 
 ## PARAMETERS
 

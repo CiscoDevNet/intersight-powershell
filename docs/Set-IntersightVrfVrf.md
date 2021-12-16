@@ -19,7 +19,7 @@ Set-IntersightVrfVrf [-AdditionalProperties< System.Collections.Generic.Dictiona
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VrfVrf&amp;apos; resource.
+Update a &apos;VrfVrf&apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightCapabilityIoCardManufacturingDef -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityIoCardManufacturingDef&apos; resource.
+Delete a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityIoCardManufacturingDef](./Get-IntersightCapabilityIoCardManufacturingDef.md)
+[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
 
 [New-IntersightCapabilityIoCardManufacturingDef](./New-IntersightCapabilityIoCardManufacturingDef.md)
 
-[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
+[Get-IntersightCapabilityIoCardManufacturingDef](./Get-IntersightCapabilityIoCardManufacturingDef.md)
 

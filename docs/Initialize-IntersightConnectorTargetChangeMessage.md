@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptedAesKey
-The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
+The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &amp;apos;AES&amp;apos; in SecureProperties dictionary.
 
 ```yaml
 Type: string
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDetails
-A Json-serialized representation of the &apos;configuration&apos; portion of the Target instance. Ie the representation contains configuration properties like the target&apos;s connectivity information but not operation status. The representation include credential information, encrypted with the RSA public key of the Appliance device connector. Appliance device connector is the sole maintainer of the RSA private key and the only system component which is capable of interpreting the credential.
+A Json-serialized representation of the &amp;apos;configuration&amp;apos; portion of the Target instance. Ie the representation contains configuration properties like the target&amp;apos;s connectivity information but not operation status. The representation include credential information, encrypted with the RSA public key of the Appliance device connector. Appliance device connector is the sole maintainer of the RSA private key and the only system component which is capable of interpreting the credential.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

@@ -19,7 +19,7 @@ Set-IntersightWorkflowSolutionOutput [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowSolutionOutput&amp;apos; resource.
+Update a &apos;WorkflowSolutionOutput&apos; resource.
 
 ## PARAMETERS
 

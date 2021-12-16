@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-ServerConfig< ComputeServerConfig>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-ServerConfig< ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[ComputeServerOpStatus]>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -CmosReset
-The allowed actions on the CMOS Reset.\n* `Ready` - CMOS Reset operation is allowed to be done on the server in this state.\n* `Pending` - This indicates that the previous CMOS Reset operation on this server has not completed due to a pending power cycle. CMOS Reset operation cannot be done on the server when in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a CMOS Reset operation on a server.
+The allowed actions on the CMOS Reset.\n* `Ready` - CMOS Reset operation is allowed to be done on the server in this state.\n* `Pending` - The identifier to state that the previous CMOS Reset operation on this server has not completed due to a pending power cycle. CMOS Reset operation cannot be done on the server when in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a CMOS Reset operation on a server.
 
 ```yaml
 Type: ComputeServerSetting.CmosResetEnum
@@ -184,6 +184,23 @@ Note :- Use Initialize-IntersightComputeServerConfig to create the object of com
 
 ```yaml
 Type: ComputeServerConfig
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerOpStatus
+
+
+Note :- Use Initialize-IntersightComputeServerOpStatus to create the object of complex type ComputeServerOpStatus
+
+```yaml
+Type: System.Collections.Generic.List`1[ComputeServerOpStatus]
 Parameter Sets: (All)
 Aliases:
 
@@ -326,6 +343,8 @@ PS C:\> Set-IntersightComputeServerSetting
 [Initialize-IntersightComputePersistentMemoryOperation](./Initialize-IntersightComputePersistentMemoryOperation.md)
 
 [Initialize-IntersightComputeServerConfig](./Initialize-IntersightComputeServerConfig.md)
+
+[Initialize-IntersightComputeServerOpStatus](./Initialize-IntersightComputeServerOpStatus.md)
 
 [Initialize-IntersightComputeStorageControllerOperation](./Initialize-IntersightComputeStorageControllerOperation.md)
 

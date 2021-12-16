@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -JumboFrame
-Enable or disable jumbo frames.
+Enable or disable Jumbo Frames (MTU=9000). Jumbo Frames are used by Storage Network, VM Migration Network.
 
 ```yaml
 Type: bool
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -UplinkSpeed
-Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be &amp;apos;1G&amp;apos; or &amp;apos;10G+&amp;apos;. Use &amp;apos;10G+&amp;apos; for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be &amp;apos;default&amp;apos; only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above.
+Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be &apos;1G&apos; or &apos;10G+&apos;. Use &apos;10G+&apos; for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be &apos;default&apos; only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above.
 
 ```yaml
 Type: HyperflexClusterNetworkPolicy.UplinkSpeedEnum

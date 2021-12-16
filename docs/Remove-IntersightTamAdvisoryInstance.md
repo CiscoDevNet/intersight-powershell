@@ -17,7 +17,7 @@ Remove-IntersightTamAdvisoryInstance -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;TamAdvisoryInstance&apos; resource.
+Delete a &amp;apos;TamAdvisoryInstance&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
+
 [Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
 
 [New-IntersightTamAdvisoryInstance](./New-IntersightTamAdvisoryInstance.md)
-
-[Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
 

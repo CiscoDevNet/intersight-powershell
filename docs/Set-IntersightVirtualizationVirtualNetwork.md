@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVirtualNetwork [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVirtualNetwork&amp;apos; resource.
+Update a &apos;VirtualizationVirtualNetwork&apos; resource.
 
 ## PARAMETERS
 
@@ -283,10 +283,10 @@ PS C:\> Set-IntersightVirtualizationVirtualNetwork
 
 ## RELATED LINKS
 
+[Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
+
 [Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
 
 [New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
-
-[Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightTaskNetAppScopedInventory [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;TaskNetAppScopedInventory&apos; resource.
+Create a &amp;apos;TaskNetAppScopedInventory&amp;apos; resource.
 
 ## PARAMETERS
 

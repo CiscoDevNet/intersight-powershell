@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesHyperFlexApVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum>][-DiskMode< KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum>][-Interfaces< System.Collections.Generic.List`1[string]>][-ObjectType< KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesHyperFlexApVirtualMachineInfraConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum>][-DiskMode< KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum>][-Interfaces< System.Collections.Generic.List`1[string]>][-NetworkInterfaces< System.Collections.Generic.List`1[Model.KubernetesNetworkInterfaceSpec]>][-ObjectType< KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,23 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkInterfaces
+
+
+Note :- Use Initialize-IntersightKubernetesNetworkInterfaceSpec to create the object of complex type KubernetesNetworkInterfaceSpec
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.KubernetesNetworkInterfaceSpec]
 Parameter Sets: (All)
 Aliases:
 
@@ -155,3 +172,5 @@ PS C:\> Initialize-IntersightKubernetesHyperFlexApVirtualMachineInfraConfig
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightKubernetesNetworkInterfaceSpec](./Initialize-IntersightKubernetesNetworkInterfaceSpec.md)

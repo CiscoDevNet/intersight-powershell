@@ -19,7 +19,7 @@ Set-IntersightIaasUcsdInfo [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;IaasUcsdInfo&apos; resource.
+Update a &amp;apos;IaasUcsdInfo&amp;apos; resource.
 
 ## PARAMETERS
 

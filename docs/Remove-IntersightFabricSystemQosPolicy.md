@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricSystemQosPolicy](./Set-IntersightFabricSystemQosPolicy.md)
 
-[Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
-
 [New-IntersightFabricSystemQosPolicy](./New-IntersightFabricSystemQosPolicy.md)
+
+[Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
 

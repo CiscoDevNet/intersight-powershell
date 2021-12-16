@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationHost [-Action< VirtualizationHost.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationHost [-Action< VirtualizationHost.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Evacuate< bool>][-HostConfig< VirtualizationBaseHostConfiguration>][-MaintenanceState< VirtualizationHost.MaintenanceStateEnum>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -24,7 +24,7 @@ Update a &apos;VirtualizationHost&apos; resource.
 ## PARAMETERS
 
 ### -Action
-Action to be performed on a host (Create, PowerState, Migrate, Clone etc).\n* `None` - A place holder for the default value.\n* `PowerOffStorageController` - Power off HyperFlex storage controller node running on selected hypervisor host.\n* `PowerOnStorageController` - Power on HyperFlex storage controller node running on selected hypervisor host.
+Action to be performed on a host (Create, PowerState, Migrate, Clone etc).\n* `None` - A place holder for the default value.\n* `EnterMaintenanceMode` - Put a host into maintenance mode.\n* `ExitMaintenanceMode` - Put a host into active mode.\n* `PowerOffStorageController` - Power off HyperFlex storage controller node running on selected hypervisor host.\n* `PowerOnStorageController` - Power on HyperFlex storage controller node running on selected hypervisor host.
 
 ```yaml
 Type: VirtualizationHost.ActionEnum
@@ -43,6 +43,53 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Evacuate
+If true, move powered-off and suspended virtual machines to other hosts in the cluster.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HostConfig
+Virtual machine configuration to provision.
+
+Note :- Use Initialize-IntersightVirtualizationBaseHostConfiguration to create the object of complex type VirtualizationBaseHostConfiguration
+
+```yaml
+Type: VirtualizationBaseHostConfiguration
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaintenanceState
+Expected state of host (enter maintenance, exit maintenance).\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor.
+
+```yaml
+Type: VirtualizationHost.MaintenanceStateEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -143,5 +190,7 @@ PS C:\> Set-IntersightVirtualizationHost
 ## RELATED LINKS
 
 [Get-IntersightVirtualizationHost](./Get-IntersightVirtualizationHost.md)
+
+[Initialize-IntersightVirtualizationBaseHostConfiguration](./Initialize-IntersightVirtualizationBaseHostConfiguration.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

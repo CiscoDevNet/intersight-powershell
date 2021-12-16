@@ -19,7 +19,7 @@ Set-IntersightFirmwareUnsupportedVersionUpgrade [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareUnsupportedVersionUpgrade&apos; resource.
+Update a &amp;apos;FirmwareUnsupportedVersionUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -255,11 +255,11 @@ PS C:\> Set-IntersightFirmwareUnsupportedVersionUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareUnsupportedVersionUpgrade](./Remove-IntersightFirmwareUnsupportedVersionUpgrade.md)
-
 [Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [New-IntersightFirmwareUnsupportedVersionUpgrade](./New-IntersightFirmwareUnsupportedVersionUpgrade.md)
+
+[Remove-IntersightFirmwareUnsupportedVersionUpgrade](./Remove-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [Initialize-IntersightConnectorFileChecksum](./Initialize-IntersightConnectorFileChecksum.md)
 

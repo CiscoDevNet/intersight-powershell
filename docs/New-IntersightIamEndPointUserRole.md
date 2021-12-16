@@ -211,10 +211,10 @@ PS C:\> New-IntersightIamEndPointUserRole
 
 ## RELATED LINKS
 
-[Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)
+[Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
 
 [Set-IntersightIamEndPointUserRole](./Set-IntersightIamEndPointUserRole.md)
 
-[Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
+[Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

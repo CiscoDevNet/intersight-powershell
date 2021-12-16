@@ -25,7 +25,7 @@ Get-IntersightIamUserGroup [-Count <Boolean>] [-InlineCount <String>] [-Select <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamUserGroup&amp;apos; resource.,
+Read a &apos;IamUserGroup&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamUserGroup](./New-IntersightIamUserGroup.md)
+[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
 
 [Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
 
-[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
+[New-IntersightIamUserGroup](./New-IntersightIamUserGroup.md)
 

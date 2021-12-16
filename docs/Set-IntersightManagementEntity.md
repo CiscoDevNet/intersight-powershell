@@ -19,7 +19,7 @@ Set-IntersightManagementEntity [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;ManagementEntity&apos; resource.
+Update a &amp;apos;ManagementEntity&amp;apos; resource.
 
 ## PARAMETERS
 

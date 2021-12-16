@@ -19,7 +19,7 @@ Set-IntersightFabricApplianceRole [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricApplianceRole&apos; resource.
+Update a &amp;apos;FabricApplianceRole&amp;apos; resource.
 
 ## PARAMETERS
 

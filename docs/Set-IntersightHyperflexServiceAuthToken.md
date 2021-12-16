@@ -19,7 +19,7 @@ Set-IntersightHyperflexServiceAuthToken [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexServiceAuthToken&amp;apos; resource.
+Update a &apos;HyperflexServiceAuthToken&apos; resource.
 
 ## PARAMETERS
 
@@ -211,10 +211,10 @@ PS C:\> Set-IntersightHyperflexServiceAuthToken
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
-
 [Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
 
 [New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
+
+[Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightRecoveryScheduleConfigPolicy](./New-IntersightRecoveryScheduleConfigPolicy.md)
 
-[Remove-IntersightRecoveryScheduleConfigPolicy](./Remove-IntersightRecoveryScheduleConfigPolicy.md)
-
 [Set-IntersightRecoveryScheduleConfigPolicy](./Set-IntersightRecoveryScheduleConfigPolicy.md)
+
+[Remove-IntersightRecoveryScheduleConfigPolicy](./Remove-IntersightRecoveryScheduleConfigPolicy.md)
 

@@ -19,7 +19,7 @@ New-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &apos;IamUserGroup&apos; resource.
+Create a &amp;apos;IamUserGroup&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -214,10 +214,10 @@ PS C:\> New-IntersightIamUserGroup
 
 ## RELATED LINKS
 
-[Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
+[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
 
 [Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
 
-[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
+[Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

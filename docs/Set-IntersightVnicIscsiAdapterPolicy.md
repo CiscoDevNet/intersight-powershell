@@ -19,7 +19,7 @@ Set-IntersightVnicIscsiAdapterPolicy [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicIscsiAdapterPolicy&apos; resource.
+Update a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -222,8 +222,8 @@ PS C:\> Set-IntersightVnicIscsiAdapterPolicy
 
 [Remove-IntersightVnicIscsiAdapterPolicy](./Remove-IntersightVnicIscsiAdapterPolicy.md)
 
-[Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
-
 [New-IntersightVnicIscsiAdapterPolicy](./New-IntersightVnicIscsiAdapterPolicy.md)
+
+[Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

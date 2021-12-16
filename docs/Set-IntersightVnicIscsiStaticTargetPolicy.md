@@ -237,11 +237,11 @@ PS C:\> Set-IntersightVnicIscsiStaticTargetPolicy
 
 ## RELATED LINKS
 
-[New-IntersightVnicIscsiStaticTargetPolicy](./New-IntersightVnicIscsiStaticTargetPolicy.md)
+[Remove-IntersightVnicIscsiStaticTargetPolicy](./Remove-IntersightVnicIscsiStaticTargetPolicy.md)
 
 [Get-IntersightVnicIscsiStaticTargetPolicy](./Get-IntersightVnicIscsiStaticTargetPolicy.md)
 
-[Remove-IntersightVnicIscsiStaticTargetPolicy](./Remove-IntersightVnicIscsiStaticTargetPolicy.md)
+[New-IntersightVnicIscsiStaticTargetPolicy](./New-IntersightVnicIscsiStaticTargetPolicy.md)
 
 [Initialize-IntersightVnicLun](./Initialize-IntersightVnicLun.md)
 

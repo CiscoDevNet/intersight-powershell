@@ -17,7 +17,7 @@ Remove-IntersightHyperflexVcenterConfigPolicy -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
+Delete a &apos;HyperflexVcenterConfigPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexVcenterConfigPolicy](./Set-IntersightHyperflexVcenterConfigPolicy.md)
+
 [Get-IntersightHyperflexVcenterConfigPolicy](./Get-IntersightHyperflexVcenterConfigPolicy.md)
 
 [New-IntersightHyperflexVcenterConfigPolicy](./New-IntersightHyperflexVcenterConfigPolicy.md)
-
-[Set-IntersightHyperflexVcenterConfigPolicy](./Set-IntersightHyperflexVcenterConfigPolicy.md)
 

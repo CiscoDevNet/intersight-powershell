@@ -298,10 +298,10 @@ PS C:\> Set-IntersightRecoveryBackupConfigPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightRecoveryBackupConfigPolicy](./Get-IntersightRecoveryBackupConfigPolicy.md)
+[Remove-IntersightRecoveryBackupConfigPolicy](./Remove-IntersightRecoveryBackupConfigPolicy.md)
 
 [New-IntersightRecoveryBackupConfigPolicy](./New-IntersightRecoveryBackupConfigPolicy.md)
 
-[Remove-IntersightRecoveryBackupConfigPolicy](./Remove-IntersightRecoveryBackupConfigPolicy.md)
+[Get-IntersightRecoveryBackupConfigPolicy](./Get-IntersightRecoveryBackupConfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

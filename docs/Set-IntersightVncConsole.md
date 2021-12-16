@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVncConsole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Status< VncConsole.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualMachine< HyperflexHxapVirtualMachineRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVncConsole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Status< VncConsole.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualMachine< VirtualizationIweVirtualMachineRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,13 +86,13 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-A reference to a hyperflexHxapVirtualMachine resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+A reference to a virtualizationIweVirtualMachine resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: HyperflexHxapVirtualMachineRelationship
+Type: VirtualizationIweVirtualMachineRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -160,8 +160,8 @@ PS C:\> Set-IntersightVncConsole
 
 ## RELATED LINKS
 
-[Get-IntersightVncConsole](./Get-IntersightVncConsole.md)
-
 [New-IntersightVncConsole](./New-IntersightVncConsole.md)
+
+[Get-IntersightVncConsole](./Get-IntersightVncConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

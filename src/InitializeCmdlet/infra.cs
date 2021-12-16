@@ -8,59 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize InfraMetaData.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightInfraMetaData")]
-    public class InitializeIntersightInfraMetaData:PSCmdlet
-	{
-		public InitializeIntersightInfraMetaData()
-		{
-            ClassId = InfraMetaData.ClassIdEnum.InfraMetaData;
-            ObjectType = InfraMetaData.ObjectTypeEnum.InfraMetaData;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public InfraMetaData.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public InfraMetaData.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.InfraMetaData initObject = new Intersight.Model.InfraMetaData();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize InfraHardwareInfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightInfraHardwareInfo")]
@@ -147,6 +94,59 @@ namespace Intersight.PowerShell
             {
                 initObject.MemorySize = this.MemorySize;
             }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize InfraMetaData.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightInfraMetaData")]
+    public class InitializeIntersightInfraMetaData:PSCmdlet
+	{
+		public InitializeIntersightInfraMetaData()
+		{
+            ClassId = InfraMetaData.ClassIdEnum.InfraMetaData;
+            ObjectType = InfraMetaData.ObjectTypeEnum.InfraMetaData;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public InfraMetaData.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public InfraMetaData.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.InfraMetaData initObject = new Intersight.Model.InfraMetaData();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }

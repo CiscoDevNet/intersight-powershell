@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
+
 [Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
 
 [New-IntersightIamSessionLimits](./New-IntersightIamSessionLimits.md)
-
-[Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
 

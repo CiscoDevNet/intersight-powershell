@@ -17,7 +17,7 @@ Remove-IntersightKubernetesCluster -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesCluster&amp;apos; resource.
+Delete a &apos;KubernetesCluster&apos; resource.
 
 ## EXAMPLES
 

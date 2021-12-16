@@ -19,7 +19,7 @@ New-IntersightMemoryPersistentMemoryPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;MemoryPersistentMemoryPolicy&amp;apos; resource.
+Create a &apos;MemoryPersistentMemoryPolicy&apos; resource.
 
 ## PARAMETERS
 

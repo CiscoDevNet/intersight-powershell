@@ -17,7 +17,7 @@ Remove-IntersightFabricLinkAggregationPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricLinkAggregationPolicy&amp;apos; resource.
+Delete a &apos;FabricLinkAggregationPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
+
 [Get-IntersightFabricLinkAggregationPolicy](./Get-IntersightFabricLinkAggregationPolicy.md)
 
 [New-IntersightFabricLinkAggregationPolicy](./New-IntersightFabricLinkAggregationPolicy.md)
-
-[Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
 

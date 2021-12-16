@@ -17,7 +17,7 @@ Remove-IntersightVnicFcQosPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicFcQosPolicy&apos; resource.
+Delete a &amp;apos;VnicFcQosPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightVnicFcQosPolicy](./Set-IntersightVnicFcQosPolicy.md)
 
-[Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
-
 [New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
+
+[Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
 

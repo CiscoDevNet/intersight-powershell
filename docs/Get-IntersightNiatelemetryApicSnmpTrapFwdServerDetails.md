@@ -25,7 +25,7 @@ Get-IntersightNiatelemetryApicSnmpTrapFwdServerDetails [-Count <Boolean>] [-Inli
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;NiatelemetryApicSnmpTrapFwdServerDetails&amp;apos; resource.,
+Read a &apos;NiatelemetryApicSnmpTrapFwdServerDetails&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

@@ -17,7 +17,7 @@ Remove-IntersightSoftwareHyperflexBundleDistributable -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwareHyperflexBundleDistributable&apos; resource.
+Delete a &amp;apos;SoftwareHyperflexBundleDistributable&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwareHyperflexBundleDistributable](./Set-IntersightSoftwareHyperflexBundleDistributable.md)
-
 [Get-IntersightSoftwareHyperflexBundleDistributable](./Get-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [New-IntersightSoftwareHyperflexBundleDistributable](./New-IntersightSoftwareHyperflexBundleDistributable.md)
+
+[Set-IntersightSoftwareHyperflexBundleDistributable](./Set-IntersightSoftwareHyperflexBundleDistributable.md)
 

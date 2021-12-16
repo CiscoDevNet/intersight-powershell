@@ -19,7 +19,7 @@ Set-IntersightFabricFlowControlPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricFlowControlPolicy&amp;apos; resource.
+Update a &apos;FabricFlowControlPolicy&apos; resource.
 
 ## PARAMETERS
 

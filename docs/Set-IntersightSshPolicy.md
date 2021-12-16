@@ -19,7 +19,7 @@ Set-IntersightSshPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;SshPolicy&apos; resource.
+Update a &amp;apos;SshPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightComputeBiosPostPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ComputeBiosPostPolicy&amp;apos; resource.
+Update a &apos;ComputeBiosPostPolicy&apos; resource.
 
 ## PARAMETERS
 

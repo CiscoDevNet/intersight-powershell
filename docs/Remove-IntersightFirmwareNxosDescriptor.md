@@ -17,7 +17,7 @@ Remove-IntersightFirmwareNxosDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareNxosDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareNxosDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -25,7 +25,7 @@ Get-IntersightIamApiKey [-Count <Boolean>] [-InlineCount <String>] [-Select <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamApiKey&amp;apos; resource.,
+Read a &apos;IamApiKey&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightIamApiKey](./New-IntersightIamApiKey.md)
 
-[Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
-
 [Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
+
+[Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightTamAdvisoryCount -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;TamAdvisoryCount&amp;apos; resource.
+Delete a &apos;TamAdvisoryCount&apos; resource.
 
 ## EXAMPLES
 

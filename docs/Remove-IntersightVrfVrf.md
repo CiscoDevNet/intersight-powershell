@@ -17,7 +17,7 @@ Remove-IntersightVrfVrf -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VrfVrf&apos; resource.
+Delete a &amp;apos;VrfVrf&amp;apos; resource.
 
 ## EXAMPLES
 

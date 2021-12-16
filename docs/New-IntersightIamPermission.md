@@ -19,7 +19,7 @@ New-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Create a &apos;IamPermission&apos; resource.
+Create a &amp;apos;IamPermission&amp;apos; resource.
 
 ## PARAMETERS
 

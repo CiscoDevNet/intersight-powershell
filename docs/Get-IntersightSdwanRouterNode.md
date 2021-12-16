@@ -25,7 +25,7 @@ Get-IntersightSdwanRouterNode [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;SdwanRouterNode&apos; resource.,
+Read a &amp;apos;SdwanRouterNode&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightSdwanRouterNode](./New-IntersightSdwanRouterNode.md)
+
 [Set-IntersightSdwanRouterNode](./Set-IntersightSdwanRouterNode.md)
 
 [Remove-IntersightSdwanRouterNode](./Remove-IntersightSdwanRouterNode.md)
-
-[New-IntersightSdwanRouterNode](./New-IntersightSdwanRouterNode.md)
 

@@ -25,7 +25,7 @@ Get-IntersightHyperflexHealthCheckDefinition [-Count <Boolean>] [-InlineCount <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;HyperflexHealthCheckDefinition&apos; resource.,
+Read a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexHealthCheckDefinition](./New-IntersightHyperflexHealthCheckDefinition.md)
-
 [Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
 
 [Remove-IntersightHyperflexHealthCheckDefinition](./Remove-IntersightHyperflexHealthCheckDefinition.md)
+
+[New-IntersightHyperflexHealthCheckDefinition](./New-IntersightHyperflexHealthCheckDefinition.md)
 

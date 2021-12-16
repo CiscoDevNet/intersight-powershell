@@ -19,7 +19,7 @@ New-IntersightCapabilityEquipmentSlotArray [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityEquipmentSlotArray&amp;apos; resource.
+Create a &apos;CapabilityEquipmentSlotArray&apos; resource.
 
 ## PARAMETERS
 

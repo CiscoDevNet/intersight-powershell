@@ -19,7 +19,7 @@ New-IntersightKubernetesVirtualMachineInstanceType [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesVirtualMachineInstanceType&amp;apos; resource.
+Create a &apos;KubernetesVirtualMachineInstanceType&apos; resource.
 
 ## PARAMETERS
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareHost [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootTime< DateTime>][-Cluster< VirtualizationVmwareClusterRelationship>][-ConnectionState< string>][-CpuInfo< VirtualizationCpuInfo>][-HardwareInfo< InfraHardwareInfo>][-HwPowerState< VirtualizationVmwareHost.HwPowerStateEnum>][-HypervisorType< VirtualizationVmwareHost.HypervisorTypeEnum>][-Identity< string>][-MaintenanceMode< bool>][-MemoryCapacity< VirtualizationMemoryCapacity>][-Model< string>][[-Moid]< string>][-Name< string>][-NetworkAdapterCount< long>][-ProcessorCapacity< VirtualizationComputeCapacity>][-ProductInfo< VirtualizationProductInfo>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-ResourceConsumed< VirtualizationVmwareResourceConsumption>][-Serial< string>][-Status< VirtualizationVmwareHost.StatusEnum>][-StorageAdapterCount< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpTime< string>][-Uuid< string>][-VcenterHostId< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareHost [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootTime< DateTime>][-Cluster< VirtualizationVmwareClusterRelationship>][-ConnectionState< string>][-CpuInfo< VirtualizationCpuInfo>][-DcInvPath< string>][-DnsServers< System.Collections.Generic.List`1[string]>][-HardwareInfo< InfraHardwareInfo>][-HwPowerState< VirtualizationVmwareHost.HwPowerStateEnum>][-HypervisorType< VirtualizationVmwareHost.HypervisorTypeEnum>][-Identity< string>][-IsSshEnabled< bool>][-MaintenanceMode< bool>][-MemoryCapacity< VirtualizationMemoryCapacity>][-Model< string>][[-Moid]< string>][-Name< string>][-NetworkAdapterCount< long>][-NtpServers< System.Collections.Generic.List`1[string]>][-ProcessorCapacity< VirtualizationComputeCapacity>][-ProductInfo< VirtualizationProductInfo>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-ResourceConsumed< VirtualizationVmwareResourceConsumption>][-Serial< string>][-Status< VirtualizationVmwareHost.StatusEnum>][-StorageAdapterCount< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TimeZone< string>][-UpTime< string>][-Uuid< string>][-VcenterHostId< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -103,6 +103,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DcInvPath
+This field stores the inventory path of a datacenter. Used in host maintenance action.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DnsServers
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -HardwareInfo
 The hardware details of this host. It includes capacity, manufacturer, and model information.
 
@@ -155,6 +185,21 @@ The internally generated identity of this host. This entity is not manipulated b
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsSshEnabled
+True if SSH is enabled in the host, false otherwise.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -247,6 +292,21 @@ The count of all network adapters attached to this host.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NtpServers
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -378,6 +438,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TimeZone
+Time zone this host is in.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

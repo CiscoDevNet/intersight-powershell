@@ -19,7 +19,7 @@ New-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityIoCardDescriptor&apos; resource.
+Create a &amp;apos;CapabilityIoCardDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> New-IntersightCapabilityIoCardDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityIoCardDescriptor](./Set-IntersightCapabilityIoCardDescriptor.md)
+[Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
 
 [Remove-IntersightCapabilityIoCardDescriptor](./Remove-IntersightCapabilityIoCardDescriptor.md)
 
-[Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
+[Set-IntersightCapabilityIoCardDescriptor](./Set-IntersightCapabilityIoCardDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightHyperflexServerModel [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexServerModel&apos; resource.
+Create a &amp;apos;HyperflexServerModel&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -162,9 +162,9 @@ PS C:\> New-IntersightHyperflexServerModel
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
-
 [Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
+
+[Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 
 [Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 

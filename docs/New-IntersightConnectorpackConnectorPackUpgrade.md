@@ -160,8 +160,8 @@ PS C:\> New-IntersightConnectorpackConnectorPackUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)
-
 [Get-IntersightConnectorpackConnectorPackUpgrade](./Get-IntersightConnectorpackConnectorPackUpgrade.md)
+
+[Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightVnicSanConnectivityPolicy](./New-IntersightVnicSanConnectivityPolicy.md)
 
-[Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
-
 [Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
+
+[Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
 

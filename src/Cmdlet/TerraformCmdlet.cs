@@ -8,222 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set TerraformExecutor.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTerraformExecutor")]
-    public class SetIntersightTerraformExecutor:SetCmdletBase
-	{
-		public SetIntersightTerraformExecutor()
-		{
-			ApiInstance = new TerraformApi(Config);
-            ModelObject = new TerraformExecutor();
-            MethodName = "UpdateTerraformExecutorWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public IamAccountRelationship Account {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<TerraformCloudResource> CloudResource {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Enum indicates what operation is being done.\n* `Create` - Creating a Terraform resource.\n* `Update` - Updating a Terraform resource.\n* `Delete` - Deleting a Terraform resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TerraformExecutor.OperationEnum Operation {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Terraform output of the entire execution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object Output {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The Platform type used in conjunction with 'sourceFolderPath' and 'sourceFolderName' determines unique path for a Terraform workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string PlatformType {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<TerraformRunstate> RunState {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Folder Name where Terraform workflows are stored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceFolderName {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Relative folder Path where 'sourceFolderName' is located."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceFolderPath {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Flag indicates whether workflow is internal/external."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SourceLocation {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Status of the terraform execution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Status {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Stderr of the terraform execution will be captured here."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object Stderr {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Stdout of the terraform execution will be captured here."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object Stdout {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"TaskId of a pontem workflow is same as the MO."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TaskId {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Variables needed by the terraform configuration as a JSON object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object Variables {
-            get;
-            set;
-        }
-        
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove TerraformExecutor.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTerraformExecutor")]
-    public class RemoveIntersightTerraformExecutor:RemoveCmdletBase
-	{
-		public RemoveIntersightTerraformExecutor()
-		{
-			ApiInstance = new TerraformApi(Config);
-            MethodName = "DeleteTerraformExecutorWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TerraformExecutor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightTerraformExecutor", DefaultParameterSetName = "CmdletParam")]
@@ -622,5 +406,221 @@ namespace Intersight.PowerShell
         }
         
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set TerraformExecutor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightTerraformExecutor")]
+    public class SetIntersightTerraformExecutor:SetCmdletBase
+	{
+		public SetIntersightTerraformExecutor()
+		{
+			ApiInstance = new TerraformApi(Config);
+            ModelObject = new TerraformExecutor();
+            MethodName = "UpdateTerraformExecutorWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IamAccountRelationship Account {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<TerraformCloudResource> CloudResource {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Enum indicates what operation is being done.\n* `Create` - Creating a Terraform resource.\n* `Update` - Updating a Terraform resource.\n* `Delete` - Deleting a Terraform resource."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TerraformExecutor.OperationEnum Operation {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Terraform output of the entire execution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object Output {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The Platform type used in conjunction with 'sourceFolderPath' and 'sourceFolderName' determines unique path for a Terraform workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PlatformType {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<TerraformRunstate> RunState {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Folder Name where Terraform workflows are stored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceFolderName {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Relative folder Path where 'sourceFolderName' is located."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceFolderPath {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Flag indicates whether workflow is internal/external."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SourceLocation {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Status of the terraform execution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Status {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Stderr of the terraform execution will be captured here."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object Stderr {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Stdout of the terraform execution will be captured here."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object Stdout {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"TaskId of a pontem workflow is same as the MO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TaskId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Variables needed by the terraform configuration as a JSON object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object Variables {
+            get;
+            set;
+        }
+        
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove TerraformExecutor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightTerraformExecutor")]
+    public class RemoveIntersightTerraformExecutor:RemoveCmdletBase
+	{
+		public RemoveIntersightTerraformExecutor()
+		{
+			ApiInstance = new TerraformApi(Config);
+            MethodName = "DeleteTerraformExecutorWithHttpInfo";
+		}
     }
 }

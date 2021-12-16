@@ -17,7 +17,7 @@ Remove-IntersightIamUser -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamUser&apos; resource.
+Delete a &amp;apos;IamUser&amp;apos; resource.
 
 ## EXAMPLES
 

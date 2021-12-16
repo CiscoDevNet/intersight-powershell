@@ -19,7 +19,7 @@ Set-IntersightStorageSasExpander [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageSasExpander&apos; resource.
+Update a &amp;apos;StorageSasExpander&amp;apos; resource.
 
 ## PARAMETERS
 

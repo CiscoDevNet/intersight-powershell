@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineInstanceType [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesVirtualMachineInstanceType&amp;apos; resource.
+Update a &apos;KubernetesVirtualMachineInstanceType&apos; resource.
 
 ## PARAMETERS
 
@@ -240,8 +240,8 @@ PS C:\> Set-IntersightKubernetesVirtualMachineInstanceType
 
 [Remove-IntersightKubernetesVirtualMachineInstanceType](./Remove-IntersightKubernetesVirtualMachineInstanceType.md)
 
-[Get-IntersightKubernetesVirtualMachineInstanceType](./Get-IntersightKubernetesVirtualMachineInstanceType.md)
-
 [New-IntersightKubernetesVirtualMachineInstanceType](./New-IntersightKubernetesVirtualMachineInstanceType.md)
+
+[Get-IntersightKubernetesVirtualMachineInstanceType](./Get-IntersightKubernetesVirtualMachineInstanceType.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

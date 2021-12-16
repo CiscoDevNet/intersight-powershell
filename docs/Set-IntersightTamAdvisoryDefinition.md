@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvisoryDetails
-Additional details for the advisory definition. For e.g. if the definition corresponds to a security advisory, the details\nregarding CVE ids and CVSS score would be available here.
+Additional details for the advisory definition. For e.g. if the definition corresponds to a security advisory, the details regarding CVE ids and CVSS score would be available here. If the definition is for an end-of-life milestone, the details about the specific milestone will be included.
 
 Note :- Use Initialize-IntersightTamBaseAdvisoryDetails to create the object of complex type TamBaseAdvisoryDetails
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdvisoryId
-Cisco generated identifier for the published security advisory.
+Cisco generated identifier for the published security/field-notice/end-of-life advisory.
 
 ```yaml
 Type: string
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatePublished
-Date when the security advisory was first published by Cisco.
+Date when the security/field-notice/end-of-life advisory was first published by Cisco.
 
 ```yaml
 Type: DateTime
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DateUpdated
-Date when the security advisory was last updated by Cisco.
+Date when the security/field-notice/end-of-life advisory was last updated by Cisco.
 
 ```yaml
 Type: DateTime
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type (field notice, security advisory etc.) of Intersight advisory.\n* `securityAdvisory` - Respresents the psirt alert type (https://tools.cisco.com/security/center/publicationListing.x).\n* `fieldNotice` - Respresents the field notice alert type (https://www.cisco.com/c/en/us/support/web/tsd-products-field-notice-summary.html).
+The type (field notice, security advisory, end-of-life milestone advisory etc.) of Intersight advisory.\n* `securityAdvisory` - Respresents the psirt alert type (https://tools.cisco.com/security/center/publicationListing.x).\n* `fieldNotice` - Respresents the field notice alert type (https://www.cisco.com/c/en/us/support/web/tsd-products-field-notice-summary.html).\n* `eolAdvisory` - Represents product End of Life (EOL) type (https://www.cisco.com/c/en/us/products/eos-eol-policy.html).
 
 ```yaml
 Type: TamAdvisoryDefinition.TypeEnum
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Cisco assigned advisory version after latest revision.
+Cisco assigned advisory/field-notice/end-of-life version after latest revision.
 
 ```yaml
 Type: string
@@ -397,9 +397,9 @@ PS C:\> Set-IntersightTamAdvisoryDefinition
 
 [Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
 
-[New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
-
 [Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
+
+[New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

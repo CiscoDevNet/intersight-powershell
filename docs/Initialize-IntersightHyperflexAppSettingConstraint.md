@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentType
-The deployment type of the cluster.\n* `NA` - The deployment type of the HyperFlex cluster is not available.\n* `Datacenter` - The deployment type of a HyperFlex cluster consisting of UCS Fabric Interconnect-attached nodes on the same site.\n* `Stretched Cluster` - The deployment type of a HyperFlex cluster consisting of UCS Fabric Interconnect-attached nodes across different sites.\n* `Edge` - The deployment type of a HyperFlex cluster consisting of 2 or more standalone nodes.
+The deployment type of the cluster.\n* `NA` - The deployment type of the cluster is not available.\n* `Datacenter` - The deployment type of a cluster consisting of UCS Fabric Interconnect-attached nodes on the same site.\n* `Stretched Cluster` - The deployment type of a cluster consisting of UCS Fabric Interconnect-attached nodes across different sites.\n* `Edge` - The deployment type of a cluster consisting of 2 or more standalone nodes.
 
 ```yaml
 Type: HyperflexAppSettingConstraint.DeploymentTypeEnum
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: HyperflexAppSettingConstraint.ObjectTypeEnum

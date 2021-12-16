@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-Model< string>][[-Moid]< string>][-NumDcePorts< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-Model< string>][[-Moid]< string>][-NumDcePorts< long>][-PciLink< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -206,6 +206,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PciLink
+Indicates PCI Link status of adapter.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PromCardType
 Prom card type for the adapter.
 
@@ -325,10 +340,10 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+
 [Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
-
-[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
