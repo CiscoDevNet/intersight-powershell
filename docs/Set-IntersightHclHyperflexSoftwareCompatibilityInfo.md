@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCatalog< HyperflexAppCatalogRelationship>][-Constraints< System.Collections.Generic.List`1[HclConstraint]>][-HxdpVersion< string>][-HypervisorType< HclHyperflexSoftwareCompatibilityInfo.HypervisorTypeEnum>][-HypervisorVersion< string>][[-Moid]< string>][-ServerFwVersion< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCatalog< HyperflexAppCatalogRelationship>][-Constraints< System.Collections.Generic.List`1[HclConstraint]>][-HxdpVersion< string>][-HypervisorType< HclHyperflexSoftwareCompatibilityInfo.HypervisorTypeEnum>][-HypervisorVersion< string>][-IsMgmtBuild< string>][[-Moid]< string>][-ServerFwVersion< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -105,6 +105,21 @@ Accept wildcard characters: False
 
 ### -HypervisorVersion
 Hypervisor component software version.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsMgmtBuild
+Type of the HXDP bundle mgmt or full.
 
 ```yaml
 Type: string

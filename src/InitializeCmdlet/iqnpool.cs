@@ -65,7 +65,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The suffix for this bock of IQNs."</para>
+        /// <para type="description">"The suffix for this block of IQNs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         

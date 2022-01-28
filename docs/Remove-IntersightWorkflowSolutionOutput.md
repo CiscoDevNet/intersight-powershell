@@ -17,7 +17,7 @@ Remove-IntersightWorkflowSolutionOutput -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowSolutionOutput&apos; resource.
+Delete a &amp;apos;WorkflowSolutionOutput&amp;apos; resource.
 
 ## EXAMPLES
 

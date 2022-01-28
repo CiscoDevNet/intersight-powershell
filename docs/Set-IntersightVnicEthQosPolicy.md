@@ -267,8 +267,8 @@ PS C:\> Set-IntersightVnicEthQosPolicy
 
 [Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
 
-[New-IntersightVnicEthQosPolicy](./New-IntersightVnicEthQosPolicy.md)
-
 [Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
+
+[New-IntersightVnicEthQosPolicy](./New-IntersightVnicEthQosPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

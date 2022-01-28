@@ -25,7 +25,7 @@ Get-IntersightIamCertificate [-Count <Boolean>] [-InlineCount <String>] [-Select
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamCertificate&apos; resource.,
+Read a &amp;apos;IamCertificate&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
-
 [Set-IntersightIamCertificate](./Set-IntersightIamCertificate.md)
+
+[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
 
 [New-IntersightIamCertificate](./New-IntersightIamCertificate.md)
 

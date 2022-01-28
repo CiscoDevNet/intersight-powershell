@@ -93,14 +93,30 @@ namespace Intersight.PowerShell
 				changedProperties.Add("Moid", this.MyInvocation.BoundParameters["Moid"]);
 			}
 
+			var getObject = GetMoByMoid(this.MyInvocation.BoundParameters["Moid"]);
+
 			if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
 			{
 				changedProperties.Add("Name", this.MyInvocation.BoundParameters["Name"]);
 			}
-			
-			var getObject = GetMoByMoid(this.MyInvocation.BoundParameters["Moid"]);
+			else if(getObject != null)
+			{
+				var nameInfo = getObject.GetType().GetProperty("Name");
+				if (nameInfo != null)
+				{
+					var nameValue = nameInfo.GetValue(getObject);
+					changedProperties.Add("Name",nameValue );
+					this.MyInvocation.BoundParameters.Add("Name", nameValue);
+				}
+			}
+
 			foreach(var propName in this.MyInvocation.BoundParameters)
 			{
+				if(propName.Key == "Moid" || propName.Key == "Name")
+				{
+					continue;
+				}
+				
 				var getPropertyInfo = getObject.GetType().GetProperty(propName.Key);
 				if (getPropertyInfo != null)
 				{

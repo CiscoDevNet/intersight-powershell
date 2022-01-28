@@ -19,7 +19,7 @@ New-IntersightSoftwarerepositoryCategorySupportConstraint [-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &apos;SoftwarerepositoryCategorySupportConstraint&apos; resource.
+Create a &amp;apos;SoftwarerepositoryCategorySupportConstraint&amp;apos; resource.
 
 ## PARAMETERS
 

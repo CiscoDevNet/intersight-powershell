@@ -19,7 +19,7 @@ Set-IntersightFirmwareBiosDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareBiosDescriptor&apos; resource.
+Update a &amp;apos;FirmwareBiosDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

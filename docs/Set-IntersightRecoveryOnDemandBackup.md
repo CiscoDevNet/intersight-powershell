@@ -300,8 +300,8 @@ PS C:\> Set-IntersightRecoveryOnDemandBackup
 
 [Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
 
-[New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
-
 [Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
+
+[New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

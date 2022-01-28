@@ -19,7 +19,7 @@ Set-IntersightFabricApplianceRole [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricApplianceRole&amp;apos; resource.
+Update a &apos;FabricApplianceRole&apos; resource.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregatePortId
-Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &apos;aggregatePortId&apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
+Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &amp;apos;aggregatePortId&amp;apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
 
 ```yaml
 Type: long
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &amp;apos;Auto&amp;apos;.\n* `Cl91` - Forward error correction option &amp;apos;cl91&amp;apos;.\n* `Cl74` - Forward error correction option &amp;apos;cl74&amp;apos;.
 
 ```yaml
 Type: FabricApplianceRole.FecEnum
@@ -322,10 +322,10 @@ PS C:\> Set-IntersightFabricApplianceRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
-
 [Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 
 [New-IntersightFabricApplianceRole](./New-IntersightFabricApplianceRole.md)
+
+[Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

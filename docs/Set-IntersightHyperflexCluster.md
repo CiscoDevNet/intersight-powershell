@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< System.Collections.Generic.List`1[HyperflexBaseClusterRelationship]>][-ClusterPurpose< HyperflexCluster.ClusterPurposeEnum>][-HypervisorType< HyperflexCluster.HypervisorTypeEnum>][[-Moid]< string>][-ParentCluster< ComputeBaseClusterRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHyperflexCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ChildClusters< System.Collections.Generic.List`1[HyperflexBaseClusterRelationship]>][-ClusterPurpose< HyperflexCluster.ClusterPurposeEnum>][-EncryptionStatus< string>][-HypervisorType< HyperflexCluster.HypervisorTypeEnum>][[-Moid]< string>][-ParentCluster< ComputeBaseClusterRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -79,6 +79,21 @@ This can be a Storage or Compute cluster. A storage cluster contains storage nod
 
 ```yaml
 Type: HyperflexCluster.ClusterPurposeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EncryptionStatus
+This captures the encryption status for a HyperFlex cluster.\nCurrently it will have the status if HXA-CLU-0020 alarm is raised. In the future it can capture other details.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

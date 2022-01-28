@@ -25,7 +25,7 @@ Get-IntersightInventoryDeviceInfo [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;InventoryDeviceInfo&apos; resource.,
+Read a &amp;apos;InventoryDeviceInfo&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

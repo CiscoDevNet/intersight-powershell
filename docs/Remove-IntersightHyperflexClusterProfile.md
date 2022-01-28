@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexClusterProfile&apos; resource.
+Delete a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
+[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
-[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
+[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
 

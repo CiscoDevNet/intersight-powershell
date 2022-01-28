@@ -25,7 +25,7 @@ Get-IntersightSoftwareSolutionDistributable [-Count <Boolean>] [-InlineCount <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SoftwareSolutionDistributable&amp;apos; resource.,
+Read a &apos;SoftwareSolutionDistributable&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightSoftwareSolutionDistributable](./New-IntersightSoftwareSolutionDistributable.md)
 
-[Remove-IntersightSoftwareSolutionDistributable](./Remove-IntersightSoftwareSolutionDistributable.md)
-
 [Set-IntersightSoftwareSolutionDistributable](./Set-IntersightSoftwareSolutionDistributable.md)
+
+[Remove-IntersightSoftwareSolutionDistributable](./Remove-IntersightSoftwareSolutionDistributable.md)
 

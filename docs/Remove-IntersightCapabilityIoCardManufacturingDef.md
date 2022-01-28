@@ -17,7 +17,7 @@ Remove-IntersightCapabilityIoCardManufacturingDef -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.
+Delete a &apos;CapabilityIoCardManufacturingDef&apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightHyperflexHealthCheckPackageChecksum [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHealthCheckPackageChecksum&amp;apos; resource.
+Update a &apos;HyperflexHealthCheckPackageChecksum&apos; resource.
 
 ## PARAMETERS
 

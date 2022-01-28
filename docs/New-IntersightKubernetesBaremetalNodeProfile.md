@@ -19,7 +19,7 @@ New-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-ActionParams< S
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesBaremetalNodeProfile&apos; resource.
+Create a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -358,11 +358,11 @@ PS C:\> New-IntersightKubernetesBaremetalNodeProfile
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
-
 [Set-IntersightKubernetesBaremetalNodeProfile](./Set-IntersightKubernetesBaremetalNodeProfile.md)
 
 [Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
+
+[Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

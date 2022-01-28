@@ -19,7 +19,7 @@ New-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowTaskDefinition&amp;apos; resource.
+Create a &apos;WorkflowTaskDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-A user friendly short name to identify the task definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&amp;apos;), forward slash (/), or an underscore (_) and must be at least 2 characters.
+A user friendly short name to identify the task definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), forward slash (/), or an underscore (_) and must be at least 2 characters.
 
 ```yaml
 Type: string
@@ -323,11 +323,11 @@ PS C:\> New-IntersightWorkflowTaskDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowTaskDefinition](./Get-IntersightWorkflowTaskDefinition.md)
-
 [Set-IntersightWorkflowTaskDefinition](./Set-IntersightWorkflowTaskDefinition.md)
 
 [Remove-IntersightWorkflowTaskDefinition](./Remove-IntersightWorkflowTaskDefinition.md)
+
+[Get-IntersightWorkflowTaskDefinition](./Get-IntersightWorkflowTaskDefinition.md)
 
 [Initialize-IntersightWorkflowInternalProperties](./Initialize-IntersightWorkflowInternalProperties.md)
 

@@ -25,7 +25,7 @@ Get-IntersightIamEndPointUser [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamEndPointUser&amp;apos; resource.,
+Read a &apos;IamEndPointUser&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamEndPointUser](./New-IntersightIamEndPointUser.md)
+[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
 
 [Set-IntersightIamEndPointUser](./Set-IntersightIamEndPointUser.md)
 
-[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
+[New-IntersightIamEndPointUser](./New-IntersightIamEndPointUser.md)
 

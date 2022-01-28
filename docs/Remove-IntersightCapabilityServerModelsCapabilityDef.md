@@ -17,7 +17,7 @@ Remove-IntersightCapabilityServerModelsCapabilityDef -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityServerModelsCapabilityDef&apos; resource.
+Delete a &amp;apos;CapabilityServerModelsCapabilityDef&amp;apos; resource.
 
 ## EXAMPLES
 

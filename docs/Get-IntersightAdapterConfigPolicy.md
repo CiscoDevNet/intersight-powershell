@@ -25,7 +25,7 @@ Get-IntersightAdapterConfigPolicy [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;AdapterConfigPolicy&amp;apos; resource.,
+Read a &apos;AdapterConfigPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightAdapterConfigPolicy](./New-IntersightAdapterConfigPolicy.md)
+
 [Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
 
 [Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
-
-[New-IntersightAdapterConfigPolicy](./New-IntersightAdapterConfigPolicy.md)
 

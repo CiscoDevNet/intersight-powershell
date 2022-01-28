@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&apos;s behalf.
+The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&amp;apos;s behalf.
 
 ```yaml
 Type: string
@@ -172,8 +172,8 @@ PS C:\> Set-IntersightSoftwarerepositoryAuthorization
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwarerepositoryAuthorization](./Get-IntersightSoftwarerepositoryAuthorization.md)
-
 [New-IntersightSoftwarerepositoryAuthorization](./New-IntersightSoftwarerepositoryAuthorization.md)
+
+[Get-IntersightSoftwarerepositoryAuthorization](./Get-IntersightSoftwarerepositoryAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

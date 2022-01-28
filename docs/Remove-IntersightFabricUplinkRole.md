@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFabricUplinkRole](./Get-IntersightFabricUplinkRole.md)
+[Set-IntersightFabricUplinkRole](./Set-IntersightFabricUplinkRole.md)
 
 [New-IntersightFabricUplinkRole](./New-IntersightFabricUplinkRole.md)
 
-[Set-IntersightFabricUplinkRole](./Set-IntersightFabricUplinkRole.md)
+[Get-IntersightFabricUplinkRole](./Get-IntersightFabricUplinkRole.md)
 

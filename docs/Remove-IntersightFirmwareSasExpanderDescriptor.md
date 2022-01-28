@@ -17,7 +17,7 @@ Remove-IntersightFirmwareSasExpanderDescriptor -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareSasExpanderDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareSasExpanderDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

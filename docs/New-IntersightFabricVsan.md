@@ -19,7 +19,7 @@ New-IntersightFabricVsan [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricVsan&amp;apos; resource.
+Create a &apos;FabricVsan&apos; resource.
 
 ## PARAMETERS
 

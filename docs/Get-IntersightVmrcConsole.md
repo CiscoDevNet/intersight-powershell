@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightVmrcConsole](./New-IntersightVmrcConsole.md)
-
 [Set-IntersightVmrcConsole](./Set-IntersightVmrcConsole.md)
+
+[New-IntersightVmrcConsole](./New-IntersightVmrcConsole.md)
 

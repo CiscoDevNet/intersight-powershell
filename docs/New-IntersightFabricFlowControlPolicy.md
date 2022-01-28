@@ -19,7 +19,7 @@ New-IntersightFabricFlowControlPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricFlowControlPolicy&amp;apos; resource.
+Create a &apos;FabricFlowControlPolicy&apos; resource.
 
 ## PARAMETERS
 

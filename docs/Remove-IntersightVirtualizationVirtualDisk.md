@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationVirtualDisk -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VirtualizationVirtualDisk&apos; resource.
+Delete a &amp;apos;VirtualizationVirtualDisk&amp;apos; resource.
 
 ## EXAMPLES
 

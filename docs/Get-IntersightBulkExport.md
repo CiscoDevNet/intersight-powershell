@@ -25,7 +25,7 @@ Get-IntersightBulkExport [-Count <Boolean>] [-InlineCount <String>] [-Select <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;BulkExport&apos; resource.,
+Read a &amp;apos;BulkExport&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightBulkExport](./New-IntersightBulkExport.md)
+
 [Set-IntersightBulkExport](./Set-IntersightBulkExport.md)
 
 [Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
-
-[New-IntersightBulkExport](./New-IntersightBulkExport.md)
 

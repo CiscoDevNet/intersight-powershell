@@ -258,11 +258,11 @@ PS C:\> New-IntersightIppoolPool
 
 ## RELATED LINKS
 
-[Get-IntersightIppoolPool](./Get-IntersightIppoolPool.md)
-
 [Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
 
 [Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
+
+[Get-IntersightIppoolPool](./Get-IntersightIppoolPool.md)
 
 [Initialize-IntersightIppoolIpV4Block](./Initialize-IntersightIppoolIpV4Block.md)
 

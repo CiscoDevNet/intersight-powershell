@@ -19,7 +19,7 @@ Set-IntersightStorageFlexUtilVirtualDrive [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageFlexUtilVirtualDrive&apos; resource.
+Update a &amp;apos;StorageFlexUtilVirtualDrive&amp;apos; resource.
 
 ## PARAMETERS
 

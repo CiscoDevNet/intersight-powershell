@@ -17,7 +17,7 @@ Remove-IntersightVnicEthNetworkPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VnicEthNetworkPolicy&amp;apos; resource.
+Delete a &apos;VnicEthNetworkPolicy&apos; resource.
 
 ## EXAMPLES
 

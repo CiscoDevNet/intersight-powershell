@@ -19,7 +19,7 @@ Set-IntersightFirmwareIomDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareIomDescriptor&amp;apos; resource.
+Update a &apos;FirmwareIomDescriptor&apos; resource.
 
 ## PARAMETERS
 

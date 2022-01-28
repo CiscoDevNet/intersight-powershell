@@ -17,7 +17,7 @@ Remove-IntersightStorageDriveGroup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;StorageDriveGroup&apos; resource.
+Delete a &amp;apos;StorageDriveGroup&amp;apos; resource.
 
 ## EXAMPLES
 

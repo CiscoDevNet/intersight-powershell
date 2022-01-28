@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterProfile [-Action< string>][-ActionParams< System.C
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
+Update a &apos;HyperflexClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -570,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageClientVlan
-The named VLAN associated with this cluster&amp;apos;s storage client network. This applies to Intersight Workload Engine clusters only.
+The named VLAN associated with this cluster&apos;s storage client network. This applies to Intersight Workload Engine clusters only.
 
 Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
 
@@ -791,11 +791,11 @@ PS C:\> Set-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
+[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
-[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
+[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

@@ -19,7 +19,7 @@ Set-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLocalUserPassword&amp;apos; resource.
+Update a &apos;IamLocalUserPassword&apos; resource.
 
 ## PARAMETERS
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User&apos;s current valid passsord.
+User&amp;apos;s current valid passsord.
 
 ```yaml
 Type: byte

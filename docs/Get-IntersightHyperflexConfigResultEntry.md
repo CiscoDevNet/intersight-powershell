@@ -25,7 +25,7 @@ Get-IntersightHyperflexConfigResultEntry [-Count <Boolean>] [-InlineCount <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;HyperflexConfigResultEntry&apos; resource.,
+Read a &amp;apos;HyperflexConfigResultEntry&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

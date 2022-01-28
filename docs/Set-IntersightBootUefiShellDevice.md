@@ -19,7 +19,7 @@ Set-IntersightBootUefiShellDevice [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;BootUefiShellDevice&apos; resource.
+Update a &amp;apos;BootUefiShellDevice&amp;apos; resource.
 
 ## PARAMETERS
 

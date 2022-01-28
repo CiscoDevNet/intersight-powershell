@@ -19,7 +19,7 @@ Set-IntersightFirmwarePsuDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwarePsuDescriptor&amp;apos; resource.
+Update a &apos;FirmwarePsuDescriptor&apos; resource.
 
 ## PARAMETERS
 

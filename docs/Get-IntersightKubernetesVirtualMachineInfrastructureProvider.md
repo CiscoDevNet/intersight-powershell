@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesVirtualMachineInfrastructureProvider](./New-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
-
 [Set-IntersightKubernetesVirtualMachineInfrastructureProvider](./Set-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
+
+[New-IntersightKubernetesVirtualMachineInfrastructureProvider](./New-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
 

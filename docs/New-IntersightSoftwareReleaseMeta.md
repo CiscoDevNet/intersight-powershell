@@ -19,7 +19,7 @@ New-IntersightSoftwareReleaseMeta [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareReleaseMeta&amp;apos; resource.
+Create a &apos;SoftwareReleaseMeta&apos; resource.
 
 ## PARAMETERS
 

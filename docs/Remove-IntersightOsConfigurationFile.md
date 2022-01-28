@@ -17,7 +17,7 @@ Remove-IntersightOsConfigurationFile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;OsConfigurationFile&apos; resource.
+Delete a &amp;apos;OsConfigurationFile&amp;apos; resource.
 
 ## EXAMPLES
 

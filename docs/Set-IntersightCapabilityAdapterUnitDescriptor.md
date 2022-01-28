@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-Model< string>][[-Moid]< string>][-NumDcePorts< long>][-PciLink< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightCapabilityAdapterUnitDescriptor [-AdapterGeneration< CapabilityAdapterUnitDescriptor.AdapterGenerationEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-Features< System.Collections.Generic.List`1[CapabilityFeatureConfig]>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-MaxRocev2Interfaces< long>][-Model< string>][[-Moid]< string>][-NumDcePorts< long>][-PciLink< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,21 @@ Set-IntersightCapabilityAdapterUnitDescriptor [-AdditionalProperties< System.Col
 Update a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
 
 ## PARAMETERS
+
+### -AdapterGeneration
+Generation of the adapter.\n* `4` - Fourth generation adapters (14xx). The PIDs of these adapters end with the string 04.\n* `2` - Second generation VIC adapters (12xx). The PIDs of these adapters end with the string 02.\n* `3` - Third generation adapters (13xx). The PIDs of these adapters end with the string 03.\n* `5` - Fifth generation adapters (15xx). The PIDs of these adapters contain the V5 string.
+
+```yaml
+Type: CapabilityAdapterUnitDescriptor.AdapterGenerationEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -101,6 +116,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Features
+
+
+Note :- Use Initialize-IntersightCapabilityFeatureConfig to create the object of complex type CapabilityFeatureConfig
+
+```yaml
+Type: System.Collections.Generic.List`1[CapabilityFeatureConfig]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FibreChannelPortSpeed
 The port speed for fibre channel ports in Mbps.
 
@@ -151,6 +183,21 @@ Indicates that the GENEVE offload feature is supported by this adapter.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxRocev2Interfaces
+Maximum number of vNIC interfaces that can be RoCEv2 enabled.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -345,5 +392,7 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 [Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
+
+[Initialize-IntersightCapabilityFeatureConfig](./Initialize-IntersightCapabilityFeatureConfig.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

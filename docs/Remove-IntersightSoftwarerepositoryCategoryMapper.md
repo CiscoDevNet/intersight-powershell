@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryCategoryMapper -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
+Delete a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
 
 ## EXAMPLES
 

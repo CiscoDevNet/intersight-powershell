@@ -311,7 +311,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new PowerApi(Config);
             ModelObject = new PowerPolicy();
-            MethodName = "UpdatePowerPolicyWithHttpInfo";
+            MethodName = "PatchPowerPolicyWithHttpInfo";
 		}
         
         

@@ -19,7 +19,7 @@ New-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< Syste
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesNodeGroupProfile&amp;apos; resource.
+Create a &apos;KubernetesNodeGroupProfile&apos; resource.
 
 ## PARAMETERS
 

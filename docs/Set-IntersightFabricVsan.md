@@ -19,7 +19,7 @@ Set-IntersightFabricVsan [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricVsan&amp;apos; resource.
+Update a &apos;FabricVsan&apos; resource.
 
 ## PARAMETERS
 
@@ -235,9 +235,9 @@ PS C:\> Set-IntersightFabricVsan
 
 ## RELATED LINKS
 
-[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
-
 [New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
+
+[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
 
 [Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
 

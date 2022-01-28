@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterBackupPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterBackupPolicy&amp;apos; resource.
+Update a &apos;HyperflexClusterBackupPolicy&apos; resource.
 
 ## PARAMETERS
 

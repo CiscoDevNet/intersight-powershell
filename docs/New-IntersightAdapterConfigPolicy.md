@@ -19,7 +19,7 @@ New-IntersightAdapterConfigPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AdapterConfigPolicy&amp;apos; resource.
+Create a &apos;AdapterConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -210,11 +210,11 @@ PS C:\> New-IntersightAdapterConfigPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
+
 [Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
 
 [Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
-
-[Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
 
 [Initialize-IntersightAdapterAdapterConfig](./Initialize-IntersightAdapterAdapterConfig.md)
 

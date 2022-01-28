@@ -19,7 +19,7 @@ Set-IntersightEquipmentSharedIoModule [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentSharedIoModule&apos; resource.
+Update a &amp;apos;EquipmentSharedIoModule&amp;apos; resource.
 
 ## PARAMETERS
 

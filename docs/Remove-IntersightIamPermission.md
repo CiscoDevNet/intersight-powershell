@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamPermission](./New-IntersightIamPermission.md)
+[Set-IntersightIamPermission](./Set-IntersightIamPermission.md)
 
 [Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
 
-[Set-IntersightIamPermission](./Set-IntersightIamPermission.md)
+[New-IntersightIamPermission](./New-IntersightIamPermission.md)
 

@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -MountOption
-For CIFS, leave the field blank or enter one or more comma seperated options from the following. For Example, \&quot; \&quot; , \&quot; soft \&quot; , \&quot; soft , nounix \&quot; .\n* soft.\n* nounix.\n* noserviceino.\n* guest.\n* USERNAME=VALUE.\n* PASSWORD=VALUE.\n* sec=VALUE (VALUE could be None, Ntlm, Ntlmi, Ntlmssp, Ntlmsspi, Ntlmv2, Ntlmv2i).
+For CIFS, leave the field blank or enter one or more comma seperated options from the following. For Example, \&amp;quot; \&amp;quot; , \&amp;quot; soft \&amp;quot; , \&amp;quot; soft , nounix \&amp;quot; .\n* soft.\n* nounix.\n* noserviceino.\n* guest.\n* USERNAME=VALUE.\n* PASSWORD=VALUE.\n* sec=VALUE (VALUE could be None, Ntlm, Ntlmi, Ntlmssp, Ntlmsspi, Ntlmv2, Ntlmv2i).
 
 ```yaml
 Type: string

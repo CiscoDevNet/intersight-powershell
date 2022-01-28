@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
 
-[New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
-
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
+
+[New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
 

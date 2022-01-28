@@ -8,15 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldGlobalSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
-    public class InitializeIntersightFabricLldpSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldGlobalSettings")]
+    public class InitializeIntersightFabricUdldGlobalSettings:PSCmdlet
 	{
-		public InitializeIntersightFabricLldpSettings()
+		public InitializeIntersightFabricUdldGlobalSettings()
 		{
-            ClassId = FabricLldpSettings.ClassIdEnum.FabricLldpSettings;
-            ObjectType = FabricLldpSettings.ObjectTypeEnum.FabricLldpSettings;
+            ClassId = FabricUdldGlobalSettings.ClassIdEnum.FabricUdldGlobalSettings;
+            ObjectType = FabricUdldGlobalSettings.ObjectTypeEnum.FabricUdldGlobalSettings;
+            RecoveryAction = FabricUdldGlobalSettings.RecoveryActionEnum.None;
             
 		}
         // <summary>
@@ -33,7 +34,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricLldpSettings.ClassIdEnum ClassId {
+        public FabricUdldGlobalSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 7 to 90 seconds."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(7, 90)]
+        public long MessageInterval {
             get;
             set;
         }
@@ -42,125 +52,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricLldpSettings.ObjectTypeEnum ObjectType {
+        public FabricUdldGlobalSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Determines if the LLDP frames can be received by an interface on the switch."</para>
+        /// <para type="description">"UDLD recovery when enabled, attempts to bring an UDLD error-disabled port out of reset.\n* `none` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `reset` - The expanded 4th generation UCS Fabric Interconnect with 108 ports."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool ReceiveEnabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Determines if the LLDP frames can be transmitted by an interface on the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool TransmitEnabled {
+        public FabricUdldGlobalSettings.RecoveryActionEnum RecoveryAction {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricLldpSettings initObject = new Intersight.Model.FabricLldpSettings();
+             Intersight.Model.FabricUdldGlobalSettings initObject = new Intersight.Model.FabricUdldGlobalSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveEnabled"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MessageInterval"))
             {
-                initObject.ReceiveEnabled = this.ReceiveEnabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TransmitEnabled"))
-            {
-                initObject.TransmitEnabled = this.TransmitEnabled;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricVlanSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricVlanSettings")]
-    public class InitializeIntersightFabricVlanSettings:PSCmdlet
-	{
-		public InitializeIntersightFabricVlanSettings()
-		{
-            ClassId = FabricVlanSettings.ClassIdEnum.FabricVlanSettings;
-            ObjectType = FabricVlanSettings.ObjectTypeEnum.FabricVlanSettings;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Allowed VLAN IDs of the virtual interface. A list of comma seperated VLAN ids and/or VLAN id ranges."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
-        public string AllowedVlans {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricVlanSettings.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Native VLAN ID of the virtual interface or the corresponding vethernet on the peer Fabric Interconnect to which the virtual interface is connected. If the native VLAN is not a part of the allowed VLANs, it will automatically be added to the list of allowed VLANs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 4093)]
-        public long NativeVlan {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricVlanSettings.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.FabricVlanSettings initObject = new Intersight.Model.FabricVlanSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AllowedVlans"))
-            {
-                initObject.AllowedVlans = this.AllowedVlans;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("NativeVlan"))
-            {
-                initObject.NativeVlan = this.NativeVlan;
+                initObject.MessageInterval = this.MessageInterval;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecoveryAction"))
+            {
+                initObject.RecoveryAction = this.RecoveryAction;
+            }
             WriteObject(initObject);
         }
 
@@ -246,17 +168,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricVlanSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
-    public class InitializeIntersightFabricUdldSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricVlanSettings")]
+    public class InitializeIntersightFabricVlanSettings:PSCmdlet
 	{
-		public InitializeIntersightFabricUdldSettings()
+		public InitializeIntersightFabricVlanSettings()
 		{
-            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
-            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
-            Mode = FabricUdldSettings.ModeEnum.Normal;
-            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
+            ClassId = FabricVlanSettings.ClassIdEnum.FabricVlanSettings;
+            ObjectType = FabricVlanSettings.ObjectTypeEnum.FabricVlanSettings;
             
 		}
         // <summary>
@@ -269,11 +189,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// <para type="description">"Allowed VLAN IDs of the virtual interface. A list of comma seperated VLAN ids and/or VLAN id ranges."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.AdminStateEnum AdminState {
+        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
+        public string AllowedVlans {
             get;
             set;
         }
@@ -282,16 +202,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldSettings.ClassIdEnum ClassId {
+        public FabricVlanSettings.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
+        /// <para type="description">"Native VLAN ID of the virtual interface or the corresponding vethernet on the peer Fabric Interconnect to which the virtual interface is connected. If the native VLAN is not a part of the allowed VLANs, it will automatically be added to the list of allowed VLANs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public FabricUdldSettings.ModeEnum Mode {
+        [ValidateRange(1, 4093)]
+        public long NativeVlan {
             get;
             set;
         }
@@ -300,26 +220,26 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldSettings.ObjectTypeEnum ObjectType {
+        public FabricVlanSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
+             Intersight.Model.FabricVlanSettings initObject = new Intersight.Model.FabricVlanSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllowedVlans"))
             {
-                initObject.AdminState = this.AdminState;
+                initObject.AllowedVlans = this.AllowedVlans;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("NativeVlan"))
             {
-                initObject.Mode = this.Mode;
+                initObject.NativeVlan = this.NativeVlan;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -419,16 +339,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldGlobalSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldGlobalSettings")]
-    public class InitializeIntersightFabricUdldGlobalSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
+    public class InitializeIntersightFabricLldpSettings:PSCmdlet
 	{
-		public InitializeIntersightFabricUdldGlobalSettings()
+		public InitializeIntersightFabricLldpSettings()
 		{
-            ClassId = FabricUdldGlobalSettings.ClassIdEnum.FabricUdldGlobalSettings;
-            ObjectType = FabricUdldGlobalSettings.ObjectTypeEnum.FabricUdldGlobalSettings;
-            RecoveryAction = FabricUdldGlobalSettings.RecoveryActionEnum.None;
+            ClassId = FabricLldpSettings.ClassIdEnum.FabricLldpSettings;
+            ObjectType = FabricLldpSettings.ObjectTypeEnum.FabricLldpSettings;
             
 		}
         // <summary>
@@ -445,16 +364,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldGlobalSettings.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 7 to 90 seconds."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(7, 90)]
-        public long MessageInterval {
+        public FabricLldpSettings.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -463,36 +373,45 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldGlobalSettings.ObjectTypeEnum ObjectType {
+        public FabricLldpSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"UDLD recovery when enabled, attempts to bring an UDLD error-disabled port out of reset.\n* `none` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `reset` - The expanded 4th generation UCS Fabric Interconnect with 108 ports."</para>
+        /// <para type="description">"Determines if the LLDP frames can be received by an interface on the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldGlobalSettings.RecoveryActionEnum RecoveryAction {
+        public bool ReceiveEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the LLDP frames can be transmitted by an interface on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool TransmitEnabled {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricUdldGlobalSettings initObject = new Intersight.Model.FabricUdldGlobalSettings();
+             Intersight.Model.FabricLldpSettings initObject = new Intersight.Model.FabricLldpSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MessageInterval"))
-            {
-                initObject.MessageInterval = this.MessageInterval;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RecoveryAction"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveEnabled"))
             {
-                initObject.RecoveryAction = this.RecoveryAction;
+                initObject.ReceiveEnabled = this.ReceiveEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TransmitEnabled"))
+            {
+                initObject.TransmitEnabled = this.TransmitEnabled;
             }
             WriteObject(initObject);
         }
@@ -653,6 +572,87 @@ namespace Intersight.PowerShell
             {
                 initObject.Weight = this.Weight;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
+    public class InitializeIntersightFabricUdldSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricUdldSettings()
+		{
+            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
+            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
+            Mode = FabricUdldSettings.ModeEnum.Normal;
+            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.AdminStateEnum AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            {
+                initObject.AdminState = this.AdminState;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

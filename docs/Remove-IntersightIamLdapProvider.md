@@ -17,7 +17,7 @@ Remove-IntersightIamLdapProvider -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamLdapProvider&amp;apos; resource.
+Delete a &apos;IamLdapProvider&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightIamLdapProvider](./Set-IntersightIamLdapProvider.md)
 
-[Get-IntersightIamLdapProvider](./Get-IntersightIamLdapProvider.md)
-
 [New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
+
+[Get-IntersightIamLdapProvider](./Get-IntersightIamLdapProvider.md)
 

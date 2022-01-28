@@ -19,7 +19,7 @@ New-IntersightFirmwareDriverDistributable [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareDriverDistributable&apos; resource.
+Create a &amp;apos;FirmwareDriverDistributable&amp;apos; resource.
 
 ## PARAMETERS
 

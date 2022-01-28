@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareDatastoreCluster [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDatastoreCluster&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDatastoreCluster&apos; resource.
 
 ## PARAMETERS
 

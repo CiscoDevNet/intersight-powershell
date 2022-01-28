@@ -17,7 +17,7 @@ Remove-IntersightHyperflexServerModel -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexServerModel&apos; resource.
+Delete a &amp;apos;HyperflexServerModel&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineInstanceType [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesVirtualMachineInstanceType&apos; resource.
+Update a &amp;apos;KubernetesVirtualMachineInstanceType&amp;apos; resource.
 
 ## PARAMETERS
 

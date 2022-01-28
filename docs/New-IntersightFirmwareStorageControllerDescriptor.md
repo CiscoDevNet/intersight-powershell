@@ -19,7 +19,7 @@ New-IntersightFirmwareStorageControllerDescriptor [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareStorageControllerDescriptor&apos; resource.
+Create a &amp;apos;FirmwareStorageControllerDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> New-IntersightFirmwareStorageControllerDescriptor
 
 ## RELATED LINKS
 
+[Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)
+
 [Set-IntersightFirmwareStorageControllerDescriptor](./Set-IntersightFirmwareStorageControllerDescriptor.md)
 
 [Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)
-
-[Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

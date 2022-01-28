@@ -19,7 +19,7 @@ New-IntersightFirmwarePsuDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwarePsuDescriptor&amp;apos; resource.
+Create a &apos;FirmwarePsuDescriptor&apos; resource.
 
 ## PARAMETERS
 

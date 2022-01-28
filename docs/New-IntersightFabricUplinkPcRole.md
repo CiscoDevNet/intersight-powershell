@@ -19,7 +19,7 @@ New-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricUplinkPcRole&apos; resource.
+Create a &amp;apos;FabricUplinkPcRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -264,11 +264,11 @@ PS C:\> New-IntersightFabricUplinkPcRole
 
 ## RELATED LINKS
 
+[Get-IntersightFabricUplinkPcRole](./Get-IntersightFabricUplinkPcRole.md)
+
 [Set-IntersightFabricUplinkPcRole](./Set-IntersightFabricUplinkPcRole.md)
 
 [Remove-IntersightFabricUplinkPcRole](./Remove-IntersightFabricUplinkPcRole.md)
-
-[Get-IntersightFabricUplinkPcRole](./Get-IntersightFabricUplinkPcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
 

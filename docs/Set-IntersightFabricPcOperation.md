@@ -19,7 +19,7 @@ Set-IntersightFabricPcOperation [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricPcOperation&amp;apos; resource.
+Update a &apos;FabricPcOperation&apos; resource.
 
 ## PARAMETERS
 

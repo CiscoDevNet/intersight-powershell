@@ -17,7 +17,7 @@ Remove-IntersightComputeBladeIdentity -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ComputeBladeIdentity&amp;apos; resource.
+Delete a &apos;ComputeBladeIdentity&apos; resource.
 
 ## EXAMPLES
 

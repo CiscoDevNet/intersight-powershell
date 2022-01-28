@@ -19,7 +19,7 @@ Set-IntersightKubernetesAddonRepository [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAddonRepository&amp;apos; resource.
+Update a &apos;KubernetesAddonRepository&apos; resource.
 
 ## PARAMETERS
 

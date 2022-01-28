@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareDriveDescriptor
 
 [Get-IntersightFirmwareDriveDescriptor](./Get-IntersightFirmwareDriveDescriptor.md)
 
-[Set-IntersightFirmwareDriveDescriptor](./Set-IntersightFirmwareDriveDescriptor.md)
-
 [Remove-IntersightFirmwareDriveDescriptor](./Remove-IntersightFirmwareDriveDescriptor.md)
+
+[Set-IntersightFirmwareDriveDescriptor](./Set-IntersightFirmwareDriveDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

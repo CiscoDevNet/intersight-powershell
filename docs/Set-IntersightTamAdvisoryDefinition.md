@@ -19,7 +19,7 @@ Set-IntersightTamAdvisoryDefinition [-Actions< System.Collections.Generic.List`1
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;TamAdvisoryDefinition&amp;apos; resource.
+Update a &apos;TamAdvisoryDefinition&apos; resource.
 
 ## PARAMETERS
 

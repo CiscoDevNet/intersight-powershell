@@ -17,7 +17,7 @@ Remove-IntersightSoftwareUcsdBundleDistributable -Moid <String> [<CommonParamete
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareUcsdBundleDistributable&amp;apos; resource.
+Delete a &apos;SoftwareUcsdBundleDistributable&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareUcsdBundleDistributable](./Set-IntersightSoftwareUcsdBundleDistributable.md)
+
 [Get-IntersightSoftwareUcsdBundleDistributable](./Get-IntersightSoftwareUcsdBundleDistributable.md)
 
 [New-IntersightSoftwareUcsdBundleDistributable](./New-IntersightSoftwareUcsdBundleDistributable.md)
-
-[Set-IntersightSoftwareUcsdBundleDistributable](./Set-IntersightSoftwareUcsdBundleDistributable.md)
 

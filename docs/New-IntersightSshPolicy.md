@@ -238,10 +238,10 @@ PS C:\> New-IntersightSshPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightSshPolicy](./Get-IntersightSshPolicy.md)
+
 [Set-IntersightSshPolicy](./Set-IntersightSshPolicy.md)
 
 [Remove-IntersightSshPolicy](./Remove-IntersightSshPolicy.md)
-
-[Get-IntersightSshPolicy](./Get-IntersightSshPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

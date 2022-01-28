@@ -41,7 +41,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Starting UUID suffix of the block must be in hexadecimal format xxxx-xxxxxxxxxxxx."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$")]
+        [ValidatePattern("^$|^[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$")]
         public string From {
             get;
             set;

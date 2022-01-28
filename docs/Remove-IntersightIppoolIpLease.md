@@ -17,7 +17,7 @@ Remove-IntersightIppoolIpLease -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IppoolIpLease&apos; resource.
+Delete a &amp;apos;IppoolIpLease&amp;apos; resource.
 
 ## EXAMPLES
 

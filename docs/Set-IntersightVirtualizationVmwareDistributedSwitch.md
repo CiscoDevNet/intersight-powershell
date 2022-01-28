@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDistributedSwitch [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Identity< string>][-MaxPort< long>][[-Moid]< string>][-Mtu< long>][-Name< string>][-NicTeamingAndFailover< VirtualizationVmwareTeamingAndFailover>][-NumHosts< long>][-NumNetworks< long>][-NumStandAlonePorts< long>][-NumUplinks< long>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-SwitchCapacity< VirtualizationStorageCapacity>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareDistributedSwitch [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-DiscoveryProtocol< VirtualizationVmwareDiscoveryProtocol>][-Identity< string>][-MaxPort< long>][[-Moid]< string>][-Mtu< long>][-Name< string>][-NetworkIoControl< bool>][-NicTeamingAndFailover< VirtualizationVmwareTeamingAndFailover>][-NumHosts< long>][-NumNetworks< long>][-NumStandAlonePorts< long>][-NumUplinks< long>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-ResourceAllocationSystemTraffic< System.Collections.Generic.List`1[VirtualizationVmwareResourceAllocationSystemTrafficTypes]>][-SwitchCapacity< VirtualizationStorageCapacity>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,23 @@ Switch description (user provided), if any.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiscoveryProtocol
+Discovery protocol helps to determine which port of the physical switch connected to standard switch or distributed switch.
+
+Note :- Use Initialize-IntersightVirtualizationVmwareDiscoveryProtocol to create the object of complex type VirtualizationVmwareDiscoveryProtocol
+
+```yaml
+Type: VirtualizationVmwareDiscoveryProtocol
 Parameter Sets: (All)
 Aliases:
 
@@ -118,6 +135,21 @@ User-provided name to identify the switch.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkIoControl
+If network io control is enabled, will set the value as true.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -213,6 +245,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: AssetDeviceRegistrationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceAllocationSystemTraffic
+
+
+Note :- Use Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes to create the object of complex type VirtualizationVmwareResourceAllocationSystemTrafficTypes
+
+```yaml
+Type: System.Collections.Generic.List`1[VirtualizationVmwareResourceAllocationSystemTrafficTypes]
 Parameter Sets: (All)
 Aliases:
 
@@ -346,7 +395,11 @@ PS C:\> Set-IntersightVirtualizationVmwareDistributedSwitch
 
 [Get-IntersightVirtualizationVmwareDistributedSwitch](./Get-IntersightVirtualizationVmwareDistributedSwitch.md)
 
+[Initialize-IntersightVirtualizationVmwareDiscoveryProtocol](./Initialize-IntersightVirtualizationVmwareDiscoveryProtocol.md)
+
 [Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)
+
+[Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes](./Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes.md)
 
 [Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
 

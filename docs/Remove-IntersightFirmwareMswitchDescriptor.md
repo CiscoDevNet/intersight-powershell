@@ -17,7 +17,7 @@ Remove-IntersightFirmwareMswitchDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareMswitchDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

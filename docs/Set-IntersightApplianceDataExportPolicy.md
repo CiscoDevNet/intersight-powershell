@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Status of the data collection mode. If the value is &amp;apos;true&amp;apos;, then data collection is enabled.
+Status of the data collection mode. If the value is &apos;true&apos;, then data collection is enabled.
 
 ```yaml
 Type: bool
@@ -160,8 +160,8 @@ PS C:\> Set-IntersightApplianceDataExportPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceDataExportPolicy](./Get-IntersightApplianceDataExportPolicy.md)
-
 [New-IntersightApplianceDataExportPolicy](./New-IntersightApplianceDataExportPolicy.md)
+
+[Get-IntersightApplianceDataExportPolicy](./Get-IntersightApplianceDataExportPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

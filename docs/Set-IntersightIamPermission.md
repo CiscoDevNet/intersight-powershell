@@ -247,10 +247,10 @@ PS C:\> Set-IntersightIamPermission
 
 ## RELATED LINKS
 
-[New-IntersightIamPermission](./New-IntersightIamPermission.md)
+[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
 
 [Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
 
-[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
+[New-IntersightIamPermission](./New-IntersightIamPermission.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

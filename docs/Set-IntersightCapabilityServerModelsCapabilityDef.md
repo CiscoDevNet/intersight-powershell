@@ -19,7 +19,7 @@ Set-IntersightCapabilityServerModelsCapabilityDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityServerModelsCapabilityDef&amp;apos; resource.
+Update a &apos;CapabilityServerModelsCapabilityDef&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightHyperflexVcenterConfigPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexVcenterConfigPolicy&apos; resource.
+Create a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

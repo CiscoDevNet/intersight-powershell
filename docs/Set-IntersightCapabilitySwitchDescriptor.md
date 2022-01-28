@@ -19,7 +19,7 @@ Set-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilitySwitchDescriptor&amp;apos; resource.
+Update a &apos;CapabilitySwitchDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -235,9 +235,9 @@ PS C:\> Set-IntersightCapabilitySwitchDescriptor
 
 ## RELATED LINKS
 
-[New-IntersightCapabilitySwitchDescriptor](./New-IntersightCapabilitySwitchDescriptor.md)
-
 [Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)
+
+[New-IntersightCapabilitySwitchDescriptor](./New-IntersightCapabilitySwitchDescriptor.md)
 
 [Remove-IntersightCapabilitySwitchDescriptor](./Remove-IntersightCapabilitySwitchDescriptor.md)
 

@@ -19,7 +19,7 @@ New-IntersightNtpPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;NtpPolicy&amp;apos; resource.
+Create a &apos;NtpPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -275,9 +275,9 @@ PS C:\> New-IntersightNtpPolicy
 
 [Get-IntersightNtpPolicy](./Get-IntersightNtpPolicy.md)
 
-[Set-IntersightNtpPolicy](./Set-IntersightNtpPolicy.md)
-
 [Remove-IntersightNtpPolicy](./Remove-IntersightNtpPolicy.md)
+
+[Set-IntersightNtpPolicy](./Set-IntersightNtpPolicy.md)
 
 [Initialize-IntersightNtpAuthNtpServer](./Initialize-IntersightNtpAuthNtpServer.md)
 

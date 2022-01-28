@@ -19,7 +19,7 @@ New-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricSwitchControlPolicy&apos; resource.
+Create a &amp;apos;FabricSwitchControlPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -272,11 +272,11 @@ PS C:\> New-IntersightFabricSwitchControlPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
-
 [Set-IntersightFabricSwitchControlPolicy](./Set-IntersightFabricSwitchControlPolicy.md)
 
 [Remove-IntersightFabricSwitchControlPolicy](./Remove-IntersightFabricSwitchControlPolicy.md)
+
+[Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
 
 [Initialize-IntersightFabricMacAgingSettings](./Initialize-IntersightFabricMacAgingSettings.md)
 

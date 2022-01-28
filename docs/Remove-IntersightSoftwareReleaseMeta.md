@@ -17,7 +17,7 @@ Remove-IntersightSoftwareReleaseMeta -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareReleaseMeta&amp;apos; resource.
+Delete a &apos;SoftwareReleaseMeta&apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightIamLdapProvider [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLdapProvider&amp;apos; resource.
+Update a &apos;IamLdapProvider&apos; resource.
 
 ## PARAMETERS
 
@@ -177,8 +177,8 @@ PS C:\> Set-IntersightIamLdapProvider
 
 [Remove-IntersightIamLdapProvider](./Remove-IntersightIamLdapProvider.md)
 
-[Get-IntersightIamLdapProvider](./Get-IntersightIamLdapProvider.md)
-
 [New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
+
+[Get-IntersightIamLdapProvider](./Get-IntersightIamLdapProvider.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A human-friendly description of this custom data type indicating it&apos;s domain and usage.
+A human-friendly description of this custom data type indicating it&amp;apos;s domain and usage.
 
 ```yaml
 Type: string
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of custom data type definition. The valid name can contain lower case and upper case alphabetic characters, digits and special characters &apos;-&apos; and &apos;_&apos;.
+The name of custom data type definition. The valid name can contain lower case and upper case alphabetic characters, digits and special characters &amp;apos;-&amp;apos; and &amp;apos;_&amp;apos;.
 
 ```yaml
 Type: string
@@ -256,11 +256,11 @@ PS C:\> New-IntersightWorkflowCustomDataTypeDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
+[Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
 
-[Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
+[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Initialize-IntersightWorkflowParameterSet](./Initialize-IntersightWorkflowParameterSet.md)
 

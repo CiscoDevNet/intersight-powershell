@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-Description< string>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][-Moid< string>][[-Name]< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-Description< string>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][-Moid< string>][[-Name]< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -162,6 +162,24 @@ Note :- Use Initialize-IntersightKubernetesEssentialAddon to create the object o
 
 ```yaml
 Type: System.Collections.Generic.List`1[KubernetesEssentialAddon]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LoadbalancerBlockIpLeases
+An array of relationships to ippoolBlockLease resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[IppoolBlockLeaseRelationship]
 Parameter Sets: (All)
 Aliases:
 

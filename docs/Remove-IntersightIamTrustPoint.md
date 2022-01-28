@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamTrustPoint](./New-IntersightIamTrustPoint.md)
-
 [Get-IntersightIamTrustPoint](./Get-IntersightIamTrustPoint.md)
+
+[New-IntersightIamTrustPoint](./New-IntersightIamTrustPoint.md)
 

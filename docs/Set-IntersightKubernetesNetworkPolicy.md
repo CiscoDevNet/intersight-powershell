@@ -19,7 +19,7 @@ Set-IntersightKubernetesNetworkPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesNetworkPolicy&amp;apos; resource.
+Update a &apos;KubernetesNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 

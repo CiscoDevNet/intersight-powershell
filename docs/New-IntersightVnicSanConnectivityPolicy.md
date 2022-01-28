@@ -289,10 +289,10 @@ PS C:\> New-IntersightVnicSanConnectivityPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
+[Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
 
 [Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
 
-[Set-IntersightVnicSanConnectivityPolicy](./Set-IntersightVnicSanConnectivityPolicy.md)
+[Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

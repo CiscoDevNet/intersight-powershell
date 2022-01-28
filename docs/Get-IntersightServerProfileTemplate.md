@@ -25,7 +25,7 @@ Get-IntersightServerProfileTemplate [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ServerProfileTemplate&apos; resource.,
+Read a &amp;apos;ServerProfileTemplate&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
-
 [Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
 
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
+
+[New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
 

@@ -19,7 +19,7 @@ Set-IntersightHyperflexSoftwareDistributionEntry [-AdditionalProperties< System.
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexSoftwareDistributionEntry&apos; resource.
+Update a &amp;apos;HyperflexSoftwareDistributionEntry&amp;apos; resource.
 
 ## PARAMETERS
 

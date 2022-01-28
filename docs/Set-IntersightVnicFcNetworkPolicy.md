@@ -19,7 +19,7 @@ Set-IntersightVnicFcNetworkPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicFcNetworkPolicy&apos; resource.
+Update a &amp;apos;VnicFcNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -194,9 +194,9 @@ PS C:\> Set-IntersightVnicFcNetworkPolicy
 
 [Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
 
-[Get-IntersightVnicFcNetworkPolicy](./Get-IntersightVnicFcNetworkPolicy.md)
-
 [New-IntersightVnicFcNetworkPolicy](./New-IntersightVnicFcNetworkPolicy.md)
+
+[Get-IntersightVnicFcNetworkPolicy](./Get-IntersightVnicFcNetworkPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

@@ -19,7 +19,7 @@ Set-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricSwitchProfile&apos; resource.
+Update a &amp;apos;FabricSwitchProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -310,11 +310,11 @@ PS C:\> Set-IntersightFabricSwitchProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
+
 [Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
 [New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
-
-[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

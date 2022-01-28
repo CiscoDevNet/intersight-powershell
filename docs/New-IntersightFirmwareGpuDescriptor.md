@@ -19,7 +19,7 @@ New-IntersightFirmwareGpuDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareGpuDescriptor&apos; resource.
+Create a &amp;apos;FirmwareGpuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> New-IntersightFirmwareGpuDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
-
 [Set-IntersightFirmwareGpuDescriptor](./Set-IntersightFirmwareGpuDescriptor.md)
 
 [Remove-IntersightFirmwareGpuDescriptor](./Remove-IntersightFirmwareGpuDescriptor.md)
+
+[Get-IntersightFirmwareGpuDescriptor](./Get-IntersightFirmwareGpuDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

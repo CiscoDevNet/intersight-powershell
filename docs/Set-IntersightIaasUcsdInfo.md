@@ -19,7 +19,7 @@ Set-IntersightIaasUcsdInfo [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IaasUcsdInfo&amp;apos; resource.
+Update a &apos;IaasUcsdInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -127,8 +127,8 @@ PS C:\> Set-IntersightIaasUcsdInfo
 
 ## RELATED LINKS
 
-[Remove-IntersightIaasUcsdInfo](./Remove-IntersightIaasUcsdInfo.md)
-
 [Get-IntersightIaasUcsdInfo](./Get-IntersightIaasUcsdInfo.md)
+
+[Remove-IntersightIaasUcsdInfo](./Remove-IntersightIaasUcsdInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

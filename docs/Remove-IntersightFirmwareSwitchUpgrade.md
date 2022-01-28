@@ -17,7 +17,7 @@ Remove-IntersightFirmwareSwitchUpgrade -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareSwitchUpgrade&apos; resource.
+Delete a &amp;apos;FirmwareSwitchUpgrade&amp;apos; resource.
 
 ## EXAMPLES
 

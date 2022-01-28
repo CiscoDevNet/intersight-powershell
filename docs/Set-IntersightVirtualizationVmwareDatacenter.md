@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareDatacenter [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareDatacenter&apos; resource.
+Update a &amp;apos;VirtualizationVmwareDatacenter&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -162,9 +162,9 @@ PS C:\> New-IntersightIamCertificate
 
 ## RELATED LINKS
 
-[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
-
 [Set-IntersightIamCertificate](./Set-IntersightIamCertificate.md)
+
+[Remove-IntersightIamCertificate](./Remove-IntersightIamCertificate.md)
 
 [Get-IntersightIamCertificate](./Get-IntersightIamCertificate.md)
 

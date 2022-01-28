@@ -220,10 +220,10 @@ PS C:\> New-IntersightCapabilitySiocModuleDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
+[Set-IntersightCapabilitySiocModuleDescriptor](./Set-IntersightCapabilitySiocModuleDescriptor.md)
 
 [Remove-IntersightCapabilitySiocModuleDescriptor](./Remove-IntersightCapabilitySiocModuleDescriptor.md)
 
-[Set-IntersightCapabilitySiocModuleDescriptor](./Set-IntersightCapabilitySiocModuleDescriptor.md)
+[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

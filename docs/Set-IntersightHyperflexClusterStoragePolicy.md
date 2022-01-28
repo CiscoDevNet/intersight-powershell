@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterStoragePolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterStoragePolicy&amp;apos; resource.
+Update a &apos;HyperflexClusterStoragePolicy&apos; resource.
 
 ## PARAMETERS
 

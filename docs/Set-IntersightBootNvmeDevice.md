@@ -19,7 +19,7 @@ Set-IntersightBootNvmeDevice [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &apos;BootNvmeDevice&apos; resource.
+Update a &amp;apos;BootNvmeDevice&amp;apos; resource.
 
 ## PARAMETERS
 

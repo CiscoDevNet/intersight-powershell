@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightAccessPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AddressType< AccessAddressType>][-Description< string>][-InbandIpPool< IppoolPoolRelationship>][-InbandVlan< long>][-InbandVrf< VrfVrfRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightAccessPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AddressType< AccessAddressType>][-ConfigurationType< AccessConfigurationType>][-Description< string>][-InbandIpPool< IppoolPoolRelationship>][-InbandVlan< long>][-InbandVrf< VrfVrfRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-OutOfBandIpPool< IppoolPoolRelationship>][-OutOfBandVrf< VrfVrfRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -45,6 +45,23 @@ Note :- Use Initialize-IntersightAccessAddressType to create the object of compl
 
 ```yaml
 Type: AccessAddressType
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ConfigurationType
+The type of configuration, In-Band and/or Out-Of-Band to be configured on the CIMC.
+
+Note :- Use Initialize-IntersightAccessConfigurationType to create the object of complex type AccessConfigurationType
+
+```yaml
+Type: AccessConfigurationType
 Parameter Sets: (All)
 Aliases:
 
@@ -169,6 +186,42 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -OutOfBandIpPool
+A reference to a ippoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IppoolPoolRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OutOfBandVrf
+A reference to a vrfVrf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: VrfVrfRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Profiles
 An array of relationships to policyAbstractConfigProfile resources.
 
@@ -268,5 +321,7 @@ PS C:\> Set-IntersightAccessPolicy
 [Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
 
 [Initialize-IntersightAccessAddressType](./Initialize-IntersightAccessAddressType.md)
+
+[Initialize-IntersightAccessConfigurationType](./Initialize-IntersightAccessConfigurationType.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

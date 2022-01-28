@@ -19,7 +19,7 @@ Set-IntersightFabricElementIdentity [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricElementIdentity&amp;apos; resource.
+Update a &apos;FabricElementIdentity&apos; resource.
 
 ## PARAMETERS
 

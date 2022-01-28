@@ -19,7 +19,7 @@ New-IntersightSdcardPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &apos;SdcardPolicy&apos; resource.
+Create a &amp;apos;SdcardPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -210,11 +210,11 @@ PS C:\> New-IntersightSdcardPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
-
 [Set-IntersightSdcardPolicy](./Set-IntersightSdcardPolicy.md)
 
 [Remove-IntersightSdcardPolicy](./Remove-IntersightSdcardPolicy.md)
+
+[Get-IntersightSdcardPolicy](./Get-IntersightSdcardPolicy.md)
 
 [Initialize-IntersightSdcardPartition](./Initialize-IntersightSdcardPartition.md)
 

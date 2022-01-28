@@ -19,7 +19,7 @@ Set-IntersightEtherHostPort [-AcknowledgedPeerInterface< PortInterfaceBaseRelati
 ```
 
 ## DESCRIPTION
-Update a &apos;EtherHostPort&apos; resource.
+Update a &amp;apos;EtherHostPort&amp;apos; resource.
 
 ## PARAMETERS
 

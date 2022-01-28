@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightBulkExport](./Set-IntersightBulkExport.md)
-
 [Get-IntersightBulkExport](./Get-IntersightBulkExport.md)
 
 [New-IntersightBulkExport](./New-IntersightBulkExport.md)
+
+[Set-IntersightBulkExport](./Set-IntersightBulkExport.md)
 

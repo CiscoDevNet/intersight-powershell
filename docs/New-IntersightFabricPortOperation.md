@@ -19,7 +19,7 @@ New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricPortOperation&amp;apos; resource.
+Create a &apos;FabricPortOperation&apos; resource.
 
 ## PARAMETERS
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortId
-Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &amp;apos;portId&amp;apos; represents the port id on the fanout side of the breakout cable.
+Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &apos;portId&apos; represents the port id on the fanout side of the breakout cable.
 
 ```yaml
 Type: long
@@ -220,10 +220,10 @@ PS C:\> New-IntersightFabricPortOperation
 
 ## RELATED LINKS
 
-[Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
+[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
 
 [Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
 
-[Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
+[Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

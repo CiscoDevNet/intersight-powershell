@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
+[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
 
 [New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
 
-[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
+[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 
