@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterStoragePolicy -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexClusterStoragePolicy&amp;apos; resource.
+Delete a &apos;HyperflexClusterStoragePolicy&apos; resource.
 
 ## EXAMPLES
 

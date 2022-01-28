@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Suffix
-The suffix for this bock of IQNs.
+The suffix for this block of IQNs.
 
 ```yaml
 Type: string

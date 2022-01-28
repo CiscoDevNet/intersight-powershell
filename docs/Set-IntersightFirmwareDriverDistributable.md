@@ -19,7 +19,7 @@ Set-IntersightFirmwareDriverDistributable [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareDriverDistributable&apos; resource.
+Update a &amp;apos;FirmwareDriverDistributable&amp;apos; resource.
 
 ## PARAMETERS
 

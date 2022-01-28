@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryCategorySupportConstraint -Moid <String> [<Co
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwarerepositoryCategorySupportConstraint&amp;apos; resource.
+Delete a &apos;SoftwarerepositoryCategorySupportConstraint&apos; resource.
 
 ## EXAMPLES
 

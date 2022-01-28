@@ -19,7 +19,7 @@ Set-IntersightEquipmentFanModule [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentFanModule&amp;apos; resource.
+Update a &apos;EquipmentFanModule&apos; resource.
 
 ## PARAMETERS
 

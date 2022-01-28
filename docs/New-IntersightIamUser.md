@@ -211,10 +211,10 @@ PS C:\> New-IntersightIamUser
 
 ## RELATED LINKS
 
-[Get-IntersightIamUser](./Get-IntersightIamUser.md)
-
 [Set-IntersightIamUser](./Set-IntersightIamUser.md)
 
 [Remove-IntersightIamUser](./Remove-IntersightIamUser.md)
+
+[Get-IntersightIamUser](./Get-IntersightIamUser.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

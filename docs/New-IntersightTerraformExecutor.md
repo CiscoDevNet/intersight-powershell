@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformType
-The Platform type used in conjunction with &apos;sourceFolderPath&apos; and &apos;sourceFolderName&apos; determines unique path for a Terraform workflow.
+The Platform type used in conjunction with &amp;apos;sourceFolderPath&amp;apos; and &amp;apos;sourceFolderName&amp;apos; determines unique path for a Terraform workflow.
 
 ```yaml
 Type: string
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolderPath
-Relative folder Path where &apos;sourceFolderName&apos; is located.
+Relative folder Path where &amp;apos;sourceFolderName&amp;apos; is located.
 
 ```yaml
 Type: string
@@ -370,11 +370,11 @@ PS C:\> New-IntersightTerraformExecutor
 
 ## RELATED LINKS
 
-[Get-IntersightTerraformExecutor](./Get-IntersightTerraformExecutor.md)
-
 [Set-IntersightTerraformExecutor](./Set-IntersightTerraformExecutor.md)
 
 [Remove-IntersightTerraformExecutor](./Remove-IntersightTerraformExecutor.md)
+
+[Get-IntersightTerraformExecutor](./Get-IntersightTerraformExecutor.md)
 
 [Initialize-IntersightTerraformCloudResource](./Initialize-IntersightTerraformCloudResource.md)
 

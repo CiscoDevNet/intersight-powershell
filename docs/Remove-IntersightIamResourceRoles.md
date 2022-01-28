@@ -17,7 +17,7 @@ Remove-IntersightIamResourceRoles -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamResourceRoles&apos; resource.
+Delete a &amp;apos;IamResourceRoles&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
-
 [Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
+
+[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
 
 [Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)
 

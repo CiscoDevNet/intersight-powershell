@@ -19,7 +19,7 @@ New-IntersightFirmwareBoardControllerDescriptor [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareBoardControllerDescriptor&amp;apos; resource.
+Create a &apos;FirmwareBoardControllerDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareBoardControllerDescriptor
 
 [Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)
 
-[Set-IntersightFirmwareBoardControllerDescriptor](./Set-IntersightFirmwareBoardControllerDescriptor.md)
-
 [Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
+
+[Set-IntersightFirmwareBoardControllerDescriptor](./Set-IntersightFirmwareBoardControllerDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

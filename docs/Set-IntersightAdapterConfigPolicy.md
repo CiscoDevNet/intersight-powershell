@@ -19,7 +19,7 @@ Set-IntersightAdapterConfigPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;AdapterConfigPolicy&amp;apos; resource.
+Update a &apos;AdapterConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -210,11 +210,11 @@ PS C:\> Set-IntersightAdapterConfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
-
 [Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
 
 [New-IntersightAdapterConfigPolicy](./New-IntersightAdapterConfigPolicy.md)
+
+[Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
 
 [Initialize-IntersightAdapterAdapterConfig](./Initialize-IntersightAdapterAdapterConfig.md)
 

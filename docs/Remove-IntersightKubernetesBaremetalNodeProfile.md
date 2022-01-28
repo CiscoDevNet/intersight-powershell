@@ -17,7 +17,7 @@ Remove-IntersightKubernetesBaremetalNodeProfile -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesBaremetalNodeProfile&apos; resource.
+Delete a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesBaremetalNodeProfile](./Set-IntersightKubernetesBaremetalNodeProfile.md)
+
 [Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
 
 [New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
-
-[Set-IntersightKubernetesBaremetalNodeProfile](./Set-IntersightKubernetesBaremetalNodeProfile.md)
 

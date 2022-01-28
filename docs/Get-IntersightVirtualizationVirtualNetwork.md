@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
-
 [Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
+
+[Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
 
 [New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
 

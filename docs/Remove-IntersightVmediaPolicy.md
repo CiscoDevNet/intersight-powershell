@@ -17,7 +17,7 @@ Remove-IntersightVmediaPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VmediaPolicy&apos; resource.
+Delete a &amp;apos;VmediaPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightVmediaPolicy](./Get-IntersightVmediaPolicy.md)
+[Set-IntersightVmediaPolicy](./Set-IntersightVmediaPolicy.md)
 
 [New-IntersightVmediaPolicy](./New-IntersightVmediaPolicy.md)
 
-[Set-IntersightVmediaPolicy](./Set-IntersightVmediaPolicy.md)
+[Get-IntersightVmediaPolicy](./Get-IntersightVmediaPolicy.md)
 

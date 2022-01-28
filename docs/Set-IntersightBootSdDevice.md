@@ -19,7 +19,7 @@ Set-IntersightBootSdDevice [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BootSdDevice&amp;apos; resource.
+Update a &apos;BootSdDevice&apos; resource.
 
 ## PARAMETERS
 

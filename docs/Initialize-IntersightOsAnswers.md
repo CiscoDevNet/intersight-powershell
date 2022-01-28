@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: OsAnswers.ObjectTypeEnum
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Answer values can be provided from three sources - Embedded in OS image, static file,\nor as placeholder values for an answer file template.\nSource of the answers is given as value, Embedded/File/Template.\n&amp;apos;Embedded&amp;apos; option indicates that the answer file is embedded within the OS Image. &amp;apos;File&amp;apos;\noption indicates that the answers are provided as a file. &amp;apos;Template&amp;apos; indicates that the\nplaceholders in the selected os.ConfigurationFile MO are replaced with values provided\nas os.Answers MO.\n* `None` - Indicates that answers is not sent and values must be populated from Install Template.  \n* `Embedded` - Indicates that the answer file is embedded within OS image.\n* `File` - Indicates that the answer file is a static content that has all thevalues populated.\n* `Template` - Indicates that the given answers are used to populate the answer filetemplate. The template allows the users to refer some server specificanswers as fields/placeholders and replace these placeholders with theactual values for each Server during OS installation using &amp;apos;Answers&amp;apos; and&amp;apos;AdditionalParameters&amp;apos; properties in os.Install MO.The answer file templates can be created by users as os.ConfigurationFile objects.
+Answer values can be provided from three sources - Embedded in OS image, static file,\nor as placeholder values for an answer file template.\nSource of the answers is given as value, Embedded/File/Template.\n&apos;Embedded&apos; option indicates that the answer file is embedded within the OS Image. &apos;File&apos;\noption indicates that the answers are provided as a file. &apos;Template&apos; indicates that the\nplaceholders in the selected os.ConfigurationFile MO are replaced with values provided\nas os.Answers MO.\n* `None` - Indicates that answers is not sent and values must be populated from Install Template.  \n* `Embedded` - Indicates that the answer file is embedded within OS image.\n* `File` - Indicates that the answer file is a static content that has all thevalues populated.\n* `Template` - Indicates that the given answers are used to populate the answer filetemplate. The template allows the users to refer some server specificanswers as fields/placeholders and replace these placeholders with theactual values for each Server during OS installation using &apos;Answers&apos; and&apos;AdditionalParameters&apos; properties in os.Install MO.The answer file templates can be created by users as os.ConfigurationFile objects.
 
 ```yaml
 Type: OsAnswers.SourceEnum

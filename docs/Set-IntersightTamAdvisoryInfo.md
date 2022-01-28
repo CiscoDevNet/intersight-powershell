@@ -162,8 +162,8 @@ PS C:\> Set-IntersightTamAdvisoryInfo
 
 [Remove-IntersightTamAdvisoryInfo](./Remove-IntersightTamAdvisoryInfo.md)
 
-[New-IntersightTamAdvisoryInfo](./New-IntersightTamAdvisoryInfo.md)
-
 [Get-IntersightTamAdvisoryInfo](./Get-IntersightTamAdvisoryInfo.md)
+
+[New-IntersightTamAdvisoryInfo](./New-IntersightTamAdvisoryInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

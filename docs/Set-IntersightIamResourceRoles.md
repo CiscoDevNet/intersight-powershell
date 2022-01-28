@@ -19,7 +19,7 @@ Set-IntersightIamResourceRoles [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;IamResourceRoles&apos; resource.
+Update a &amp;apos;IamResourceRoles&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -181,9 +181,9 @@ PS C:\> Set-IntersightIamResourceRoles
 
 ## RELATED LINKS
 
-[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
-
 [Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
+
+[New-IntersightIamResourceRoles](./New-IntersightIamResourceRoles.md)
 
 [Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
 

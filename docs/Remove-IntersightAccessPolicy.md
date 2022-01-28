@@ -17,7 +17,7 @@ Remove-IntersightAccessPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;AccessPolicy&amp;apos; resource.
+Delete a &apos;AccessPolicy&apos; resource.
 
 ## EXAMPLES
 

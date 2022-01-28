@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryInfo [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TamAdvisoryInfo&amp;apos; resource.
+Create a &apos;TamAdvisoryInfo&apos; resource.
 
 ## PARAMETERS
 

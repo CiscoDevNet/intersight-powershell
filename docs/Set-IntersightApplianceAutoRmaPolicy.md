@@ -160,8 +160,8 @@ PS C:\> Set-IntersightApplianceAutoRmaPolicy
 
 ## RELATED LINKS
 
-[New-IntersightApplianceAutoRmaPolicy](./New-IntersightApplianceAutoRmaPolicy.md)
-
 [Get-IntersightApplianceAutoRmaPolicy](./Get-IntersightApplianceAutoRmaPolicy.md)
+
+[New-IntersightApplianceAutoRmaPolicy](./New-IntersightApplianceAutoRmaPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

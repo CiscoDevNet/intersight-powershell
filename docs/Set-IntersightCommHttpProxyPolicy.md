@@ -253,10 +253,10 @@ PS C:\> Set-IntersightCommHttpProxyPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightCommHttpProxyPolicy](./Remove-IntersightCommHttpProxyPolicy.md)
-
 [Get-IntersightCommHttpProxyPolicy](./Get-IntersightCommHttpProxyPolicy.md)
 
 [New-IntersightCommHttpProxyPolicy](./New-IntersightCommHttpProxyPolicy.md)
+
+[Remove-IntersightCommHttpProxyPolicy](./Remove-IntersightCommHttpProxyPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Selector
-An OData $filter expression which describes the REST resource to be referenced. This field may\nbe set instead of &amp;apos;moid&amp;apos; by clients.\n1. If &amp;apos;moid&amp;apos; is set this field is ignored.\n1. If &amp;apos;selector&amp;apos; is set and &amp;apos;moid&amp;apos; is empty/absent from the request, Intersight determines the Moid of the\nresource matching the filter expression and populates it in the MoRef that is part of the object\ninstance being inserted/updated to fulfill the REST request.\nAn error is returned if the filter matches zero or more than one REST resource.\nAn example filter string is: Serial eq &amp;apos;3AA8B7T11&amp;apos;.
+An OData $filter expression which describes the REST resource to be referenced. This field may\nbe set instead of &apos;moid&apos; by clients.\n1. If &apos;moid&apos; is set this field is ignored.\n1. If &apos;selector&apos; is set and &apos;moid&apos; is empty/absent from the request, Intersight determines the Moid of the\nresource matching the filter expression and populates it in the MoRef that is part of the object\ninstance being inserted/updated to fulfill the REST request.\nAn error is returned if the filter matches zero or more than one REST resource.\nAn example filter string is: Serial eq &apos;3AA8B7T11&apos;.
 
 ```yaml
 Type: string

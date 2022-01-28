@@ -468,11 +468,11 @@ PS C:\> Set-IntersightVnicEthIf
 
 ## RELATED LINKS
 
+[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
+
 [Get-IntersightVnicEthIf](./Get-IntersightVnicEthIf.md)
 
 [New-IntersightVnicEthIf](./New-IntersightVnicEthIf.md)
-
-[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
 

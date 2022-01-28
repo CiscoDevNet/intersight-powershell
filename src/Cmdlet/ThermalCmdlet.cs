@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ThermalPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightThermalPolicy")]
-    public class RemoveIntersightThermalPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightThermalPolicy()
-		{
-			ApiInstance = new ThermalApi(Config);
-            MethodName = "DeleteThermalPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ThermalPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightThermalPolicy")]
@@ -121,6 +109,18 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ThermalPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightThermalPolicy")]
+    public class RemoveIntersightThermalPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightThermalPolicy()
+		{
+			ApiInstance = new ThermalApi(Config);
+            MethodName = "DeleteThermalPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ThermalPolicy.</para>

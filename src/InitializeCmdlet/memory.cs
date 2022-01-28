@@ -8,6 +8,100 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryGoal.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryGoal")]
+    public class InitializeIntersightMemoryPersistentMemoryGoal:PSCmdlet
+	{
+		public InitializeIntersightMemoryPersistentMemoryGoal()
+		{
+            ClassId = MemoryPersistentMemoryGoal.ClassIdEnum.MemoryPersistentMemoryGoal;
+            ObjectType = MemoryPersistentMemoryGoal.ObjectTypeEnum.MemoryPersistentMemoryGoal;
+            PersistentMemoryType = MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum.AppDirect;
+            SocketId = MemoryPersistentMemoryGoal.SocketIdEnum.AllSockets;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MemoryPersistentMemoryGoal.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Volatile memory percentage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long MemoryModePercentage {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MemoryPersistentMemoryGoal.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the Persistent Memory configuration where the Persistent Memory Modules are combined in an interleaved set or not.\n* `app-direct` - The App Direct interleaved Persistent Memory type.\n* `app-direct-non-interleaved` - The App Direct non-interleaved Persistent Memory type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum PersistentMemoryType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CPU Socket ID to which this goal will be applied.\n* `All Sockets` - All the CPU socket IDs in a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public MemoryPersistentMemoryGoal.SocketIdEnum SocketId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.MemoryPersistentMemoryGoal initObject = new Intersight.Model.MemoryPersistentMemoryGoal();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryModePercentage"))
+            {
+                initObject.MemoryModePercentage = this.MemoryModePercentage;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentMemoryType"))
+            {
+                initObject.PersistentMemoryType = this.PersistentMemoryType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SocketId"))
+            {
+                initObject.SocketId = this.SocketId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryLogicalNamespace.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryLogicalNamespace")]
@@ -202,100 +296,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SecurePassphrase"))
             {
                 initObject.SecurePassphrase = this.SecurePassphrase;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryGoal.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryGoal")]
-    public class InitializeIntersightMemoryPersistentMemoryGoal:PSCmdlet
-	{
-		public InitializeIntersightMemoryPersistentMemoryGoal()
-		{
-            ClassId = MemoryPersistentMemoryGoal.ClassIdEnum.MemoryPersistentMemoryGoal;
-            ObjectType = MemoryPersistentMemoryGoal.ObjectTypeEnum.MemoryPersistentMemoryGoal;
-            PersistentMemoryType = MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum.AppDirect;
-            SocketId = MemoryPersistentMemoryGoal.SocketIdEnum.AllSockets;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MemoryPersistentMemoryGoal.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Volatile memory percentage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long MemoryModePercentage {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MemoryPersistentMemoryGoal.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of the Persistent Memory configuration where the Persistent Memory Modules are combined in an interleaved set or not.\n* `app-direct` - The App Direct interleaved Persistent Memory type.\n* `app-direct-non-interleaved` - The App Direct non-interleaved Persistent Memory type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum PersistentMemoryType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CPU Socket ID to which this goal will be applied.\n* `All Sockets` - All the CPU socket IDs in a server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MemoryPersistentMemoryGoal.SocketIdEnum SocketId {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.MemoryPersistentMemoryGoal initObject = new Intersight.Model.MemoryPersistentMemoryGoal();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryModePercentage"))
-            {
-                initObject.MemoryModePercentage = this.MemoryModePercentage;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentMemoryType"))
-            {
-                initObject.PersistentMemoryType = this.PersistentMemoryType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SocketId"))
-            {
-                initObject.SocketId = this.SocketId;
             }
             WriteObject(initObject);
         }

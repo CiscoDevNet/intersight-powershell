@@ -19,7 +19,7 @@ New-IntersightFirmwareMswitchDescriptor [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareMswitchDescriptor&apos; resource.
+Create a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

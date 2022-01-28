@@ -25,7 +25,7 @@ Get-IntersightOprsSyncTargetListMessage [-Count <Boolean>] [-InlineCount <String
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;OprsSyncTargetListMessage&apos; resource.,
+Read a &amp;apos;OprsSyncTargetListMessage&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
+
 [Set-IntersightOprsSyncTargetListMessage](./Set-IntersightOprsSyncTargetListMessage.md)
 
 [Remove-IntersightOprsSyncTargetListMessage](./Remove-IntersightOprsSyncTargetListMessage.md)
-
-[New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
 

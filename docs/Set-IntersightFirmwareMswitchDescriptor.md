@@ -19,7 +19,7 @@ Set-IntersightFirmwareMswitchDescriptor [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareMswitchDescriptor&apos; resource.
+Update a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

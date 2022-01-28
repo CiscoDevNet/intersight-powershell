@@ -19,7 +19,7 @@ New-IntersightHyperflexExtIscsiStoragePolicy [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexExtIscsiStoragePolicy&apos; resource.
+Create a &amp;apos;HyperflexExtIscsiStoragePolicy&amp;apos; resource.
 
 ## PARAMETERS
 

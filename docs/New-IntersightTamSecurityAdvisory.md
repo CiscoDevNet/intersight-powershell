@@ -421,9 +421,9 @@ PS C:\> New-IntersightTamSecurityAdvisory
 
 ## RELATED LINKS
 
-[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
-
 [Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)
+
+[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
 
 [Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 

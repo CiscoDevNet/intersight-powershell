@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
 
-[New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
-
 [Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
+
+[New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
 

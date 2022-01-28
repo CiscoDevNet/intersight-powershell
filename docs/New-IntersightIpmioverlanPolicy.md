@@ -238,10 +238,10 @@ PS C:\> New-IntersightIpmioverlanPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightIpmioverlanPolicy](./Get-IntersightIpmioverlanPolicy.md)
-
 [Set-IntersightIpmioverlanPolicy](./Set-IntersightIpmioverlanPolicy.md)
 
 [Remove-IntersightIpmioverlanPolicy](./Remove-IntersightIpmioverlanPolicy.md)
+
+[Get-IntersightIpmioverlanPolicy](./Get-IntersightIpmioverlanPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

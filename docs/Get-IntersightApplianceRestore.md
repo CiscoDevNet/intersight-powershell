@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightApplianceRestore](./Remove-IntersightApplianceRestore.md)
-
 [New-IntersightApplianceRestore](./New-IntersightApplianceRestore.md)
+
+[Remove-IntersightApplianceRestore](./Remove-IntersightApplianceRestore.md)
 

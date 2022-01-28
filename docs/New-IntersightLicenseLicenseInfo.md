@@ -19,7 +19,7 @@ New-IntersightLicenseLicenseInfo [-AccountLicenseData< LicenseAccountLicenseData
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;LicenseLicenseInfo&amp;apos; resource.
+Create a &apos;LicenseLicenseInfo&apos; resource.
 
 ## PARAMETERS
 

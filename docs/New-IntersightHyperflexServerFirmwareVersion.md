@@ -19,7 +19,7 @@ New-IntersightHyperflexServerFirmwareVersion [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexServerFirmwareVersion&amp;apos; resource.
+Create a &apos;HyperflexServerFirmwareVersion&apos; resource.
 
 ## PARAMETERS
 

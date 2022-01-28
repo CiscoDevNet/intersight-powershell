@@ -19,7 +19,7 @@ Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeServerSetting&apos; resource.
+Update a &amp;apos;ComputeServerSetting&amp;apos; resource.
 
 ## PARAMETERS
 

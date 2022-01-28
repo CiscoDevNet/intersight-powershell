@@ -19,7 +19,7 @@ New-IntersightHclCompatibilityStatus [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &apos;HclCompatibilityStatus&apos; resource.
+Create a &amp;apos;HclCompatibilityStatus&amp;apos; resource.
 
 ## PARAMETERS
 

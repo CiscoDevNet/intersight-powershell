@@ -19,7 +19,7 @@ New-IntersightHyperflexSoftwareDistributionVersion [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexSoftwareDistributionVersion&apos; resource.
+Create a &amp;apos;HyperflexSoftwareDistributionVersion&amp;apos; resource.
 
 ## PARAMETERS
 

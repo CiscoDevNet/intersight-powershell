@@ -19,7 +19,7 @@ Set-IntersightLicenseIwoCustomerOp [-AccountLicenseData< LicenseAccountLicenseDa
 ```
 
 ## DESCRIPTION
-Update a &apos;LicenseIwoCustomerOp&apos; resource.
+Update a &amp;apos;LicenseIwoCustomerOp&amp;apos; resource.
 
 ## PARAMETERS
 

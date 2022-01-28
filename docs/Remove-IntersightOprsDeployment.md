@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
+
 [Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
 
 [New-IntersightOprsDeployment](./New-IntersightOprsDeployment.md)
-
-[Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
 

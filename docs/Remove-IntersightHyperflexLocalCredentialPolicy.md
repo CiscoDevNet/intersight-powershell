@@ -17,7 +17,7 @@ Remove-IntersightHyperflexLocalCredentialPolicy -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexLocalCredentialPolicy&amp;apos; resource.
+Delete a &apos;HyperflexLocalCredentialPolicy&apos; resource.
 
 ## EXAMPLES
 

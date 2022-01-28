@@ -17,7 +17,7 @@ Remove-IntersightIamIpAddress -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamIpAddress&amp;apos; resource.
+Delete a &apos;IamIpAddress&apos; resource.
 
 ## EXAMPLES
 

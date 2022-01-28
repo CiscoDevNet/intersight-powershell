@@ -222,11 +222,11 @@ PS C:\> New-IntersightFcpoolPool
 
 ## RELATED LINKS
 
-[Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
-
 [Set-IntersightFcpoolPool](./Set-IntersightFcpoolPool.md)
 
 [Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
+
+[Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
 
 [Initialize-IntersightFcpoolBlock](./Initialize-IntersightFcpoolBlock.md)
 

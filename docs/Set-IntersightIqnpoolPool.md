@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-The prefix for any IQN blocks created for this pool. IQN Prefix must have the following format \&amp;quot;iqn.yyyy-mm.naming-authority\&amp;quot;, where naming-authority is usually the reverse syntax of the Internet domain name of the naming authority.
+The prefix for any IQN blocks created for this pool. IQN Prefix must have the following format \&quot;iqn.yyyy-mm.naming-authority\&quot;, where naming-authority is usually the reverse syntax of the Internet domain name of the naming authority.
 
 ```yaml
 Type: string
@@ -222,11 +222,11 @@ PS C:\> Set-IntersightIqnpoolPool
 
 ## RELATED LINKS
 
+[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
+
 [Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
 [New-IntersightIqnpoolPool](./New-IntersightIqnpoolPool.md)
-
-[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
 
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)
 

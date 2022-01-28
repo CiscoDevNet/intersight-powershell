@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-FileServer< SoftwarerepositoryFileServer>][-IncludeComponentList< FirmwareIncludeComponentListType>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-ExcludeComponentPidList< FirmwareExcludeComponentPidListType>][-FileServer< SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -88,13 +88,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -FileServer
-Location of the image in user software repository.
+### -ExcludeComponentPidList
+The components PIDs which are to be excluded for server firmware upgrade.
 
-Note :- Use Initialize-IntersightSoftwarerepositoryFileServer to create the object of complex type SoftwarerepositoryFileServer
+Note :- Use Initialize-IntersightFirmwareExcludeComponentPidListType to create the object of complex type FirmwareExcludeComponentPidListType
 
 ```yaml
-Type: SoftwarerepositoryFileServer
+Type: FirmwareExcludeComponentPidListType
 Parameter Sets: (All)
 Aliases:
 
@@ -105,13 +105,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -IncludeComponentList
-The components which are not to be excluded for server firmware upgrade.
+### -FileServer
+Location of the image in user software repository.
 
-Note :- Use Initialize-IntersightFirmwareIncludeComponentListType to create the object of complex type FirmwareIncludeComponentListType
+Note :- Use Initialize-IntersightSoftwarerepositoryFileServer to create the object of complex type SoftwarerepositoryFileServer
 
 ```yaml
-Type: FirmwareIncludeComponentListType
+Type: SoftwarerepositoryFileServer
 Parameter Sets: (All)
 Aliases:
 
@@ -311,13 +311,15 @@ PS C:\> New-IntersightFirmwareUpgrade
 
 [Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
 
+[Set-IntersightFirmwareUpgrade](./Set-IntersightFirmwareUpgrade.md)
+
 [Get-IntersightFirmwareUpgrade](./Get-IntersightFirmwareUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 
-[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+[Initialize-IntersightFirmwareExcludeComponentPidListType](./Initialize-IntersightFirmwareExcludeComponentPidListType.md)
 
-[Initialize-IntersightFirmwareIncludeComponentListType](./Initialize-IntersightFirmwareIncludeComponentListType.md)
+[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
 [Initialize-IntersightFirmwareNetworkShare](./Initialize-IntersightFirmwareNetworkShare.md)
 

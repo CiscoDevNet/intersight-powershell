@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightResourceReservation](./New-IntersightResourceReservation.md)
-
 [Set-IntersightResourceReservation](./Set-IntersightResourceReservation.md)
 
 [Remove-IntersightResourceReservation](./Remove-IntersightResourceReservation.md)
+
+[New-IntersightResourceReservation](./New-IntersightResourceReservation.md)
 

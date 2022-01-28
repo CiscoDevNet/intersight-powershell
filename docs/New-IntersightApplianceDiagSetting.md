@@ -19,7 +19,7 @@ New-IntersightApplianceDiagSetting [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceDiagSetting&amp;apos; resource.
+Create a &apos;ApplianceDiagSetting&apos; resource.
 
 ## PARAMETERS
 
@@ -175,8 +175,8 @@ PS C:\> New-IntersightApplianceDiagSetting
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)
-
 [Set-IntersightApplianceDiagSetting](./Set-IntersightApplianceDiagSetting.md)
+
+[Get-IntersightApplianceDiagSetting](./Get-IntersightApplianceDiagSetting.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

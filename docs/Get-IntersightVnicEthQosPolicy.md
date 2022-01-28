@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
-
 [Set-IntersightVnicEthQosPolicy](./Set-IntersightVnicEthQosPolicy.md)
+
+[Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
 
 [New-IntersightVnicEthQosPolicy](./New-IntersightVnicEthQosPolicy.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
-
 [Set-IntersightIamEndPointUserRole](./Set-IntersightIamEndPointUserRole.md)
+
+[Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
 
 [New-IntersightIamEndPointUserRole](./New-IntersightIamEndPointUserRole.md)
 

@@ -19,7 +19,7 @@ Set-IntersightComputeBoard [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeBoard&apos; resource.
+Update a &amp;apos;ComputeBoard&amp;apos; resource.
 
 ## PARAMETERS
 

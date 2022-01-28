@@ -17,7 +17,7 @@ Remove-IntersightUcsdBackupInfo -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;UcsdBackupInfo&amp;apos; resource.
+Delete a &apos;UcsdBackupInfo&apos; resource.
 
 ## EXAMPLES
 

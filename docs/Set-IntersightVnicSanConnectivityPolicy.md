@@ -19,7 +19,7 @@ Set-IntersightVnicSanConnectivityPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicSanConnectivityPolicy&apos; resource.
+Update a &amp;apos;VnicSanConnectivityPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -289,10 +289,10 @@ PS C:\> Set-IntersightVnicSanConnectivityPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
+
 [Get-IntersightVnicSanConnectivityPolicy](./Get-IntersightVnicSanConnectivityPolicy.md)
 
 [New-IntersightVnicSanConnectivityPolicy](./New-IntersightVnicSanConnectivityPolicy.md)
-
-[Remove-IntersightVnicSanConnectivityPolicy](./Remove-IntersightVnicSanConnectivityPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

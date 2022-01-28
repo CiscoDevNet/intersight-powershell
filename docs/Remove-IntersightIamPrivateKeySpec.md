@@ -17,7 +17,7 @@ Remove-IntersightIamPrivateKeySpec -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamPrivateKeySpec&amp;apos; resource.
+Delete a &apos;IamPrivateKeySpec&apos; resource.
 
 ## EXAMPLES
 

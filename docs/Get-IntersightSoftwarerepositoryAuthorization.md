@@ -25,7 +25,7 @@ Get-IntersightSoftwarerepositoryAuthorization [-Count <Boolean>] [-InlineCount <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SoftwarerepositoryAuthorization&amp;apos; resource.,
+Read a &apos;SoftwarerepositoryAuthorization&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryAuthorization](./New-IntersightSoftwarerepositoryAuthorization.md)
-
 [Set-IntersightSoftwarerepositoryAuthorization](./Set-IntersightSoftwarerepositoryAuthorization.md)
+
+[New-IntersightSoftwarerepositoryAuthorization](./New-IntersightSoftwarerepositoryAuthorization.md)
 

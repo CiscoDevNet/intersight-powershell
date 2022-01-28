@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineInfraConfigPolicy [-AdditionalProperties< 
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesVirtualMachineInfraConfigPolicy&apos; resource.
+Update a &amp;apos;KubernetesVirtualMachineInfraConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightComputeServerPowerPolicy [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ComputeServerPowerPolicy&amp;apos; resource.
+Update a &apos;ComputeServerPowerPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -208,8 +208,8 @@ PS C:\> Set-IntersightComputeServerPowerPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightComputeServerPowerPolicy](./Remove-IntersightComputeServerPowerPolicy.md)
-
 [Get-IntersightComputeServerPowerPolicy](./Get-IntersightComputeServerPowerPolicy.md)
+
+[Remove-IntersightComputeServerPowerPolicy](./Remove-IntersightComputeServerPowerPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

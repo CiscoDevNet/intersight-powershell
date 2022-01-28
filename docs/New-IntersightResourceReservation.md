@@ -175,10 +175,10 @@ PS C:\> New-IntersightResourceReservation
 
 ## RELATED LINKS
 
-[Get-IntersightResourceReservation](./Get-IntersightResourceReservation.md)
-
 [Set-IntersightResourceReservation](./Set-IntersightResourceReservation.md)
 
 [Remove-IntersightResourceReservation](./Remove-IntersightResourceReservation.md)
+
+[Get-IntersightResourceReservation](./Get-IntersightResourceReservation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

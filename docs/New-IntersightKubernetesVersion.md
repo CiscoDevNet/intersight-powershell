@@ -247,10 +247,10 @@ PS C:\> New-IntersightKubernetesVersion
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
+[Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)
 
 [Set-IntersightKubernetesVersion](./Set-IntersightKubernetesVersion.md)
 
-[Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)
+[Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

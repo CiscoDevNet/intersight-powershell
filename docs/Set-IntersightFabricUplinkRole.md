@@ -19,7 +19,7 @@ Set-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricUplinkRole&amp;apos; resource.
+Update a &apos;FabricUplinkRole&apos; resource.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregatePortId
-Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &amp;apos;aggregatePortId&amp;apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
+Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &apos;aggregatePortId&apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
 
 ```yaml
 Type: long
@@ -274,10 +274,10 @@ PS C:\> Set-IntersightFabricUplinkRole
 
 ## RELATED LINKS
 
-[Get-IntersightFabricUplinkRole](./Get-IntersightFabricUplinkRole.md)
+[Remove-IntersightFabricUplinkRole](./Remove-IntersightFabricUplinkRole.md)
 
 [New-IntersightFabricUplinkRole](./New-IntersightFabricUplinkRole.md)
 
-[Remove-IntersightFabricUplinkRole](./Remove-IntersightFabricUplinkRole.md)
+[Get-IntersightFabricUplinkRole](./Get-IntersightFabricUplinkRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

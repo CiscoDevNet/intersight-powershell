@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStorageController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ComputeBlade< ComputeBladeRelationship>][-ComputeRackUnit< ComputeRackUnitRelationship>][-DiskGroup< System.Collections.Generic.List`1[StorageDiskGroupRelationship]>][-ForeignConfigPresent< bool>][-InterfaceType< string>][-MaxVolumesSupported< long>][[-Moid]< string>][-PreviousFru< EquipmentFruRelationship>][-SelfEncryptEnabled< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStorageController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ComputeBlade< ComputeBladeRelationship>][-ComputeRackUnit< ComputeRackUnitRelationship>][-ConnectedSasExpander< bool>][-DefaultDriveMode< string>][-DiskGroup< System.Collections.Generic.List`1[StorageDiskGroupRelationship]>][-EccBucketLeakRate< long>][-ForeignConfigPresent< bool>][-InterfaceType< string>][-MaxVolumesSupported< long>][-MemoryCorrectableErrors< long>][[-Moid]< string>][-Name< string>][-PersistentCacheSize< long>][-PinnedCacheState< long>][-PreviousFru< EquipmentFruRelationship>][-RebuildRatePercent< long>][-SelfEncryptEnabled< string>][-SubOemId< string>][-SupportedStripSizes< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCacheSize< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ConnectedSasExpander
+Storage controller is connected to SAS expander.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultDriveMode
+Auto configuration mode for the newly inserted physical drives.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DiskGroup
 An array of relationships to storageDiskGroup resources.
 
@@ -82,6 +112,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[StorageDiskGroupRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EccBucketLeakRate
+The ECC bucket leak rate for the Storage Controller in minutes.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -137,6 +182,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -MemoryCorrectableErrors
+The number of memory correctable errors reported by the Storage Controller.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -152,6 +212,51 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Name
+Name of the Storage Controller.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PersistentCacheSize
+The portion of the cache memory that is persistent, measured in MiB.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinnedCacheState
+The pinned cache state of the Storage Controller.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PreviousFru
 A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -160,6 +265,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EquipmentFruRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RebuildRatePercent
+Logical volume or RAID rebuild rate of Storage Controller.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -185,6 +305,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SubOemId
+The Sub OEM identifier of the Storage Controller.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportedStripSizes
+The strip sizes in KiB supported by the Storage Controller.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -192,6 +342,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TotalCacheSize
+The total configured cache memory, measured in MiB.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

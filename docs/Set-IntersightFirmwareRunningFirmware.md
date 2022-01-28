@@ -19,7 +19,7 @@ Set-IntersightFirmwareRunningFirmware [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareRunningFirmware&amp;apos; resource.
+Update a &apos;FirmwareRunningFirmware&apos; resource.
 
 ## PARAMETERS
 

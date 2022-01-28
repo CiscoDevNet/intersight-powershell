@@ -19,7 +19,7 @@ Set-IntersightHyperflexServerFirmwareVersionEntry [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexServerFirmwareVersionEntry&apos; resource.
+Update a &amp;apos;HyperflexServerFirmwareVersionEntry&amp;apos; resource.
 
 ## PARAMETERS
 

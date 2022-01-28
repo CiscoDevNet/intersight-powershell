@@ -25,7 +25,7 @@ Get-IntersightAdapterUnitExpander [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;AdapterUnitExpander&amp;apos; resource.,
+Read a &apos;AdapterUnitExpander&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

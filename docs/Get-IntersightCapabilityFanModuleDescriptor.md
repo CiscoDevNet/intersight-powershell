@@ -25,7 +25,7 @@ Get-IntersightCapabilityFanModuleDescriptor [-Count <Boolean>] [-InlineCount <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CapabilityFanModuleDescriptor&apos; resource.,
+Read a &amp;apos;CapabilityFanModuleDescriptor&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityFanModuleDescriptor](./New-IntersightCapabilityFanModuleDescriptor.md)
-
 [Set-IntersightCapabilityFanModuleDescriptor](./Set-IntersightCapabilityFanModuleDescriptor.md)
 
 [Remove-IntersightCapabilityFanModuleDescriptor](./Remove-IntersightCapabilityFanModuleDescriptor.md)
+
+[New-IntersightCapabilityFanModuleDescriptor](./New-IntersightCapabilityFanModuleDescriptor.md)
 

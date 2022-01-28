@@ -19,7 +19,7 @@ New-IntersightVmrcConsole [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Create a &apos;VmrcConsole&apos; resource.
+Create a &amp;apos;VmrcConsole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> New-IntersightVmrcConsole
 
 ## RELATED LINKS
 
-[Get-IntersightVmrcConsole](./Get-IntersightVmrcConsole.md)
-
 [Set-IntersightVmrcConsole](./Set-IntersightVmrcConsole.md)
+
+[Get-IntersightVmrcConsole](./Get-IntersightVmrcConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightKubernetesAddonRepository](./New-IntersightKubernetesAddonRepository.md)
 
-[Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)
-
 [Set-IntersightKubernetesAddonRepository](./Set-IntersightKubernetesAddonRepository.md)
+
+[Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)
 

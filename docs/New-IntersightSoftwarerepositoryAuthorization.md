@@ -172,8 +172,8 @@ PS C:\> New-IntersightSoftwarerepositoryAuthorization
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwarerepositoryAuthorization](./Get-IntersightSoftwarerepositoryAuthorization.md)
-
 [Set-IntersightSoftwarerepositoryAuthorization](./Set-IntersightSoftwarerepositoryAuthorization.md)
+
+[Get-IntersightSoftwarerepositoryAuthorization](./Get-IntersightSoftwarerepositoryAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

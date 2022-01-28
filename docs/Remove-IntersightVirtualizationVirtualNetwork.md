@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationVirtualNetwork -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VirtualizationVirtualNetwork&amp;apos; resource.
+Delete a &apos;VirtualizationVirtualNetwork&apos; resource.
 
 ## EXAMPLES
 

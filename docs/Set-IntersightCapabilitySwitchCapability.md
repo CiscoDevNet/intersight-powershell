@@ -19,7 +19,7 @@ Set-IntersightCapabilitySwitchCapability [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilitySwitchCapability&apos; resource.
+Update a &amp;apos;CapabilitySwitchCapability&amp;apos; resource.
 
 ## PARAMETERS
 

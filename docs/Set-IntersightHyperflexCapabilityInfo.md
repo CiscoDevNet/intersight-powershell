@@ -177,9 +177,9 @@ PS C:\> Set-IntersightHyperflexCapabilityInfo
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
-
 [New-IntersightHyperflexCapabilityInfo](./New-IntersightHyperflexCapabilityInfo.md)
+
+[Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
 
 [Remove-IntersightHyperflexCapabilityInfo](./Remove-IntersightHyperflexCapabilityInfo.md)
 

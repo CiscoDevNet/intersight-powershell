@@ -224,9 +224,9 @@ PS C:\> Set-IntersightUuidpoolPool
 
 [Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
 
-[Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
-
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
+
+[Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
 [Initialize-IntersightUuidpoolUuidBlock](./Initialize-IntersightUuidpoolUuidBlock.md)
 

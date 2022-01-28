@@ -19,7 +19,7 @@ New-IntersightIamResourceRoles [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamResourceRoles&amp;apos; resource.
+Create a &apos;IamResourceRoles&apos; resource.
 
 ## PARAMETERS
 

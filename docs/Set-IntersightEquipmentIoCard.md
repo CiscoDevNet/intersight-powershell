@@ -19,7 +19,7 @@ Set-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentIoCard&apos; resource.
+Update a &amp;apos;EquipmentIoCard&amp;apos; resource.
 
 ## PARAMETERS
 

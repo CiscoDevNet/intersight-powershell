@@ -32,6 +32,7 @@ namespace Intersight.PowerShell
         
         
         
+        
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
@@ -132,6 +133,26 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"A reference to a ippoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public IppoolPoolRelationship OutOfBandIpPool {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a vrfVrf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public VrfVrfRelationship OutOfBandVrf {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -193,6 +214,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"The type of configuration, In-Band and/or Out-Of-Band to be configured on the CIMC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AccessConfigurationType ConfigurationType {
+            get;
+            set;
+        }
         
         
         // <summary>
@@ -267,6 +298,26 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"A reference to a ippoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IppoolPoolRelationship OutOfBandIpPool {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a vrfVrf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VrfVrfRelationship OutOfBandVrf {
+            get;
+            set;
+        }
+        
         
         
         
@@ -302,7 +353,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new AccessApi(Config);
             ModelObject = new AccessPolicy();
-            MethodName = "UpdateAccessPolicyWithHttpInfo";
+            MethodName = "PatchAccessPolicyWithHttpInfo";
 		}
         
         
@@ -326,6 +377,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"The type of configuration, In-Band and/or Out-Of-Band to be configured on the CIMC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AccessConfigurationType ConfigurationType {
+            get;
+            set;
+        }
         
         
         // <summary>
@@ -396,6 +457,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a ippoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public IppoolPoolRelationship OutOfBandIpPool {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a vrfVrf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public VrfVrfRelationship OutOfBandVrf {
             get;
             set;
         }

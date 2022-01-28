@@ -17,7 +17,7 @@ Remove-IntersightIamCertificate -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamCertificate&amp;apos; resource.
+Delete a &apos;IamCertificate&apos; resource.
 
 ## EXAMPLES
 

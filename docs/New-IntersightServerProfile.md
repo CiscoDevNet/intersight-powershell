@@ -19,7 +19,7 @@ New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ServerProfile&amp;apos; resource.
+Create a &apos;ServerProfile&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightProcessorUnit [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ProcessorUnit&amp;apos; resource.
+Update a &apos;ProcessorUnit&apos; resource.
 
 ## PARAMETERS
 

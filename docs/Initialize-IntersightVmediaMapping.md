@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-URL path to the location of the image on the remote server. The preferred format is &amp;apos;/path&amp;apos;.
+URL path to the location of the image on the remote server. The preferred format is &apos;/path&apos;.
 
 ```yaml
 Type: string

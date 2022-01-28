@@ -19,7 +19,7 @@ New-IntersightConvergedinfraHealthCheckDefinition [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ConvergedinfraHealthCheckDefinition&amp;apos; resource.
+Create a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
 
 ## PARAMETERS
 

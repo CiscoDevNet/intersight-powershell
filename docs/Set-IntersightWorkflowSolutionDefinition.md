@@ -285,11 +285,11 @@ PS C:\> Set-IntersightWorkflowSolutionDefinition
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowSolutionDefinition](./Remove-IntersightWorkflowSolutionDefinition.md)
+
 [Get-IntersightWorkflowSolutionDefinition](./Get-IntersightWorkflowSolutionDefinition.md)
 
 [New-IntersightWorkflowSolutionDefinition](./New-IntersightWorkflowSolutionDefinition.md)
-
-[Remove-IntersightWorkflowSolutionDefinition](./Remove-IntersightWorkflowSolutionDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -LacpRate
-Flag used to indicate whether LACP PDUs are to be sent &apos;fast&apos;, i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports.
+Flag used to indicate whether LACP PDUs are to be sent &amp;apos;fast&amp;apos;, i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports.
 
 ```yaml
 Type: FabricLinkAggregationPolicy.LacpRateEnum

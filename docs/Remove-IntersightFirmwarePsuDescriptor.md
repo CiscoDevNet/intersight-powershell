@@ -17,7 +17,7 @@ Remove-IntersightFirmwarePsuDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwarePsuDescriptor&amp;apos; resource.
+Delete a &apos;FirmwarePsuDescriptor&apos; resource.
 
 ## EXAMPLES
 

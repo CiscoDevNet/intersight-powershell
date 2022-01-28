@@ -17,7 +17,7 @@ Remove-IntersightNotificationAccountSubscription -Moid <String> [<CommonParamete
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;NotificationAccountSubscription&amp;apos; resource.
+Delete a &apos;NotificationAccountSubscription&apos; resource.
 
 ## EXAMPLES
 

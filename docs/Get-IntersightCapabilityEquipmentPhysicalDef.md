@@ -25,7 +25,7 @@ Get-IntersightCapabilityEquipmentPhysicalDef [-Count <Boolean>] [-InlineCount <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CapabilityEquipmentPhysicalDef&apos; resource.,
+Read a &amp;apos;CapabilityEquipmentPhysicalDef&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightCapabilityEquipmentPhysicalDef](./New-IntersightCapabilityEquipmentPhysicalDef.md)
+
 [Set-IntersightCapabilityEquipmentPhysicalDef](./Set-IntersightCapabilityEquipmentPhysicalDef.md)
 
 [Remove-IntersightCapabilityEquipmentPhysicalDef](./Remove-IntersightCapabilityEquipmentPhysicalDef.md)
-
-[New-IntersightCapabilityEquipmentPhysicalDef](./New-IntersightCapabilityEquipmentPhysicalDef.md)
 

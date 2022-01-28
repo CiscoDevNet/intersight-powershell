@@ -19,7 +19,7 @@ Set-IntersightCapabilityPsuDescriptor [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.
+Update a &apos;CapabilityPsuDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,10 +220,10 @@ PS C:\> Set-IntersightCapabilityPsuDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityPsuDescriptor](./Remove-IntersightCapabilityPsuDescriptor.md)
+
 [Get-IntersightCapabilityPsuDescriptor](./Get-IntersightCapabilityPsuDescriptor.md)
 
 [New-IntersightCapabilityPsuDescriptor](./New-IntersightCapabilityPsuDescriptor.md)
-
-[Remove-IntersightCapabilityPsuDescriptor](./Remove-IntersightCapabilityPsuDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

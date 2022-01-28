@@ -500,9 +500,9 @@ PS C:\> Set-IntersightSoftwareSolutionDistributable
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwareSolutionDistributable](./Get-IntersightSoftwareSolutionDistributable.md)
-
 [New-IntersightSoftwareSolutionDistributable](./New-IntersightSoftwareSolutionDistributable.md)
+
+[Get-IntersightSoftwareSolutionDistributable](./Get-IntersightSoftwareSolutionDistributable.md)
 
 [Remove-IntersightSoftwareSolutionDistributable](./Remove-IntersightSoftwareSolutionDistributable.md)
 

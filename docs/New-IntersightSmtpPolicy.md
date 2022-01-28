@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSmtpPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Enabled< bool>][-MinSeverity< SmtpPolicy.MinSeverityEnum>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-SenderEmail< string>][-SmtpPort< long>][-SmtpRecipients< System.Collections.Generic.List`1[string]>][-SmtpServer< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightSmtpPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApplianceAccount< IamAccountRelationship>][-AuthPassword< string>][-Certificate< IamTrustPointRelationship>][-Description< string>][-EnableAuth< bool>][-EnableTls< bool>][-Enabled< bool>][-MinSeverity< SmtpPolicy.MinSeverityEnum>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-SenderEmail< string>][-SmtpPort< long>][-SmtpRecipients< System.Collections.Generic.List`1[string]>][-SmtpServer< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;SmtpPolicy&apos; resource.
+Create a &amp;apos;SmtpPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -38,11 +38,92 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ApplianceAccount
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthPassword
+Authorization password for the process.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Certificate
+A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamTrustPointRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Description
 Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableAuth
+If enabled, lets user input username and password.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableTls
+If enabled, lets user input valid CA certificates for authorization.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -226,6 +307,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UserName
+SMTP username from which email notification is sent.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -283,10 +379,10 @@ PS C:\> New-IntersightSmtpPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
 
 [Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
+[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

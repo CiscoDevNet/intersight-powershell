@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareBiosDescriptor
 
 [Get-IntersightFirmwareBiosDescriptor](./Get-IntersightFirmwareBiosDescriptor.md)
 
-[Remove-IntersightFirmwareBiosDescriptor](./Remove-IntersightFirmwareBiosDescriptor.md)
-
 [Set-IntersightFirmwareBiosDescriptor](./Set-IntersightFirmwareBiosDescriptor.md)
+
+[Remove-IntersightFirmwareBiosDescriptor](./Remove-IntersightFirmwareBiosDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

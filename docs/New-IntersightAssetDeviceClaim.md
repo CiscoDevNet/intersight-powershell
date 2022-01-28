@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityToken
-Obtained from the device connector management UI or API (REST endpoint &apos;/connector/SecurityTokens&apos;).
+Obtained from the device connector management UI or API (REST endpoint &amp;apos;/connector/SecurityTokens&amp;apos;).
 
 ```yaml
 Type: string

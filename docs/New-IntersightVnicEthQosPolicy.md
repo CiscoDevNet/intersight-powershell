@@ -265,9 +265,9 @@ PS C:\> New-IntersightVnicEthQosPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
-
 [Set-IntersightVnicEthQosPolicy](./Set-IntersightVnicEthQosPolicy.md)
+
+[Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
 
 [Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
 

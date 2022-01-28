@@ -17,7 +17,7 @@ Remove-IntersightResourceReservation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ResourceReservation&apos; resource.
+Delete a &amp;apos;ResourceReservation&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightResourceReservation](./Set-IntersightResourceReservation.md)
+
 [Get-IntersightResourceReservation](./Get-IntersightResourceReservation.md)
 
 [New-IntersightResourceReservation](./New-IntersightResourceReservation.md)
-
-[Set-IntersightResourceReservation](./Set-IntersightResourceReservation.md)
 

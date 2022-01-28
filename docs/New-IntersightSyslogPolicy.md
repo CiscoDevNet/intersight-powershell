@@ -19,7 +19,7 @@ New-IntersightSyslogPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &apos;SyslogPolicy&apos; resource.
+Create a &amp;apos;SyslogPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

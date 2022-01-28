@@ -19,7 +19,7 @@ Set-IntersightIamUserPreference [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamUserPreference&amp;apos; resource.
+Update a &apos;IamUserPreference&apos; resource.
 
 ## PARAMETERS
 

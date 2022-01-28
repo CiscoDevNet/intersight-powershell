@@ -270,9 +270,9 @@ PS C:\> Set-IntersightFabricEthNetworkControlPolicy
 
 ## RELATED LINKS
 
-[New-IntersightFabricEthNetworkControlPolicy](./New-IntersightFabricEthNetworkControlPolicy.md)
-
 [Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
+
+[New-IntersightFabricEthNetworkControlPolicy](./New-IntersightFabricEthNetworkControlPolicy.md)
 
 [Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
 

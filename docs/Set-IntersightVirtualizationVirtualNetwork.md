@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVirtualNetwork [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVirtualNetwork&apos; resource.
+Update a &amp;apos;VirtualizationVirtualNetwork&amp;apos; resource.
 
 ## PARAMETERS
 
