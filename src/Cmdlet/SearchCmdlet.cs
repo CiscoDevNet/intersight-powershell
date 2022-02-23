@@ -98,29 +98,6 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New SearchSuggestItem.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSearchSuggestItem")]
-    public class NewIntersightSearchSuggestItem:NewCmdletBase
-	{
-		public NewIntersightSearchSuggestItem()
-		{
-			ApiInstance = new SearchApi(Config);
-            ModelObject = new SearchSuggestItem();
-            MethodName = "CreateSearchSuggestItemWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SearchTagItem.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightSearchTagItem", DefaultParameterSetName = "CmdletParam")]
@@ -230,5 +207,28 @@ namespace Intersight.PowerShell
         
 
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New SearchSuggestItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightSearchSuggestItem")]
+    public class NewIntersightSearchSuggestItem:NewCmdletBase
+	{
+		public NewIntersightSearchSuggestItem()
+		{
+			ApiInstance = new SearchApi(Config);
+            ModelObject = new SearchSuggestItem();
+            MethodName = "CreateSearchSuggestItemWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
     }
 }

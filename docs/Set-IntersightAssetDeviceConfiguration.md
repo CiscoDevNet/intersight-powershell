@@ -19,7 +19,7 @@ Set-IntersightAssetDeviceConfiguration [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;AssetDeviceConfiguration&amp;apos; resource.
+Update a &apos;AssetDeviceConfiguration&apos; resource.
 
 ## PARAMETERS
 

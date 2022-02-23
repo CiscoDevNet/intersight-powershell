@@ -19,7 +19,7 @@ Set-IntersightHyperflexLocalCredentialPolicy [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexLocalCredentialPolicy&apos; resource.
+Update a &amp;apos;HyperflexLocalCredentialPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -253,10 +253,10 @@ PS C:\> Set-IntersightHyperflexLocalCredentialPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
+
 [Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
 
 [New-IntersightHyperflexLocalCredentialPolicy](./New-IntersightHyperflexLocalCredentialPolicy.md)
-
-[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

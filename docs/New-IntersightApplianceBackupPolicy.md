@@ -19,7 +19,7 @@ New-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-Additio
 ```
 
 ## DESCRIPTION
-Create a &apos;ApplianceBackupPolicy&apos; resource.
+Create a &amp;apos;ApplianceBackupPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &amp;apos;false&amp;apos; for this schedule to be active.
+Schedule to create a backup of the Intersight Appliance. Manualbackup field must be set to &apos;false&apos; for this schedule to be active.
 
 Note :- Use Initialize-IntersightOnpremSchedule to create the object of complex type OnpremSchedule
 

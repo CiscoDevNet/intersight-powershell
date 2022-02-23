@@ -19,7 +19,7 @@ Set-IntersightVirtualizationIweCluster [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationIweCluster&amp;apos; resource.
+Update a &apos;VirtualizationIweCluster&apos; resource.
 
 ## PARAMETERS
 
@@ -384,9 +384,9 @@ PS C:\> Set-IntersightVirtualizationIweCluster
 
 ## RELATED LINKS
 
-[Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
-
 [Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
+
+[Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
 
 [Initialize-IntersightCondAlarmSummary](./Initialize-IntersightCondAlarmSummary.md)
 

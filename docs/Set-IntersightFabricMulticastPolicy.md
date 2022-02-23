@@ -19,7 +19,7 @@ Set-IntersightFabricMulticastPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricMulticastPolicy&amp;apos; resource.
+Update a &apos;FabricMulticastPolicy&apos; resource.
 
 ## PARAMETERS
 

@@ -192,8 +192,8 @@ PS C:\> New-IntersightFabricPcOperation
 
 [Get-IntersightFabricPcOperation](./Get-IntersightFabricPcOperation.md)
 
-[Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
-
 [Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)
+
+[Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

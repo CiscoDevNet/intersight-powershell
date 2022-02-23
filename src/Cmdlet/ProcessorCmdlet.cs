@@ -368,7 +368,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ProcessorApi(Config);
             ModelObject = new ProcessorUnit();
-            MethodName = "UpdateProcessorUnitWithHttpInfo";
+            MethodName = "PatchProcessorUnitWithHttpInfo";
 		}
         
         

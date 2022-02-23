@@ -377,9 +377,9 @@ PS C:\> Set-IntersightSnmpPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
-
 [New-IntersightSnmpPolicy](./New-IntersightSnmpPolicy.md)
+
+[Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
 
 [Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
+
 [Set-IntersightHyperflexExtFcStoragePolicy](./Set-IntersightHyperflexExtFcStoragePolicy.md)
 
 [Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
-
-[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
 

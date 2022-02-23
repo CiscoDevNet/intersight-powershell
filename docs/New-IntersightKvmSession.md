@@ -19,7 +19,7 @@ New-IntersightKvmSession [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &apos;KvmSession&apos; resource.
+Create a &amp;apos;KvmSession&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,8 +223,8 @@ PS C:\> New-IntersightKvmSession
 
 ## RELATED LINKS
 
-[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
-
 [Get-IntersightKvmSession](./Get-IntersightKvmSession.md)
+
+[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

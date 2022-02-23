@@ -309,11 +309,11 @@ PS C:\> Set-IntersightFirmwareUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
-
 [Get-IntersightFirmwareUpgrade](./Get-IntersightFirmwareUpgrade.md)
 
 [New-IntersightFirmwareUpgrade](./New-IntersightFirmwareUpgrade.md)
+
+[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 

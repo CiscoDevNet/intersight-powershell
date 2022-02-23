@@ -19,7 +19,7 @@ Set-IntersightCapabilitySwitchCapability [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilitySwitchCapability&amp;apos; resource.
+Update a &apos;CapabilitySwitchCapability&apos; resource.
 
 ## PARAMETERS
 
@@ -577,11 +577,11 @@ PS C:\> Set-IntersightCapabilitySwitchCapability
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
+
 [Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
 
 [New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
-
-[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
 
 [Initialize-IntersightCapabilityPortRange](./Initialize-IntersightCapabilityPortRange.md)
 

@@ -8,6 +8,125 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementNiaParam.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementNiaParam")]
+    public class InitializeIntersightTechsupportmanagementNiaParam:PSCmdlet
+	{
+		public InitializeIntersightTechsupportmanagementNiaParam()
+		{
+            ClassId = TechsupportmanagementNiaParam.ClassIdEnum.TechsupportmanagementNiaParam;
+            CollectionLevel = TechsupportmanagementNiaParam.CollectionLevelEnum.NUMBER_1;
+            ObjectType = TechsupportmanagementNiaParam.ObjectTypeEnum.TechsupportmanagementNiaParam;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TechsupportmanagementNiaParam.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CollectionLevel controls the size / depth of the tech support files collected.\n* `1` - Use cached data in the returned collection.\n* `2` - Use current data in the returned collection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TechsupportmanagementNiaParam.CollectionLevelEnum CollectionLevel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Filename specifies an individual filename to collect from the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Filename {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"ForceFresh controls whether to return pre-collected files or force the collection of new files."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ForceFresh {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TechsupportmanagementNiaParam.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Pids {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> SerialNumbers {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TechsupportmanagementNiaParam initObject = new Intersight.Model.TechsupportmanagementNiaParam();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CollectionLevel"))
+            {
+                initObject.CollectionLevel = this.CollectionLevel;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Filename"))
+            {
+                initObject.Filename = this.Filename;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ForceFresh"))
+            {
+                initObject.ForceFresh = this.ForceFresh;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pids"))
+            {
+                initObject.Pids = this.Pids;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumbers"))
+            {
+                initObject.SerialNumbers = this.SerialNumbers;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementPlatformParam.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementPlatformParam")]
@@ -149,125 +268,6 @@ namespace Intersight.PowerShell
                 initObject.IsApplianceRequest = this.IsApplianceRequest;
             }
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TechsupportmanagementNiaParam.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTechsupportmanagementNiaParam")]
-    public class InitializeIntersightTechsupportmanagementNiaParam:PSCmdlet
-	{
-		public InitializeIntersightTechsupportmanagementNiaParam()
-		{
-            ClassId = TechsupportmanagementNiaParam.ClassIdEnum.TechsupportmanagementNiaParam;
-            CollectionLevel = TechsupportmanagementNiaParam.CollectionLevelEnum.NUMBER_1;
-            ObjectType = TechsupportmanagementNiaParam.ObjectTypeEnum.TechsupportmanagementNiaParam;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TechsupportmanagementNiaParam.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CollectionLevel controls the size / depth of the tech support files collected.\n* `1` - Use cached data in the returned collection.\n* `2` - Use current data in the returned collection."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TechsupportmanagementNiaParam.CollectionLevelEnum CollectionLevel {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Filename specifies an individual filename to collect from the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Filename {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"ForceFresh controls whether to return pre-collected files or force the collection of new files."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool ForceFresh {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TechsupportmanagementNiaParam.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Pids {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> SerialNumbers {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TechsupportmanagementNiaParam initObject = new Intersight.Model.TechsupportmanagementNiaParam();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CollectionLevel"))
-            {
-                initObject.CollectionLevel = this.CollectionLevel;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Filename"))
-            {
-                initObject.Filename = this.Filename;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ForceFresh"))
-            {
-                initObject.ForceFresh = this.ForceFresh;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pids"))
-            {
-                initObject.Pids = this.Pids;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumbers"))
-            {
-                initObject.SerialNumbers = this.SerialNumbers;
-            }
             WriteObject(initObject);
         }
 

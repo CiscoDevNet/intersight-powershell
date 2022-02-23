@@ -19,7 +19,7 @@ New-IntersightLicenseIwoLicenseCount [-AccountLicenseData< LicenseAccountLicense
 ```
 
 ## DESCRIPTION
-Create a &apos;LicenseIwoLicenseCount&apos; resource.
+Create a &amp;apos;LicenseIwoLicenseCount&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -145,8 +145,8 @@ PS C:\> New-IntersightLicenseIwoLicenseCount
 
 ## RELATED LINKS
 
-[Set-IntersightLicenseIwoLicenseCount](./Set-IntersightLicenseIwoLicenseCount.md)
-
 [Get-IntersightLicenseIwoLicenseCount](./Get-IntersightLicenseIwoLicenseCount.md)
+
+[Set-IntersightLicenseIwoLicenseCount](./Set-IntersightLicenseIwoLicenseCount.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -242,11 +242,11 @@ PS C:\> Set-IntersightAssetTarget
 
 ## RELATED LINKS
 
-[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
-
 [Get-IntersightAssetTarget](./Get-IntersightAssetTarget.md)
 
 [New-IntersightAssetTarget](./New-IntersightAssetTarget.md)
+
+[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
 
 [Initialize-IntersightAssetConnection](./Initialize-IntersightAssetConnection.md)
 

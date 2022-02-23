@@ -17,7 +17,7 @@ Remove-IntersightFabricApplianceRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricApplianceRole&amp;apos; resource.
+Delete a &apos;FabricApplianceRole&apos; resource.
 
 ## EXAMPLES
 

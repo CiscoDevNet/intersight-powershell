@@ -19,7 +19,7 @@ New-IntersightCertificatemanagementPolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CertificatemanagementPolicy&amp;apos; resource.
+Create a &apos;CertificatemanagementPolicy&apos; resource.
 
 ## PARAMETERS
 

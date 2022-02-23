@@ -19,7 +19,7 @@ New-IntersightInventoryRequest [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;InventoryRequest&amp;apos; resource.
+Create a &apos;InventoryRequest&apos; resource.
 
 ## PARAMETERS
 

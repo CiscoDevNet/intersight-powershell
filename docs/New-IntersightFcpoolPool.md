@@ -19,7 +19,7 @@ New-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &apos;FcpoolPool&apos; resource.
+Create a &amp;apos;FcpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

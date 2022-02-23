@@ -19,7 +19,7 @@ Set-IntersightOauthAuthorization [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;OauthAuthorization&amp;apos; resource.
+Update a &apos;OauthAuthorization&apos; resource.
 
 ## PARAMETERS
 
@@ -172,8 +172,8 @@ PS C:\> Set-IntersightOauthAuthorization
 
 ## RELATED LINKS
 
-[New-IntersightOauthAuthorization](./New-IntersightOauthAuthorization.md)
-
 [Get-IntersightOauthAuthorization](./Get-IntersightOauthAuthorization.md)
+
+[New-IntersightOauthAuthorization](./New-IntersightOauthAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

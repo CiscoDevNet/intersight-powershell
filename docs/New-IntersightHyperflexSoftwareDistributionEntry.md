@@ -178,10 +178,10 @@ PS C:\> New-IntersightHyperflexSoftwareDistributionEntry
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexSoftwareDistributionEntry](./Get-IntersightHyperflexSoftwareDistributionEntry.md)
+
 [Set-IntersightHyperflexSoftwareDistributionEntry](./Set-IntersightHyperflexSoftwareDistributionEntry.md)
 
 [Remove-IntersightHyperflexSoftwareDistributionEntry](./Remove-IntersightHyperflexSoftwareDistributionEntry.md)
-
-[Get-IntersightHyperflexSoftwareDistributionEntry](./Get-IntersightHyperflexSoftwareDistributionEntry.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

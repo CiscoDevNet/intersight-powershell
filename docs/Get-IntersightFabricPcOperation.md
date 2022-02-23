@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFabricPcOperation](./New-IntersightFabricPcOperation.md)
 
-[Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
-
 [Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)
+
+[Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
 

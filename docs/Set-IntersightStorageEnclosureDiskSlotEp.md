@@ -19,7 +19,7 @@ Set-IntersightStorageEnclosureDiskSlotEp [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageEnclosureDiskSlotEp&amp;apos; resource.
+Update a &apos;StorageEnclosureDiskSlotEp&apos; resource.
 
 ## PARAMETERS
 

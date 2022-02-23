@@ -19,7 +19,7 @@ New-IntersightHyperflexVmImportOperation [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexVmImportOperation&apos; resource.
+Create a &amp;apos;HyperflexVmImportOperation&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -163,8 +163,8 @@ PS C:\> New-IntersightHyperflexVmImportOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexVmImportOperation](./Remove-IntersightHyperflexVmImportOperation.md)
-
 [Get-IntersightHyperflexVmImportOperation](./Get-IntersightHyperflexVmImportOperation.md)
+
+[Remove-IntersightHyperflexVmImportOperation](./Remove-IntersightHyperflexVmImportOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

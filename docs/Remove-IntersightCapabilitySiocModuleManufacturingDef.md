@@ -17,7 +17,7 @@ Remove-IntersightCapabilitySiocModuleManufacturingDef -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilitySiocModuleManufacturingDef&amp;apos; resource.
+Delete a &apos;CapabilitySiocModuleManufacturingDef&apos; resource.
 
 ## EXAMPLES
 

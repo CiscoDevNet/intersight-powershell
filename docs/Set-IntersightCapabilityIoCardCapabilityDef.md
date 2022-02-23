@@ -19,7 +19,7 @@ Set-IntersightCapabilityIoCardCapabilityDef [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityIoCardCapabilityDef&amp;apos; resource.
+Update a &apos;CapabilityIoCardCapabilityDef&apos; resource.
 
 ## PARAMETERS
 
@@ -157,10 +157,10 @@ PS C:\> Set-IntersightCapabilityIoCardCapabilityDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityIoCardCapabilityDef](./Remove-IntersightCapabilityIoCardCapabilityDef.md)
-
 [Get-IntersightCapabilityIoCardCapabilityDef](./Get-IntersightCapabilityIoCardCapabilityDef.md)
 
 [New-IntersightCapabilityIoCardCapabilityDef](./New-IntersightCapabilityIoCardCapabilityDef.md)
+
+[Remove-IntersightCapabilityIoCardCapabilityDef](./Remove-IntersightCapabilityIoCardCapabilityDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

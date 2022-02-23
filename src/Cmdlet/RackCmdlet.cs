@@ -8,6 +8,68 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set RackUnitPersonality.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightRackUnitPersonality")]
+    public class SetIntersightRackUnitPersonality:SetCmdletBase
+	{
+		public SetIntersightRackUnitPersonality()
+		{
+			ApiInstance = new RackApi(Config);
+            ModelObject = new RackUnitPersonality();
+            MethodName = "UpdateRackUnitPersonalityWithHttpInfo";
+		}
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RackUnitPersonality.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightRackUnitPersonality", DefaultParameterSetName = "CmdletParam")]
@@ -185,68 +247,6 @@ namespace Intersight.PowerShell
         
         
 
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set RackUnitPersonality.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRackUnitPersonality")]
-    public class SetIntersightRackUnitPersonality:SetCmdletBase
-	{
-		public SetIntersightRackUnitPersonality()
-		{
-			ApiInstance = new RackApi(Config);
-            ModelObject = new RackUnitPersonality();
-            MethodName = "UpdateRackUnitPersonalityWithHttpInfo";
-		}
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
         
     }
 }

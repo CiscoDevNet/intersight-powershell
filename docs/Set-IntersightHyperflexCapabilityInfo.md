@@ -19,7 +19,7 @@ Set-IntersightHyperflexCapabilityInfo [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexCapabilityInfo&apos; resource.
+Update a &amp;apos;HyperflexCapabilityInfo&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -177,11 +177,11 @@ PS C:\> Set-IntersightHyperflexCapabilityInfo
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexCapabilityInfo](./Remove-IntersightHyperflexCapabilityInfo.md)
+
 [New-IntersightHyperflexCapabilityInfo](./New-IntersightHyperflexCapabilityInfo.md)
 
 [Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
-
-[Remove-IntersightHyperflexCapabilityInfo](./Remove-IntersightHyperflexCapabilityInfo.md)
 
 [Initialize-IntersightHclConstraint](./Initialize-IntersightHclConstraint.md)
 

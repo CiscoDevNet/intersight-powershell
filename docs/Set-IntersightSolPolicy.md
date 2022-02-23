@@ -19,7 +19,7 @@ Set-IntersightSolPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;SolPolicy&apos; resource.
+Update a &amp;apos;SolPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -253,10 +253,10 @@ PS C:\> Set-IntersightSolPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
+
 [Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
 [New-IntersightSolPolicy](./New-IntersightSolPolicy.md)
-
-[Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

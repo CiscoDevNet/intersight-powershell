@@ -19,7 +19,7 @@ Set-IntersightFirmwareSasExpanderDescriptor [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareSasExpanderDescriptor&amp;apos; resource.
+Update a &apos;FirmwareSasExpanderDescriptor&apos; resource.
 
 ## PARAMETERS
 

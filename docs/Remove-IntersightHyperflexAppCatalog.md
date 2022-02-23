@@ -17,7 +17,7 @@ Remove-IntersightHyperflexAppCatalog -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexAppCatalog&amp;apos; resource.
+Delete a &apos;HyperflexAppCatalog&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexAppCatalog](./Set-IntersightHyperflexAppCatalog.md)
-
 [New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
 
 [Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)
+
+[Set-IntersightHyperflexAppCatalog](./Set-IntersightHyperflexAppCatalog.md)
 

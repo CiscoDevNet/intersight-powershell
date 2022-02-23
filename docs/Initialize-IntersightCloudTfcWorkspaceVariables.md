@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-Whether this is a Terraform environment variable. Valid values are \&quot;terraform\&quot; or \&quot;env\&quot;.
+Whether this is a Terraform environment variable. Valid values are \&amp;quot;terraform\&amp;quot; or \&amp;quot;env\&amp;quot;.
 
 ```yaml
 Type: string

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightCapabilityEquipmentPhysicalDef](./Set-IntersightCapabilityEquipmentPhysicalDef.md)
+
 [Get-IntersightCapabilityEquipmentPhysicalDef](./Get-IntersightCapabilityEquipmentPhysicalDef.md)
 
 [New-IntersightCapabilityEquipmentPhysicalDef](./New-IntersightCapabilityEquipmentPhysicalDef.md)
-
-[Set-IntersightCapabilityEquipmentPhysicalDef](./Set-IntersightCapabilityEquipmentPhysicalDef.md)
 

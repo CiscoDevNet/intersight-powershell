@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: WorkflowMoReferenceProperty.ObjectTypeEnum
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SelectorProperty
-Selector properties to define HTTP method and &apos;body&apos; in case of upsert operation.
+Selector properties to define HTTP method and &amp;apos;body&amp;apos; in case of upsert operation.
 
 Note :- Use Initialize-IntersightWorkflowSelectorProperty to create the object of complex type WorkflowSelectorProperty
 

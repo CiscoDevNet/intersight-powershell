@@ -17,7 +17,7 @@ Remove-IntersightKubernetesBaremetalNodeProfile -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
+Delete a &apos;KubernetesBaremetalNodeProfile&apos; resource.
 
 ## EXAMPLES
 

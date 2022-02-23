@@ -17,7 +17,7 @@ Remove-IntersightAssetDeployment -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;AssetDeployment&amp;apos; resource.
+Delete a &apos;AssetDeployment&apos; resource.
 
 ## EXAMPLES
 

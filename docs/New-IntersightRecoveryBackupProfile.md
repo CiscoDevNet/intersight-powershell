@@ -344,11 +344,11 @@ PS C:\> New-IntersightRecoveryBackupProfile
 
 ## RELATED LINKS
 
+[Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
+
 [Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
 
 [Set-IntersightRecoveryBackupProfile](./Set-IntersightRecoveryBackupProfile.md)
-
-[Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

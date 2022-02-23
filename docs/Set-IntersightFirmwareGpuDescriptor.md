@@ -19,7 +19,7 @@ Set-IntersightFirmwareGpuDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareGpuDescriptor&apos; resource.
+Update a &amp;apos;FirmwareGpuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineNodeProfile [-Action< string>][-ActionPara
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesVirtualMachineNodeProfile&apos; resource.
+Update a &amp;apos;KubernetesVirtualMachineNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 

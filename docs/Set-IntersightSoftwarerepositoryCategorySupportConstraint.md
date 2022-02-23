@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryCategorySupportConstraint [-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryCategorySupportConstraint&apos; resource.
+Update a &amp;apos;SoftwarerepositoryCategorySupportConstraint&amp;apos; resource.
 
 ## PARAMETERS
 

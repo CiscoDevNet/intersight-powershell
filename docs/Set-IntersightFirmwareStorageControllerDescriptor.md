@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareStorageControllerDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)
+
 [Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)
 
 [New-IntersightFirmwareStorageControllerDescriptor](./New-IntersightFirmwareStorageControllerDescriptor.md)
-
-[Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

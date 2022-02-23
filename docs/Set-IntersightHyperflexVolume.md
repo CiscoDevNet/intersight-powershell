@@ -19,7 +19,7 @@ Set-IntersightHyperflexVolume [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexVolume&apos; resource.
+Update a &amp;apos;HyperflexVolume&amp;apos; resource.
 
 ## PARAMETERS
 

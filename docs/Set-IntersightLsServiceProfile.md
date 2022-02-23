@@ -19,7 +19,7 @@ Set-IntersightLsServiceProfile [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;LsServiceProfile&apos; resource.
+Update a &amp;apos;LsServiceProfile&amp;apos; resource.
 
 ## PARAMETERS
 

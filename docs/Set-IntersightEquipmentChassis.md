@@ -19,7 +19,7 @@ Set-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;EquipmentChassis&apos; resource.
+Update a &amp;apos;EquipmentChassis&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -8,59 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraPodSummary.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraPodSummary")]
-    public class InitializeIntersightConvergedinfraPodSummary:PSCmdlet
-	{
-		public InitializeIntersightConvergedinfraPodSummary()
-		{
-            ClassId = ConvergedinfraPodSummary.ClassIdEnum.ConvergedinfraPodSummary;
-            ObjectType = ConvergedinfraPodSummary.ObjectTypeEnum.ConvergedinfraPodSummary;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConvergedinfraPodSummary.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ConvergedinfraPodSummary.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ConvergedinfraPodSummary initObject = new Intersight.Model.ConvergedinfraPodSummary();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraComplianceSummary.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraComplianceSummary")]
@@ -161,6 +108,59 @@ namespace Intersight.PowerShell
             {
                 initObject.Validated = this.Validated;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraPodSummary.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraPodSummary")]
+    public class InitializeIntersightConvergedinfraPodSummary:PSCmdlet
+	{
+		public InitializeIntersightConvergedinfraPodSummary()
+		{
+            ClassId = ConvergedinfraPodSummary.ClassIdEnum.ConvergedinfraPodSummary;
+            ObjectType = ConvergedinfraPodSummary.ObjectTypeEnum.ConvergedinfraPodSummary;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConvergedinfraPodSummary.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ConvergedinfraPodSummary.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ConvergedinfraPodSummary initObject = new Intersight.Model.ConvergedinfraPodSummary();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

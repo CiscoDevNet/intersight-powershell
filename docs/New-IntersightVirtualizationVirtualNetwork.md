@@ -19,7 +19,7 @@ New-IntersightVirtualizationVirtualNetwork [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationVirtualNetwork&amp;apos; resource.
+Create a &apos;VirtualizationVirtualNetwork&apos; resource.
 
 ## PARAMETERS
 
@@ -283,10 +283,10 @@ PS C:\> New-IntersightVirtualizationVirtualNetwork
 
 ## RELATED LINKS
 
+[Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
+
 [Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
 
 [Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
-
-[Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

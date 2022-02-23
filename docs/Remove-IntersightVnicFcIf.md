@@ -17,7 +17,7 @@ Remove-IntersightVnicFcIf -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicFcIf&apos; resource.
+Delete a &amp;apos;VnicFcIf&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
+
 [Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
 
 [New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
-
-[Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
 

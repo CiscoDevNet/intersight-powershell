@@ -19,7 +19,7 @@ New-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Create a &apos;ServerProfileTemplate&apos; resource.
+Create a &amp;apos;ServerProfileTemplate&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -323,11 +323,11 @@ PS C:\> New-IntersightServerProfileTemplate
 
 ## RELATED LINKS
 
+[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
+
 [Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
 
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
-
-[Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

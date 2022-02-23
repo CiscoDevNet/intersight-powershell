@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareVirtualMachine&amp;apos; resource.
+Update a &apos;VirtualizationVmwareVirtualMachine&apos; resource.
 
 ## PARAMETERS
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiskCommitInfo
-Information about the virtual machine&apos;s disk commits, sharing and limits.
+Information about the virtual machine&amp;apos;s disk commits, sharing and limits.
 
 Note :- Use Initialize-IntersightVirtualizationVmwareVmDiskCommitInfo to create the object of complex type VirtualizationVmwareVmDiskCommitInfo
 
@@ -598,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerState
-Power state of the virtual machine.\n* `Unknown` - The entity&apos;s power state is unknown.\n* `PoweringOn` - The entity is powering on.\n* `PoweredOn` - The entity is powered on.\n* `PoweringOff` - The entity is powering off.\n* `PoweredOff` - The entity is powered down.\n* `StandBy` - The entity is in standby mode.\n* `Paused` - The entity is in pause state.\n* `Rebooting` - The entity reboot is in progress.\n* `` - The entity&apos;s power state is not available.
+Power state of the virtual machine.\n* `Unknown` - The entity&amp;apos;s power state is unknown.\n* `PoweringOn` - The entity is powering on.\n* `PoweredOn` - The entity is powered on.\n* `PoweringOff` - The entity is powering off.\n* `PoweredOff` - The entity is powered down.\n* `StandBy` - The entity is in standby mode.\n* `Paused` - The entity is in pause state.\n* `Rebooting` - The entity reboot is in progress.\n* `` - The entity&amp;apos;s power state is not available.
 
 ```yaml
 Type: VirtualizationVmwareVirtualMachine.PowerStateEnum

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightTerraformExecutor [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CloudResource< System.Collections.Generic.List`1[TerraformCloudResource]>][[-Moid]< string>][-Operation< TerraformExecutor.OperationEnum>][-Output< object>][-PlatformType< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-RunState< System.Collections.Generic.List`1[TerraformRunstate]>][-SourceFolderName< string>][-SourceFolderPath< string>][-SourceLocation< string>][-Status< string>][-Stderr< object>][-Stdout< object>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskId< string>][-Variables< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightTerraformExecutor [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CloudResource< System.Collections.Generic.List`1[TerraformCloudResource]>][-Command< string>][[-Moid]< string>][-Operation< TerraformExecutor.OperationEnum>][-Output< object>][-PlatformType< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-RunState< System.Collections.Generic.List`1[TerraformRunstate]>][-SourceFolderName< string>][-SourceFolderPath< string>][-SourceLocation< string>][-Status< string>][-Stderr< object>][-Stdout< object>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskId< string>][-Variables< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Command
+Command to be executed during update operation.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -121,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlatformType
-The Platform type used in conjunction with &amp;apos;sourceFolderPath&amp;apos; and &amp;apos;sourceFolderName&amp;apos; determines unique path for a Terraform workflow.
+The Platform type used in conjunction with &apos;sourceFolderPath&apos; and &apos;sourceFolderName&apos; determines unique path for a Terraform workflow.
 
 ```yaml
 Type: string
@@ -186,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolderPath
-Relative folder Path where &apos;sourceFolderName&apos; is located.
+Relative folder Path where &amp;apos;sourceFolderName&amp;apos; is located.
 
 ```yaml
 Type: string

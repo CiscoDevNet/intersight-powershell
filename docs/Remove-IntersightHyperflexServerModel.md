@@ -17,7 +17,7 @@ Remove-IntersightHyperflexServerModel -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexServerModel&amp;apos; resource.
+Delete a &apos;HyperflexServerModel&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 
-[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
-
 [New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
+
+[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 

@@ -162,9 +162,9 @@ PS C:\> New-IntersightIamAccountExperience
 
 ## RELATED LINKS
 
-[Get-IntersightIamAccountExperience](./Get-IntersightIamAccountExperience.md)
-
 [Set-IntersightIamAccountExperience](./Set-IntersightIamAccountExperience.md)
+
+[Get-IntersightIamAccountExperience](./Get-IntersightIamAccountExperience.md)
 
 [Initialize-IntersightIamFeatureDefinition](./Initialize-IntersightIamFeatureDefinition.md)
 

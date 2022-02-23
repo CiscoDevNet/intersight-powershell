@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareIomDescriptor](./Set-IntersightFirmwareIomDescriptor.md)
-
 [Get-IntersightFirmwareIomDescriptor](./Get-IntersightFirmwareIomDescriptor.md)
 
 [New-IntersightFirmwareIomDescriptor](./New-IntersightFirmwareIomDescriptor.md)
+
+[Set-IntersightFirmwareIomDescriptor](./Set-IntersightFirmwareIomDescriptor.md)
 

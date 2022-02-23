@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -UploadId
-When the import action in file MO is updated with &apos;GeneratePreSignedUploadUrl&apos;, Intersight shall return a upload Id in this property as part of the PATCH response.
+When the import action in file MO is updated with &amp;apos;GeneratePreSignedUploadUrl&amp;apos;, Intersight shall return a upload Id in this property as part of the PATCH response.
 
 ```yaml
 Type: string

@@ -326,9 +326,9 @@ PS C:\> Set-IntersightIamLdapPolicy
 
 ## RELATED LINKS
 
-[New-IntersightIamLdapPolicy](./New-IntersightIamLdapPolicy.md)
-
 [Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
+
+[New-IntersightIamLdapPolicy](./New-IntersightIamLdapPolicy.md)
 
 [Remove-IntersightIamLdapPolicy](./Remove-IntersightIamLdapPolicy.md)
 

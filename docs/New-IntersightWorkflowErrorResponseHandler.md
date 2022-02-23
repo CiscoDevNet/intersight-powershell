@@ -19,7 +19,7 @@ New-IntersightWorkflowErrorResponseHandler [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowErrorResponseHandler&apos; resource.
+Create a &amp;apos;WorkflowErrorResponseHandler&amp;apos; resource.
 
 ## PARAMETERS
 

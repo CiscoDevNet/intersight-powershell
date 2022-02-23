@@ -17,7 +17,7 @@ Remove-IntersightKubernetesNodeGroupProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesNodeGroupProfile&amp;apos; resource.
+Delete a &apos;KubernetesNodeGroupProfile&apos; resource.
 
 ## EXAMPLES
 

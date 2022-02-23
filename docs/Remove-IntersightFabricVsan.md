@@ -17,7 +17,7 @@ Remove-IntersightFabricVsan -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricVsan&amp;apos; resource.
+Delete a &apos;FabricVsan&apos; resource.
 
 ## EXAMPLES
 

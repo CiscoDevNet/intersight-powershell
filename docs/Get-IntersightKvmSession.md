@@ -25,7 +25,7 @@ Get-IntersightKvmSession [-Count <Boolean>] [-InlineCount <String>] [-Select <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KvmSession&amp;apos; resource.,
+Read a &apos;KvmSession&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
-
 [New-IntersightKvmSession](./New-IntersightKvmSession.md)
+
+[Set-IntersightKvmSession](./Set-IntersightKvmSession.md)
 

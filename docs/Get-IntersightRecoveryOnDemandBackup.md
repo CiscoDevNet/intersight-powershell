@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
-
 [Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
+
+[Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
 
 [New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
 

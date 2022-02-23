@@ -19,7 +19,7 @@ Set-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricUplinkPcRole&amp;apos; resource.
+Update a &apos;FabricUplinkPcRole&apos; resource.
 
 ## PARAMETERS
 

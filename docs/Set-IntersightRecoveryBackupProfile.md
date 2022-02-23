@@ -19,7 +19,7 @@ Set-IntersightRecoveryBackupProfile [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;RecoveryBackupProfile&apos; resource.
+Update a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -344,11 +344,11 @@ PS C:\> Set-IntersightRecoveryBackupProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
-
 [New-IntersightRecoveryBackupProfile](./New-IntersightRecoveryBackupProfile.md)
 
 [Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
+
+[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

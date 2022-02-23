@@ -17,7 +17,7 @@ Remove-IntersightHyperflexSoftwareDistributionComponent -Moid <String> [<CommonP
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexSoftwareDistributionComponent&apos; resource.
+Delete a &amp;apos;HyperflexSoftwareDistributionComponent&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexSoftwareDistributionComponent](./Set-IntersightHyperflexSoftwareDistributionComponent.md)
-
 [Get-IntersightHyperflexSoftwareDistributionComponent](./Get-IntersightHyperflexSoftwareDistributionComponent.md)
 
 [New-IntersightHyperflexSoftwareDistributionComponent](./New-IntersightHyperflexSoftwareDistributionComponent.md)
+
+[Set-IntersightHyperflexSoftwareDistributionComponent](./Set-IntersightHyperflexSoftwareDistributionComponent.md)
 

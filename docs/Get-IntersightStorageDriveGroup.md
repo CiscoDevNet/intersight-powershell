@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
+
 [Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
 
 [Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
-
-[New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
 

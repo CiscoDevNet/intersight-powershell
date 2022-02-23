@@ -19,7 +19,7 @@ New-IntersightOsOsSupport [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OsOsSupport&amp;apos; resource.
+Create a &apos;OsOsSupport&apos; resource.
 
 ## PARAMETERS
 

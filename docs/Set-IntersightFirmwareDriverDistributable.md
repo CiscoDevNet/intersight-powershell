@@ -530,11 +530,11 @@ PS C:\> Set-IntersightFirmwareDriverDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareDriverDistributable](./Remove-IntersightFirmwareDriverDistributable.md)
+[Get-IntersightFirmwareDriverDistributable](./Get-IntersightFirmwareDriverDistributable.md)
 
 [New-IntersightFirmwareDriverDistributable](./New-IntersightFirmwareDriverDistributable.md)
 
-[Get-IntersightFirmwareDriverDistributable](./Get-IntersightFirmwareDriverDistributable.md)
+[Remove-IntersightFirmwareDriverDistributable](./Remove-IntersightFirmwareDriverDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

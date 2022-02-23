@@ -19,7 +19,7 @@ Set-IntersightSoftwareUcsdDistributable [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwareUcsdDistributable&apos; resource.
+Update a &amp;apos;SoftwareUcsdDistributable&amp;apos; resource.
 
 ## PARAMETERS
 

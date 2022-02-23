@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationVirtualMachine -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &apos;VirtualizationVirtualMachine&apos; resource.
+Delete a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ Set-IntersightVirtualizationCiscoHypervisorManager [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationCiscoHypervisorManager&amp;apos; resource.
+Update a &apos;VirtualizationCiscoHypervisorManager&apos; resource.
 
 ## PARAMETERS
 

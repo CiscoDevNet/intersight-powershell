@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -InterfaceSource
-Lists the supported Interface Source for PXE device. Supported values are \&amp;quot;name\&amp;quot; and \&amp;quot;mac\&amp;quot;.\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface.
+Lists the supported Interface Source for PXE device. Supported values are \&quot;name\&quot; and \&quot;mac\&quot;.\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface.
 
 ```yaml
 Type: BootPxe.InterfaceSourceEnum

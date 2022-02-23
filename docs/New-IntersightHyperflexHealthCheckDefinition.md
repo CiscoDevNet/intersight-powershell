@@ -19,7 +19,7 @@ New-IntersightHyperflexHealthCheckDefinition [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexHealthCheckDefinition&apos; resource.
+Create a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
 
 ## PARAMETERS
 

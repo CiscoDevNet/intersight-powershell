@@ -536,11 +536,11 @@ PS C:\> Set-IntersightKubernetesClusterProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
+
 [Get-IntersightKubernetesClusterProfile](./Get-IntersightKubernetesClusterProfile.md)
 
 [New-IntersightKubernetesClusterProfile](./New-IntersightKubernetesClusterProfile.md)
-
-[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
 
 [Initialize-IntersightKubernetesActionInfo](./Initialize-IntersightKubernetesActionInfo.md)
 

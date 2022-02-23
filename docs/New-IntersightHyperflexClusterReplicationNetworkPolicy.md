@@ -257,11 +257,11 @@ PS C:\> New-IntersightHyperflexClusterReplicationNetworkPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterReplicationNetworkPolicy](./Set-IntersightHyperflexClusterReplicationNetworkPolicy.md)
+[Get-IntersightHyperflexClusterReplicationNetworkPolicy](./Get-IntersightHyperflexClusterReplicationNetworkPolicy.md)
 
 [Remove-IntersightHyperflexClusterReplicationNetworkPolicy](./Remove-IntersightHyperflexClusterReplicationNetworkPolicy.md)
 
-[Get-IntersightHyperflexClusterReplicationNetworkPolicy](./Get-IntersightHyperflexClusterReplicationNetworkPolicy.md)
+[Set-IntersightHyperflexClusterReplicationNetworkPolicy](./Set-IntersightHyperflexClusterReplicationNetworkPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 

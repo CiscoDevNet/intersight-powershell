@@ -19,7 +19,7 @@ Set-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;IamUserGroup&apos; resource.
+Update a &amp;apos;IamUserGroup&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -214,10 +214,10 @@ PS C:\> Set-IntersightIamUserGroup
 
 ## RELATED LINKS
 
+[Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
+
 [Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
 
 [New-IntersightIamUserGroup](./New-IntersightIamUserGroup.md)
-
-[Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

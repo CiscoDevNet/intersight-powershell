@@ -19,7 +19,7 @@ Set-IntersightVirtualizationEsxiConsole [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationEsxiConsole&amp;apos; resource.
+Update a &apos;VirtualizationEsxiConsole&apos; resource.
 
 ## PARAMETERS
 
@@ -178,8 +178,8 @@ PS C:\> Set-IntersightVirtualizationEsxiConsole
 
 ## RELATED LINKS
 
-[New-IntersightVirtualizationEsxiConsole](./New-IntersightVirtualizationEsxiConsole.md)
-
 [Get-IntersightVirtualizationEsxiConsole](./Get-IntersightVirtualizationEsxiConsole.md)
+
+[New-IntersightVirtualizationEsxiConsole](./New-IntersightVirtualizationEsxiConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

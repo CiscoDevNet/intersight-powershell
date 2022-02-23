@@ -19,7 +19,7 @@ Set-IntersightHyperflexHypervisorVirtualMachine [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexHypervisorVirtualMachine&amp;apos; resource.
+Update a &apos;HyperflexHypervisorVirtualMachine&apos; resource.
 
 ## PARAMETERS
 

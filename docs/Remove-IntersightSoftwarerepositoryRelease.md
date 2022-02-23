@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryRelease -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwarerepositoryRelease&apos; resource.
+Delete a &amp;apos;SoftwarerepositoryRelease&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwarerepositoryRelease](./Set-IntersightSoftwarerepositoryRelease.md)
+
 [New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
 
 [Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
-
-[Set-IntersightSoftwarerepositoryRelease](./Set-IntersightSoftwarerepositoryRelease.md)
 

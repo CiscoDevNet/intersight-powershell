@@ -17,7 +17,7 @@ Remove-IntersightTerraformExecutor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;TerraformExecutor&apos; resource.
+Delete a &amp;apos;TerraformExecutor&amp;apos; resource.
 
 ## EXAMPLES
 

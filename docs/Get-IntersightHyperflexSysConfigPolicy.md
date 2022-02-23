@@ -25,7 +25,7 @@ Get-IntersightHyperflexSysConfigPolicy [-Count <Boolean>] [-InlineCount <String>
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;HyperflexSysConfigPolicy&apos; resource.,
+Read a &amp;apos;HyperflexSysConfigPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexSysConfigPolicy](./Set-IntersightHyperflexSysConfigPolicy.md)
+[New-IntersightHyperflexSysConfigPolicy](./New-IntersightHyperflexSysConfigPolicy.md)
 
 [Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)
 
-[New-IntersightHyperflexSysConfigPolicy](./New-IntersightHyperflexSysConfigPolicy.md)
+[Set-IntersightHyperflexSysConfigPolicy](./Set-IntersightHyperflexSysConfigPolicy.md)
 

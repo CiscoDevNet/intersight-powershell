@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &amp;apos;AES&amp;apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

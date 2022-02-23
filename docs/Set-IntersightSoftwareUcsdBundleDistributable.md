@@ -470,11 +470,11 @@ PS C:\> Set-IntersightSoftwareUcsdBundleDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwareUcsdBundleDistributable](./Remove-IntersightSoftwareUcsdBundleDistributable.md)
-
 [Get-IntersightSoftwareUcsdBundleDistributable](./Get-IntersightSoftwareUcsdBundleDistributable.md)
 
 [New-IntersightSoftwareUcsdBundleDistributable](./New-IntersightSoftwareUcsdBundleDistributable.md)
+
+[Remove-IntersightSoftwareUcsdBundleDistributable](./Remove-IntersightSoftwareUcsdBundleDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

@@ -25,7 +25,7 @@ Get-IntersightKubernetesClusterProfile [-Count <Boolean>] [-InlineCount <String>
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KubernetesClusterProfile&amp;apos; resource.,
+Read a &apos;KubernetesClusterProfile&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesClusterProfile](./New-IntersightKubernetesClusterProfile.md)
-
 [Set-IntersightKubernetesClusterProfile](./Set-IntersightKubernetesClusterProfile.md)
 
 [Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
+
+[New-IntersightKubernetesClusterProfile](./New-IntersightKubernetesClusterProfile.md)
 

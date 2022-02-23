@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ContentBaseParameter.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ContentParameter.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightContentBaseParameter")]
-    public class InitializeIntersightContentBaseParameter:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightContentParameter")]
+    public class InitializeIntersightContentParameter:PSCmdlet
 	{
-		public InitializeIntersightContentBaseParameter()
+		public InitializeIntersightContentParameter()
 		{
-            ItemType = ContentBaseParameter.ItemTypeEnum.Simple;
-            Type = ContentBaseParameter.TypeEnum.Simple;
+            ItemType = ContentParameter.ItemTypeEnum.Simple;
+            Type = ContentParameter.TypeEnum.Simple;
             
 		}
         // <summary>
@@ -42,7 +42,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentBaseParameter.ClassIdEnum ClassId {
+        public ContentParameter.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -60,7 +60,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentBaseParameter.ItemTypeEnum ItemType {
+        public ContentParameter.ItemTypeEnum ItemType {
             get;
             set;
         }
@@ -78,7 +78,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentBaseParameter.ObjectTypeEnum ObjectType {
+        public ContentParameter.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -105,14 +105,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentBaseParameter.TypeEnum Type {
+        public ContentParameter.TypeEnum Type {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ContentBaseParameter initObject = new Intersight.Model.ContentBaseParameter();
+             Intersight.Model.ContentParameter initObject = new Intersight.Model.ContentParameter();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcceptSingleValue"))
             {
                 initObject.AcceptSingleValue = this.AcceptSingleValue;
@@ -146,85 +146,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ContentComplexType.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightContentComplexType")]
-    public class InitializeIntersightContentComplexType:PSCmdlet
-	{
-		public InitializeIntersightContentComplexType()
-		{
-            ClassId = ContentComplexType.ClassIdEnum.ContentComplexType;
-            ObjectType = ContentComplexType.ObjectTypeEnum.ContentComplexType;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ContentComplexType.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique name of this complex type within the grammar specification."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ContentComplexType.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.ContentBaseParameter> Parameters {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ContentComplexType initObject = new Intersight.Model.ContentComplexType();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Parameters"))
-            {
-                initObject.Parameters = this.Parameters;
             }
             WriteObject(initObject);
         }
@@ -416,15 +337,94 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ContentParameter.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ContentComplexType.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightContentParameter")]
-    public class InitializeIntersightContentParameter:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightContentComplexType")]
+    public class InitializeIntersightContentComplexType:PSCmdlet
 	{
-		public InitializeIntersightContentParameter()
+		public InitializeIntersightContentComplexType()
 		{
-            ItemType = ContentParameter.ItemTypeEnum.Simple;
-            Type = ContentParameter.TypeEnum.Simple;
+            ClassId = ContentComplexType.ClassIdEnum.ContentComplexType;
+            ObjectType = ContentComplexType.ObjectTypeEnum.ContentComplexType;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ContentComplexType.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique name of this complex type within the grammar specification."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ContentComplexType.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.ContentBaseParameter> Parameters {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ContentComplexType initObject = new Intersight.Model.ContentComplexType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Parameters"))
+            {
+                initObject.Parameters = this.Parameters;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ContentBaseParameter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightContentBaseParameter")]
+    public class InitializeIntersightContentBaseParameter:PSCmdlet
+	{
+		public InitializeIntersightContentBaseParameter()
+		{
+            ItemType = ContentBaseParameter.ItemTypeEnum.Simple;
+            Type = ContentBaseParameter.TypeEnum.Simple;
             
 		}
         // <summary>
@@ -450,7 +450,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentParameter.ClassIdEnum ClassId {
+        public ContentBaseParameter.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -468,7 +468,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentParameter.ItemTypeEnum ItemType {
+        public ContentBaseParameter.ItemTypeEnum ItemType {
             get;
             set;
         }
@@ -486,7 +486,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentParameter.ObjectTypeEnum ObjectType {
+        public ContentBaseParameter.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -513,14 +513,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ContentParameter.TypeEnum Type {
+        public ContentBaseParameter.TypeEnum Type {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ContentParameter initObject = new Intersight.Model.ContentParameter();
+             Intersight.Model.ContentBaseParameter initObject = new Intersight.Model.ContentBaseParameter();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcceptSingleValue"))
             {
                 initObject.AcceptSingleValue = this.AcceptSingleValue;

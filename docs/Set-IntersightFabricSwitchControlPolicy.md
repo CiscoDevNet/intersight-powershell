@@ -19,7 +19,7 @@ Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricSwitchControlPolicy&amp;apos; resource.
+Update a &apos;FabricSwitchControlPolicy&apos; resource.
 
 ## PARAMETERS
 

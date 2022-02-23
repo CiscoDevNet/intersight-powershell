@@ -276,11 +276,11 @@ PS C:\> New-IntersightHyperflexNodeConfigPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexNodeConfigPolicy](./Set-IntersightHyperflexNodeConfigPolicy.md)
+[Get-IntersightHyperflexNodeConfigPolicy](./Get-IntersightHyperflexNodeConfigPolicy.md)
 
 [Remove-IntersightHyperflexNodeConfigPolicy](./Remove-IntersightHyperflexNodeConfigPolicy.md)
 
-[Get-IntersightHyperflexNodeConfigPolicy](./Get-IntersightHyperflexNodeConfigPolicy.md)
+[Set-IntersightHyperflexNodeConfigPolicy](./Set-IntersightHyperflexNodeConfigPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 

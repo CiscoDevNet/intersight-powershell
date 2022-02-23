@@ -298,9 +298,9 @@ PS C:\> New-IntersightRecoveryOnDemandBackup
 
 ## RELATED LINKS
 
-[Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
-
 [Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
+
+[Set-IntersightRecoveryOnDemandBackup](./Set-IntersightRecoveryOnDemandBackup.md)
 
 [Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
 

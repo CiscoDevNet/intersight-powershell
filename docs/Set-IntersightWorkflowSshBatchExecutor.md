@@ -19,7 +19,7 @@ Set-IntersightWorkflowSshBatchExecutor [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowSshBatchExecutor&amp;apos; resource.
+Update a &apos;WorkflowSshBatchExecutor&apos; resource.
 
 ## PARAMETERS
 
@@ -292,9 +292,9 @@ PS C:\> Set-IntersightWorkflowSshBatchExecutor
 
 [Remove-IntersightWorkflowSshBatchExecutor](./Remove-IntersightWorkflowSshBatchExecutor.md)
 
-[Get-IntersightWorkflowSshBatchExecutor](./Get-IntersightWorkflowSshBatchExecutor.md)
-
 [New-IntersightWorkflowSshBatchExecutor](./New-IntersightWorkflowSshBatchExecutor.md)
+
+[Get-IntersightWorkflowSshBatchExecutor](./Get-IntersightWorkflowSshBatchExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

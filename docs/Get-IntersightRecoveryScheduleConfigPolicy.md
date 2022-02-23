@@ -25,7 +25,7 @@ Get-IntersightRecoveryScheduleConfigPolicy [-Count <Boolean>] [-InlineCount <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;RecoveryScheduleConfigPolicy&amp;apos; resource.,
+Read a &apos;RecoveryScheduleConfigPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

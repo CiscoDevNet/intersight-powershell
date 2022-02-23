@@ -17,7 +17,7 @@ Remove-IntersightTamAdvisoryCount -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;TamAdvisoryCount&apos; resource.
+Delete a &amp;apos;TamAdvisoryCount&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightTamAdvisoryCount](./Set-IntersightTamAdvisoryCount.md)
+
 [Get-IntersightTamAdvisoryCount](./Get-IntersightTamAdvisoryCount.md)
 
 [New-IntersightTamAdvisoryCount](./New-IntersightTamAdvisoryCount.md)
-
-[Set-IntersightTamAdvisoryCount](./Set-IntersightTamAdvisoryCount.md)
 

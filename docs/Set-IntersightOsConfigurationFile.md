@@ -19,7 +19,7 @@ Set-IntersightOsConfigurationFile [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;OsConfigurationFile&apos; resource.
+Update a &amp;apos;OsConfigurationFile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,11 +223,11 @@ PS C:\> Set-IntersightOsConfigurationFile
 
 ## RELATED LINKS
 
-[Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
-
 [Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
 
 [New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
+
+[Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
 
 [Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)
 

@@ -197,9 +197,9 @@ PS C:\> Set-IntersightKubernetesClusterAddonProfile
 
 [Remove-IntersightKubernetesClusterAddonProfile](./Remove-IntersightKubernetesClusterAddonProfile.md)
 
-[New-IntersightKubernetesClusterAddonProfile](./New-IntersightKubernetesClusterAddonProfile.md)
-
 [Get-IntersightKubernetesClusterAddonProfile](./Get-IntersightKubernetesClusterAddonProfile.md)
+
+[New-IntersightKubernetesClusterAddonProfile](./New-IntersightKubernetesClusterAddonProfile.md)
 
 [Initialize-IntersightKubernetesAddon](./Initialize-IntersightKubernetesAddon.md)
 

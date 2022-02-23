@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFirmwareNxosDescriptor](./Set-IntersightFirmwareNxosDescriptor.md)
 
-[New-IntersightFirmwareNxosDescriptor](./New-IntersightFirmwareNxosDescriptor.md)
-
 [Get-IntersightFirmwareNxosDescriptor](./Get-IntersightFirmwareNxosDescriptor.md)
+
+[New-IntersightFirmwareNxosDescriptor](./New-IntersightFirmwareNxosDescriptor.md)
 

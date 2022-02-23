@@ -208,10 +208,10 @@ PS C:\> New-IntersightThermalPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightThermalPolicy](./Get-IntersightThermalPolicy.md)
+
 [Set-IntersightThermalPolicy](./Set-IntersightThermalPolicy.md)
 
 [Remove-IntersightThermalPolicy](./Remove-IntersightThermalPolicy.md)
-
-[Get-IntersightThermalPolicy](./Get-IntersightThermalPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ Set-IntersightHyperflexServerModel [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexServerModel&amp;apos; resource.
+Update a &apos;HyperflexServerModel&apos; resource.
 
 ## PARAMETERS
 
@@ -164,9 +164,9 @@ PS C:\> Set-IntersightHyperflexServerModel
 
 [Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
 
-[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
-
 [New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
+
+[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 
 [Initialize-IntersightHyperflexServerModelEntry](./Initialize-IntersightHyperflexServerModelEntry.md)
 

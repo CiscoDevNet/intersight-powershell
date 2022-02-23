@@ -19,7 +19,7 @@ Set-IntersightOprsSyncTargetListMessage [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;OprsSyncTargetListMessage&apos; resource.
+Update a &amp;apos;OprsSyncTargetListMessage&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -205,9 +205,9 @@ PS C:\> Set-IntersightOprsSyncTargetListMessage
 
 ## RELATED LINKS
 
-[New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
-
 [Get-IntersightOprsSyncTargetListMessage](./Get-IntersightOprsSyncTargetListMessage.md)
+
+[New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
 
 [Remove-IntersightOprsSyncTargetListMessage](./Remove-IntersightOprsSyncTargetListMessage.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationIweDatacenter -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VirtualizationIweDatacenter&amp;apos; resource.
+Delete a &apos;VirtualizationIweDatacenter&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVirtualizationIweDatacenter](./Set-IntersightVirtualizationIweDatacenter.md)
-
 [Get-IntersightVirtualizationIweDatacenter](./Get-IntersightVirtualizationIweDatacenter.md)
 
 [New-IntersightVirtualizationIweDatacenter](./New-IntersightVirtualizationIweDatacenter.md)
+
+[Set-IntersightVirtualizationIweDatacenter](./Set-IntersightVirtualizationIweDatacenter.md)
 

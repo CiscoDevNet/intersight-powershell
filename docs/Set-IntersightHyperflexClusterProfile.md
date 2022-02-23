@@ -791,9 +791,9 @@ PS C:\> Set-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
-
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
+
+[New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
 [Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
 

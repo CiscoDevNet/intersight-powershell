@@ -19,7 +19,7 @@ New-IntersightHyperflexHxdpVersion [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexHxdpVersion&amp;apos; resource.
+Create a &apos;HyperflexHxdpVersion&apos; resource.
 
 ## PARAMETERS
 

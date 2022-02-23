@@ -19,7 +19,7 @@ Set-IntersightKubernetesVersionPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesVersionPolicy&apos; resource.
+Update a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

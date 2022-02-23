@@ -19,7 +19,7 @@ Set-IntersightWorkflowCustomDataTypeDefinition [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowCustomDataTypeDefinition&amp;apos; resource.
+Update a &apos;WorkflowCustomDataTypeDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-A user friendly short name to identify the custom data type definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), or an underscore (_) and must be at least 2 characters.
+A user friendly short name to identify the custom data type definition. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&amp;apos;), or an underscore (_) and must be at least 2 characters.
 
 ```yaml
 Type: string

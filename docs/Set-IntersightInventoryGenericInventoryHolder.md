@@ -19,7 +19,7 @@ Set-IntersightInventoryGenericInventoryHolder [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;InventoryGenericInventoryHolder&amp;apos; resource.
+Update a &apos;InventoryGenericInventoryHolder&apos; resource.
 
 ## PARAMETERS
 

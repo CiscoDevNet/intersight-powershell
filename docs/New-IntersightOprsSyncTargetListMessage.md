@@ -19,7 +19,7 @@ New-IntersightOprsSyncTargetListMessage [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OprsSyncTargetListMessage&amp;apos; resource.
+Create a &apos;OprsSyncTargetListMessage&apos; resource.
 
 ## PARAMETERS
 

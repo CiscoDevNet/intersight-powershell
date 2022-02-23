@@ -19,7 +19,7 @@ New-IntersightFirmwareGpuDescriptor [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareGpuDescriptor&amp;apos; resource.
+Create a &apos;FirmwareGpuDescriptor&apos; resource.
 
 ## PARAMETERS
 

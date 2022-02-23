@@ -17,7 +17,7 @@ Remove-IntersightSoftwareApplianceDistributable -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareApplianceDistributable&amp;apos; resource.
+Delete a &apos;SoftwareApplianceDistributable&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
+
 [Get-IntersightSoftwareApplianceDistributable](./Get-IntersightSoftwareApplianceDistributable.md)
 
 [New-IntersightSoftwareApplianceDistributable](./New-IntersightSoftwareApplianceDistributable.md)
-
-[Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
 

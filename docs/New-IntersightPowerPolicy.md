@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocatedBudget< long>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PowerProfiling< PowerPolicy.PowerProfilingEnum>][-PowerRestoreState< PowerPolicy.PowerRestoreStateEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RedundancyMode< PowerPolicy.RedundancyModeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocatedBudget< long>][-Description< string>][-DynamicRebalancing< PowerPolicy.DynamicRebalancingEnum>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PowerPriority< PowerPolicy.PowerPriorityEnum>][-PowerProfiling< PowerPolicy.PowerProfilingEnum>][-PowerRestoreState< PowerPolicy.PowerRestoreStateEnum>][-PowerSaveMode< PowerPolicy.PowerSaveModeEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RedundancyMode< PowerPolicy.RedundancyModeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;PowerPolicy&apos; resource.
+Create a &amp;apos;PowerPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -58,6 +58,21 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DynamicRebalancing
+Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+
+```yaml
+Type: PowerPolicy.DynamicRebalancingEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -116,6 +131,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PowerPriority
+Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High.
+
+```yaml
+Type: PowerPolicy.PowerPriorityEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PowerProfiling
 Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
 
@@ -136,6 +166,21 @@ Sets the Power Restore State of the Server. This field is only supported for Cis
 
 ```yaml
 Type: PowerPolicy.PowerRestoreStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PowerSaveMode
+Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+
+```yaml
+Type: PowerPolicy.PowerSaveModeEnum
 Parameter Sets: (All)
 Aliases:
 

@@ -19,7 +19,7 @@ New-IntersightHyperflexExtIscsiStoragePolicy [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexExtIscsiStoragePolicy&amp;apos; resource.
+Create a &apos;HyperflexExtIscsiStoragePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -242,11 +242,11 @@ PS C:\> New-IntersightHyperflexExtIscsiStoragePolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexExtIscsiStoragePolicy](./Get-IntersightHyperflexExtIscsiStoragePolicy.md)
-
 [Set-IntersightHyperflexExtIscsiStoragePolicy](./Set-IntersightHyperflexExtIscsiStoragePolicy.md)
 
 [Remove-IntersightHyperflexExtIscsiStoragePolicy](./Remove-IntersightHyperflexExtIscsiStoragePolicy.md)
+
+[Get-IntersightHyperflexExtIscsiStoragePolicy](./Get-IntersightHyperflexExtIscsiStoragePolicy.md)
 
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
 

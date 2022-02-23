@@ -472,9 +472,9 @@ PS C:\> New-IntersightFirmwareServerConfigurationUtilityDistributable
 
 [Get-IntersightFirmwareServerConfigurationUtilityDistributable](./Get-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 
-[Remove-IntersightFirmwareServerConfigurationUtilityDistributable](./Remove-IntersightFirmwareServerConfigurationUtilityDistributable.md)
-
 [Set-IntersightFirmwareServerConfigurationUtilityDistributable](./Set-IntersightFirmwareServerConfigurationUtilityDistributable.md)
+
+[Remove-IntersightFirmwareServerConfigurationUtilityDistributable](./Remove-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

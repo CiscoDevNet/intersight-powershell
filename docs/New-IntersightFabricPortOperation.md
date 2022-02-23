@@ -19,7 +19,7 @@ New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricPortOperation&apos; resource.
+Create a &amp;apos;FabricPortOperation&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -222,8 +222,8 @@ PS C:\> New-IntersightFabricPortOperation
 
 [Get-IntersightFabricPortOperation](./Get-IntersightFabricPortOperation.md)
 
-[Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
-
 [Set-IntersightFabricPortOperation](./Set-IntersightFabricPortOperation.md)
+
+[Remove-IntersightFabricPortOperation](./Remove-IntersightFabricPortOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

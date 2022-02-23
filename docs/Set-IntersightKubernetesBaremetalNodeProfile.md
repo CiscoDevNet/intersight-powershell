@@ -19,7 +19,7 @@ Set-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-ActionParams< S
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
+Update a &apos;KubernetesBaremetalNodeProfile&apos; resource.
 
 ## PARAMETERS
 

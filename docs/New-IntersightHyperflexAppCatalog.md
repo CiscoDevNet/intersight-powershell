@@ -286,10 +286,10 @@ PS C:\> New-IntersightHyperflexAppCatalog
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)
+
 [Set-IntersightHyperflexAppCatalog](./Set-IntersightHyperflexAppCatalog.md)
 
 [Remove-IntersightHyperflexAppCatalog](./Remove-IntersightHyperflexAppCatalog.md)
-
-[Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
