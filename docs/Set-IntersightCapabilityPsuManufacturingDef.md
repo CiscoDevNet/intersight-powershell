@@ -232,10 +232,10 @@ PS C:\> Set-IntersightCapabilityPsuManufacturingDef
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityPsuManufacturingDef](./Get-IntersightCapabilityPsuManufacturingDef.md)
+[Remove-IntersightCapabilityPsuManufacturingDef](./Remove-IntersightCapabilityPsuManufacturingDef.md)
 
 [New-IntersightCapabilityPsuManufacturingDef](./New-IntersightCapabilityPsuManufacturingDef.md)
 
-[Remove-IntersightCapabilityPsuManufacturingDef](./Remove-IntersightCapabilityPsuManufacturingDef.md)
+[Get-IntersightCapabilityPsuManufacturingDef](./Get-IntersightCapabilityPsuManufacturingDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

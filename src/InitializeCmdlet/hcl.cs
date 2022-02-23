@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize HclFirmware.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclConstraint.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightHclFirmware")]
-    public class InitializeIntersightHclFirmware:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightHclConstraint")]
+    public class InitializeIntersightHclConstraint:PSCmdlet
 	{
-		public InitializeIntersightHclFirmware()
+		public InitializeIntersightHclConstraint()
 		{
-            ClassId = HclFirmware.ClassIdEnum.HclFirmware;
-            ObjectType = HclFirmware.ObjectTypeEnum.HclFirmware;
+            ClassId = HclConstraint.ClassIdEnum.HclConstraint;
+            ObjectType = HclConstraint.ObjectTypeEnum.HclConstraint;
             
 		}
         // <summary>
@@ -33,43 +33,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HclFirmware.ClassIdEnum ClassId {
+        public HclConstraint.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Protocol for which the driver is provided. E.g.  enic, fnic, lsi_mr3."</para>
+        /// <para type="description">"Name or key of the applicable compatibility constraint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string DriverName {
+        public string ConstraintName {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Version of the Driver supported."</para>
+        /// <para type="description">"Value of the applicable compatibility constraint. Could either be a string value or a regex."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string DriverVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Firmware version of the product/adapter supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string FirmwareVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifier of the firmware."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Id {
+        public string ConstraintValue {
             get;
             set;
         }
@@ -78,36 +60,172 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HclFirmware.ObjectTypeEnum ObjectType {
+        public HclConstraint.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.HclFirmware initObject = new Intersight.Model.HclFirmware();
+             Intersight.Model.HclConstraint initObject = new Intersight.Model.HclConstraint();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriverName"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintName"))
             {
-                initObject.DriverName = this.DriverName;
+                initObject.ConstraintName = this.ConstraintName;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriverVersion"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintValue"))
             {
-                initObject.DriverVersion = this.DriverVersion;
+                initObject.ConstraintValue = this.ConstraintValue;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FirmwareVersion"))
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclProduct.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHclProduct")]
+    public class InitializeIntersightHclProduct:PSCmdlet
+	{
+		public InitializeIntersightHclProduct()
+		{
+            ClassId = HclProduct.ClassIdEnum.HclProduct;
+            ObjectType = HclProduct.ObjectTypeEnum.HclProduct;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HclProduct.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> DriverNames {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.HclFirmware> Firmwares {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifier of the product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Id {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Model/PID of the product/adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Model {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HclProduct.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Revision of the adapter model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Revision {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the product/adapter say OCP, PT, GPU.\n* `` - Default type of the Product.\n* `Adapter` - Represents network adapter cards.\n* `StorageController` - Represents storage controllers.\n* `GPU` - Represents graphics cards."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public HclProduct.TypeEnum Type {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Vendor of the product or adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Vendor {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.HclProduct initObject = new Intersight.Model.HclProduct();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.FirmwareVersion = this.FirmwareVersion;
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DriverNames"))
+            {
+                initObject.DriverNames = this.DriverNames;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Firmwares"))
+            {
+                initObject.Firmwares = this.Firmwares;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
             {
                 initObject.Id = this.Id;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            {
+                initObject.Revision = this.Revision;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
             WriteObject(initObject);
         }
 
@@ -310,15 +428,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize HclProduct.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclFirmware.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightHclProduct")]
-    public class InitializeIntersightHclProduct:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightHclFirmware")]
+    public class InitializeIntersightHclFirmware:PSCmdlet
 	{
-		public InitializeIntersightHclProduct()
+		public InitializeIntersightHclFirmware()
 		{
-            ClassId = HclProduct.ClassIdEnum.HclProduct;
-            ObjectType = HclProduct.ObjectTypeEnum.HclProduct;
+            ClassId = HclFirmware.ClassIdEnum.HclFirmware;
+            ObjectType = HclFirmware.ObjectTypeEnum.HclFirmware;
             
 		}
         // <summary>
@@ -335,30 +453,39 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HclProduct.ClassIdEnum ClassId {
+        public HclFirmware.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"Protocol for which the driver is provided. E.g.  enic, fnic, lsi_mr3."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<string> DriverNames {
+        public string DriverName {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"Version of the Driver supported."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<Model.HclFirmware> Firmwares {
+        public string DriverVersion {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Identifier of the product."</para>
+        /// <para type="description">"Firmware version of the product/adapter supported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FirmwareVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifier of the firmware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -367,165 +494,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Model/PID of the product/adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Model {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public HclProduct.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Revision of the adapter model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Revision {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of the product/adapter say OCP, PT, GPU.\n* `` - Default type of the Product.\n* `Adapter` - Represents network adapter cards.\n* `StorageController` - Represents storage controllers.\n* `GPU` - Represents graphics cards."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HclProduct.TypeEnum Type {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Vendor of the product or adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Vendor {
+        public HclFirmware.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.HclProduct initObject = new Intersight.Model.HclProduct();
+             Intersight.Model.HclFirmware initObject = new Intersight.Model.HclFirmware();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriverNames"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DriverName"))
             {
-                initObject.DriverNames = this.DriverNames;
+                initObject.DriverName = this.DriverName;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Firmwares"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DriverVersion"))
             {
-                initObject.Firmwares = this.Firmwares;
+                initObject.DriverVersion = this.DriverVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FirmwareVersion"))
+            {
+                initObject.FirmwareVersion = this.FirmwareVersion;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
             {
                 initObject.Id = this.Id;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
-            {
-                initObject.Model = this.Model;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
-            {
-                initObject.Revision = this.Revision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize HclConstraint.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightHclConstraint")]
-    public class InitializeIntersightHclConstraint:PSCmdlet
-	{
-		public InitializeIntersightHclConstraint()
-		{
-            ClassId = HclConstraint.ClassIdEnum.HclConstraint;
-            ObjectType = HclConstraint.ObjectTypeEnum.HclConstraint;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HclConstraint.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name or key of the applicable compatibility constraint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ConstraintName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Value of the applicable compatibility constraint. Could either be a string value or a regex."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ConstraintValue {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public HclConstraint.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.HclConstraint initObject = new Intersight.Model.HclConstraint();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintName"))
-            {
-                initObject.ConstraintName = this.ConstraintName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConstraintValue"))
-            {
-                initObject.ConstraintValue = this.ConstraintValue;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);

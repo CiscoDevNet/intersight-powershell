@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
+
 [Set-IntersightStorageStoragePolicy](./Set-IntersightStorageStoragePolicy.md)
 
 [Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
-
-[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
 

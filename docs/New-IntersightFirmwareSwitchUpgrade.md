@@ -19,7 +19,7 @@ New-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareSwitchUpgrade&amp;apos; resource.
+Create a &apos;FirmwareSwitchUpgrade&apos; resource.
 
 ## PARAMETERS
 

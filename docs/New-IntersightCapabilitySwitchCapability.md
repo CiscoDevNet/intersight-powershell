@@ -19,7 +19,7 @@ New-IntersightCapabilitySwitchCapability [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilitySwitchCapability&amp;apos; resource.
+Create a &apos;CapabilitySwitchCapability&apos; resource.
 
 ## PARAMETERS
 
@@ -577,11 +577,11 @@ PS C:\> New-IntersightCapabilitySwitchCapability
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
+[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
 
 [Set-IntersightCapabilitySwitchCapability](./Set-IntersightCapabilitySwitchCapability.md)
 
-[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
+[Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
 
 [Initialize-IntersightCapabilityPortRange](./Initialize-IntersightCapabilityPortRange.md)
 

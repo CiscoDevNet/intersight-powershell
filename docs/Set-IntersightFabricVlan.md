@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &apos;name&apos; used to identify this VLAN.
+The &amp;apos;name&amp;apos; used to identify this VLAN.
 
 ```yaml
 Type: string

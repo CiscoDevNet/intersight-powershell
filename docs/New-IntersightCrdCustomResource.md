@@ -282,11 +282,11 @@ PS C:\> New-IntersightCrdCustomResource
 
 ## RELATED LINKS
 
+[Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
+
 [Set-IntersightCrdCustomResource](./Set-IntersightCrdCustomResource.md)
 
 [Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
-
-[Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
 

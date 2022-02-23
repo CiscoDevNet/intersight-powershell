@@ -17,7 +17,7 @@ Remove-IntersightRecoveryScheduleConfigPolicy -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &apos;RecoveryScheduleConfigPolicy&apos; resource.
+Delete a &amp;apos;RecoveryScheduleConfigPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

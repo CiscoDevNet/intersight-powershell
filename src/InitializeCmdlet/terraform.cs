@@ -8,6 +8,85 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TerraformRunstate.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTerraformRunstate")]
+    public class InitializeIntersightTerraformRunstate:PSCmdlet
+	{
+		public InitializeIntersightTerraformRunstate()
+		{
+            ClassId = TerraformRunstate.ClassIdEnum.TerraformRunstate;
+            ObjectType = TerraformRunstate.ObjectTypeEnum.TerraformRunstate;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TerraformRunstate.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public TerraformRunstate.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Run identifier for every terraform execution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string RunId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"StateFile identifier of terraform execution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StateFile {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.TerraformRunstate initObject = new Intersight.Model.TerraformRunstate();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RunId"))
+            {
+                initObject.RunId = this.RunId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StateFile"))
+            {
+                initObject.StateFile = this.StateFile;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TerraformCloudResource.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTerraformCloudResource")]
@@ -94,85 +173,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ResourceId"))
             {
                 initObject.ResourceId = this.ResourceId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TerraformRunstate.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTerraformRunstate")]
-    public class InitializeIntersightTerraformRunstate:PSCmdlet
-	{
-		public InitializeIntersightTerraformRunstate()
-		{
-            ClassId = TerraformRunstate.ClassIdEnum.TerraformRunstate;
-            ObjectType = TerraformRunstate.ObjectTypeEnum.TerraformRunstate;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TerraformRunstate.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public TerraformRunstate.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Run identifier for every terraform execution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RunId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"StateFile identifier of terraform execution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StateFile {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.TerraformRunstate initObject = new Intersight.Model.TerraformRunstate();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RunId"))
-            {
-                initObject.RunId = this.RunId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StateFile"))
-            {
-                initObject.StateFile = this.StateFile;
             }
             WriteObject(initObject);
         }

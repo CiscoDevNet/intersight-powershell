@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
+
 [Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
 [New-IntersightSolPolicy](./New-IntersightSolPolicy.md)
-
-[Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
 

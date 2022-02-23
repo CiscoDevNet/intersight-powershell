@@ -19,7 +19,7 @@ Set-IntersightFabricPortMode [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricPortMode&apos; resource.
+Update a &amp;apos;FabricPortMode&amp;apos; resource.
 
 ## PARAMETERS
 

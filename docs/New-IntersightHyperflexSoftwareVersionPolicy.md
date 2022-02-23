@@ -19,7 +19,7 @@ New-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexSoftwareVersionPolicy&amp;apos; resource.
+Create a &apos;HyperflexSoftwareVersionPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -270,11 +270,11 @@ PS C:\> New-IntersightHyperflexSoftwareVersionPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
+[Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [Remove-IntersightHyperflexSoftwareVersionPolicy](./Remove-IntersightHyperflexSoftwareVersionPolicy.md)
 
-[Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)
+[Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [Initialize-IntersightHyperflexServerFirmwareVersionInfo](./Initialize-IntersightHyperflexServerFirmwareVersionInfo.md)
 

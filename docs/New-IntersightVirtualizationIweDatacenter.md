@@ -145,10 +145,10 @@ PS C:\> New-IntersightVirtualizationIweDatacenter
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationIweDatacenter](./Remove-IntersightVirtualizationIweDatacenter.md)
+[Get-IntersightVirtualizationIweDatacenter](./Get-IntersightVirtualizationIweDatacenter.md)
 
 [Set-IntersightVirtualizationIweDatacenter](./Set-IntersightVirtualizationIweDatacenter.md)
 
-[Get-IntersightVirtualizationIweDatacenter](./Get-IntersightVirtualizationIweDatacenter.md)
+[Remove-IntersightVirtualizationIweDatacenter](./Remove-IntersightVirtualizationIweDatacenter.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

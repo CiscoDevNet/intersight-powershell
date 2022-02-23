@@ -17,7 +17,7 @@ Remove-IntersightFirmwareServerConfigurationUtilityDistributable -Moid <String> 
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareServerConfigurationUtilityDistributable&amp;apos; resource.
+Delete a &apos;FirmwareServerConfigurationUtilityDistributable&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareServerConfigurationUtilityDistributable](./Get-IntersightFirmwareServerConfigurationUtilityDistributable.md)
-
 [New-IntersightFirmwareServerConfigurationUtilityDistributable](./New-IntersightFirmwareServerConfigurationUtilityDistributable.md)
+
+[Get-IntersightFirmwareServerConfigurationUtilityDistributable](./Get-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 
 [Set-IntersightFirmwareServerConfigurationUtilityDistributable](./Set-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 

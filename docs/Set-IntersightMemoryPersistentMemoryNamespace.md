@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryNamespace [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;MemoryPersistentMemoryNamespace&apos; resource.
+Update a &amp;apos;MemoryPersistentMemoryNamespace&amp;apos; resource.
 
 ## PARAMETERS
 

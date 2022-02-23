@@ -19,7 +19,7 @@ Set-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &apos;PciDevice&apos; resource.
+Update a &amp;apos;PciDevice&amp;apos; resource.
 
 ## PARAMETERS
 

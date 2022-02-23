@@ -19,7 +19,7 @@ Set-IntersightLicenseIwoCustomerOp [-AccountLicenseData< LicenseAccountLicenseDa
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseIwoCustomerOp&amp;apos; resource.
+Update a &apos;LicenseIwoCustomerOp&apos; resource.
 
 ## PARAMETERS
 
@@ -42,7 +42,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveAdmin
-The workload optimizer license administrative state.\nSet this property to &amp;apos;true&amp;apos; to activate the workload optimizer license entitlements.
+The workload optimizer license administrative state.\nSet this property to &apos;true&apos; to activate the workload optimizer license entitlements.
 
 ```yaml
 Type: bool

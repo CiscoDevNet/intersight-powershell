@@ -292,10 +292,10 @@ PS C:\> New-IntersightCapabilityEquipmentPhysicalDef
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityEquipmentPhysicalDef](./Get-IntersightCapabilityEquipmentPhysicalDef.md)
-
 [Set-IntersightCapabilityEquipmentPhysicalDef](./Set-IntersightCapabilityEquipmentPhysicalDef.md)
 
 [Remove-IntersightCapabilityEquipmentPhysicalDef](./Remove-IntersightCapabilityEquipmentPhysicalDef.md)
+
+[Get-IntersightCapabilityEquipmentPhysicalDef](./Get-IntersightCapabilityEquipmentPhysicalDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

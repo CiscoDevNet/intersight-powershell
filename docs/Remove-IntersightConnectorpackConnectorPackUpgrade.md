@@ -17,7 +17,7 @@ Remove-IntersightConnectorpackConnectorPackUpgrade -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ConnectorpackConnectorPackUpgrade&amp;apos; resource.
+Delete a &apos;ConnectorpackConnectorPackUpgrade&apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightConnectorpackConnectorPackUpgrade](./New-IntersightConnectorpackConnectorPackUpgrade.md)
-
 [Get-IntersightConnectorpackConnectorPackUpgrade](./Get-IntersightConnectorpackConnectorPackUpgrade.md)
+
+[New-IntersightConnectorpackConnectorPackUpgrade](./New-IntersightConnectorpackConnectorPackUpgrade.md)
 

@@ -177,11 +177,11 @@ PS C:\> Set-IntersightWorkflowSolutionOutput
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowSolutionOutput](./Remove-IntersightWorkflowSolutionOutput.md)
+[New-IntersightWorkflowSolutionOutput](./New-IntersightWorkflowSolutionOutput.md)
 
 [Get-IntersightWorkflowSolutionOutput](./Get-IntersightWorkflowSolutionOutput.md)
 
-[New-IntersightWorkflowSolutionOutput](./New-IntersightWorkflowSolutionOutput.md)
+[Remove-IntersightWorkflowSolutionOutput](./Remove-IntersightWorkflowSolutionOutput.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 

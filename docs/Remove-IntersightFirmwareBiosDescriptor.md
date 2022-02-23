@@ -17,7 +17,7 @@ Remove-IntersightFirmwareBiosDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareBiosDescriptor&amp;apos; resource.
+Delete a &apos;FirmwareBiosDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFirmwareBiosDescriptor](./Set-IntersightFirmwareBiosDescriptor.md)
+
 [Get-IntersightFirmwareBiosDescriptor](./Get-IntersightFirmwareBiosDescriptor.md)
 
 [New-IntersightFirmwareBiosDescriptor](./New-IntersightFirmwareBiosDescriptor.md)
-
-[Set-IntersightFirmwareBiosDescriptor](./Set-IntersightFirmwareBiosDescriptor.md)
 

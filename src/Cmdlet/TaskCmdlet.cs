@@ -8,119 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New TaskIweScopedInventory.</para>
+    /// <para type="synopsis">This is the cmdlet to New TaskPublicCloudScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskIweScopedInventory")]
-    public class NewIntersightTaskIweScopedInventory:NewCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightTaskPublicCloudScopedInventory")]
+    public class NewIntersightTaskPublicCloudScopedInventory:NewCmdletBase
 	{
-		public NewIntersightTaskIweScopedInventory()
+		public NewIntersightTaskPublicCloudScopedInventory()
 		{
 			ApiInstance = new TaskApi(Config);
-            ModelObject = new TaskIweScopedInventory();
-            MethodName = "CreateTaskIweScopedInventoryWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A property that uniquely identifies the object to be inventoried as a part of the scoped inventory."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string NamingProperty {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Set of queries to identify objects to be inventoried as part of this scoped inventory action."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object Queries {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Type of the object for which scoped inventory needs to be run."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Values {
-            get;
-            set;
-        }
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New TaskHyperFlexManagementScopedInventory.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskHyperFlexManagementScopedInventory")]
-    public class NewIntersightTaskHyperFlexManagementScopedInventory:NewCmdletBase
-	{
-		public NewIntersightTaskHyperFlexManagementScopedInventory()
-		{
-			ApiInstance = new TaskApi(Config);
-            ModelObject = new TaskHyperFlexManagementScopedInventory();
-            MethodName = "CreateTaskHyperFlexManagementScopedInventoryWithHttpInfo";
+            ModelObject = new TaskPublicCloudScopedInventory();
+            MethodName = "CreateTaskPublicCloudScopedInventoryWithHttpInfo";
 		}
         
         
@@ -317,16 +214,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New TaskNetAppScopedInventory.</para>
+    /// <para type="synopsis">This is the cmdlet to New TaskHyperFlexManagementScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskNetAppScopedInventory")]
-    public class NewIntersightTaskNetAppScopedInventory:NewCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightTaskHyperFlexManagementScopedInventory")]
+    public class NewIntersightTaskHyperFlexManagementScopedInventory:NewCmdletBase
 	{
-		public NewIntersightTaskNetAppScopedInventory()
+		public NewIntersightTaskHyperFlexManagementScopedInventory()
 		{
 			ApiInstance = new TaskApi(Config);
-            ModelObject = new TaskNetAppScopedInventory();
-            MethodName = "CreateTaskNetAppScopedInventoryWithHttpInfo";
+            ModelObject = new TaskHyperFlexManagementScopedInventory();
+            MethodName = "CreateTaskHyperFlexManagementScopedInventoryWithHttpInfo";
 		}
         
         
@@ -420,16 +317,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New TaskPublicCloudScopedInventory.</para>
+    /// <para type="synopsis">This is the cmdlet to New TaskIweScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskPublicCloudScopedInventory")]
-    public class NewIntersightTaskPublicCloudScopedInventory:NewCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightTaskIweScopedInventory")]
+    public class NewIntersightTaskIweScopedInventory:NewCmdletBase
 	{
-		public NewIntersightTaskPublicCloudScopedInventory()
+		public NewIntersightTaskIweScopedInventory()
 		{
 			ApiInstance = new TaskApi(Config);
-            ModelObject = new TaskPublicCloudScopedInventory();
-            MethodName = "CreateTaskPublicCloudScopedInventoryWithHttpInfo";
+            ModelObject = new TaskIweScopedInventory();
+            MethodName = "CreateTaskIweScopedInventoryWithHttpInfo";
 		}
         
         
@@ -533,6 +430,109 @@ namespace Intersight.PowerShell
 			ApiInstance = new TaskApi(Config);
             ModelObject = new TaskServerScopedInventory();
             MethodName = "CreateTaskServerScopedInventoryWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A property that uniquely identifies the object to be inventoried as a part of the scoped inventory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string NamingProperty {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Set of queries to identify objects to be inventoried as part of this scoped inventory action."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public object Queries {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Type of the object for which scoped inventory needs to be run."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Values {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New TaskNetAppScopedInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightTaskNetAppScopedInventory")]
+    public class NewIntersightTaskNetAppScopedInventory:NewCmdletBase
+	{
+		public NewIntersightTaskNetAppScopedInventory()
+		{
+			ApiInstance = new TaskApi(Config);
+            ModelObject = new TaskNetAppScopedInventory();
+            MethodName = "CreateTaskNetAppScopedInventoryWithHttpInfo";
 		}
         
         

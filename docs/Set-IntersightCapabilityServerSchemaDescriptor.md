@@ -19,7 +19,7 @@ Set-IntersightCapabilityServerSchemaDescriptor [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
+Update a &apos;CapabilityServerSchemaDescriptor&apos; resource.
 
 ## PARAMETERS
 

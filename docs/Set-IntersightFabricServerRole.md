@@ -19,7 +19,7 @@ Set-IntersightFabricServerRole [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricServerRole&apos; resource.
+Update a &amp;apos;FabricServerRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregatePortId
-Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &apos;aggregatePortId&apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
+Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &amp;apos;aggregatePortId&amp;apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
 
 ```yaml
 Type: long
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortId
-Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &amp;apos;portId&amp;apos; represents the port id on the fanout side of the breakout cable.
+Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &apos;portId&apos; represents the port id on the fanout side of the breakout cable.
 
 ```yaml
 Type: long
@@ -190,9 +190,9 @@ PS C:\> Set-IntersightFabricServerRole
 
 ## RELATED LINKS
 
-[Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
-
 [New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
+
+[Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
 
 [Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
 

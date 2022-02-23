@@ -255,11 +255,11 @@ PS C:\> Set-IntersightKubernetesNetworkPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesNetworkPolicy](./Remove-IntersightKubernetesNetworkPolicy.md)
-
 [Get-IntersightKubernetesNetworkPolicy](./Get-IntersightKubernetesNetworkPolicy.md)
 
 [New-IntersightKubernetesNetworkPolicy](./New-IntersightKubernetesNetworkPolicy.md)
+
+[Remove-IntersightKubernetesNetworkPolicy](./Remove-IntersightKubernetesNetworkPolicy.md)
 
 [Initialize-IntersightKubernetesCniConfig](./Initialize-IntersightKubernetesCniConfig.md)
 

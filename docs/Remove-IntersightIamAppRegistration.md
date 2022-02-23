@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
-
 [Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
 
 [New-IntersightIamAppRegistration](./New-IntersightIamAppRegistration.md)
+
+[Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
 

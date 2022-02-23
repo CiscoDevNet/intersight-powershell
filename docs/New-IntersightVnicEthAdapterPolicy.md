@@ -19,7 +19,7 @@ New-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicEthAdapterPolicy&apos; resource.
+Create a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -420,11 +420,11 @@ PS C:\> New-IntersightVnicEthAdapterPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicEthAdapterPolicy](./Get-IntersightVnicEthAdapterPolicy.md)
-
 [Set-IntersightVnicEthAdapterPolicy](./Set-IntersightVnicEthAdapterPolicy.md)
 
 [Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)
+
+[Get-IntersightVnicEthAdapterPolicy](./Get-IntersightVnicEthAdapterPolicy.md)
 
 [Initialize-IntersightVnicArfsSettings](./Initialize-IntersightVnicArfsSettings.md)
 

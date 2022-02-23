@@ -19,7 +19,7 @@ Set-IntersightIamAccount [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;IamAccount&apos; resource.
+Update a &amp;apos;IamAccount&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -142,10 +142,10 @@ PS C:\> Set-IntersightIamAccount
 
 ## RELATED LINKS
 
-[Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)
-
 [Get-IntersightIamAccount](./Get-IntersightIamAccount.md)
 
 [New-IntersightIamAccount](./New-IntersightIamAccount.md)
+
+[Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

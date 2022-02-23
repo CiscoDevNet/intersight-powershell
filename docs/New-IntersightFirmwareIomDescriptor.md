@@ -250,10 +250,10 @@ PS C:\> New-IntersightFirmwareIomDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareIomDescriptor](./Set-IntersightFirmwareIomDescriptor.md)
+[Get-IntersightFirmwareIomDescriptor](./Get-IntersightFirmwareIomDescriptor.md)
 
 [Remove-IntersightFirmwareIomDescriptor](./Remove-IntersightFirmwareIomDescriptor.md)
 
-[Get-IntersightFirmwareIomDescriptor](./Get-IntersightFirmwareIomDescriptor.md)
+[Set-IntersightFirmwareIomDescriptor](./Set-IntersightFirmwareIomDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

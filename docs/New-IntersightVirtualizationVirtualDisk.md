@@ -19,7 +19,7 @@ New-IntersightVirtualizationVirtualDisk [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;VirtualizationVirtualDisk&apos; resource.
+Create a &amp;apos;VirtualizationVirtualDisk&amp;apos; resource.
 
 ## PARAMETERS
 

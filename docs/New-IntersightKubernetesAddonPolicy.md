@@ -19,7 +19,7 @@ New-IntersightKubernetesAddonPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesAddonPolicy&apos; resource.
+Create a &amp;apos;KubernetesAddonPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -314,11 +314,11 @@ PS C:\> New-IntersightAccessPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightAccessPolicy](./Get-IntersightAccessPolicy.md)
-
 [Set-IntersightAccessPolicy](./Set-IntersightAccessPolicy.md)
 
 [Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
+
+[Get-IntersightAccessPolicy](./Get-IntersightAccessPolicy.md)
 
 [Initialize-IntersightAccessAddressType](./Initialize-IntersightAccessAddressType.md)
 

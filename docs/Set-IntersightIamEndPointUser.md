@@ -19,7 +19,7 @@ Set-IntersightIamEndPointUser [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;IamEndPointUser&apos; resource.
+Update a &amp;apos;IamEndPointUser&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -178,10 +178,10 @@ PS C:\> Set-IntersightIamEndPointUser
 
 ## RELATED LINKS
 
-[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
-
 [Get-IntersightIamEndPointUser](./Get-IntersightIamEndPointUser.md)
 
 [New-IntersightIamEndPointUser](./New-IntersightIamEndPointUser.md)
+
+[Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareBiosDescriptor](./New-IntersightFirmwareBiosDescriptor.md)
-
 [Set-IntersightFirmwareBiosDescriptor](./Set-IntersightFirmwareBiosDescriptor.md)
 
 [Remove-IntersightFirmwareBiosDescriptor](./Remove-IntersightFirmwareBiosDescriptor.md)
+
+[New-IntersightFirmwareBiosDescriptor](./New-IntersightFirmwareBiosDescriptor.md)
 

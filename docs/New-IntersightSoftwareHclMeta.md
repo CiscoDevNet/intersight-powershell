@@ -19,7 +19,7 @@ New-IntersightSoftwareHclMeta [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &apos;SoftwareHclMeta&apos; resource.
+Create a &amp;apos;SoftwareHclMeta&amp;apos; resource.
 
 ## PARAMETERS
 

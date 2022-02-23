@@ -19,7 +19,7 @@ Set-IntersightBootPxeDevice [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &apos;BootPxeDevice&apos; resource.
+Update a &amp;apos;BootPxeDevice&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -285,8 +285,8 @@ PS C:\> Set-IntersightHyperflexKeyEncryptionKey
 
 [Remove-IntersightHyperflexKeyEncryptionKey](./Remove-IntersightHyperflexKeyEncryptionKey.md)
 
-[New-IntersightHyperflexKeyEncryptionKey](./New-IntersightHyperflexKeyEncryptionKey.md)
-
 [Get-IntersightHyperflexKeyEncryptionKey](./Get-IntersightHyperflexKeyEncryptionKey.md)
+
+[New-IntersightHyperflexKeyEncryptionKey](./New-IntersightHyperflexKeyEncryptionKey.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

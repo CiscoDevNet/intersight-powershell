@@ -19,7 +19,7 @@ New-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-ActionParams< S
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesBaremetalNodeProfile&amp;apos; resource.
+Create a &apos;KubernetesBaremetalNodeProfile&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collection
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ChassisProfile&amp;apos; resource.
+Create a &apos;ChassisProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -325,11 +325,11 @@ PS C:\> New-IntersightChassisProfile
 
 ## RELATED LINKS
 
-[Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
-
 [Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
 
 [Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
+
+[Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

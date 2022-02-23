@@ -17,7 +17,7 @@ Remove-IntersightHyperflexNodeProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
+Delete a &apos;HyperflexNodeProfile&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)
 
-[Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
-
 [New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+
+[Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
 

@@ -19,7 +19,7 @@ New-IntersightLicenseIksLicenseCount [-AccountLicenseData< LicenseAccountLicense
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;LicenseIksLicenseCount&amp;apos; resource.
+Create a &apos;LicenseIksLicenseCount&apos; resource.
 
 ## PARAMETERS
 

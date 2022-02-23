@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name for the parameter set.  Limited to 64 alphanumeric characters (upper and lower case), and special characters &apos;-&apos; and &apos;_&apos;.
+Name for the parameter set.  Limited to 64 alphanumeric characters (upper and lower case), and special characters &amp;apos;-&amp;apos; and &amp;apos;_&amp;apos;.
 
 ```yaml
 Type: string
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowParameterSet.ObjectTypeEnum

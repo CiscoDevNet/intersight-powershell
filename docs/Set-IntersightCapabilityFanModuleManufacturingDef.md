@@ -232,10 +232,10 @@ PS C:\> Set-IntersightCapabilityFanModuleManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityFanModuleManufacturingDef](./Remove-IntersightCapabilityFanModuleManufacturingDef.md)
-
 [Get-IntersightCapabilityFanModuleManufacturingDef](./Get-IntersightCapabilityFanModuleManufacturingDef.md)
 
 [New-IntersightCapabilityFanModuleManufacturingDef](./New-IntersightCapabilityFanModuleManufacturingDef.md)
+
+[Remove-IntersightCapabilityFanModuleManufacturingDef](./Remove-IntersightCapabilityFanModuleManufacturingDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

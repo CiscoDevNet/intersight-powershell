@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &amp;apos;Auto&amp;apos;.\n* `Cl91` - Forward error correction option &amp;apos;cl91&amp;apos;.\n* `Cl74` - Forward error correction option &amp;apos;cl74&amp;apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
 
 ```yaml
 Type: FabricApplianceRole.FecEnum
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortId
-Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &apos;portId&apos; represents the port id on the fanout side of the breakout cable.
+Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &amp;apos;portId&amp;apos; represents the port id on the fanout side of the breakout cable.
 
 ```yaml
 Type: long
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The &apos;name&apos; of the System QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic.
+The &amp;apos;name&amp;apos; of the System QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic.
 
 ```yaml
 Type: FabricApplianceRole.PriorityEnum

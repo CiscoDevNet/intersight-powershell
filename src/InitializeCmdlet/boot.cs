@@ -8,176 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootDeviceBase.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootDeviceBase")]
-    public class InitializeIntersightBootDeviceBase:PSCmdlet
-	{
-		public InitializeIntersightBootDeviceBase()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootDeviceBase.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootDeviceBase.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BootDeviceBase initObject = new Intersight.Model.BootDeviceBase();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootVirtualMedia.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootVirtualMedia")]
-    public class InitializeIntersightBootVirtualMedia:PSCmdlet
-	{
-		public InitializeIntersightBootVirtualMedia()
-		{
-            ClassId = BootVirtualMedia.ClassIdEnum.BootVirtualMedia;
-            ObjectType = BootVirtualMedia.ObjectTypeEnum.BootVirtualMedia;
-            Subtype = BootVirtualMedia.SubtypeEnum.None;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootVirtualMedia.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootVirtualMedia.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The subtype for the selected device type.\n* `None` - No sub type for virtual media.\n* `cimc-mapped-dvd` - The virtual media device is mapped to a virtual DVD device.\n* `cimc-mapped-hdd` - The virtual media device is mapped to a virtual HDD device.\n* `kvm-mapped-dvd` - A KVM mapped DVD virtual media device.\n* `kvm-mapped-hdd` - A KVM mapped HDD virtual media device.\n* `kvm-mapped-fdd` - A KVM mapped FDD virtual media device."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootVirtualMedia.SubtypeEnum Subtype {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BootVirtualMedia initObject = new Intersight.Model.BootVirtualMedia();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Subtype"))
-            {
-                initObject.Subtype = this.Subtype;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BootSan.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBootSan")]
@@ -322,15 +152,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootLocalDisk.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootVirtualMedia.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootLocalDisk")]
-    public class InitializeIntersightBootLocalDisk:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBootVirtualMedia")]
+    public class InitializeIntersightBootVirtualMedia:PSCmdlet
 	{
-		public InitializeIntersightBootLocalDisk()
+		public InitializeIntersightBootVirtualMedia()
 		{
-            ClassId = BootLocalDisk.ClassIdEnum.BootLocalDisk;
-            ObjectType = BootLocalDisk.ObjectTypeEnum.BootLocalDisk;
+            ClassId = BootVirtualMedia.ClassIdEnum.BootVirtualMedia;
+            ObjectType = BootVirtualMedia.ObjectTypeEnum.BootVirtualMedia;
+            Subtype = BootVirtualMedia.SubtypeEnum.None;
             
 		}
         // <summary>
@@ -343,20 +174,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Details of the bootloader to be used during boot from local disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.BootBootloader Bootloader {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BootLocalDisk.ClassIdEnum ClassId {
+        public BootVirtualMedia.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -383,381 +205,23 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BootLocalDisk.ObjectTypeEnum ObjectType {
+        public BootVirtualMedia.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The slot id of the local disk device. Supported values for Standalone Rack servers are (1-205, \"M\", \"HBA\", \"SAS\", \"RAID\", \"MRAID\", \"MRAID1\", \"MRAID2\", \"MSTOR-RAID\"). Supported values for FI-attached servers are (1-205, \"MRAID\", \"FMEZZ1-SAS\", \"MRAID1\", \"MRAID2\", \"MSTOR-RAID\", \"MSTOR-RAID-1\", \"MSTOR-RAID-2\")."</para>
+        /// <para type="description">"The subtype for the selected device type.\n* `None` - No sub type for virtual media.\n* `cimc-mapped-dvd` - The virtual media device is mapped to a virtual DVD device.\n* `cimc-mapped-hdd` - The virtual media device is mapped to a virtual HDD device.\n* `kvm-mapped-dvd` - A KVM mapped DVD virtual media device.\n* `kvm-mapped-hdd` - A KVM mapped HDD virtual media device.\n* `kvm-mapped-fdd` - A KVM mapped FDD virtual media device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|20[0-5]|M|HBA|SAS|MRAID|RAID|MRAID1|MRAID2|MSTOR-RAID|FMEZZ1-SAS|MSTOR-RAID-1|MSTOR-RAID-2)$")]
-        public string Slot {
+        
+        public BootVirtualMedia.SubtypeEnum Subtype {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.BootLocalDisk initObject = new Intersight.Model.BootLocalDisk();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Bootloader"))
-            {
-                initObject.Bootloader = this.Bootloader;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Slot"))
-            {
-                initObject.Slot = this.Slot;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootUefiShell.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootUefiShell")]
-    public class InitializeIntersightBootUefiShell:PSCmdlet
-	{
-		public InitializeIntersightBootUefiShell()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootUefiShell.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootUefiShell.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BootUefiShell initObject = new Intersight.Model.BootUefiShell();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootNvme.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootNvme")]
-    public class InitializeIntersightBootNvme:PSCmdlet
-	{
-		public InitializeIntersightBootNvme()
-		{
-            ClassId = BootNvme.ClassIdEnum.BootNvme;
-            ObjectType = BootNvme.ObjectTypeEnum.BootNvme;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Details of the bootloader to be used during NVME boot."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.BootBootloader Bootloader {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootNvme.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootNvme.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BootNvme initObject = new Intersight.Model.BootNvme();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Bootloader"))
-            {
-                initObject.Bootloader = this.Bootloader;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootBootloader.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootBootloader")]
-    public class InitializeIntersightBootBootloader:PSCmdlet
-	{
-		public InitializeIntersightBootBootloader()
-		{
-            ClassId = BootBootloader.ClassIdEnum.BootBootloader;
-            ObjectType = BootBootloader.ObjectTypeEnum.BootBootloader;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootBootloader.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Carries more information about the bootloader."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the bootloader image."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootBootloader.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Path to the bootloader image."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Path {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BootBootloader initObject = new Intersight.Model.BootBootloader();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Path"))
-            {
-                initObject.Path = this.Path;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootUsb.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootUsb")]
-    public class InitializeIntersightBootUsb:PSCmdlet
-	{
-		public InitializeIntersightBootUsb()
-		{
-            ClassId = BootUsb.ClassIdEnum.BootUsb;
-            ObjectType = BootUsb.ObjectTypeEnum.BootUsb;
-            Subtype = BootUsb.SubtypeEnum.None;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootUsb.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootUsb.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The subtype for the selected device type.\n* `None` - No sub type for USB boot device.\n* `usb-cd` - Use of Compact Disk (CD) as sub-type for the USB boot device.\n* `usb-fdd` - Use of Floppy Disk Drive (FDD) as sub-type for the USB boot device.\n* `usb-hdd` - Use of Hard Disk Drive (HDD) as sub-type for the USB boot device."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BootUsb.SubtypeEnum Subtype {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BootUsb initObject = new Intersight.Model.BootUsb();
+             Intersight.Model.BootVirtualMedia initObject = new Intersight.Model.BootVirtualMedia();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -781,12 +245,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootLocalCdd.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootDeviceBase.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootLocalCdd")]
-    public class InitializeIntersightBootLocalCdd:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBootDeviceBase")]
+    public class InitializeIntersightBootDeviceBase:PSCmdlet
 	{
-		public InitializeIntersightBootLocalCdd()
+		public InitializeIntersightBootDeviceBase()
 		{
             
 		}
@@ -802,9 +266,9 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BootLocalCdd.ClassIdEnum ClassId {
+        public BootDeviceBase.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -829,16 +293,16 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BootLocalCdd.ObjectTypeEnum ObjectType {
+        public BootDeviceBase.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.BootLocalCdd initObject = new Intersight.Model.BootLocalCdd();
+             Intersight.Model.BootDeviceBase initObject = new Intersight.Model.BootDeviceBase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -989,6 +453,191 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootUsb.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootUsb")]
+    public class InitializeIntersightBootUsb:PSCmdlet
+	{
+		public InitializeIntersightBootUsb()
+		{
+            ClassId = BootUsb.ClassIdEnum.BootUsb;
+            ObjectType = BootUsb.ObjectTypeEnum.BootUsb;
+            Subtype = BootUsb.SubtypeEnum.None;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootUsb.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootUsb.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The subtype for the selected device type.\n* `None` - No sub type for USB boot device.\n* `usb-cd` - Use of Compact Disk (CD) as sub-type for the USB boot device.\n* `usb-fdd` - Use of Floppy Disk Drive (FDD) as sub-type for the USB boot device.\n* `usb-hdd` - Use of Hard Disk Drive (HDD) as sub-type for the USB boot device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootUsb.SubtypeEnum Subtype {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BootUsb initObject = new Intersight.Model.BootUsb();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Subtype"))
+            {
+                initObject.Subtype = this.Subtype;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootNvme.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootNvme")]
+    public class InitializeIntersightBootNvme:PSCmdlet
+	{
+		public InitializeIntersightBootNvme()
+		{
+            ClassId = BootNvme.ClassIdEnum.BootNvme;
+            ObjectType = BootNvme.ObjectTypeEnum.BootNvme;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Details of the bootloader to be used during NVME boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.BootBootloader Bootloader {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootNvme.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootNvme.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BootNvme initObject = new Intersight.Model.BootNvme();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Bootloader"))
+            {
+                initObject.Bootloader = this.Bootloader;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BootSdCard.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBootSdCard")]
@@ -1102,6 +751,280 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Subtype"))
             {
                 initObject.Subtype = this.Subtype;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootPchStorage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootPchStorage")]
+    public class InitializeIntersightBootPchStorage:PSCmdlet
+	{
+		public InitializeIntersightBootPchStorage()
+		{
+            ClassId = BootPchStorage.ClassIdEnum.BootPchStorage;
+            ObjectType = BootPchStorage.ObjectTypeEnum.BootPchStorage;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Details of the bootloader to be used during PCH Storage boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.BootBootloader Bootloader {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootPchStorage.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Logical Unit Number (LUN) of the device. It is the Virtual Drive number for Cisco UCS C-Series Servers. Virtual Drive number is found in storage inventory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Lun {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootPchStorage.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BootPchStorage initObject = new Intersight.Model.BootPchStorage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Bootloader"))
+            {
+                initObject.Bootloader = this.Bootloader;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Lun"))
+            {
+                initObject.Lun = this.Lun;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootUefiShell.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootUefiShell")]
+    public class InitializeIntersightBootUefiShell:PSCmdlet
+	{
+		public InitializeIntersightBootUefiShell()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootUefiShell.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootUefiShell.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BootUefiShell initObject = new Intersight.Model.BootUefiShell();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootBootloader.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootBootloader")]
+    public class InitializeIntersightBootBootloader:PSCmdlet
+	{
+		public InitializeIntersightBootBootloader()
+		{
+            ClassId = BootBootloader.ClassIdEnum.BootBootloader;
+            ObjectType = BootBootloader.ObjectTypeEnum.BootBootloader;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootBootloader.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Carries more information about the bootloader."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the bootloader image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootBootloader.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Path to the bootloader image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Path {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BootBootloader initObject = new Intersight.Model.BootBootloader();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Path"))
+            {
+                initObject.Path = this.Path;
             }
             WriteObject(initObject);
         }
@@ -1267,15 +1190,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BootPchStorage.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootLocalDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBootPchStorage")]
-    public class InitializeIntersightBootPchStorage:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBootLocalDisk")]
+    public class InitializeIntersightBootLocalDisk:PSCmdlet
 	{
-		public InitializeIntersightBootPchStorage()
+		public InitializeIntersightBootLocalDisk()
 		{
-            ClassId = BootPchStorage.ClassIdEnum.BootPchStorage;
-            ObjectType = BootPchStorage.ObjectTypeEnum.BootPchStorage;
+            ClassId = BootLocalDisk.ClassIdEnum.BootLocalDisk;
+            ObjectType = BootLocalDisk.ObjectTypeEnum.BootLocalDisk;
             
 		}
         // <summary>
@@ -1288,7 +1211,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Details of the bootloader to be used during PCH Storage boot."</para>
+        /// <para type="description">"Details of the bootloader to be used during boot from local disk."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -1301,7 +1224,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BootPchStorage.ClassIdEnum ClassId {
+        public BootLocalDisk.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1311,15 +1234,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public bool Enabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Logical Unit Number (LUN) of the device. It is the Virtual Drive number for Cisco UCS C-Series Servers. Virtual Drive number is found in storage inventory."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Lun {
             get;
             set;
         }
@@ -1337,14 +1251,23 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BootPchStorage.ObjectTypeEnum ObjectType {
+        public BootLocalDisk.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The slot id of the local disk device. Supported values for Standalone Rack servers are (1-205, \"M\", \"HBA\", \"SAS\", \"RAID\", \"MRAID\", \"MRAID1\", \"MRAID2\", \"MSTOR-RAID\"). Supported values for FI-attached servers are (1-205, \"MRAID\", \"FMEZZ1-SAS\", \"MRAID1\", \"MRAID2\", \"MSTOR-RAID\", \"MSTOR-RAID-1\", \"MSTOR-RAID-2\")."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|20[0-5]|M|HBA|SAS|MRAID|RAID|MRAID1|MRAID2|MSTOR-RAID|FMEZZ1-SAS|MSTOR-RAID-1|MSTOR-RAID-2)$")]
+        public string Slot {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.BootPchStorage initObject = new Intersight.Model.BootPchStorage();
+             Intersight.Model.BootLocalDisk initObject = new Intersight.Model.BootLocalDisk();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1358,9 +1281,86 @@ namespace Intersight.PowerShell
             {
                 initObject.Enabled = this.Enabled;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Lun"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
-                initObject.Lun = this.Lun;
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Slot"))
+            {
+                initObject.Slot = this.Slot;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootLocalCdd.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootLocalCdd")]
+    public class InitializeIntersightBootLocalCdd:PSCmdlet
+	{
+		public InitializeIntersightBootLocalCdd()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootLocalCdd.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BootLocalCdd.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BootLocalCdd initObject = new Intersight.Model.BootLocalCdd();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {

@@ -17,7 +17,7 @@ Remove-IntersightCapabilityPortGroupAggregationDef -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityPortGroupAggregationDef&apos; resource.
+Delete a &amp;apos;CapabilityPortGroupAggregationDef&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
-
 [New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
+
+[Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
 
 [Set-IntersightCapabilityPortGroupAggregationDef](./Set-IntersightCapabilityPortGroupAggregationDef.md)
 

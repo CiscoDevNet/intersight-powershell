@@ -19,7 +19,7 @@ New-IntersightKubernetesVersion [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesVersion&apos; resource.
+Create a &amp;apos;KubernetesVersion&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -247,10 +247,10 @@ PS C:\> New-IntersightKubernetesVersion
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)
+[Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
 
 [Set-IntersightKubernetesVersion](./Set-IntersightKubernetesVersion.md)
 
-[Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
+[Remove-IntersightKubernetesVersion](./Remove-IntersightKubernetesVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

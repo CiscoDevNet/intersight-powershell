@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareBoardControllerDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
+
 [Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)
 
 [New-IntersightFirmwareBoardControllerDescriptor](./New-IntersightFirmwareBoardControllerDescriptor.md)
-
-[Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

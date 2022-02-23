@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwarePcieDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)
+[Remove-IntersightFirmwarePcieDescriptor](./Remove-IntersightFirmwarePcieDescriptor.md)
 
 [New-IntersightFirmwarePcieDescriptor](./New-IntersightFirmwarePcieDescriptor.md)
 
-[Remove-IntersightFirmwarePcieDescriptor](./Remove-IntersightFirmwarePcieDescriptor.md)
+[Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

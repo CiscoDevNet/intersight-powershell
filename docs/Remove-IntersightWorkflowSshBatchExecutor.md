@@ -17,7 +17,7 @@ Remove-IntersightWorkflowSshBatchExecutor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowSshBatchExecutor&amp;apos; resource.
+Delete a &apos;WorkflowSshBatchExecutor&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightWorkflowSshBatchExecutor](./Set-IntersightWorkflowSshBatchExecutor.md)
 
-[Get-IntersightWorkflowSshBatchExecutor](./Get-IntersightWorkflowSshBatchExecutor.md)
-
 [New-IntersightWorkflowSshBatchExecutor](./New-IntersightWorkflowSshBatchExecutor.md)
+
+[Get-IntersightWorkflowSshBatchExecutor](./Get-IntersightWorkflowSshBatchExecutor.md)
 

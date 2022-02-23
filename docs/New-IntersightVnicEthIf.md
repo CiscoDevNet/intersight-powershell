@@ -19,7 +19,7 @@ New-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicEthIf&amp;apos; resource.
+Create a &apos;VnicEthIf&apos; resource.
 
 ## PARAMETERS
 
@@ -468,9 +468,9 @@ PS C:\> New-IntersightVnicEthIf
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
-
 [Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)
+
+[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
 
 [Get-IntersightVnicEthIf](./Get-IntersightVnicEthIf.md)
 

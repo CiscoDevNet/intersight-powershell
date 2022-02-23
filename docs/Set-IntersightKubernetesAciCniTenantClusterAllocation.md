@@ -147,8 +147,8 @@ PS C:\> Set-IntersightKubernetesAciCniTenantClusterAllocation
 
 [Remove-IntersightKubernetesAciCniTenantClusterAllocation](./Remove-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
-[Get-IntersightKubernetesAciCniTenantClusterAllocation](./Get-IntersightKubernetesAciCniTenantClusterAllocation.md)
-
 [New-IntersightKubernetesAciCniTenantClusterAllocation](./New-IntersightKubernetesAciCniTenantClusterAllocation.md)
+
+[Get-IntersightKubernetesAciCniTenantClusterAllocation](./Get-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

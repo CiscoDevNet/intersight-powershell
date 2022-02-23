@@ -19,7 +19,7 @@ Set-IntersightMemoryUnit [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;MemoryUnit&apos; resource.
+Update a &amp;apos;MemoryUnit&amp;apos; resource.
 
 ## PARAMETERS
 

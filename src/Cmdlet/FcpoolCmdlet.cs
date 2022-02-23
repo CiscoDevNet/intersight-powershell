@@ -129,104 +129,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcpoolUniverse.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove FcpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolUniverse", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcpoolUniverse:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolLease")]
+    public class RemoveIntersightFcpoolLease:RemoveCmdletBase
 	{
-		public GetIntersightFcpoolUniverse()
+		public RemoveIntersightFcpoolLease()
 		{
 			ApiInstance = new FcpoolApi(Config);
-            MethodName = "GetFcpoolUniverseListWithHttpInfo";
+            MethodName = "DeleteFcpoolLeaseWithHttpInfo";
 		}
-        
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public IamAccountRelationship Account {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FcpoolPool.</para>
@@ -355,6 +267,156 @@ namespace Intersight.PowerShell
 			ApiInstance = new FcpoolApi(Config);
             MethodName = "DeleteFcpoolPoolWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FcpoolPoolMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcpoolPoolMember:GetCmdletBase
+	{
+		public GetIntersightFcpoolPoolMember()
+		{
+			ApiInstance = new FcpoolApi(Config);
+            MethodName = "GetFcpoolPoolMemberListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public bool Assigned {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship AssignedToEntity {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a fcpoolFcBlock resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public FcpoolFcBlockRelationship BlockHead {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a fcpoolLease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public FcpoolLeaseRelationship Peer {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a fcpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public FcpoolPoolRelationship Pool {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"WWN ID of this pool member."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|((^20|5[0-9a-fA-F]{1}):([0-9a-fA-F]{2}:){6}([0-9a-fA-F]{2}))")]
+        public string WwnId {
+            get;
+            set;
+        }
+
+        
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolPool.</para>
@@ -635,156 +697,6 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get FcpoolPoolMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightFcpoolPoolMember:GetCmdletBase
-	{
-		public GetIntersightFcpoolPoolMember()
-		{
-			ApiInstance = new FcpoolApi(Config);
-            MethodName = "GetFcpoolPoolMemberListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public bool Assigned {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship AssignedToEntity {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a fcpoolFcBlock resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public FcpoolFcBlockRelationship BlockHead {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a fcpoolLease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public FcpoolLeaseRelationship Peer {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a fcpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public FcpoolPoolRelationship Pool {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"WWN ID of this pool member."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|((^20|5[0-9a-fA-F]{1}):([0-9a-fA-F]{2}:){6}([0-9a-fA-F]{2}))")]
-        public string WwnId {
-            get;
-            set;
-        }
-
-        
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolLease.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFcpoolLease", DefaultParameterSetName = "CmdletParam")]
@@ -945,15 +857,103 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove FcpoolLease.</para>
+    /// <para type="synopsis">This is the cmdlet to Get FcpoolUniverse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolLease")]
-    public class RemoveIntersightFcpoolLease:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFcpoolUniverse:GetCmdletBase
 	{
-		public RemoveIntersightFcpoolLease()
+		public GetIntersightFcpoolUniverse()
 		{
 			ApiInstance = new FcpoolApi(Config);
-            MethodName = "DeleteFcpoolLeaseWithHttpInfo";
+            MethodName = "GetFcpoolUniverseListWithHttpInfo";
 		}
+        
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public IamAccountRelationship Account {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
     }
 }

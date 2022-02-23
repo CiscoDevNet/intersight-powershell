@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)
-
 [New-IntersightConnectorpackConnectorPackUpgrade](./New-IntersightConnectorpackConnectorPackUpgrade.md)
+
+[Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)
 

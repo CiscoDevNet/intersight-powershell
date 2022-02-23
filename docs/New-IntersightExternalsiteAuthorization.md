@@ -19,7 +19,7 @@ New-IntersightExternalsiteAuthorization [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;ExternalsiteAuthorization&apos; resource.
+Create a &amp;apos;ExternalsiteAuthorization&amp;apos; resource.
 
 ## PARAMETERS
 

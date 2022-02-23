@@ -17,7 +17,7 @@ Remove-IntersightKubernetesContainerRuntimePolicy -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesContainerRuntimePolicy&apos; resource.
+Delete a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
+
 [Get-IntersightKubernetesContainerRuntimePolicy](./Get-IntersightKubernetesContainerRuntimePolicy.md)
 
 [New-IntersightKubernetesContainerRuntimePolicy](./New-IntersightKubernetesContainerRuntimePolicy.md)
-
-[Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
 

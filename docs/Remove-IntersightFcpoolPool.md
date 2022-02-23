@@ -17,7 +17,7 @@ Remove-IntersightFcpoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FcpoolPool&amp;apos; resource.
+Delete a &apos;FcpoolPool&apos; resource.
 
 ## EXAMPLES
 

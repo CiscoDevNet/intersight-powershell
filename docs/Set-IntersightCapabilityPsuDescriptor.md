@@ -220,10 +220,10 @@ PS C:\> Set-IntersightCapabilityPsuDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityPsuDescriptor](./Remove-IntersightCapabilityPsuDescriptor.md)
-
 [Get-IntersightCapabilityPsuDescriptor](./Get-IntersightCapabilityPsuDescriptor.md)
 
 [New-IntersightCapabilityPsuDescriptor](./New-IntersightCapabilityPsuDescriptor.md)
+
+[Remove-IntersightCapabilityPsuDescriptor](./Remove-IntersightCapabilityPsuDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

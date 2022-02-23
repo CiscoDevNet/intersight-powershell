@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Evaluation
-Evalation rating as provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option that specifies user&apos;s excelent evaluation.\n* `Poor` - Option that specifies user&apos;s poor evaluation.\n* `Fair` - Option that specifies user&apos;s fair evaluation.\n* `Good` - Option that specifies user&apos;s good evaluation.
+Evalation rating as provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option that specifies user&amp;apos;s excelent evaluation.\n* `Poor` - Option that specifies user&amp;apos;s poor evaluation.\n* `Fair` - Option that specifies user&amp;apos;s fair evaluation.\n* `Good` - Option that specifies user&amp;apos;s good evaluation.
 
 ```yaml
 Type: FeedbackFeedbackData.EvaluationEnum

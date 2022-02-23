@@ -17,7 +17,7 @@ Remove-IntersightSoftwareSolutionDistributable -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareSolutionDistributable&amp;apos; resource.
+Delete a &apos;SoftwareSolutionDistributable&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwareSolutionDistributable](./New-IntersightSoftwareSolutionDistributable.md)
+[Set-IntersightSoftwareSolutionDistributable](./Set-IntersightSoftwareSolutionDistributable.md)
 
 [Get-IntersightSoftwareSolutionDistributable](./Get-IntersightSoftwareSolutionDistributable.md)
 
-[Set-IntersightSoftwareSolutionDistributable](./Set-IntersightSoftwareSolutionDistributable.md)
+[New-IntersightSoftwareSolutionDistributable](./New-IntersightSoftwareSolutionDistributable.md)
 

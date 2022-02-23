@@ -19,7 +19,7 @@ New-IntersightApplianceRemoteFileImport [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;ApplianceRemoteFileImport&apos; resource.
+Create a &amp;apos;ApplianceRemoteFileImport&amp;apos; resource.
 
 ## PARAMETERS
 

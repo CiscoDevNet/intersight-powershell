@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Opaque
-A URI is opaque if, and only if, it is absolute and its scheme-specific part does not begin with a slash character (&amp;apos;/&amp;apos;). An opaque URI has a scheme, a scheme-specific part, and possibly a fragment; all other components are undefined.
+A URI is opaque if, and only if, it is absolute and its scheme-specific part does not begin with a slash character (&apos;/&apos;). An opaque URI has a scheme, a scheme-specific part, and possibly a fragment; all other components are undefined.
 
 ```yaml
 Type: string

@@ -19,7 +19,7 @@ New-IntersightVnicEthNetworkPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicEthNetworkPolicy&amp;apos; resource.
+Create a &apos;VnicEthNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -207,11 +207,11 @@ PS C:\> New-IntersightVnicEthNetworkPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
+
 [Set-IntersightVnicEthNetworkPolicy](./Set-IntersightVnicEthNetworkPolicy.md)
 
 [Remove-IntersightVnicEthNetworkPolicy](./Remove-IntersightVnicEthNetworkPolicy.md)
-
-[Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

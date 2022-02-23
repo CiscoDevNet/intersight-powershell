@@ -19,7 +19,7 @@ Set-IntersightHyperflexServiceAuthToken [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexServiceAuthToken&amp;apos; resource.
+Update a &apos;HyperflexServiceAuthToken&apos; resource.
 
 ## PARAMETERS
 

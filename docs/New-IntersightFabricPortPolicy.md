@@ -19,7 +19,7 @@ New-IntersightFabricPortPolicy [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricPortPolicy&amp;apos; resource.
+Create a &apos;FabricPortPolicy&apos; resource.
 
 ## PARAMETERS
 

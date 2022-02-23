@@ -17,7 +17,7 @@ Remove-IntersightTamAdvisoryDefinition -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;TamAdvisoryDefinition&amp;apos; resource.
+Delete a &apos;TamAdvisoryDefinition&apos; resource.
 
 ## EXAMPLES
 

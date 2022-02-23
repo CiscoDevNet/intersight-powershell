@@ -19,7 +19,7 @@ New-IntersightKubernetesAciCniProfile [-AaepName< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesAciCniProfile&apos; resource.
+Create a &amp;apos;KubernetesAciCniProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -421,10 +421,10 @@ PS C:\> New-IntersightKubernetesAciCniProfile
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
+[Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
 
 [Remove-IntersightKubernetesAciCniProfile](./Remove-IntersightKubernetesAciCniProfile.md)
 
-[Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
+[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

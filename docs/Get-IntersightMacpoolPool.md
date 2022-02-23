@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
+
 [Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
 
 [Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
-
-[New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
 

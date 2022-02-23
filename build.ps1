@@ -35,7 +35,7 @@ $manifestParam = @{
     Guid = "41ce1a70-9c4b-489f-a153-12fe49b7fe62"
     Author = "Cisco Systems"
     CompanyName = "Cisco Systems"
-    ModuleVersion = "1.0.9.5208"
+    ModuleVersion = "1.0.9.5313"
     Copyright = "(c) 2021 Cisco Systems, Inc. All rights reserved."
     LicenseUri = "https://www.apache.org/licenses/LICENSE-2.0.txt"
     ProjectUri = "https://github.com/CiscoDevNet/intersight-powershell"
@@ -44,7 +44,7 @@ $manifestParam = @{
     PowerShellVersion = "7.1"
     CmdletsToExport = $commandList
     Description = "Intersight Powershell module provides the cmdlets to manage, analyze, and automate the IT infrastructure in Intersight."
-    ReleaseNotes = "Intersight.PowerShell - Version 1.0.9.5208
+    ReleaseNotes = "Intersight.PowerShell - Version 1.0.9.5313
 
 Changelog:-
 https://github.com/CiscoDevNet/intersight-powershell/blob/master/CHANGELOG.md
@@ -66,7 +66,7 @@ Write-Host "Module manifest created successfully." -ForegroundColor green
 
 Write-Host "Copy module help file to $moduleDir"
 if (Test-Path -Path $moduleDir -PathType Container){
-    $externalHelpFilePath =  Join-Path -Path $PSScriptRoot -ChildPath "externalHelp\Intersight.PowerShell.dll-help.xml"
+    $externalHelpFilePath =  Join-Path -Path $PSScriptRoot -ChildPath "externalHelp\Intersight.PowerShell.dll-Help.xml"
     if (Test-Path -Path $externalHelpFilePath ){
         Copy-Item -Path $externalHelpFilePath -Destination $moduleDir
         Write-Host "Successfully copied the help file to $moduleDir."

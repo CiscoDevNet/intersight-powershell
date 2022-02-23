@@ -17,7 +17,7 @@ Remove-IntersightFabricPortPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricPortPolicy&amp;apos; resource.
+Delete a &apos;FabricPortPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricPortPolicy](./Set-IntersightFabricPortPolicy.md)
 
-[New-IntersightFabricPortPolicy](./New-IntersightFabricPortPolicy.md)
-
 [Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
+
+[New-IntersightFabricPortPolicy](./New-IntersightFabricPortPolicy.md)
 

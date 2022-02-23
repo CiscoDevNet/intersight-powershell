@@ -19,7 +19,7 @@ New-IntersightWorkflowSolutionDefinition [-ActionDefinitions< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowSolutionDefinition&amp;apos; resource.
+Create a &apos;WorkflowSolutionDefinition&apos; resource.
 
 ## PARAMETERS
 

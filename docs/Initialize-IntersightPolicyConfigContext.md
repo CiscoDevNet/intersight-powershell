@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorState
-Indicates a profile&amp;apos;s error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error).
+Indicates a profile&apos;s error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error).
 
 ```yaml
 Type: string

@@ -19,7 +19,7 @@ New-IntersightOprsDeployment [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Create a &apos;OprsDeployment&apos; resource.
+Create a &amp;apos;OprsDeployment&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -282,11 +282,11 @@ PS C:\> New-IntersightOprsDeployment
 
 ## RELATED LINKS
 
+[Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
+
 [Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
 
 [Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
-
-[Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
 
 [Initialize-IntersightOprsKvpair](./Initialize-IntersightOprsKvpair.md)
 

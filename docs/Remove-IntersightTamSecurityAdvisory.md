@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)
-
 [Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 
 [New-IntersightTamSecurityAdvisory](./New-IntersightTamSecurityAdvisory.md)
+
+[Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexCapabilityInfo -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexCapabilityInfo&apos; resource.
+Delete a &amp;apos;HyperflexCapabilityInfo&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexCapabilityInfo](./Set-IntersightHyperflexCapabilityInfo.md)
+
 [New-IntersightHyperflexCapabilityInfo](./New-IntersightHyperflexCapabilityInfo.md)
 
 [Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
-
-[Set-IntersightHyperflexCapabilityInfo](./Set-IntersightHyperflexCapabilityInfo.md)
 

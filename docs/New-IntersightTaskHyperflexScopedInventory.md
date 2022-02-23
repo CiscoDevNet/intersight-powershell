@@ -19,7 +19,7 @@ New-IntersightTaskHyperflexScopedInventory [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TaskHyperflexScopedInventory&amp;apos; resource.
+Create a &apos;TaskHyperflexScopedInventory&apos; resource.
 
 ## PARAMETERS
 

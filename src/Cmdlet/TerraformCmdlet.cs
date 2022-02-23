@@ -52,6 +52,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"Command to be executed during update operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Command {
+            get;
+            set;
+        }
+        
         
         
         
@@ -259,6 +269,16 @@ namespace Intersight.PowerShell
         
         
         // <summary>
+        /// <para type="description">"Command to be executed during update operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Command {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -460,6 +480,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public List<TerraformCloudResource> CloudResource {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Command to be executed during update operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Command {
             get;
             set;
         }

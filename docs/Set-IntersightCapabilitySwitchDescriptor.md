@@ -235,10 +235,10 @@ PS C:\> Set-IntersightCapabilitySwitchDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)
+[Remove-IntersightCapabilitySwitchDescriptor](./Remove-IntersightCapabilitySwitchDescriptor.md)
 
 [New-IntersightCapabilitySwitchDescriptor](./New-IntersightCapabilitySwitchDescriptor.md)
 
-[Remove-IntersightCapabilitySwitchDescriptor](./Remove-IntersightCapabilitySwitchDescriptor.md)
+[Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

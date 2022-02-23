@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptedAesKey
-The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &amp;apos;AES&amp;apos; in SecureProperties dictionary.
+The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: ImcconnectorWebUiMessage.ObjectTypeEnum

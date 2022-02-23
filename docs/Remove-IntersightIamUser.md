@@ -17,7 +17,7 @@ Remove-IntersightIamUser -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamUser&apos; resource.
+Delete a &amp;apos;IamUser&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamUser](./Set-IntersightIamUser.md)
-
 [New-IntersightIamUser](./New-IntersightIamUser.md)
 
 [Get-IntersightIamUser](./Get-IntersightIamUser.md)
+
+[Set-IntersightIamUser](./Set-IntersightIamUser.md)
 

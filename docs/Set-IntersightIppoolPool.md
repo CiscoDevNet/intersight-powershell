@@ -19,7 +19,7 @@ Set-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;IppoolPool&apos; resource.
+Update a &amp;apos;IppoolPool&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -258,11 +258,11 @@ PS C:\> Set-IntersightIppoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
+[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
 
 [Get-IntersightIppoolPool](./Get-IntersightIppoolPool.md)
 
-[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
+[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
 
 [Initialize-IntersightIppoolIpV4Block](./Initialize-IntersightIppoolIpV4Block.md)
 

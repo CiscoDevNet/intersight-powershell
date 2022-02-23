@@ -268,10 +268,10 @@ PS C:\> New-IntersightKvmPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightKvmPolicy](./Get-IntersightKvmPolicy.md)
+[Remove-IntersightKvmPolicy](./Remove-IntersightKvmPolicy.md)
 
 [Set-IntersightKvmPolicy](./Set-IntersightKvmPolicy.md)
 
-[Remove-IntersightKvmPolicy](./Remove-IntersightKvmPolicy.md)
+[Get-IntersightKvmPolicy](./Get-IntersightKvmPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

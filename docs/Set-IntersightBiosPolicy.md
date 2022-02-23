@@ -6043,10 +6043,10 @@ PS C:\> Set-IntersightBiosPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
+
 [Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)
 
 [New-IntersightBiosPolicy](./New-IntersightBiosPolicy.md)
-
-[Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

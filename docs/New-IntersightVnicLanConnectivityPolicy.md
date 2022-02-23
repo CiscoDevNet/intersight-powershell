@@ -19,7 +19,7 @@ New-IntersightVnicLanConnectivityPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicLanConnectivityPolicy&apos; resource.
+Create a &amp;apos;VnicLanConnectivityPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -304,10 +304,10 @@ PS C:\> New-IntersightVnicLanConnectivityPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightVnicLanConnectivityPolicy](./Get-IntersightVnicLanConnectivityPolicy.md)
+
 [Set-IntersightVnicLanConnectivityPolicy](./Set-IntersightVnicLanConnectivityPolicy.md)
 
 [Remove-IntersightVnicLanConnectivityPolicy](./Remove-IntersightVnicLanConnectivityPolicy.md)
-
-[Get-IntersightVnicLanConnectivityPolicy](./Get-IntersightVnicLanConnectivityPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightVncConsole [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &apos;VncConsole&apos; resource.
+Create a &amp;apos;VncConsole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> New-IntersightVncConsole
 
 ## RELATED LINKS
 
-[Set-IntersightVncConsole](./Set-IntersightVncConsole.md)
-
 [Get-IntersightVncConsole](./Get-IntersightVncConsole.md)
+
+[Set-IntersightVncConsole](./Set-IntersightVncConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

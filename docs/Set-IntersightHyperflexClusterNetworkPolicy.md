@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterNetworkPolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterNetworkPolicy&apos; resource.
+Update a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -308,11 +308,11 @@ PS C:\> Set-IntersightHyperflexClusterNetworkPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexClusterNetworkPolicy](./Remove-IntersightHyperflexClusterNetworkPolicy.md)
+
 [Get-IntersightHyperflexClusterNetworkPolicy](./Get-IntersightHyperflexClusterNetworkPolicy.md)
 
 [New-IntersightHyperflexClusterNetworkPolicy](./New-IntersightHyperflexClusterNetworkPolicy.md)
-
-[Remove-IntersightHyperflexClusterNetworkPolicy](./Remove-IntersightHyperflexClusterNetworkPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 

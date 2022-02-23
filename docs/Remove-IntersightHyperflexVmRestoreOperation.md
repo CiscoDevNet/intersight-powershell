@@ -17,7 +17,7 @@ Remove-IntersightHyperflexVmRestoreOperation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexVmRestoreOperation&apos; resource.
+Delete a &amp;apos;HyperflexVmRestoreOperation&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -8,6 +8,86 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkSubRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkSubRequest")]
+    public class InitializeIntersightBulkSubRequest:PSCmdlet
+	{
+		public InitializeIntersightBulkSubRequest()
+		{
+            ClassId = BulkSubRequest.ClassIdEnum.BulkRestSubRequest;
+            ObjectType = BulkSubRequest.ObjectTypeEnum.BulkRestSubRequest;
+            Verb = BulkSubRequest.VerbEnum.POST;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BulkSubRequest.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BulkSubRequest.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The URI on which this action is to be performed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Uri {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\nThe value is used to override the top level verb.\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BulkSubRequest.VerbEnum Verb {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.BulkSubRequest initObject = new Intersight.Model.BulkSubRequest();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
+            {
+                initObject.Uri = this.Uri;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Verb"))
+            {
+                initObject.Verb = this.Verb;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BulkApiResult.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBulkApiResult")]
@@ -103,59 +183,6 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
              Intersight.Model.BulkRestResult initObject = new Intersight.Model.BulkRestResult();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkHttpHeader.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkHttpHeader")]
-    public class InitializeIntersightBulkHttpHeader:PSCmdlet
-	{
-		public InitializeIntersightBulkHttpHeader()
-		{
-            ClassId = BulkHttpHeader.ClassIdEnum.BulkHttpHeader;
-            ObjectType = BulkHttpHeader.ObjectTypeEnum.BulkHttpHeader;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BulkHttpHeader.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BulkHttpHeader.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -273,16 +300,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkSubRequest.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkHttpHeader.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkSubRequest")]
-    public class InitializeIntersightBulkSubRequest:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkHttpHeader")]
+    public class InitializeIntersightBulkHttpHeader:PSCmdlet
 	{
-		public InitializeIntersightBulkSubRequest()
+		public InitializeIntersightBulkHttpHeader()
 		{
-            ClassId = BulkSubRequest.ClassIdEnum.BulkRestSubRequest;
-            ObjectType = BulkSubRequest.ObjectTypeEnum.BulkRestSubRequest;
-            Verb = BulkSubRequest.VerbEnum.POST;
+            ClassId = BulkHttpHeader.ClassIdEnum.BulkHttpHeader;
+            ObjectType = BulkHttpHeader.ObjectTypeEnum.BulkHttpHeader;
             
 		}
         // <summary>
@@ -295,59 +321,33 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkSubRequest.ClassIdEnum ClassId {
+        public BulkHttpHeader.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkSubRequest.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The URI on which this action is to be performed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Uri {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\nThe value is used to override the top level verb.\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BulkSubRequest.VerbEnum Verb {
+        public BulkHttpHeader.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.BulkSubRequest initObject = new Intersight.Model.BulkSubRequest();
+             Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
-            {
-                initObject.Uri = this.Uri;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Verb"))
-            {
-                initObject.Verb = this.Verb;
-            }
             WriteObject(initObject);
         }
 

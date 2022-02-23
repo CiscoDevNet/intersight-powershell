@@ -19,7 +19,7 @@ Set-IntersightIamEndPointUserRole [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;IamEndPointUserRole&apos; resource.
+Update a &amp;apos;IamEndPointUserRole&amp;apos; resource.
 
 ## PARAMETERS
 

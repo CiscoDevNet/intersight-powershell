@@ -19,7 +19,7 @@ New-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
+Create a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
 
 ## PARAMETERS
 

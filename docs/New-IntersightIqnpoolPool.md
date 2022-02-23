@@ -19,7 +19,7 @@ New-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IqnpoolPool&amp;apos; resource.
+Create a &apos;IqnpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -222,11 +222,11 @@ PS C:\> New-IntersightIqnpoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
+[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
 [Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
 
-[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
+[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
 
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)
 

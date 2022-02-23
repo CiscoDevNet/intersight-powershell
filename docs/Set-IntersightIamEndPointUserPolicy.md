@@ -228,9 +228,9 @@ PS C:\> Set-IntersightIamEndPointUserPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightIamEndPointUserPolicy](./Get-IntersightIamEndPointUserPolicy.md)
-
 [New-IntersightIamEndPointUserPolicy](./New-IntersightIamEndPointUserPolicy.md)
+
+[Get-IntersightIamEndPointUserPolicy](./Get-IntersightIamEndPointUserPolicy.md)
 
 [Remove-IntersightIamEndPointUserPolicy](./Remove-IntersightIamEndPointUserPolicy.md)
 

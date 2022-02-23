@@ -157,10 +157,10 @@ PS C:\> Set-IntersightVrfVrf
 
 ## RELATED LINKS
 
+[Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
+
 [Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
 
 [New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
-
-[Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

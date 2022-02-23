@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightOauthAuthorization](./New-IntersightOauthAuthorization.md)
-
 [Set-IntersightOauthAuthorization](./Set-IntersightOauthAuthorization.md)
+
+[New-IntersightOauthAuthorization](./New-IntersightOauthAuthorization.md)
 

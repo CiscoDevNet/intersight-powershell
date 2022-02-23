@@ -255,8 +255,8 @@ PS C:\> Set-IntersightHyperflexProxySettingPolicy
 
 [Remove-IntersightHyperflexProxySettingPolicy](./Remove-IntersightHyperflexProxySettingPolicy.md)
 
-[Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
-
 [New-IntersightHyperflexProxySettingPolicy](./New-IntersightHyperflexProxySettingPolicy.md)
+
+[Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

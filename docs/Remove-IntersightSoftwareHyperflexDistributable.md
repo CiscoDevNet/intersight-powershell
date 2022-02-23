@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareHyperflexDistributable](./Set-IntersightSoftwareHyperflexDistributable.md)
+
 [Get-IntersightSoftwareHyperflexDistributable](./Get-IntersightSoftwareHyperflexDistributable.md)
 
 [New-IntersightSoftwareHyperflexDistributable](./New-IntersightSoftwareHyperflexDistributable.md)
-
-[Set-IntersightSoftwareHyperflexDistributable](./Set-IntersightSoftwareHyperflexDistributable.md)
 

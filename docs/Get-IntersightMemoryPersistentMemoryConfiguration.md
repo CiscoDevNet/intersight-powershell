@@ -25,7 +25,7 @@ Get-IntersightMemoryPersistentMemoryConfiguration [-Count <Boolean>] [-InlineCou
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;MemoryPersistentMemoryConfiguration&apos; resource.,
+Read a &amp;apos;MemoryPersistentMemoryConfiguration&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

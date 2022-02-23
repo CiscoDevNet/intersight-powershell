@@ -19,7 +19,7 @@ New-IntersightIamCertificateRequest [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;IamCertificateRequest&apos; resource.
+Create a &amp;apos;IamCertificateRequest&amp;apos; resource.
 
 ## PARAMETERS
 

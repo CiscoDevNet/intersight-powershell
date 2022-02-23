@@ -443,9 +443,9 @@ PS C:\> New-IntersightKubernetesNodeGroupProfile
 
 [Get-IntersightKubernetesNodeGroupProfile](./Get-IntersightKubernetesNodeGroupProfile.md)
 
-[Set-IntersightKubernetesNodeGroupProfile](./Set-IntersightKubernetesNodeGroupProfile.md)
-
 [Remove-IntersightKubernetesNodeGroupProfile](./Remove-IntersightKubernetesNodeGroupProfile.md)
+
+[Set-IntersightKubernetesNodeGroupProfile](./Set-IntersightKubernetesNodeGroupProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

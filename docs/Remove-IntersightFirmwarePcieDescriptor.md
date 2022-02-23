@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)
+[Set-IntersightFirmwarePcieDescriptor](./Set-IntersightFirmwarePcieDescriptor.md)
 
 [New-IntersightFirmwarePcieDescriptor](./New-IntersightFirmwarePcieDescriptor.md)
 
-[Set-IntersightFirmwarePcieDescriptor](./Set-IntersightFirmwarePcieDescriptor.md)
+[Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)
 

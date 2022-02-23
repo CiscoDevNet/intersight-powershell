@@ -42,7 +42,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveAdmin
-The Intersight Kubernetes Service license administrative state.\nSet this property to &amp;apos;true&amp;apos; to activate the IKS license entitlements.
+The Intersight Kubernetes Service license administrative state.\nSet this property to &apos;true&apos; to activate the IKS license entitlements.
 
 ```yaml
 Type: bool

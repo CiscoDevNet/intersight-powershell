@@ -19,7 +19,7 @@ New-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictio
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicFcIf&apos; resource.
+Create a &amp;apos;VnicFcIf&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticWwpnAddress
-The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&amp;apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
+The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
 
 ```yaml
 Type: string
@@ -396,11 +396,11 @@ PS C:\> New-IntersightVnicFcIf
 
 ## RELATED LINKS
 
-[Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
-
 [Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
 
 [Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
+
+[Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 

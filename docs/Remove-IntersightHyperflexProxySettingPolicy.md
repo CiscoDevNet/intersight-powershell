@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexProxySettingPolicy](./Set-IntersightHyperflexProxySettingPolicy.md)
 
-[Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
-
 [New-IntersightHyperflexProxySettingPolicy](./New-IntersightHyperflexProxySettingPolicy.md)
+
+[Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
 

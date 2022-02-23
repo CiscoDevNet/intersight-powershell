@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexClusterBackupPolicy](./New-IntersightHyperflexClusterBackupPolicy.md)
-
 [Set-IntersightHyperflexClusterBackupPolicy](./Set-IntersightHyperflexClusterBackupPolicy.md)
 
 [Remove-IntersightHyperflexClusterBackupPolicy](./Remove-IntersightHyperflexClusterBackupPolicy.md)
+
+[New-IntersightHyperflexClusterBackupPolicy](./New-IntersightHyperflexClusterBackupPolicy.md)
 

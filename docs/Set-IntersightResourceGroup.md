@@ -19,7 +19,7 @@ Set-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ResourceGroup&amp;apos; resource.
+Update a &apos;ResourceGroup&apos; resource.
 
 ## PARAMETERS
 

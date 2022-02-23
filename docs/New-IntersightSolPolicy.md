@@ -19,7 +19,7 @@ New-IntersightSolPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SolPolicy&amp;apos; resource.
+Create a &apos;SolPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -253,10 +253,10 @@ PS C:\> New-IntersightSolPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
-
 [Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
 
 [Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
+
+[Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

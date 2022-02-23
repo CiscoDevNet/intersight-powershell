@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The complete location of the path on the server. The location should be specified in the following format- hostname-or-ipv4address&amp;lt;:port&amp;gt;/absolute-file-path.
+The complete location of the path on the server. The location should be specified in the following format- hostname-or-ipv4address&lt;:port&gt;/absolute-file-path.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: UcsdUcsdRestoreParameters.ObjectTypeEnum

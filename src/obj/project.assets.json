@@ -6085,7 +6085,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.9.5208",
+    "version": "1.0.9.5313",
     "restore": {
       "projectUniqueName": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj",
       "projectName": "PSIntersight",

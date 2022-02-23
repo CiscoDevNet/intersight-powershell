@@ -72,6 +72,16 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
+        /// <para type="description">"Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerPolicy.DynamicRebalancingEnum DynamicRebalancing {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -124,6 +134,16 @@ namespace Intersight.PowerShell
         
         
         // <summary>
+        /// <para type="description">"Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerPolicy.PowerPriorityEnum PowerPriority {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -139,6 +159,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public PowerPolicy.PowerRestoreStateEnum PowerRestoreState {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerPolicy.PowerSaveModeEnum PowerSaveMode {
             get;
             set;
         }
@@ -215,6 +245,16 @@ namespace Intersight.PowerShell
         }
         
         
+        // <summary>
+        /// <para type="description">"Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.DynamicRebalancingEnum DynamicRebalancing {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -250,6 +290,16 @@ namespace Intersight.PowerShell
         
         
         // <summary>
+        /// <para type="description">"Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerPriorityEnum PowerPriority {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -265,6 +315,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public PowerPolicy.PowerRestoreStateEnum PowerRestoreState {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerSaveModeEnum PowerSaveMode {
             get;
             set;
         }
@@ -311,7 +371,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new PowerApi(Config);
             ModelObject = new PowerPolicy();
-            MethodName = "PatchPowerPolicyWithHttpInfo";
+            MethodName = "UpdatePowerPolicyWithHttpInfo";
 		}
         
         
@@ -348,6 +408,16 @@ namespace Intersight.PowerShell
         }
         
         
+        // <summary>
+        /// <para type="description">"Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.DynamicRebalancingEnum DynamicRebalancing {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -383,6 +453,16 @@ namespace Intersight.PowerShell
         
         
         // <summary>
+        /// <para type="description">"Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerPriorityEnum PowerPriority {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -398,6 +478,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public PowerPolicy.PowerRestoreStateEnum PowerRestoreState {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerSaveModeEnum PowerSaveMode {
             get;
             set;
         }
@@ -601,6 +691,26 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"The status of power rebalancing mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerControlState.PowerRebalancingEnum PowerRebalancing {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The status of power save mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerControlState.PowerSaveModeEnum PowerSaveMode {
+            get;
+            set;
+        }
         
         // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>

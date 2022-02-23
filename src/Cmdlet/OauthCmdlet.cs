@@ -8,156 +8,28 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get OauthAccessToken.</para>
+    /// <para type="synopsis">This is the cmdlet to Remove OauthAccessToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOauthAccessToken", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightOauthAccessToken:GetCmdletBase
+    [Cmdlet(VerbsCommon.Remove, "IntersightOauthAccessToken")]
+    public class RemoveIntersightOauthAccessToken:RemoveCmdletBase
 	{
-		public GetIntersightOauthAccessToken()
+		public RemoveIntersightOauthAccessToken()
 		{
 			ApiInstance = new OauthApi(Config);
-            MethodName = "GetOauthAccessTokenListWithHttpInfo";
+            MethodName = "DeleteOauthAccessTokenWithHttpInfo";
 		}
-        
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public IamAccountRelationship Account {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Type of OAuth Api. For example, Smart-licensing-API.\n* `Unknown` - Unknown is the default API type.\n* `SmartLicensing-API` - Smart licensing API type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public OauthAccessToken.ApiTypeEnum ApiType {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The date and time when the access token expires."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime Expiry {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Issuer of OAuth access token."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Issuer {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The date and time when the refresh token expires."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime RefreshExpiry {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New OauthAuthorization.</para>
+    /// <para type="synopsis">This is the cmdlet to Set OauthAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOauthAuthorization")]
-    public class NewIntersightOauthAuthorization:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightOauthAuthorization")]
+    public class SetIntersightOauthAuthorization:SetCmdletBase
 	{
-		public NewIntersightOauthAuthorization()
+		public SetIntersightOauthAuthorization()
 		{
 			ApiInstance = new OauthApi(Config);
             ModelObject = new OauthAuthorization();
-            MethodName = "CreateOauthAuthorizationWithHttpInfo";
+            MethodName = "UpdateOauthAuthorizationWithHttpInfo";
 		}
         
         
@@ -192,7 +64,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -395,16 +267,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set OauthAuthorization.</para>
+    /// <para type="synopsis">This is the cmdlet to New OauthAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOauthAuthorization")]
-    public class SetIntersightOauthAuthorization:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightOauthAuthorization")]
+    public class NewIntersightOauthAuthorization:NewCmdletBase
 	{
-		public SetIntersightOauthAuthorization()
+		public NewIntersightOauthAuthorization()
 		{
 			ApiInstance = new OauthApi(Config);
             ModelObject = new OauthAuthorization();
-            MethodName = "UpdateOauthAuthorizationWithHttpInfo";
+            MethodName = "CreateOauthAuthorizationWithHttpInfo";
 		}
         
         
@@ -439,7 +311,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -482,15 +354,143 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove OauthAccessToken.</para>
+    /// <para type="synopsis">This is the cmdlet to Get OauthAccessToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOauthAccessToken")]
-    public class RemoveIntersightOauthAccessToken:RemoveCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightOauthAccessToken", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightOauthAccessToken:GetCmdletBase
 	{
-		public RemoveIntersightOauthAccessToken()
+		public GetIntersightOauthAccessToken()
 		{
 			ApiInstance = new OauthApi(Config);
-            MethodName = "DeleteOauthAccessTokenWithHttpInfo";
+            MethodName = "GetOauthAccessTokenListWithHttpInfo";
 		}
+        
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public IamAccountRelationship Account {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Type of OAuth Api. For example, Smart-licensing-API.\n* `Unknown` - Unknown is the default API type.\n* `SmartLicensing-API` - Smart licensing API type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public OauthAccessToken.ApiTypeEnum ApiType {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The date and time when the access token expires."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime Expiry {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Issuer of OAuth access token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Issuer {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The date and time when the refresh token expires."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime RefreshExpiry {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
     }
 }

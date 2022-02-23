@@ -19,7 +19,7 @@ New-IntersightSoftwareApplianceDistributable [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareApplianceDistributable&amp;apos; resource.
+Create a &apos;SoftwareApplianceDistributable&apos; resource.
 
 ## PARAMETERS
 
@@ -470,11 +470,11 @@ PS C:\> New-IntersightSoftwareApplianceDistributable
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwareApplianceDistributable](./Get-IntersightSoftwareApplianceDistributable.md)
-
 [Set-IntersightSoftwareApplianceDistributable](./Set-IntersightSoftwareApplianceDistributable.md)
 
 [Remove-IntersightSoftwareApplianceDistributable](./Remove-IntersightSoftwareApplianceDistributable.md)
+
+[Get-IntersightSoftwareApplianceDistributable](./Get-IntersightSoftwareApplianceDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

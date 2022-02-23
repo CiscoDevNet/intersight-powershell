@@ -19,7 +19,7 @@ New-IntersightWorkflowTaskNotification [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowTaskNotification&amp;apos; resource.
+Create a &apos;WorkflowTaskNotification&apos; resource.
 
 ## PARAMETERS
 
