@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj": {
-      "version": "1.0.9.5313",
+      "version": "1.0.9.5517",
       "restore": {
         "projectUniqueName": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj",
         "projectName": "PSIntersight",
@@ -59,7 +59,7 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[106.11.4, )"
+              "version": "[106.12.0, )"
             },
             "System.ComponentModel.Annotations": {
               "target": "Package",
@@ -68,7 +68,7 @@
             "System.Management.Automation": {
               "include": "Compile",
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.1.6, )"
             }
           },
           "imports": [

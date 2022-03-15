@@ -19,7 +19,7 @@ Set-IntersightFcPhysicalPort [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FcPhysicalPort&amp;apos; resource.
+Update a &apos;FcPhysicalPort&apos; resource.
 
 ## PARAMETERS
 

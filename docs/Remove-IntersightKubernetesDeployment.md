@@ -17,7 +17,7 @@ Remove-IntersightKubernetesDeployment -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesDeployment&apos; resource.
+Delete a &amp;apos;KubernetesDeployment&amp;apos; resource.
 
 ## EXAMPLES
 

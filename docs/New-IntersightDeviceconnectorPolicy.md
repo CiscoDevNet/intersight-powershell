@@ -210,8 +210,8 @@ PS C:\> New-IntersightDeviceconnectorPolicy
 
 [Get-IntersightDeviceconnectorPolicy](./Get-IntersightDeviceconnectorPolicy.md)
 
-[Remove-IntersightDeviceconnectorPolicy](./Remove-IntersightDeviceconnectorPolicy.md)
-
 [Set-IntersightDeviceconnectorPolicy](./Set-IntersightDeviceconnectorPolicy.md)
+
+[Remove-IntersightDeviceconnectorPolicy](./Remove-IntersightDeviceconnectorPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

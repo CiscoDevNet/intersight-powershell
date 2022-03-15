@@ -187,9 +187,9 @@ PS C:\> Set-IntersightCapabilityPortGroupAggregationDef
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
-
 [Get-IntersightCapabilityPortGroupAggregationDef](./Get-IntersightCapabilityPortGroupAggregationDef.md)
+
+[New-IntersightCapabilityPortGroupAggregationDef](./New-IntersightCapabilityPortGroupAggregationDef.md)
 
 [Remove-IntersightCapabilityPortGroupAggregationDef](./Remove-IntersightCapabilityPortGroupAggregationDef.md)
 

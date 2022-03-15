@@ -8,6 +8,137 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiNibMetadata.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibMetadata", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiNibMetadata:GetCmdletBase
+	{
+		public GetIntersightNiaapiNibMetadata()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiNibMetadataListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The date when the package was generated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime Date {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Chksum used to check the integrity of the metadata file downloaded."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string MetadataChksum {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The filename of the metadata package."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string MetadataFilename {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The version number of the metadata package."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long Version {
+            get;
+            set;
+        }
+        
+
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicFieldNotice.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicFieldNotice", DefaultParameterSetName = "CmdletParam")]
@@ -179,15 +310,15 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicSweol.</para>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicCcoPost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicSweol", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicSweol:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicCcoPost", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicCcoPost:GetCmdletBase
 	{
-		public GetIntersightNiaapiApicSweol()
+		public GetIntersightNiaapiApicCcoPost()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicSweolListWithHttpInfo";
+            MethodName = "GetNiaapiApicCcoPostListWithHttpInfo";
 		}
         
         // <summary>
@@ -201,46 +332,6 @@ namespace Intersight.PowerShell
         }
         
         
-        // <summary>
-        /// <para type="description">"String contains the Release versions affected by this notice, seperated by comma."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AffectedVersions {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Date time of this notice Announced."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime AnnouncementDate {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Epoch time of this notice Announced."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long AnnouncementDateEpoch {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The bulletinno of this software release end of life notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string BulletinNo {
-            get;
-            set;
-        }
         
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -253,141 +344,11 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"The description of this software release end of life notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Description {
-            get;
-            set;
-        }
-        
-        // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Date time of End of New service attachment ."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime EndofNewServiceAttachmentDate {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Epoch time of End of New service attachment ."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long EndofNewServiceAttachmentDateEpoch {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Date time of End of Renewal of service contract ."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime EndofServiceContractRenewalDate {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Epoch time of End of Renewal of service contract ."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long EndofServiceContractRenewalDateEpoch {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Date time of End of Maintenance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime EndofSwMaintenanceDate {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Epoch time of End of Maintenance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long EndofSwMaintenanceDateEpoch {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The title of this software release end of life notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Headline {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Date time of Last day of Support ."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime LastDateofSupport {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Epoch time of Last day of Support ."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long LastDateofSupportEpoch {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Date time of Lastship Date."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime LastShipDate {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Epoch time of Lastship Date."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long LastShipDateEpoch {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The URL of this migration notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string MigrationUrl {
             get;
             set;
         }
@@ -425,21 +386,52 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// <para type="description">"The date when this new release notice is posted."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string SharedScope {
+        public DateTime PostDate {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The document type of this post."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string PostType {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"Software end of life notice URL link to the notice webpage."</para>
+        /// <para type="description">"Identificator of this inbox post."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string SoftwareEolUrl {
+        public string Postid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Revision number of this notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Revision {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
             get;
             set;
         }
@@ -579,15 +571,15 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiVersionRegex.</para>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmFieldNotice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiVersionRegex", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiVersionRegex:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmFieldNotice", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmFieldNotice:GetCmdletBase
 	{
-		public GetIntersightNiaapiVersionRegex()
+		public GetIntersightNiaapiDcnmFieldNotice()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiVersionRegexListWithHttpInfo";
+            MethodName = "GetNiaapiDcnmFieldNoticeListWithHttpInfo";
 		}
         
         // <summary>
@@ -602,6 +594,15 @@ namespace Intersight.PowerShell
         
         
         
+        // <summary>
+        /// <para type="description">"Bug Id associated with this notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Bugid {
+            get;
+            set;
+        }
         
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -613,13 +614,62 @@ namespace Intersight.PowerShell
             set;
         }
         
-        
         // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Field notice Description."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string FieldNoticeDesc {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Fieldnotice Id of this notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string FieldNoticeId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Field notice URL link to the notice webpage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string FieldNoticeUrl {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The headline of this field notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Headline {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Hardware PID for affected models."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Hwpid {
             get;
             set;
         }
@@ -656,115 +706,6 @@ namespace Intersight.PowerShell
         }
         
         
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Version number for the Version Regex data, also used as identity."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Version {
-            get;
-            set;
-        }
-        
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmLatestMaintainedRelease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmLatestMaintainedRelease:GetCmdletBase
-	{
-		public GetIntersightNiaapiDcnmLatestMaintainedRelease()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmLatestMaintainedReleaseListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Lastest maintained release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string MaintainedRelease {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
         
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -777,11 +718,11 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Software release version string."</para>
+        /// <para type="description">"Software Release number for affected versions."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string SoftwareRelease {
+        public string SwRelease {
             get;
             set;
         }
@@ -789,633 +730,11 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"Long lived version or short lived version."</para>
+        /// <para type="description">"URL of workaround of this notice."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string VersionTag {
-            get;
-            set;
-        }
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicCcoPost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicCcoPost", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicCcoPost:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicCcoPost()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicCcoPostListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The date when this new release notice is posted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime PostDate {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The document type of this post."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string PostType {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Identificator of this inbox post."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Postid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Revision number of this notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Revision {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiFileDownloader.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiFileDownloader", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiFileDownloader:GetCmdletBase
-	{
-		public GetIntersightNiaapiFileDownloader()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiFileDownloaderListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Filename of this Metadata package file, folder will be handled by api."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string FileName {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The presigned URL from server to download this file."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string PresignedUrl {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicReleaseRecommend.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicReleaseRecommend", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicReleaseRecommend:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicReleaseRecommend()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicReleaseRecommendListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Current long-lived release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Cll {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Customer recommended releases."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Crr {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Hardware model identificator."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Pid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Upcoming long-lived release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Ull {
-            get;
-            set;
-        }
-        
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmCcoPost.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmCcoPost", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmCcoPost:GetCmdletBase
-	{
-		public GetIntersightNiaapiDcnmCcoPost()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmCcoPostListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The date when this new release notice is posted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime PostDate {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The document type of this post."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string PostType {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Identificator of this inbox post."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Postid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Revision number of this notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Revision {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicLatestMaintainedRelease.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiApicLatestMaintainedRelease:GetCmdletBase
-	{
-		public GetIntersightNiaapiApicLatestMaintainedRelease()
-		{
-			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiApicLatestMaintainedReleaseListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Lastest maintained release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string MaintainedRelease {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Software release version string."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SoftwareRelease {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Long lived version or short lived version."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string VersionTag {
+        public string WorkaroundUrl {
             get;
             set;
         }
@@ -1753,15 +1072,135 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmSweol.</para>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmLatestMaintainedRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmSweol", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmSweol:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmLatestMaintainedRelease:GetCmdletBase
 	{
-		public GetIntersightNiaapiDcnmSweol()
+		public GetIntersightNiaapiDcnmLatestMaintainedRelease()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmSweolListWithHttpInfo";
+            MethodName = "GetNiaapiDcnmLatestMaintainedReleaseListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Lastest maintained release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string MaintainedRelease {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Software release version string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SoftwareRelease {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Long lived version or short lived version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string VersionTag {
+            get;
+            set;
+        }
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicSweol.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicSweol", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicSweol:GetCmdletBase
+	{
+		public GetIntersightNiaapiApicSweol()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiApicSweolListWithHttpInfo";
 		}
         
         // <summary>
@@ -2023,15 +1462,15 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmFieldNotice.</para>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicLatestMaintainedRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmFieldNotice", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiDcnmFieldNotice:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicLatestMaintainedRelease:GetCmdletBase
 	{
-		public GetIntersightNiaapiDcnmFieldNotice()
+		public GetIntersightNiaapiApicLatestMaintainedRelease()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiDcnmFieldNoticeListWithHttpInfo";
+            MethodName = "GetNiaapiApicLatestMaintainedReleaseListWithHttpInfo";
 		}
         
         // <summary>
@@ -2045,16 +1484,6 @@ namespace Intersight.PowerShell
         }
         
         
-        
-        // <summary>
-        /// <para type="description">"Bug Id associated with this notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Bugid {
-            get;
-            set;
-        }
         
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -2077,51 +1506,11 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Field notice Description."</para>
+        /// <para type="description">"Lastest maintained release."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string FieldNoticeDesc {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Fieldnotice Id of this notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string FieldNoticeId {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Field notice URL link to the notice webpage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string FieldNoticeUrl {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The headline of this field notice."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Headline {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Hardware PID for affected models."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Hwpid {
+        public string MaintainedRelease {
             get;
             set;
         }
@@ -2158,7 +1547,6 @@ namespace Intersight.PowerShell
         }
         
         
-        
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -2170,11 +1558,11 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Software Release number for affected versions."</para>
+        /// <para type="description">"Software release version string."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string SwRelease {
+        public string SoftwareRelease {
             get;
             set;
         }
@@ -2182,11 +1570,11 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"URL of workaround of this notice."</para>
+        /// <para type="description">"Long lived version or short lived version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string WorkaroundUrl {
+        public string VersionTag {
             get;
             set;
         }
@@ -2634,6 +2022,218 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiFileDownloader.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiFileDownloader", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiFileDownloader:GetCmdletBase
+	{
+		public GetIntersightNiaapiFileDownloader()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiFileDownloaderListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Filename of this Metadata package file, folder will be handled by api."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string FileName {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The presigned URL from server to download this file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string PresignedUrl {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiVersionRegex.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiVersionRegex", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiVersionRegex:GetCmdletBase
+	{
+		public GetIntersightNiaapiVersionRegex()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiVersionRegexListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Version number for the Version Regex data, also used as identity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Version {
+            get;
+            set;
+        }
+        
+
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiNiaMetadata.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNiaMetadata", DefaultParameterSetName = "CmdletParam")]
@@ -2765,15 +2365,15 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get NiaapiNibMetadata.</para>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiApicReleaseRecommend.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibMetadata", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightNiaapiNibMetadata:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicReleaseRecommend", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiApicReleaseRecommend:GetCmdletBase
 	{
-		public GetIntersightNiaapiNibMetadata()
+		public GetIntersightNiaapiApicReleaseRecommend()
 		{
 			ApiInstance = new NiaapiApi(Config);
-            MethodName = "GetNiaapiNibMetadataListWithHttpInfo";
+            MethodName = "GetNiaapiApicReleaseRecommendListWithHttpInfo";
 		}
         
         // <summary>
@@ -2788,6 +2388,15 @@ namespace Intersight.PowerShell
         
         
         
+        // <summary>
+        /// <para type="description">"Current long-lived release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Cll {
+            get;
+            set;
+        }
         
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -2800,11 +2409,11 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"The date when the package was generated."</para>
+        /// <para type="description">"Customer recommended releases."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public DateTime Date {
+        public string Crr {
             get;
             set;
         }
@@ -2820,21 +2429,281 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Chksum used to check the integrity of the metadata file downloaded."</para>
+        /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string MetadataChksum {
+        public DateTime ModTime {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"The filename of the metadata package."</para>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Hardware model identificator."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string MetadataFilename {
+        public string Pid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Upcoming long-lived release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Ull {
+            get;
+            set;
+        }
+        
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmSweol.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmSweol", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmSweol:GetCmdletBase
+	{
+		public GetIntersightNiaapiDcnmSweol()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiDcnmSweolListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"String contains the Release versions affected by this notice, seperated by comma."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AffectedVersions {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Date time of this notice Announced."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime AnnouncementDate {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Epoch time of this notice Announced."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long AnnouncementDateEpoch {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The bulletinno of this software release end of life notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string BulletinNo {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The description of this software release end of life notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Description {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Date time of End of New service attachment ."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime EndofNewServiceAttachmentDate {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Epoch time of End of New service attachment ."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long EndofNewServiceAttachmentDateEpoch {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Date time of End of Renewal of service contract ."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime EndofServiceContractRenewalDate {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Epoch time of End of Renewal of service contract ."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long EndofServiceContractRenewalDateEpoch {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Date time of End of Maintenance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime EndofSwMaintenanceDate {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Epoch time of End of Maintenance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long EndofSwMaintenanceDateEpoch {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The title of this software release end of life notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Headline {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Date time of Last day of Support ."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime LastDateofSupport {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Epoch time of Last day of Support ."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long LastDateofSupportEpoch {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Date time of Lastship Date."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime LastShipDate {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Epoch time of Lastship Date."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long LastShipDateEpoch {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The URL of this migration notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string MigrationUrl {
             get;
             set;
         }
@@ -2881,16 +2750,147 @@ namespace Intersight.PowerShell
             set;
         }
         
-        
         // <summary>
-        /// <para type="description">"The version number of the metadata package."</para>
+        /// <para type="description">"Software end of life notice URL link to the notice webpage."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public long Version {
+        public string SoftwareEolUrl {
             get;
             set;
         }
+        
+        
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmCcoPost.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmCcoPost", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiaapiDcnmCcoPost:GetCmdletBase
+	{
+		public GetIntersightNiaapiDcnmCcoPost()
+		{
+			ApiInstance = new NiaapiApi(Config);
+            MethodName = "GetNiaapiDcnmCcoPostListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The date when this new release notice is posted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime PostDate {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The document type of this post."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string PostType {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Identificator of this inbox post."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Postid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Revision number of this notice."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Revision {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
         
 
         

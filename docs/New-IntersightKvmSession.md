@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKvmSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-KvmLaunchUrlPath< string>][-Moid< string>][-OneTimePassword< string>][-Server< ComputePhysicalRelationship>][-Status< KvmSession.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tunnel< KvmTunnelRelationship>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightKvmSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-KvmLaunchUrlPath< string>][-KvmSessionId< string>][-Moid< string>][-OneTimePassword< string>][-Server< ComputePhysicalRelationship>][-Status< KvmSession.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tunnel< KvmTunnelRelationship>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KvmSession&amp;apos; resource.
+Create a &apos;KvmSession&apos; resource.
 
 ## PARAMETERS
 
@@ -40,6 +40,21 @@ Accept wildcard characters: False
 
 ### -KvmLaunchUrlPath
 One time URL that is used to launch the KVM console.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KvmSessionId
+Unique ID of the KVM Session URI.
 
 ```yaml
 Type: string

@@ -19,7 +19,7 @@ New-IntersightRecoveryBackupProfile [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Create a &apos;RecoveryBackupProfile&apos; resource.
+Create a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
 
 ## PARAMETERS
 

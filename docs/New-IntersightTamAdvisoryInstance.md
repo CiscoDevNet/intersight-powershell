@@ -226,10 +226,10 @@ PS C:\> New-IntersightTamAdvisoryInstance
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
+
 [Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
 
 [Remove-IntersightTamAdvisoryInstance](./Remove-IntersightTamAdvisoryInstance.md)
-
-[Get-IntersightTamAdvisoryInstance](./Get-IntersightTamAdvisoryInstance.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

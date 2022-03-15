@@ -358,11 +358,11 @@ PS C:\> Set-IntersightKubernetesBaremetalNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
-
 [Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
 
 [New-IntersightKubernetesBaremetalNodeProfile](./New-IntersightKubernetesBaremetalNodeProfile.md)
+
+[Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

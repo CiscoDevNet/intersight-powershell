@@ -19,7 +19,7 @@ New-IntersightRecoveryScheduleConfigPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryScheduleConfigPolicy&amp;apos; resource.
+Create a &apos;RecoveryScheduleConfigPolicy&apos; resource.
 
 ## PARAMETERS
 

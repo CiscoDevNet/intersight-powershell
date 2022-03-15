@@ -19,7 +19,7 @@ Set-IntersightCapabilitySiocModuleDescriptor [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilitySiocModuleDescriptor&apos; resource.
+Update a &amp;apos;CapabilitySiocModuleDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

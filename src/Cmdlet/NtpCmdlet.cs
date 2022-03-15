@@ -8,18 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove NtpPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightNtpPolicy")]
-    public class RemoveIntersightNtpPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightNtpPolicy()
-		{
-			ApiInstance = new NtpApi(Config);
-            MethodName = "DeleteNtpPolicyWithHttpInfo";
-		}
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NtpPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightNtpPolicy")]
@@ -161,6 +149,18 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove NtpPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightNtpPolicy")]
+    public class RemoveIntersightNtpPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightNtpPolicy()
+		{
+			ApiInstance = new NtpApi(Config);
+            MethodName = "DeleteNtpPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New NtpPolicy.</para>

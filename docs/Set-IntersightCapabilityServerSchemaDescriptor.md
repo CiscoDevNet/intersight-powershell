@@ -19,7 +19,7 @@ Set-IntersightCapabilityServerSchemaDescriptor [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilityServerSchemaDescriptor&apos; resource.
+Update a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -235,10 +235,10 @@ PS C:\> Set-IntersightCapabilityServerSchemaDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)
+
 [Get-IntersightCapabilityServerSchemaDescriptor](./Get-IntersightCapabilityServerSchemaDescriptor.md)
 
 [New-IntersightCapabilityServerSchemaDescriptor](./New-IntersightCapabilityServerSchemaDescriptor.md)
-
-[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

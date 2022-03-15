@@ -17,7 +17,7 @@ Remove-IntersightComputeRackUnitIdentity -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ComputeRackUnitIdentity&apos; resource.
+Delete a &amp;apos;ComputeRackUnitIdentity&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightComputeRackUnitIdentity](./Get-IntersightComputeRackUnitIdentity.md)
-
 [Set-IntersightComputeRackUnitIdentity](./Set-IntersightComputeRackUnitIdentity.md)
+
+[Get-IntersightComputeRackUnitIdentity](./Get-IntersightComputeRackUnitIdentity.md)
 

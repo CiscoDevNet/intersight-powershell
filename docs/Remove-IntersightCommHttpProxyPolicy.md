@@ -17,7 +17,7 @@ Remove-IntersightCommHttpProxyPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;CommHttpProxyPolicy&apos; resource.
+Delete a &amp;apos;CommHttpProxyPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCommHttpProxyPolicy](./New-IntersightCommHttpProxyPolicy.md)
+[Set-IntersightCommHttpProxyPolicy](./Set-IntersightCommHttpProxyPolicy.md)
 
 [Get-IntersightCommHttpProxyPolicy](./Get-IntersightCommHttpProxyPolicy.md)
 
-[Set-IntersightCommHttpProxyPolicy](./Set-IntersightCommHttpProxyPolicy.md)
+[New-IntersightCommHttpProxyPolicy](./New-IntersightCommHttpProxyPolicy.md)
 

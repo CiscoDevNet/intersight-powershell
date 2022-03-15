@@ -8,373 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesStatefulSetStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesStatefulSetStatus")]
-    public class InitializeIntersightKubernetesStatefulSetStatus:PSCmdlet
-	{
-		public InitializeIntersightKubernetesStatefulSetStatus()
-		{
-            ClassId = KubernetesStatefulSetStatus.ClassIdEnum.KubernetesStatefulSetStatus;
-            ObjectType = KubernetesStatefulSetStatus.ObjectTypeEnum.KubernetesStatefulSetStatus;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"AvailableReplicas indicates the current avaliable replicas running."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long AvailableReplicas {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesStatefulSetStatus.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CollisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CollisionCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CurrentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string CurrentRevision {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesStatefulSetStatus.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"ObservedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ObservedGeneration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"ReadyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ReadyReplicas {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of replicas the statefulset desired to have."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Replicas {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number <replicas> - <updatedReplicas>, until pod number <replicas>."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string UpdateRevision {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"UpdatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long UpdatedReplicas {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesStatefulSetStatus initObject = new Intersight.Model.KubernetesStatefulSetStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AvailableReplicas"))
-            {
-                initObject.AvailableReplicas = this.AvailableReplicas;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CollisionCount"))
-            {
-                initObject.CollisionCount = this.CollisionCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("CurrentRevision"))
-            {
-                initObject.CurrentRevision = this.CurrentRevision;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ObservedGeneration"))
-            {
-                initObject.ObservedGeneration = this.ObservedGeneration;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReadyReplicas"))
-            {
-                initObject.ReadyReplicas = this.ReadyReplicas;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Replicas"))
-            {
-                initObject.Replicas = this.Replicas;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UpdateRevision"))
-            {
-                initObject.UpdateRevision = this.UpdateRevision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UpdatedReplicas"))
-            {
-                initObject.UpdatedReplicas = this.UpdatedReplicas;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesOvsBond.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesOvsBond")]
-    public class InitializeIntersightKubernetesOvsBond:PSCmdlet
-	{
-		public InitializeIntersightKubernetesOvsBond()
-		{
-            ClassId = KubernetesOvsBond.ClassIdEnum.KubernetesOvsBond;
-            ObjectType = KubernetesOvsBond.ObjectTypeEnum.KubernetesOvsBond;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Addresses {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesOvsBond.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Deprecated. This will add a default route as long as the first default route in Routes is not different. If is different, Gateway will be replaced with that default route. If there is no default Route and this is set, then Routes will be updated with the first entry as a default with this default gateway. If there is only one default Route and this gateway becomes empty, then the default routes will all be removed. Do not set if using Ip Pools, as the gateway is configured in the pool. This will be removed in the future."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Gateway {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Interfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.KubernetesIpV4Config> IpV4Configs {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The MTU to assign to this Network Interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Mtu {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name for this network interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesOvsBond.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.KubernetesRoute> Routes {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Native VLAN for to use for the bond."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Vlan {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesOvsBond initObject = new Intersight.Model.KubernetesOvsBond();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Addresses"))
-            {
-                initObject.Addresses = this.Addresses;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Gateway"))
-            {
-                initObject.Gateway = this.Gateway;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
-            {
-                initObject.Interfaces = this.Interfaces;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpV4Configs"))
-            {
-                initObject.IpV4Configs = this.IpV4Configs;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
-            {
-                initObject.Mtu = this.Mtu;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Routes"))
-            {
-                initObject.Routes = this.Routes;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vlan"))
-            {
-                initObject.Vlan = this.Vlan;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesConfiguration")]
-    public class InitializeIntersightKubernetesConfiguration:PSCmdlet
-	{
-		public InitializeIntersightKubernetesConfiguration()
-		{
-            ClassId = KubernetesConfiguration.ClassIdEnum.KubernetesConfiguration;
-            ObjectType = KubernetesConfiguration.ObjectTypeEnum.KubernetesConfiguration;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesConfiguration.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesConfiguration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesConfiguration initObject = new Intersight.Model.KubernetesConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize KubernetesBaseVirtualMachineInfraConfig.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightKubernetesBaseVirtualMachineInfraConfig")]
@@ -447,6 +80,321 @@ namespace Intersight.PowerShell
                 initObject.NetworkInterfaces = this.NetworkInterfaces;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesProxyConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesProxyConfig")]
+    public class InitializeIntersightKubernetesProxyConfig:PSCmdlet
+	{
+		public InitializeIntersightKubernetesProxyConfig()
+		{
+            ClassId = KubernetesProxyConfig.ClassIdEnum.KubernetesProxyConfig;
+            ObjectType = KubernetesProxyConfig.ObjectTypeEnum.KubernetesProxyConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesProxyConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"HTTP/HTTPS Proxy server FQDN or IP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Hostname {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesProxyConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password for the HTTP/HTTPS Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Password {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The HTTP Proxy port number.\nThe port number of the HTTP/HTTPS proxy must be between 1 and 65535, inclusive."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 65535)]
+        public long Port {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Protocol to use for the HTTP/HTTPS Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Protocol {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The username for the HTTP/HTTPS Proxy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Username {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesProxyConfig initObject = new Intersight.Model.KubernetesProxyConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Hostname"))
+            {
+                initObject.Hostname = this.Hostname;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            {
+                initObject.Password = this.Password;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
+            {
+                initObject.Port = this.Port;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Protocol"))
+            {
+                initObject.Protocol = this.Protocol;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Username"))
+            {
+                initObject.Username = this.Username;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNetworkInterfaceSpec.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNetworkInterfaceSpec")]
+    public class InitializeIntersightKubernetesNetworkInterfaceSpec:PSCmdlet
+	{
+		public InitializeIntersightKubernetesNetworkInterfaceSpec()
+		{
+            ClassId = KubernetesNetworkInterfaceSpec.ClassIdEnum.KubernetesNetworkInterfaceSpec;
+            ObjectType = KubernetesNetworkInterfaceSpec.ObjectTypeEnum.KubernetesNetworkInterfaceSpec;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNetworkInterfaceSpec.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MTU for this Network Interface.  If left blank a default value will apply by the Operating System."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Mtu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"NetworkInterfaceSpec is the specification for network interfaces - including configuration of IP Pools and VRF to determine IP configuration, the operating system device settings, and virtual adapter network settings. It can be left empty when used with VirtualMachineInfraConfigPolicy - it will be filled out based on the hypervisor platform type and will match the naming and order of interfaces provided by the hypervisor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNetworkInterfaceSpec.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoMoRef> Pools {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"In other words, to which named network from the Instructure Provider will the port be connected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ProviderName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Allows for reusing IP Pools across disconnected L2 segments for different Kubernetes clusters within an account. If not set, the VRF named (default) will be used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.MoMoRef Vrf {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesNetworkInterfaceSpec initObject = new Intersight.Model.KubernetesNetworkInterfaceSpec();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
+            {
+                initObject.Mtu = this.Mtu;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pools"))
+            {
+                initObject.Pools = this.Pools;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProviderName"))
+            {
+                initObject.ProviderName = this.ProviderName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vrf"))
+            {
+                initObject.Vrf = this.Vrf;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNodeAddress.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNodeAddress")]
+    public class InitializeIntersightKubernetesNodeAddress:PSCmdlet
+	{
+		public InitializeIntersightKubernetesNodeAddress()
+		{
+            ClassId = KubernetesNodeAddress.ClassIdEnum.KubernetesNodeAddress;
+            ObjectType = KubernetesNodeAddress.ObjectTypeEnum.KubernetesNodeAddress;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The address of type specified by the type field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Address {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNodeAddress.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNodeAddress.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The address type of the Node. The usage of the IP address depending on the cloud provider or bare metal configuration. HostName - The hostname as reported by the node's kernel. ExternalIP - Typically the IP address of the node that is externally routable (available from outside the cluster) InternalIP - Typically the IP address of the node that is routable only within the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesNodeAddress initObject = new Intersight.Model.KubernetesNodeAddress();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Address"))
+            {
+                initObject.Address = this.Address;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
             WriteObject(initObject);
         }
 
@@ -526,6 +474,256 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
             {
                 initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesServiceStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesServiceStatus")]
+    public class InitializeIntersightKubernetesServiceStatus:PSCmdlet
+	{
+		public InitializeIntersightKubernetesServiceStatus()
+		{
+            ClassId = KubernetesServiceStatus.ClassIdEnum.KubernetesServiceStatus;
+            ObjectType = KubernetesServiceStatus.ObjectTypeEnum.KubernetesServiceStatus;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesServiceStatus.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It reflects the Kubernetes Load Balancer Type (Cluster IP, NodePort and LoadBalancer). If the service is a LoadBalancer type of service, it will also report the LoadBalancer IP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.KubernetesLoadBalancer LoadBalancer {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesServiceStatus.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesServiceStatus initObject = new Intersight.Model.KubernetesServiceStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancer"))
+            {
+                initObject.LoadBalancer = this.LoadBalancer;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesLoadBalancer.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesLoadBalancer")]
+    public class InitializeIntersightKubernetesLoadBalancer:PSCmdlet
+	{
+		public InitializeIntersightKubernetesLoadBalancer()
+		{
+            ClassId = KubernetesLoadBalancer.ClassIdEnum.KubernetesLoadBalancer;
+            ObjectType = KubernetesLoadBalancer.ObjectTypeEnum.KubernetesLoadBalancer;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesLoadBalancer.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> IpAddresses {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesLoadBalancer.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesLoadBalancer initObject = new Intersight.Model.KubernetesLoadBalancer();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpAddresses"))
+            {
+                initObject.IpAddresses = this.IpAddresses;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesClusterManagementConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesClusterManagementConfig")]
+    public class InitializeIntersightKubernetesClusterManagementConfig:PSCmdlet
+	{
+		public InitializeIntersightKubernetesClusterManagementConfig()
+		{
+            ClassId = KubernetesClusterManagementConfig.ClassIdEnum.KubernetesClusterManagementConfig;
+            ObjectType = KubernetesClusterManagementConfig.ObjectTypeEnum.KubernetesClusterManagementConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesClusterManagementConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of IP addresses to reserve for load balancer services."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long LoadBalancerCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> LoadBalancers {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VIP for the cluster Kubernetes API server. If this is empty and a cluster IP pool is specified, it will be allocated from the IP pool."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string MasterVip {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesClusterManagementConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> SshKeys {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Hashed password of the TAC user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TacPasswd {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesClusterManagementConfig initObject = new Intersight.Model.KubernetesClusterManagementConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancerCount"))
+            {
+                initObject.LoadBalancerCount = this.LoadBalancerCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancers"))
+            {
+                initObject.LoadBalancers = this.LoadBalancers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MasterVip"))
+            {
+                initObject.MasterVip = this.MasterVip;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SshKeys"))
+            {
+                initObject.SshKeys = this.SshKeys;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TacPasswd"))
+            {
+                initObject.TacPasswd = this.TacPasswd;
             }
             WriteObject(initObject);
         }
@@ -619,244 +817,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Value = this.Value;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNodeSpec.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNodeSpec")]
-    public class InitializeIntersightKubernetesNodeSpec:PSCmdlet
-	{
-		public InitializeIntersightKubernetesNodeSpec()
-		{
-            ClassId = KubernetesNodeSpec.ClassIdEnum.KubernetesNodeSpec;
-            ObjectType = KubernetesNodeSpec.ObjectTypeEnum.KubernetesNodeSpec;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesNodeSpec.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesNodeSpec.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Node Pod CIDR. In Kubernetes, the workload (Pod) is allocated to an IP address by Kubernetes. The IP address is from a Pod CIDR of the cluster. Each node will (mostly) evenly be distributed the Pod CIDR."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string PodCidr {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Kubernetes can be running on a specific cloud provider such as Openstack, Amazon Web Services, vCenter etc. Each cloud provider will have a specific cloud provider ID. This field is to represent that ID for the corresponding Kubernetes cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ProviderId {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesNodeSpec initObject = new Intersight.Model.KubernetesNodeSpec();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PodCidr"))
-            {
-                initObject.PodCidr = this.PodCidr;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProviderId"))
-            {
-                initObject.ProviderId = this.ProviderId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesHyperFlexApVirtualMachineInfraConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesHyperFlexApVirtualMachineInfraConfig")]
-    public class InitializeIntersightKubernetesHyperFlexApVirtualMachineInfraConfig:PSCmdlet
-	{
-		public InitializeIntersightKubernetesHyperFlexApVirtualMachineInfraConfig()
-		{
-            ClassId = KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum.KubernetesHyperFlexApVirtualMachineInfraConfig;
-            DiskMode = KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum.Block;
-            ObjectType = KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum.KubernetesHyperFlexApVirtualMachineInfraConfig;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk mode to use for volumes.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum DiskMode {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Interfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.KubernetesNetworkInterfaceSpec> NetworkInterfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesHyperFlexApVirtualMachineInfraConfig initObject = new Intersight.Model.KubernetesHyperFlexApVirtualMachineInfraConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DiskMode"))
-            {
-                initObject.DiskMode = this.DiskMode;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
-            {
-                initObject.Interfaces = this.Interfaces;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkInterfaces"))
-            {
-                initObject.NetworkInterfaces = this.NetworkInterfaces;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesIngressStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesIngressStatus")]
-    public class InitializeIntersightKubernetesIngressStatus:PSCmdlet
-	{
-		public InitializeIntersightKubernetesIngressStatus()
-		{
-            ClassId = KubernetesIngressStatus.ClassIdEnum.KubernetesIngressStatus;
-            ObjectType = KubernetesIngressStatus.ObjectTypeEnum.KubernetesIngressStatus;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesIngressStatus.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"LoadBalancer contains the current status of the load-balancer."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.KubernetesLoadBalancer LoadBalancer {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesIngressStatus.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesIngressStatus initObject = new Intersight.Model.KubernetesIngressStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancer"))
-            {
-                initObject.LoadBalancer = this.LoadBalancer;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -1032,148 +992,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesAddonConfiguration.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesOvsBond.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesAddonConfiguration")]
-    public class InitializeIntersightKubernetesAddonConfiguration:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesOvsBond")]
+    public class InitializeIntersightKubernetesOvsBond:PSCmdlet
 	{
-		public InitializeIntersightKubernetesAddonConfiguration()
+		public InitializeIntersightKubernetesOvsBond()
 		{
-            ClassId = KubernetesAddonConfiguration.ClassIdEnum.KubernetesAddonConfiguration;
-            InstallStrategy = KubernetesAddonConfiguration.InstallStrategyEnum.None;
-            ObjectType = KubernetesAddonConfiguration.ObjectTypeEnum.KubernetesAddonConfiguration;
-            UpgradeStrategy = KubernetesAddonConfiguration.UpgradeStrategyEnum.None;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesAddonConfiguration.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Addon install strategy to determine whether an addon is installed if not present.\n* `None` - Unspecified install strategy.\n* `NoAction` - No install action performed.\n* `InstallOnly` - Only install in green field. No action in case of failure or removal.\n* `Always` - Attempt install if chart is not already installed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesAddonConfiguration.InstallStrategyEnum InstallStrategy {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesAddonConfiguration.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.KubernetesKeyValue> OverrideSets {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Properties that can be overridden for an addon."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Overrides {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name for the helm release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ReleaseName {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Namespace for the helm release."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ReleaseNamespace {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Addon upgrade strategy to determine whether an addon configuration is overwritten on upgrade.\n* `None` - Unspecified upgrade strategy.\n* `NoAction` - This choice enables No upgrades to be performed.\n* `UpgradeOnly` - Attempt upgrade if chart or overrides options change, no action on upgrade failure.\n* `ReinstallOnFailure` - Attempt upgrade first. Remove and install on upgrade failure.\n* `AlwaysReinstall` - Always remove older release and reinstall."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesAddonConfiguration.UpgradeStrategyEnum UpgradeStrategy {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesAddonConfiguration initObject = new Intersight.Model.KubernetesAddonConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("InstallStrategy"))
-            {
-                initObject.InstallStrategy = this.InstallStrategy;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OverrideSets"))
-            {
-                initObject.OverrideSets = this.OverrideSets;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Overrides"))
-            {
-                initObject.Overrides = this.Overrides;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseName"))
-            {
-                initObject.ReleaseName = this.ReleaseName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNamespace"))
-            {
-                initObject.ReleaseNamespace = this.ReleaseNamespace;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeStrategy"))
-            {
-                initObject.UpgradeStrategy = this.UpgradeStrategy;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesEthernet.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesEthernet")]
-    public class InitializeIntersightKubernetesEthernet:PSCmdlet
-	{
-		public InitializeIntersightKubernetesEthernet()
-		{
-            ClassId = KubernetesEthernet.ClassIdEnum.KubernetesEthernet;
-            ObjectType = KubernetesEthernet.ObjectTypeEnum.KubernetesEthernet;
+            ClassId = KubernetesOvsBond.ClassIdEnum.KubernetesOvsBond;
+            ObjectType = KubernetesOvsBond.ObjectTypeEnum.KubernetesOvsBond;
             
 		}
         // <summary>
@@ -1199,7 +1026,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesEthernet.ClassIdEnum ClassId {
+        public KubernetesOvsBond.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1217,16 +1044,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<Model.KubernetesIpV4Config> IpV4Configs {
+        public List<string> Interfaces {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The matcher to be used to find the physical network interface represented by this ethernet device."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public Model.KubernetesEthernetMatcher Matcher {
+        public List<Model.KubernetesIpV4Config> IpV4Configs {
             get;
             set;
         }
@@ -1253,16 +1080,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesEthernet.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If the infrastructure network is selectable, this indicates which network to attach to the port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ProviderName {
+        public KubernetesOvsBond.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -1275,10 +1093,19 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Native VLAN for to use for the bond."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Vlan {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesEthernet initObject = new Intersight.Model.KubernetesEthernet();
+             Intersight.Model.KubernetesOvsBond initObject = new Intersight.Model.KubernetesOvsBond();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1292,13 +1119,13 @@ namespace Intersight.PowerShell
             {
                 initObject.Gateway = this.Gateway;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
+            {
+                initObject.Interfaces = this.Interfaces;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("IpV4Configs"))
             {
                 initObject.IpV4Configs = this.IpV4Configs;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Matcher"))
-            {
-                initObject.Matcher = this.Matcher;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
             {
@@ -1309,28 +1136,28 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProviderName"))
-            {
-                initObject.ProviderName = this.ProviderName;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Routes"))
             {
                 initObject.Routes = this.Routes;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vlan"))
+            {
+                initObject.Vlan = this.Vlan;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesClusterManagementConfig.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesEssentialAddon.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesClusterManagementConfig")]
-    public class InitializeIntersightKubernetesClusterManagementConfig:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesEssentialAddon")]
+    public class InitializeIntersightKubernetesEssentialAddon:PSCmdlet
 	{
-		public InitializeIntersightKubernetesClusterManagementConfig()
+		public InitializeIntersightKubernetesEssentialAddon()
 		{
-            ClassId = KubernetesClusterManagementConfig.ClassIdEnum.KubernetesClusterManagementConfig;
-            ObjectType = KubernetesClusterManagementConfig.ObjectTypeEnum.KubernetesClusterManagementConfig;
+            ClassId = KubernetesEssentialAddon.ClassIdEnum.KubernetesEssentialAddon;
+            ObjectType = KubernetesEssentialAddon.ObjectTypeEnum.KubernetesEssentialAddon;
             
 		}
         // <summary>
@@ -1343,38 +1170,38 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Addon configuration settings that are specific to a single cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.KubernetesAddonConfiguration AddonConfiguration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Addon definition associated with the addon."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.MoMoRef AddonDefinition {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesClusterManagementConfig.ClassIdEnum ClassId {
+        public KubernetesEssentialAddon.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Number of IP addresses to reserve for load balancer services."</para>
+        /// <para type="description">"Name of addon to be installed on a Kubernetes cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long LoadBalancerCount {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> LoadBalancers {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VIP for the cluster Kubernetes API server. If this is empty and a cluster IP pool is specified, it will be allocated from the IP pool."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string MasterVip {
+        public string Name {
             get;
             set;
         }
@@ -1383,73 +1210,46 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesClusterManagementConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> SshKeys {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Hashed password of the TAC user."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TacPasswd {
+        public KubernetesEssentialAddon.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesClusterManagementConfig initObject = new Intersight.Model.KubernetesClusterManagementConfig();
+             Intersight.Model.KubernetesEssentialAddon initObject = new Intersight.Model.KubernetesEssentialAddon();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AddonConfiguration"))
+            {
+                initObject.AddonConfiguration = this.AddonConfiguration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AddonDefinition"))
+            {
+                initObject.AddonDefinition = this.AddonDefinition;
+            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancerCount"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
-                initObject.LoadBalancerCount = this.LoadBalancerCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancers"))
-            {
-                initObject.LoadBalancers = this.LoadBalancers;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MasterVip"))
-            {
-                initObject.MasterVip = this.MasterVip;
+                initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SshKeys"))
-            {
-                initObject.SshKeys = this.SshKeys;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TacPasswd"))
-            {
-                initObject.TacPasswd = this.TacPasswd;
-            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesCalicoConfig.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesIngressStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesCalicoConfig")]
-    public class InitializeIntersightKubernetesCalicoConfig:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesIngressStatus")]
+    public class InitializeIntersightKubernetesIngressStatus:PSCmdlet
 	{
-		public InitializeIntersightKubernetesCalicoConfig()
+		public InitializeIntersightKubernetesIngressStatus()
 		{
-            ClassId = KubernetesCalicoConfig.ClassIdEnum.KubernetesCalicoConfig;
-            IpVersion = KubernetesCalicoConfig.IpVersionEnum.V4;
-            ObjectType = KubernetesCalicoConfig.ObjectTypeEnum.KubernetesCalicoConfig;
+            ClassId = KubernetesIngressStatus.ClassIdEnum.KubernetesIngressStatus;
+            ObjectType = KubernetesIngressStatus.ObjectTypeEnum.KubernetesIngressStatus;
             
 		}
         // <summary>
@@ -1466,25 +1266,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesCalicoConfig.ClassIdEnum ClassId {
+        public KubernetesIngressStatus.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"IP version that can take on values v4 or v6.\n* `v4` - This refers to the IPv4 address.\n* `v6` - This refers to the IPv6 address."</para>
+        /// <para type="description">"LoadBalancer contains the current status of the load-balancer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesCalicoConfig.IpVersionEnum IpVersion {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Workload interface maximum transmission unit (MTU)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Mtu {
+        public Model.KubernetesLoadBalancer LoadBalancer {
             get;
             set;
         }
@@ -1493,7 +1284,182 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesCalicoConfig.ObjectTypeEnum ObjectType {
+        public KubernetesIngressStatus.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesIngressStatus initObject = new Intersight.Model.KubernetesIngressStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancer"))
+            {
+                initObject.LoadBalancer = this.LoadBalancer;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesDeploymentStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesDeploymentStatus")]
+    public class InitializeIntersightKubernetesDeploymentStatus:PSCmdlet
+	{
+		public InitializeIntersightKubernetesDeploymentStatus()
+		{
+            ClassId = KubernetesDeploymentStatus.ClassIdEnum.KubernetesDeploymentStatus;
+            ObjectType = KubernetesDeploymentStatus.ObjectTypeEnum.KubernetesDeploymentStatus;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total number of available pods (ready for at least minReadySeconds) targeted by this deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AvailableReplicas {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesDeploymentStatus.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesDeploymentStatus.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The generation observed by the deployment controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ObservedGeneration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total number of ready pods targeted by this deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ReadyReplicas {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total number of non-terminated pods targeted by this deployment (their labels match the selector)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Replicas {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total number of non-terminated pods targeted by this deployment that have the desired template spec."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UpdatedReplicas {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesDeploymentStatus initObject = new Intersight.Model.KubernetesDeploymentStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AvailableReplicas"))
+            {
+                initObject.AvailableReplicas = this.AvailableReplicas;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ObservedGeneration"))
+            {
+                initObject.ObservedGeneration = this.ObservedGeneration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReadyReplicas"))
+            {
+                initObject.ReadyReplicas = this.ReadyReplicas;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Replicas"))
+            {
+                initObject.Replicas = this.Replicas;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpdatedReplicas"))
+            {
+                initObject.UpdatedReplicas = this.UpdatedReplicas;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesCniConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesCniConfig")]
+    public class InitializeIntersightKubernetesCniConfig:PSCmdlet
+	{
+		public InitializeIntersightKubernetesCniConfig()
+		{
+            ClassId = KubernetesCniConfig.ClassIdEnum.KubernetesCalicoConfig;
+            ObjectType = KubernetesCniConfig.ObjectTypeEnum.KubernetesCalicoConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesCniConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesCniConfig.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -1518,20 +1484,12 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesCalicoConfig initObject = new Intersight.Model.KubernetesCalicoConfig();
+             Intersight.Model.KubernetesCniConfig initObject = new Intersight.Model.KubernetesCniConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpVersion"))
-            {
-                initObject.IpVersion = this.IpVersion;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
-            {
-                initObject.Mtu = this.Mtu;
-            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Registry"))
             {
@@ -1546,15 +1504,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesDaemonSetStatus.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesActionInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesDaemonSetStatus")]
-    public class InitializeIntersightKubernetesDaemonSetStatus:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesActionInfo")]
+    public class InitializeIntersightKubernetesActionInfo:PSCmdlet
 	{
-		public InitializeIntersightKubernetesDaemonSetStatus()
+		public InitializeIntersightKubernetesActionInfo()
 		{
-            ClassId = KubernetesDaemonSetStatus.ClassIdEnum.KubernetesDaemonSetStatus;
-            ObjectType = KubernetesDaemonSetStatus.ObjectTypeEnum.KubernetesDaemonSetStatus;
+            ClassId = KubernetesActionInfo.ClassIdEnum.KubernetesActionInfo;
+            ObjectType = KubernetesActionInfo.ObjectTypeEnum.KubernetesActionInfo;
+            Status = KubernetesActionInfo.StatusEnum.None;
             
 		}
         // <summary>
@@ -1571,52 +1530,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesDaemonSetStatus.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long CurrentNumberScheduled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long DesiredNumberScheduled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string NumberAvailable {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumberMisscheduled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long NumberReady {
+        public KubernetesActionInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1625,80 +1539,47 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesDaemonSetStatus.ObjectTypeEnum ObjectType {
+        public KubernetesActionInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The most recent generation observed by the daemon set controller."</para>
+        /// <para type="description">"No longer maintained and will be removed soon.\n* `None` - A place holder for the default value.\n* `InProgress` - Action triggered on the resource is still running.\n* `Success` - Action triggered on the resource is completed successfully.\n* `Failure` - Action triggered on the resource is failed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long ObservedGeneration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total number of nodes that are running updated daemon pod."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string UpdatedNumberScheduled {
+        public KubernetesActionInfo.StatusEnum Status {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesDaemonSetStatus initObject = new Intersight.Model.KubernetesDaemonSetStatus();
+             Intersight.Model.KubernetesActionInfo initObject = new Intersight.Model.KubernetesActionInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CurrentNumberScheduled"))
-            {
-                initObject.CurrentNumberScheduled = this.CurrentNumberScheduled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DesiredNumberScheduled"))
-            {
-                initObject.DesiredNumberScheduled = this.DesiredNumberScheduled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumberAvailable"))
-            {
-                initObject.NumberAvailable = this.NumberAvailable;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumberMisscheduled"))
-            {
-                initObject.NumberMisscheduled = this.NumberMisscheduled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumberReady"))
-            {
-                initObject.NumberReady = this.NumberReady;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ObservedGeneration"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
             {
-                initObject.ObservedGeneration = this.ObservedGeneration;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UpdatedNumberScheduled"))
-            {
-                initObject.UpdatedNumberScheduled = this.UpdatedNumberScheduled;
+                initObject.Status = this.Status;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesAddon.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesRoute.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesAddon")]
-    public class InitializeIntersightKubernetesAddon:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesRoute")]
+    public class InitializeIntersightKubernetesRoute:PSCmdlet
 	{
-		public InitializeIntersightKubernetesAddon()
+		public InitializeIntersightKubernetesRoute()
 		{
-            ClassId = KubernetesAddon.ClassIdEnum.KubernetesAddon;
-            ObjectType = KubernetesAddon.ObjectTypeEnum.KubernetesAddon;
+            ClassId = KubernetesRoute.ClassIdEnum.KubernetesRoute;
+            ObjectType = KubernetesRoute.ObjectTypeEnum.KubernetesRoute;
             
 		}
         // <summary>
@@ -1711,38 +1592,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Addon configuration settings that are specific to a single cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.KubernetesAddonConfiguration AddonConfiguration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Addon policy associated with the addon."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.MoMoRef AddonPolicy {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesAddon.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of addon to be installed on a Kubernetes cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
+        public KubernetesRoute.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1751,32 +1605,125 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesAddon.ObjectTypeEnum ObjectType {
+        public KubernetesRoute.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The destination subnet, if set to 0.0.0.0/0 then the Route is considered a default route."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
+        public string To {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Via is the gateway for traffic destined for the subnet in the To property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Via {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesAddon initObject = new Intersight.Model.KubernetesAddon();
+             Intersight.Model.KubernetesRoute initObject = new Intersight.Model.KubernetesRoute();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AddonConfiguration"))
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("To"))
             {
-                initObject.AddonConfiguration = this.AddonConfiguration;
+                initObject.To = this.To;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AddonPolicy"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Via"))
             {
-                initObject.AddonPolicy = this.AddonPolicy;
+                initObject.Via = this.Via;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNodeStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNodeStatus")]
+    public class InitializeIntersightKubernetesNodeStatus:PSCmdlet
+	{
+		public InitializeIntersightKubernetesNodeStatus()
+		{
+            ClassId = KubernetesNodeStatus.ClassIdEnum.KubernetesNodeStatus;
+            ObjectType = KubernetesNodeStatus.ObjectTypeEnum.KubernetesNodeStatus;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNodeStatus.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNodeStatus.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Statue of the node. Indicate if the node is kubernetes ready or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Status {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the node. It can be either Master or Worker."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesNodeStatus initObject = new Intersight.Model.KubernetesNodeStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
             WriteObject(initObject);
         }
 
@@ -1940,15 +1887,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesInstanceTypeDetails.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesDaemonSetStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesInstanceTypeDetails")]
-    public class InitializeIntersightKubernetesInstanceTypeDetails:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesDaemonSetStatus")]
+    public class InitializeIntersightKubernetesDaemonSetStatus:PSCmdlet
 	{
-		public InitializeIntersightKubernetesInstanceTypeDetails()
+		public InitializeIntersightKubernetesDaemonSetStatus()
 		{
-            ClassId = KubernetesInstanceTypeDetails.ClassIdEnum.KubernetesInstanceTypeDetails;
-            ObjectType = KubernetesInstanceTypeDetails.ObjectTypeEnum.KubernetesInstanceTypeDetails;
+            ClassId = KubernetesDaemonSetStatus.ClassIdEnum.KubernetesDaemonSetStatus;
+            ObjectType = KubernetesDaemonSetStatus.ObjectTypeEnum.KubernetesDaemonSetStatus;
             
 		}
         // <summary>
@@ -1965,34 +1912,52 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesInstanceTypeDetails.ClassIdEnum ClassId {
+        public KubernetesDaemonSetStatus.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Number of CPUs in the instancetype."</para>
+        /// <para type="description">"The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long Cpu {
+        public long CurrentNumberScheduled {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Ephemeral disk capacity to be provided with units example - 10Gi."</para>
+        /// <para type="description">"The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long DiskSize {
+        public long DesiredNumberScheduled {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Virtual machine memory defined in mebibytes (MiB)."</para>
+        /// <para type="description">"The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long Memory {
+        public string NumberAvailable {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumberMisscheduled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long NumberReady {
             get;
             set;
         }
@@ -2001,30 +1966,157 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesInstanceTypeDetails.ObjectTypeEnum ObjectType {
+        public KubernetesDaemonSetStatus.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The most recent generation observed by the daemon set controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ObservedGeneration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The total number of nodes that are running updated daemon pod."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string UpdatedNumberScheduled {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesInstanceTypeDetails initObject = new Intersight.Model.KubernetesInstanceTypeDetails();
+             Intersight.Model.KubernetesDaemonSetStatus initObject = new Intersight.Model.KubernetesDaemonSetStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Cpu"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CurrentNumberScheduled"))
             {
-                initObject.Cpu = this.Cpu;
+                initObject.CurrentNumberScheduled = this.CurrentNumberScheduled;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DiskSize"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DesiredNumberScheduled"))
             {
-                initObject.DiskSize = this.DiskSize;
+                initObject.DesiredNumberScheduled = this.DesiredNumberScheduled;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Memory"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumberAvailable"))
             {
-                initObject.Memory = this.Memory;
+                initObject.NumberAvailable = this.NumberAvailable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumberMisscheduled"))
+            {
+                initObject.NumberMisscheduled = this.NumberMisscheduled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumberReady"))
+            {
+                initObject.NumberReady = this.NumberReady;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ObservedGeneration"))
+            {
+                initObject.ObservedGeneration = this.ObservedGeneration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpdatedNumberScheduled"))
+            {
+                initObject.UpdatedNumberScheduled = this.UpdatedNumberScheduled;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesHyperFlexApVirtualMachineInfraConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesHyperFlexApVirtualMachineInfraConfig")]
+    public class InitializeIntersightKubernetesHyperFlexApVirtualMachineInfraConfig:PSCmdlet
+	{
+		public InitializeIntersightKubernetesHyperFlexApVirtualMachineInfraConfig()
+		{
+            ClassId = KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum.KubernetesHyperFlexApVirtualMachineInfraConfig;
+            DiskMode = KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum.Block;
+            ObjectType = KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum.KubernetesHyperFlexApVirtualMachineInfraConfig;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disk mode to use for volumes.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum DiskMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Interfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.KubernetesNetworkInterfaceSpec> NetworkInterfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesHyperFlexApVirtualMachineInfraConfig initObject = new Intersight.Model.KubernetesHyperFlexApVirtualMachineInfraConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DiskMode"))
+            {
+                initObject.DiskMode = this.DiskMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
+            {
+                initObject.Interfaces = this.Interfaces;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkInterfaces"))
+            {
+                initObject.NetworkInterfaces = this.NetworkInterfaces;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -2032,16 +2124,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesActionInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesPodStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesActionInfo")]
-    public class InitializeIntersightKubernetesActionInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesPodStatus")]
+    public class InitializeIntersightKubernetesPodStatus:PSCmdlet
 	{
-		public InitializeIntersightKubernetesActionInfo()
+		public InitializeIntersightKubernetesPodStatus()
 		{
-            ClassId = KubernetesActionInfo.ClassIdEnum.KubernetesActionInfo;
-            ObjectType = KubernetesActionInfo.ObjectTypeEnum.KubernetesActionInfo;
-            Status = KubernetesActionInfo.StatusEnum.None;
+            ClassId = KubernetesPodStatus.ClassIdEnum.KubernetesPodStatus;
+            ObjectType = KubernetesPodStatus.ObjectTypeEnum.KubernetesPodStatus;
             
 		}
         // <summary>
@@ -2058,7 +2149,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesActionInfo.ClassIdEnum ClassId {
+        public KubernetesPodStatus.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The IP of the host that the pod is running on."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string HostIp {
             get;
             set;
         }
@@ -2067,32 +2167,75 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesActionInfo.ObjectTypeEnum ObjectType {
+        public KubernetesPodStatus.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"No longer maintained and will be removed soon.\n* `None` - A place holder for the default value.\n* `InProgress` - Action triggered on the resource is still running.\n* `Success` - Action triggered on the resource is completed successfully.\n* `Failure` - Action triggered on the resource is failed."</para>
+        /// <para type="description">"The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesActionInfo.StatusEnum Status {
+        public string Phase {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The IP of the pod. The IP is allocated by the Pod CIDR from the kubernetes cluster itself."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PodIp {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Quality of Service (QOS) classification assigned to the pod based on resource requirements."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string QosClass {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The time that the pod was started."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string StartTime {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesActionInfo initObject = new Intersight.Model.KubernetesActionInfo();
+             Intersight.Model.KubernetesPodStatus initObject = new Intersight.Model.KubernetesPodStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("HostIp"))
             {
-                initObject.Status = this.Status;
+                initObject.HostIp = this.HostIp;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Phase"))
+            {
+                initObject.Phase = this.Phase;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PodIp"))
+            {
+                initObject.PodIp = this.PodIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QosClass"))
+            {
+                initObject.QosClass = this.QosClass;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StartTime"))
+            {
+                initObject.StartTime = this.StartTime;
             }
             WriteObject(initObject);
         }
@@ -2178,15 +2321,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesIpV4Config.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesCalicoConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesIpV4Config")]
-    public class InitializeIntersightKubernetesIpV4Config:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesCalicoConfig")]
+    public class InitializeIntersightKubernetesCalicoConfig:PSCmdlet
 	{
-		public InitializeIntersightKubernetesIpV4Config()
+		public InitializeIntersightKubernetesCalicoConfig()
 		{
-            ClassId = KubernetesIpV4Config.ClassIdEnum.KubernetesIpV4Config;
-            ObjectType = KubernetesIpV4Config.ObjectTypeEnum.KubernetesIpV4Config;
+            ClassId = KubernetesCalicoConfig.ClassIdEnum.KubernetesCalicoConfig;
+            IpVersion = KubernetesCalicoConfig.IpVersionEnum.V4;
+            ObjectType = KubernetesCalicoConfig.ObjectTypeEnum.KubernetesCalicoConfig;
             
 		}
         // <summary>
@@ -2203,16 +2347,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesIpV4Config.ClassIdEnum ClassId {
+        public KubernetesCalicoConfig.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"IPv4 Address in CIDR format."</para>
+        /// <para type="description">"IP version that can take on values v4 or v6.\n* `v4` - This refers to the IPv4 address.\n* `v6` - This refers to the IPv6 address."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
-        public string Ip {
+        
+        public KubernetesCalicoConfig.IpVersionEnum IpVersion {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Workload interface maximum transmission unit (MTU)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Mtu {
             get;
             set;
         }
@@ -2221,287 +2374,68 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesIpV4Config.ObjectTypeEnum ObjectType {
+        public KubernetesCalicoConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CNI Image registry location."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Registry {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Container newtork interface plugin configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Version {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesIpV4Config initObject = new Intersight.Model.KubernetesIpV4Config();
+             Intersight.Model.KubernetesCalicoConfig initObject = new Intersight.Model.KubernetesCalicoConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Ip"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpVersion"))
             {
-                initObject.Ip = this.Ip;
+                initObject.IpVersion = this.IpVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
+            {
+                initObject.Mtu = this.Mtu;
             }
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesEsxiVirtualMachineInfraConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesEsxiVirtualMachineInfraConfig")]
-    public class InitializeIntersightKubernetesEsxiVirtualMachineInfraConfig:PSCmdlet
-	{
-		public InitializeIntersightKubernetesEsxiVirtualMachineInfraConfig()
-		{
-            ClassId = KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum.KubernetesEsxiVirtualMachineInfraConfig;
-            ObjectType = KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum.KubernetesEsxiVirtualMachineInfraConfig;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the vSphere cluster on which the virtual machines are created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Cluster {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the datasore on which the virtual machine disks are created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Datastore {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Interfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.KubernetesNetworkInterfaceSpec> NetworkInterfaces {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Passphrase for the vcenter user."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Passphrase {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the vSphere resource pool on which the virtual machines are created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ResourcePool {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesEsxiVirtualMachineInfraConfig initObject = new Intersight.Model.KubernetesEsxiVirtualMachineInfraConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Registry"))
             {
-                initObject.AdditionalProperties = this.AdditionalProperties;
+                initObject.Registry = this.Registry;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Cluster"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject.Cluster = this.Cluster;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Datastore"))
-            {
-                initObject.Datastore = this.Datastore;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
-            {
-                initObject.Interfaces = this.Interfaces;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkInterfaces"))
-            {
-                initObject.NetworkInterfaces = this.NetworkInterfaces;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Passphrase"))
-            {
-                initObject.Passphrase = this.Passphrase;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePool"))
-            {
-                initObject.ResourcePool = this.ResourcePool;
+                initObject._Version = this.Version;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesDeploymentStatus.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesAddon.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesDeploymentStatus")]
-    public class InitializeIntersightKubernetesDeploymentStatus:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesAddon")]
+    public class InitializeIntersightKubernetesAddon:PSCmdlet
 	{
-		public InitializeIntersightKubernetesDeploymentStatus()
+		public InitializeIntersightKubernetesAddon()
 		{
-            ClassId = KubernetesDeploymentStatus.ClassIdEnum.KubernetesDeploymentStatus;
-            ObjectType = KubernetesDeploymentStatus.ObjectTypeEnum.KubernetesDeploymentStatus;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total number of available pods (ready for at least minReadySeconds) targeted by this deployment."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long AvailableReplicas {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesDeploymentStatus.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesDeploymentStatus.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The generation observed by the deployment controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ObservedGeneration {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total number of ready pods targeted by this deployment."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long ReadyReplicas {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total number of non-terminated pods targeted by this deployment (their labels match the selector)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Replicas {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Total number of non-terminated pods targeted by this deployment that have the desired template spec."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long UpdatedReplicas {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesDeploymentStatus initObject = new Intersight.Model.KubernetesDeploymentStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AvailableReplicas"))
-            {
-                initObject.AvailableReplicas = this.AvailableReplicas;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ObservedGeneration"))
-            {
-                initObject.ObservedGeneration = this.ObservedGeneration;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReadyReplicas"))
-            {
-                initObject.ReadyReplicas = this.ReadyReplicas;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Replicas"))
-            {
-                initObject.Replicas = this.Replicas;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UpdatedReplicas"))
-            {
-                initObject.UpdatedReplicas = this.UpdatedReplicas;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesEssentialAddon.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesEssentialAddon")]
-    public class InitializeIntersightKubernetesEssentialAddon:PSCmdlet
-	{
-		public InitializeIntersightKubernetesEssentialAddon()
-		{
-            ClassId = KubernetesEssentialAddon.ClassIdEnum.KubernetesEssentialAddon;
-            ObjectType = KubernetesEssentialAddon.ObjectTypeEnum.KubernetesEssentialAddon;
+            ClassId = KubernetesAddon.ClassIdEnum.KubernetesAddon;
+            ObjectType = KubernetesAddon.ObjectTypeEnum.KubernetesAddon;
             
 		}
         // <summary>
@@ -2523,11 +2457,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Addon definition associated with the addon."</para>
+        /// <para type="description">"Addon policy associated with the addon."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public Model.MoMoRef AddonDefinition {
+        public Model.MoMoRef AddonPolicy {
             get;
             set;
         }
@@ -2536,7 +2470,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesEssentialAddon.ClassIdEnum ClassId {
+        public KubernetesAddon.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -2554,14 +2488,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesEssentialAddon.ObjectTypeEnum ObjectType {
+        public KubernetesAddon.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesEssentialAddon initObject = new Intersight.Model.KubernetesEssentialAddon();
+             Intersight.Model.KubernetesAddon initObject = new Intersight.Model.KubernetesAddon();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -2570,9 +2504,9 @@ namespace Intersight.PowerShell
             {
                 initObject.AddonConfiguration = this.AddonConfiguration;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AddonDefinition"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("AddonPolicy"))
             {
-                initObject.AddonDefinition = this.AddonDefinition;
+                initObject.AddonPolicy = this.AddonPolicy;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
@@ -2585,15 +2519,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNodeStatus.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesKeyValue.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNodeStatus")]
-    public class InitializeIntersightKubernetesNodeStatus:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesKeyValue")]
+    public class InitializeIntersightKubernetesKeyValue:PSCmdlet
 	{
-		public InitializeIntersightKubernetesNodeStatus()
+		public InitializeIntersightKubernetesKeyValue()
 		{
-            ClassId = KubernetesNodeStatus.ClassIdEnum.KubernetesNodeStatus;
-            ObjectType = KubernetesNodeStatus.ObjectTypeEnum.KubernetesNodeStatus;
+            ClassId = KubernetesKeyValue.ClassIdEnum.KubernetesKeyValue;
+            ObjectType = KubernetesKeyValue.ObjectTypeEnum.KubernetesKeyValue;
             
 		}
         // <summary>
@@ -2610,7 +2544,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesNodeStatus.ClassIdEnum ClassId {
+        public KubernetesKeyValue.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Key or property name in a key/value pair."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Key {
             get;
             set;
         }
@@ -2619,45 +2562,115 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesNodeStatus.ObjectTypeEnum ObjectType {
+        public KubernetesKeyValue.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Statue of the node. Indicate if the node is kubernetes ready or not."</para>
+        /// <para type="description">"Property value in a key/value pair."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Status {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of the node. It can be either Master or Worker."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
+        public string Value {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesNodeStatus initObject = new Intersight.Model.KubernetesNodeStatus();
+             Intersight.Model.KubernetesKeyValue initObject = new Intersight.Model.KubernetesKeyValue();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Key"))
+            {
+                initObject.Key = this.Key;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNodeSpec.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNodeSpec")]
+    public class InitializeIntersightKubernetesNodeSpec:PSCmdlet
+	{
+		public InitializeIntersightKubernetesNodeSpec()
+		{
+            ClassId = KubernetesNodeSpec.ClassIdEnum.KubernetesNodeSpec;
+            ObjectType = KubernetesNodeSpec.ObjectTypeEnum.KubernetesNodeSpec;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNodeSpec.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesNodeSpec.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Node Pod CIDR. In Kubernetes, the workload (Pod) is allocated to an IP address by Kubernetes. The IP address is from a Pod CIDR of the cluster. Each node will (mostly) evenly be distributed the Pod CIDR."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PodCidr {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Kubernetes can be running on a specific cloud provider such as Openstack, Amazon Web Services, vCenter etc. Each cloud provider will have a specific cloud provider ID. This field is to represent that ID for the corresponding Kubernetes cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ProviderId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesNodeSpec initObject = new Intersight.Model.KubernetesNodeSpec();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("PodCidr"))
             {
-                initObject.Status = this.Status;
+                initObject.PodCidr = this.PodCidr;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProviderId"))
             {
-                initObject.Type = this.Type;
+                initObject.ProviderId = this.ProviderId;
             }
             WriteObject(initObject);
         }
@@ -2847,15 +2860,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesRoute.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesEthernet.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesRoute")]
-    public class InitializeIntersightKubernetesRoute:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesEthernet")]
+    public class InitializeIntersightKubernetesEthernet:PSCmdlet
 	{
-		public InitializeIntersightKubernetesRoute()
+		public InitializeIntersightKubernetesEthernet()
 		{
-            ClassId = KubernetesRoute.ClassIdEnum.KubernetesRoute;
-            ObjectType = KubernetesRoute.ObjectTypeEnum.KubernetesRoute;
+            ClassId = KubernetesEthernet.ClassIdEnum.KubernetesEthernet;
+            ObjectType = KubernetesEthernet.ObjectTypeEnum.KubernetesEthernet;
             
 		}
         // <summary>
@@ -2868,95 +2881,52 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Addresses {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesRoute.ClassIdEnum ClassId {
+        public KubernetesEthernet.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"Deprecated. This will add a default route as long as the first default route in Routes is not different. If is different, Gateway will be replaced with that default route. If there is no default Route and this is set, then Routes will be updated with the first entry as a default with this default gateway. If there is only one default Route and this gateway becomes empty, then the default routes will all be removed. Do not set if using Ip Pools, as the gateway is configured in the pool. This will be removed in the future."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesRoute.ObjectTypeEnum ObjectType {
+        public string Gateway {
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The destination subnet, if set to 0.0.0.0/0 then the Route is considered a default route."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
-        public string To {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Via is the gateway for traffic destined for the subnet in the To property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string Via {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesRoute initObject = new Intersight.Model.KubernetesRoute();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("To"))
-            {
-                initObject.To = this.To;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Via"))
-            {
-                initObject.Via = this.Via;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNetworkInterfaceSpec.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNetworkInterfaceSpec")]
-    public class InitializeIntersightKubernetesNetworkInterfaceSpec:PSCmdlet
-	{
-		public InitializeIntersightKubernetesNetworkInterfaceSpec()
-		{
-            ClassId = KubernetesNetworkInterfaceSpec.ClassIdEnum.KubernetesNetworkInterfaceSpec;
-            ObjectType = KubernetesNetworkInterfaceSpec.ObjectTypeEnum.KubernetesNetworkInterfaceSpec;
-            
-		}
         // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public Dictionary<string,object> AdditionalProperties {
+        public List<Model.KubernetesIpV4Config> IpV4Configs {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The matcher to be used to find the physical network interface represented by this ethernet device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesNetworkInterfaceSpec.ClassIdEnum ClassId {
+        public Model.KubernetesEthernetMatcher Matcher {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The MTU for this Network Interface.  If left blank a default value will apply by the Operating System."</para>
+        /// <para type="description">"The MTU to assign to this Network Interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -2965,7 +2935,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"NetworkInterfaceSpec is the specification for network interfaces - including configuration of IP Pools and VRF to determine IP configuration, the operating system device settings, and virtual adapter network settings. It can be left empty when used with VirtualMachineInfraConfigPolicy - it will be filled out based on the hypervisor platform type and will match the naming and order of interfaces provided by the hypervisor."</para>
+        /// <para type="description">"Name for this network interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -2978,21 +2948,12 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesNetworkInterfaceSpec.ObjectTypeEnum ObjectType {
+        public KubernetesEthernet.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.MoMoRef> Pools {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"In other words, to which named network from the Instructure Provider will the port be connected."</para>
+        /// <para type="description">"If the infrastructure network is selectable, this indicates which network to attach to the port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
@@ -3001,23 +2962,39 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Allows for reusing IP Pools across disconnected L2 segments for different Kubernetes clusters within an account. If not set, the VRF named (default) will be used."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public Model.MoMoRef Vrf {
+        public List<Model.KubernetesRoute> Routes {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesNetworkInterfaceSpec initObject = new Intersight.Model.KubernetesNetworkInterfaceSpec();
+             Intersight.Model.KubernetesEthernet initObject = new Intersight.Model.KubernetesEthernet();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Addresses"))
+            {
+                initObject.Addresses = this.Addresses;
+            }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Gateway"))
+            {
+                initObject.Gateway = this.Gateway;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpV4Configs"))
+            {
+                initObject.IpV4Configs = this.IpV4Configs;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Matcher"))
+            {
+                initObject.Matcher = this.Matcher;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
             {
                 initObject.Mtu = this.Mtu;
@@ -3027,32 +3004,28 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pools"))
-            {
-                initObject.Pools = this.Pools;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ProviderName"))
             {
                 initObject.ProviderName = this.ProviderName;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vrf"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Routes"))
             {
-                initObject.Vrf = this.Vrf;
+                initObject.Routes = this.Routes;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesKeyValue.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesInstanceTypeDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesKeyValue")]
-    public class InitializeIntersightKubernetesKeyValue:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesInstanceTypeDetails")]
+    public class InitializeIntersightKubernetesInstanceTypeDetails:PSCmdlet
 	{
-		public InitializeIntersightKubernetesKeyValue()
+		public InitializeIntersightKubernetesInstanceTypeDetails()
 		{
-            ClassId = KubernetesKeyValue.ClassIdEnum.KubernetesKeyValue;
-            ObjectType = KubernetesKeyValue.ObjectTypeEnum.KubernetesKeyValue;
+            ClassId = KubernetesInstanceTypeDetails.ClassIdEnum.KubernetesInstanceTypeDetails;
+            ObjectType = KubernetesInstanceTypeDetails.ObjectTypeEnum.KubernetesInstanceTypeDetails;
             
 		}
         // <summary>
@@ -3069,16 +3042,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesKeyValue.ClassIdEnum ClassId {
+        public KubernetesInstanceTypeDetails.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Key or property name in a key/value pair."</para>
+        /// <para type="description">"Number of CPUs in the instancetype."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Key {
+        public long Cpu {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ephemeral disk capacity to be provided with units example - 10Gi."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long DiskSize {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual machine memory defined in mebibytes (MiB)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Memory {
             get;
             set;
         }
@@ -3087,51 +3078,46 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesKeyValue.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Property value in a key/value pair."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Value {
+        public KubernetesInstanceTypeDetails.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesKeyValue initObject = new Intersight.Model.KubernetesKeyValue();
+             Intersight.Model.KubernetesInstanceTypeDetails initObject = new Intersight.Model.KubernetesInstanceTypeDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Key"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cpu"))
             {
-                initObject.Key = this.Key;
+                initObject.Cpu = this.Cpu;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DiskSize"))
+            {
+                initObject.DiskSize = this.DiskSize;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Memory"))
+            {
+                initObject.Memory = this.Memory;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
-            {
-                initObject.Value = this.Value;
-            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesProxyConfig.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesEsxiVirtualMachineInfraConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesProxyConfig")]
-    public class InitializeIntersightKubernetesProxyConfig:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesEsxiVirtualMachineInfraConfig")]
+    public class InitializeIntersightKubernetesEsxiVirtualMachineInfraConfig:PSCmdlet
 	{
-		public InitializeIntersightKubernetesProxyConfig()
+		public InitializeIntersightKubernetesEsxiVirtualMachineInfraConfig()
 		{
-            ClassId = KubernetesProxyConfig.ClassIdEnum.KubernetesProxyConfig;
-            ObjectType = KubernetesProxyConfig.ObjectTypeEnum.KubernetesProxyConfig;
+            ClassId = KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum.KubernetesEsxiVirtualMachineInfraConfig;
+            ObjectType = KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum.KubernetesEsxiVirtualMachineInfraConfig;
             
 		}
         // <summary>
@@ -3148,16 +3134,43 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesProxyConfig.ClassIdEnum ClassId {
+        public KubernetesEsxiVirtualMachineInfraConfig.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"HTTP/HTTPS Proxy server FQDN or IP."</para>
+        /// <para type="description">"Name of the vSphere cluster on which the virtual machines are created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?$|^[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?(\\.[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?)*(\\.[A-Za-z]([A-Za-z0-9-]*[A-Za-z0-9])?)$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string Hostname {
+        
+        public string Cluster {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the datasore on which the virtual machine disks are created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Datastore {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Interfaces {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.KubernetesNetworkInterfaceSpec> NetworkInterfaces {
             get;
             set;
         }
@@ -3166,76 +3179,471 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public KubernetesProxyConfig.ObjectTypeEnum ObjectType {
+        public KubernetesEsxiVirtualMachineInfraConfig.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The password for the HTTP/HTTPS Proxy."</para>
+        /// <para type="description">"Passphrase for the vcenter user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Password {
+        public string Passphrase {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The HTTP Proxy port number.\nThe port number of the HTTP/HTTPS proxy must be between 1 and 65535, inclusive."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 65535)]
-        public long Port {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Protocol to use for the HTTP/HTTPS Proxy."</para>
+        /// <para type="description">"Name of the vSphere resource pool on which the virtual machines are created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Protocol {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The username for the HTTP/HTTPS Proxy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Username {
+        public string ResourcePool {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.KubernetesProxyConfig initObject = new Intersight.Model.KubernetesProxyConfig();
+             Intersight.Model.KubernetesEsxiVirtualMachineInfraConfig initObject = new Intersight.Model.KubernetesEsxiVirtualMachineInfraConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Hostname"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cluster"))
             {
-                initObject.Hostname = this.Hostname;
+                initObject.Cluster = this.Cluster;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Datastore"))
+            {
+                initObject.Datastore = this.Datastore;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
+            {
+                initObject.Interfaces = this.Interfaces;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkInterfaces"))
+            {
+                initObject.NetworkInterfaces = this.NetworkInterfaces;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Passphrase"))
             {
-                initObject.Password = this.Password;
+                initObject.Passphrase = this.Passphrase;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePool"))
             {
-                initObject.Port = this.Port;
+                initObject.ResourcePool = this.ResourcePool;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Protocol"))
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesConfiguration")]
+    public class InitializeIntersightKubernetesConfiguration:PSCmdlet
+	{
+		public InitializeIntersightKubernetesConfiguration()
+		{
+            ClassId = KubernetesConfiguration.ClassIdEnum.KubernetesConfiguration;
+            ObjectType = KubernetesConfiguration.ObjectTypeEnum.KubernetesConfiguration;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesConfiguration.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesConfiguration.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesConfiguration initObject = new Intersight.Model.KubernetesConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.Protocol = this.Protocol;
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Username"))
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesStatefulSetStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesStatefulSetStatus")]
+    public class InitializeIntersightKubernetesStatefulSetStatus:PSCmdlet
+	{
+		public InitializeIntersightKubernetesStatefulSetStatus()
+		{
+            ClassId = KubernetesStatefulSetStatus.ClassIdEnum.KubernetesStatefulSetStatus;
+            ObjectType = KubernetesStatefulSetStatus.ObjectTypeEnum.KubernetesStatefulSetStatus;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"AvailableReplicas indicates the current avaliable replicas running."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AvailableReplicas {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesStatefulSetStatus.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CollisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long CollisionCount {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CurrentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string CurrentRevision {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesStatefulSetStatus.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"ObservedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ObservedGeneration {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"ReadyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long ReadyReplicas {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of replicas the statefulset desired to have."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Replicas {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UpdateRevision, if not empty, indicates the version of the StatefulSet used to generate the pods that have yet to be updated, i.e. pod number <replicas> - <updatedReplicas>, until pod number <replicas>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string UpdateRevision {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UpdatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UpdatedReplicas {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesStatefulSetStatus initObject = new Intersight.Model.KubernetesStatefulSetStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.Username = this.Username;
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AvailableReplicas"))
+            {
+                initObject.AvailableReplicas = this.AvailableReplicas;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CollisionCount"))
+            {
+                initObject.CollisionCount = this.CollisionCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CurrentRevision"))
+            {
+                initObject.CurrentRevision = this.CurrentRevision;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ObservedGeneration"))
+            {
+                initObject.ObservedGeneration = this.ObservedGeneration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReadyReplicas"))
+            {
+                initObject.ReadyReplicas = this.ReadyReplicas;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Replicas"))
+            {
+                initObject.Replicas = this.Replicas;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpdateRevision"))
+            {
+                initObject.UpdateRevision = this.UpdateRevision;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpdatedReplicas"))
+            {
+                initObject.UpdatedReplicas = this.UpdatedReplicas;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesAddonConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesAddonConfiguration")]
+    public class InitializeIntersightKubernetesAddonConfiguration:PSCmdlet
+	{
+		public InitializeIntersightKubernetesAddonConfiguration()
+		{
+            ClassId = KubernetesAddonConfiguration.ClassIdEnum.KubernetesAddonConfiguration;
+            InstallStrategy = KubernetesAddonConfiguration.InstallStrategyEnum.None;
+            ObjectType = KubernetesAddonConfiguration.ObjectTypeEnum.KubernetesAddonConfiguration;
+            UpgradeStrategy = KubernetesAddonConfiguration.UpgradeStrategyEnum.None;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesAddonConfiguration.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Addon install strategy to determine whether an addon is installed if not present.\n* `None` - Unspecified install strategy.\n* `NoAction` - No install action performed.\n* `InstallOnly` - Only install in green field. No action in case of failure or removal.\n* `Always` - Attempt install if chart is not already installed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesAddonConfiguration.InstallStrategyEnum InstallStrategy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesAddonConfiguration.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.KubernetesKeyValue> OverrideSets {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Properties that can be overridden for an addon."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Overrides {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name for the helm release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ReleaseName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Namespace for the helm release."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ReleaseNamespace {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Addon upgrade strategy to determine whether an addon configuration is overwritten on upgrade.\n* `None` - Unspecified upgrade strategy.\n* `NoAction` - This choice enables No upgrades to be performed.\n* `UpgradeOnly` - Attempt upgrade if chart or overrides options change, no action on upgrade failure.\n* `ReinstallOnFailure` - Attempt upgrade first. Remove and install on upgrade failure.\n* `AlwaysReinstall` - Always remove older release and reinstall."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesAddonConfiguration.UpgradeStrategyEnum UpgradeStrategy {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesAddonConfiguration initObject = new Intersight.Model.KubernetesAddonConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("InstallStrategy"))
+            {
+                initObject.InstallStrategy = this.InstallStrategy;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OverrideSets"))
+            {
+                initObject.OverrideSets = this.OverrideSets;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Overrides"))
+            {
+                initObject.Overrides = this.Overrides;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseName"))
+            {
+                initObject.ReleaseName = this.ReleaseName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNamespace"))
+            {
+                initObject.ReleaseNamespace = this.ReleaseNamespace;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeStrategy"))
+            {
+                initObject.UpgradeStrategy = this.UpgradeStrategy;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesIpV4Config.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesIpV4Config")]
+    public class InitializeIntersightKubernetesIpV4Config:PSCmdlet
+	{
+		public InitializeIntersightKubernetesIpV4Config()
+		{
+            ClassId = KubernetesIpV4Config.ClassIdEnum.KubernetesIpV4Config;
+            ObjectType = KubernetesIpV4Config.ObjectTypeEnum.KubernetesIpV4Config;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesIpV4Config.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Address in CIDR format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
+        public string Ip {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public KubernetesIpV4Config.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.KubernetesIpV4Config initObject = new Intersight.Model.KubernetesIpV4Config();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ip"))
+            {
+                initObject.Ip = this.Ip;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -3314,414 +3722,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
             {
                 initObject.Value = this.Value;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesLoadBalancer.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesLoadBalancer")]
-    public class InitializeIntersightKubernetesLoadBalancer:PSCmdlet
-	{
-		public InitializeIntersightKubernetesLoadBalancer()
-		{
-            ClassId = KubernetesLoadBalancer.ClassIdEnum.KubernetesLoadBalancer;
-            ObjectType = KubernetesLoadBalancer.ObjectTypeEnum.KubernetesLoadBalancer;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesLoadBalancer.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> IpAddresses {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesLoadBalancer.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesLoadBalancer initObject = new Intersight.Model.KubernetesLoadBalancer();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpAddresses"))
-            {
-                initObject.IpAddresses = this.IpAddresses;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNodeAddress.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNodeAddress")]
-    public class InitializeIntersightKubernetesNodeAddress:PSCmdlet
-	{
-		public InitializeIntersightKubernetesNodeAddress()
-		{
-            ClassId = KubernetesNodeAddress.ClassIdEnum.KubernetesNodeAddress;
-            ObjectType = KubernetesNodeAddress.ObjectTypeEnum.KubernetesNodeAddress;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The address of type specified by the type field."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Address {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesNodeAddress.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesNodeAddress.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The address type of the Node. The usage of the IP address depending on the cloud provider or bare metal configuration. HostName - The hostname as reported by the node's kernel. ExternalIP - Typically the IP address of the node that is externally routable (available from outside the cluster) InternalIP - Typically the IP address of the node that is routable only within the cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Type {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesNodeAddress initObject = new Intersight.Model.KubernetesNodeAddress();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Address"))
-            {
-                initObject.Address = this.Address;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesServiceStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesServiceStatus")]
-    public class InitializeIntersightKubernetesServiceStatus:PSCmdlet
-	{
-		public InitializeIntersightKubernetesServiceStatus()
-		{
-            ClassId = KubernetesServiceStatus.ClassIdEnum.KubernetesServiceStatus;
-            ObjectType = KubernetesServiceStatus.ObjectTypeEnum.KubernetesServiceStatus;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesServiceStatus.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"It reflects the Kubernetes Load Balancer Type (Cluster IP, NodePort and LoadBalancer). If the service is a LoadBalancer type of service, it will also report the LoadBalancer IP."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.KubernetesLoadBalancer LoadBalancer {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesServiceStatus.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesServiceStatus initObject = new Intersight.Model.KubernetesServiceStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LoadBalancer"))
-            {
-                initObject.LoadBalancer = this.LoadBalancer;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesCniConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesCniConfig")]
-    public class InitializeIntersightKubernetesCniConfig:PSCmdlet
-	{
-		public InitializeIntersightKubernetesCniConfig()
-		{
-            ClassId = KubernetesCniConfig.ClassIdEnum.KubernetesCalicoConfig;
-            ObjectType = KubernetesCniConfig.ObjectTypeEnum.KubernetesCalicoConfig;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesCniConfig.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesCniConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CNI Image registry location."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Registry {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Container newtork interface plugin configuration."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Version {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesCniConfig initObject = new Intersight.Model.KubernetesCniConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Registry"))
-            {
-                initObject.Registry = this.Registry;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesPodStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesPodStatus")]
-    public class InitializeIntersightKubernetesPodStatus:PSCmdlet
-	{
-		public InitializeIntersightKubernetesPodStatus()
-		{
-            ClassId = KubernetesPodStatus.ClassIdEnum.KubernetesPodStatus;
-            ObjectType = KubernetesPodStatus.ObjectTypeEnum.KubernetesPodStatus;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesPodStatus.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The IP of the host that the pod is running on."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string HostIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public KubernetesPodStatus.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Phase {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The IP of the pod. The IP is allocated by the Pod CIDR from the kubernetes cluster itself."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string PodIp {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Quality of Service (QOS) classification assigned to the pod based on resource requirements."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string QosClass {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The time that the pod was started."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string StartTime {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.KubernetesPodStatus initObject = new Intersight.Model.KubernetesPodStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("HostIp"))
-            {
-                initObject.HostIp = this.HostIp;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Phase"))
-            {
-                initObject.Phase = this.Phase;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PodIp"))
-            {
-                initObject.PodIp = this.PodIp;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("QosClass"))
-            {
-                initObject.QosClass = this.QosClass;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StartTime"))
-            {
-                initObject.StartTime = this.StartTime;
             }
             WriteObject(initObject);
         }

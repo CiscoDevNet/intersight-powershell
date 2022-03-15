@@ -19,7 +19,7 @@ New-IntersightSoftwareSolutionDistributable [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareSolutionDistributable&amp;apos; resource.
+Create a &apos;SoftwareSolutionDistributable&apos; resource.
 
 ## PARAMETERS
 

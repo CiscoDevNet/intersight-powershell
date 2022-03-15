@@ -17,7 +17,7 @@ Remove-IntersightFirmwarePcieDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwarePcieDescriptor&apos; resource.
+Delete a &amp;apos;FirmwarePcieDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFirmwarePcieDescriptor](./Set-IntersightFirmwarePcieDescriptor.md)
 
-[New-IntersightFirmwarePcieDescriptor](./New-IntersightFirmwarePcieDescriptor.md)
-
 [Get-IntersightFirmwarePcieDescriptor](./Get-IntersightFirmwarePcieDescriptor.md)
+
+[New-IntersightFirmwarePcieDescriptor](./New-IntersightFirmwarePcieDescriptor.md)
 

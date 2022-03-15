@@ -19,7 +19,7 @@ New-IntersightVnicEthQosPolicy [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicEthQosPolicy&amp;apos; resource.
+Create a &apos;VnicEthQosPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -265,10 +265,10 @@ PS C:\> New-IntersightVnicEthQosPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
-
 [Set-IntersightVnicEthQosPolicy](./Set-IntersightVnicEthQosPolicy.md)
 
 [Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
+
+[Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightKubernetesAddonPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesAddonPolicy&amp;apos; resource.
+Create a &apos;KubernetesAddonPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -210,11 +210,11 @@ PS C:\> New-IntersightKubernetesAddonPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesAddonPolicy](./Get-IntersightKubernetesAddonPolicy.md)
+
 [Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)
 
 [Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
-
-[Get-IntersightKubernetesAddonPolicy](./Get-IntersightKubernetesAddonPolicy.md)
 
 [Initialize-IntersightKubernetesAddonConfiguration](./Initialize-IntersightKubernetesAddonConfiguration.md)
 

@@ -19,7 +19,7 @@ Set-IntersightTamAdvisoryInfo [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;TamAdvisoryInfo&apos; resource.
+Update a &amp;apos;TamAdvisoryInfo&amp;apos; resource.
 
 ## PARAMETERS
 

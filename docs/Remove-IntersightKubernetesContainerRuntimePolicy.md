@@ -17,7 +17,7 @@ Remove-IntersightKubernetesContainerRuntimePolicy -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.
+Delete a &apos;KubernetesContainerRuntimePolicy&apos; resource.
 
 ## EXAMPLES
 

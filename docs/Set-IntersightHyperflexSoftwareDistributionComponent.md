@@ -235,10 +235,10 @@ PS C:\> Set-IntersightHyperflexSoftwareDistributionComponent
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexSoftwareDistributionComponent](./Remove-IntersightHyperflexSoftwareDistributionComponent.md)
+
 [Get-IntersightHyperflexSoftwareDistributionComponent](./Get-IntersightHyperflexSoftwareDistributionComponent.md)
 
 [New-IntersightHyperflexSoftwareDistributionComponent](./New-IntersightHyperflexSoftwareDistributionComponent.md)
-
-[Remove-IntersightHyperflexSoftwareDistributionComponent](./Remove-IntersightHyperflexSoftwareDistributionComponent.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

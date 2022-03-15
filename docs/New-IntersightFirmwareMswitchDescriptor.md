@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareMswitchDescriptor
 
 [Get-IntersightFirmwareMswitchDescriptor](./Get-IntersightFirmwareMswitchDescriptor.md)
 
-[Set-IntersightFirmwareMswitchDescriptor](./Set-IntersightFirmwareMswitchDescriptor.md)
-
 [Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
+
+[Set-IntersightFirmwareMswitchDescriptor](./Set-IntersightFirmwareMswitchDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

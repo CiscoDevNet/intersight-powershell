@@ -17,7 +17,7 @@ Remove-IntersightApplianceRestore -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ApplianceRestore&apos; resource.
+Delete a &amp;apos;ApplianceRestore&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceRestore](./Get-IntersightApplianceRestore.md)
-
 [New-IntersightApplianceRestore](./New-IntersightApplianceRestore.md)
+
+[Get-IntersightApplianceRestore](./Get-IntersightApplianceRestore.md)
 

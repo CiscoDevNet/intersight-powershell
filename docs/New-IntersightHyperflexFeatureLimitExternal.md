@@ -19,7 +19,7 @@ New-IntersightHyperflexFeatureLimitExternal [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexFeatureLimitExternal&amp;apos; resource.
+Create a &apos;HyperflexFeatureLimitExternal&apos; resource.
 
 ## PARAMETERS
 

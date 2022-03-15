@@ -172,8 +172,8 @@ PS C:\> New-IntersightAaaRetentionPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
-
 [Get-IntersightAaaRetentionPolicy](./Get-IntersightAaaRetentionPolicy.md)
+
+[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

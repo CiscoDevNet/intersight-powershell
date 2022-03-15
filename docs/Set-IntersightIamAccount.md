@@ -19,7 +19,7 @@ Set-IntersightIamAccount [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamAccount&amp;apos; resource.
+Update a &apos;IamAccount&apos; resource.
 
 ## PARAMETERS
 

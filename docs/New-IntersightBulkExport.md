@@ -19,7 +19,7 @@ New-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;BulkExport&amp;apos; resource.
+Create a &apos;BulkExport&apos; resource.
 
 ## PARAMETERS
 

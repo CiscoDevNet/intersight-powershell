@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetApiKeyCredential.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetPrivateKeyCredential.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetApiKeyCredential")]
-    public class InitializeIntersightAssetApiKeyCredential:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetPrivateKeyCredential")]
+    public class InitializeIntersightAssetPrivateKeyCredential:PSCmdlet
 	{
-		public InitializeIntersightAssetApiKeyCredential()
+		public InitializeIntersightAssetPrivateKeyCredential()
 		{
-            ClassId = AssetApiKeyCredential.ClassIdEnum.AssetApiKeyCredential;
-            ObjectType = AssetApiKeyCredential.ObjectTypeEnum.AssetApiKeyCredential;
+            ClassId = AssetPrivateKeyCredential.ClassIdEnum.AssetPrivateKeyCredential;
+            ObjectType = AssetPrivateKeyCredential.ObjectTypeEnum.AssetPrivateKeyCredential;
             
 		}
         // <summary>
@@ -29,20 +29,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"This a secret API key which can be used for authentication purposes for different targets like Azure Enterprise Agreement."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ApiKey {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetApiKeyCredential.ClassIdEnum ClassId {
+        public AssetPrivateKeyCredential.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -51,21 +42,384 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetApiKeyCredential.ObjectTypeEnum ObjectType {
+        public AssetPrivateKeyCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The passphrase associated with the private key - Optional."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Passphrase {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The private key used to authenticate with a managed target. The corresponding public key needs to be added in the auth list of the remote endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string PrivateKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The username used to authenticate with a managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Username {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetApiKeyCredential initObject = new Intersight.Model.AssetApiKeyCredential();
+             Intersight.Model.AssetPrivateKeyCredential initObject = new Intersight.Model.AssetPrivateKeyCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ApiKey"))
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Passphrase"))
             {
-                initObject.ApiKey = this.ApiKey;
+                initObject.Passphrase = this.Passphrase;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrivateKey"))
+            {
+                initObject.PrivateKey = this.PrivateKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Username"))
+            {
+                initObject.Username = this.Username;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerNewRelicOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerNewRelicOptions")]
+    public class InitializeIntersightAssetWorkloadOptimizerNewRelicOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetWorkloadOptimizerNewRelicOptions()
+		{
+            ClassId = AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum.AssetWorkloadOptimizerNewRelicOptions;
+            ObjectType = AssetWorkloadOptimizerNewRelicOptions.ObjectTypeEnum.AssetWorkloadOptimizerNewRelicOptions;
+            Region = AssetWorkloadOptimizerNewRelicOptions.RegionEnum.US;
+            
+		}
+        // <summary>
+        /// <para type="description">"Your NewRelic account id."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AccountId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerNewRelicOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The region associated with the NewRelic account.\n* `US` - The United States (US) region.\n* `EU` - The European Union (EU) region."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerNewRelicOptions.RegionEnum Region {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetWorkloadOptimizerNewRelicOptions initObject = new Intersight.Model.AssetWorkloadOptimizerNewRelicOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountId"))
+            {
+                initObject.AccountId = this.AccountId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Region"))
+            {
+                initObject.Region = this.Region;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerService.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerService")]
+    public class InitializeIntersightAssetWorkloadOptimizerService:PSCmdlet
+	{
+		public InitializeIntersightAssetWorkloadOptimizerService()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerService.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerService.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetServiceOptions Options {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetWorkloadOptimizerService initObject = new Intersight.Model.AssetWorkloadOptimizerService();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
+            {
+                initObject.Options = this.Options;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetContractInformation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetContractInformation")]
+    public class InitializeIntersightAssetContractInformation:PSCmdlet
+	{
+		public InitializeIntersightAssetContractInformation()
+		{
+            ClassId = AssetContractInformation.ClassIdEnum.AssetContractInformation;
+            ObjectType = AssetContractInformation.ObjectTypeEnum.AssetContractInformation;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetContractInformation.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetContractInformation.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetContractInformation initObject = new Intersight.Model.AssetContractInformation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions")]
+    public class InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions()
+		{
+            AzureCloudType = AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.AzureCloudTypeEnum.Global;
+            ClassId = AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ClassIdEnum.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions;
+            ObjectType = AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ObjectTypeEnum.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Azure has different endpoints for managing Germany subscriptions. Azure cloud type helps in differentiating between regular subscriptions and Germany subscriptions to manage the Azure services for workload optimization. Documentation for germany cloud [link](https://docs.microsoft.com/en-us/azure/germany/germany-manage-subscriptions).\n* `Global` - Global cloud type for Azure subscription.\n* `Germany` - Germany cloud type for Azure subscription."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.AzureCloudTypeEnum AzureCloudType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"ID of the tenant used while authenticating the managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TenantId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AzureCloudType"))
+            {
+                initObject.AzureCloudType = this.AzureCloudType;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TenantId"))
+            {
+                initObject.TenantId = this.TenantId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetCredential.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetCredential")]
+    public class InitializeIntersightAssetCredential:PSCmdlet
+	{
+		public InitializeIntersightAssetCredential()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetCredential.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetCredential initObject = new Intersight.Model.AssetCredential();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
@@ -166,6 +520,70 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetOrchestrationService.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetOrchestrationService")]
+    public class InitializeIntersightAssetOrchestrationService:PSCmdlet
+	{
+		public InitializeIntersightAssetOrchestrationService()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetOrchestrationService.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetOrchestrationService.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetServiceOptions Options {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetOrchestrationService initObject = new Intersight.Model.AssetOrchestrationService();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
+            {
+                initObject.Options = this.Options;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize AssetVmHost.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightAssetVmHost")]
@@ -219,15 +637,13 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetVirtualizationAmazonWebServiceOptions.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetNoAuthenticationCredential.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetVirtualizationAmazonWebServiceOptions")]
-    public class InitializeIntersightAssetVirtualizationAmazonWebServiceOptions:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetNoAuthenticationCredential")]
+    public class InitializeIntersightAssetNoAuthenticationCredential:PSCmdlet
 	{
-		public InitializeIntersightAssetVirtualizationAmazonWebServiceOptions()
+		public InitializeIntersightAssetNoAuthenticationCredential()
 		{
-            ClassId = AssetVirtualizationAmazonWebServiceOptions.ClassIdEnum.AssetVirtualizationAmazonWebServiceOptions;
-            ObjectType = AssetVirtualizationAmazonWebServiceOptions.ObjectTypeEnum.AssetVirtualizationAmazonWebServiceOptions;
             
 		}
         // <summary>
@@ -244,16 +660,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetVirtualizationAmazonWebServiceOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<Model.MoMoRef> ManagedRegions {
+        public AssetNoAuthenticationCredential.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -262,22 +669,216 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetVirtualizationAmazonWebServiceOptions.ObjectTypeEnum ObjectType {
+        public AssetNoAuthenticationCredential.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetVirtualizationAmazonWebServiceOptions initObject = new Intersight.Model.AssetVirtualizationAmazonWebServiceOptions();
+             Intersight.Model.AssetNoAuthenticationCredential initObject = new Intersight.Model.AssetNoAuthenticationCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ManagedRegions"))
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetTargetKey.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetTargetKey")]
+    public class InitializeIntersightAssetTargetKey:PSCmdlet
+	{
+		public InitializeIntersightAssetTargetKey()
+		{
+            ClassId = AssetTargetKey.ClassIdEnum.AssetTargetKey;
+            ObjectType = AssetTargetKey.ObjectTypeEnum.AssetTargetKey;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTargetKey.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTargetKey.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetTargetKey initObject = new Intersight.Model.AssetTargetKey();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.ManagedRegions = this.ManagedRegions;
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetApiKeyCredential.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetApiKeyCredential")]
+    public class InitializeIntersightAssetApiKeyCredential:PSCmdlet
+	{
+		public InitializeIntersightAssetApiKeyCredential()
+		{
+            ClassId = AssetApiKeyCredential.ClassIdEnum.AssetApiKeyCredential;
+            ObjectType = AssetApiKeyCredential.ObjectTypeEnum.AssetApiKeyCredential;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This a secret API key which can be used for authentication purposes for different targets like Azure Enterprise Agreement."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ApiKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetApiKeyCredential.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetApiKeyCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetApiKeyCredential initObject = new Intersight.Model.AssetApiKeyCredential();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ApiKey"))
+            {
+                initObject.ApiKey = this.ApiKey;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerVmwareVcenterOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerVmwareVcenterOptions")]
+    public class InitializeIntersightAssetWorkloadOptimizerVmwareVcenterOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetWorkloadOptimizerVmwareVcenterOptions()
+		{
+            ClassId = AssetWorkloadOptimizerVmwareVcenterOptions.ClassIdEnum.AssetWorkloadOptimizerVmwareVcenterOptions;
+            ObjectType = AssetWorkloadOptimizerVmwareVcenterOptions.ObjectTypeEnum.AssetWorkloadOptimizerVmwareVcenterOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerVmwareVcenterOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"DatastoreBrowsingEnabled controls whether Workload Optimizer scans vCenter datastores to identify files which are not used and can be deleted to reclaim space and improve actual disk utilization. For example orphaned VMDK files."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool DatastoreBrowsingEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable retrieval of advanced memory metrics. Only supported on vCenter Server version 6.5U3 or later. Guest VMs must run VMWare Tools 10.3.2 Build 10338 or later."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool GuestMetricsEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerVmwareVcenterOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetWorkloadOptimizerVmwareVcenterOptions initObject = new Intersight.Model.AssetWorkloadOptimizerVmwareVcenterOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DatastoreBrowsingEnabled"))
+            {
+                initObject.DatastoreBrowsingEnabled = this.DatastoreBrowsingEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GuestMetricsEnabled"))
+            {
+                initObject.GuestMetricsEnabled = this.GuestMetricsEnabled;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -430,15 +1031,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetMeteringType.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeploymentDeviceInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetMeteringType")]
-    public class InitializeIntersightAssetMeteringType:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeploymentDeviceInformation")]
+    public class InitializeIntersightAssetDeploymentDeviceInformation:PSCmdlet
 	{
-		public InitializeIntersightAssetMeteringType()
+		public InitializeIntersightAssetDeploymentDeviceInformation()
 		{
-            ClassId = AssetMeteringType.ClassIdEnum.AssetMeteringType;
-            ObjectType = AssetMeteringType.ObjectTypeEnum.AssetMeteringType;
+            ClassId = AssetDeploymentDeviceInformation.ClassIdEnum.AssetDeploymentDeviceInformation;
+            ObjectType = AssetDeploymentDeviceInformation.ObjectTypeEnum.AssetDeploymentDeviceInformation;
             
 		}
         // <summary>
@@ -455,7 +1056,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetMeteringType.ClassIdEnum ClassId {
+        public AssetDeploymentDeviceInformation.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -464,317 +1065,20 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetMeteringType.ObjectTypeEnum ObjectType {
+        public AssetDeploymentDeviceInformation.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetMeteringType initObject = new Intersight.Model.AssetMeteringType();
+             Intersight.Model.AssetDeploymentDeviceInformation initObject = new Intersight.Model.AssetDeploymentDeviceInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerService.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerService")]
-    public class InitializeIntersightAssetWorkloadOptimizerService:PSCmdlet
-	{
-		public InitializeIntersightAssetWorkloadOptimizerService()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerService.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerService.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetServiceOptions Options {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetWorkloadOptimizerService initObject = new Intersight.Model.AssetWorkloadOptimizerService();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
-            {
-                initObject.Options = this.Options;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetIntersightDeviceConnectorConnection.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetIntersightDeviceConnectorConnection")]
-    public class InitializeIntersightAssetIntersightDeviceConnectorConnection:PSCmdlet
-	{
-		public InitializeIntersightAssetIntersightDeviceConnectorConnection()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetIntersightDeviceConnectorConnection.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetCredential Credential {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetIntersightDeviceConnectorConnection.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetIntersightDeviceConnectorConnection initObject = new Intersight.Model.AssetIntersightDeviceConnectorConnection();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
-            {
-                initObject.Credential = this.Credential;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetParentConnectionSignature.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetParentConnectionSignature")]
-    public class InitializeIntersightAssetParentConnectionSignature:PSCmdlet
-	{
-		public InitializeIntersightAssetParentConnectionSignature()
-		{
-            ClassId = AssetParentConnectionSignature.ClassIdEnum.AssetParentConnectionSignature;
-            ObjectType = AssetParentConnectionSignature.ObjectTypeEnum.AssetParentConnectionSignature;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetParentConnectionSignature.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The moid of the parent device registration."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DeviceId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The node identity of the parent device, corresponds to the parents ClusterMember.memberIdentity. Used on connect to establish through which device in a cluster the child is connected through."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string NodeId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetParentConnectionSignature.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The result of signing the deviceId appended with the timeStamp fields with the devices private key."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public byte[] Signature {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The time at which the signature was generated. Date is accurate to Intersights clock. Used to expire the signature."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime TimeStamp {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetParentConnectionSignature initObject = new Intersight.Model.AssetParentConnectionSignature();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceId"))
-            {
-                initObject.DeviceId = this.DeviceId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NodeId"))
-            {
-                initObject.NodeId = this.NodeId;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Signature"))
-            {
-                initObject.Signature = this.Signature;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TimeStamp"))
-            {
-                initObject.TimeStamp = this.TimeStamp;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetVirtualizationService.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetVirtualizationService")]
-    public class InitializeIntersightAssetVirtualizationService:PSCmdlet
-	{
-		public InitializeIntersightAssetVirtualizationService()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetVirtualizationService.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetVirtualizationService.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetServiceOptions Options {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetVirtualizationService initObject = new Intersight.Model.AssetVirtualizationService();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
-            {
-                initObject.Options = this.Options;
-            }
             WriteObject(initObject);
         }
 
@@ -827,6 +1131,505 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetTerraformIntegrationService.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetTerraformIntegrationService")]
+    public class InitializeIntersightAssetTerraformIntegrationService:PSCmdlet
+	{
+		public InitializeIntersightAssetTerraformIntegrationService()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTerraformIntegrationService.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTerraformIntegrationService.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetServiceOptions Options {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetTerraformIntegrationService initObject = new Intersight.Model.AssetTerraformIntegrationService();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
+            {
+                initObject.Options = this.Options;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeploymentAlarmInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeploymentAlarmInfo")]
+    public class InitializeIntersightAssetDeploymentAlarmInfo:PSCmdlet
+	{
+		public InitializeIntersightAssetDeploymentAlarmInfo()
+		{
+            ClassId = AssetDeploymentAlarmInfo.ClassIdEnum.AssetDeploymentAlarmInfo;
+            ObjectType = AssetDeploymentAlarmInfo.ObjectTypeEnum.AssetDeploymentAlarmInfo;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeploymentAlarmInfo.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeploymentAlarmInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetDeploymentAlarmInfo initObject = new Intersight.Model.AssetDeploymentAlarmInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeviceInformation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeviceInformation")]
+    public class InitializeIntersightAssetDeviceInformation:PSCmdlet
+	{
+		public InitializeIntersightAssetDeviceInformation()
+		{
+            ClassId = AssetDeviceInformation.ClassIdEnum.AssetDeviceInformation;
+            ObjectType = AssetDeviceInformation.ObjectTypeEnum.AssetDeviceInformation;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceInformation.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceInformation.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetDeviceInformation initObject = new Intersight.Model.AssetDeviceInformation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerOpenStackOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerOpenStackOptions")]
+    public class InitializeIntersightAssetWorkloadOptimizerOpenStackOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetWorkloadOptimizerOpenStackOptions()
+		{
+            ClassId = AssetWorkloadOptimizerOpenStackOptions.ClassIdEnum.AssetWorkloadOptimizerOpenStackOptions;
+            ObjectType = AssetWorkloadOptimizerOpenStackOptions.ObjectTypeEnum.AssetWorkloadOptimizerOpenStackOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerOpenStackOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"OpenStack Identity Service (keystone) domain name. Domain is an additional namespaces you can create in keystone to partition users, groups, and projects. Default domain name value is \"Default\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Domain {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerOpenStackOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of tenant which has assigned administrator role this OpenStack target user is in. A tenant or project is referred to as a group of users of OpenStack. Each tenant can be assigned a role which gives all its member users their rights and privileges to perform a specific set of operations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Tenant {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetWorkloadOptimizerOpenStackOptions initObject = new Intersight.Model.AssetWorkloadOptimizerOpenStackOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Domain"))
+            {
+                initObject.Domain = this.Domain;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tenant"))
+            {
+                initObject.Tenant = this.Tenant;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetServiceNowCredential.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetServiceNowCredential")]
+    public class InitializeIntersightAssetServiceNowCredential:PSCmdlet
+	{
+		public InitializeIntersightAssetServiceNowCredential()
+		{
+            ClassId = AssetServiceNowCredential.ClassIdEnum.AssetServiceNowCredential;
+            ObjectType = AssetServiceNowCredential.ObjectTypeEnum.AssetServiceNowCredential;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetServiceNowCredential.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Optional client id/secret credential used for OAuth authentication with ServiceNow target. ServiceNow requires this to be used for OAuth authentication combining with user/password credential."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetOauthClientIdSecretCredential OauthAuthenticationCredential {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetServiceNowCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Minimum required user/password credential to validate and discover ServiceNow target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetUsernamePasswordCredential UserPasswordCredential {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetServiceNowCredential initObject = new Intersight.Model.AssetServiceNowCredential();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OauthAuthenticationCredential"))
+            {
+                initObject.OauthAuthenticationCredential = this.OauthAuthenticationCredential;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserPasswordCredential"))
+            {
+                initObject.UserPasswordCredential = this.UserPasswordCredential;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetTargetSignature.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetTargetSignature")]
+    public class InitializeIntersightAssetTargetSignature:PSCmdlet
+	{
+		public InitializeIntersightAssetTargetSignature()
+		{
+            ClassId = AssetTargetSignature.ClassIdEnum.AssetTargetSignature;
+            ObjectType = AssetTargetSignature.ObjectTypeEnum.AssetTargetSignature;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTargetSignature.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTargetSignature.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The result of signing the deviceId appended with the timeStamp fields with the devices private key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public byte[] Signature {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The moid of the associated target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TargetId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The time at which the signature was generated. Date is accurate to Intersights clock. Used to expire the signature."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public DateTime TimeStamp {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetTargetSignature initObject = new Intersight.Model.AssetTargetSignature();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Signature"))
+            {
+                initObject.Signature = this.Signature;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetId"))
+            {
+                initObject.TargetId = this.TargetId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TimeStamp"))
+            {
+                initObject.TimeStamp = this.TimeStamp;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetTerraformIntegrationTerraformCloudOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetTerraformIntegrationTerraformCloudOptions")]
+    public class InitializeIntersightAssetTerraformIntegrationTerraformCloudOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetTerraformIntegrationTerraformCloudOptions()
+		{
+            ClassId = AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum.AssetTerraformIntegrationTerraformCloudOptions;
+            ObjectType = AssetTerraformIntegrationTerraformCloudOptions.ObjectTypeEnum.AssetTerraformIntegrationTerraformCloudOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> DefaultManagedHosts {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Default organization for Terraform Cloud platform type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DefaultTerraformOrganization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetTerraformIntegrationTerraformCloudOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetTerraformIntegrationTerraformCloudOptions initObject = new Intersight.Model.AssetTerraformIntegrationTerraformCloudOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultManagedHosts"))
+            {
+                initObject.DefaultManagedHosts = this.DefaultManagedHosts;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultTerraformOrganization"))
+            {
+                initObject.DefaultTerraformOrganization = this.DefaultTerraformOrganization;
+            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -912,15 +1715,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeviceInformation.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetSudiInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeviceInformation")]
-    public class InitializeIntersightAssetDeviceInformation:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetSudiInfo")]
+    public class InitializeIntersightAssetSudiInfo:PSCmdlet
 	{
-		public InitializeIntersightAssetDeviceInformation()
+		public InitializeIntersightAssetSudiInfo()
 		{
-            ClassId = AssetDeviceInformation.ClassIdEnum.AssetDeviceInformation;
-            ObjectType = AssetDeviceInformation.ObjectTypeEnum.AssetDeviceInformation;
+            ClassId = AssetSudiInfo.ClassIdEnum.AssetSudiInfo;
+            ObjectType = AssetSudiInfo.ObjectTypeEnum.AssetSudiInfo;
+            Status = AssetSudiInfo.StatusEnum.DeviceStatusUnknown;
             
 		}
         // <summary>
@@ -937,7 +1741,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetDeviceInformation.ClassIdEnum ClassId {
+        public AssetSudiInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -946,14 +1750,264 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetDeviceInformation.ObjectTypeEnum ObjectType {
+        public AssetSudiInfo.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The device model (PID) extracted from the X.509 SUDI Leaf Certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Pid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The device SerialNumber extracted from the X.509 SUDI Leaf Certiicate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SerialNumber {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The signature is obtained by taking the base64 encoding of the Serial Number + PID + Status, taking the SHA256 hash and then signing with the SUDI X.509 Leaf Certifiate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Signature {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The validation status of the device.\n* `DeviceStatusUnknown` - SUDI validation is done on the establishment of a connection. Before a device connects or after it disconnects, the SUDI validation status is set to this value.\n* `Verified` - The device returned a valid PID, Serial Number, Status and X.509 Leaf Certificate. The certificate signing chain was validated.\n* `CertificateValidationFailed` - Validation of the certificate signing chain failed.\n* `UnsupportedFirmware` - The firmware version of the Cisco IMC that is installed does not contain the SUDI APIs needed to perform validation.\n* `UnsupportedHardware` - The device is a model that does not contain a Trust Anchor Module (TAM) and thus cannot be validated.\n* `DeviceNotResponding` - An request was sent to the device, but no response was received."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetSudiInfo.StatusEnum Status {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The X.509 SUDI Leaf Certificate from the Trust Anchor Module. The certificate is serialized in PEM format (Base64 encoded DER certificate)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.X509Certificate SudiCertificate {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetDeviceInformation initObject = new Intersight.Model.AssetDeviceInformation();
+             Intersight.Model.AssetSudiInfo initObject = new Intersight.Model.AssetSudiInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
+            {
+                initObject.SerialNumber = this.SerialNumber;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Signature"))
+            {
+                initObject.Signature = this.Signature;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SudiCertificate"))
+            {
+                initObject.SudiCertificate = this.SudiCertificate;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetMeteringType.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetMeteringType")]
+    public class InitializeIntersightAssetMeteringType:PSCmdlet
+	{
+		public InitializeIntersightAssetMeteringType()
+		{
+            ClassId = AssetMeteringType.ClassIdEnum.AssetMeteringType;
+            ObjectType = AssetMeteringType.ObjectTypeEnum.AssetMeteringType;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetMeteringType.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetMeteringType.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetMeteringType initObject = new Intersight.Model.AssetMeteringType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetClientCertificateCredential.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetClientCertificateCredential")]
+    public class InitializeIntersightAssetClientCertificateCredential:PSCmdlet
+	{
+		public InitializeIntersightAssetClientCertificateCredential()
+		{
+            ClassId = AssetClientCertificateCredential.ClassIdEnum.AssetClientCertificateCredential;
+            ObjectType = AssetClientCertificateCredential.ObjectTypeEnum.AssetClientCertificateCredential;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetClientCertificateCredential.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PEM encoded x509 client certificate used to authenticate with the target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ClientCertificate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PEM encoded private key used to authenticate with the target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ClientKey {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetClientCertificateCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetClientCertificateCredential initObject = new Intersight.Model.AssetClientCertificateCredential();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ClientCertificate"))
+            {
+                initObject.ClientCertificate = this.ClientCertificate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ClientKey"))
+            {
+                initObject.ClientKey = this.ClientKey;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetCustomerInformation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetCustomerInformation")]
+    public class InitializeIntersightAssetCustomerInformation:PSCmdlet
+	{
+		public InitializeIntersightAssetCustomerInformation()
+		{
+            ClassId = AssetCustomerInformation.ClassIdEnum.AssetCustomerInformation;
+            ObjectType = AssetCustomerInformation.ObjectTypeEnum.AssetCustomerInformation;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetCustomerInformation.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetCustomerInformation.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetCustomerInformation initObject = new Intersight.Model.AssetCustomerInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1083,16 +2137,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetSudiInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetSudiInfo")]
-    public class InitializeIntersightAssetSudiInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions")]
+    public class InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions:PSCmdlet
 	{
-		public InitializeIntersightAssetSudiInfo()
+		public InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions()
 		{
-            ClassId = AssetSudiInfo.ClassIdEnum.AssetSudiInfo;
-            ObjectType = AssetSudiInfo.ObjectTypeEnum.AssetSudiInfo;
-            Status = AssetSudiInfo.StatusEnum.DeviceStatusUnknown;
+            ClassId = AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ClassIdEnum.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions;
+            ObjectType = AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ObjectTypeEnum.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions;
             
 		}
         // <summary>
@@ -1109,7 +2162,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetSudiInfo.ClassIdEnum ClassId {
+        public AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enrollment number for Azure EA."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string EnrollmentNumber {
             get;
             set;
         }
@@ -1118,150 +2180,38 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetSudiInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The device model (PID) extracted from the X.509 SUDI Leaf Certificate."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Pid {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The device SerialNumber extracted from the X.509 SUDI Leaf Certiicate."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SerialNumber {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The signature is obtained by taking the base64 encoding of the Serial Number + PID + Status, taking the SHA256 hash and then signing with the SUDI X.509 Leaf Certifiate."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Signature {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The validation status of the device.\n* `DeviceStatusUnknown` - SUDI validation is done on the establishment of a connection. Before a device connects or after it disconnects, the SUDI validation status is set to this value.\n* `Verified` - The device returned a valid PID, Serial Number, Status and X.509 Leaf Certificate. The certificate signing chain was validated.\n* `CertificateValidationFailed` - Validation of the certificate signing chain failed.\n* `UnsupportedFirmware` - The firmware version of the Cisco IMC that is installed does not contain the SUDI APIs needed to perform validation.\n* `UnsupportedHardware` - The device is a model that does not contain a Trust Anchor Module (TAM) and thus cannot be validated.\n* `DeviceNotResponding` - An request was sent to the device, but no response was received."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetSudiInfo.StatusEnum Status {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The X.509 SUDI Leaf Certificate from the Trust Anchor Module. The certificate is serialized in PEM format (Base64 encoded DER certificate)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.X509Certificate SudiCertificate {
+        public AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetSudiInfo initObject = new Intersight.Model.AssetSudiInfo();
+             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnrollmentNumber"))
             {
-                initObject.Pid = this.Pid;
+                initObject.EnrollmentNumber = this.EnrollmentNumber;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
-            {
-                initObject.SerialNumber = this.SerialNumber;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Signature"))
-            {
-                initObject.Signature = this.Signature;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
-            {
-                initObject.Status = this.Status;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SudiCertificate"))
-            {
-                initObject.SudiCertificate = this.SudiCertificate;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetCredential.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetCredential")]
-    public class InitializeIntersightAssetCredential:PSCmdlet
-	{
-		public InitializeIntersightAssetCredential()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetCredential.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetCredential.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetCredential initObject = new Intersight.Model.AssetCredential();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetOrchestrationHitachiVirtualStoragePlatformOptions.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetAddressInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions")]
-    public class InitializeIntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetAddressInformation")]
+    public class InitializeIntersightAssetAddressInformation:PSCmdlet
 	{
-		public InitializeIntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions()
+		public InitializeIntersightAssetAddressInformation()
 		{
-            ClassId = AssetOrchestrationHitachiVirtualStoragePlatformOptions.ClassIdEnum.AssetOrchestrationHitachiVirtualStoragePlatformOptions;
-            ObjectType = AssetOrchestrationHitachiVirtualStoragePlatformOptions.ObjectTypeEnum.AssetOrchestrationHitachiVirtualStoragePlatformOptions;
+            ClassId = AssetAddressInformation.ClassIdEnum.AssetAddressInformation;
+            ObjectType = AssetAddressInformation.ObjectTypeEnum.AssetAddressInformation;
             
 		}
         // <summary>
@@ -1278,7 +2228,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetOrchestrationHitachiVirtualStoragePlatformOptions.ClassIdEnum ClassId {
+        public AssetAddressInformation.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1287,45 +2237,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetOrchestrationHitachiVirtualStoragePlatformOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The DNS hostname or IP address of the Hitachi Ops Center API Configuration Manager used to manage the Hitachi Virtual Storage Platform."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string OpsCenterManagementAddress {
+        public AssetAddressInformation.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetOrchestrationHitachiVirtualStoragePlatformOptions initObject = new Intersight.Model.AssetOrchestrationHitachiVirtualStoragePlatformOptions();
+             Intersight.Model.AssetAddressInformation initObject = new Intersight.Model.AssetAddressInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OpsCenterManagementAddress"))
-            {
-                initObject.OpsCenterManagementAddress = this.OpsCenterManagementAddress;
-            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetCloudConnection.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetSshConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetCloudConnection")]
-    public class InitializeIntersightAssetCloudConnection:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetSshConnection")]
+    public class InitializeIntersightAssetSshConnection:PSCmdlet
 	{
-		public InitializeIntersightAssetCloudConnection()
+		public InitializeIntersightAssetSshConnection()
 		{
+            ClassId = AssetSshConnection.ClassIdEnum.AssetSshConnection;
+            ObjectType = AssetSshConnection.ObjectTypeEnum.AssetSshConnection;
             
 		}
         // <summary>
@@ -1338,11 +2277,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetCloudConnection.ClassIdEnum ClassId {
+        public AssetSshConnection.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -1356,18 +2295,36 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The DNS hostname or IP Address, either IPv4 or IPv6, to be used to connect to the managed target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetCloudConnection.ObjectTypeEnum ObjectType {
+        public string ManagementAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetSshConnection.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The port number to be used to connect to the managed target. Valid values are 1 - 65535. If not provided, a default port of 22 is used to establish the SSH connection to the given target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long Port {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetCloudConnection initObject = new Intersight.Model.AssetCloudConnection();
+             Intersight.Model.AssetSshConnection initObject = new Intersight.Model.AssetSshConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1377,335 +2334,15 @@ namespace Intersight.PowerShell
             {
                 initObject.Credential = this.Credential;
             }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetNewRelicCredential.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetNewRelicCredential")]
-    public class InitializeIntersightAssetNewRelicCredential:PSCmdlet
-	{
-		public InitializeIntersightAssetNewRelicCredential()
-		{
-            ClassId = AssetNewRelicCredential.ClassIdEnum.AssetNewRelicCredential;
-            ObjectType = AssetNewRelicCredential.ObjectTypeEnum.AssetNewRelicCredential;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetNewRelicCredential.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A credential for authenticating with the NewRelic GraphQL interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetApiKeyCredential GraphQlCredential {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetNewRelicCredential.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A credential for authenticating with the NewRelic Rest API interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetApiKeyCredential RestApiCredential {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetNewRelicCredential initObject = new Intersight.Model.AssetNewRelicCredential();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ManagementAddress"))
             {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("GraphQlCredential"))
-            {
-                initObject.GraphQlCredential = this.GraphQlCredential;
+                initObject.ManagementAddress = this.ManagementAddress;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RestApiCredential"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
             {
-                initObject.RestApiCredential = this.RestApiCredential;
+                initObject.Port = this.Port;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetCustomerInformation.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetCustomerInformation")]
-    public class InitializeIntersightAssetCustomerInformation:PSCmdlet
-	{
-		public InitializeIntersightAssetCustomerInformation()
-		{
-            ClassId = AssetCustomerInformation.ClassIdEnum.AssetCustomerInformation;
-            ObjectType = AssetCustomerInformation.ObjectTypeEnum.AssetCustomerInformation;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetCustomerInformation.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetCustomerInformation.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetCustomerInformation initObject = new Intersight.Model.AssetCustomerInformation();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerVmwareVcenterOptions.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerVmwareVcenterOptions")]
-    public class InitializeIntersightAssetWorkloadOptimizerVmwareVcenterOptions:PSCmdlet
-	{
-		public InitializeIntersightAssetWorkloadOptimizerVmwareVcenterOptions()
-		{
-            ClassId = AssetWorkloadOptimizerVmwareVcenterOptions.ClassIdEnum.AssetWorkloadOptimizerVmwareVcenterOptions;
-            ObjectType = AssetWorkloadOptimizerVmwareVcenterOptions.ObjectTypeEnum.AssetWorkloadOptimizerVmwareVcenterOptions;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerVmwareVcenterOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"DatastoreBrowsingEnabled controls whether Workload Optimizer scans vCenter datastores to identify files which are not used and can be deleted to reclaim space and improve actual disk utilization. For example orphaned VMDK files."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool DatastoreBrowsingEnabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enable retrieval of advanced memory metrics. Only supported on vCenter Server version 6.5U3 or later. Guest VMs must run VMWare Tools 10.3.2 Build 10338 or later."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool GuestMetricsEnabled {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerVmwareVcenterOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetWorkloadOptimizerVmwareVcenterOptions initObject = new Intersight.Model.AssetWorkloadOptimizerVmwareVcenterOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DatastoreBrowsingEnabled"))
-            {
-                initObject.DatastoreBrowsingEnabled = this.DatastoreBrowsingEnabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("GuestMetricsEnabled"))
-            {
-                initObject.GuestMetricsEnabled = this.GuestMetricsEnabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetOrchestrationService.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetOrchestrationService")]
-    public class InitializeIntersightAssetOrchestrationService:PSCmdlet
-	{
-		public InitializeIntersightAssetOrchestrationService()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetOrchestrationService.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetOrchestrationService.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetServiceOptions Options {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetOrchestrationService initObject = new Intersight.Model.AssetOrchestrationService();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
-            {
-                initObject.Options = this.Options;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetTargetKey.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetTargetKey")]
-    public class InitializeIntersightAssetTargetKey:PSCmdlet
-	{
-		public InitializeIntersightAssetTargetKey()
-		{
-            ClassId = AssetTargetKey.ClassIdEnum.AssetTargetKey;
-            ObjectType = AssetTargetKey.ObjectTypeEnum.AssetTargetKey;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTargetKey.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTargetKey.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetTargetKey initObject = new Intersight.Model.AssetTargetKey();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -1790,15 +2427,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetPrivateKeyCredential.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetScopedTargetConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetPrivateKeyCredential")]
-    public class InitializeIntersightAssetPrivateKeyCredential:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetScopedTargetConnection")]
+    public class InitializeIntersightAssetScopedTargetConnection:PSCmdlet
 	{
-		public InitializeIntersightAssetPrivateKeyCredential()
+		public InitializeIntersightAssetScopedTargetConnection()
 		{
-            ClassId = AssetPrivateKeyCredential.ClassIdEnum.AssetPrivateKeyCredential;
-            ObjectType = AssetPrivateKeyCredential.ObjectTypeEnum.AssetPrivateKeyCredential;
+            ClassId = AssetScopedTargetConnection.ClassIdEnum.AssetScopedTargetConnection;
+            ObjectType = AssetScopedTargetConnection.ObjectTypeEnum.AssetScopedTargetConnection;
             
 		}
         // <summary>
@@ -1815,7 +2452,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetPrivateKeyCredential.ClassIdEnum ClassId {
+        public AssetScopedTargetConnection.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetCredential Credential {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When this flag is set to true, every IWO entity in the scope targets will be checked and discovery of the scope target will be regarded as a failure when anyone of these entities cannot be connected and validated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool FullValidation {
             get;
             set;
         }
@@ -1824,59 +2479,171 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetPrivateKeyCredential.ObjectTypeEnum ObjectType {
+        public AssetScopedTargetConnection.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The passphrase associated with the private key - Optional."</para>
+        /// <para type="description">"The port number to be used to connect to the managed target. Values 1-65535 indicate a port number to be used. A value of 0 is not a valid port number and instead indicates that the default management port, as defined by the documentation of the managed target, should be used to establish a connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Passphrase {
+        public long Port {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The private key used to authenticate with a managed target. The corresponding public key needs to be added in the auth list of the remote endpoint."</para>
+        /// <para type="description">"The group id of IWO entities upon which the discover of a scoped target is performed. For example, a database target may be scoped to the group of virtual machines upon which the database application is running. Scope value is group id created for all those virtual machines in this scope."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string PrivateKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The username used to authenticate with a managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Username {
+        public string Scope {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetPrivateKeyCredential initObject = new Intersight.Model.AssetPrivateKeyCredential();
+             Intersight.Model.AssetScopedTargetConnection initObject = new Intersight.Model.AssetScopedTargetConnection();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
+            {
+                initObject.Credential = this.Credential;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FullValidation"))
+            {
+                initObject.FullValidation = this.FullValidation;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
+            {
+                initObject.Port = this.Port;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Scope"))
+            {
+                initObject.Scope = this.Scope;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetIntersightDeviceConnectorConnection.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetIntersightDeviceConnectorConnection")]
+    public class InitializeIntersightAssetIntersightDeviceConnectorConnection:PSCmdlet
+	{
+		public InitializeIntersightAssetIntersightDeviceConnectorConnection()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetIntersightDeviceConnectorConnection.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetCredential Credential {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetIntersightDeviceConnectorConnection.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetIntersightDeviceConnectorConnection initObject = new Intersight.Model.AssetIntersightDeviceConnectorConnection();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
+            {
+                initObject.Credential = this.Credential;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetGlobalUltimate.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetGlobalUltimate")]
+    public class InitializeIntersightAssetGlobalUltimate:PSCmdlet
+	{
+		public InitializeIntersightAssetGlobalUltimate()
+		{
+            ClassId = AssetGlobalUltimate.ClassIdEnum.AssetGlobalUltimate;
+            ObjectType = AssetGlobalUltimate.ObjectTypeEnum.AssetGlobalUltimate;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetGlobalUltimate.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetGlobalUltimate.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetGlobalUltimate initObject = new Intersight.Model.AssetGlobalUltimate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Passphrase"))
-            {
-                initObject.Passphrase = this.Passphrase;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PrivateKey"))
-            {
-                initObject.PrivateKey = this.PrivateKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Username"))
-            {
-                initObject.Username = this.Username;
-            }
             WriteObject(initObject);
         }
 
@@ -2040,15 +2807,13 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetAddressInformation.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetClaimSignature.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetAddressInformation")]
-    public class InitializeIntersightAssetAddressInformation:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetClaimSignature")]
+    public class InitializeIntersightAssetClaimSignature:PSCmdlet
 	{
-		public InitializeIntersightAssetAddressInformation()
+		public InitializeIntersightAssetClaimSignature()
 		{
-            ClassId = AssetAddressInformation.ClassIdEnum.AssetAddressInformation;
-            ObjectType = AssetAddressInformation.ObjectTypeEnum.AssetAddressInformation;
             
 		}
         // <summary>
@@ -2061,484 +2826,20 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetAddressInformation.ClassIdEnum ClassId {
+        public AssetClaimSignature.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetAddressInformation.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetAddressInformation initObject = new Intersight.Model.AssetAddressInformation();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetSshConnection.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetSshConnection")]
-    public class InitializeIntersightAssetSshConnection:PSCmdlet
-	{
-		public InitializeIntersightAssetSshConnection()
-		{
-            ClassId = AssetSshConnection.ClassIdEnum.AssetSshConnection;
-            ObjectType = AssetSshConnection.ObjectTypeEnum.AssetSshConnection;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetSshConnection.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetCredential Credential {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The DNS hostname or IP Address, either IPv4 or IPv6, to be used to connect to the managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ManagementAddress {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetSshConnection.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The port number to be used to connect to the managed target. Valid values are 1 - 65535. If not provided, a default port of 22 is used to establish the SSH connection to the given target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long Port {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetSshConnection initObject = new Intersight.Model.AssetSshConnection();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
-            {
-                initObject.Credential = this.Credential;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ManagementAddress"))
-            {
-                initObject.ManagementAddress = this.ManagementAddress;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
-            {
-                initObject.Port = this.Port;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetGlobalUltimate.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetGlobalUltimate")]
-    public class InitializeIntersightAssetGlobalUltimate:PSCmdlet
-	{
-		public InitializeIntersightAssetGlobalUltimate()
-		{
-            ClassId = AssetGlobalUltimate.ClassIdEnum.AssetGlobalUltimate;
-            ObjectType = AssetGlobalUltimate.ObjectTypeEnum.AssetGlobalUltimate;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetGlobalUltimate.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetGlobalUltimate.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetGlobalUltimate initObject = new Intersight.Model.AssetGlobalUltimate();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeploymentAlarmInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeploymentAlarmInfo")]
-    public class InitializeIntersightAssetDeploymentAlarmInfo:PSCmdlet
-	{
-		public InitializeIntersightAssetDeploymentAlarmInfo()
-		{
-            ClassId = AssetDeploymentAlarmInfo.ClassIdEnum.AssetDeploymentAlarmInfo;
-            ObjectType = AssetDeploymentAlarmInfo.ObjectTypeEnum.AssetDeploymentAlarmInfo;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeploymentAlarmInfo.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeploymentAlarmInfo.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetDeploymentAlarmInfo initObject = new Intersight.Model.AssetDeploymentAlarmInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerNewRelicOptions.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerNewRelicOptions")]
-    public class InitializeIntersightAssetWorkloadOptimizerNewRelicOptions:PSCmdlet
-	{
-		public InitializeIntersightAssetWorkloadOptimizerNewRelicOptions()
-		{
-            ClassId = AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum.AssetWorkloadOptimizerNewRelicOptions;
-            ObjectType = AssetWorkloadOptimizerNewRelicOptions.ObjectTypeEnum.AssetWorkloadOptimizerNewRelicOptions;
-            Region = AssetWorkloadOptimizerNewRelicOptions.RegionEnum.US;
-            
-		}
-        // <summary>
-        /// <para type="description">"Your NewRelic account id."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string AccountId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerNewRelicOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The region associated with the NewRelic account.\n* `US` - The United States (US) region.\n* `EU` - The European Union (EU) region."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerNewRelicOptions.RegionEnum Region {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetWorkloadOptimizerNewRelicOptions initObject = new Intersight.Model.AssetWorkloadOptimizerNewRelicOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AccountId"))
-            {
-                initObject.AccountId = this.AccountId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Region"))
-            {
-                initObject.Region = this.Region;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeviceStatistics.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeviceStatistics")]
-    public class InitializeIntersightAssetDeviceStatistics:PSCmdlet
-	{
-		public InitializeIntersightAssetDeviceStatistics()
-		{
-            ClassId = AssetDeviceStatistics.ClassIdEnum.AssetDeviceStatistics;
-            ObjectType = AssetDeviceStatistics.ObjectTypeEnum.AssetDeviceStatistics;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceStatistics.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceStatistics.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetDeviceStatistics initObject = new Intersight.Model.AssetDeviceStatistics();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions")]
-    public class InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions:PSCmdlet
-	{
-		public InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions()
-		{
-            AzureCloudType = AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.AzureCloudTypeEnum.Global;
-            ClassId = AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ClassIdEnum.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions;
-            ObjectType = AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ObjectTypeEnum.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Azure has different endpoints for managing Germany subscriptions. Azure cloud type helps in differentiating between regular subscriptions and Germany subscriptions to manage the Azure services for workload optimization. Documentation for germany cloud [link](https://docs.microsoft.com/en-us/azure/germany/germany-manage-subscriptions).\n* `Global` - Global cloud type for Azure subscription.\n* `Germany` - Germany cloud type for Azure subscription."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.AzureCloudTypeEnum AzureCloudType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"ID of the tenant used while authenticating the managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TenantId {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AzureCloudType"))
-            {
-                initObject.AzureCloudType = this.AzureCloudType;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("TenantId"))
-            {
-                initObject.TenantId = this.TenantId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetTargetSignature.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetTargetSignature")]
-    public class InitializeIntersightAssetTargetSignature:PSCmdlet
-	{
-		public InitializeIntersightAssetTargetSignature()
-		{
-            ClassId = AssetTargetSignature.ClassIdEnum.AssetTargetSignature;
-            ObjectType = AssetTargetSignature.ObjectTypeEnum.AssetTargetSignature;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTargetSignature.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTargetSignature.ObjectTypeEnum ObjectType {
+        public AssetClaimSignature.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -2548,15 +2849,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public byte[] Signature {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The moid of the associated target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string TargetId {
             get;
             set;
         }
@@ -2572,7 +2864,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetTargetSignature initObject = new Intersight.Model.AssetTargetSignature();
+             Intersight.Model.AssetClaimSignature initObject = new Intersight.Model.AssetClaimSignature();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -2583,238 +2875,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Signature = this.Signature;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetId"))
-            {
-                initObject.TargetId = this.TargetId;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("TimeStamp"))
             {
                 initObject.TimeStamp = this.TimeStamp;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetOauthBearerTokenCredential.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetOauthBearerTokenCredential")]
-    public class InitializeIntersightAssetOauthBearerTokenCredential:PSCmdlet
-	{
-		public InitializeIntersightAssetOauthBearerTokenCredential()
-		{
-            ClassId = AssetOauthBearerTokenCredential.ClassIdEnum.AssetOauthBearerTokenCredential;
-            ObjectType = AssetOauthBearerTokenCredential.ObjectTypeEnum.AssetOauthBearerTokenCredential;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetOauthBearerTokenCredential.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetOauthBearerTokenCredential.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Scope type for the crendetial i.e. User, Organization, Team."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ScopeType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Scope value for the credential i.e. username, organization name or team name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ScopeValue {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The token used to authenticate with a managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Token {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetOauthBearerTokenCredential initObject = new Intersight.Model.AssetOauthBearerTokenCredential();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ScopeType"))
-            {
-                initObject.ScopeType = this.ScopeType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ScopeValue"))
-            {
-                initObject.ScopeValue = this.ScopeValue;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Token"))
-            {
-                initObject.Token = this.Token;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerOpenStackOptions.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerOpenStackOptions")]
-    public class InitializeIntersightAssetWorkloadOptimizerOpenStackOptions:PSCmdlet
-	{
-		public InitializeIntersightAssetWorkloadOptimizerOpenStackOptions()
-		{
-            ClassId = AssetWorkloadOptimizerOpenStackOptions.ClassIdEnum.AssetWorkloadOptimizerOpenStackOptions;
-            ObjectType = AssetWorkloadOptimizerOpenStackOptions.ObjectTypeEnum.AssetWorkloadOptimizerOpenStackOptions;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerOpenStackOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"OpenStack Identity Service (keystone) domain name. Domain is an additional namespaces you can create in keystone to partition users, groups, and projects. Default domain name value is \"Default\"."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Domain {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerOpenStackOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of tenant which has assigned administrator role this OpenStack target user is in. A tenant or project is referred to as a group of users of OpenStack. Each tenant can be assigned a role which gives all its member users their rights and privileges to perform a specific set of operations."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Tenant {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetWorkloadOptimizerOpenStackOptions initObject = new Intersight.Model.AssetWorkloadOptimizerOpenStackOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Domain"))
-            {
-                initObject.Domain = this.Domain;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tenant"))
-            {
-                initObject.Tenant = this.Tenant;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetContractInformation.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetContractInformation")]
-    public class InitializeIntersightAssetContractInformation:PSCmdlet
-	{
-		public InitializeIntersightAssetContractInformation()
-		{
-            ClassId = AssetContractInformation.ClassIdEnum.AssetContractInformation;
-            ObjectType = AssetContractInformation.ObjectTypeEnum.AssetContractInformation;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetContractInformation.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetContractInformation.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetContractInformation initObject = new Intersight.Model.AssetContractInformation();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -2920,434 +2984,6 @@ namespace Intersight.PowerShell
             {
                 initObject.TenantId = this.TenantId;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetProductInformation.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetProductInformation")]
-    public class InitializeIntersightAssetProductInformation:PSCmdlet
-	{
-		public InitializeIntersightAssetProductInformation()
-		{
-            ClassId = AssetProductInformation.ClassIdEnum.AssetProductInformation;
-            ObjectType = AssetProductInformation.ObjectTypeEnum.AssetProductInformation;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetProductInformation.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetProductInformation.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetProductInformation initObject = new Intersight.Model.AssetProductInformation();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetServiceNowCredential.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetServiceNowCredential")]
-    public class InitializeIntersightAssetServiceNowCredential:PSCmdlet
-	{
-		public InitializeIntersightAssetServiceNowCredential()
-		{
-            ClassId = AssetServiceNowCredential.ClassIdEnum.AssetServiceNowCredential;
-            ObjectType = AssetServiceNowCredential.ObjectTypeEnum.AssetServiceNowCredential;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetServiceNowCredential.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Optional client id/secret credential used for OAuth authentication with ServiceNow target. ServiceNow requires this to be used for OAuth authentication combining with user/password credential."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetOauthClientIdSecretCredential OauthAuthenticationCredential {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetServiceNowCredential.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Minimum required user/password credential to validate and discover ServiceNow target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetUsernamePasswordCredential UserPasswordCredential {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetServiceNowCredential initObject = new Intersight.Model.AssetServiceNowCredential();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OauthAuthenticationCredential"))
-            {
-                initObject.OauthAuthenticationCredential = this.OauthAuthenticationCredential;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("UserPasswordCredential"))
-            {
-                initObject.UserPasswordCredential = this.UserPasswordCredential;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetTerraformIntegrationService.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetTerraformIntegrationService")]
-    public class InitializeIntersightAssetTerraformIntegrationService:PSCmdlet
-	{
-		public InitializeIntersightAssetTerraformIntegrationService()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTerraformIntegrationService.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTerraformIntegrationService.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetServiceOptions Options {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetTerraformIntegrationService initObject = new Intersight.Model.AssetTerraformIntegrationService();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
-            {
-                initObject.Options = this.Options;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetService.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetService")]
-    public class InitializeIntersightAssetService:PSCmdlet
-	{
-		public InitializeIntersightAssetService()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetService.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetService.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetServiceOptions Options {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetService initObject = new Intersight.Model.AssetService();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
-            {
-                initObject.Options = this.Options;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeploymentDeviceInformation.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeploymentDeviceInformation")]
-    public class InitializeIntersightAssetDeploymentDeviceInformation:PSCmdlet
-	{
-		public InitializeIntersightAssetDeploymentDeviceInformation()
-		{
-            ClassId = AssetDeploymentDeviceInformation.ClassIdEnum.AssetDeploymentDeviceInformation;
-            ObjectType = AssetDeploymentDeviceInformation.ObjectTypeEnum.AssetDeploymentDeviceInformation;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeploymentDeviceInformation.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeploymentDeviceInformation.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetDeploymentDeviceInformation initObject = new Intersight.Model.AssetDeploymentDeviceInformation();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetConnection.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetConnection")]
-    public class InitializeIntersightAssetConnection:PSCmdlet
-	{
-		public InitializeIntersightAssetConnection()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetConnection.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AssetCredential Credential {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetConnection.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetConnection initObject = new Intersight.Model.AssetConnection();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
-            {
-                initObject.Credential = this.Credential;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetServiceOptions.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetServiceOptions")]
-    public class InitializeIntersightAssetServiceOptions:PSCmdlet
-	{
-		public InitializeIntersightAssetServiceOptions()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetServiceOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetServiceOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetServiceOptions initObject = new Intersight.Model.AssetServiceOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -3483,15 +3119,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeviceTransaction.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetProductInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeviceTransaction")]
-    public class InitializeIntersightAssetDeviceTransaction:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetProductInformation")]
+    public class InitializeIntersightAssetProductInformation:PSCmdlet
 	{
-		public InitializeIntersightAssetDeviceTransaction()
+		public InitializeIntersightAssetProductInformation()
 		{
-            ClassId = AssetDeviceTransaction.ClassIdEnum.AssetDeviceTransaction;
-            ObjectType = AssetDeviceTransaction.ObjectTypeEnum.AssetDeviceTransaction;
+            ClassId = AssetProductInformation.ClassIdEnum.AssetProductInformation;
+            ObjectType = AssetProductInformation.ObjectTypeEnum.AssetProductInformation;
             
 		}
         // <summary>
@@ -3508,7 +3144,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetDeviceTransaction.ClassIdEnum ClassId {
+        public AssetProductInformation.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -3517,14 +3153,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetDeviceTransaction.ObjectTypeEnum ObjectType {
+        public AssetProductInformation.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetDeviceTransaction initObject = new Intersight.Model.AssetDeviceTransaction();
+             Intersight.Model.AssetProductInformation initObject = new Intersight.Model.AssetProductInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -3536,157 +3172,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetService.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions")]
-    public class InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetService")]
+    public class InitializeIntersightAssetService:PSCmdlet
 	{
-		public InitializeIntersightAssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions()
-		{
-            ClassId = AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ClassIdEnum.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions;
-            ObjectType = AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ObjectTypeEnum.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enrollment number for Azure EA."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EnrollmentNumber {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EnrollmentNumber"))
-            {
-                initObject.EnrollmentNumber = this.EnrollmentNumber;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetClientCertificateCredential.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetClientCertificateCredential")]
-    public class InitializeIntersightAssetClientCertificateCredential:PSCmdlet
-	{
-		public InitializeIntersightAssetClientCertificateCredential()
-		{
-            ClassId = AssetClientCertificateCredential.ClassIdEnum.AssetClientCertificateCredential;
-            ObjectType = AssetClientCertificateCredential.ObjectTypeEnum.AssetClientCertificateCredential;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetClientCertificateCredential.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"PEM encoded x509 client certificate used to authenticate with the target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ClientCertificate {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"PEM encoded private key used to authenticate with the target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ClientKey {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetClientCertificateCredential.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetClientCertificateCredential initObject = new Intersight.Model.AssetClientCertificateCredential();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ClientCertificate"))
-            {
-                initObject.ClientCertificate = this.ClientCertificate;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ClientKey"))
-            {
-                initObject.ClientKey = this.ClientKey;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetClaimSignature.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetClaimSignature")]
-    public class InitializeIntersightAssetClaimSignature:PSCmdlet
-	{
-		public InitializeIntersightAssetClaimSignature()
+		public InitializeIntersightAssetService()
 		{
             
 		}
@@ -3704,7 +3195,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetClaimSignature.ClassIdEnum ClassId {
+        public AssetService.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -3713,7 +3204,223 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetClaimSignature.ObjectTypeEnum ObjectType {
+        public AssetService.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetServiceOptions Options {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetService initObject = new Intersight.Model.AssetService();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
+            {
+                initObject.Options = this.Options;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetWorkloadOptimizerMicrosoftSqlServerOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetWorkloadOptimizerMicrosoftSqlServerOptions")]
+    public class InitializeIntersightAssetWorkloadOptimizerMicrosoftSqlServerOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetWorkloadOptimizerMicrosoftSqlServerOptions()
+		{
+            ClassId = AssetWorkloadOptimizerMicrosoftSqlServerOptions.ClassIdEnum.AssetWorkloadOptimizerMicrosoftSqlServerOptions;
+            ObjectType = AssetWorkloadOptimizerMicrosoftSqlServerOptions.ObjectTypeEnum.AssetWorkloadOptimizerMicrosoftSqlServerOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port that Microsoft SQL Server Browser listens for incoming requests for SQL Server resources and provides information about SQL Server instances that are installed on the computer. When this port is specified, Database will be communicated through the Browser Service with this port instead of default SQLServer port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long BrowserServicePort {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerMicrosoftSqlServerOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Active Directory domain, if required for this account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FullDomainName {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetWorkloadOptimizerMicrosoftSqlServerOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetWorkloadOptimizerMicrosoftSqlServerOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftSqlServerOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BrowserServicePort"))
+            {
+                initObject.BrowserServicePort = this.BrowserServicePort;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FullDomainName"))
+            {
+                initObject.FullDomainName = this.FullDomainName;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeviceStatistics.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeviceStatistics")]
+    public class InitializeIntersightAssetDeviceStatistics:PSCmdlet
+	{
+		public InitializeIntersightAssetDeviceStatistics()
+		{
+            ClassId = AssetDeviceStatistics.ClassIdEnum.AssetDeviceStatistics;
+            ObjectType = AssetDeviceStatistics.ObjectTypeEnum.AssetDeviceStatistics;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceStatistics.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceStatistics.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetDeviceStatistics initObject = new Intersight.Model.AssetDeviceStatistics();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetParentConnectionSignature.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetParentConnectionSignature")]
+    public class InitializeIntersightAssetParentConnectionSignature:PSCmdlet
+	{
+		public InitializeIntersightAssetParentConnectionSignature()
+		{
+            ClassId = AssetParentConnectionSignature.ClassIdEnum.AssetParentConnectionSignature;
+            ObjectType = AssetParentConnectionSignature.ObjectTypeEnum.AssetParentConnectionSignature;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetParentConnectionSignature.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The moid of the parent device registration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string DeviceId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The node identity of the parent device, corresponds to the parents ClusterMember.memberIdentity. Used on connect to establish through which device in a cluster the child is connected through."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string NodeId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetParentConnectionSignature.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -3738,12 +3445,20 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetClaimSignature initObject = new Intersight.Model.AssetClaimSignature();
+             Intersight.Model.AssetParentConnectionSignature initObject = new Intersight.Model.AssetParentConnectionSignature();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceId"))
+            {
+                initObject.DeviceId = this.DeviceId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NodeId"))
+            {
+                initObject.NodeId = this.NodeId;
+            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Signature"))
             {
@@ -3758,91 +3473,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetTerraformIntegrationTerraformCloudOptions.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetCloudConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetTerraformIntegrationTerraformCloudOptions")]
-    public class InitializeIntersightAssetTerraformIntegrationTerraformCloudOptions:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetCloudConnection")]
+    public class InitializeIntersightAssetCloudConnection:PSCmdlet
 	{
-		public InitializeIntersightAssetTerraformIntegrationTerraformCloudOptions()
-		{
-            ClassId = AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum.AssetTerraformIntegrationTerraformCloudOptions;
-            ObjectType = AssetTerraformIntegrationTerraformCloudOptions.ObjectTypeEnum.AssetTerraformIntegrationTerraformCloudOptions;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTerraformIntegrationTerraformCloudOptions.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> DefaultManagedHosts {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Default organization for Terraform Cloud platform type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string DefaultTerraformOrganization {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetTerraformIntegrationTerraformCloudOptions.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.AssetTerraformIntegrationTerraformCloudOptions initObject = new Intersight.Model.AssetTerraformIntegrationTerraformCloudOptions();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultManagedHosts"))
-            {
-                initObject.DefaultManagedHosts = this.DefaultManagedHosts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultTerraformOrganization"))
-            {
-                initObject.DefaultTerraformOrganization = this.DefaultTerraformOrganization;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AssetNoAuthenticationCredential.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAssetNoAuthenticationCredential")]
-    public class InitializeIntersightAssetNoAuthenticationCredential:PSCmdlet
-	{
-		public InitializeIntersightAssetNoAuthenticationCredential()
+		public InitializeIntersightAssetCloudConnection()
 		{
             
 		}
@@ -3860,7 +3496,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetNoAuthenticationCredential.ClassIdEnum ClassId {
+        public AssetCloudConnection.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetCredential Credential {
             get;
             set;
         }
@@ -3869,19 +3514,23 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AssetNoAuthenticationCredential.ObjectTypeEnum ObjectType {
+        public AssetCloudConnection.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AssetNoAuthenticationCredential initObject = new Intersight.Model.AssetNoAuthenticationCredential();
+             Intersight.Model.AssetCloudConnection initObject = new Intersight.Model.AssetCloudConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
+            {
+                initObject.Credential = this.Credential;
+            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -3975,6 +3624,541 @@ namespace Intersight.PowerShell
                 initObject.CostAndUsageReportRegion = this.CostAndUsageReportRegion;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetNewRelicCredential.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetNewRelicCredential")]
+    public class InitializeIntersightAssetNewRelicCredential:PSCmdlet
+	{
+		public InitializeIntersightAssetNewRelicCredential()
+		{
+            ClassId = AssetNewRelicCredential.ClassIdEnum.AssetNewRelicCredential;
+            ObjectType = AssetNewRelicCredential.ObjectTypeEnum.AssetNewRelicCredential;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetNewRelicCredential.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A credential for authenticating with the NewRelic GraphQL interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetApiKeyCredential GraphQlCredential {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetNewRelicCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A credential for authenticating with the NewRelic Rest API interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetApiKeyCredential RestApiCredential {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetNewRelicCredential initObject = new Intersight.Model.AssetNewRelicCredential();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("GraphQlCredential"))
+            {
+                initObject.GraphQlCredential = this.GraphQlCredential;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RestApiCredential"))
+            {
+                initObject.RestApiCredential = this.RestApiCredential;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetOauthBearerTokenCredential.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetOauthBearerTokenCredential")]
+    public class InitializeIntersightAssetOauthBearerTokenCredential:PSCmdlet
+	{
+		public InitializeIntersightAssetOauthBearerTokenCredential()
+		{
+            ClassId = AssetOauthBearerTokenCredential.ClassIdEnum.AssetOauthBearerTokenCredential;
+            ObjectType = AssetOauthBearerTokenCredential.ObjectTypeEnum.AssetOauthBearerTokenCredential;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetOauthBearerTokenCredential.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetOauthBearerTokenCredential.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Scope type for the crendetial i.e. User, Organization, Team."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ScopeType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Scope value for the credential i.e. username, organization name or team name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ScopeValue {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The token used to authenticate with a managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Token {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetOauthBearerTokenCredential initObject = new Intersight.Model.AssetOauthBearerTokenCredential();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScopeType"))
+            {
+                initObject.ScopeType = this.ScopeType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScopeValue"))
+            {
+                initObject.ScopeValue = this.ScopeValue;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Token"))
+            {
+                initObject.Token = this.Token;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetDeviceTransaction.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetDeviceTransaction")]
+    public class InitializeIntersightAssetDeviceTransaction:PSCmdlet
+	{
+		public InitializeIntersightAssetDeviceTransaction()
+		{
+            ClassId = AssetDeviceTransaction.ClassIdEnum.AssetDeviceTransaction;
+            ObjectType = AssetDeviceTransaction.ObjectTypeEnum.AssetDeviceTransaction;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceTransaction.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceTransaction.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetDeviceTransaction initObject = new Intersight.Model.AssetDeviceTransaction();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetServiceOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetServiceOptions")]
+    public class InitializeIntersightAssetServiceOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetServiceOptions()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetServiceOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetServiceOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetServiceOptions initObject = new Intersight.Model.AssetServiceOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetVirtualizationService.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetVirtualizationService")]
+    public class InitializeIntersightAssetVirtualizationService:PSCmdlet
+	{
+		public InitializeIntersightAssetVirtualizationService()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetVirtualizationService.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetVirtualizationService.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Captures configuration that is specific to a target type for a specific service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetServiceOptions Options {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetVirtualizationService initObject = new Intersight.Model.AssetVirtualizationService();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Options"))
+            {
+                initObject.Options = this.Options;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetConnection.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetConnection")]
+    public class InitializeIntersightAssetConnection:PSCmdlet
+	{
+		public InitializeIntersightAssetConnection()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetConnection.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The credential to be used to authenticate with the managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AssetCredential Credential {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetConnection.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetConnection initObject = new Intersight.Model.AssetConnection();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Credential"))
+            {
+                initObject.Credential = this.Credential;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetVirtualizationAmazonWebServiceOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetVirtualizationAmazonWebServiceOptions")]
+    public class InitializeIntersightAssetVirtualizationAmazonWebServiceOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetVirtualizationAmazonWebServiceOptions()
+		{
+            ClassId = AssetVirtualizationAmazonWebServiceOptions.ClassIdEnum.AssetVirtualizationAmazonWebServiceOptions;
+            ObjectType = AssetVirtualizationAmazonWebServiceOptions.ObjectTypeEnum.AssetVirtualizationAmazonWebServiceOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetVirtualizationAmazonWebServiceOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoMoRef> ManagedRegions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetVirtualizationAmazonWebServiceOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetVirtualizationAmazonWebServiceOptions initObject = new Intersight.Model.AssetVirtualizationAmazonWebServiceOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ManagedRegions"))
+            {
+                initObject.ManagedRegions = this.ManagedRegions;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetOrchestrationHitachiVirtualStoragePlatformOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions")]
+    public class InitializeIntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions:PSCmdlet
+	{
+		public InitializeIntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions()
+		{
+            ClassId = AssetOrchestrationHitachiVirtualStoragePlatformOptions.ClassIdEnum.AssetOrchestrationHitachiVirtualStoragePlatformOptions;
+            ObjectType = AssetOrchestrationHitachiVirtualStoragePlatformOptions.ObjectTypeEnum.AssetOrchestrationHitachiVirtualStoragePlatformOptions;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetOrchestrationHitachiVirtualStoragePlatformOptions.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetOrchestrationHitachiVirtualStoragePlatformOptions.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The DNS hostname or IP address of the Hitachi Ops Center API Configuration Manager used to manage the Hitachi Virtual Storage Platform."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OpsCenterManagementAddress {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.AssetOrchestrationHitachiVirtualStoragePlatformOptions initObject = new Intersight.Model.AssetOrchestrationHitachiVirtualStoragePlatformOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OpsCenterManagementAddress"))
+            {
+                initObject.OpsCenterManagementAddress = this.OpsCenterManagementAddress;
+            }
             WriteObject(initObject);
         }
 

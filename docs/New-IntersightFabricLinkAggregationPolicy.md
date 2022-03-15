@@ -19,7 +19,7 @@ New-IntersightFabricLinkAggregationPolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricLinkAggregationPolicy&amp;apos; resource.
+Create a &apos;FabricLinkAggregationPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -205,10 +205,10 @@ PS C:\> New-IntersightFabricLinkAggregationPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
+[Get-IntersightFabricLinkAggregationPolicy](./Get-IntersightFabricLinkAggregationPolicy.md)
 
 [Remove-IntersightFabricLinkAggregationPolicy](./Remove-IntersightFabricLinkAggregationPolicy.md)
 
-[Get-IntersightFabricLinkAggregationPolicy](./Get-IntersightFabricLinkAggregationPolicy.md)
+[Set-IntersightFabricLinkAggregationPolicy](./Set-IntersightFabricLinkAggregationPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

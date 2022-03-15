@@ -8,6 +8,108 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolResourcePoolParameters.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolResourcePoolParameters")]
+    public class InitializeIntersightResourcepoolResourcePoolParameters:PSCmdlet
+	{
+		public InitializeIntersightResourcepoolResourcePoolParameters()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourcepoolResourcePoolParameters.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourcepoolResourcePoolParameters.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ResourcepoolResourcePoolParameters initObject = new Intersight.Model.ResourcepoolResourcePoolParameters();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolLeaseParameters.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolLeaseParameters")]
+    public class InitializeIntersightResourcepoolLeaseParameters:PSCmdlet
+	{
+		public InitializeIntersightResourcepoolLeaseParameters()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourcepoolLeaseParameters.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourcepoolLeaseParameters.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ResourcepoolLeaseParameters initObject = new Intersight.Model.ResourcepoolLeaseParameters();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolServerPoolParameters.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolServerPoolParameters")]
@@ -75,57 +177,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolResourcePoolParameters.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolResourcePoolParameters")]
-    public class InitializeIntersightResourcepoolResourcePoolParameters:PSCmdlet
-	{
-		public InitializeIntersightResourcepoolResourcePoolParameters()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourcepoolResourcePoolParameters.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourcepoolResourcePoolParameters.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ResourcepoolResourcePoolParameters initObject = new Intersight.Model.ResourcepoolResourcePoolParameters();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolServerLeaseParameters.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolServerLeaseParameters")]
@@ -186,57 +237,6 @@ namespace Intersight.PowerShell
             {
                 initObject.LifeCycleStates = this.LifeCycleStates;
             }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolLeaseParameters.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolLeaseParameters")]
-    public class InitializeIntersightResourcepoolLeaseParameters:PSCmdlet
-	{
-		public InitializeIntersightResourcepoolLeaseParameters()
-		{
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourcepoolLeaseParameters.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourcepoolLeaseParameters.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ResourcepoolLeaseParameters initObject = new Intersight.Model.ResourcepoolLeaseParameters();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }

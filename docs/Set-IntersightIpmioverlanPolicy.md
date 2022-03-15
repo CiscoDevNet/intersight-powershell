@@ -240,8 +240,8 @@ PS C:\> Set-IntersightIpmioverlanPolicy
 
 [Remove-IntersightIpmioverlanPolicy](./Remove-IntersightIpmioverlanPolicy.md)
 
-[New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
-
 [Get-IntersightIpmioverlanPolicy](./Get-IntersightIpmioverlanPolicy.md)
+
+[New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

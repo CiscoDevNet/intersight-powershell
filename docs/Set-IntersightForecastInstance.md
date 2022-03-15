@@ -19,7 +19,7 @@ Set-IntersightForecastInstance [-Action< ForecastInstance.ActionEnum>][-Addition
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ForecastInstance&amp;apos; resource.
+Update a &apos;ForecastInstance&apos; resource.
 
 ## PARAMETERS
 

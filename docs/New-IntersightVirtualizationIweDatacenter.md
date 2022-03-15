@@ -19,7 +19,7 @@ New-IntersightVirtualizationIweDatacenter [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationIweDatacenter&amp;apos; resource.
+Create a &apos;VirtualizationIweDatacenter&apos; resource.
 
 ## PARAMETERS
 

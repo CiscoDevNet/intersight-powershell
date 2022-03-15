@@ -8,6 +8,73 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PkixRsaAlgorithm.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPkixRsaAlgorithm")]
+    public class InitializeIntersightPkixRsaAlgorithm:PSCmdlet
+	{
+		public InitializeIntersightPkixRsaAlgorithm()
+		{
+            ClassId = PkixRsaAlgorithm.ClassIdEnum.PkixRsaAlgorithm;
+            Modulus = PkixRsaAlgorithm.ModulusEnum.NUMBER_2048;
+            ObjectType = PkixRsaAlgorithm.ObjectTypeEnum.PkixRsaAlgorithm;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixRsaAlgorithm.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The length of the RSA key, expressed in bits, for both public and private keys.\n* `2048` - A key length of 2048 bits.\n* `2560` - A key length of 2560 bits.\n* `3072` - A key length of 3072 bits.\n* `3584` - A key length of 3584 bits.\n* `4096` - A key length of 4096 bits."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixRsaAlgorithm.ModulusEnum Modulus {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixRsaAlgorithm.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.PkixRsaAlgorithm initObject = new Intersight.Model.PkixRsaAlgorithm();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Modulus"))
+            {
+                initObject.Modulus = this.Modulus;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize PkixEcdsaKeySpec.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightPkixEcdsaKeySpec")]
@@ -69,6 +136,112 @@ namespace Intersight.PowerShell
             {
                 initObject.Curve = this.Curve;
             }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PkixDistinguishedName.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPkixDistinguishedName")]
+    public class InitializeIntersightPkixDistinguishedName:PSCmdlet
+	{
+		public InitializeIntersightPkixDistinguishedName()
+		{
+            ClassId = PkixDistinguishedName.ClassIdEnum.PkixDistinguishedName;
+            ObjectType = PkixDistinguishedName.ObjectTypeEnum.PkixDistinguishedName;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixDistinguishedName.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixDistinguishedName.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.PkixDistinguishedName initObject = new Intersight.Model.PkixDistinguishedName();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PkixSubjectAlternateName.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPkixSubjectAlternateName")]
+    public class InitializeIntersightPkixSubjectAlternateName:PSCmdlet
+	{
+		public InitializeIntersightPkixSubjectAlternateName()
+		{
+            ClassId = PkixSubjectAlternateName.ClassIdEnum.PkixSubjectAlternateName;
+            ObjectType = PkixSubjectAlternateName.ObjectTypeEnum.PkixSubjectAlternateName;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixSubjectAlternateName.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PkixSubjectAlternateName.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.PkixSubjectAlternateName initObject = new Intersight.Model.PkixSubjectAlternateName();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -185,179 +358,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Algorithm"))
             {
                 initObject.Algorithm = this.Algorithm;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PkixDistinguishedName.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPkixDistinguishedName")]
-    public class InitializeIntersightPkixDistinguishedName:PSCmdlet
-	{
-		public InitializeIntersightPkixDistinguishedName()
-		{
-            ClassId = PkixDistinguishedName.ClassIdEnum.PkixDistinguishedName;
-            ObjectType = PkixDistinguishedName.ObjectTypeEnum.PkixDistinguishedName;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixDistinguishedName.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixDistinguishedName.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.PkixDistinguishedName initObject = new Intersight.Model.PkixDistinguishedName();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PkixRsaAlgorithm.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPkixRsaAlgorithm")]
-    public class InitializeIntersightPkixRsaAlgorithm:PSCmdlet
-	{
-		public InitializeIntersightPkixRsaAlgorithm()
-		{
-            ClassId = PkixRsaAlgorithm.ClassIdEnum.PkixRsaAlgorithm;
-            Modulus = PkixRsaAlgorithm.ModulusEnum.NUMBER_2048;
-            ObjectType = PkixRsaAlgorithm.ObjectTypeEnum.PkixRsaAlgorithm;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixRsaAlgorithm.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The length of the RSA key, expressed in bits, for both public and private keys.\n* `2048` - A key length of 2048 bits.\n* `2560` - A key length of 2560 bits.\n* `3072` - A key length of 3072 bits.\n* `3584` - A key length of 3584 bits.\n* `4096` - A key length of 4096 bits."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixRsaAlgorithm.ModulusEnum Modulus {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixRsaAlgorithm.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.PkixRsaAlgorithm initObject = new Intersight.Model.PkixRsaAlgorithm();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Modulus"))
-            {
-                initObject.Modulus = this.Modulus;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PkixSubjectAlternateName.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPkixSubjectAlternateName")]
-    public class InitializeIntersightPkixSubjectAlternateName:PSCmdlet
-	{
-		public InitializeIntersightPkixSubjectAlternateName()
-		{
-            ClassId = PkixSubjectAlternateName.ClassIdEnum.PkixSubjectAlternateName;
-            ObjectType = PkixSubjectAlternateName.ObjectTypeEnum.PkixSubjectAlternateName;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixSubjectAlternateName.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PkixSubjectAlternateName.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.PkixSubjectAlternateName initObject = new Intersight.Model.PkixSubjectAlternateName();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;

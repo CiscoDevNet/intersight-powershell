@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterEthSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterAdapterConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterEthSettings")]
-    public class InitializeIntersightAdapterEthSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterAdapterConfig")]
+    public class InitializeIntersightAdapterAdapterConfig:PSCmdlet
 	{
-		public InitializeIntersightAdapterEthSettings()
+		public InitializeIntersightAdapterAdapterConfig()
 		{
-            ClassId = AdapterEthSettings.ClassIdEnum.AdapterEthSettings;
-            ObjectType = AdapterEthSettings.ObjectTypeEnum.AdapterEthSettings;
+            ClassId = AdapterAdapterConfig.ClassIdEnum.AdapterAdapterConfig;
+            ObjectType = AdapterAdapterConfig.ObjectTypeEnum.AdapterAdapterConfig;
             
 		}
         // <summary>
@@ -33,16 +33,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterEthSettings.ClassIdEnum ClassId {
+        public AdapterAdapterConfig.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Status of LLDP protocol on the adapter interfaces."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool LldpEnabled {
+        public List<Model.AdapterDceInterfaceSettings> DceInterfaceSettings {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Global Ethernet settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AdapterEthSettings EthSettings {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Global Fibre Channel settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AdapterFcSettings FcSettings {
             get;
             set;
         }
@@ -51,24 +69,58 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterEthSettings.ObjectTypeEnum ObjectType {
+        public AdapterAdapterConfig.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Channel settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.AdapterPortChannelSettings PortChannelSettings {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PCIe slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|1[0-5]|MLOM)$")]
+        public string SlotId {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AdapterEthSettings initObject = new Intersight.Model.AdapterEthSettings();
+             Intersight.Model.AdapterAdapterConfig initObject = new Intersight.Model.AdapterAdapterConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LldpEnabled"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DceInterfaceSettings"))
             {
-                initObject.LldpEnabled = this.LldpEnabled;
+                initObject.DceInterfaceSettings = this.DceInterfaceSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthSettings"))
+            {
+                initObject.EthSettings = this.EthSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcSettings"))
+            {
+                initObject.FcSettings = this.FcSettings;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelSettings"))
+            {
+                initObject.PortChannelSettings = this.PortChannelSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
             WriteObject(initObject);
         }
 
@@ -286,15 +338,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterAdapterConfig.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterEthSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterAdapterConfig")]
-    public class InitializeIntersightAdapterAdapterConfig:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterEthSettings")]
+    public class InitializeIntersightAdapterEthSettings:PSCmdlet
 	{
-		public InitializeIntersightAdapterAdapterConfig()
+		public InitializeIntersightAdapterEthSettings()
 		{
-            ClassId = AdapterAdapterConfig.ClassIdEnum.AdapterAdapterConfig;
-            ObjectType = AdapterAdapterConfig.ObjectTypeEnum.AdapterAdapterConfig;
+            ClassId = AdapterEthSettings.ClassIdEnum.AdapterEthSettings;
+            ObjectType = AdapterEthSettings.ObjectTypeEnum.AdapterEthSettings;
             
 		}
         // <summary>
@@ -311,34 +363,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterAdapterConfig.ClassIdEnum ClassId {
+        public AdapterEthSettings.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"Status of LLDP protocol on the adapter interfaces."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public List<Model.AdapterDceInterfaceSettings> DceInterfaceSettings {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Global Ethernet settings for this adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AdapterEthSettings EthSettings {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Global Fibre Channel settings for this adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AdapterFcSettings FcSettings {
+        public bool LldpEnabled {
             get;
             set;
         }
@@ -347,58 +381,24 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public AdapterAdapterConfig.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Port Channel settings for this adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Model.AdapterPortChannelSettings PortChannelSettings {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"PCIe slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^([1-9]|1[0-5]|MLOM)$")]
-        public string SlotId {
+        public AdapterEthSettings.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.AdapterAdapterConfig initObject = new Intersight.Model.AdapterAdapterConfig();
+             Intersight.Model.AdapterEthSettings initObject = new Intersight.Model.AdapterEthSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DceInterfaceSettings"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("LldpEnabled"))
             {
-                initObject.DceInterfaceSettings = this.DceInterfaceSettings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EthSettings"))
-            {
-                initObject.EthSettings = this.EthSettings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcSettings"))
-            {
-                initObject.FcSettings = this.FcSettings;
+                initObject.LldpEnabled = this.LldpEnabled;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelSettings"))
-            {
-                initObject.PortChannelSettings = this.PortChannelSettings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
-            {
-                initObject.SlotId = this.SlotId;
-            }
             WriteObject(initObject);
         }
 

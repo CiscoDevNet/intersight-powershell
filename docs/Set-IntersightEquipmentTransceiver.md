@@ -19,7 +19,7 @@ Set-IntersightEquipmentTransceiver [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentTransceiver&amp;apos; resource.
+Update a &apos;EquipmentTransceiver&apos; resource.
 
 ## PARAMETERS
 

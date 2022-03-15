@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHealthCheckDefinition -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexHealthCheckDefinition&amp;apos; resource.
+Delete a &apos;HyperflexHealthCheckDefinition&apos; resource.
 
 ## EXAMPLES
 

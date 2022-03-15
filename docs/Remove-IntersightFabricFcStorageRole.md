@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFabricFcStorageRole](./Set-IntersightFabricFcStorageRole.md)
+
 [Get-IntersightFabricFcStorageRole](./Get-IntersightFabricFcStorageRole.md)
 
 [New-IntersightFabricFcStorageRole](./New-IntersightFabricFcStorageRole.md)
-
-[Set-IntersightFabricFcStorageRole](./Set-IntersightFabricFcStorageRole.md)
 

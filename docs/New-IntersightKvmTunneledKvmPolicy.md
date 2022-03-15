@@ -19,7 +19,7 @@ New-IntersightKvmTunneledKvmPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KvmTunneledKvmPolicy&amp;apos; resource.
+Create a &apos;KvmTunneledKvmPolicy&apos; resource.
 
 ## PARAMETERS
 

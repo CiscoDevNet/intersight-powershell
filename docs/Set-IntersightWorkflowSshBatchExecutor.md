@@ -292,9 +292,9 @@ PS C:\> Set-IntersightWorkflowSshBatchExecutor
 
 [Remove-IntersightWorkflowSshBatchExecutor](./Remove-IntersightWorkflowSshBatchExecutor.md)
 
-[New-IntersightWorkflowSshBatchExecutor](./New-IntersightWorkflowSshBatchExecutor.md)
-
 [Get-IntersightWorkflowSshBatchExecutor](./Get-IntersightWorkflowSshBatchExecutor.md)
+
+[New-IntersightWorkflowSshBatchExecutor](./New-IntersightWorkflowSshBatchExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

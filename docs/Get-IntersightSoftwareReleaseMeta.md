@@ -25,7 +25,7 @@ Get-IntersightSoftwareReleaseMeta [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SoftwareReleaseMeta&amp;apos; resource.,
+Read a &apos;SoftwareReleaseMeta&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightSoftwareReleaseMeta](./New-IntersightSoftwareReleaseMeta.md)
+
 [Set-IntersightSoftwareReleaseMeta](./Set-IntersightSoftwareReleaseMeta.md)
 
 [Remove-IntersightSoftwareReleaseMeta](./Remove-IntersightSoftwareReleaseMeta.md)
-
-[New-IntersightSoftwareReleaseMeta](./New-IntersightSoftwareReleaseMeta.md)
 

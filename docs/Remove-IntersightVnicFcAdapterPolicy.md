@@ -17,7 +17,7 @@ Remove-IntersightVnicFcAdapterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicFcAdapterPolicy&apos; resource.
+Delete a &amp;apos;VnicFcAdapterPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

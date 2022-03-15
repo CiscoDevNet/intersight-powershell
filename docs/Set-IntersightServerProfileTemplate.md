@@ -19,7 +19,7 @@ Set-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;ServerProfileTemplate&apos; resource.
+Update a &amp;apos;ServerProfileTemplate&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -323,9 +323,9 @@ PS C:\> Set-IntersightServerProfileTemplate
 
 ## RELATED LINKS
 
-[New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
-
 [Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
+
+[New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
 
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
 

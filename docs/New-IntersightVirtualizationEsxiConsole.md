@@ -19,7 +19,7 @@ New-IntersightVirtualizationEsxiConsole [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;VirtualizationEsxiConsole&apos; resource.
+Create a &amp;apos;VirtualizationEsxiConsole&amp;apos; resource.
 
 ## PARAMETERS
 

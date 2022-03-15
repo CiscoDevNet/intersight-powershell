@@ -19,7 +19,7 @@ New-IntersightCapabilitySiocModuleDescriptor [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilitySiocModuleDescriptor&apos; resource.
+Create a &amp;apos;CapabilitySiocModuleDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

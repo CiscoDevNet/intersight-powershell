@@ -19,7 +19,7 @@ New-IntersightConnectorpackConnectorPackUpgrade [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &apos;ConnectorpackConnectorPackUpgrade&apos; resource.
+Create a &amp;apos;ConnectorpackConnectorPackUpgrade&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
-
 [Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
 
 [Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
+
+[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
 

@@ -19,7 +19,7 @@ Set-IntersightFirmwareServerConfigurationUtilityDistributable [-AdditionalProper
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareServerConfigurationUtilityDistributable&amp;apos; resource.
+Update a &apos;FirmwareServerConfigurationUtilityDistributable&apos; resource.
 
 ## PARAMETERS
 

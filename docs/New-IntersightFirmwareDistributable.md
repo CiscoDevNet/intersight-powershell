@@ -515,11 +515,11 @@ PS C:\> New-IntersightFirmwareDistributable
 
 ## RELATED LINKS
 
+[Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
+
 [Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
 
 [Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
-
-[Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

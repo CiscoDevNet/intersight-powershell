@@ -17,7 +17,7 @@ Remove-IntersightVnicFcIf -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VnicFcIf&amp;apos; resource.
+Delete a &apos;VnicFcIf&apos; resource.
 
 ## EXAMPLES
 

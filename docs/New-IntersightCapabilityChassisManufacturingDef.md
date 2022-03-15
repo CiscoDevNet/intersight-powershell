@@ -19,7 +19,7 @@ New-IntersightCapabilityChassisManufacturingDef [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityChassisManufacturingDef&apos; resource.
+Create a &amp;apos;CapabilityChassisManufacturingDef&amp;apos; resource.
 
 ## PARAMETERS
 

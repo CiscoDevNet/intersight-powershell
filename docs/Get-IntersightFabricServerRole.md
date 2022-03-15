@@ -25,7 +25,7 @@ Get-IntersightFabricServerRole [-Count <Boolean>] [-InlineCount <String>] [-Sele
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FabricServerRole&amp;apos; resource.,
+Read a &apos;FabricServerRole&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
+[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
 
 [Set-IntersightFabricServerRole](./Set-IntersightFabricServerRole.md)
 
-[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
+[New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
 

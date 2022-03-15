@@ -250,10 +250,10 @@ PS C:\> New-IntersightIamAppRegistration
 
 ## RELATED LINKS
 
-[Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
-
 [Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
 
 [Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
+
+[Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

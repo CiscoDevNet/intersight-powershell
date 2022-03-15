@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: TamMilestone.ObjectTypeEnum
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartOffset
-Number of days (inclusive) relative to the milestone date when the milestone is considered to be in effect. A nagative number indicates number of days ahead of the milestone date. The default is 0 which means the milestone take effect exactly on the same date as the specified milestone date. A negative value of -2147483648 (0x80000000) indicates the milestone date range&apos;s lower bound is omitted.
+Number of days (inclusive) relative to the milestone date when the milestone is considered to be in effect. A nagative number indicates number of days ahead of the milestone date. The default is 0 which means the milestone take effect exactly on the same date as the specified milestone date. A negative value of -2147483648 (0x80000000) indicates the milestone date range&amp;apos;s lower bound is omitted.
 
 ```yaml
 Type: int

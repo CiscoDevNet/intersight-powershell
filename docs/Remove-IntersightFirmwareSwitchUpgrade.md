@@ -17,7 +17,7 @@ Remove-IntersightFirmwareSwitchUpgrade -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareSwitchUpgrade&amp;apos; resource.
+Delete a &apos;FirmwareSwitchUpgrade&apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
-
 [New-IntersightFirmwareSwitchUpgrade](./New-IntersightFirmwareSwitchUpgrade.md)
+
+[Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
 

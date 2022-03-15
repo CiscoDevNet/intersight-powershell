@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-ServerConfig< ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[ComputeServerOpStatus]>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-ServerConfig< ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[ComputeServerOpStatus]>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -269,6 +269,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TunneledKvmState
+By default, the tunneled vKVM property appears in Ready state. The property can be configured by performing allowed actions. Once the property is configured, it reverts to Ready state.\n* `Ready` - Tunneled vKVM is ready to be configured on the server.\n* `Enable` - Tunneled vKVM is enabled for the server.\n* `Disable` - Tunneled vKVM is disabled for the server.
+
+```yaml
+Type: ComputeServerSetting.TunneledKvmStateEnum
 Parameter Sets: (All)
 Aliases:
 

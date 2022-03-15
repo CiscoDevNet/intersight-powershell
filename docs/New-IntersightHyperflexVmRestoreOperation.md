@@ -19,7 +19,7 @@ New-IntersightHyperflexVmRestoreOperation [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexVmRestoreOperation&apos; resource.
+Create a &amp;apos;HyperflexVmRestoreOperation&amp;apos; resource.
 
 ## PARAMETERS
 

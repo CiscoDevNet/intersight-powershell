@@ -19,7 +19,7 @@ Set-IntersightWorkflowBatchApiExecutor [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowBatchApiExecutor&amp;apos; resource.
+Update a &apos;WorkflowBatchApiExecutor&apos; resource.
 
 ## PARAMETERS
 

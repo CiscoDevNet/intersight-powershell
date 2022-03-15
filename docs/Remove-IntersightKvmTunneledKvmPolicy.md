@@ -17,7 +17,7 @@ Remove-IntersightKvmTunneledKvmPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;KvmTunneledKvmPolicy&apos; resource.
+Delete a &amp;apos;KvmTunneledKvmPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

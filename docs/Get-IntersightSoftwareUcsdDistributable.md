@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
+[New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
 
 [Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
 
-[New-IntersightSoftwareUcsdDistributable](./New-IntersightSoftwareUcsdDistributable.md)
+[Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
 

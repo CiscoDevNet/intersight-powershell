@@ -19,7 +19,7 @@ Set-IntersightHyperflexServerFirmwareVersionEntry [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexServerFirmwareVersionEntry&apos; resource.
+Update a &amp;apos;HyperflexServerFirmwareVersionEntry&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -192,11 +192,11 @@ PS C:\> Set-IntersightHyperflexServerFirmwareVersionEntry
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
+[New-IntersightHyperflexServerFirmwareVersionEntry](./New-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
 
-[New-IntersightHyperflexServerFirmwareVersionEntry](./New-IntersightHyperflexServerFirmwareVersionEntry.md)
+[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Initialize-IntersightHyperflexAppSettingConstraint](./Initialize-IntersightHyperflexAppSettingConstraint.md)
 

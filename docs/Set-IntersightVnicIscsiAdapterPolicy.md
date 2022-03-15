@@ -19,7 +19,7 @@ Set-IntersightVnicIscsiAdapterPolicy [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
+Update a &apos;VnicIscsiAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 

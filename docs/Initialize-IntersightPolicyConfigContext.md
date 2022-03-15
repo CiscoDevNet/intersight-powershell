@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorState
-Indicates a profile&apos;s error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error).
+Indicates a profile&amp;apos;s error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error).
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: PolicyConfigContext.ObjectTypeEnum

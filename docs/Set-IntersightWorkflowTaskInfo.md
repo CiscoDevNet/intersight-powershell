@@ -19,7 +19,7 @@ Set-IntersightWorkflowTaskInfo [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowTaskInfo&amp;apos; resource.
+Update a &apos;WorkflowTaskInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -167,5 +167,7 @@ PS C:\> Set-IntersightWorkflowTaskInfo
 [Initialize-IntersightWorkflowMessage](./Initialize-IntersightWorkflowMessage.md)
 
 [Initialize-IntersightWorkflowTaskRetryInfo](./Initialize-IntersightWorkflowTaskRetryInfo.md)
+
+[Initialize-IntersightWorkflowTaskLoopInfo](./Initialize-IntersightWorkflowTaskLoopInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

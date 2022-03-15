@@ -19,7 +19,7 @@ Set-IntersightCapabilitySwitchManufacturingDef [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilitySwitchManufacturingDef&apos; resource.
+Update a &amp;apos;CapabilitySwitchManufacturingDef&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -247,10 +247,10 @@ PS C:\> Set-IntersightCapabilitySwitchManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySwitchManufacturingDef](./Remove-IntersightCapabilitySwitchManufacturingDef.md)
-
 [Get-IntersightCapabilitySwitchManufacturingDef](./Get-IntersightCapabilitySwitchManufacturingDef.md)
 
 [New-IntersightCapabilitySwitchManufacturingDef](./New-IntersightCapabilitySwitchManufacturingDef.md)
+
+[Remove-IntersightCapabilitySwitchManufacturingDef](./Remove-IntersightCapabilitySwitchManufacturingDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

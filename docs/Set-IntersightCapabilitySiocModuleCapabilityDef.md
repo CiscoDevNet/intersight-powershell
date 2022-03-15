@@ -19,7 +19,7 @@ Set-IntersightCapabilitySiocModuleCapabilityDef [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &apos;CapabilitySiocModuleCapabilityDef&apos; resource.
+Update a &amp;apos;CapabilitySiocModuleCapabilityDef&amp;apos; resource.
 
 ## PARAMETERS
 

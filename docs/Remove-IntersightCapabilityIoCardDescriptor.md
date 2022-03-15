@@ -17,7 +17,7 @@ Remove-IntersightCapabilityIoCardDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilityIoCardDescriptor&amp;apos; resource.
+Delete a &apos;CapabilityIoCardDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightCapabilityIoCardDescriptor](./Set-IntersightCapabilityIoCardDescriptor.md)
 
-[Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
-
 [New-IntersightCapabilityIoCardDescriptor](./New-IntersightCapabilityIoCardDescriptor.md)
+
+[Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
 

@@ -19,7 +19,7 @@ Set-IntersightRecoveryScheduleConfigPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;RecoveryScheduleConfigPolicy&amp;apos; resource.
+Update a &apos;RecoveryScheduleConfigPolicy&apos; resource.
 
 ## PARAMETERS
 

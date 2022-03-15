@@ -17,7 +17,7 @@ Remove-IntersightHyperflexVmImportOperation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexVmImportOperation&apos; resource.
+Delete a &amp;apos;HyperflexVmImportOperation&amp;apos; resource.
 
 ## EXAMPLES
 

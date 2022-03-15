@@ -19,7 +19,7 @@ New-IntersightIamPrivateKeySpec [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamPrivateKeySpec&amp;apos; resource.
+Create a &apos;IamPrivateKeySpec&apos; resource.
 
 ## PARAMETERS
 

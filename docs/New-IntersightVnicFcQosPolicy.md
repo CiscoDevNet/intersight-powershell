@@ -19,7 +19,7 @@ New-IntersightVnicFcQosPolicy [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicFcQosPolicy&apos; resource.
+Create a &amp;apos;VnicFcQosPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

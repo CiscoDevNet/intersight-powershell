@@ -19,7 +19,7 @@ Set-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamPermission&amp;apos; resource.
+Update a &apos;IamPermission&apos; resource.
 
 ## PARAMETERS
 

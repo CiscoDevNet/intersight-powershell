@@ -17,7 +17,7 @@ Remove-IntersightFcpoolLease -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FcpoolLease&amp;apos; resource.
+Delete a &apos;FcpoolLease&apos; resource.
 
 ## EXAMPLES
 

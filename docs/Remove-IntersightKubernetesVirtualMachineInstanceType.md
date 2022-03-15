@@ -17,7 +17,7 @@ Remove-IntersightKubernetesVirtualMachineInstanceType -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesVirtualMachineInstanceType&apos; resource.
+Delete a &amp;apos;KubernetesVirtualMachineInstanceType&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesVirtualMachineInstanceType](./Set-IntersightKubernetesVirtualMachineInstanceType.md)
-
 [Get-IntersightKubernetesVirtualMachineInstanceType](./Get-IntersightKubernetesVirtualMachineInstanceType.md)
 
 [New-IntersightKubernetesVirtualMachineInstanceType](./New-IntersightKubernetesVirtualMachineInstanceType.md)
+
+[Set-IntersightKubernetesVirtualMachineInstanceType](./Set-IntersightKubernetesVirtualMachineInstanceType.md)
 

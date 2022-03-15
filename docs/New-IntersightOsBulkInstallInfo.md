@@ -19,7 +19,7 @@ New-IntersightOsBulkInstallInfo [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &apos;OsBulkInstallInfo&apos; resource.
+Create a &amp;apos;OsBulkInstallInfo&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicFcIf&amp;apos; resource.
+Create a &apos;VnicFcIf&apos; resource.
 
 ## PARAMETERS
 
@@ -396,9 +396,9 @@ PS C:\> New-IntersightVnicFcIf
 
 ## RELATED LINKS
 
-[Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
-
 [Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
+
+[Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
 
 [Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
 

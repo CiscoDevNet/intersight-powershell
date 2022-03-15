@@ -19,7 +19,7 @@ Set-IntersightResourcepoolPool [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ResourcepoolPool&amp;apos; resource.
+Update a &apos;ResourcepoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The type of the resource present in the pool, example &amp;apos;server&amp;apos; its combination of RackUnit and Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.
+The type of the resource present in the pool, example &apos;server&apos; its combination of RackUnit and Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.
 
 ```yaml
 Type: ResourcepoolPool.ResourceTypeEnum
@@ -254,11 +254,11 @@ PS C:\> Set-IntersightResourcepoolPool
 
 ## RELATED LINKS
 
+[Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)
+
 [Get-IntersightResourcepoolPool](./Get-IntersightResourcepoolPool.md)
 
 [New-IntersightResourcepoolPool](./New-IntersightResourcepoolPool.md)
-
-[Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)
 
 [Initialize-IntersightResourcepoolResourcePoolParameters](./Initialize-IntersightResourcepoolResourcePoolParameters.md)
 

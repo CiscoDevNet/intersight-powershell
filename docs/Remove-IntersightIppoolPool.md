@@ -17,7 +17,7 @@ Remove-IntersightIppoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IppoolPool&apos; resource.
+Delete a &amp;apos;IppoolPool&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
+[Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
 
 [Get-IntersightIppoolPool](./Get-IntersightIppoolPool.md)
 
-[Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
+[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
 

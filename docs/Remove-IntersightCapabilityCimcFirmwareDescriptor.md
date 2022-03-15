@@ -17,7 +17,7 @@ Remove-IntersightCapabilityCimcFirmwareDescriptor -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityCimcFirmwareDescriptor&apos; resource.
+Delete a &amp;apos;CapabilityCimcFirmwareDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

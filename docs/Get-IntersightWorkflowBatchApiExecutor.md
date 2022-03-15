@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightWorkflowBatchApiExecutor](./New-IntersightWorkflowBatchApiExecutor.md)
 
-[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
-
 [Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
+
+[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
 

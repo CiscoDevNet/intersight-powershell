@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamAppRegistration](./New-IntersightIamAppRegistration.md)
-
 [Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
 
 [Set-IntersightIamAppRegistration](./Set-IntersightIamAppRegistration.md)
+
+[New-IntersightIamAppRegistration](./New-IntersightIamAppRegistration.md)
 

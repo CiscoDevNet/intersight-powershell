@@ -19,7 +19,7 @@ Set-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &apos;BulkExport&apos; resource.
+Update a &amp;apos;BulkExport&amp;apos; resource.
 
 ## PARAMETERS
 

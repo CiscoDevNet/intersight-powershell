@@ -25,7 +25,7 @@ Get-IntersightSyslogPolicy [-Count <Boolean>] [-InlineCount <String>] [-Select <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SyslogPolicy&amp;apos; resource.,
+Read a &apos;SyslogPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

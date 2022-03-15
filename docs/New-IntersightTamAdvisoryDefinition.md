@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryDefinition [-Actions< System.Collections.Generic.List`1
 ```
 
 ## DESCRIPTION
-Create a &apos;TamAdvisoryDefinition&apos; resource.
+Create a &amp;apos;TamAdvisoryDefinition&amp;apos; resource.
 
 ## PARAMETERS
 

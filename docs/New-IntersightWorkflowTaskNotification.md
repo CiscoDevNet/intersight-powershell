@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowTaskNotification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CorrelationId< string>][-EndTime< string>][-Input< string>][-Moid< string>][-Output< string>][-ReasonForIncompletion< string>][-ReferenceTaskName< string>][-RetryCount< float>][-ScheduledTime< string>][-StartTime< string>][-Status< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefName< string>][-TaskDescription< string>][-TaskId< string>][-TaskType< string>][-UpdateTime< string>][-WorkflowId< string>][-WorkflowTaskType< string>][-WorkflowType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowTaskNotification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CorrelationId< string>][-EndTime< string>][-Input< string>][-Iteration< long>][-LoopOverTask< bool>][-Moid< string>][-Output< string>][-ReasonForIncompletion< string>][-ReferenceTaskName< string>][-RetryCount< float>][-ScheduledTime< string>][-StartTime< string>][-Status< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefName< string>][-TaskDescription< string>][-TaskId< string>][-TaskType< string>][-UpdateTime< string>][-WorkflowId< string>][-WorkflowTaskType< string>][-WorkflowType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowTaskNotification&apos; resource.
+Create a &amp;apos;WorkflowTaskNotification&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -73,6 +73,36 @@ The input of the scheduled task.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Iteration
+The iteration count of task which runs inside loop.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LoopOverTask
+True, if task runs inside loop.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

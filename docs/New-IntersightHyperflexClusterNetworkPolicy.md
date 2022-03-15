@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterNetworkPolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexClusterNetworkPolicy&apos; resource.
+Create a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -UplinkSpeed
-Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be &amp;apos;1G&amp;apos; or &amp;apos;10G+&amp;apos;. Use &amp;apos;10G+&amp;apos; for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be &amp;apos;default&amp;apos; only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above.
+Link speed of the server adapter port to the upstream switch. When the policy is attached to a cluster profile with EDGE management platform, the uplink speed can be &apos;1G&apos; or &apos;10G+&apos;. Use &apos;10G+&apos; for link speeds of 10G or above. When the policy is attached to a cluster profile with Fabric Interconnect management platform, the uplink speed can be &apos;default&apos; only.\n* `default` - Current default value set on the hardware platform.\n* `1G` - A link speed of 1 gigabit per second.\n* `10G` - A link speed of 10 gigabits per second or above.
 
 ```yaml
 Type: HyperflexClusterNetworkPolicy.UplinkSpeedEnum
@@ -308,11 +308,11 @@ PS C:\> New-IntersightHyperflexClusterNetworkPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterNetworkPolicy](./Remove-IntersightHyperflexClusterNetworkPolicy.md)
+[Get-IntersightHyperflexClusterNetworkPolicy](./Get-IntersightHyperflexClusterNetworkPolicy.md)
 
 [Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)
 
-[Get-IntersightHyperflexClusterNetworkPolicy](./Get-IntersightHyperflexClusterNetworkPolicy.md)
+[Remove-IntersightHyperflexClusterNetworkPolicy](./Remove-IntersightHyperflexClusterNetworkPolicy.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 

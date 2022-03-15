@@ -178,9 +178,9 @@ PS C:\> New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
-
 [Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
+
+[Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 
 [Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 

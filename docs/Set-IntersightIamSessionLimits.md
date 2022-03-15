@@ -205,10 +205,10 @@ PS C:\> Set-IntersightIamSessionLimits
 
 ## RELATED LINKS
 
-[New-IntersightIamSessionLimits](./New-IntersightIamSessionLimits.md)
+[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
 
 [Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
 
-[Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
+[New-IntersightIamSessionLimits](./New-IntersightIamSessionLimits.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -17,7 +17,7 @@ Remove-IntersightFirmwareIomDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareIomDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareIomDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ New-IntersightLicenseIksLicenseCount [-AccountLicenseData< LicenseAccountLicense
 ```
 
 ## DESCRIPTION
-Create a &apos;LicenseIksLicenseCount&apos; resource.
+Create a &amp;apos;LicenseIksLicenseCount&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -145,8 +145,8 @@ PS C:\> New-IntersightLicenseIksLicenseCount
 
 ## RELATED LINKS
 
-[Get-IntersightLicenseIksLicenseCount](./Get-IntersightLicenseIksLicenseCount.md)
-
 [Set-IntersightLicenseIksLicenseCount](./Set-IntersightLicenseIksLicenseCount.md)
+
+[Get-IntersightLicenseIksLicenseCount](./Get-IntersightLicenseIksLicenseCount.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

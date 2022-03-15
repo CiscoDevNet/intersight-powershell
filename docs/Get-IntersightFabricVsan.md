@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
+[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
 
 [Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
 
-[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
+[New-IntersightFabricVsan](./New-IntersightFabricVsan.md)
 

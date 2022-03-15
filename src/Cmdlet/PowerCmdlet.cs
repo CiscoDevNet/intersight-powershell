@@ -8,6 +8,206 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get PowerControlState.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightPowerControlState", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPowerControlState:GetCmdletBase
+	{
+		public GetIntersightPowerControlState()
+		{
+			ApiInstance = new PowerApi(Config);
+            MethodName = "GetPowerControlStateListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"This field identifies the allocated power on the chassis in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long AllocatedPower {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public EquipmentChassisRelationship EquipmentChassis {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the available power when PSUs are in grid mode in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long GridMaxPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the maximum power required by the endpoint in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long MaxRequiredPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the minimum power required by the endpoint in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long MinRequiredPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the available power when PSUs are in N+1 mode in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long N1MaxPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the available power when PSUs are in N+2 mode in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long N2MaxPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the available power when PSUs are in non-redundant mode in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long NonRedundantMaxPower {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The status of power rebalancing mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerControlState.PowerRebalancingEnum PowerRebalancing {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The status of power save mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerControlState.PowerSaveModeEnum PowerSaveMode {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PowerPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightPowerPolicy", DefaultParameterSetName = "CmdletParam")]
@@ -535,205 +735,5 @@ namespace Intersight.PowerShell
 			ApiInstance = new PowerApi(Config);
             MethodName = "DeletePowerPolicyWithHttpInfo";
 		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PowerControlState.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPowerControlState", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPowerControlState:GetCmdletBase
-	{
-		public GetIntersightPowerControlState()
-		{
-			ApiInstance = new PowerApi(Config);
-            MethodName = "GetPowerControlStateListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"This field identifies the allocated power on the chassis in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long AllocatedPower {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public EquipmentChassisRelationship EquipmentChassis {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in grid mode in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long GridMaxPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the maximum power required by the endpoint in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long MaxRequiredPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the minimum power required by the endpoint in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long MinRequiredPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in N+1 mode in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long N1MaxPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in N+2 mode in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long N2MaxPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in non-redundant mode in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long NonRedundantMaxPower {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The status of power rebalancing mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public PowerControlState.PowerRebalancingEnum PowerRebalancing {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The status of power save mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public PowerControlState.PowerSaveModeEnum PowerSaveMode {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
     }
 }

@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolderPath
-Relative folder Path where &amp;apos;sourceFolderName&amp;apos; is located.
+Relative folder Path where &apos;sourceFolderName&apos; is located.
 
 ```yaml
 Type: string

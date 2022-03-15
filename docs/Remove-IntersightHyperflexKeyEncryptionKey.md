@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)
+[New-IntersightHyperflexKeyEncryptionKey](./New-IntersightHyperflexKeyEncryptionKey.md)
 
 [Get-IntersightHyperflexKeyEncryptionKey](./Get-IntersightHyperflexKeyEncryptionKey.md)
 
-[New-IntersightHyperflexKeyEncryptionKey](./New-IntersightHyperflexKeyEncryptionKey.md)
+[Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)
 

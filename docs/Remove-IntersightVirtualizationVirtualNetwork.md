@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
+
 [New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
 
 [Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
-
-[Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
 

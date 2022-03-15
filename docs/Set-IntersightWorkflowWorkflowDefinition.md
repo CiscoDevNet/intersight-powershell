@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputParameterSet< System.Collections.Generic.List`1[WorkflowParameterSet]>][-Label< string>][[-Moid]< string>][-Name< string>][-OutputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-OutputParameters< object>][-Properties< WorkflowWorkflowProperties>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tasks< System.Collections.Generic.List`1[WorkflowWorkflowTask]>][-UiInputFilters< System.Collections.Generic.List`1[WorkflowUiInputFilter]>][-UiRenderingData< object>][-Version< long>][-WorkflowMetadata< WorkflowWorkflowMetadataRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputParameterSet< System.Collections.Generic.List`1[WorkflowParameterSet]>][-Label< string>][[-Moid]< string>][-Name< string>][-OutputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-OutputParameters< object>][-Properties< WorkflowWorkflowProperties>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tasks< System.Collections.Generic.List`1[WorkflowWorkflowTask]>][-UiInputFilters< System.Collections.Generic.List`1[WorkflowUiInputFilter]>][-UiRenderingData< object>][-VariableDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Version< long>][-WorkflowMetadata< WorkflowWorkflowMetadataRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputParameters
-The output mappings for the workflow. The outputs for workflows will generally be task output variables that we want to export out at the end of the workflow. The format to specify the mapping is &apos;${Source.output.JsonPath}&apos;, where &apos;Source&apos; is the name of the task within the workflow. Any task output can be mapped to a workflow output as long as the types are compatible. It&apos;s followed by a JSON path expression to extract JSON fragment from source&apos;s output.
+The output mappings for the workflow. The outputs for workflows will generally be task output variables that we want to export out at the end of the workflow. The format to specify the mapping is &amp;apos;${Source.output.JsonPath}&amp;apos;, where &amp;apos;Source&amp;apos; is the name of the task within the workflow. Any task output can be mapped to a workflow output as long as the types are compatible. It&amp;apos;s followed by a JSON path expression to extract JSON fragment from source&amp;apos;s output.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -284,6 +284,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -VariableDefinition
+
+
+Note :- Use Initialize-IntersightWorkflowBaseDataType to create the object of complex type WorkflowBaseDataType
+
+```yaml
+Type: System.Collections.Generic.List`1[WorkflowBaseDataType]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Version
 The version of the workflow to support multiple versions.
 
@@ -374,11 +391,11 @@ PS C:\> Set-IntersightWorkflowWorkflowDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
-
 [Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [New-IntersightWorkflowWorkflowDefinition](./New-IntersightWorkflowWorkflowDefinition.md)
+
+[Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

@@ -19,7 +19,7 @@ New-IntersightFabricEstimateImpact [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricEstimateImpact&amp;apos; resource.
+Create a &apos;FabricEstimateImpact&apos; resource.
 
 ## PARAMETERS
 

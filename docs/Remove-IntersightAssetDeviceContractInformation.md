@@ -17,7 +17,7 @@ Remove-IntersightAssetDeviceContractInformation -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;AssetDeviceContractInformation&apos; resource.
+Delete a &amp;apos;AssetDeviceContractInformation&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightAssetDeviceContractInformation](./Get-IntersightAssetDeviceContractInformation.md)
-
 [Set-IntersightAssetDeviceContractInformation](./Set-IntersightAssetDeviceContractInformation.md)
+
+[Get-IntersightAssetDeviceContractInformation](./Get-IntersightAssetDeviceContractInformation.md)
 

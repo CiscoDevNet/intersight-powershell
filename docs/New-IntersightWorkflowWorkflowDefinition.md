@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputParameterSet< System.Collections.Generic.List`1[WorkflowParameterSet]>][-Label< string>][-Moid< string>][[-Name]< string>][-OutputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-OutputParameters< object>][-Properties< WorkflowWorkflowProperties>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tasks< System.Collections.Generic.List`1[WorkflowWorkflowTask]>][-UiInputFilters< System.Collections.Generic.List`1[WorkflowUiInputFilter]>][-UiRenderingData< object>][-Version< long>][-WorkflowMetadata< WorkflowWorkflowMetadataRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputParameterSet< System.Collections.Generic.List`1[WorkflowParameterSet]>][-Label< string>][-Moid< string>][[-Name]< string>][-OutputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-OutputParameters< object>][-Properties< WorkflowWorkflowProperties>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Tasks< System.Collections.Generic.List`1[WorkflowWorkflowTask]>][-UiInputFilters< System.Collections.Generic.List`1[WorkflowUiInputFilter]>][-UiRenderingData< object>][-VariableDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Version< long>][-WorkflowMetadata< WorkflowWorkflowMetadataRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowWorkflowDefinition&apos; resource.
+Create a &amp;apos;WorkflowWorkflowDefinition&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -284,6 +284,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -VariableDefinition
+
+
+Note :- Use Initialize-IntersightWorkflowBaseDataType to create the object of complex type WorkflowBaseDataType
+
+```yaml
+Type: System.Collections.Generic.List`1[WorkflowBaseDataType]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Version
 The version of the workflow to support multiple versions.
 
@@ -374,11 +391,11 @@ PS C:\> New-IntersightWorkflowWorkflowDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
+
 [Set-IntersightWorkflowWorkflowDefinition](./Set-IntersightWorkflowWorkflowDefinition.md)
 
 [Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
-
-[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

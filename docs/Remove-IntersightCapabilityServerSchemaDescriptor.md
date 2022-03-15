@@ -17,7 +17,7 @@ Remove-IntersightCapabilityServerSchemaDescriptor -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
+Delete a &apos;CapabilityServerSchemaDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightCapabilityServerSchemaDescriptor](./Set-IntersightCapabilityServerSchemaDescriptor.md)
+
 [Get-IntersightCapabilityServerSchemaDescriptor](./Get-IntersightCapabilityServerSchemaDescriptor.md)
 
 [New-IntersightCapabilityServerSchemaDescriptor](./New-IntersightCapabilityServerSchemaDescriptor.md)
-
-[Set-IntersightCapabilityServerSchemaDescriptor](./Set-IntersightCapabilityServerSchemaDescriptor.md)
 

@@ -19,7 +19,7 @@ New-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
+Create a &apos;HyperflexNodeProfile&apos; resource.
 
 ## PARAMETERS
 

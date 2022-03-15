@@ -17,7 +17,7 @@ Remove-IntersightApplianceUpgrade -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ApplianceUpgrade&apos; resource.
+Delete a &amp;apos;ApplianceUpgrade&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
-
 [Set-IntersightApplianceUpgrade](./Set-IntersightApplianceUpgrade.md)
+
+[Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
 

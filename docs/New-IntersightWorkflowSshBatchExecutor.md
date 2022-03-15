@@ -19,7 +19,7 @@ New-IntersightWorkflowSshBatchExecutor [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowSshBatchExecutor&amp;apos; resource.
+Create a &apos;WorkflowSshBatchExecutor&apos; resource.
 
 ## PARAMETERS
 

@@ -8,96 +8,163 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ForecastInstance.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ForecastDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightForecastInstance")]
-    public class SetIntersightForecastInstance:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightForecastDefinition", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightForecastDefinition:GetCmdletBase
 	{
-		public SetIntersightForecastInstance()
+		public GetIntersightForecastDefinition()
 		{
 			ApiInstance = new ForecastApi(Config);
-            ModelObject = new ForecastInstance();
-            MethodName = "UpdateForecastInstanceWithHttpInfo";
+            MethodName = "GetForecastDefinitionListWithHttpInfo";
 		}
         
-        
         // <summary>
-        /// <para type="description">"Action to be triggered on forecast instance. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// <para type="description">"The Account ID for this managed object."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public ForecastInstance.ActionEnum Action {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
+        public string AccountMoid {
             get;
             set;
         }
         
         
-        
-        
         // <summary>
-        /// <para type="description">"The time interval (in days) for the data to be used for computing forecast model."</para>
+        /// <para type="description">"Threshold above which user needs to be indicated through alarm/alert."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(60, 365)]
-        public long DataInterval {
-            get;
-            set;
-        }
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        // <summary>
-        /// <para type="description">"The start date from when the data should be used for computing forecast model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime DataStartDate {
+        public long AlertThresholdInPercentage {
             get;
             set;
         }
         
         
+        // <summary>
+        /// <para type="description">"A reference to a forecastCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
         
+        public ForecastCatalogRelationship Catalog {
+            get;
+            set;
+        }
         
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
+        public DateTime CreateTime {
+            get;
+            set;
+        }
         
+        // <summary>
+        /// <para type="description">"Data source from where we get the data for the metrics to compute regression model. For example Druid."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
+        public string DataSource {
+            get;
+            set;
+        }
         
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Metric for which forecast prediction is done. Metrics are defined in the catalog file. Currently its only HyperFlex cluster storage capacity usage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string MetricName {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Minimum number of days of data required for computing forecast model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long MinNumOfDaysOfData {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string Moid {
             get;
             set;
         }
         
-        
-        
-        
-        
-        
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"Number of days of data queried from the data source (example Druid ) which is used as input data for computing forecast model."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public List<MoTag> Tags {
+        public long NumOfDaysOfHistoricalData {
             get;
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The platform type for which we want to compute forecast. For example HyperFlex, NetworkElement."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string PlatformType {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
         
     }
     /// <summary>
@@ -303,163 +370,96 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ForecastDefinition.</para>
+    /// <para type="synopsis">This is the cmdlet to Set ForecastInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightForecastDefinition", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightForecastDefinition:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightForecastInstance")]
+    public class SetIntersightForecastInstance:SetCmdletBase
 	{
-		public GetIntersightForecastDefinition()
+		public SetIntersightForecastInstance()
 		{
 			ApiInstance = new ForecastApi(Config);
-            MethodName = "GetForecastDefinitionListWithHttpInfo";
+            ModelObject = new ForecastInstance();
+            MethodName = "PatchForecastInstanceWithHttpInfo";
 		}
         
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
         
         // <summary>
-        /// <para type="description">"Threshold above which user needs to be indicated through alarm/alert."</para>
+        /// <para type="description">"Action to be triggered on forecast instance. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long AlertThresholdInPercentage {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a forecastCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public ForecastCatalogRelationship Catalog {
+        public ForecastInstance.ActionEnum Action {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
+        /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public DateTime CreateTime {
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time interval (in days) for the data to be used for computing forecast model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(60, 365)]
+        public long DataInterval {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"Data source from where we get the data for the metrics to compute regression model. For example Druid."</para>
+        /// <para type="description">"The start date from when the data should be used for computing forecast model."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string DataSource {
+        public DateTime DataStartDate {
             get;
             set;
         }
         
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
         
-        // <summary>
-        /// <para type="description">"Metric for which forecast prediction is done. Metrics are defined in the catalog file. Currently its only HyperFlex cluster storage capacity usage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string MetricName {
-            get;
-            set;
-        }
         
-        // <summary>
-        /// <para type="description">"Minimum number of days of data required for computing forecast model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public long MinNumOfDaysOfData {
-            get;
-            set;
-        }
         
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public DateTime ModTime {
-            get;
-            set;
-        }
+        
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
             set;
         }
         
-        // <summary>
-        /// <para type="description">"Number of days of data queried from the data source (example Druid ) which is used as input data for computing forecast model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public long NumOfDaysOfHistoricalData {
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
             get;
             set;
         }
         
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The platform type for which we want to compute forecast. For example HyperFlex, NetworkElement."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string PlatformType {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
         
     }
     /// <summary>

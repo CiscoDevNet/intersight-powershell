@@ -19,7 +19,7 @@ New-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &apos;UuidpoolPool&apos; resource.
+Create a &amp;apos;UuidpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -222,11 +222,11 @@ PS C:\> New-IntersightUuidpoolPool
 
 ## RELATED LINKS
 
-[Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
+[Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
 
 [Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
 
-[Get-IntersightUuidpoolPool](./Get-IntersightUuidpoolPool.md)
+[Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
 
 [Initialize-IntersightUuidpoolUuidBlock](./Initialize-IntersightUuidpoolUuidBlock.md)
 

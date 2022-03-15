@@ -19,7 +19,7 @@ Set-IntersightConvergedinfraHealthCheckDefinition [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
+Update a &amp;apos;ConvergedinfraHealthCheckDefinition&amp;apos; resource.
 
 ## PARAMETERS
 

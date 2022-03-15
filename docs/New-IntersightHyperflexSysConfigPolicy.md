@@ -255,8 +255,8 @@ PS C:\> New-IntersightHyperflexSysConfigPolicy
 
 [Get-IntersightHyperflexSysConfigPolicy](./Get-IntersightHyperflexSysConfigPolicy.md)
 
-[Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)
-
 [Set-IntersightHyperflexSysConfigPolicy](./Set-IntersightHyperflexSysConfigPolicy.md)
+
+[Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
