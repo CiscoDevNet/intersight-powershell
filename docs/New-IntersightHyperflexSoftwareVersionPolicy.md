@@ -270,11 +270,11 @@ PS C:\> New-IntersightHyperflexSoftwareVersionPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
+
 [Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [Remove-IntersightHyperflexSoftwareVersionPolicy](./Remove-IntersightHyperflexSoftwareVersionPolicy.md)
-
-[Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [Initialize-IntersightHyperflexServerFirmwareVersionInfo](./Initialize-IntersightHyperflexServerFirmwareVersionInfo.md)
 

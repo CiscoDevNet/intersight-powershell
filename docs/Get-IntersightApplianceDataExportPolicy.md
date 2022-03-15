@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightApplianceDataExportPolicy](./New-IntersightApplianceDataExportPolicy.md)
-
 [Set-IntersightApplianceDataExportPolicy](./Set-IntersightApplianceDataExportPolicy.md)
+
+[New-IntersightApplianceDataExportPolicy](./New-IntersightApplianceDataExportPolicy.md)
 

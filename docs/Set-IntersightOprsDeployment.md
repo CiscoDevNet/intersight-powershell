@@ -19,7 +19,7 @@ Set-IntersightOprsDeployment [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;OprsDeployment&amp;apos; resource.
+Update a &apos;OprsDeployment&apos; resource.
 
 ## PARAMETERS
 

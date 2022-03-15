@@ -17,7 +17,7 @@ Remove-IntersightSnmpPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SnmpPolicy&apos; resource.
+Delete a &amp;apos;SnmpPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
+
 [New-IntersightSnmpPolicy](./New-IntersightSnmpPolicy.md)
 
 [Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
-
-[Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
 

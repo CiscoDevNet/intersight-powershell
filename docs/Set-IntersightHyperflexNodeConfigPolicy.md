@@ -19,7 +19,7 @@ Set-IntersightHyperflexNodeConfigPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexNodeConfigPolicy&amp;apos; resource.
+Update a &apos;HyperflexNodeConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -276,9 +276,9 @@ PS C:\> Set-IntersightHyperflexNodeConfigPolicy
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexNodeConfigPolicy](./New-IntersightHyperflexNodeConfigPolicy.md)
-
 [Get-IntersightHyperflexNodeConfigPolicy](./Get-IntersightHyperflexNodeConfigPolicy.md)
+
+[New-IntersightHyperflexNodeConfigPolicy](./New-IntersightHyperflexNodeConfigPolicy.md)
 
 [Remove-IntersightHyperflexNodeConfigPolicy](./Remove-IntersightHyperflexNodeConfigPolicy.md)
 

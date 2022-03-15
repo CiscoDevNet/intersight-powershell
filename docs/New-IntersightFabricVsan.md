@@ -235,10 +235,10 @@ PS C:\> New-IntersightFabricVsan
 
 ## RELATED LINKS
 
-[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
+[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
 
 [Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
 
-[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
+[Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

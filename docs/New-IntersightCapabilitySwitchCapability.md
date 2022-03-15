@@ -577,11 +577,11 @@ PS C:\> New-IntersightCapabilitySwitchCapability
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
+[Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
 
 [Set-IntersightCapabilitySwitchCapability](./Set-IntersightCapabilitySwitchCapability.md)
 
-[Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
+[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
 
 [Initialize-IntersightCapabilityPortRange](./Initialize-IntersightCapabilityPortRange.md)
 

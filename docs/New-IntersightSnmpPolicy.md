@@ -19,7 +19,7 @@ New-IntersightSnmpPolicy [-AccessCommunityString< string>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SnmpPolicy&amp;apos; resource.
+Create a &apos;SnmpPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -377,11 +377,11 @@ PS C:\> New-IntersightSnmpPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
-
 [Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
 
 [Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
+
+[Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
 
 [Initialize-IntersightSnmpTrap](./Initialize-IntersightSnmpTrap.md)
 

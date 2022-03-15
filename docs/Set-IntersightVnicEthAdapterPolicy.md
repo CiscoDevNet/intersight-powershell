@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvancedFilter< bool>][-ArfsSettings< VnicArfsSettings>][-CompletionQueueSettings< VnicCompletionQueueSettings>][-Description< string>][-GeneveEnabled< bool>][-InterruptScaling< bool>][-InterruptSettings< VnicEthInterruptSettings>][[-Moid]< string>][-Name< string>][-NvgreSettings< VnicNvgreSettings>][-Organization< OrganizationOrganizationRelationship>][-RoceSettings< VnicRoceSettings>][-RssHashSettings< VnicRssHashSettings>][-RssSettings< bool>][-RxQueueSettings< VnicEthRxQueueSettings>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TcpOffloadSettings< VnicTcpOffloadSettings>][-TxQueueSettings< VnicEthTxQueueSettings>][-UplinkFailbackTimeout< long>][-VxlanSettings< VnicVxlanSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvancedFilter< bool>][-ArfsSettings< VnicArfsSettings>][-CompletionQueueSettings< VnicCompletionQueueSettings>][-Description< string>][-GeneveEnabled< bool>][-InterruptScaling< bool>][-InterruptSettings< VnicEthInterruptSettings>][[-Moid]< string>][-Name< string>][-NvgreSettings< VnicNvgreSettings>][-Organization< OrganizationOrganizationRelationship>][-PtpSettings< VnicPtpSettings>][-RoceSettings< VnicRoceSettings>][-RssHashSettings< VnicRssHashSettings>][-RssSettings< bool>][-RxQueueSettings< VnicEthRxQueueSettings>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TcpOffloadSettings< VnicTcpOffloadSettings>][-TxQueueSettings< VnicEthTxQueueSettings>][-UplinkFailbackTimeout< long>][-VxlanSettings< VnicVxlanSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -204,6 +204,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PtpSettings
+Settings for Precision Time Protocol which can provide precise time of day information and time-stampted inputs, as well as scheduled and/or synchronized outputs for a variety of systems.
+
+Note :- Use Initialize-IntersightVnicPtpSettings to create the object of complex type VnicPtpSettings
+
+```yaml
+Type: VnicPtpSettings
 Parameter Sets: (All)
 Aliases:
 
@@ -433,6 +450,8 @@ PS C:\> Set-IntersightVnicEthAdapterPolicy
 [Initialize-IntersightVnicEthInterruptSettings](./Initialize-IntersightVnicEthInterruptSettings.md)
 
 [Initialize-IntersightVnicNvgreSettings](./Initialize-IntersightVnicNvgreSettings.md)
+
+[Initialize-IntersightVnicPtpSettings](./Initialize-IntersightVnicPtpSettings.md)
 
 [Initialize-IntersightVnicRoceSettings](./Initialize-IntersightVnicRoceSettings.md)
 

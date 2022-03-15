@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
-
 [New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
+
+[Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
 
 [Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
 

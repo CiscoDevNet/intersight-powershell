@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-Severity level associated with an end-of-life (EOL) milestone advisory.\n* `info` - The end-of-life (EOL) milestone is at info level.\n* `critical` - The end-of-life (EOL) milestone is at critical level. It usually hints &apos;red&apos; in a color-map.\n* `high` - The end-of-life (EOL) milestone is at high level.\n* `medium` - The end-of-life (EOL) milestone is at medium level.
+Severity level associated with an end-of-life (EOL) milestone advisory.\n* `info` - The end-of-life (EOL) milestone is at info level.\n* `critical` - The end-of-life (EOL) milestone is at critical level. It usually hints &amp;apos;red&amp;apos; in a color-map.\n* `high` - The end-of-life (EOL) milestone is at high level.\n* `medium` - The end-of-life (EOL) milestone is at medium level.
 
 ```yaml
 Type: TamEolSeverity.LevelEnum
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: TamEolSeverity.ObjectTypeEnum

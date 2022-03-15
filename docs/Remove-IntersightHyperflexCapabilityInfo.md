@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexCapabilityInfo](./Set-IntersightHyperflexCapabilityInfo.md)
 
-[New-IntersightHyperflexCapabilityInfo](./New-IntersightHyperflexCapabilityInfo.md)
-
 [Get-IntersightHyperflexCapabilityInfo](./Get-IntersightHyperflexCapabilityInfo.md)
+
+[New-IntersightHyperflexCapabilityInfo](./New-IntersightHyperflexCapabilityInfo.md)
 

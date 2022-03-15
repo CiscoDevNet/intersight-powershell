@@ -17,7 +17,7 @@ Remove-IntersightWorkflowRollbackWorkflow -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowRollbackWorkflow&apos; resource.
+Delete a &amp;apos;WorkflowRollbackWorkflow&amp;apos; resource.
 
 ## EXAMPLES
 

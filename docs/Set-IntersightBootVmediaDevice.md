@@ -19,7 +19,7 @@ Set-IntersightBootVmediaDevice [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BootVmediaDevice&amp;apos; resource.
+Update a &apos;BootVmediaDevice&apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
-
 [Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
+
+[Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 
 [New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 

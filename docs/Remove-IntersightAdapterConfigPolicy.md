@@ -17,7 +17,7 @@ Remove-IntersightAdapterConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;AdapterConfigPolicy&apos; resource.
+Delete a &amp;apos;AdapterConfigPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
-
 [Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
 
 [New-IntersightAdapterConfigPolicy](./New-IntersightAdapterConfigPolicy.md)
+
+[Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
 

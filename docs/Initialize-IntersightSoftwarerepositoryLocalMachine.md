@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: SoftwarerepositoryLocalMachine.ObjectTypeEnum
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -UploadId
-When the import action in file MO is updated with &amp;apos;GeneratePreSignedUploadUrl&amp;apos;, Intersight shall return a upload Id in this property as part of the PATCH response.
+When the import action in file MO is updated with &apos;GeneratePreSignedUploadUrl&apos;, Intersight shall return a upload Id in this property as part of the PATCH response.
 
 ```yaml
 Type: string

@@ -19,7 +19,7 @@ Set-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentExpanderModule&amp;apos; resource.
+Update a &apos;EquipmentExpanderModule&apos; resource.
 
 ## PARAMETERS
 

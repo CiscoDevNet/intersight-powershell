@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionType
-Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &apos;discovered&apos; and not created from Intersight. No provisioning information is available.
+Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &amp;apos;discovered&amp;apos; and not created from Intersight. No provisioning information is available.
 
 ```yaml
 Type: VirtualizationVirtualMachine.ProvisionTypeEnum

@@ -19,7 +19,7 @@ Set-IntersightFirmwareBoardControllerDescriptor [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &apos;FirmwareBoardControllerDescriptor&apos; resource.
+Update a &amp;apos;FirmwareBoardControllerDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareBoardControllerDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
-
 [Get-IntersightFirmwareBoardControllerDescriptor](./Get-IntersightFirmwareBoardControllerDescriptor.md)
 
 [New-IntersightFirmwareBoardControllerDescriptor](./New-IntersightFirmwareBoardControllerDescriptor.md)
+
+[Remove-IntersightFirmwareBoardControllerDescriptor](./Remove-IntersightFirmwareBoardControllerDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

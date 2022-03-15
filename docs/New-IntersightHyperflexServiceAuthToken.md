@@ -19,7 +19,7 @@ New-IntersightHyperflexServiceAuthToken [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexServiceAuthToken&apos; resource.
+Create a &amp;apos;HyperflexServiceAuthToken&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New CommHttpProxyPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set CommHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCommHttpProxyPolicy")]
-    public class NewIntersightCommHttpProxyPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightCommHttpProxyPolicy")]
+    public class SetIntersightCommHttpProxyPolicy:SetCmdletBase
 	{
-		public NewIntersightCommHttpProxyPolicy()
+		public SetIntersightCommHttpProxyPolicy()
 		{
 			ApiInstance = new CommApi(Config);
             ModelObject = new CommHttpProxyPolicy();
-            MethodName = "CreateCommHttpProxyPolicyWithHttpInfo";
+            MethodName = "UpdateCommHttpProxyPolicyWithHttpInfo";
 		}
         
         
@@ -69,7 +69,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -79,7 +79,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -140,6 +140,18 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CommHttpProxyPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy")]
+    public class RemoveIntersightCommHttpProxyPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightCommHttpProxyPolicy()
+		{
+			ApiInstance = new CommApi(Config);
+            MethodName = "DeleteCommHttpProxyPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CommHttpProxyPolicy.</para>
@@ -313,16 +325,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set CommHttpProxyPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New CommHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCommHttpProxyPolicy")]
-    public class SetIntersightCommHttpProxyPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightCommHttpProxyPolicy")]
+    public class NewIntersightCommHttpProxyPolicy:NewCmdletBase
 	{
-		public SetIntersightCommHttpProxyPolicy()
+		public NewIntersightCommHttpProxyPolicy()
 		{
 			ApiInstance = new CommApi(Config);
             ModelObject = new CommHttpProxyPolicy();
-            MethodName = "UpdateCommHttpProxyPolicyWithHttpInfo";
+            MethodName = "CreateCommHttpProxyPolicyWithHttpInfo";
 		}
         
         
@@ -374,7 +386,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -384,7 +396,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -445,17 +457,5 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove CommHttpProxyPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy")]
-    public class RemoveIntersightCommHttpProxyPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightCommHttpProxyPolicy()
-		{
-			ApiInstance = new CommApi(Config);
-            MethodName = "DeleteCommHttpProxyPolicyWithHttpInfo";
-		}
     }
 }

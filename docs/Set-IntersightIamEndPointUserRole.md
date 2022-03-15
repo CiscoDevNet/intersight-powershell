@@ -19,7 +19,7 @@ Set-IntersightIamEndPointUserRole [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamEndPointUserRole&amp;apos; resource.
+Update a &apos;IamEndPointUserRole&apos; resource.
 
 ## PARAMETERS
 
@@ -211,10 +211,10 @@ PS C:\> Set-IntersightIamEndPointUserRole
 
 ## RELATED LINKS
 
-[Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
-
 [Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)
 
 [New-IntersightIamEndPointUserRole](./New-IntersightIamEndPointUserRole.md)
+
+[Remove-IntersightIamEndPointUserRole](./Remove-IntersightIamEndPointUserRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

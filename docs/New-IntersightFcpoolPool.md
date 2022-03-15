@@ -19,7 +19,7 @@ New-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FcpoolPool&amp;apos; resource.
+Create a &apos;FcpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -222,11 +222,11 @@ PS C:\> New-IntersightFcpoolPool
 
 ## RELATED LINKS
 
+[Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
+
 [Set-IntersightFcpoolPool](./Set-IntersightFcpoolPool.md)
 
 [Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
-
-[Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
 
 [Initialize-IntersightFcpoolBlock](./Initialize-IntersightFcpoolBlock.md)
 

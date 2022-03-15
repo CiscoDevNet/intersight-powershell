@@ -193,10 +193,10 @@ PS C:\> Set-IntersightIamLdapGroup
 
 ## RELATED LINKS
 
+[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
+
 [New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
 
 [Get-IntersightIamLdapGroup](./Get-IntersightIamLdapGroup.md)
-
-[Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

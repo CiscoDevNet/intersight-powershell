@@ -19,7 +19,7 @@ Set-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentChassisOperation&amp;apos; resource.
+Update a &apos;EquipmentChassisOperation&apos; resource.
 
 ## PARAMETERS
 

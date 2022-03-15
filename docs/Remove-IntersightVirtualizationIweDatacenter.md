@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationIweDatacenter -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VirtualizationIweDatacenter&apos; resource.
+Delete a &amp;apos;VirtualizationIweDatacenter&amp;apos; resource.
 
 ## EXAMPLES
 

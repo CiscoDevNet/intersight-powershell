@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryCount [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &apos;TamAdvisoryCount&apos; resource.
+Create a &amp;apos;TamAdvisoryCount&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -142,10 +142,10 @@ PS C:\> New-IntersightTamAdvisoryCount
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryCount](./Get-IntersightTamAdvisoryCount.md)
+
 [Set-IntersightTamAdvisoryCount](./Set-IntersightTamAdvisoryCount.md)
 
 [Remove-IntersightTamAdvisoryCount](./Remove-IntersightTamAdvisoryCount.md)
-
-[Get-IntersightTamAdvisoryCount](./Get-IntersightTamAdvisoryCount.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

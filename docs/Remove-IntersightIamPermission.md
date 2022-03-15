@@ -17,7 +17,7 @@ Remove-IntersightIamPermission -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;IamPermission&apos; resource.
+Delete a &amp;apos;IamPermission&amp;apos; resource.
 
 ## EXAMPLES
 

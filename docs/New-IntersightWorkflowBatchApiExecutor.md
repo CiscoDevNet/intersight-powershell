@@ -310,9 +310,9 @@ PS C:\> New-IntersightWorkflowBatchApiExecutor
 
 [Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
 
-[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
-
 [Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
+
+[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

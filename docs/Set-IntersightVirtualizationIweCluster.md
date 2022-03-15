@@ -384,9 +384,9 @@ PS C:\> Set-IntersightVirtualizationIweCluster
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
-
 [Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
+
+[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
 
 [Initialize-IntersightCondAlarmSummary](./Initialize-IntersightCondAlarmSummary.md)
 

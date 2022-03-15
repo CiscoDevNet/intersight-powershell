@@ -19,7 +19,7 @@ New-IntersightVnicFcAdapterPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicFcAdapterPolicy&apos; resource.
+Create a &amp;apos;VnicFcAdapterPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

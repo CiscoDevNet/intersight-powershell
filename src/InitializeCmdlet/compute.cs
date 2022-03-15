@@ -101,6 +101,85 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputePersistentMemoryModule.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputePersistentMemoryModule")]
+    public class InitializeIntersightComputePersistentMemoryModule:PSCmdlet
+	{
+		public InitializeIntersightComputePersistentMemoryModule()
+		{
+            ClassId = ComputePersistentMemoryModule.ClassIdEnum.ComputePersistentMemoryModule;
+            ObjectType = ComputePersistentMemoryModule.ObjectTypeEnum.ComputePersistentMemoryModule;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePersistentMemoryModule.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputePersistentMemoryModule.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Socket ID of the Persistent Memory Module on the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SocketId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Socket Memory ID of the Persistent Memory Module on the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SocketMemoryId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ComputePersistentMemoryModule initObject = new Intersight.Model.ComputePersistentMemoryModule();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SocketId"))
+            {
+                initObject.SocketId = this.SocketId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SocketMemoryId"))
+            {
+                initObject.SocketMemoryId = this.SocketMemoryId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ComputeServerOpStatus.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightComputeServerOpStatus")]
@@ -274,6 +353,59 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeIpAddress.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeIpAddress")]
+    public class InitializeIntersightComputeIpAddress:PSCmdlet
+	{
+		public InitializeIntersightComputeIpAddress()
+		{
+            ClassId = ComputeIpAddress.ClassIdEnum.ComputeIpAddress;
+            ObjectType = ComputeIpAddress.ObjectTypeEnum.ComputeIpAddress;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeIpAddress.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeIpAddress.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.ComputeIpAddress initObject = new Intersight.Model.ComputeIpAddress();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ComputeServerConfig.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightComputeServerConfig")]
@@ -427,125 +559,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Warning = this.Warning;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ComputeIpAddress.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightComputeIpAddress")]
-    public class InitializeIntersightComputeIpAddress:PSCmdlet
-	{
-		public InitializeIntersightComputeIpAddress()
-		{
-            ClassId = ComputeIpAddress.ClassIdEnum.ComputeIpAddress;
-            ObjectType = ComputeIpAddress.ObjectTypeEnum.ComputeIpAddress;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeIpAddress.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeIpAddress.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ComputeIpAddress initObject = new Intersight.Model.ComputeIpAddress();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ComputeStorageVirtualDrive.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightComputeStorageVirtualDrive")]
-    public class InitializeIntersightComputeStorageVirtualDrive:PSCmdlet
-	{
-		public InitializeIntersightComputeStorageVirtualDrive()
-		{
-            ClassId = ComputeStorageVirtualDrive.ClassIdEnum.ComputeStorageVirtualDrive;
-            ObjectType = ComputeStorageVirtualDrive.ObjectTypeEnum.ComputeStorageVirtualDrive;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeStorageVirtualDrive.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual Drive ID of the storage on the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Id {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeStorageVirtualDrive.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.ComputeStorageVirtualDrive initObject = new Intersight.Model.ComputeStorageVirtualDrive();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
-            {
-                initObject.Id = this.Id;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -790,15 +803,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ComputePersistentMemoryModule.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeStorageVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightComputePersistentMemoryModule")]
-    public class InitializeIntersightComputePersistentMemoryModule:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeStorageVirtualDrive")]
+    public class InitializeIntersightComputeStorageVirtualDrive:PSCmdlet
 	{
-		public InitializeIntersightComputePersistentMemoryModule()
+		public InitializeIntersightComputeStorageVirtualDrive()
 		{
-            ClassId = ComputePersistentMemoryModule.ClassIdEnum.ComputePersistentMemoryModule;
-            ObjectType = ComputePersistentMemoryModule.ObjectTypeEnum.ComputePersistentMemoryModule;
+            ClassId = ComputeStorageVirtualDrive.ClassIdEnum.ComputeStorageVirtualDrive;
+            ObjectType = ComputeStorageVirtualDrive.ObjectTypeEnum.ComputeStorageVirtualDrive;
             
 		}
         // <summary>
@@ -815,7 +828,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ComputePersistentMemoryModule.ClassIdEnum ClassId {
+        public ComputeStorageVirtualDrive.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual Drive ID of the storage on the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Id {
             get;
             set;
         }
@@ -824,46 +846,24 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public ComputePersistentMemoryModule.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Socket ID of the Persistent Memory Module on the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SocketId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Socket Memory ID of the Persistent Memory Module on the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string SocketMemoryId {
+        public ComputeStorageVirtualDrive.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ComputePersistentMemoryModule initObject = new Intersight.Model.ComputePersistentMemoryModule();
+             Intersight.Model.ComputeStorageVirtualDrive initObject = new Intersight.Model.ComputeStorageVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
+            {
+                initObject.Id = this.Id;
+            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SocketId"))
-            {
-                initObject.SocketId = this.SocketId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SocketMemoryId"))
-            {
-                initObject.SocketMemoryId = this.SocketMemoryId;
-            }
             WriteObject(initObject);
         }
 

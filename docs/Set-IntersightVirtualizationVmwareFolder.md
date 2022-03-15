@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareFolder [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareFolder&apos; resource.
+Update a &amp;apos;VirtualizationVmwareFolder&amp;apos; resource.
 
 ## PARAMETERS
 

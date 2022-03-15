@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVnicEthQosPolicy](./Set-IntersightVnicEthQosPolicy.md)
+
 [Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
 
 [New-IntersightVnicEthQosPolicy](./New-IntersightVnicEthQosPolicy.md)
-
-[Set-IntersightVnicEthQosPolicy](./Set-IntersightVnicEthQosPolicy.md)
 

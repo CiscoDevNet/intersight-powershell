@@ -208,9 +208,9 @@ PS C:\> New-IntersightFabricPortPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightFabricPortPolicy](./Set-IntersightFabricPortPolicy.md)
-
 [Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
+
+[Set-IntersightFabricPortPolicy](./Set-IntersightFabricPortPolicy.md)
 
 [Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
 

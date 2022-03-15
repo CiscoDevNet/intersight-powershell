@@ -19,7 +19,7 @@ New-IntersightApplianceBackup [-Account< IamAccountRelationship>][-AdditionalPro
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceBackup&amp;apos; resource.
+Create a &apos;ApplianceBackup&apos; resource.
 
 ## PARAMETERS
 
@@ -250,8 +250,8 @@ PS C:\> New-IntersightApplianceBackup
 
 ## RELATED LINKS
 
-[Remove-IntersightApplianceBackup](./Remove-IntersightApplianceBackup.md)
-
 [Get-IntersightApplianceBackup](./Get-IntersightApplianceBackup.md)
+
+[Remove-IntersightApplianceBackup](./Remove-IntersightApplianceBackup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

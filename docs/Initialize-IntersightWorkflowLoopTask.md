@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoopStartTask
-Start task where the list of tasks will be executed multiple times based on the count value.
+Start task where the list of tasks will be executed multiple times based on the count or condition value.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowLoopTask.ObjectTypeEnum
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parallel
-When set to true the loop will run in parallel else it will run in a serial fashion. Only one task is supported inside the loop task when the loop is run in parallel. Subworkflow can be used inside the single loop task to build complex conditions.
+This field is deprecated. Always set to true for parallel loop.
 
 ```yaml
 Type: bool

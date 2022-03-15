@@ -19,7 +19,7 @@ Set-IntersightAccessPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;AccessPolicy&apos; resource.
+Update a &amp;apos;AccessPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -314,11 +314,11 @@ PS C:\> Set-IntersightAccessPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
-
 [Get-IntersightAccessPolicy](./Get-IntersightAccessPolicy.md)
 
 [New-IntersightAccessPolicy](./New-IntersightAccessPolicy.md)
+
+[Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
 
 [Initialize-IntersightAccessAddressType](./Initialize-IntersightAccessAddressType.md)
 

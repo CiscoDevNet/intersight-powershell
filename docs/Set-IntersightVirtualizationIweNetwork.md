@@ -19,7 +19,7 @@ Set-IntersightVirtualizationIweNetwork [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationIweNetwork&apos; resource.
+Update a &amp;apos;VirtualizationIweNetwork&amp;apos; resource.
 
 ## PARAMETERS
 

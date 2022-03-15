@@ -17,7 +17,7 @@ Remove-IntersightOauthAccessToken -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;OauthAccessToken&amp;apos; resource.
+Delete a &apos;OauthAccessToken&apos; resource.
 
 ## EXAMPLES
 

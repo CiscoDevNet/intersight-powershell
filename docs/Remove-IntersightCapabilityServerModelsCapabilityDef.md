@@ -17,7 +17,7 @@ Remove-IntersightCapabilityServerModelsCapabilityDef -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilityServerModelsCapabilityDef&amp;apos; resource.
+Delete a &apos;CapabilityServerModelsCapabilityDef&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightCapabilityServerModelsCapabilityDef](./Set-IntersightCapabilityServerModelsCapabilityDef.md)
 
-[Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
-
 [New-IntersightCapabilityServerModelsCapabilityDef](./New-IntersightCapabilityServerModelsCapabilityDef.md)
+
+[Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
 

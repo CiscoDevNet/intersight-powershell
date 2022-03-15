@@ -25,7 +25,7 @@ Get-IntersightWorkflowErrorResponseHandler [-Count <Boolean>] [-InlineCount <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;WorkflowErrorResponseHandler&amp;apos; resource.,
+Read a &apos;WorkflowErrorResponseHandler&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

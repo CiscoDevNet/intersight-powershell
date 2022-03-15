@@ -19,7 +19,7 @@ Set-IntersightApplianceDataExportPolicy [-Account< IamAccountRelationship>][-Add
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceDataExportPolicy&amp;apos; resource.
+Update a &apos;ApplianceDataExportPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-Status of the data collection mode. If the value is &amp;apos;true&amp;apos;, then data collection is enabled.
+Status of the data collection mode. If the value is &apos;true&apos;, then data collection is enabled.
 
 ```yaml
 Type: bool

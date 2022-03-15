@@ -19,7 +19,7 @@ Set-IntersightHyperflexStorageContainer [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexStorageContainer&apos; resource.
+Update a &amp;apos;HyperflexStorageContainer&amp;apos; resource.
 
 ## PARAMETERS
 

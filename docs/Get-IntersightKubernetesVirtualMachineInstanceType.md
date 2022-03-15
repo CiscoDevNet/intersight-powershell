@@ -25,7 +25,7 @@ Get-IntersightKubernetesVirtualMachineInstanceType [-Count <Boolean>] [-InlineCo
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;KubernetesVirtualMachineInstanceType&apos; resource.,
+Read a &amp;apos;KubernetesVirtualMachineInstanceType&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightKubernetesVirtualMachineInstanceType](./New-IntersightKubernetesVirtualMachineInstanceType.md)
+
 [Set-IntersightKubernetesVirtualMachineInstanceType](./Set-IntersightKubernetesVirtualMachineInstanceType.md)
 
 [Remove-IntersightKubernetesVirtualMachineInstanceType](./Remove-IntersightKubernetesVirtualMachineInstanceType.md)
-
-[New-IntersightKubernetesVirtualMachineInstanceType](./New-IntersightKubernetesVirtualMachineInstanceType.md)
 

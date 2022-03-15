@@ -19,7 +19,7 @@ New-IntersightLicenseLicenseReservationOp [-Account< IamAccountRelationship>][-A
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;LicenseLicenseReservationOp&amp;apos; resource.
+Create a &apos;LicenseLicenseReservationOp&apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHealthCheckPackageChecksum -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexHealthCheckPackageChecksum&amp;apos; resource.
+Delete a &apos;HyperflexHealthCheckPackageChecksum&apos; resource.
 
 ## EXAMPLES
 

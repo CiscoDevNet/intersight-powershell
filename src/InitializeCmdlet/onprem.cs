@@ -8,6 +8,59 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OnpremImagePackage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOnpremImagePackage")]
+    public class InitializeIntersightOnpremImagePackage:PSCmdlet
+	{
+		public InitializeIntersightOnpremImagePackage()
+		{
+            ClassId = OnpremImagePackage.ClassIdEnum.OnpremImagePackage;
+            ObjectType = OnpremImagePackage.ObjectTypeEnum.OnpremImagePackage;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OnpremImagePackage.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OnpremImagePackage.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.OnpremImagePackage initObject = new Intersight.Model.OnpremImagePackage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize OnpremSchedule.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightOnpremSchedule")]
@@ -153,59 +206,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OnpremUpgradeNote.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOnpremUpgradeNote")]
-    public class InitializeIntersightOnpremUpgradeNote:PSCmdlet
-	{
-		public InitializeIntersightOnpremUpgradeNote()
-		{
-            ClassId = OnpremUpgradeNote.ClassIdEnum.OnpremUpgradeNote;
-            ObjectType = OnpremUpgradeNote.ObjectTypeEnum.OnpremUpgradeNote;
-            
-		}
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OnpremUpgradeNote.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OnpremUpgradeNote.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-             Intersight.Model.OnpremUpgradeNote initObject = new Intersight.Model.OnpremUpgradeNote();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize OnpremUpgradePhase.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightOnpremUpgradePhase")]
@@ -259,15 +259,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize OnpremImagePackage.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize OnpremUpgradeNote.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightOnpremImagePackage")]
-    public class InitializeIntersightOnpremImagePackage:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightOnpremUpgradeNote")]
+    public class InitializeIntersightOnpremUpgradeNote:PSCmdlet
 	{
-		public InitializeIntersightOnpremImagePackage()
+		public InitializeIntersightOnpremUpgradeNote()
 		{
-            ClassId = OnpremImagePackage.ClassIdEnum.OnpremImagePackage;
-            ObjectType = OnpremImagePackage.ObjectTypeEnum.OnpremImagePackage;
+            ClassId = OnpremUpgradeNote.ClassIdEnum.OnpremUpgradeNote;
+            ObjectType = OnpremUpgradeNote.ObjectTypeEnum.OnpremUpgradeNote;
             
 		}
         // <summary>
@@ -284,7 +284,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OnpremImagePackage.ClassIdEnum ClassId {
+        public OnpremUpgradeNote.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -293,14 +293,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public OnpremImagePackage.ObjectTypeEnum ObjectType {
+        public OnpremUpgradeNote.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.OnpremImagePackage initObject = new Intersight.Model.OnpremImagePackage();
+             Intersight.Model.OnpremUpgradeNote initObject = new Intersight.Model.OnpremUpgradeNote();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

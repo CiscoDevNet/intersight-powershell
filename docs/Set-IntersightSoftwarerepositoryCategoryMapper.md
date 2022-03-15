@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
+Update a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
 
 ## PARAMETERS
 

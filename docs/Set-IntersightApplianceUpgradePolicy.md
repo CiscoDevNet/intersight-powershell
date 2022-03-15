@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftwareDownloadType
-SoftwareDownloadType is used to indicate the kind of software download.\n* `connected` - Indicates if the upgrade service is set to upload software to latest version automatically.\n* `manual` - Indicates if the upgrade service is set to upload software to user picked verison manually .
+SoftwareDownloadType is used to indicate the kind of software download.\n* `unknown` - Indicates user setting of upgrade service to unknown.\n* `connected` - Indicates if the upgrade service is set to upload software to latest version automatically.\n* `manual` - Indicates if the upgrade service is set to upload software to user picked verison manually.
 
 ```yaml
 Type: ApplianceUpgradePolicy.SoftwareDownloadTypeEnum

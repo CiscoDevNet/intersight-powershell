@@ -19,7 +19,7 @@ Set-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MacpoolPool&amp;apos; resource.
+Update a &apos;MacpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -207,9 +207,9 @@ PS C:\> Set-IntersightMacpoolPool
 
 ## RELATED LINKS
 
-[New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
-
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
+
+[New-IntersightMacpoolPool](./New-IntersightMacpoolPool.md)
 
 [Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
 

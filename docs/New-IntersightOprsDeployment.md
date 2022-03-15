@@ -19,7 +19,7 @@ New-IntersightOprsDeployment [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OprsDeployment&amp;apos; resource.
+Create a &apos;OprsDeployment&apos; resource.
 
 ## PARAMETERS
 

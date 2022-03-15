@@ -235,9 +235,9 @@ PS C:\> New-IntersightFabricFcUplinkRole
 
 ## RELATED LINKS
 
-[Set-IntersightFabricFcUplinkRole](./Set-IntersightFabricFcUplinkRole.md)
-
 [Remove-IntersightFabricFcUplinkRole](./Remove-IntersightFabricFcUplinkRole.md)
+
+[Set-IntersightFabricFcUplinkRole](./Set-IntersightFabricFcUplinkRole.md)
 
 [Get-IntersightFabricFcUplinkRole](./Get-IntersightFabricFcUplinkRole.md)
 

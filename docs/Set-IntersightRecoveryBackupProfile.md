@@ -19,7 +19,7 @@ Set-IntersightRecoveryBackupProfile [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
+Update a &apos;RecoveryBackupProfile&apos; resource.
 
 ## PARAMETERS
 

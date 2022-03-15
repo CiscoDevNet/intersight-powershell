@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseKeysInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseUtilizationInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseKeysInfo")]
-    public class InitializeIntersightIaasLicenseKeysInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseUtilizationInfo")]
+    public class InitializeIntersightIaasLicenseUtilizationInfo:PSCmdlet
 	{
-		public InitializeIntersightIaasLicenseKeysInfo()
+		public InitializeIntersightIaasLicenseUtilizationInfo()
 		{
-            ClassId = IaasLicenseKeysInfo.ClassIdEnum.IaasLicenseKeysInfo;
-            ObjectType = IaasLicenseKeysInfo.ObjectTypeEnum.IaasLicenseKeysInfo;
+            ClassId = IaasLicenseUtilizationInfo.ClassIdEnum.IaasLicenseUtilizationInfo;
+            ObjectType = IaasLicenseUtilizationInfo.ObjectTypeEnum.IaasLicenseUtilizationInfo;
             
 		}
         // <summary>
@@ -33,7 +33,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasLicenseKeysInfo.ClassIdEnum ClassId {
+        public IaasLicenseUtilizationInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -42,14 +42,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasLicenseKeysInfo.ObjectTypeEnum ObjectType {
+        public IaasLicenseUtilizationInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IaasLicenseKeysInfo initObject = new Intersight.Model.IaasLicenseKeysInfo();
+             Intersight.Model.IaasLicenseUtilizationInfo initObject = new Intersight.Model.IaasLicenseUtilizationInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -114,15 +114,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseUtilizationInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseKeysInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseUtilizationInfo")]
-    public class InitializeIntersightIaasLicenseUtilizationInfo:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseKeysInfo")]
+    public class InitializeIntersightIaasLicenseKeysInfo:PSCmdlet
 	{
-		public InitializeIntersightIaasLicenseUtilizationInfo()
+		public InitializeIntersightIaasLicenseKeysInfo()
 		{
-            ClassId = IaasLicenseUtilizationInfo.ClassIdEnum.IaasLicenseUtilizationInfo;
-            ObjectType = IaasLicenseUtilizationInfo.ObjectTypeEnum.IaasLicenseUtilizationInfo;
+            ClassId = IaasLicenseKeysInfo.ClassIdEnum.IaasLicenseKeysInfo;
+            ObjectType = IaasLicenseKeysInfo.ObjectTypeEnum.IaasLicenseKeysInfo;
             
 		}
         // <summary>
@@ -139,7 +139,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasLicenseUtilizationInfo.ClassIdEnum ClassId {
+        public IaasLicenseKeysInfo.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -148,14 +148,14 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public IaasLicenseUtilizationInfo.ObjectTypeEnum ObjectType {
+        public IaasLicenseKeysInfo.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.IaasLicenseUtilizationInfo initObject = new Intersight.Model.IaasLicenseUtilizationInfo();
+             Intersight.Model.IaasLicenseKeysInfo initObject = new Intersight.Model.IaasLicenseKeysInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

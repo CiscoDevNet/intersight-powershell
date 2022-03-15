@@ -19,7 +19,7 @@ New-IntersightIamEndPointUser [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamEndPointUser&amp;apos; resource.
+Create a &apos;IamEndPointUser&apos; resource.
 
 ## PARAMETERS
 

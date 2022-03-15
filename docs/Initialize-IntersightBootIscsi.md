@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: BootIscsi.ObjectTypeEnum
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Slot
-The slot id of the device. Supported values are (1 - 255, \&amp;quot;MLOM\&amp;quot;, \&amp;quot;L\&amp;quot;, \&amp;quot;L1\&amp;quot;, \&amp;quot;L2\&amp;quot;, \&amp;quot;OCP\&amp;quot;).
+The slot id of the device. Supported values are (1 - 255, \&quot;MLOM\&quot;, \&quot;L\&quot;, \&quot;L1\&quot;, \&quot;L2\&quot;, \&quot;OCP\&quot;).
 
 ```yaml
 Type: string

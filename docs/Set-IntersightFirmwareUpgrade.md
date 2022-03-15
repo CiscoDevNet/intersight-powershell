@@ -19,7 +19,7 @@ Set-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareUpgrade&amp;apos; resource.
+Update a &apos;FirmwareUpgrade&apos; resource.
 
 ## PARAMETERS
 

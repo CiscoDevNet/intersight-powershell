@@ -19,7 +19,7 @@ Set-IntersightComputeRackUnitIdentity [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeRackUnitIdentity&apos; resource.
+Update a &amp;apos;ComputeRackUnitIdentity&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> Set-IntersightComputeRackUnitIdentity
 
 ## RELATED LINKS
 
-[Get-IntersightComputeRackUnitIdentity](./Get-IntersightComputeRackUnitIdentity.md)
-
 [Remove-IntersightComputeRackUnitIdentity](./Remove-IntersightComputeRackUnitIdentity.md)
+
+[Get-IntersightComputeRackUnitIdentity](./Get-IntersightComputeRackUnitIdentity.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

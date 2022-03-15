@@ -19,7 +19,7 @@ Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricVlan&apos; resource.
+Update a &amp;apos;FabricVlan&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,10 +223,10 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
+[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
 
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
-[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

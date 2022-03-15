@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterNetworkPolicy -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
+Delete a &apos;HyperflexClusterNetworkPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)
-
 [Get-IntersightHyperflexClusterNetworkPolicy](./Get-IntersightHyperflexClusterNetworkPolicy.md)
 
 [New-IntersightHyperflexClusterNetworkPolicy](./New-IntersightHyperflexClusterNetworkPolicy.md)
+
+[Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)
 

@@ -19,7 +19,7 @@ New-IntersightCapabilityIoCardManufacturingDef [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.
+Create a &apos;CapabilityIoCardManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

@@ -178,8 +178,8 @@ PS C:\> Set-IntersightVirtualizationEsxiConsole
 
 ## RELATED LINKS
 
-[Get-IntersightVirtualizationEsxiConsole](./Get-IntersightVirtualizationEsxiConsole.md)
-
 [New-IntersightVirtualizationEsxiConsole](./New-IntersightVirtualizationEsxiConsole.md)
+
+[Get-IntersightVirtualizationEsxiConsole](./Get-IntersightVirtualizationEsxiConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

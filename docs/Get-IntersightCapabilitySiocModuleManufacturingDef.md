@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilitySiocModuleManufacturingDef](./New-IntersightCapabilitySiocModuleManufacturingDef.md)
-
 [Set-IntersightCapabilitySiocModuleManufacturingDef](./Set-IntersightCapabilitySiocModuleManufacturingDef.md)
 
 [Remove-IntersightCapabilitySiocModuleManufacturingDef](./Remove-IntersightCapabilitySiocModuleManufacturingDef.md)
+
+[New-IntersightCapabilitySiocModuleManufacturingDef](./New-IntersightCapabilitySiocModuleManufacturingDef.md)
 

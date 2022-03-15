@@ -19,7 +19,7 @@ Set-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &apos;PowerPolicy&apos; resource.
+Update a &amp;apos;PowerPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightWorkflowSolutionDefinition [-Count <Boolean>] [-InlineCount <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;WorkflowSolutionDefinition&amp;apos; resource.,
+Read a &apos;WorkflowSolutionDefinition&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightWorkflowSolutionDefinition](./New-IntersightWorkflowSolutionDefinition.md)
+
 [Set-IntersightWorkflowSolutionDefinition](./Set-IntersightWorkflowSolutionDefinition.md)
 
 [Remove-IntersightWorkflowSolutionDefinition](./Remove-IntersightWorkflowSolutionDefinition.md)
-
-[New-IntersightWorkflowSolutionDefinition](./New-IntersightWorkflowSolutionDefinition.md)
 

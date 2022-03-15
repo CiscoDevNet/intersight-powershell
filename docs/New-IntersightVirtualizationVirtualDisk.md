@@ -19,7 +19,7 @@ New-IntersightVirtualizationVirtualDisk [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationVirtualDisk&amp;apos; resource.
+Create a &apos;VirtualizationVirtualDisk&apos; resource.
 
 ## PARAMETERS
 
@@ -332,11 +332,11 @@ PS C:\> New-IntersightVirtualizationVirtualDisk
 
 ## RELATED LINKS
 
+[Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)
+
 [Set-IntersightVirtualizationVirtualDisk](./Set-IntersightVirtualizationVirtualDisk.md)
 
 [Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
-
-[Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

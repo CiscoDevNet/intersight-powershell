@@ -19,7 +19,7 @@ New-IntersightApplianceRestore [-Account< IamAccountRelationship>][-AdditionalPr
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceRestore&amp;apos; resource.
+Create a &apos;ApplianceRestore&apos; resource.
 
 ## PARAMETERS
 

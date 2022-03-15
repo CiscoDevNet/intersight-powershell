@@ -19,7 +19,7 @@ Set-IntersightBootUsbDevice [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &apos;BootUsbDevice&apos; resource.
+Update a &amp;apos;BootUsbDevice&amp;apos; resource.
 
 ## PARAMETERS
 

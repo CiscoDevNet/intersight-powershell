@@ -19,7 +19,7 @@ Set-IntersightKubernetesAciCniApic [-AciCniProfiles< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAciCniApic&amp;apos; resource.
+Update a &apos;KubernetesAciCniApic&apos; resource.
 
 ## PARAMETERS
 

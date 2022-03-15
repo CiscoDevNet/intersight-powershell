@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryAuthorization [-AdditionalProperties< System.Col
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryAuthorization&apos; resource.
+Update a &amp;apos;SoftwarerepositoryAuthorization&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&amp;apos;s behalf.
+The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&apos;s behalf.
 
 ```yaml
 Type: string

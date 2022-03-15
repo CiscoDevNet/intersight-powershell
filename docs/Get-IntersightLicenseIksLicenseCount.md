@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightLicenseIksLicenseCount](./New-IntersightLicenseIksLicenseCount.md)
-
 [Set-IntersightLicenseIksLicenseCount](./Set-IntersightLicenseIksLicenseCount.md)
+
+[New-IntersightLicenseIksLicenseCount](./New-IntersightLicenseIksLicenseCount.md)
 

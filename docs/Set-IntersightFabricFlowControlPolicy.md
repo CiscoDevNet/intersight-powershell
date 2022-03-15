@@ -220,9 +220,9 @@ PS C:\> Set-IntersightFabricFlowControlPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightFabricFlowControlPolicy](./Get-IntersightFabricFlowControlPolicy.md)
-
 [New-IntersightFabricFlowControlPolicy](./New-IntersightFabricFlowControlPolicy.md)
+
+[Get-IntersightFabricFlowControlPolicy](./Get-IntersightFabricFlowControlPolicy.md)
 
 [Remove-IntersightFabricFlowControlPolicy](./Remove-IntersightFabricFlowControlPolicy.md)
 

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexServerFirmwareVersion -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexServerFirmwareVersion&apos; resource.
+Delete a &amp;apos;HyperflexServerFirmwareVersion&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
+
 [Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
 
 [New-IntersightHyperflexServerFirmwareVersion](./New-IntersightHyperflexServerFirmwareVersion.md)
-
-[Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
 

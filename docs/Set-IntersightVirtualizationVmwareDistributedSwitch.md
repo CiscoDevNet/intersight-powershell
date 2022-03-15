@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-The running config&apos;s version details are represented.
+The running config&amp;apos;s version details are represented.
 
 ```yaml
 Type: string

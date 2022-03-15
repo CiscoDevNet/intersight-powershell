@@ -19,7 +19,7 @@ Set-IntersightBiosPolicy [-AcsControlGpu1state< BiosPolicy.AcsControlGpu1stateEn
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BiosPolicy&amp;apos; resource.
+Update a &apos;BiosPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -6043,10 +6043,10 @@ PS C:\> Set-IntersightBiosPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
-
 [Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)
 
 [New-IntersightBiosPolicy](./New-IntersightBiosPolicy.md)
+
+[Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

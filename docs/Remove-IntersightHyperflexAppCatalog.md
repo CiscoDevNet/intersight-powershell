@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
+[Set-IntersightHyperflexAppCatalog](./Set-IntersightHyperflexAppCatalog.md)
 
 [Get-IntersightHyperflexAppCatalog](./Get-IntersightHyperflexAppCatalog.md)
 
-[Set-IntersightHyperflexAppCatalog](./Set-IntersightHyperflexAppCatalog.md)
+[New-IntersightHyperflexAppCatalog](./New-IntersightHyperflexAppCatalog.md)
 

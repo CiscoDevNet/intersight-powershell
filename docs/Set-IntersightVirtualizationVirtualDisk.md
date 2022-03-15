@@ -332,11 +332,11 @@ PS C:\> Set-IntersightVirtualizationVirtualDisk
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
-
 [Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)
 
 [New-IntersightVirtualizationVirtualDisk](./New-IntersightVirtualizationVirtualDisk.md)
+
+[Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

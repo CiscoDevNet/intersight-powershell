@@ -19,7 +19,7 @@ Set-IntersightVmrcConsole [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &apos;VmrcConsole&apos; resource.
+Update a &amp;apos;VmrcConsole&amp;apos; resource.
 
 ## PARAMETERS
 

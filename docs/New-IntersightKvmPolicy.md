@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKvmPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EnableLocalServerVideo< bool>][-EnableVideoEncryption< bool>][-Enabled< bool>][-MaximumSessions< long>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightKvmPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EnableLocalServerVideo< bool>][-EnableVideoEncryption< bool>][-Enabled< bool>][-MaximumSessions< long>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TunneledKvmEnabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -201,6 +201,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TunneledKvmEnabled
+Enables Tunneled vKVM on the endpoint. Applicable only for Device Connectors that support Tunneled vKVM.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

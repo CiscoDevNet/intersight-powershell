@@ -211,9 +211,9 @@ PS C:\> Set-IntersightIamUser
 
 ## RELATED LINKS
 
-[New-IntersightIamUser](./New-IntersightIamUser.md)
-
 [Get-IntersightIamUser](./Get-IntersightIamUser.md)
+
+[New-IntersightIamUser](./New-IntersightIamUser.md)
 
 [Remove-IntersightIamUser](./Remove-IntersightIamUser.md)
 

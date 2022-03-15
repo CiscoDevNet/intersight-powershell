@@ -19,7 +19,7 @@ New-IntersightCapabilityFanModuleManufacturingDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityFanModuleManufacturingDef&amp;apos; resource.
+Create a &apos;CapabilityFanModuleManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

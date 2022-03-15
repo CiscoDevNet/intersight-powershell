@@ -17,7 +17,7 @@ Remove-IntersightCapabilitySiocModuleManufacturingDef -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilitySiocModuleManufacturingDef&apos; resource.
+Delete a &amp;apos;CapabilitySiocModuleManufacturingDef&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightCapabilitySiocModuleManufacturingDef](./Set-IntersightCapabilitySiocModuleManufacturingDef.md)
+
 [Get-IntersightCapabilitySiocModuleManufacturingDef](./Get-IntersightCapabilitySiocModuleManufacturingDef.md)
 
 [New-IntersightCapabilitySiocModuleManufacturingDef](./New-IntersightCapabilitySiocModuleManufacturingDef.md)
-
-[Set-IntersightCapabilitySiocModuleManufacturingDef](./Set-IntersightCapabilitySiocModuleManufacturingDef.md)
 

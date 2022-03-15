@@ -17,7 +17,7 @@ Remove-IntersightIamLdapPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamLdapPolicy&amp;apos; resource.
+Delete a &apos;IamLdapPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
+[Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
 
 [New-IntersightIamLdapPolicy](./New-IntersightIamLdapPolicy.md)
 
-[Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
+[Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
 

@@ -19,7 +19,7 @@ Set-IntersightHyperflexFeatureLimitInternal [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexFeatureLimitInternal&apos; resource.
+Update a &amp;apos;HyperflexFeatureLimitInternal&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -164,9 +164,9 @@ PS C:\> Set-IntersightHyperflexFeatureLimitInternal
 
 [Remove-IntersightHyperflexFeatureLimitInternal](./Remove-IntersightHyperflexFeatureLimitInternal.md)
 
-[Get-IntersightHyperflexFeatureLimitInternal](./Get-IntersightHyperflexFeatureLimitInternal.md)
-
 [New-IntersightHyperflexFeatureLimitInternal](./New-IntersightHyperflexFeatureLimitInternal.md)
+
+[Get-IntersightHyperflexFeatureLimitInternal](./Get-IntersightHyperflexFeatureLimitInternal.md)
 
 [Initialize-IntersightHyperflexFeatureLimitEntry](./Initialize-IntersightHyperflexFeatureLimitEntry.md)
 

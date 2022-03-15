@@ -19,7 +19,7 @@ Set-IntersightSoftwareReleaseMeta [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwareReleaseMeta&apos; resource.
+Update a &amp;apos;SoftwareReleaseMeta&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -190,10 +190,10 @@ PS C:\> Set-IntersightSoftwareReleaseMeta
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwareReleaseMeta](./Remove-IntersightSoftwareReleaseMeta.md)
-
 [Get-IntersightSoftwareReleaseMeta](./Get-IntersightSoftwareReleaseMeta.md)
 
 [New-IntersightSoftwareReleaseMeta](./New-IntersightSoftwareReleaseMeta.md)
+
+[Remove-IntersightSoftwareReleaseMeta](./Remove-IntersightSoftwareReleaseMeta.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

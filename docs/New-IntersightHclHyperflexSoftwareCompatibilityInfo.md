@@ -237,11 +237,11 @@ PS C:\> New-IntersightHclHyperflexSoftwareCompatibilityInfo
 
 ## RELATED LINKS
 
-[Get-IntersightHclHyperflexSoftwareCompatibilityInfo](./Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
-
 [Set-IntersightHclHyperflexSoftwareCompatibilityInfo](./Set-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [Remove-IntersightHclHyperflexSoftwareCompatibilityInfo](./Remove-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
+
+[Get-IntersightHclHyperflexSoftwareCompatibilityInfo](./Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [Initialize-IntersightHclConstraint](./Initialize-IntersightHclConstraint.md)
 

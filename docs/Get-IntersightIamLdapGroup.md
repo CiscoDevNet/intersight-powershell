@@ -25,7 +25,7 @@ Get-IntersightIamLdapGroup [-Count <Boolean>] [-InlineCount <String>] [-Select <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamLdapGroup&apos; resource.,
+Read a &amp;apos;IamLdapGroup&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
-
 [Set-IntersightIamLdapGroup](./Set-IntersightIamLdapGroup.md)
 
 [Remove-IntersightIamLdapGroup](./Remove-IntersightIamLdapGroup.md)
+
+[New-IntersightIamLdapGroup](./New-IntersightIamLdapGroup.md)
 

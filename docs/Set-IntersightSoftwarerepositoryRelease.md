@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryRelease [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwarerepositoryRelease&amp;apos; resource.
+Update a &apos;SoftwarerepositoryRelease&apos; resource.
 
 ## PARAMETERS
 
@@ -222,8 +222,8 @@ PS C:\> Set-IntersightSoftwarerepositoryRelease
 
 [Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
 
-[New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
-
 [Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
+
+[New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

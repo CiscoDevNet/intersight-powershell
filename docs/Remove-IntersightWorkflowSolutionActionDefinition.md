@@ -17,7 +17,7 @@ Remove-IntersightWorkflowSolutionActionDefinition -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowSolutionActionDefinition&amp;apos; resource.
+Delete a &apos;WorkflowSolutionActionDefinition&apos; resource.
 
 ## EXAMPLES
 

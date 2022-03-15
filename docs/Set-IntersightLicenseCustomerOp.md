@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightLicenseCustomerOp [-AccountLicenseData< LicenseAccountLicenseDataRelationship>][-ActiveAdmin< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllDevicesToDefaultTier< bool>][-DeregisterDevice< bool>][-EnableTrial< bool>][-EvaluationPeriod< long>][-ExtraEvaluation< long>][[-Moid]< string>][-RenewAuthorization< bool>][-RenewIdCertificate< bool>][-ShowAgentTechSupport< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightLicenseCustomerOp [-AccountLicenseData< LicenseAccountLicenseDataRelationship>][-ActiveAdmin< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllDevicesToDefaultTier< bool>][-ClearApiSyncStatus< bool>][-DeregisterDevice< bool>][-EnableTrial< bool>][-EvaluationPeriod< long>][-ExtraEvaluation< long>][[-Moid]< string>][-RenewAuthorization< bool>][-RenewIdCertificate< bool>][-ShowAgentTechSupport< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Accept wildcard characters: False
 
 ### -AllDevicesToDefaultTier
 Move all licensed devices to default license tier.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClearApiSyncStatus
+Clear the status of smart API sync.
 
 ```yaml
 Type: bool

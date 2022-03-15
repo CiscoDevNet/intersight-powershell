@@ -19,7 +19,7 @@ New-IntersightVnicIscsiAdapterPolicy [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicIscsiAdapterPolicy&amp;apos; resource.
+Create a &apos;VnicIscsiAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 

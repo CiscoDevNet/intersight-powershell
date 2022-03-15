@@ -19,7 +19,7 @@ Set-IntersightStorageSpan [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StorageSpan&amp;apos; resource.
+Update a &apos;StorageSpan&apos; resource.
 
 ## PARAMETERS
 

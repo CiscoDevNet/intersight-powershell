@@ -17,7 +17,7 @@ Remove-IntersightBiosPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;BiosPolicy&apos; resource.
+Delete a &amp;apos;BiosPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
-
 [Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)
 
 [New-IntersightBiosPolicy](./New-IntersightBiosPolicy.md)
+
+[Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
 
