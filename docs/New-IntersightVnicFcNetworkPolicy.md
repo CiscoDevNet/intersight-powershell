@@ -19,7 +19,7 @@ New-IntersightVnicFcNetworkPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicFcNetworkPolicy&apos; resource.
+Create a &amp;apos;VnicFcNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

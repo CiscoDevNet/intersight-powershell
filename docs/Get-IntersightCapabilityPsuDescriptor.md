@@ -25,7 +25,7 @@ Get-IntersightCapabilityPsuDescriptor [-Count <Boolean>] [-InlineCount <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CapabilityPsuDescriptor&apos; resource.,
+Read a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityPsuDescriptor](./New-IntersightCapabilityPsuDescriptor.md)
-
 [Set-IntersightCapabilityPsuDescriptor](./Set-IntersightCapabilityPsuDescriptor.md)
 
 [Remove-IntersightCapabilityPsuDescriptor](./Remove-IntersightCapabilityPsuDescriptor.md)
+
+[New-IntersightCapabilityPsuDescriptor](./New-IntersightCapabilityPsuDescriptor.md)
 

@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Kek
-Key encryption key used to encrypt the DEK&amp;apos;s on the HyperFlex cluster.
+Key encryption key used to encrypt the DEK&apos;s on the HyperFlex cluster.
 
 ```yaml
 Type: string
@@ -283,10 +283,10 @@ PS C:\> New-IntersightHyperflexKeyEncryptionKey
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexKeyEncryptionKey](./Get-IntersightHyperflexKeyEncryptionKey.md)
-
 [Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)
 
 [Remove-IntersightHyperflexKeyEncryptionKey](./Remove-IntersightHyperflexKeyEncryptionKey.md)
+
+[Get-IntersightHyperflexKeyEncryptionKey](./Get-IntersightHyperflexKeyEncryptionKey.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

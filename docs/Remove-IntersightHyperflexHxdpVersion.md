@@ -17,7 +17,7 @@ Remove-IntersightHyperflexHxdpVersion -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexHxdpVersion&amp;apos; resource.
+Delete a &apos;HyperflexHxdpVersion&apos; resource.
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
 
-[New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
-
 [Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
+
+[New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
 

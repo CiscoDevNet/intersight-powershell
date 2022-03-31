@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
-
 [Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
+
+[Set-IntersightHyperflexHxdpVersion](./Set-IntersightHyperflexHxdpVersion.md)
 
 [New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
 

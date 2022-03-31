@@ -19,7 +19,7 @@ New-IntersightFabricFcUplinkRole [-AdditionalProperties< System.Collections.Gene
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricFcUplinkRole&apos; resource.
+Create a &amp;apos;FabricFcUplinkRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -235,9 +235,9 @@ PS C:\> New-IntersightFabricFcUplinkRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricFcUplinkRole](./Remove-IntersightFabricFcUplinkRole.md)
-
 [Set-IntersightFabricFcUplinkRole](./Set-IntersightFabricFcUplinkRole.md)
+
+[Remove-IntersightFabricFcUplinkRole](./Remove-IntersightFabricFcUplinkRole.md)
 
 [Get-IntersightFabricFcUplinkRole](./Get-IntersightFabricFcUplinkRole.md)
 

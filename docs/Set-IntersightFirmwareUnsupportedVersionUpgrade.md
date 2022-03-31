@@ -255,9 +255,9 @@ PS C:\> Set-IntersightFirmwareUnsupportedVersionUpgrade
 
 ## RELATED LINKS
 
-[Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
-
 [New-IntersightFirmwareUnsupportedVersionUpgrade](./New-IntersightFirmwareUnsupportedVersionUpgrade.md)
+
+[Get-IntersightFirmwareUnsupportedVersionUpgrade](./Get-IntersightFirmwareUnsupportedVersionUpgrade.md)
 
 [Remove-IntersightFirmwareUnsupportedVersionUpgrade](./Remove-IntersightFirmwareUnsupportedVersionUpgrade.md)
 

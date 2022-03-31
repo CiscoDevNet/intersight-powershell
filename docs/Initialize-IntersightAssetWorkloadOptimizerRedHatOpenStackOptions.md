@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-RedHat OpenStack Identity Service (keystone) domain name. Domain is an additional namespaces you can create in keystone to partition users, groups, and projects. Default domain name value is \&amp;quot;Default\&amp;quot;.
+RedHat OpenStack Identity Service (keystone) domain name. Domain is an additional namespaces you can create in keystone to partition users, groups, and projects. Default domain name value is \&quot;Default\&quot;.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
 
 ```yaml
 Type: AssetWorkloadOptimizerRedHatOpenStackOptions.ObjectTypeEnum

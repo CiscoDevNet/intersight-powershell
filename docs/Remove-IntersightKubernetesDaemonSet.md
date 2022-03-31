@@ -17,7 +17,7 @@ Remove-IntersightKubernetesDaemonSet -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesDaemonSet&apos; resource.
+Delete a &amp;apos;KubernetesDaemonSet&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ New-IntersightRecoveryRestore [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &apos;RecoveryRestore&apos; resource.
+Create a &amp;apos;RecoveryRestore&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightCapabilitySiocModuleCapabilityDef -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilitySiocModuleCapabilityDef&apos; resource.
+Delete a &amp;apos;CapabilitySiocModuleCapabilityDef&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ New-IntersightIamIpAddress [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamIpAddress&amp;apos; resource.
+Create a &apos;IamIpAddress&apos; resource.
 
 ## PARAMETERS
 

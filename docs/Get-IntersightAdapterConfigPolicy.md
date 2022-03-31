@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightAdapterConfigPolicy](./New-IntersightAdapterConfigPolicy.md)
 
-[Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
-
 [Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
+
+[Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
 

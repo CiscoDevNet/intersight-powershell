@@ -19,7 +19,7 @@ New-IntersightFirmwareCimcDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareCimcDescriptor&apos; resource.
+Create a &amp;apos;FirmwareCimcDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

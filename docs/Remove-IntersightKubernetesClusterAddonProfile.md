@@ -17,7 +17,7 @@ Remove-IntersightKubernetesClusterAddonProfile -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;KubernetesClusterAddonProfile&apos; resource.
+Delete a &amp;apos;KubernetesClusterAddonProfile&amp;apos; resource.
 
 ## EXAMPLES
 

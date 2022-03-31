@@ -19,7 +19,7 @@ New-IntersightTamAdvisoryDefinition [-Actions< System.Collections.Generic.List`1
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TamAdvisoryDefinition&amp;apos; resource.
+Create a &apos;TamAdvisoryDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -395,11 +395,11 @@ PS C:\> New-IntersightTamAdvisoryDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
+
 [Set-IntersightTamAdvisoryDefinition](./Set-IntersightTamAdvisoryDefinition.md)
 
 [Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
-
-[Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

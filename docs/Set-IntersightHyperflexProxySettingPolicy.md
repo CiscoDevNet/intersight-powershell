@@ -253,9 +253,9 @@ PS C:\> Set-IntersightHyperflexProxySettingPolicy
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexProxySettingPolicy](./New-IntersightHyperflexProxySettingPolicy.md)
-
 [Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
+
+[New-IntersightHyperflexProxySettingPolicy](./New-IntersightHyperflexProxySettingPolicy.md)
 
 [Remove-IntersightHyperflexProxySettingPolicy](./Remove-IntersightHyperflexProxySettingPolicy.md)
 

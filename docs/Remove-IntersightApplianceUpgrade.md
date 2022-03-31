@@ -17,7 +17,7 @@ Remove-IntersightApplianceUpgrade -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ApplianceUpgrade&amp;apos; resource.
+Delete a &apos;ApplianceUpgrade&apos; resource.
 
 ## EXAMPLES
 

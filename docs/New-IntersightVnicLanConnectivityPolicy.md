@@ -304,9 +304,9 @@ PS C:\> New-IntersightVnicLanConnectivityPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightVnicLanConnectivityPolicy](./Set-IntersightVnicLanConnectivityPolicy.md)
-
 [Remove-IntersightVnicLanConnectivityPolicy](./Remove-IntersightVnicLanConnectivityPolicy.md)
+
+[Set-IntersightVnicLanConnectivityPolicy](./Set-IntersightVnicLanConnectivityPolicy.md)
 
 [Get-IntersightVnicLanConnectivityPolicy](./Get-IntersightVnicLanConnectivityPolicy.md)
 

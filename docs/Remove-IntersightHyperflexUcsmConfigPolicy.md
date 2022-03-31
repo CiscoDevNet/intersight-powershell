@@ -17,7 +17,7 @@ Remove-IntersightHyperflexUcsmConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexUcsmConfigPolicy&amp;apos; resource.
+Delete a &apos;HyperflexUcsmConfigPolicy&apos; resource.
 
 ## EXAMPLES
 

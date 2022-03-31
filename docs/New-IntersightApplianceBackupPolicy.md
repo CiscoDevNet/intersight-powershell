@@ -19,7 +19,7 @@ New-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-Additio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceBackupPolicy&amp;apos; resource.
+Create a &apos;ApplianceBackupPolicy&apos; resource.
 
 ## PARAMETERS
 

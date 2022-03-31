@@ -19,7 +19,7 @@ Set-IntersightNetworkFcZoneInfo [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;NetworkFcZoneInfo&amp;apos; resource.
+Update a &apos;NetworkFcZoneInfo&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamPermission&amp;apos; resource.
+Create a &apos;IamPermission&apos; resource.
 
 ## PARAMETERS
 
@@ -247,10 +247,10 @@ PS C:\> New-IntersightIamPermission
 
 ## RELATED LINKS
 
-[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
+[Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
 
 [Set-IntersightIamPermission](./Set-IntersightIamPermission.md)
 
-[Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
+[Remove-IntersightIamPermission](./Remove-IntersightIamPermission.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

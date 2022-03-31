@@ -17,7 +17,7 @@ Remove-IntersightIamLdapGroup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamLdapGroup&amp;apos; resource.
+Delete a &apos;IamLdapGroup&apos; resource.
 
 ## EXAMPLES
 

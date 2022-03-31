@@ -19,7 +19,7 @@ Set-IntersightHyperflexSysConfigPolicy [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexSysConfigPolicy&amp;apos; resource.
+Update a &apos;HyperflexSysConfigPolicy&apos; resource.
 
 ## PARAMETERS
 

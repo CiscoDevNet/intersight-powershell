@@ -19,7 +19,7 @@ Set-IntersightIpmioverlanPolicy [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;IpmioverlanPolicy&apos; resource.
+Update a &amp;apos;IpmioverlanPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -238,10 +238,10 @@ PS C:\> Set-IntersightIpmioverlanPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightIpmioverlanPolicy](./Remove-IntersightIpmioverlanPolicy.md)
+[New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
 
 [Get-IntersightIpmioverlanPolicy](./Get-IntersightIpmioverlanPolicy.md)
 
-[New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
+[Remove-IntersightIpmioverlanPolicy](./Remove-IntersightIpmioverlanPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

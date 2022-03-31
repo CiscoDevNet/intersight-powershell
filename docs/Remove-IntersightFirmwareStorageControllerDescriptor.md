@@ -17,7 +17,7 @@ Remove-IntersightFirmwareStorageControllerDescriptor -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &apos;FirmwareStorageControllerDescriptor&apos; resource.
+Delete a &amp;apos;FirmwareStorageControllerDescriptor&amp;apos; resource.
 
 ## EXAMPLES
 

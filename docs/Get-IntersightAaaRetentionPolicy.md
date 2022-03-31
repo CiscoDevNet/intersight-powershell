@@ -25,7 +25,7 @@ Get-IntersightAaaRetentionPolicy [-Count <Boolean>] [-InlineCount <String>] [-Se
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;AaaRetentionPolicy&apos; resource.,
+Read a &amp;apos;AaaRetentionPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

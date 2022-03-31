@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FirmwareVersion< string>][[-Moid]< string>][-Pid< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FirmwareVersion< string>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][[-Moid]< string>][-Pid< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,24 @@ The running firmware version of the PCI device.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GraphicsCards
+An array of relationships to graphicsCard resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[GraphicsCardRelationship]
 Parameter Sets: (All)
 Aliases:
 

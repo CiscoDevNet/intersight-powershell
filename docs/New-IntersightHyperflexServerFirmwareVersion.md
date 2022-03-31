@@ -163,9 +163,9 @@ PS C:\> New-IntersightHyperflexServerFirmwareVersion
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServerFirmwareVersion](./Remove-IntersightHyperflexServerFirmwareVersion.md)
-
 [Set-IntersightHyperflexServerFirmwareVersion](./Set-IntersightHyperflexServerFirmwareVersion.md)
+
+[Remove-IntersightHyperflexServerFirmwareVersion](./Remove-IntersightHyperflexServerFirmwareVersion.md)
 
 [Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
 

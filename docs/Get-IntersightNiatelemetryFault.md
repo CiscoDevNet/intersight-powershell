@@ -25,7 +25,7 @@ Get-IntersightNiatelemetryFault [-Count <Boolean>] [-InlineCount <String>] [-Sel
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;NiatelemetryFault&apos; resource.,
+Read a &amp;apos;NiatelemetryFault&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

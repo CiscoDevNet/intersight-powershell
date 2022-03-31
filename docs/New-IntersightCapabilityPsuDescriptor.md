@@ -19,7 +19,7 @@ New-IntersightCapabilityPsuDescriptor [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityPsuDescriptor&apos; resource.
+Create a &amp;apos;CapabilityPsuDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -220,10 +220,10 @@ PS C:\> New-IntersightCapabilityPsuDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityPsuDescriptor](./Get-IntersightCapabilityPsuDescriptor.md)
-
 [Set-IntersightCapabilityPsuDescriptor](./Set-IntersightCapabilityPsuDescriptor.md)
 
 [Remove-IntersightCapabilityPsuDescriptor](./Remove-IntersightCapabilityPsuDescriptor.md)
+
+[Get-IntersightCapabilityPsuDescriptor](./Get-IntersightCapabilityPsuDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

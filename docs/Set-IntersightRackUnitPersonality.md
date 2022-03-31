@@ -19,7 +19,7 @@ Set-IntersightRackUnitPersonality [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;RackUnitPersonality&amp;apos; resource.
+Update a &apos;RackUnitPersonality&apos; resource.
 
 ## PARAMETERS
 

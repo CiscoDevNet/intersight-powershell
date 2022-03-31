@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSshPolicy](./New-IntersightSshPolicy.md)
-
 [Get-IntersightSshPolicy](./Get-IntersightSshPolicy.md)
+
+[New-IntersightSshPolicy](./New-IntersightSshPolicy.md)
 
 [Set-IntersightSshPolicy](./Set-IntersightSshPolicy.md)
 

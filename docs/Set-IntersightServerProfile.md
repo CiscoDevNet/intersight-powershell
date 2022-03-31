@@ -19,7 +19,7 @@ Set-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;ServerProfile&apos; resource.
+Update a &amp;apos;ServerProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -457,11 +457,11 @@ PS C:\> Set-IntersightServerProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
+
 [Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
 
 [New-IntersightServerProfile](./New-IntersightServerProfile.md)
-
-[Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

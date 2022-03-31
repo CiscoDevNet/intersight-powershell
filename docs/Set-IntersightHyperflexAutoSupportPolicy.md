@@ -19,7 +19,7 @@ Set-IntersightHyperflexAutoSupportPolicy [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexAutoSupportPolicy&apos; resource.
+Update a &amp;apos;HyperflexAutoSupportPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

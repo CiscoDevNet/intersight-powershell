@@ -19,7 +19,7 @@ Set-IntersightCapabilityFanModuleManufacturingDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityFanModuleManufacturingDef&amp;apos; resource.
+Update a &apos;CapabilityFanModuleManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

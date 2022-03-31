@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewPassword
-New password that the user&apos;s password should be changed to.
+New password that the user&amp;apos;s password should be changed to.
 
 ```yaml
 Type: string

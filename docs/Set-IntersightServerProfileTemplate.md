@@ -19,7 +19,7 @@ Set-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ServerProfileTemplate&amp;apos; resource.
+Update a &apos;ServerProfileTemplate&apos; resource.
 
 ## PARAMETERS
 

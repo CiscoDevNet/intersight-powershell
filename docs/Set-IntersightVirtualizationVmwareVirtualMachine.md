@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareVirtualMachine&amp;apos; resource.
+Update a &apos;VirtualizationVmwareVirtualMachine&apos; resource.
 
 ## PARAMETERS
 

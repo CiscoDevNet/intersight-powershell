@@ -238,9 +238,9 @@ PS C:\> Set-IntersightSshPolicy
 
 ## RELATED LINKS
 
-[New-IntersightSshPolicy](./New-IntersightSshPolicy.md)
-
 [Get-IntersightSshPolicy](./Get-IntersightSshPolicy.md)
+
+[New-IntersightSshPolicy](./New-IntersightSshPolicy.md)
 
 [Remove-IntersightSshPolicy](./Remove-IntersightSshPolicy.md)
 

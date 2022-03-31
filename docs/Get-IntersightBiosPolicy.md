@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightBiosPolicy](./New-IntersightBiosPolicy.md)
-
 [Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
 
 [Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
+
+[New-IntersightBiosPolicy](./New-IntersightBiosPolicy.md)
 

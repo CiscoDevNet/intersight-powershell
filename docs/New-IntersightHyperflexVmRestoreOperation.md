@@ -19,7 +19,7 @@ New-IntersightHyperflexVmRestoreOperation [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexVmRestoreOperation&amp;apos; resource.
+Create a &apos;HyperflexVmRestoreOperation&apos; resource.
 
 ## PARAMETERS
 
@@ -244,8 +244,8 @@ PS C:\> New-IntersightHyperflexVmRestoreOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
-
 [Get-IntersightHyperflexVmRestoreOperation](./Get-IntersightHyperflexVmRestoreOperation.md)
+
+[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

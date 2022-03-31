@@ -19,7 +19,7 @@ New-IntersightFirmwareStorageControllerDescriptor [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &apos;FirmwareStorageControllerDescriptor&apos; resource.
+Create a &amp;apos;FirmwareStorageControllerDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightWorkflowSolutionActionInstance [-Count <Boolean>] [-InlineCount <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;WorkflowSolutionActionInstance&apos; resource.,
+Read a &amp;apos;WorkflowSolutionActionInstance&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -283,10 +283,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-IntersightWorkflowSolutionActionInstance](./New-IntersightWorkflowSolutionActionInstance.md)
-
-[Set-IntersightWorkflowSolutionActionInstance](./Set-IntersightWorkflowSolutionActionInstance.md)
-
-[Remove-IntersightWorkflowSolutionActionInstance](./Remove-IntersightWorkflowSolutionActionInstance.md)
 

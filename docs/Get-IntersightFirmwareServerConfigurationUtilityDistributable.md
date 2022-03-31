@@ -25,7 +25,7 @@ Get-IntersightFirmwareServerConfigurationUtilityDistributable [-Count <Boolean>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FirmwareServerConfigurationUtilityDistributable&apos; resource.,
+Read a &amp;apos;FirmwareServerConfigurationUtilityDistributable&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareServerConfigurationUtilityDistributable](./New-IntersightFirmwareServerConfigurationUtilityDistributable.md)
-
 [Set-IntersightFirmwareServerConfigurationUtilityDistributable](./Set-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 
 [Remove-IntersightFirmwareServerConfigurationUtilityDistributable](./Remove-IntersightFirmwareServerConfigurationUtilityDistributable.md)
+
+[New-IntersightFirmwareServerConfigurationUtilityDistributable](./New-IntersightFirmwareServerConfigurationUtilityDistributable.md)
 

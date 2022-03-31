@@ -19,7 +19,7 @@ New-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Diction
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamUser&amp;apos; resource.
+Create a &apos;IamUser&apos; resource.
 
 ## PARAMETERS
 

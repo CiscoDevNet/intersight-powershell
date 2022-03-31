@@ -19,7 +19,7 @@ New-IntersightTaskHyperFlexManagementScopedInventory [-AdditionalProperties< Sys
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TaskHyperFlexManagementScopedInventory&amp;apos; resource.
+Create a &apos;TaskHyperFlexManagementScopedInventory&apos; resource.
 
 ## PARAMETERS
 

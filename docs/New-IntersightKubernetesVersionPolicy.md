@@ -19,7 +19,7 @@ New-IntersightKubernetesVersionPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesVersionPolicy&apos; resource.
+Create a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -211,10 +211,10 @@ PS C:\> New-IntersightKubernetesVersionPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
+
 [Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
 
 [Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
-
-[Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

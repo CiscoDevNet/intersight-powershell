@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightUuidpoolPool](./New-IntersightUuidpoolPool.md)
 
-[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
-
 [Set-IntersightUuidpoolPool](./Set-IntersightUuidpoolPool.md)
+
+[Remove-IntersightUuidpoolPool](./Remove-IntersightUuidpoolPool.md)
 

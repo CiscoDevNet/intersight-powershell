@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightRecoveryBackupConfigPolicy](./New-IntersightRecoveryBackupConfigPolicy.md)
 
-[Set-IntersightRecoveryBackupConfigPolicy](./Set-IntersightRecoveryBackupConfigPolicy.md)
-
 [Remove-IntersightRecoveryBackupConfigPolicy](./Remove-IntersightRecoveryBackupConfigPolicy.md)
+
+[Set-IntersightRecoveryBackupConfigPolicy](./Set-IntersightRecoveryBackupConfigPolicy.md)
 

@@ -19,7 +19,7 @@ Set-IntersightVirtualizationIweVirtualDisk [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationIweVirtualDisk&apos; resource.
+Update a &amp;apos;VirtualizationIweVirtualDisk&amp;apos; resource.
 
 ## PARAMETERS
 

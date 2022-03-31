@@ -19,7 +19,7 @@ Set-IntersightIamEndPointUser [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamEndPointUser&amp;apos; resource.
+Update a &apos;IamEndPointUser&apos; resource.
 
 ## PARAMETERS
 

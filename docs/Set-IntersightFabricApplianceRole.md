@@ -19,7 +19,7 @@ Set-IntersightFabricApplianceRole [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricApplianceRole&apos; resource.
+Update a &amp;apos;FabricApplianceRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -322,10 +322,10 @@ PS C:\> Set-IntersightFabricApplianceRole
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
+
 [Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 
 [New-IntersightFabricApplianceRole](./New-IntersightFabricApplianceRole.md)
-
-[Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

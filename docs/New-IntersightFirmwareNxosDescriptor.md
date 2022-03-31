@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareNxosDescriptor
 
 [Get-IntersightFirmwareNxosDescriptor](./Get-IntersightFirmwareNxosDescriptor.md)
 
-[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
-
 [Set-IntersightFirmwareNxosDescriptor](./Set-IntersightFirmwareNxosDescriptor.md)
+
+[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

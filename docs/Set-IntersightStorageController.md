@@ -19,7 +19,7 @@ Set-IntersightStorageController [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageController&apos; resource.
+Update a &amp;apos;StorageController&amp;apos; resource.
 
 ## PARAMETERS
 

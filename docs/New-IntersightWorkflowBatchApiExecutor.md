@@ -19,7 +19,7 @@ New-IntersightWorkflowBatchApiExecutor [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowBatchApiExecutor&apos; resource.
+Create a &amp;apos;WorkflowBatchApiExecutor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -308,11 +308,11 @@ PS C:\> New-IntersightWorkflowBatchApiExecutor
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
+[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
 
 [Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
 
-[Set-IntersightWorkflowBatchApiExecutor](./Set-IntersightWorkflowBatchApiExecutor.md)
+[Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFirmwareDriveDescriptor](./Set-IntersightFirmwareDriveDescriptor.md)
 
-[Get-IntersightFirmwareDriveDescriptor](./Get-IntersightFirmwareDriveDescriptor.md)
-
 [New-IntersightFirmwareDriveDescriptor](./New-IntersightFirmwareDriveDescriptor.md)
+
+[Get-IntersightFirmwareDriveDescriptor](./Get-IntersightFirmwareDriveDescriptor.md)
 

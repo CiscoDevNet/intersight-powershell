@@ -222,11 +222,11 @@ PS C:\> New-IntersightIqnpoolPool
 
 ## RELATED LINKS
 
-[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
-
 [Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
 
 [Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
+
+[Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)
 

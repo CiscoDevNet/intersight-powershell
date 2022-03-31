@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryRegion [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryRegion&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryRegion&apos; resource.
 
 ## PARAMETERS
 

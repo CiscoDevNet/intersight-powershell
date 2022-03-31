@@ -485,11 +485,11 @@ PS C:\> Set-IntersightSoftwareHclMeta
 
 ## RELATED LINKS
 
+[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
+
 [Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
 
 [New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
-
-[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

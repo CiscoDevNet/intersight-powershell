@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterBackupPolicyDeployment [-AdditionalProperties< Sys
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexClusterBackupPolicyDeployment&amp;apos; resource.
+Create a &apos;HyperflexClusterBackupPolicyDeployment&apos; resource.
 
 ## PARAMETERS
 
@@ -226,11 +226,11 @@ PS C:\> New-IntersightHyperflexClusterBackupPolicyDeployment
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexClusterBackupPolicyDeployment](./Remove-IntersightHyperflexClusterBackupPolicyDeployment.md)
+[Get-IntersightHyperflexClusterBackupPolicyDeployment](./Get-IntersightHyperflexClusterBackupPolicyDeployment.md)
 
 [Set-IntersightHyperflexClusterBackupPolicyDeployment](./Set-IntersightHyperflexClusterBackupPolicyDeployment.md)
 
-[Get-IntersightHyperflexClusterBackupPolicyDeployment](./Get-IntersightHyperflexClusterBackupPolicyDeployment.md)
+[Remove-IntersightHyperflexClusterBackupPolicyDeployment](./Remove-IntersightHyperflexClusterBackupPolicyDeployment.md)
 
 [Initialize-IntersightHyperflexReplicationSchedule](./Initialize-IntersightHyperflexReplicationSchedule.md)
 

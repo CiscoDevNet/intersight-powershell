@@ -25,7 +25,7 @@ Get-IntersightPowerPolicy [-Count <Boolean>] [-InlineCount <String>] [-Select <S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;PowerPolicy&amp;apos; resource.,
+Read a &apos;PowerPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightPowerPolicy](./New-IntersightPowerPolicy.md)
-
 [Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
 
 [Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)
+
+[New-IntersightPowerPolicy](./New-IntersightPowerPolicy.md)
 

@@ -8,94 +8,47 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get BulkExportedItem.</para>
+    /// <para type="synopsis">This is the cmdlet to New BulkMoMerger.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkExportedItem", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightBulkExportedItem:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightBulkMoMerger")]
+    public class NewIntersightBulkMoMerger:NewCmdletBase
 	{
-		public GetIntersightBulkExportedItem()
+		public NewIntersightBulkMoMerger()
 		{
 			ApiInstance = new BulkApi(Config);
-            MethodName = "GetBulkExportedItemListWithHttpInfo";
+            ModelObject = new BulkMoMerger();
+            MethodName = "CreateBulkMoMergerWithHttpInfo";
 		}
         
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string AccountMoid {
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
             get;
             set;
         }
         
         
         
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public DateTime CreateTime {
+        // <summary>
+        /// <para type="description">"The type of merge action to be applied on the target MOs. \n* `Merge` - The null properties/relationships of the source MO will be ignored for the target MO. The non-null properties/relationships of the source will override the target MO properties/relationships.\n* `Replace` - Merge action as described in RFC 7386. The null properties/relationships of the source MO will be deleted on the target MO.The non-null properties/relationships of the source will override the target MO properties/relationships.When source object type is different from target, only the properties common to both source and target  will be affected.Other properties on the target will be ignored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public BulkMoMerger.MergeActionEnum MergeAction {
             get;
             set;
         }
         
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a bulkExport resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public BulkExportRelationship Export {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Specifies whether tags must be exported for item MO."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public bool ExportTags {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Name of the file corresponding to item MO."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string FileName {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -103,90 +56,59 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"MO item identity (the moref corresponding to item) expressed as a string."</para>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Name {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a bulkExportedItem resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public BulkExportedItemRelationship ParentItem {
+        public OrganizationOrganizationRelationship Organization {
             get;
             set;
         }
         
         
         
-        // <summary>
-        /// <para type="description">"Name of the service that owns the item MO."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string ServiceName {
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoBaseMo> Sources {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"Version of the service that owns the item MO."</para>
+        /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string ServiceVersion {
+        public List<MoTag> Tags {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// <para type="description">"JSON document specifying the configuration, if applicable, to be applied on all the target MOs."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string SharedScope {
+        public MoBaseMo TargetConfig {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"Status of the item's export operation.\n* `` - The operation has not started.\n* `ValidationInProgress` - The validation operation is in progress.\n* `Valid` - The content to be imported is valid.\n* `InValid` - The content to be imported is not valid and the status message will have the reason.\n* `InProgress` - The operation is in progress.\n* `Success` - The operation has succeeded.\n* `Failed` - The operation has failed.\n* `RollBackInitiated` - The rollback has been inititiated for import failure.\n* `RollBackFailed` - The rollback has failed for import failure.\n* `RollbackCompleted` - The rollback has completed for import failure.\n* `RollbackAborted` - The rollback has been aborted for import failure.\n* `OperationTimedOut` - The operation has timed out.\n* `OperationCancelled` - The operation has been cancelled.\n* `CancelInProgress` - The operation is being cancelled."</para>
+        /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public BulkExportedItem.StatusEnum Status {
+        public List<MoBaseMo> Targets {
             get;
             set;
         }
-        
-        // <summary>
-        /// <para type="description">"Progress or error message for the MO's export operation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string StatusMessage {
-            get;
-            set;
-        }
-        
-        
-
         
     }
     /// <summary>
@@ -1088,110 +1010,6 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New BulkMoMerger.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBulkMoMerger")]
-    public class NewIntersightBulkMoMerger:NewCmdletBase
-	{
-		public NewIntersightBulkMoMerger()
-		{
-			ApiInstance = new BulkApi(Config);
-            ModelObject = new BulkMoMerger();
-            MethodName = "CreateBulkMoMergerWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The type of merge action to be applied on the target MOs. \n* `Merge` - The null properties/relationships of the source MO will be ignored for the target MO. The non-null properties/relationships of the source will override the target MO properties/relationships.\n* `Replace` - Merge action as described in RFC 7386. The null properties/relationships of the source MO will be deleted on the target MO.The non-null properties/relationships of the source will override the target MO properties/relationships.When source object type is different from target, only the properties common to both source and target  will be affected.Other properties on the target will be ignored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public BulkMoMerger.MergeActionEnum MergeAction {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoBaseMo> Sources {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"JSON document specifying the configuration, if applicable, to be applied on all the target MOs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public MoBaseMo TargetConfig {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoBaseMo> Targets {
-            get;
-            set;
-        }
-        
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BulkExport.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightBulkExport")]
@@ -1310,5 +1128,187 @@ namespace Intersight.PowerShell
 			ApiInstance = new BulkApi(Config);
             MethodName = "DeleteBulkExportWithHttpInfo";
 		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BulkExportedItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkExportedItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBulkExportedItem:GetCmdletBase
+	{
+		public GetIntersightBulkExportedItem()
+		{
+			ApiInstance = new BulkApi(Config);
+            MethodName = "GetBulkExportedItemListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a bulkExport resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public BulkExportRelationship Export {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Specifies whether tags must be exported for item MO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public bool ExportTags {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Name of the file corresponding to item MO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string FileName {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"MO item identity (the moref corresponding to item) expressed as a string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Name {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a bulkExportedItem resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public BulkExportedItemRelationship ParentItem {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Name of the service that owns the item MO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string ServiceName {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Version of the service that owns the item MO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string ServiceVersion {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Status of the item's export operation.\n* `` - The operation has not started.\n* `ValidationInProgress` - The validation operation is in progress.\n* `Valid` - The content to be imported is valid.\n* `InValid` - The content to be imported is not valid and the status message will have the reason.\n* `InProgress` - The operation is in progress.\n* `Success` - The operation has succeeded.\n* `Failed` - The operation has failed.\n* `RollBackInitiated` - The rollback has been inititiated for import failure.\n* `RollBackFailed` - The rollback has failed for import failure.\n* `RollbackCompleted` - The rollback has completed for import failure.\n* `RollbackAborted` - The rollback has been aborted for import failure.\n* `OperationTimedOut` - The operation has timed out.\n* `OperationCancelled` - The operation has been cancelled.\n* `CancelInProgress` - The operation is being cancelled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public BulkExportedItem.StatusEnum Status {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Progress or error message for the MO's export operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string StatusMessage {
+            get;
+            set;
+        }
+        
+        
+
+        
     }
 }

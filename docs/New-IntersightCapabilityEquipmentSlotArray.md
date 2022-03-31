@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pid
-Product Identifier for a Switch/Fabric-Interconnect.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `unknown` - Unknown device type, usage is TBD.
+Product Identifier for a Switch/Fabric-Interconnect.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `unknown` - Unknown device type, usage is TBD.
 
 ```yaml
 Type: CapabilityEquipmentSlotArray.PidEnum
@@ -427,10 +427,10 @@ PS C:\> New-IntersightCapabilityEquipmentSlotArray
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
+
 [Set-IntersightCapabilityEquipmentSlotArray](./Set-IntersightCapabilityEquipmentSlotArray.md)
 
 [Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
-
-[Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

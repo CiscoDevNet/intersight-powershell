@@ -19,7 +19,7 @@ Set-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesClusterProfile&amp;apos; resource.
+Update a &apos;KubernetesClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -536,11 +536,11 @@ PS C:\> Set-IntersightKubernetesClusterProfile
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesClusterProfile](./Get-IntersightKubernetesClusterProfile.md)
+[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
 
 [New-IntersightKubernetesClusterProfile](./New-IntersightKubernetesClusterProfile.md)
 
-[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
+[Get-IntersightKubernetesClusterProfile](./Get-IntersightKubernetesClusterProfile.md)
 
 [Initialize-IntersightKubernetesActionInfo](./Initialize-IntersightKubernetesActionInfo.md)
 

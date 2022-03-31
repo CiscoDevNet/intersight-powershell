@@ -19,7 +19,7 @@ New-IntersightKubernetesClusterAddonProfile [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesClusterAddonProfile&apos; resource.
+Create a &amp;apos;KubernetesClusterAddonProfile&amp;apos; resource.
 
 ## PARAMETERS
 

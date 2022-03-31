@@ -19,7 +19,7 @@ Set-IntersightHyperflexHypervisorHost [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexHypervisorHost&apos; resource.
+Update a &amp;apos;HyperflexHypervisorHost&amp;apos; resource.
 
 ## PARAMETERS
 

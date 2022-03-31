@@ -1,0 +1,318 @@
+---
+external help file: Intersight.PowerShell.dll-Help.xml
+Module Name: Intersight.PowerShell
+online version:
+schema: 2.0.0
+---
+
+# Initialize-IntersightCrdCustomResource
+
+## SYNOPSIS
+Fill in the Synopsis
+
+## SYNTAX
+
+```
+
+Initialize-IntersightCrdCustomResource [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CrdCustomResource.ClassIdEnum>][-DcLauncher< string>][-Image< string>][-Moid< string>][-Name< string>][-Namespace< string>][-ObjectType< CrdCustomResource.ObjectTypeEnum>][-Port< long>][-Properties< System.Collections.Generic.List`1[Model.CrdCustomResourceConfigProperty]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetId< string>][-TargetMoid< string>][-TargetType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+
+```
+
+## DESCRIPTION
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
+
+## PARAMETERS
+
+### -Account
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdditionalProperties
+
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
+
+```yaml
+Type: CrdCustomResource.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DcLauncher
+Type of custom resource or &amp;apos;kind&amp;apos; in K8s.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Image
+Docker image URL for public cloud DC.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+A string property called name which is used as part of a uniqueness constraint. See &amp;apos;identity&amp;apos; specification in this MO definition.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Namespace
+Namespace to launch the deployment associated with the custom resource.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+
+```yaml
+Type: CrdCustomResource.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Port
+Port used for public cloud DC.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Properties
+
+
+Note :- Use Initialize-IntersightCrdCustomResourceConfigProperty to create the object of complex type CrdCustomResourceConfigProperty
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.CrdCustomResourceConfigProperty]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetId
+Target ID for public cloud DC.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetMoid
+Target Moid for public cloud DC.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetType
+Target type for public cloud DC.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Initialize-IntersightCrdCustomResource
+```
+
+{ Add example description here }
+
+## INPUTS
+
+### System.Int32
+
+### System.String
+
+## OUTPUTS
+
+### TestModule.FavoriteStuff
+
+## NOTES
+
+## RELATED LINKS
+
+[Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
+
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

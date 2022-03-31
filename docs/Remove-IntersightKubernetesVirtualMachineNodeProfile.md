@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesVirtualMachineNodeProfile](./Set-IntersightKubernetesVirtualMachineNodeProfile.md)
+[Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
 
 [New-IntersightKubernetesVirtualMachineNodeProfile](./New-IntersightKubernetesVirtualMachineNodeProfile.md)
 
-[Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
+[Set-IntersightKubernetesVirtualMachineNodeProfile](./Set-IntersightKubernetesVirtualMachineNodeProfile.md)
 

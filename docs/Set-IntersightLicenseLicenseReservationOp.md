@@ -19,7 +19,7 @@ Set-IntersightLicenseLicenseReservationOp [-Account< IamAccountRelationship>][-A
 ```
 
 ## DESCRIPTION
-Update a &apos;LicenseLicenseReservationOp&apos; resource.
+Update a &amp;apos;LicenseLicenseReservationOp&amp;apos; resource.
 
 ## PARAMETERS
 

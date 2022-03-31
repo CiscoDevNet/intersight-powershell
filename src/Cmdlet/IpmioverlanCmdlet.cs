@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set IpmioverlanPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New IpmioverlanPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIpmioverlanPolicy")]
-    public class SetIntersightIpmioverlanPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightIpmioverlanPolicy")]
+    public class NewIntersightIpmioverlanPolicy:NewCmdletBase
 	{
-		public SetIntersightIpmioverlanPolicy()
+		public NewIntersightIpmioverlanPolicy()
 		{
 			ApiInstance = new IpmioverlanApi(Config);
             ModelObject = new IpmioverlanPolicy();
-            MethodName = "UpdateIpmioverlanPolicyWithHttpInfo";
+            MethodName = "CreateIpmioverlanPolicyWithHttpInfo";
 		}
         
         
@@ -69,7 +69,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -79,7 +79,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -130,18 +130,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove IpmioverlanPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIpmioverlanPolicy")]
-    public class RemoveIntersightIpmioverlanPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightIpmioverlanPolicy()
-		{
-			ApiInstance = new IpmioverlanApi(Config);
-            MethodName = "DeleteIpmioverlanPolicyWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IpmioverlanPolicy.</para>
@@ -305,16 +293,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New IpmioverlanPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set IpmioverlanPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIpmioverlanPolicy")]
-    public class NewIntersightIpmioverlanPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightIpmioverlanPolicy")]
+    public class SetIntersightIpmioverlanPolicy:SetCmdletBase
 	{
-		public NewIntersightIpmioverlanPolicy()
+		public SetIntersightIpmioverlanPolicy()
 		{
 			ApiInstance = new IpmioverlanApi(Config);
             ModelObject = new IpmioverlanPolicy();
-            MethodName = "CreateIpmioverlanPolicyWithHttpInfo";
+            MethodName = "UpdateIpmioverlanPolicyWithHttpInfo";
 		}
         
         
@@ -366,7 +354,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -376,7 +364,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -427,5 +415,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove IpmioverlanPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightIpmioverlanPolicy")]
+    public class RemoveIntersightIpmioverlanPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightIpmioverlanPolicy()
+		{
+			ApiInstance = new IpmioverlanApi(Config);
+            MethodName = "DeleteIpmioverlanPolicyWithHttpInfo";
+		}
     }
 }

@@ -232,9 +232,9 @@ PS C:\> New-IntersightCapabilitySiocModuleManufacturingDef
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilitySiocModuleManufacturingDef](./Set-IntersightCapabilitySiocModuleManufacturingDef.md)
-
 [Remove-IntersightCapabilitySiocModuleManufacturingDef](./Remove-IntersightCapabilitySiocModuleManufacturingDef.md)
+
+[Set-IntersightCapabilitySiocModuleManufacturingDef](./Set-IntersightCapabilitySiocModuleManufacturingDef.md)
 
 [Get-IntersightCapabilitySiocModuleManufacturingDef](./Get-IntersightCapabilitySiocModuleManufacturingDef.md)
 

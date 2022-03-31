@@ -19,7 +19,7 @@ New-IntersightCapabilityChassisDescriptor [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityChassisDescriptor&amp;apos; resource.
+Create a &apos;CapabilityChassisDescriptor&apos; resource.
 
 ## PARAMETERS
 

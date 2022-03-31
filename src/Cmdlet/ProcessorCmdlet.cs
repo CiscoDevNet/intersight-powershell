@@ -152,6 +152,16 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public NetworkElementRelationship NetworkElement {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"The number of cores present in a given processor."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -418,6 +428,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public NetworkElementRelationship NetworkElement {
             get;
             set;
         }

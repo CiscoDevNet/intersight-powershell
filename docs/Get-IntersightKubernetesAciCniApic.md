@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightKubernetesAciCniApic](./New-IntersightKubernetesAciCniApic.md)
 
-[Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
-
 [Set-IntersightKubernetesAciCniApic](./Set-IntersightKubernetesAciCniApic.md)
+
+[Remove-IntersightKubernetesAciCniApic](./Remove-IntersightKubernetesAciCniApic.md)
 

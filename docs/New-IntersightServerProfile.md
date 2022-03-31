@@ -19,7 +19,7 @@ New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &apos;ServerProfile&apos; resource.
+Create a &amp;apos;ServerProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -457,11 +457,11 @@ PS C:\> New-IntersightServerProfile
 
 ## RELATED LINKS
 
-[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
-
 [Set-IntersightServerProfile](./Set-IntersightServerProfile.md)
 
 [Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
+
+[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

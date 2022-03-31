@@ -19,7 +19,7 @@ Set-IntersightIamLdapPolicy [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamLdapPolicy&amp;apos; resource.
+Update a &apos;IamLdapPolicy&apos; resource.
 
 ## PARAMETERS
 

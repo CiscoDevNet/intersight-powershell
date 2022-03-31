@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
+[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
 
 [Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
 
-[New-IntersightVnicFcIf](./New-IntersightVnicFcIf.md)
+[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
 

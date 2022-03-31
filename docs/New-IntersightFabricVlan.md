@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &amp;apos;name&amp;apos; used to identify this VLAN.
+The &apos;name&apos; used to identify this VLAN.
 
 ```yaml
 Type: string
@@ -223,10 +223,10 @@ PS C:\> New-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
-
 [Set-IntersightFabricVlan](./Set-IntersightFabricVlan.md)
 
 [Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
+
+[Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

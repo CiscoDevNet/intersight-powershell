@@ -253,11 +253,11 @@ PS C:\> Set-IntersightBootPrecisionPolicy
 
 ## RELATED LINKS
 
-[New-IntersightBootPrecisionPolicy](./New-IntersightBootPrecisionPolicy.md)
+[Remove-IntersightBootPrecisionPolicy](./Remove-IntersightBootPrecisionPolicy.md)
 
 [Get-IntersightBootPrecisionPolicy](./Get-IntersightBootPrecisionPolicy.md)
 
-[Remove-IntersightBootPrecisionPolicy](./Remove-IntersightBootPrecisionPolicy.md)
+[New-IntersightBootPrecisionPolicy](./New-IntersightBootPrecisionPolicy.md)
 
 [Initialize-IntersightBootDeviceBase](./Initialize-IntersightBootDeviceBase.md)
 

@@ -283,10 +283,10 @@ PS C:\> Set-IntersightVirtualizationVirtualNetwork
 
 ## RELATED LINKS
 
-[Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
+[Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
 
 [New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
 
-[Get-IntersightVirtualizationVirtualNetwork](./Get-IntersightVirtualizationVirtualNetwork.md)
+[Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

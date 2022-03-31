@@ -192,11 +192,11 @@ PS C:\> Set-IntersightWorkflowRollbackWorkflow
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowRollbackWorkflow](./Remove-IntersightWorkflowRollbackWorkflow.md)
+[Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
 
 [New-IntersightWorkflowRollbackWorkflow](./New-IntersightWorkflowRollbackWorkflow.md)
 
-[Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
+[Remove-IntersightWorkflowRollbackWorkflow](./Remove-IntersightWorkflowRollbackWorkflow.md)
 
 [Initialize-IntersightWorkflowRollbackWorkflowTask](./Initialize-IntersightWorkflowRollbackWorkflowTask.md)
 

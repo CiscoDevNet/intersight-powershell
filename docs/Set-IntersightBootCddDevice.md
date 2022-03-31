@@ -19,7 +19,7 @@ Set-IntersightBootCddDevice [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &apos;BootCddDevice&apos; resource.
+Update a &amp;apos;BootCddDevice&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightVirtualizationVirtualDisk](./New-IntersightVirtualizationVirtualDisk.md)
-
 [Set-IntersightVirtualizationVirtualDisk](./Set-IntersightVirtualizationVirtualDisk.md)
 
 [Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
+
+[New-IntersightVirtualizationVirtualDisk](./New-IntersightVirtualizationVirtualDisk.md)
 

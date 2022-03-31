@@ -8,6 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CommHttpProxyPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy")]
+    public class RemoveIntersightCommHttpProxyPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightCommHttpProxyPolicy()
+		{
+			ApiInstance = new CommApi(Config);
+            MethodName = "DeleteCommHttpProxyPolicyWithHttpInfo";
+		}
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CommHttpProxyPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightCommHttpProxyPolicy")]
@@ -140,18 +152,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove CommHttpProxyPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy")]
-    public class RemoveIntersightCommHttpProxyPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightCommHttpProxyPolicy()
-		{
-			ApiInstance = new CommApi(Config);
-            MethodName = "DeleteCommHttpProxyPolicyWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CommHttpProxyPolicy.</para>

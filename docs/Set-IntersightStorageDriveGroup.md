@@ -226,11 +226,11 @@ PS C:\> Set-IntersightStorageDriveGroup
 
 ## RELATED LINKS
 
-[New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
+[Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
 
 [Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
 
-[Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
+[New-IntersightStorageDriveGroup](./New-IntersightStorageDriveGroup.md)
 
 [Initialize-IntersightStorageAutomaticDriveGroup](./Initialize-IntersightStorageAutomaticDriveGroup.md)
 

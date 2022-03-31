@@ -19,7 +19,7 @@ Set-IntersightStoragePhysicalDisk [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StoragePhysicalDisk&amp;apos; resource.
+Update a &apos;StoragePhysicalDisk&apos; resource.
 
 ## PARAMETERS
 

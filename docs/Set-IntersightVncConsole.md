@@ -19,7 +19,7 @@ Set-IntersightVncConsole [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &apos;VncConsole&apos; resource.
+Update a &amp;apos;VncConsole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -160,8 +160,8 @@ PS C:\> Set-IntersightVncConsole
 
 ## RELATED LINKS
 
-[Get-IntersightVncConsole](./Get-IntersightVncConsole.md)
-
 [New-IntersightVncConsole](./New-IntersightVncConsole.md)
+
+[Get-IntersightVncConsole](./Get-IntersightVncConsole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

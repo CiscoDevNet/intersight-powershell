@@ -8,6 +8,136 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set GraphicsCard.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsCard")]
+    public class SetIntersightGraphicsCard:SetCmdletBase
+	{
+		public SetIntersightGraphicsCard()
+		{
+			ApiInstance = new GraphicsApi(Config);
+            ModelObject = new GraphicsCard();
+            MethodName = "UpdateGraphicsCardWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeBladeRelationship ComputeBlade {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ComputeRackUnitRelationship ComputeRackUnit {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The number of controllers under each card."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string NumGpus {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a pciDevice resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PciDeviceRelationship PciDevice {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public EquipmentFruRelationship PreviousFru {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get GraphicsController.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightGraphicsController", DefaultParameterSetName = "CmdletParam")]
@@ -248,16 +378,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set GraphicsCard.</para>
+    /// <para type="synopsis">This is the cmdlet to Set GraphicsController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsCard")]
-    public class SetIntersightGraphicsCard:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsController")]
+    public class SetIntersightGraphicsController:SetCmdletBase
 	{
-		public SetIntersightGraphicsCard()
+		public SetIntersightGraphicsController()
 		{
 			ApiInstance = new GraphicsApi(Config);
-            ModelObject = new GraphicsCard();
-            MethodName = "UpdateGraphicsCardWithHttpInfo";
+            ModelObject = new GraphicsController();
+            MethodName = "UpdateGraphicsControllerWithHttpInfo";
 		}
         
         
@@ -270,31 +400,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeBladeRelationship ComputeBlade {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ComputeRackUnitRelationship ComputeRackUnit {
-            get;
-            set;
-        }
-        
-        
         
         
         
@@ -316,18 +421,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-        // <summary>
-        /// <para type="description">"The number of controllers under each card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string NumGpus {
-            get;
-            set;
-        }
-        
-        
-        
         
         
         
@@ -343,7 +436,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        
         
         
         
@@ -496,6 +588,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"The identifier of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string GpuId {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -557,6 +659,7 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
         // <summary>
         /// <para type="description">"The current operational state of the graphics card."</para>
         /// </summary>
@@ -594,6 +697,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string PciAddressList {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a pciDevice resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public PciDeviceRelationship PciDevice {
             get;
             set;
         }
@@ -680,6 +793,26 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"The sub device id of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long SubDeviceId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The sub vendor id of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long SubVendorId {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"This field identifies the vendor of the given component."</para>
@@ -691,84 +824,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"The vendor id of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long VendorId {
+            get;
+            set;
+        }
+        
 
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set GraphicsController.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsController")]
-    public class SetIntersightGraphicsController:SetCmdletBase
-	{
-		public SetIntersightGraphicsController()
-		{
-			ApiInstance = new GraphicsApi(Config);
-            ModelObject = new GraphicsController();
-            MethodName = "UpdateGraphicsControllerWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public EquipmentFruRelationship PreviousFru {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
         
     }
 }

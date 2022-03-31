@@ -17,7 +17,7 @@ Remove-IntersightCapabilityFanModuleManufacturingDef -Moid <String> [<CommonPara
 ```
 
 ## DESCRIPTION
-Delete a &apos;CapabilityFanModuleManufacturingDef&apos; resource.
+Delete a &amp;apos;CapabilityFanModuleManufacturingDef&amp;apos; resource.
 
 ## EXAMPLES
 

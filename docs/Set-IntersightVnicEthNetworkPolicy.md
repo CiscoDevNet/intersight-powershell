@@ -19,7 +19,7 @@ Set-IntersightVnicEthNetworkPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicEthNetworkPolicy&apos; resource.
+Update a &amp;apos;VnicEthNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

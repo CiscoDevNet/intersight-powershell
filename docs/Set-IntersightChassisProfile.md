@@ -325,9 +325,9 @@ PS C:\> Set-IntersightChassisProfile
 
 ## RELATED LINKS
 
-[Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
-
 [New-IntersightChassisProfile](./New-IntersightChassisProfile.md)
+
+[Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
 
 [Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
 

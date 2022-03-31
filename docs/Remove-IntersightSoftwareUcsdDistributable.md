@@ -17,7 +17,7 @@ Remove-IntersightSoftwareUcsdDistributable -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwareUcsdDistributable&apos; resource.
+Delete a &amp;apos;SoftwareUcsdDistributable&amp;apos; resource.
 
 ## EXAMPLES
 

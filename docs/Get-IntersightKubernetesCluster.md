@@ -25,7 +25,7 @@ Get-IntersightKubernetesCluster [-Count <Boolean>] [-InlineCount <String>] [-Sel
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;KubernetesCluster&apos; resource.,
+Read a &amp;apos;KubernetesCluster&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightKubernetesCluster](./New-IntersightKubernetesCluster.md)
-
 [Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
 
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
+
+[New-IntersightKubernetesCluster](./New-IntersightKubernetesCluster.md)
 

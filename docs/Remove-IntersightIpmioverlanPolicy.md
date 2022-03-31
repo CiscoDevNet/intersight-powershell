@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIpmioverlanPolicy](./Set-IntersightIpmioverlanPolicy.md)
+[New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
 
 [Get-IntersightIpmioverlanPolicy](./Get-IntersightIpmioverlanPolicy.md)
 
-[New-IntersightIpmioverlanPolicy](./New-IntersightIpmioverlanPolicy.md)
+[Set-IntersightIpmioverlanPolicy](./Set-IntersightIpmioverlanPolicy.md)
 

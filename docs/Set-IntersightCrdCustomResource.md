@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A string property called name which is used as part of a uniqueness constraint. See &apos;identity&apos; specification in this MO definition.
+A string property called name which is used as part of a uniqueness constraint. See &amp;apos;identity&amp;apos; specification in this MO definition.
 
 ```yaml
 Type: string
@@ -282,11 +282,11 @@ PS C:\> Set-IntersightCrdCustomResource
 
 ## RELATED LINKS
 
+[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
+
 [Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
-
-[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
 
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
 

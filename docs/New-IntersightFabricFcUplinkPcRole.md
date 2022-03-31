@@ -19,7 +19,7 @@ New-IntersightFabricFcUplinkPcRole [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricFcUplinkPcRole&amp;apos; resource.
+Create a &apos;FabricFcUplinkPcRole&apos; resource.
 
 ## PARAMETERS
 

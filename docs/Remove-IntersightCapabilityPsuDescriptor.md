@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightCapabilityPsuDescriptor](./Set-IntersightCapabilityPsuDescriptor.md)
+
 [Get-IntersightCapabilityPsuDescriptor](./Get-IntersightCapabilityPsuDescriptor.md)
 
 [New-IntersightCapabilityPsuDescriptor](./New-IntersightCapabilityPsuDescriptor.md)
-
-[Set-IntersightCapabilityPsuDescriptor](./Set-IntersightCapabilityPsuDescriptor.md)
 

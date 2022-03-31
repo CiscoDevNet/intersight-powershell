@@ -253,10 +253,10 @@ PS C:\> New-IntersightSolPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
-
 [Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
 
 [Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
+
+[Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

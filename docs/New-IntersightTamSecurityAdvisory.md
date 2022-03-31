@@ -423,9 +423,9 @@ PS C:\> New-IntersightTamSecurityAdvisory
 
 [Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 
-[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
-
 [Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)
+
+[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 

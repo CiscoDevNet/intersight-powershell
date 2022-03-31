@@ -247,9 +247,9 @@ PS C:\> Set-IntersightCapabilityChassisManufacturingDef
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityChassisManufacturingDef](./Get-IntersightCapabilityChassisManufacturingDef.md)
-
 [New-IntersightCapabilityChassisManufacturingDef](./New-IntersightCapabilityChassisManufacturingDef.md)
+
+[Get-IntersightCapabilityChassisManufacturingDef](./Get-IntersightCapabilityChassisManufacturingDef.md)
 
 [Remove-IntersightCapabilityChassisManufacturingDef](./Remove-IntersightCapabilityChassisManufacturingDef.md)
 

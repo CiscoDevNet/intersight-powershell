@@ -19,7 +19,7 @@ New-IntersightIamLdapPolicy [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamLdapPolicy&amp;apos; resource.
+Create a &apos;IamLdapPolicy&apos; resource.
 
 ## PARAMETERS
 

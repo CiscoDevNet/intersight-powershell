@@ -235,9 +235,9 @@ PS C:\> New-IntersightFabricVsan
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
-
 [Set-IntersightFabricVsan](./Set-IntersightFabricVsan.md)
+
+[Remove-IntersightFabricVsan](./Remove-IntersightFabricVsan.md)
 
 [Get-IntersightFabricVsan](./Get-IntersightFabricVsan.md)
 

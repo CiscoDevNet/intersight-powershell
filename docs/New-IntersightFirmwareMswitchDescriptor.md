@@ -19,7 +19,7 @@ New-IntersightFirmwareMswitchDescriptor [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareMswitchDescriptor&amp;apos; resource.
+Create a &apos;FirmwareMswitchDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareMswitchDescriptor
 
 [Get-IntersightFirmwareMswitchDescriptor](./Get-IntersightFirmwareMswitchDescriptor.md)
 
-[Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
-
 [Set-IntersightFirmwareMswitchDescriptor](./Set-IntersightFirmwareMswitchDescriptor.md)
+
+[Remove-IntersightFirmwareMswitchDescriptor](./Remove-IntersightFirmwareMswitchDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

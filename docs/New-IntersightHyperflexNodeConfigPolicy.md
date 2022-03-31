@@ -19,7 +19,7 @@ New-IntersightHyperflexNodeConfigPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexNodeConfigPolicy&apos; resource.
+Create a &amp;apos;HyperflexNodeConfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

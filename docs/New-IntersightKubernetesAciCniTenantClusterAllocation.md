@@ -19,7 +19,7 @@ New-IntersightKubernetesAciCniTenantClusterAllocation [-AdditionalProperties< Sy
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesAciCniTenantClusterAllocation&amp;apos; resource.
+Create a &apos;KubernetesAciCniTenantClusterAllocation&apos; resource.
 
 ## PARAMETERS
 
@@ -145,10 +145,10 @@ PS C:\> New-IntersightKubernetesAciCniTenantClusterAllocation
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesAciCniTenantClusterAllocation](./Get-IntersightKubernetesAciCniTenantClusterAllocation.md)
+[Remove-IntersightKubernetesAciCniTenantClusterAllocation](./Remove-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
 [Set-IntersightKubernetesAciCniTenantClusterAllocation](./Set-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
-[Remove-IntersightKubernetesAciCniTenantClusterAllocation](./Remove-IntersightKubernetesAciCniTenantClusterAllocation.md)
+[Get-IntersightKubernetesAciCniTenantClusterAllocation](./Get-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

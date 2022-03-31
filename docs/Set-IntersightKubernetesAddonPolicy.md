@@ -19,7 +19,7 @@ Set-IntersightKubernetesAddonPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAddonPolicy&amp;apos; resource.
+Update a &apos;KubernetesAddonPolicy&apos; resource.
 
 ## PARAMETERS
 

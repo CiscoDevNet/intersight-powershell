@@ -19,7 +19,7 @@ Set-IntersightSoftwareSolutionDistributable [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwareSolutionDistributable&apos; resource.
+Update a &amp;apos;SoftwareSolutionDistributable&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -500,11 +500,11 @@ PS C:\> Set-IntersightSoftwareSolutionDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwareSolutionDistributable](./Remove-IntersightSoftwareSolutionDistributable.md)
-
 [Get-IntersightSoftwareSolutionDistributable](./Get-IntersightSoftwareSolutionDistributable.md)
 
 [New-IntersightSoftwareSolutionDistributable](./New-IntersightSoftwareSolutionDistributable.md)
+
+[Remove-IntersightSoftwareSolutionDistributable](./Remove-IntersightSoftwareSolutionDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

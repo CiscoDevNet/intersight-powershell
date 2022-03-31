@@ -17,7 +17,7 @@ Remove-IntersightCapabilitySwitchDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CapabilitySwitchDescriptor&amp;apos; resource.
+Delete a &apos;CapabilitySwitchDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)
-
 [New-IntersightCapabilitySwitchDescriptor](./New-IntersightCapabilitySwitchDescriptor.md)
+
+[Get-IntersightCapabilitySwitchDescriptor](./Get-IntersightCapabilitySwitchDescriptor.md)
 
 [Set-IntersightCapabilitySwitchDescriptor](./Set-IntersightCapabilitySwitchDescriptor.md)
 

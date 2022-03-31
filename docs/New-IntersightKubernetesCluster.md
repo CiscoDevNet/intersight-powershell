@@ -19,7 +19,7 @@ New-IntersightKubernetesCluster [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesCluster&apos; resource.
+Create a &amp;apos;KubernetesCluster&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -229,10 +229,10 @@ PS C:\> New-IntersightKubernetesCluster
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
-
 [Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
 
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
+
+[Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
-
 [Set-IntersightFabricServerRole](./Set-IntersightFabricServerRole.md)
+
+[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
 
 [New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
 

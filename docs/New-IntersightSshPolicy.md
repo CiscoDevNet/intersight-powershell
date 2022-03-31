@@ -240,8 +240,8 @@ PS C:\> New-IntersightSshPolicy
 
 [Get-IntersightSshPolicy](./Get-IntersightSshPolicy.md)
 
-[Set-IntersightSshPolicy](./Set-IntersightSshPolicy.md)
-
 [Remove-IntersightSshPolicy](./Remove-IntersightSshPolicy.md)
+
+[Set-IntersightSshPolicy](./Set-IntersightSshPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

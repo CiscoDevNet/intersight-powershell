@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareDimmDescriptor](./New-IntersightFirmwareDimmDescriptor.md)
+[Remove-IntersightFirmwareDimmDescriptor](./Remove-IntersightFirmwareDimmDescriptor.md)
 
 [Set-IntersightFirmwareDimmDescriptor](./Set-IntersightFirmwareDimmDescriptor.md)
 
-[Remove-IntersightFirmwareDimmDescriptor](./Remove-IntersightFirmwareDimmDescriptor.md)
+[New-IntersightFirmwareDimmDescriptor](./New-IntersightFirmwareDimmDescriptor.md)
 

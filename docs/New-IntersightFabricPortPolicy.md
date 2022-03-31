@@ -19,7 +19,7 @@ New-IntersightFabricPortPolicy [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricPortPolicy&apos; resource.
+Create a &amp;apos;FabricPortPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceModel
-This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `unknown` - Unknown device type, usage is TBD.
+This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `unknown` - Unknown device type, usage is TBD.
 
 ```yaml
 Type: FabricPortPolicy.DeviceModelEnum
@@ -208,10 +208,10 @@ PS C:\> New-IntersightFabricPortPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
+[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
 
 [Set-IntersightFabricPortPolicy](./Set-IntersightFabricPortPolicy.md)
 
-[Get-IntersightFabricPortPolicy](./Get-IntersightFabricPortPolicy.md)
+[Remove-IntersightFabricPortPolicy](./Remove-IntersightFabricPortPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

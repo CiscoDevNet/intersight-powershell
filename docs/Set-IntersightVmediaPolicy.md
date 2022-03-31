@@ -255,11 +255,11 @@ PS C:\> Set-IntersightVmediaPolicy
 
 ## RELATED LINKS
 
-[New-IntersightVmediaPolicy](./New-IntersightVmediaPolicy.md)
+[Remove-IntersightVmediaPolicy](./Remove-IntersightVmediaPolicy.md)
 
 [Get-IntersightVmediaPolicy](./Get-IntersightVmediaPolicy.md)
 
-[Remove-IntersightVmediaPolicy](./Remove-IntersightVmediaPolicy.md)
+[New-IntersightVmediaPolicy](./New-IntersightVmediaPolicy.md)
 
 [Initialize-IntersightVmediaMapping](./Initialize-IntersightVmediaMapping.md)
 

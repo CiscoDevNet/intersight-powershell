@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< Syst
 ```
 
 ## DESCRIPTION
-Update a &apos;SoftwarerepositoryOperatingSystemFile&apos; resource.
+Update a &amp;apos;SoftwarerepositoryOperatingSystemFile&amp;apos; resource.
 
 ## PARAMETERS
 

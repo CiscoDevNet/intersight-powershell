@@ -19,7 +19,7 @@ New-IntersightIamSessionLimits [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Create a &apos;IamSessionLimits&apos; resource.
+Create a &amp;apos;IamSessionLimits&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -205,10 +205,10 @@ PS C:\> New-IntersightIamSessionLimits
 
 ## RELATED LINKS
 
+[Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
+
 [Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
 
 [Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
-
-[Get-IntersightIamSessionLimits](./Get-IntersightIamSessionLimits.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

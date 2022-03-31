@@ -25,7 +25,7 @@ Get-IntersightIamIdp [-Count <Boolean>] [-InlineCount <String>] [-Select <String
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamIdp&apos; resource.,
+Read a &amp;apos;IamIdp&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamIdp](./New-IntersightIamIdp.md)
-
 [Set-IntersightIamIdp](./Set-IntersightIamIdp.md)
 
 [Remove-IntersightIamIdp](./Remove-IntersightIamIdp.md)
+
+[New-IntersightIamIdp](./New-IntersightIamIdp.md)
 

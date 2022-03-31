@@ -19,7 +19,7 @@ New-IntersightTaskIweScopedInventory [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TaskIweScopedInventory&amp;apos; resource.
+Create a &apos;TaskIweScopedInventory&apos; resource.
 
 ## PARAMETERS
 

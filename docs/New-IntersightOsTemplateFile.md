@@ -19,7 +19,7 @@ New-IntersightOsTemplateFile [-AdditionalProperties< System.Collections.Generic.
 ```
 
 ## DESCRIPTION
-Create a &apos;OsTemplateFile&apos; resource.
+Create a &amp;apos;OsTemplateFile&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightNetworkconfigPolicy [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;NetworkconfigPolicy&apos; resource.,
+Read a &amp;apos;NetworkconfigPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
+
 [Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
 
 [Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
-
-[New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
 

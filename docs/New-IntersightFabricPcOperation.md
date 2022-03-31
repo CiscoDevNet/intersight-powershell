@@ -19,7 +19,7 @@ New-IntersightFabricPcOperation [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricPcOperation&amp;apos; resource.
+Create a &apos;FabricPcOperation&apos; resource.
 
 ## PARAMETERS
 
@@ -190,9 +190,9 @@ PS C:\> New-IntersightFabricPcOperation
 
 ## RELATED LINKS
 
-[Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
-
 [Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)
+
+[Set-IntersightFabricPcOperation](./Set-IntersightFabricPcOperation.md)
 
 [Get-IntersightFabricPcOperation](./Get-IntersightFabricPcOperation.md)
 

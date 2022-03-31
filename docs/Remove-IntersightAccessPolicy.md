@@ -17,7 +17,7 @@ Remove-IntersightAccessPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;AccessPolicy&apos; resource.
+Delete a &amp;apos;AccessPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightAccessPolicy](./Set-IntersightAccessPolicy.md)
+
 [Get-IntersightAccessPolicy](./Get-IntersightAccessPolicy.md)
 
 [New-IntersightAccessPolicy](./New-IntersightAccessPolicy.md)
-
-[Set-IntersightAccessPolicy](./Set-IntersightAccessPolicy.md)
 

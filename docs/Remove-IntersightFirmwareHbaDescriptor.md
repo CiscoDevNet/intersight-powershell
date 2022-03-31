@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightFirmwareHbaDescriptor](./Set-IntersightFirmwareHbaDescriptor.md)
+
 [Get-IntersightFirmwareHbaDescriptor](./Get-IntersightFirmwareHbaDescriptor.md)
 
 [New-IntersightFirmwareHbaDescriptor](./New-IntersightFirmwareHbaDescriptor.md)
-
-[Set-IntersightFirmwareHbaDescriptor](./Set-IntersightFirmwareHbaDescriptor.md)
 

@@ -19,7 +19,7 @@ Set-IntersightStoragePureArray [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;StoragePureArray&apos; resource.
+Update a &amp;apos;StoragePureArray&amp;apos; resource.
 
 ## PARAMETERS
 

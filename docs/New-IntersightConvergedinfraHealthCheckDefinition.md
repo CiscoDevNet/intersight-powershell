@@ -19,7 +19,7 @@ New-IntersightConvergedinfraHealthCheckDefinition [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ConvergedinfraHealthCheckDefinition&amp;apos; resource.
+Create a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -232,10 +232,10 @@ PS C:\> New-IntersightConvergedinfraHealthCheckDefinition
 
 ## RELATED LINKS
 
+[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
+
 [Set-IntersightConvergedinfraHealthCheckDefinition](./Set-IntersightConvergedinfraHealthCheckDefinition.md)
 
 [Remove-IntersightConvergedinfraHealthCheckDefinition](./Remove-IntersightConvergedinfraHealthCheckDefinition.md)
-
-[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

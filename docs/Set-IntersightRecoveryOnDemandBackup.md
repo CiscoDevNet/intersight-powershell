@@ -19,7 +19,7 @@ Set-IntersightRecoveryOnDemandBackup [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
+Update a &apos;RecoveryOnDemandBackup&apos; resource.
 
 ## PARAMETERS
 

@@ -298,10 +298,10 @@ PS C:\> Set-IntersightPowerPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)
+
 [Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
 
 [New-IntersightPowerPolicy](./New-IntersightPowerPolicy.md)
-
-[Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

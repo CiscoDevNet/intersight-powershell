@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
-
 [New-IntersightHyperflexFeatureLimitExternal](./New-IntersightHyperflexFeatureLimitExternal.md)
+
+[Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
 
 [Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
 

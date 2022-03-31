@@ -17,7 +17,7 @@ Remove-IntersightHyperflexVmSnapshotInfo -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexVmSnapshotInfo&apos; resource.
+Delete a &amp;apos;HyperflexVmSnapshotInfo&amp;apos; resource.
 
 ## EXAMPLES
 

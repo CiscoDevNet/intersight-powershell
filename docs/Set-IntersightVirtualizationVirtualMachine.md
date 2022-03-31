@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachin
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVirtualMachine&apos; resource.
+Update a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionType
-Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &amp;apos;discovered&amp;apos; and not created from Intersight. No provisioning information is available.
+Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &apos;discovered&apos; and not created from Intersight. No provisioning information is available.
 
 ```yaml
 Type: VirtualizationVirtualMachine.ProvisionTypeEnum
@@ -450,11 +450,11 @@ PS C:\> Set-IntersightVirtualizationVirtualMachine
 
 ## RELATED LINKS
 
+[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
+
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
 [New-IntersightVirtualizationVirtualMachine](./New-IntersightVirtualizationVirtualMachine.md)
-
-[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
 
 [Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
 

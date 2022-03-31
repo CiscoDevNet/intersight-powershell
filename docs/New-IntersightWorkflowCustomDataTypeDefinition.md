@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A human-friendly description of this custom data type indicating it&amp;apos;s domain and usage.
+A human-friendly description of this custom data type indicating it&apos;s domain and usage.
 
 ```yaml
 Type: string

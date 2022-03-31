@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterReplicationNetworkPolicy [-AdditionalProperties< S
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterReplicationNetworkPolicy&apos; resource.
+Update a &amp;apos;HyperflexClusterReplicationNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

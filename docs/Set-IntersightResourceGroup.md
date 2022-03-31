@@ -207,11 +207,11 @@ PS C:\> Set-IntersightResourceGroup
 
 ## RELATED LINKS
 
+[Remove-IntersightResourceGroup](./Remove-IntersightResourceGroup.md)
+
 [New-IntersightResourceGroup](./New-IntersightResourceGroup.md)
 
 [Get-IntersightResourceGroup](./Get-IntersightResourceGroup.md)
-
-[Remove-IntersightResourceGroup](./Remove-IntersightResourceGroup.md)
 
 [Initialize-IntersightResourcePerTypeCombinedSelector](./Initialize-IntersightResourcePerTypeCombinedSelector.md)
 

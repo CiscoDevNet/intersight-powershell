@@ -19,7 +19,7 @@ New-IntersightHyperflexServerFirmwareVersionEntry [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexServerFirmwareVersionEntry&apos; resource.
+Create a &amp;apos;HyperflexServerFirmwareVersionEntry&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -192,11 +192,11 @@ PS C:\> New-IntersightHyperflexServerFirmwareVersionEntry
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
-
 [Set-IntersightHyperflexServerFirmwareVersionEntry](./Set-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
+
+[Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
 
 [Initialize-IntersightHyperflexAppSettingConstraint](./Initialize-IntersightHyperflexAppSettingConstraint.md)
 

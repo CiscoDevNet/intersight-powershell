@@ -162,8 +162,8 @@ PS C:\> Set-IntersightHyperflexHxdpVersion
 
 [Remove-IntersightHyperflexHxdpVersion](./Remove-IntersightHyperflexHxdpVersion.md)
 
-[New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
-
 [Get-IntersightHyperflexHxdpVersion](./Get-IntersightHyperflexHxdpVersion.md)
+
+[New-IntersightHyperflexHxdpVersion](./New-IntersightHyperflexHxdpVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightResourceReservation [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ResourceReservation&amp;apos; resource.
+Create a &apos;ResourceReservation&apos; resource.
 
 ## PARAMETERS
 

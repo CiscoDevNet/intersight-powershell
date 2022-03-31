@@ -17,7 +17,7 @@ Remove-IntersightKubernetesAciCniProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesAciCniProfile&amp;apos; resource.
+Delete a &apos;KubernetesAciCniProfile&apos; resource.
 
 ## EXAMPLES
 

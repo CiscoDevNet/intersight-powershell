@@ -19,7 +19,7 @@ New-IntersightCommHttpProxyPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &apos;CommHttpProxyPolicy&apos; resource.
+Create a &amp;apos;CommHttpProxyPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -253,9 +253,9 @@ PS C:\> New-IntersightCommHttpProxyPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightCommHttpProxyPolicy](./Set-IntersightCommHttpProxyPolicy.md)
-
 [Remove-IntersightCommHttpProxyPolicy](./Remove-IntersightCommHttpProxyPolicy.md)
+
+[Set-IntersightCommHttpProxyPolicy](./Set-IntersightCommHttpProxyPolicy.md)
 
 [Get-IntersightCommHttpProxyPolicy](./Get-IntersightCommHttpProxyPolicy.md)
 

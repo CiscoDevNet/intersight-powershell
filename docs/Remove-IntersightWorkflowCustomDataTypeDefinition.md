@@ -17,7 +17,7 @@ Remove-IntersightWorkflowCustomDataTypeDefinition -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowCustomDataTypeDefinition&amp;apos; resource.
+Delete a &apos;WorkflowCustomDataTypeDefinition&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
-
 [New-IntersightWorkflowCustomDataTypeDefinition](./New-IntersightWorkflowCustomDataTypeDefinition.md)
+
+[Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
 [Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
 

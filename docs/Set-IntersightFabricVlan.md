@@ -223,10 +223,10 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
 
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
+[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

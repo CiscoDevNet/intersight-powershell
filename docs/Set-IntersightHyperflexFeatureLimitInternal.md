@@ -164,9 +164,9 @@ PS C:\> Set-IntersightHyperflexFeatureLimitInternal
 
 [Remove-IntersightHyperflexFeatureLimitInternal](./Remove-IntersightHyperflexFeatureLimitInternal.md)
 
-[New-IntersightHyperflexFeatureLimitInternal](./New-IntersightHyperflexFeatureLimitInternal.md)
-
 [Get-IntersightHyperflexFeatureLimitInternal](./Get-IntersightHyperflexFeatureLimitInternal.md)
+
+[New-IntersightHyperflexFeatureLimitInternal](./New-IntersightHyperflexFeatureLimitInternal.md)
 
 [Initialize-IntersightHyperflexFeatureLimitEntry](./Initialize-IntersightHyperflexFeatureLimitEntry.md)
 

@@ -172,10 +172,10 @@ PS C:\> New-IntersightCapabilityServerModelsCapabilityDef
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
+
 [Set-IntersightCapabilityServerModelsCapabilityDef](./Set-IntersightCapabilityServerModelsCapabilityDef.md)
 
 [Remove-IntersightCapabilityServerModelsCapabilityDef](./Remove-IntersightCapabilityServerModelsCapabilityDef.md)
-
-[Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

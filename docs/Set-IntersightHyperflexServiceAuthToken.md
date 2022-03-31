@@ -211,9 +211,9 @@ PS C:\> Set-IntersightHyperflexServiceAuthToken
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
-
 [New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
+
+[Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
 
 [Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
 

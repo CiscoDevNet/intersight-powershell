@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightApplianceBackup](./Get-IntersightApplianceBackup.md)
-
 [New-IntersightApplianceBackup](./New-IntersightApplianceBackup.md)
+
+[Get-IntersightApplianceBackup](./Get-IntersightApplianceBackup.md)
 

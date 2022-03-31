@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwarePhysicalNetworkInterface [-AdditionalPropertie
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwarePhysicalNetworkInterface&apos; resource.
+Update a &amp;apos;VirtualizationVmwarePhysicalNetworkInterface&amp;apos; resource.
 
 ## PARAMETERS
 

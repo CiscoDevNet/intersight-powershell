@@ -19,7 +19,7 @@ Set-IntersightVnicFcQosPolicy [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicFcQosPolicy&apos; resource.
+Update a &amp;apos;VnicFcQosPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

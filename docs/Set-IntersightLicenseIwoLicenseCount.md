@@ -19,7 +19,7 @@ Set-IntersightLicenseIwoLicenseCount [-AccountLicenseData< LicenseAccountLicense
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseIwoLicenseCount&amp;apos; resource.
+Update a &apos;LicenseIwoLicenseCount&apos; resource.
 
 ## PARAMETERS
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
-
 [Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
 
 [Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
+
+[New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
 

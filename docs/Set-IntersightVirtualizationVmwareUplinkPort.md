@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareUplinkPort [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareUplinkPort&apos; resource.
+Update a &amp;apos;VirtualizationVmwareUplinkPort&amp;apos; resource.
 
 ## PARAMETERS
 

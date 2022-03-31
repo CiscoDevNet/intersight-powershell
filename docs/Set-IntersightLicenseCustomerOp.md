@@ -19,7 +19,7 @@ Set-IntersightLicenseCustomerOp [-AccountLicenseData< LicenseAccountLicenseDataR
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseCustomerOp&amp;apos; resource.
+Update a &apos;LicenseCustomerOp&apos; resource.
 
 ## PARAMETERS
 
@@ -42,7 +42,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveAdmin
-The license administrative state.\nSet this property to &apos;true&apos; to activate the license entitlements.
+The license administrative state.\nSet this property to &amp;apos;true&amp;apos; to activate the license entitlements.
 
 ```yaml
 Type: bool

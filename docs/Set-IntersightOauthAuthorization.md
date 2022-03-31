@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&apos;s behalf.
+The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&amp;apos;s behalf.
 
 ```yaml
 Type: string
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&amp;apos;s behalf.
+The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account&apos;s behalf.
 
 ```yaml
 Type: string

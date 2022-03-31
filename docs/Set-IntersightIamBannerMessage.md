@@ -19,7 +19,7 @@ Set-IntersightIamBannerMessage [-Account< IamAccountRelationship>][-AdditionalPr
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamBannerMessage&amp;apos; resource.
+Update a &apos;IamBannerMessage&apos; resource.
 
 ## PARAMETERS
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
+
 [Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
 
 [New-IntersightKubernetesCluster](./New-IntersightKubernetesCluster.md)
-
-[Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
 

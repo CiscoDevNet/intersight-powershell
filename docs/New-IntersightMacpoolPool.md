@@ -19,7 +19,7 @@ New-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Create a &apos;MacpoolPool&apos; resource.
+Create a &amp;apos;MacpoolPool&amp;apos; resource.
 
 ## PARAMETERS
 

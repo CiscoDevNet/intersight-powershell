@@ -17,7 +17,7 @@ Remove-IntersightRecoveryOnDemandBackup -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
+Delete a &apos;RecoveryOnDemandBackup&apos; resource.
 
 ## EXAMPLES
 

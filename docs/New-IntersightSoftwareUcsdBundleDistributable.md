@@ -472,9 +472,9 @@ PS C:\> New-IntersightSoftwareUcsdBundleDistributable
 
 [Get-IntersightSoftwareUcsdBundleDistributable](./Get-IntersightSoftwareUcsdBundleDistributable.md)
 
-[Set-IntersightSoftwareUcsdBundleDistributable](./Set-IntersightSoftwareUcsdBundleDistributable.md)
-
 [Remove-IntersightSoftwareUcsdBundleDistributable](./Remove-IntersightSoftwareUcsdBundleDistributable.md)
+
+[Set-IntersightSoftwareUcsdBundleDistributable](./Set-IntersightSoftwareUcsdBundleDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

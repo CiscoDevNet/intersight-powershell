@@ -17,7 +17,7 @@ Remove-IntersightVirtualizationVirtualMachine -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &apos;VirtualizationVirtualMachine&apos; resource.
+Delete a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightVirtualizationVirtualMachine](./Set-IntersightVirtualizationVirtualMachine.md)
+
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
 [New-IntersightVirtualizationVirtualMachine](./New-IntersightVirtualizationVirtualMachine.md)
-
-[Set-IntersightVirtualizationVirtualMachine](./Set-IntersightVirtualizationVirtualMachine.md)
 

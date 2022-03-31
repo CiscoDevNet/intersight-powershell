@@ -17,7 +17,7 @@ Remove-IntersightKubernetesAddonRepository -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesAddonRepository&amp;apos; resource.
+Delete a &apos;KubernetesAddonRepository&apos; resource.
 
 ## EXAMPLES
 

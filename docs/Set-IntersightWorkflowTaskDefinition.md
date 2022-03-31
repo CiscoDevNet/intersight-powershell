@@ -19,7 +19,7 @@ Set-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;WorkflowTaskDefinition&amp;apos; resource.
+Update a &apos;WorkflowTaskDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -323,11 +323,11 @@ PS C:\> Set-IntersightWorkflowTaskDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowTaskDefinition](./Remove-IntersightWorkflowTaskDefinition.md)
-
 [Get-IntersightWorkflowTaskDefinition](./Get-IntersightWorkflowTaskDefinition.md)
 
 [New-IntersightWorkflowTaskDefinition](./New-IntersightWorkflowTaskDefinition.md)
+
+[Remove-IntersightWorkflowTaskDefinition](./Remove-IntersightWorkflowTaskDefinition.md)
 
 [Initialize-IntersightWorkflowInternalProperties](./Initialize-IntersightWorkflowInternalProperties.md)
 

@@ -244,84 +244,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        // <summary>
+        /// <para type="description">"World Wide Name of the port channel."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Wwn {
+            get;
+            set;
+        }
 
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set FcPhysicalPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort")]
-    public class SetIntersightFcPhysicalPort:SetCmdletBase
-	{
-		public SetIntersightFcPhysicalPort()
-		{
-			ApiInstance = new FcApi(Config);
-            ModelObject = new FcPhysicalPort();
-            MethodName = "UpdateFcPhysicalPortWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        
-        
         
     }
     /// <summary>
@@ -363,6 +296,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string AdminState {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Breakout port member in the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long AggregatePortId {
             get;
             set;
         }
@@ -464,6 +407,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Name of the physical port of FC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Name {
             get;
             set;
         }
@@ -652,6 +605,85 @@ namespace Intersight.PowerShell
             set;
         }
 
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FcPhysicalPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort")]
+    public class SetIntersightFcPhysicalPort:SetCmdletBase
+	{
+		public SetIntersightFcPhysicalPort()
+		{
+			ApiInstance = new FcApi(Config);
+            ModelObject = new FcPhysicalPort();
+            MethodName = "UpdateFcPhysicalPortWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        
+        
         
     }
 }

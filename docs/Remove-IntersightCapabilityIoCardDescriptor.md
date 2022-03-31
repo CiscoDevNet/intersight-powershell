@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightCapabilityIoCardDescriptor](./Set-IntersightCapabilityIoCardDescriptor.md)
 
-[New-IntersightCapabilityIoCardDescriptor](./New-IntersightCapabilityIoCardDescriptor.md)
-
 [Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
+
+[New-IntersightCapabilityIoCardDescriptor](./New-IntersightCapabilityIoCardDescriptor.md)
 

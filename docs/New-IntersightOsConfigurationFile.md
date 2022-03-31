@@ -19,7 +19,7 @@ New-IntersightOsConfigurationFile [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &apos;OsConfigurationFile&apos; resource.
+Create a &amp;apos;OsConfigurationFile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,11 +223,11 @@ PS C:\> New-IntersightOsConfigurationFile
 
 ## RELATED LINKS
 
-[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
-
 [Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
 
 [Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
+
+[Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
 
 [Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)
 

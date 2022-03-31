@@ -19,7 +19,7 @@ Set-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;UuidpoolPool&amp;apos; resource.
+Update a &apos;UuidpoolPool&apos; resource.
 
 ## PARAMETERS
 

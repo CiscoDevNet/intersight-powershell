@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-Whether this is a Terraform environment variable. Valid values are \&quot;terraform\&quot; or \&quot;env\&quot;.
+Whether this is a Terraform environment variable. Valid values are \&amp;quot;terraform\&amp;quot; or \&amp;quot;env\&amp;quot;.
 
 ```yaml
 Type: string
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: CloudTfcWorkspaceVariables.ObjectTypeEnum

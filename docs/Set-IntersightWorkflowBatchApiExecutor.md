@@ -19,7 +19,7 @@ Set-IntersightWorkflowBatchApiExecutor [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowBatchApiExecutor&apos; resource.
+Update a &amp;apos;WorkflowBatchApiExecutor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -308,11 +308,11 @@ PS C:\> Set-IntersightWorkflowBatchApiExecutor
 
 ## RELATED LINKS
 
+[Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
+
 [Get-IntersightWorkflowBatchApiExecutor](./Get-IntersightWorkflowBatchApiExecutor.md)
 
 [New-IntersightWorkflowBatchApiExecutor](./New-IntersightWorkflowBatchApiExecutor.md)
-
-[Remove-IntersightWorkflowBatchApiExecutor](./Remove-IntersightWorkflowBatchApiExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

@@ -19,7 +19,7 @@ New-IntersightIamEndPointUserPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;IamEndPointUserPolicy&apos; resource.
+Create a &amp;apos;IamEndPointUserPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

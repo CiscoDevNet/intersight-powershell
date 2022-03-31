@@ -238,10 +238,10 @@ PS C:\> New-IntersightKubernetesVirtualMachineInstanceType
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesVirtualMachineInstanceType](./Get-IntersightKubernetesVirtualMachineInstanceType.md)
-
 [Set-IntersightKubernetesVirtualMachineInstanceType](./Set-IntersightKubernetesVirtualMachineInstanceType.md)
 
 [Remove-IntersightKubernetesVirtualMachineInstanceType](./Remove-IntersightKubernetesVirtualMachineInstanceType.md)
+
+[Get-IntersightKubernetesVirtualMachineInstanceType](./Get-IntersightKubernetesVirtualMachineInstanceType.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

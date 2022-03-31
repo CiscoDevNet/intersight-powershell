@@ -17,7 +17,7 @@ Remove-IntersightOsConfigurationFile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;OsConfigurationFile&apos; resource.
+Delete a &amp;apos;OsConfigurationFile&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
+
 [Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
 
 [New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
-
-[Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
 

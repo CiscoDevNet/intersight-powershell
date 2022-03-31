@@ -25,7 +25,7 @@ Get-IntersightSolPolicy [-Count <Boolean>] [-InlineCount <String>] [-Select <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;SolPolicy&apos; resource.,
+Read a &amp;apos;SolPolicy&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSolPolicy](./New-IntersightSolPolicy.md)
-
 [Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
 
 [Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
+
+[New-IntersightSolPolicy](./New-IntersightSolPolicy.md)
 

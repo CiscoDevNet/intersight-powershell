@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterBackupPolicyDeployment -Moid <String> [<CommonP
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexClusterBackupPolicyDeployment&apos; resource.
+Delete a &amp;apos;HyperflexClusterBackupPolicyDeployment&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterBackupPolicyDeployment](./Set-IntersightHyperflexClusterBackupPolicyDeployment.md)
-
 [Get-IntersightHyperflexClusterBackupPolicyDeployment](./Get-IntersightHyperflexClusterBackupPolicyDeployment.md)
 
 [New-IntersightHyperflexClusterBackupPolicyDeployment](./New-IntersightHyperflexClusterBackupPolicyDeployment.md)
+
+[Set-IntersightHyperflexClusterBackupPolicyDeployment](./Set-IntersightHyperflexClusterBackupPolicyDeployment.md)
 

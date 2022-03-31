@@ -19,7 +19,7 @@ Set-IntersightComputeBladeIdentity [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeBladeIdentity&apos; resource.
+Update a &amp;apos;ComputeBladeIdentity&amp;apos; resource.
 
 ## PARAMETERS
 

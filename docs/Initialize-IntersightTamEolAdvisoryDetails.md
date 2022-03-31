@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: TamEolAdvisoryDetails.ObjectTypeEnum
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Release
-The name of the impacted release this advisory milestone intends to address, e.g. \&quot;3.5 (2x)\&quot;.
+The name of the impacted release this advisory milestone intends to address, e.g. \&amp;quot;3.5 (2x)\&amp;quot;.
 
 ```yaml
 Type: string

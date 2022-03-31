@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password of the Intersight Appliance&apos;s OS diagnostic user account.
+Password of the Intersight Appliance&amp;apos;s OS diagnostic user account.
 
 ```yaml
 Type: string

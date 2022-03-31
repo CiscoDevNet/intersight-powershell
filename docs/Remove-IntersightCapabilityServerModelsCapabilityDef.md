@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityServerModelsCapabilityDef](./Set-IntersightCapabilityServerModelsCapabilityDef.md)
+[Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
 
 [New-IntersightCapabilityServerModelsCapabilityDef](./New-IntersightCapabilityServerModelsCapabilityDef.md)
 
-[Get-IntersightCapabilityServerModelsCapabilityDef](./Get-IntersightCapabilityServerModelsCapabilityDef.md)
+[Set-IntersightCapabilityServerModelsCapabilityDef](./Set-IntersightCapabilityServerModelsCapabilityDef.md)
 

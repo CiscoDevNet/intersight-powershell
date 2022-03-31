@@ -25,7 +25,7 @@ Get-IntersightVirtualizationVirtualNetwork [-Count <Boolean>] [-InlineCount <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationVirtualNetwork&apos; resource.,
+Read a &amp;apos;VirtualizationVirtualNetwork&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
+
 [Set-IntersightVirtualizationVirtualNetwork](./Set-IntersightVirtualizationVirtualNetwork.md)
 
 [Remove-IntersightVirtualizationVirtualNetwork](./Remove-IntersightVirtualizationVirtualNetwork.md)
-
-[New-IntersightVirtualizationVirtualNetwork](./New-IntersightVirtualizationVirtualNetwork.md)
 

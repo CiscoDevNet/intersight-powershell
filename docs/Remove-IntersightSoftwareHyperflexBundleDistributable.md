@@ -17,7 +17,7 @@ Remove-IntersightSoftwareHyperflexBundleDistributable -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareHyperflexBundleDistributable&amp;apos; resource.
+Delete a &apos;SoftwareHyperflexBundleDistributable&apos; resource.
 
 ## EXAMPLES
 

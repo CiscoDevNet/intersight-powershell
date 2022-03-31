@@ -19,7 +19,7 @@ New-IntersightWorkflowRollbackWorkflow [-Action< WorkflowRollbackWorkflow.Action
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowRollbackWorkflow&apos; resource.
+Create a &amp;apos;WorkflowRollbackWorkflow&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -192,11 +192,11 @@ PS C:\> New-IntersightWorkflowRollbackWorkflow
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowRollbackWorkflow](./Set-IntersightWorkflowRollbackWorkflow.md)
+[Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
 
 [Remove-IntersightWorkflowRollbackWorkflow](./Remove-IntersightWorkflowRollbackWorkflow.md)
 
-[Get-IntersightWorkflowRollbackWorkflow](./Get-IntersightWorkflowRollbackWorkflow.md)
+[Set-IntersightWorkflowRollbackWorkflow](./Set-IntersightWorkflowRollbackWorkflow.md)
 
 [Initialize-IntersightWorkflowRollbackWorkflowTask](./Initialize-IntersightWorkflowRollbackWorkflowTask.md)
 

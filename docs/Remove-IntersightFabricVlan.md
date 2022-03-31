@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+[Set-IntersightFabricVlan](./Set-IntersightFabricVlan.md)
 
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
-[Set-IntersightFabricVlan](./Set-IntersightFabricVlan.md)
+[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
 

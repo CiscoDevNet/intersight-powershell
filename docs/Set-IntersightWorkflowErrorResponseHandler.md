@@ -19,7 +19,7 @@ Set-IntersightWorkflowErrorResponseHandler [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &apos;WorkflowErrorResponseHandler&apos; resource.
+Update a &amp;apos;WorkflowErrorResponseHandler&amp;apos; resource.
 
 ## PARAMETERS
 

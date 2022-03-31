@@ -19,7 +19,7 @@ New-IntersightOrganizationOrganization [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Create a &apos;OrganizationOrganization&apos; resource.
+Create a &amp;apos;OrganizationOrganization&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -175,10 +175,10 @@ PS C:\> New-IntersightOrganizationOrganization
 
 ## RELATED LINKS
 
+[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
+
 [Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
 
 [Remove-IntersightOrganizationOrganization](./Remove-IntersightOrganizationOrganization.md)
-
-[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

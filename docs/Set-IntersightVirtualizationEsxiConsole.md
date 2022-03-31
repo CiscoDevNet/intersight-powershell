@@ -19,7 +19,7 @@ Set-IntersightVirtualizationEsxiConsole [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationEsxiConsole&apos; resource.
+Update a &amp;apos;VirtualizationEsxiConsole&amp;apos; resource.
 
 ## PARAMETERS
 

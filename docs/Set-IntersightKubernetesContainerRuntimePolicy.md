@@ -19,7 +19,7 @@ Set-IntersightKubernetesContainerRuntimePolicy [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.
+Update a &apos;KubernetesContainerRuntimePolicy&apos; resource.
 
 ## PARAMETERS
 

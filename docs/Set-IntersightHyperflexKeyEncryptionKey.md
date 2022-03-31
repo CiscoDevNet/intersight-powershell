@@ -19,7 +19,7 @@ Set-IntersightHyperflexKeyEncryptionKey [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexKeyEncryptionKey&apos; resource.
+Update a &amp;apos;HyperflexKeyEncryptionKey&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -283,10 +283,10 @@ PS C:\> Set-IntersightHyperflexKeyEncryptionKey
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexKeyEncryptionKey](./Remove-IntersightHyperflexKeyEncryptionKey.md)
+
 [New-IntersightHyperflexKeyEncryptionKey](./New-IntersightHyperflexKeyEncryptionKey.md)
 
 [Get-IntersightHyperflexKeyEncryptionKey](./Get-IntersightHyperflexKeyEncryptionKey.md)
-
-[Remove-IntersightHyperflexKeyEncryptionKey](./Remove-IntersightHyperflexKeyEncryptionKey.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -19,7 +19,7 @@ New-IntersightIamLdapGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamLdapGroup&amp;apos; resource.
+Create a &apos;IamLdapGroup&apos; resource.
 
 ## PARAMETERS
 

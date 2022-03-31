@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareDistributable](./New-IntersightFirmwareDistributable.md)
+[Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
 
 [Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
 
-[Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
+[New-IntersightFirmwareDistributable](./New-IntersightFirmwareDistributable.md)
 

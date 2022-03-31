@@ -191,11 +191,11 @@ PS C:\> Set-IntersightNotificationAccountSubscription
 
 ## RELATED LINKS
 
-[Remove-IntersightNotificationAccountSubscription](./Remove-IntersightNotificationAccountSubscription.md)
-
 [Get-IntersightNotificationAccountSubscription](./Get-IntersightNotificationAccountSubscription.md)
 
 [New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
+
+[Remove-IntersightNotificationAccountSubscription](./Remove-IntersightNotificationAccountSubscription.md)
 
 [Initialize-IntersightNotificationAction](./Initialize-IntersightNotificationAction.md)
 

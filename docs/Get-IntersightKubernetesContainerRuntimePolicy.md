@@ -25,7 +25,7 @@ Get-IntersightKubernetesContainerRuntimePolicy [-Count <Boolean>] [-InlineCount 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KubernetesContainerRuntimePolicy&amp;apos; resource.,
+Read a &apos;KubernetesContainerRuntimePolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
-
 [Remove-IntersightKubernetesContainerRuntimePolicy](./Remove-IntersightKubernetesContainerRuntimePolicy.md)
+
+[Set-IntersightKubernetesContainerRuntimePolicy](./Set-IntersightKubernetesContainerRuntimePolicy.md)
 
 [New-IntersightKubernetesContainerRuntimePolicy](./New-IntersightKubernetesContainerRuntimePolicy.md)
 

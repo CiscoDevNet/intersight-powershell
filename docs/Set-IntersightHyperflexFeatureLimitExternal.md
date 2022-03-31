@@ -162,9 +162,9 @@ PS C:\> Set-IntersightHyperflexFeatureLimitExternal
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
-
 [New-IntersightHyperflexFeatureLimitExternal](./New-IntersightHyperflexFeatureLimitExternal.md)
+
+[Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
 
 [Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
 

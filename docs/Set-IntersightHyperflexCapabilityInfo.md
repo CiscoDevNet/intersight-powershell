@@ -19,7 +19,7 @@ Set-IntersightHyperflexCapabilityInfo [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexCapabilityInfo&apos; resource.
+Update a &amp;apos;HyperflexCapabilityInfo&amp;apos; resource.
 
 ## PARAMETERS
 
