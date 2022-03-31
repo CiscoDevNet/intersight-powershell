@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightWorkflowErrorResponseHandler](./Set-IntersightWorkflowErrorResponseHandler.md)
 
-[Get-IntersightWorkflowErrorResponseHandler](./Get-IntersightWorkflowErrorResponseHandler.md)
-
 [New-IntersightWorkflowErrorResponseHandler](./New-IntersightWorkflowErrorResponseHandler.md)
+
+[Get-IntersightWorkflowErrorResponseHandler](./Get-IntersightWorkflowErrorResponseHandler.md)
 

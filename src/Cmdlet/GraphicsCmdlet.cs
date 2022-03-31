@@ -306,6 +306,7 @@ namespace Intersight.PowerShell
         
         
         
+        
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -332,6 +333,17 @@ namespace Intersight.PowerShell
         
         
         
+        // <summary>
+        /// <para type="description">"A reference to a pciDevice resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PciDeviceRelationship PciDevice {
+            get;
+            set;
+        }
+        
+        
         
         
         // <summary>
@@ -350,6 +362,8 @@ namespace Intersight.PowerShell
         
         
         
+        
+        
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -359,6 +373,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
         
         
     }
@@ -496,6 +511,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"The identifier of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string GpuId {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -557,6 +582,7 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
         // <summary>
         /// <para type="description">"The current operational state of the graphics card."</para>
         /// </summary>
@@ -594,6 +620,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string PciAddressList {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a pciDevice resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public PciDeviceRelationship PciDevice {
             get;
             set;
         }
@@ -680,6 +716,26 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"The sub device id of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long SubDeviceId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The sub vendor id of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long SubVendorId {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"This field identifies the vendor of the given component."</para>
@@ -687,6 +743,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string Vendor {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The vendor id of the graphics processor unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long VendorId {
             get;
             set;
         }
@@ -704,7 +770,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new GraphicsApi(Config);
             ModelObject = new GraphicsController();
-            MethodName = "UpdateGraphicsControllerWithHttpInfo";
+            MethodName = "PatchGraphicsControllerWithHttpInfo";
 		}
         
         

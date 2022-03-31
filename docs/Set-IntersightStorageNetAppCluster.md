@@ -19,7 +19,7 @@ Set-IntersightStorageNetAppCluster [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageNetAppCluster&apos; resource.
+Update a &amp;apos;StorageNetAppCluster&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -25,7 +25,7 @@ Get-IntersightStorageStoragePolicy [-Count <Boolean>] [-InlineCount <String>] [-
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;StorageStoragePolicy&amp;apos; resource.,
+Read a &apos;StorageStoragePolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
+
 [Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
 
 [Set-IntersightStorageStoragePolicy](./Set-IntersightStorageStoragePolicy.md)
-
-[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
 

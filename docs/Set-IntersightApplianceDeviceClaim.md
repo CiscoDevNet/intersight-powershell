@@ -19,7 +19,7 @@ Set-IntersightApplianceDeviceClaim [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &apos;ApplianceDeviceClaim&apos; resource.
+Update a &amp;apos;ApplianceDeviceClaim&amp;apos; resource.
 
 ## PARAMETERS
 

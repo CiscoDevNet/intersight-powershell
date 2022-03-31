@@ -25,7 +25,7 @@ Get-IntersightIamLdapProvider [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamLdapProvider&apos; resource.,
+Read a &amp;apos;IamLdapProvider&amp;apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
-
 [Set-IntersightIamLdapProvider](./Set-IntersightIamLdapProvider.md)
 
 [Remove-IntersightIamLdapProvider](./Remove-IntersightIamLdapProvider.md)
+
+[New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
 

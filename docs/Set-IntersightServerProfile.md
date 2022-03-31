@@ -457,11 +457,11 @@ PS C:\> Set-IntersightServerProfile
 
 ## RELATED LINKS
 
-[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
+[Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
 
 [New-IntersightServerProfile](./New-IntersightServerProfile.md)
 
-[Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
+[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

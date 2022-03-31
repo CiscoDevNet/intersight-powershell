@@ -19,7 +19,7 @@ Set-IntersightFabricLinkControlPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricLinkControlPolicy&apos; resource.
+Update a &amp;apos;FabricLinkControlPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -194,9 +194,9 @@ PS C:\> Set-IntersightFabricLinkControlPolicy
 
 [Remove-IntersightFabricLinkControlPolicy](./Remove-IntersightFabricLinkControlPolicy.md)
 
-[Get-IntersightFabricLinkControlPolicy](./Get-IntersightFabricLinkControlPolicy.md)
-
 [New-IntersightFabricLinkControlPolicy](./New-IntersightFabricLinkControlPolicy.md)
+
+[Get-IntersightFabricLinkControlPolicy](./Get-IntersightFabricLinkControlPolicy.md)
 
 [Initialize-IntersightFabricUdldSettings](./Initialize-IntersightFabricUdldSettings.md)
 

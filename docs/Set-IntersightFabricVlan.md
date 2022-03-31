@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsNative
-Used to define whether this VLAN is to be classified as &apos;native&apos; for traffic in this FI.
+Used to define whether this VLAN is to be classified as &amp;apos;native&amp;apos; for traffic in this FI.
 
 ```yaml
 Type: bool
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &amp;apos;name&amp;apos; used to identify this VLAN.
+The &apos;name&apos; used to identify this VLAN.
 
 ```yaml
 Type: string
@@ -223,10 +223,10 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
 
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
+[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

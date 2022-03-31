@@ -19,7 +19,7 @@ Set-IntersightVirtualizationIweDatacenter [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationIweDatacenter&amp;apos; resource.
+Update a &apos;VirtualizationIweDatacenter&apos; resource.
 
 ## PARAMETERS
 

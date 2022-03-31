@@ -19,7 +19,7 @@ Set-IntersightTechsupportmanagementCollectionControlPolicy [-AdditionalPropertie
 ```
 
 ## DESCRIPTION
-Update a &apos;TechsupportmanagementCollectionControlPolicy&apos; resource.
+Update a &amp;apos;TechsupportmanagementCollectionControlPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

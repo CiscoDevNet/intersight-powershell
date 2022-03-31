@@ -19,7 +19,7 @@ Set-IntersightSyslogPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;SyslogPolicy&apos; resource.
+Update a &amp;apos;SyslogPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -233,11 +233,11 @@ PS C:\> Set-IntersightSyslogPolicy
 
 ## RELATED LINKS
 
+[Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
+
 [New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
 
 [Get-IntersightSyslogPolicy](./Get-IntersightSyslogPolicy.md)
-
-[Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
 
 [Initialize-IntersightSyslogLocalClientBase](./Initialize-IntersightSyslogLocalClientBase.md)
 

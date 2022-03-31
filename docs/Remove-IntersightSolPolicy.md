@@ -17,7 +17,7 @@ Remove-IntersightSolPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SolPolicy&amp;apos; resource.
+Delete a &apos;SolPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
-
 [New-IntersightSolPolicy](./New-IntersightSolPolicy.md)
+
+[Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
 [Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
 

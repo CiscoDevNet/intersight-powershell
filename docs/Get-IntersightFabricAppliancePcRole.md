@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricAppliancePcRole](./Set-IntersightFabricAppliancePcRole.md)
+[New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
 
 [Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
 
-[New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
+[Set-IntersightFabricAppliancePcRole](./Set-IntersightFabricAppliancePcRole.md)
 

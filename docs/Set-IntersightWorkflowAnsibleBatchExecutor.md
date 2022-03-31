@@ -290,11 +290,11 @@ PS C:\> Set-IntersightWorkflowAnsibleBatchExecutor
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowAnsibleBatchExecutor](./Remove-IntersightWorkflowAnsibleBatchExecutor.md)
+[New-IntersightWorkflowAnsibleBatchExecutor](./New-IntersightWorkflowAnsibleBatchExecutor.md)
 
 [Get-IntersightWorkflowAnsibleBatchExecutor](./Get-IntersightWorkflowAnsibleBatchExecutor.md)
 
-[New-IntersightWorkflowAnsibleBatchExecutor](./New-IntersightWorkflowAnsibleBatchExecutor.md)
+[Remove-IntersightWorkflowAnsibleBatchExecutor](./Remove-IntersightWorkflowAnsibleBatchExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

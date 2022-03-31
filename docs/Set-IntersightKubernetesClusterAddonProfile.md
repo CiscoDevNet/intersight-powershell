@@ -19,7 +19,7 @@ Set-IntersightKubernetesClusterAddonProfile [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &apos;KubernetesClusterAddonProfile&apos; resource.
+Update a &amp;apos;KubernetesClusterAddonProfile&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -195,11 +195,11 @@ PS C:\> Set-IntersightKubernetesClusterAddonProfile
 
 ## RELATED LINKS
 
+[Remove-IntersightKubernetesClusterAddonProfile](./Remove-IntersightKubernetesClusterAddonProfile.md)
+
 [Get-IntersightKubernetesClusterAddonProfile](./Get-IntersightKubernetesClusterAddonProfile.md)
 
 [New-IntersightKubernetesClusterAddonProfile](./New-IntersightKubernetesClusterAddonProfile.md)
-
-[Remove-IntersightKubernetesClusterAddonProfile](./Remove-IntersightKubernetesClusterAddonProfile.md)
 
 [Initialize-IntersightKubernetesAddon](./Initialize-IntersightKubernetesAddon.md)
 

@@ -19,7 +19,7 @@ New-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Create a &apos;ResourceGroup&apos; resource.
+Create a &amp;apos;ResourceGroup&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -209,9 +209,9 @@ PS C:\> New-IntersightResourceGroup
 
 [Get-IntersightResourceGroup](./Get-IntersightResourceGroup.md)
 
-[Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
-
 [Remove-IntersightResourceGroup](./Remove-IntersightResourceGroup.md)
+
+[Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
 
 [Initialize-IntersightResourcePerTypeCombinedSelector](./Initialize-IntersightResourcePerTypeCombinedSelector.md)
 

@@ -19,7 +19,7 @@ New-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesClusterProfile&amp;apos; resource.
+Create a &apos;KubernetesClusterProfile&apos; resource.
 
 ## PARAMETERS
 

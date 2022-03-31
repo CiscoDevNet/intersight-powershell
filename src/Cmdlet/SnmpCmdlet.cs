@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new SnmpApi(Config);
             ModelObject = new SnmpPolicy();
-            MethodName = "PatchSnmpPolicyWithHttpInfo";
+            MethodName = "UpdateSnmpPolicyWithHttpInfo";
 		}
         
         // <summary>

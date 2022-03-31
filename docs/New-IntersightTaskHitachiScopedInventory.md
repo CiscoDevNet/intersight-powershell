@@ -19,7 +19,7 @@ New-IntersightTaskHitachiScopedInventory [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &apos;TaskHitachiScopedInventory&apos; resource.
+Create a &amp;apos;TaskHitachiScopedInventory&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightIamQualifier [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamQualifier&amp;apos; resource.
+Create a &apos;IamQualifier&apos; resource.
 
 ## PARAMETERS
 
@@ -160,10 +160,10 @@ PS C:\> New-IntersightIamQualifier
 
 ## RELATED LINKS
 
-[Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
+[Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
 
 [Set-IntersightIamQualifier](./Set-IntersightIamQualifier.md)
 
-[Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
+[Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

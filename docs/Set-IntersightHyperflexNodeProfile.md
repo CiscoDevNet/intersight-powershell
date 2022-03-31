@@ -19,7 +19,7 @@ Set-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
+Update a &apos;HyperflexNodeProfile&apos; resource.
 
 ## PARAMETERS
 

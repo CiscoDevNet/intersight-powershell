@@ -17,7 +17,7 @@ Remove-IntersightServerProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ServerProfile&amp;apos; resource.
+Delete a &apos;ServerProfile&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
+[Set-IntersightServerProfile](./Set-IntersightServerProfile.md)
 
 [New-IntersightServerProfile](./New-IntersightServerProfile.md)
 
-[Set-IntersightServerProfile](./Set-IntersightServerProfile.md)
+[Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
 

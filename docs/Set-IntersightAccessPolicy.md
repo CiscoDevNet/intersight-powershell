@@ -19,7 +19,7 @@ Set-IntersightAccessPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;AccessPolicy&amp;apos; resource.
+Update a &apos;AccessPolicy&apos; resource.
 
 ## PARAMETERS
 

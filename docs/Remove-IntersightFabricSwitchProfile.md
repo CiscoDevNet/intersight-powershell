@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
+[Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
 
 [New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
 
-[Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
+[Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 

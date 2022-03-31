@@ -19,7 +19,7 @@ New-IntersightSoftwareHclMeta [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwareHclMeta&amp;apos; resource.
+Create a &apos;SoftwareHclMeta&apos; resource.
 
 ## PARAMETERS
 
@@ -485,11 +485,11 @@ PS C:\> New-IntersightSoftwareHclMeta
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
-
 [Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
 
 [Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
+
+[Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
+[Set-IntersightDeviceconnectorPolicy](./Set-IntersightDeviceconnectorPolicy.md)
 
 [Get-IntersightDeviceconnectorPolicy](./Get-IntersightDeviceconnectorPolicy.md)
 
-[Set-IntersightDeviceconnectorPolicy](./Set-IntersightDeviceconnectorPolicy.md)
+[New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
 

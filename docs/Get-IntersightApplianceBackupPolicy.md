@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightApplianceBackupPolicy](./New-IntersightApplianceBackupPolicy.md)
-
 [Set-IntersightApplianceBackupPolicy](./Set-IntersightApplianceBackupPolicy.md)
+
+[New-IntersightApplianceBackupPolicy](./New-IntersightApplianceBackupPolicy.md)
 

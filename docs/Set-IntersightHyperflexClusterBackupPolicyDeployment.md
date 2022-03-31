@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterBackupPolicyDeployment [-AdditionalProperties< Sys
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexClusterBackupPolicyDeployment&apos; resource.
+Update a &amp;apos;HyperflexClusterBackupPolicyDeployment&amp;apos; resource.
 
 ## PARAMETERS
 

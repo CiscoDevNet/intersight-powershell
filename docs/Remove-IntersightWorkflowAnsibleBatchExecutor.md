@@ -17,7 +17,7 @@ Remove-IntersightWorkflowAnsibleBatchExecutor -Moid <String> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Delete a &apos;WorkflowAnsibleBatchExecutor&apos; resource.
+Delete a &amp;apos;WorkflowAnsibleBatchExecutor&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowAnsibleBatchExecutor](./Set-IntersightWorkflowAnsibleBatchExecutor.md)
+[New-IntersightWorkflowAnsibleBatchExecutor](./New-IntersightWorkflowAnsibleBatchExecutor.md)
 
 [Get-IntersightWorkflowAnsibleBatchExecutor](./Get-IntersightWorkflowAnsibleBatchExecutor.md)
 
-[New-IntersightWorkflowAnsibleBatchExecutor](./New-IntersightWorkflowAnsibleBatchExecutor.md)
+[Set-IntersightWorkflowAnsibleBatchExecutor](./Set-IntersightWorkflowAnsibleBatchExecutor.md)
 

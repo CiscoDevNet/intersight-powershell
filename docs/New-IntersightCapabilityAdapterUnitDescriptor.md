@@ -19,7 +19,7 @@ New-IntersightCapabilityAdapterUnitDescriptor [-AdapterGeneration< CapabilityAda
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.
+Create a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -417,11 +417,11 @@ PS C:\> New-IntersightCapabilityAdapterUnitDescriptor
 
 ## RELATED LINKS
 
-[Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
-
 [Set-IntersightCapabilityAdapterUnitDescriptor](./Set-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+
+[Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Initialize-IntersightCapabilityFeatureConfig](./Initialize-IntersightCapabilityFeatureConfig.md)
 

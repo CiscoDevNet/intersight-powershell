@@ -19,7 +19,7 @@ Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictio
 ```
 
 ## DESCRIPTION
-Update a &apos;VnicFcIf&apos; resource.
+Update a &amp;apos;VnicFcIf&amp;apos; resource.
 
 ## PARAMETERS
 

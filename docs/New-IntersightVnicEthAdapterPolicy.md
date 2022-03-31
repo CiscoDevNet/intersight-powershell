@@ -19,7 +19,7 @@ New-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
+Create a &apos;VnicEthAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 

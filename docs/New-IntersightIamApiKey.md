@@ -19,7 +19,7 @@ New-IntersightIamApiKey [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &apos;IamApiKey&apos; resource.
+Create a &amp;apos;IamApiKey&amp;apos; resource.
 
 ## PARAMETERS
 

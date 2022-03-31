@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
-
 [New-IntersightFcpoolPool](./New-IntersightFcpoolPool.md)
+
+[Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
 
 [Set-IntersightFcpoolPool](./Set-IntersightFcpoolPool.md)
 

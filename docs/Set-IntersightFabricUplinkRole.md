@@ -19,7 +19,7 @@ Set-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricUplinkRole&apos; resource.
+Update a &amp;apos;FabricUplinkRole&amp;apos; resource.
 
 ## PARAMETERS
 

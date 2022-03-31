@@ -19,7 +19,7 @@ New-IntersightCapabilityServerSchemaDescriptor [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityServerSchemaDescriptor&apos; resource.
+Create a &amp;apos;CapabilityServerSchemaDescriptor&amp;apos; resource.
 
 ## PARAMETERS
 

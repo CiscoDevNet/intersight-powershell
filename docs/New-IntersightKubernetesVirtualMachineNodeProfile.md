@@ -19,7 +19,7 @@ New-IntersightKubernetesVirtualMachineNodeProfile [-Action< string>][-ActionPara
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesVirtualMachineNodeProfile&apos; resource.
+Create a &amp;apos;KubernetesVirtualMachineNodeProfile&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -17,7 +17,7 @@ Remove-IntersightCommHttpProxyPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;CommHttpProxyPolicy&amp;apos; resource.
+Delete a &apos;CommHttpProxyPolicy&apos; resource.
 
 ## EXAMPLES
 

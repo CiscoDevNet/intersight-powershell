@@ -19,7 +19,7 @@ Set-IntersightResourceReservation [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ResourceReservation&amp;apos; resource.
+Update a &apos;ResourceReservation&apos; resource.
 
 ## PARAMETERS
 

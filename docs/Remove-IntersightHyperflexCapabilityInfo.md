@@ -17,7 +17,7 @@ Remove-IntersightHyperflexCapabilityInfo -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexCapabilityInfo&amp;apos; resource.
+Delete a &apos;HyperflexCapabilityInfo&apos; resource.
 
 ## EXAMPLES
 

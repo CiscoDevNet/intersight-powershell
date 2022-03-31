@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -Outcomes
-All the possible outcomes of this API are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &amp;apos;true&amp;apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
+All the possible outcomes of this API are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &apos;true&apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetType
-If the web API is to be executed in a remote device connected to the\nIntersight through device connector, &amp;apos;Endpoint&amp;apos; is expected as the value\nwhereas if the API is an Intersight API, &amp;apos;Local&amp;apos; is expected as the value.
+If the web API is to be executed in a remote device connected to the\nIntersight through device connector, &apos;Endpoint&apos; is expected as the value\nwhereas if the API is an Intersight API, &apos;Local&apos; is expected as the value.
 
 ```yaml
 Type: string

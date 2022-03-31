@@ -379,7 +379,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ForecastApi(Config);
             ModelObject = new ForecastInstance();
-            MethodName = "PatchForecastInstanceWithHttpInfo";
+            MethodName = "UpdateForecastInstanceWithHttpInfo";
 		}
         
         

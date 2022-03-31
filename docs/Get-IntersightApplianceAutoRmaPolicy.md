@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightApplianceAutoRmaPolicy](./New-IntersightApplianceAutoRmaPolicy.md)
-
 [Set-IntersightApplianceAutoRmaPolicy](./Set-IntersightApplianceAutoRmaPolicy.md)
+
+[New-IntersightApplianceAutoRmaPolicy](./New-IntersightApplianceAutoRmaPolicy.md)
 

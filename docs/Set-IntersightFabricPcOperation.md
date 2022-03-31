@@ -190,10 +190,10 @@ PS C:\> Set-IntersightFabricPcOperation
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)
-
 [Get-IntersightFabricPcOperation](./Get-IntersightFabricPcOperation.md)
 
 [New-IntersightFabricPcOperation](./New-IntersightFabricPcOperation.md)
+
+[Remove-IntersightFabricPcOperation](./Remove-IntersightFabricPcOperation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

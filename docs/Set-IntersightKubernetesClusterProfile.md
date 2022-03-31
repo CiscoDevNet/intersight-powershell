@@ -19,7 +19,7 @@ Set-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesClusterProfile&amp;apos; resource.
+Update a &apos;KubernetesClusterProfile&apos; resource.
 
 ## PARAMETERS
 

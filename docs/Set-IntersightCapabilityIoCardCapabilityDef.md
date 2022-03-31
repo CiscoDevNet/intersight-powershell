@@ -19,7 +19,7 @@ Set-IntersightCapabilityIoCardCapabilityDef [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityIoCardCapabilityDef&amp;apos; resource.
+Update a &apos;CapabilityIoCardCapabilityDef&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightCapabilitySiocModuleDescriptor [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilitySiocModuleDescriptor&amp;apos; resource.
+Create a &apos;CapabilitySiocModuleDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,10 +220,10 @@ PS C:\> New-IntersightCapabilitySiocModuleDescriptor
 
 ## RELATED LINKS
 
+[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
+
 [Set-IntersightCapabilitySiocModuleDescriptor](./Set-IntersightCapabilitySiocModuleDescriptor.md)
 
 [Remove-IntersightCapabilitySiocModuleDescriptor](./Remove-IntersightCapabilitySiocModuleDescriptor.md)
-
-[Get-IntersightCapabilitySiocModuleDescriptor](./Get-IntersightCapabilitySiocModuleDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

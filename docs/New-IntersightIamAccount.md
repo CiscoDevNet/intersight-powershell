@@ -19,7 +19,7 @@ New-IntersightIamAccount [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &apos;IamAccount&apos; resource.
+Create a &amp;apos;IamAccount&amp;apos; resource.
 
 ## PARAMETERS
 

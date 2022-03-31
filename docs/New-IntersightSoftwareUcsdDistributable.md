@@ -19,7 +19,7 @@ New-IntersightSoftwareUcsdDistributable [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;SoftwareUcsdDistributable&apos; resource.
+Create a &amp;apos;SoftwareUcsdDistributable&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -470,11 +470,11 @@ PS C:\> New-IntersightSoftwareUcsdDistributable
 
 ## RELATED LINKS
 
-[Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
-
 [Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
 
 [Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
+
+[Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 

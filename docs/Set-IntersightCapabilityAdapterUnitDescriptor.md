@@ -417,11 +417,11 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 
 ## RELATED LINKS
 
+[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+
 [Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
-
-[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
 
 [Initialize-IntersightCapabilityFeatureConfig](./Initialize-IntersightCapabilityFeatureConfig.md)
 

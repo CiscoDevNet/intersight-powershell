@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
 
-[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
-
 [Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
+
+[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
 

@@ -19,7 +19,7 @@ New-IntersightSoftwarerepositoryCategoryMapperModel [-AdditionalProperties< Syst
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwarerepositoryCategoryMapperModel&amp;apos; resource.
+Create a &apos;SoftwarerepositoryCategoryMapperModel&apos; resource.
 
 ## PARAMETERS
 

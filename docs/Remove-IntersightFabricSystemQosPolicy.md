@@ -17,7 +17,7 @@ Remove-IntersightFabricSystemQosPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricSystemQosPolicy&apos; resource.
+Delete a &amp;apos;FabricSystemQosPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

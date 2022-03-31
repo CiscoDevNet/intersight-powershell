@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OprsApi(Config);
             ModelObject = new OprsSyncTargetListMessage();
-            MethodName = "PatchOprsSyncTargetListMessageWithHttpInfo";
+            MethodName = "UpdateOprsSyncTargetListMessageWithHttpInfo";
 		}
         
         
@@ -120,6 +120,171 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OprsApi(Config);
             MethodName = "DeleteOprsSyncTargetListMessageWithHttpInfo";
+		}
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set OprsDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightOprsDeployment")]
+    public class SetIntersightOprsDeployment:SetCmdletBase
+	{
+		public SetIntersightOprsDeployment()
+		{
+			ApiInstance = new OprsApi(Config);
+            ModelObject = new OprsDeployment();
+            MethodName = "UpdateOprsDeploymentWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship Assist {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Available number of replicas."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AvailableReplicas {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The expected number of replicas."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long DesiredReplicas {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The type of event which was triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Event {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<OprsKvpair> Labels {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Agent name for which the event is triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Name space in which the agents are running."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Namespace {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Status which shows if the resource is healthy or not.\n* `` - An Unknown status indicates that the resource status is not known.\n* `Healthy` - A healthy status indicates that the resource is healthy and running as per spec.\n* `Unhealthy` - An unhealthy status indicates that the resource is down."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public OprsDeployment.StatusEnum Status {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time at which the event was generated. Date is accurate to Intersights clock. This time will be used to identify order of events."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public DateTime TimeStamp {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Number of replicas Unavailable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long UnavailableReplicas {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove OprsDeployment.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightOprsDeployment")]
+    public class RemoveIntersightOprsDeployment:RemoveCmdletBase
+	{
+		public RemoveIntersightOprsDeployment()
+		{
+			ApiInstance = new OprsApi(Config);
+            MethodName = "DeleteOprsDeploymentWithHttpInfo";
 		}
     }
     /// <summary>
@@ -689,170 +854,5 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set OprsDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOprsDeployment")]
-    public class SetIntersightOprsDeployment:SetCmdletBase
-	{
-		public SetIntersightOprsDeployment()
-		{
-			ApiInstance = new OprsApi(Config);
-            ModelObject = new OprsDeployment();
-            MethodName = "UpdateOprsDeploymentWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship Assist {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Available number of replicas."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long AvailableReplicas {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The expected number of replicas."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long DesiredReplicas {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The type of event which was triggered."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Event {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<OprsKvpair> Labels {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Agent name for which the event is triggered."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Name {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Name space in which the agents are running."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Namespace {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Status which shows if the resource is healthy or not.\n* `` - An Unknown status indicates that the resource status is not known.\n* `Healthy` - A healthy status indicates that the resource is healthy and running as per spec.\n* `Unhealthy` - An unhealthy status indicates that the resource is down."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public OprsDeployment.StatusEnum Status {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time at which the event was generated. Date is accurate to Intersights clock. This time will be used to identify order of events."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public DateTime TimeStamp {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Number of replicas Unavailable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long UnavailableReplicas {
-            get;
-            set;
-        }
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove OprsDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOprsDeployment")]
-    public class RemoveIntersightOprsDeployment:RemoveCmdletBase
-	{
-		public RemoveIntersightOprsDeployment()
-		{
-			ApiInstance = new OprsApi(Config);
-            MethodName = "DeleteOprsDeploymentWithHttpInfo";
-		}
     }
 }

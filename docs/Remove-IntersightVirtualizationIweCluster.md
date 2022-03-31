@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
-
 [Set-IntersightVirtualizationIweCluster](./Set-IntersightVirtualizationIweCluster.md)
+
+[Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
 

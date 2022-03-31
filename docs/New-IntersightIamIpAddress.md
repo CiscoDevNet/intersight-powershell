@@ -19,7 +19,7 @@ New-IntersightIamIpAddress [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamIpAddress&amp;apos; resource.
+Create a &apos;IamIpAddress&apos; resource.
 
 ## PARAMETERS
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -Address
-The Trusted IP range&apos;s address. IP address, CIDR range, and IP address range formats are supported. For example &apos;12.13.14.15&apos;, &apos;12.13.14.0/24&apos;, and &apos;12.13.14.15-12.13.14.200&apos;. Reserved IP ranges &apos;127.0.0.1&apos;, &apos;10.0.0.0/8&apos;, &apos;172.16.0.0/12&apos;, and &apos;192.168.0.0/16&apos; are not allowed.
+The Trusted IP range&amp;apos;s address. IP address, CIDR range, and IP address range formats are supported. For example &amp;apos;12.13.14.15&amp;apos;, &amp;apos;12.13.14.0/24&amp;apos;, and &amp;apos;12.13.14.15-12.13.14.200&amp;apos;. Reserved IP ranges &amp;apos;127.0.0.1&amp;apos;, &amp;apos;10.0.0.0/8&amp;apos;, &amp;apos;172.16.0.0/12&amp;apos;, and &amp;apos;192.168.0.0/16&amp;apos; are not allowed.
 
 ```yaml
 Type: string
@@ -157,10 +157,10 @@ PS C:\> New-IntersightIamIpAddress
 
 ## RELATED LINKS
 
+[Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
+
 [Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)
 
 [Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
-
-[Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

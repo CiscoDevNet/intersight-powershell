@@ -19,7 +19,7 @@ Set-IntersightIamSessionLimits [-AdditionalProperties< System.Collections.Generi
 ```
 
 ## DESCRIPTION
-Update a &apos;IamSessionLimits&apos; resource.
+Update a &amp;apos;IamSessionLimits&amp;apos; resource.
 
 ## PARAMETERS
 

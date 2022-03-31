@@ -19,7 +19,7 @@ New-IntersightKubernetesAciCniTenantClusterAllocation [-AdditionalProperties< Sy
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesAciCniTenantClusterAllocation&amp;apos; resource.
+Create a &apos;KubernetesAciCniTenantClusterAllocation&apos; resource.
 
 ## PARAMETERS
 

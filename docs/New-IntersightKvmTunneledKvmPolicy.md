@@ -157,10 +157,10 @@ PS C:\> New-IntersightKvmTunneledKvmPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightKvmTunneledKvmPolicy](./Get-IntersightKvmTunneledKvmPolicy.md)
+
 [Set-IntersightKvmTunneledKvmPolicy](./Set-IntersightKvmTunneledKvmPolicy.md)
 
 [Remove-IntersightKvmTunneledKvmPolicy](./Remove-IntersightKvmTunneledKvmPolicy.md)
-
-[Get-IntersightKvmTunneledKvmPolicy](./Get-IntersightKvmTunneledKvmPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

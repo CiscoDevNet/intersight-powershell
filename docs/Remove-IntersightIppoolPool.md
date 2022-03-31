@@ -17,7 +17,7 @@ Remove-IntersightIppoolPool -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IppoolPool&amp;apos; resource.
+Delete a &apos;IppoolPool&apos; resource.
 
 ## EXAMPLES
 

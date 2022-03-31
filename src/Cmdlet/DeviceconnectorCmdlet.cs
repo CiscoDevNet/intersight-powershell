@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New DeviceconnectorPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set DeviceconnectorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightDeviceconnectorPolicy")]
-    public class NewIntersightDeviceconnectorPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightDeviceconnectorPolicy")]
+    public class SetIntersightDeviceconnectorPolicy:SetCmdletBase
 	{
-		public NewIntersightDeviceconnectorPolicy()
+		public SetIntersightDeviceconnectorPolicy()
 		{
 			ApiInstance = new DeviceconnectorApi(Config);
             ModelObject = new DeviceconnectorPolicy();
-            MethodName = "CreateDeviceconnectorPolicyWithHttpInfo";
+            MethodName = "PatchDeviceconnectorPolicyWithHttpInfo";
 		}
         
         
@@ -58,7 +58,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -68,7 +68,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -109,6 +109,18 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove DeviceconnectorPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightDeviceconnectorPolicy")]
+    public class RemoveIntersightDeviceconnectorPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightDeviceconnectorPolicy()
+		{
+			ApiInstance = new DeviceconnectorApi(Config);
+            MethodName = "DeleteDeviceconnectorPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DeviceconnectorPolicy.</para>
@@ -242,16 +254,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set DeviceconnectorPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New DeviceconnectorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightDeviceconnectorPolicy")]
-    public class SetIntersightDeviceconnectorPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightDeviceconnectorPolicy")]
+    public class NewIntersightDeviceconnectorPolicy:NewCmdletBase
 	{
-		public SetIntersightDeviceconnectorPolicy()
+		public NewIntersightDeviceconnectorPolicy()
 		{
 			ApiInstance = new DeviceconnectorApi(Config);
             ModelObject = new DeviceconnectorPolicy();
-            MethodName = "UpdateDeviceconnectorPolicyWithHttpInfo";
+            MethodName = "CreateDeviceconnectorPolicyWithHttpInfo";
 		}
         
         
@@ -292,7 +304,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -302,7 +314,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -343,17 +355,5 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove DeviceconnectorPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightDeviceconnectorPolicy")]
-    public class RemoveIntersightDeviceconnectorPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightDeviceconnectorPolicy()
-		{
-			ApiInstance = new DeviceconnectorApi(Config);
-            MethodName = "DeleteDeviceconnectorPolicyWithHttpInfo";
-		}
     }
 }

@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputParameters
-The output mappings from workflows in the action definition to the solution output definition. Any output from core or post-core workflow can be mapped to solution output definition. The output can be referred using the name of the workflow definition and the output name in the following format &apos;${&lt;ActionWorkflowDefinition.Name&amp;gt;.output.&lt;outputName&amp;gt;&apos;.
+The output mappings from workflows in the action definition to the solution output definition. Any output from core or post-core workflow can be mapped to solution output definition. The output can be referred using the name of the workflow definition and the output name in the following format &apos;${&amp;lt;ActionWorkflowDefinition.Name&amp;gt;.output.&amp;lt;outputName&amp;gt;&apos;.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -354,9 +354,9 @@ PS C:\> New-IntersightWorkflowSolutionActionDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightWorkflowSolutionActionDefinition](./Remove-IntersightWorkflowSolutionActionDefinition.md)
-
 [Set-IntersightWorkflowSolutionActionDefinition](./Set-IntersightWorkflowSolutionActionDefinition.md)
+
+[Remove-IntersightWorkflowSolutionActionDefinition](./Remove-IntersightWorkflowSolutionActionDefinition.md)
 
 [Get-IntersightWorkflowSolutionActionDefinition](./Get-IntersightWorkflowSolutionActionDefinition.md)
 

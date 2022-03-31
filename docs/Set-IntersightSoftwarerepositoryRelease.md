@@ -222,8 +222,8 @@ PS C:\> Set-IntersightSoftwarerepositoryRelease
 
 [Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
 
-[Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
-
 [New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
+
+[Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

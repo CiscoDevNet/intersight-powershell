@@ -19,7 +19,7 @@ Set-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &apos;FabricAppliancePcRole&apos; resource.
+Update a &amp;apos;FabricAppliancePcRole&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The &apos;name&apos; of the System QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic.
+The &amp;apos;name&amp;apos; of the System QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic.
 
 ```yaml
 Type: FabricAppliancePcRole.PriorityEnum
@@ -258,11 +258,11 @@ PS C:\> Set-IntersightFabricAppliancePcRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
-
 [Get-IntersightFabricAppliancePcRole](./Get-IntersightFabricAppliancePcRole.md)
 
 [New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
+
+[Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
 

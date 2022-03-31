@@ -418,11 +418,11 @@ PS C:\> New-IntersightWorkflowWorkflowInfo
 
 ## RELATED LINKS
 
+[Get-IntersightWorkflowWorkflowInfo](./Get-IntersightWorkflowWorkflowInfo.md)
+
 [Set-IntersightWorkflowWorkflowInfo](./Set-IntersightWorkflowWorkflowInfo.md)
 
 [Remove-IntersightWorkflowWorkflowInfo](./Remove-IntersightWorkflowWorkflowInfo.md)
-
-[Get-IntersightWorkflowWorkflowInfo](./Get-IntersightWorkflowWorkflowInfo.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 

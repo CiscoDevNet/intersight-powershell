@@ -19,7 +19,7 @@ Set-IntersightHyperflexFeatureLimitExternal [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexFeatureLimitExternal&amp;apos; resource.
+Update a &apos;HyperflexFeatureLimitExternal&apos; resource.
 
 ## PARAMETERS
 
@@ -162,11 +162,11 @@ PS C:\> Set-IntersightHyperflexFeatureLimitExternal
 
 ## RELATED LINKS
 
+[Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
+
 [Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
 
 [New-IntersightHyperflexFeatureLimitExternal](./New-IntersightHyperflexFeatureLimitExternal.md)
-
-[Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
 
 [Initialize-IntersightHyperflexFeatureLimitEntry](./Initialize-IntersightHyperflexFeatureLimitEntry.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareUpgrade](./New-IntersightFirmwareUpgrade.md)
+[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
 
 [Set-IntersightFirmwareUpgrade](./Set-IntersightFirmwareUpgrade.md)
 
-[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
+[New-IntersightFirmwareUpgrade](./New-IntersightFirmwareUpgrade.md)
 

@@ -66,7 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-IntersightFabricLinkControlPolicy](./Set-IntersightFabricLinkControlPolicy.md)
 
-[Get-IntersightFabricLinkControlPolicy](./Get-IntersightFabricLinkControlPolicy.md)
-
 [New-IntersightFabricLinkControlPolicy](./New-IntersightFabricLinkControlPolicy.md)
+
+[Get-IntersightFabricLinkControlPolicy](./Get-IntersightFabricLinkControlPolicy.md)
 

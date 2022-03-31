@@ -222,11 +222,11 @@ PS C:\> Set-IntersightFabricFcUplinkPcRole
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricFcUplinkPcRole](./Remove-IntersightFabricFcUplinkPcRole.md)
+
 [Get-IntersightFabricFcUplinkPcRole](./Get-IntersightFabricFcUplinkPcRole.md)
 
 [New-IntersightFabricFcUplinkPcRole](./New-IntersightFabricFcUplinkPcRole.md)
-
-[Remove-IntersightFabricFcUplinkPcRole](./Remove-IntersightFabricFcUplinkPcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
 

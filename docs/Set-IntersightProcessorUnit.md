@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightProcessorUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ComputeBlade< ComputeBladeRelationship>][-ComputeRackUnit< ComputeRackUnitRelationship>][[-Moid]< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightProcessorUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ComputeBlade< ComputeBladeRelationship>][-ComputeRackUnit< ComputeRackUnitRelationship>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ProcessorUnit&amp;apos; resource.
+Update a &apos;ProcessorUnit&apos; resource.
 
 ## PARAMETERS
 
@@ -83,6 +83,24 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkElement
+A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: NetworkElementRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)

@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set NetworkconfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New NetworkconfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkconfigPolicy")]
-    public class SetIntersightNetworkconfigPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightNetworkconfigPolicy")]
+    public class NewIntersightNetworkconfigPolicy:NewCmdletBase
 	{
-		public SetIntersightNetworkconfigPolicy()
+		public NewIntersightNetworkconfigPolicy()
 		{
 			ApiInstance = new NetworkconfigApi(Config);
             ModelObject = new NetworkconfigPolicy();
-            MethodName = "PatchNetworkconfigPolicyWithHttpInfo";
+            MethodName = "CreateNetworkconfigPolicyWithHttpInfo";
 		}
         
         
@@ -128,7 +128,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -138,7 +138,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -199,18 +199,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove NetworkconfigPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightNetworkconfigPolicy")]
-    public class RemoveIntersightNetworkconfigPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightNetworkconfigPolicy()
-		{
-			ApiInstance = new NetworkconfigApi(Config);
-            MethodName = "DeleteNetworkconfigPolicyWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkconfigPolicy.</para>
@@ -434,16 +422,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New NetworkconfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkconfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightNetworkconfigPolicy")]
-    public class NewIntersightNetworkconfigPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkconfigPolicy")]
+    public class SetIntersightNetworkconfigPolicy:SetCmdletBase
 	{
-		public NewIntersightNetworkconfigPolicy()
+		public SetIntersightNetworkconfigPolicy()
 		{
 			ApiInstance = new NetworkconfigApi(Config);
             ModelObject = new NetworkconfigPolicy();
-            MethodName = "CreateNetworkconfigPolicyWithHttpInfo";
+            MethodName = "UpdateNetworkconfigPolicyWithHttpInfo";
 		}
         
         
@@ -554,7 +542,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -564,7 +552,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -625,5 +613,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove NetworkconfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightNetworkconfigPolicy")]
+    public class RemoveIntersightNetworkconfigPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightNetworkconfigPolicy()
+		{
+			ApiInstance = new NetworkconfigApi(Config);
+            MethodName = "DeleteNetworkconfigPolicyWithHttpInfo";
+		}
     }
 }

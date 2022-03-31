@@ -226,9 +226,9 @@ PS C:\> Set-IntersightWorkflowErrorResponseHandler
 
 [Remove-IntersightWorkflowErrorResponseHandler](./Remove-IntersightWorkflowErrorResponseHandler.md)
 
-[Get-IntersightWorkflowErrorResponseHandler](./Get-IntersightWorkflowErrorResponseHandler.md)
-
 [New-IntersightWorkflowErrorResponseHandler](./New-IntersightWorkflowErrorResponseHandler.md)
+
+[Get-IntersightWorkflowErrorResponseHandler](./Get-IntersightWorkflowErrorResponseHandler.md)
 
 [Initialize-IntersightContentParameter](./Initialize-IntersightContentParameter.md)
 

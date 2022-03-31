@@ -19,7 +19,7 @@ New-IntersightWorkflowAnsibleBatchExecutor [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &apos;WorkflowAnsibleBatchExecutor&apos; resource.
+Create a &amp;apos;WorkflowAnsibleBatchExecutor&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -290,11 +290,11 @@ PS C:\> New-IntersightWorkflowAnsibleBatchExecutor
 
 ## RELATED LINKS
 
+[Get-IntersightWorkflowAnsibleBatchExecutor](./Get-IntersightWorkflowAnsibleBatchExecutor.md)
+
 [Remove-IntersightWorkflowAnsibleBatchExecutor](./Remove-IntersightWorkflowAnsibleBatchExecutor.md)
 
 [Set-IntersightWorkflowAnsibleBatchExecutor](./Set-IntersightWorkflowAnsibleBatchExecutor.md)
-
-[Get-IntersightWorkflowAnsibleBatchExecutor](./Get-IntersightWorkflowAnsibleBatchExecutor.md)
 
 [Initialize-IntersightIntersight.Model.WorkflowApi](./Initialize-IntersightIntersight.Model.WorkflowApi.md)
 

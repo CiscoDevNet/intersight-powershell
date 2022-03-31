@@ -19,7 +19,7 @@ Set-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexSoftwareVersionPolicy&amp;apos; resource.
+Update a &apos;HyperflexSoftwareVersionPolicy&apos; resource.
 
 ## PARAMETERS
 

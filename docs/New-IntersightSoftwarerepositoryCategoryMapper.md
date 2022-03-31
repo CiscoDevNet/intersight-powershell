@@ -19,7 +19,7 @@ New-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Create a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
+Create a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -292,10 +292,10 @@ PS C:\> New-IntersightSoftwarerepositoryCategoryMapper
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)
+[Get-IntersightSoftwarerepositoryCategoryMapper](./Get-IntersightSoftwarerepositoryCategoryMapper.md)
 
 [Remove-IntersightSoftwarerepositoryCategoryMapper](./Remove-IntersightSoftwarerepositoryCategoryMapper.md)
 
-[Get-IntersightSoftwarerepositoryCategoryMapper](./Get-IntersightSoftwarerepositoryCategoryMapper.md)
+[Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

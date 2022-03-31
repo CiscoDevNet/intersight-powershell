@@ -19,7 +19,7 @@ New-IntersightCapabilityServerModelsCapabilityDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Create a &apos;CapabilityServerModelsCapabilityDef&apos; resource.
+Create a &amp;apos;CapabilityServerModelsCapabilityDef&amp;apos; resource.
 
 ## PARAMETERS
 

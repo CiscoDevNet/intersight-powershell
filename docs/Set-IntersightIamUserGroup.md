@@ -19,7 +19,7 @@ Set-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;IamUserGroup&apos; resource.
+Update a &amp;apos;IamUserGroup&amp;apos; resource.
 
 ## PARAMETERS
 

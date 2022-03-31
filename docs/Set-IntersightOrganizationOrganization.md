@@ -19,7 +19,7 @@ Set-IntersightOrganizationOrganization [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;OrganizationOrganization&amp;apos; resource.
+Update a &apos;OrganizationOrganization&apos; resource.
 
 ## PARAMETERS
 

@@ -19,7 +19,7 @@ New-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &apos;FabricSystemQosPolicy&apos; resource.
+Create a &amp;apos;FabricSystemQosPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

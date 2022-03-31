@@ -17,7 +17,7 @@ Remove-IntersightThermalPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ThermalPolicy&apos; resource.
+Delete a &amp;apos;ThermalPolicy&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightThermalPolicy](./Set-IntersightThermalPolicy.md)
+
 [Get-IntersightThermalPolicy](./Get-IntersightThermalPolicy.md)
 
 [New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)
-
-[Set-IntersightThermalPolicy](./Set-IntersightThermalPolicy.md)
 

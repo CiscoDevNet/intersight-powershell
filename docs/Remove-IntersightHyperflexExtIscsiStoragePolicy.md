@@ -17,7 +17,7 @@ Remove-IntersightHyperflexExtIscsiStoragePolicy -Moid <String> [<CommonParameter
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexExtIscsiStoragePolicy&apos; resource.
+Delete a &amp;apos;HyperflexExtIscsiStoragePolicy&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ New-IntersightHyperflexKeyEncryptionKey [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexKeyEncryptionKey&amp;apos; resource.
+Create a &apos;HyperflexKeyEncryptionKey&apos; resource.
 
 ## PARAMETERS
 

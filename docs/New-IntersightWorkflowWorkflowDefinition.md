@@ -19,7 +19,7 @@ New-IntersightWorkflowWorkflowDefinition [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowWorkflowDefinition&amp;apos; resource.
+Create a &apos;WorkflowWorkflowDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -391,11 +391,11 @@ PS C:\> New-IntersightWorkflowWorkflowDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
-
 [Set-IntersightWorkflowWorkflowDefinition](./Set-IntersightWorkflowWorkflowDefinition.md)
 
 [Remove-IntersightWorkflowWorkflowDefinition](./Remove-IntersightWorkflowWorkflowDefinition.md)
+
+[Get-IntersightWorkflowWorkflowDefinition](./Get-IntersightWorkflowWorkflowDefinition.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 

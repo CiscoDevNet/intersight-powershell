@@ -212,9 +212,9 @@ PS C:\> New-IntersightAdapterConfigPolicy
 
 [Get-IntersightAdapterConfigPolicy](./Get-IntersightAdapterConfigPolicy.md)
 
-[Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
-
 [Set-IntersightAdapterConfigPolicy](./Set-IntersightAdapterConfigPolicy.md)
+
+[Remove-IntersightAdapterConfigPolicy](./Remove-IntersightAdapterConfigPolicy.md)
 
 [Initialize-IntersightAdapterAdapterConfig](./Initialize-IntersightAdapterAdapterConfig.md)
 

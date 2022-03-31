@@ -310,11 +310,11 @@ PS C:\> Set-IntersightFabricSwitchProfile
 
 ## RELATED LINKS
 
-[Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
+[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
 
 [New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
 
-[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
+[Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

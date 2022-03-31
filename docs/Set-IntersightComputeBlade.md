@@ -19,7 +19,7 @@ Set-IntersightComputeBlade [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &apos;ComputeBlade&apos; resource.
+Update a &amp;apos;ComputeBlade&amp;apos; resource.
 
 ## PARAMETERS
 

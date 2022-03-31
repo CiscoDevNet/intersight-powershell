@@ -254,11 +254,11 @@ PS C:\> Set-IntersightResourcepoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)
-
 [Get-IntersightResourcepoolPool](./Get-IntersightResourcepoolPool.md)
 
 [New-IntersightResourcepoolPool](./New-IntersightResourcepoolPool.md)
+
+[Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)
 
 [Initialize-IntersightResourcepoolResourcePoolParameters](./Initialize-IntersightResourcepoolResourcePoolParameters.md)
 

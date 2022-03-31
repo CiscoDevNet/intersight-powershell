@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &amp;apos;Auto&amp;apos;.\n* `Cl91` - Forward error correction option &amp;apos;cl91&amp;apos;.\n* `Cl74` - Forward error correction option &amp;apos;cl74&amp;apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
 
 ```yaml
 Type: FabricUplinkRole.FecEnum
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -PortId
-Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &apos;portId&apos; represents the port id on the fanout side of the breakout cable.
+Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the &amp;apos;portId&amp;apos; represents the port id on the fanout side of the breakout cable.
 
 ```yaml
 Type: long
@@ -276,8 +276,8 @@ PS C:\> New-IntersightFabricUplinkRole
 
 [Get-IntersightFabricUplinkRole](./Get-IntersightFabricUplinkRole.md)
 
-[Set-IntersightFabricUplinkRole](./Set-IntersightFabricUplinkRole.md)
-
 [Remove-IntersightFabricUplinkRole](./Remove-IntersightFabricUplinkRole.md)
+
+[Set-IntersightFabricUplinkRole](./Set-IntersightFabricUplinkRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

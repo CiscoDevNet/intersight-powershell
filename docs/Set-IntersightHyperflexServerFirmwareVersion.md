@@ -19,7 +19,7 @@ Set-IntersightHyperflexServerFirmwareVersion [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &apos;HyperflexServerFirmwareVersion&apos; resource.
+Update a &amp;apos;HyperflexServerFirmwareVersion&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -163,10 +163,10 @@ PS C:\> Set-IntersightHyperflexServerFirmwareVersion
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexServerFirmwareVersion](./Remove-IntersightHyperflexServerFirmwareVersion.md)
-
 [Get-IntersightHyperflexServerFirmwareVersion](./Get-IntersightHyperflexServerFirmwareVersion.md)
 
 [New-IntersightHyperflexServerFirmwareVersion](./New-IntersightHyperflexServerFirmwareVersion.md)
+
+[Remove-IntersightHyperflexServerFirmwareVersion](./Remove-IntersightHyperflexServerFirmwareVersion.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

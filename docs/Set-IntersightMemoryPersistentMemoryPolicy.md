@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &apos;MemoryPersistentMemoryPolicy&apos; resource.
+Update a &amp;apos;MemoryPersistentMemoryPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -274,9 +274,9 @@ PS C:\> Set-IntersightMemoryPersistentMemoryPolicy
 
 ## RELATED LINKS
 
-[New-IntersightMemoryPersistentMemoryPolicy](./New-IntersightMemoryPersistentMemoryPolicy.md)
-
 [Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
+
+[New-IntersightMemoryPersistentMemoryPolicy](./New-IntersightMemoryPersistentMemoryPolicy.md)
 
 [Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
 

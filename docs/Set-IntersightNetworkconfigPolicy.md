@@ -19,7 +19,7 @@ Set-IntersightNetworkconfigPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;NetworkconfigPolicy&apos; resource.
+Update a &amp;apos;NetworkconfigPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -346,10 +346,10 @@ PS C:\> Set-IntersightNetworkconfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
+[New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
 
 [Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
 
-[New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
+[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

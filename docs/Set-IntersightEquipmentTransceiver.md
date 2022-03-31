@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentTransceiver [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EtherPhysicalPort< EtherPhysicalPortRelationship>][[-Moid]< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentTransceiver [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CiscoExtendedIdNumber< string>][-EtherHostPort< EtherHostPortRelationship>][-EtherPhysicalPort< EtherPhysicalPortRelationship>][-FcPhysicalPort< FcPhysicalPortRelationship>][-ManufacturerPartNumber< string>][[-Moid]< string>][-Name< string>][-PreviousFru< EquipmentFruRelationship>][-Status< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,39 @@ Update a &apos;EquipmentTransceiver&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CiscoExtendedIdNumber
+The cisco extended Id number state of the pluggable SFP.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EtherHostPort
+A reference to a etherHostPort resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: EtherHostPortRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -56,6 +89,39 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FcPhysicalPort
+A reference to a fcPhysicalPort resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: FcPhysicalPortRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ManufacturerPartNumber
+The manufacturer part number of the pluggable SFP.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -71,6 +137,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Name
+The name of the pluggable transceiver.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PreviousFru
 A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -79,6 +160,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EquipmentFruRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Status
+Status of the pluggable SFP.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

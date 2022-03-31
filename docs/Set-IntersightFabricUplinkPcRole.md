@@ -264,11 +264,11 @@ PS C:\> Set-IntersightFabricUplinkPcRole
 
 ## RELATED LINKS
 
+[Remove-IntersightFabricUplinkPcRole](./Remove-IntersightFabricUplinkPcRole.md)
+
 [Get-IntersightFabricUplinkPcRole](./Get-IntersightFabricUplinkPcRole.md)
 
 [New-IntersightFabricUplinkPcRole](./New-IntersightFabricUplinkPcRole.md)
-
-[Remove-IntersightFabricUplinkPcRole](./Remove-IntersightFabricUplinkPcRole.md)
 
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
 

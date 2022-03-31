@@ -17,7 +17,7 @@ Remove-IntersightKubernetesAddonRepository -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesAddonRepository&amp;apos; resource.
+Delete a &apos;KubernetesAddonRepository&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightKubernetesAddonRepository](./Set-IntersightKubernetesAddonRepository.md)
+
 [Get-IntersightKubernetesAddonRepository](./Get-IntersightKubernetesAddonRepository.md)
 
 [New-IntersightKubernetesAddonRepository](./New-IntersightKubernetesAddonRepository.md)
-
-[Set-IntersightKubernetesAddonRepository](./Set-IntersightKubernetesAddonRepository.md)
 

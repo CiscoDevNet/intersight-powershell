@@ -19,7 +19,7 @@ Set-IntersightStorageHitachiArray [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &apos;StorageHitachiArray&apos; resource.
+Update a &amp;apos;StorageHitachiArray&amp;apos; resource.
 
 ## PARAMETERS
 

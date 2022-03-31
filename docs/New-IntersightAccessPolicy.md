@@ -19,7 +19,7 @@ New-IntersightAccessPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AccessPolicy&amp;apos; resource.
+Create a &apos;AccessPolicy&apos; resource.
 
 ## PARAMETERS
 

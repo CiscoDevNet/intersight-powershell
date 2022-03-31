@@ -19,7 +19,7 @@ Set-IntersightHyperflexClusterNetworkPolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
+Update a &apos;HyperflexClusterNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 

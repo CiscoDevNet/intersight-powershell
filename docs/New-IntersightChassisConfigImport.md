@@ -19,7 +19,7 @@ New-IntersightChassisConfigImport [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ChassisConfigImport&amp;apos; resource.
+Create a &apos;ChassisConfigImport&apos; resource.
 
 ## PARAMETERS
 

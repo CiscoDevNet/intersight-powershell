@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoopType
-This specifies the type of loop, Serial or Parallel.\n* `Serial` - The enum specifies the option as Serial where the loop task type is parallel loop.\n* `Parallel` - The enum specifies the option as Parallel where the loop task type is parallel loop.
+This specifies the type of loop, Serial or Parallel.\n* `None` - The enum specifies the option as None which implies this is not a Loop type and this is the default value for loop type.\n* `Parallel` - The enum specifies the option as Parallel where the loop task type is parallel loop.\n* `Serial` - The enum specifies the option as Serial where the loop task type is serial loop.
 
 ```yaml
 Type: WorkflowTaskLoopInfo.LoopTypeEnum
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowTaskLoopInfo.ObjectTypeEnum

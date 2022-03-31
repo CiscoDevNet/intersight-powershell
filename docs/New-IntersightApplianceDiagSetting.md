@@ -19,7 +19,7 @@ New-IntersightApplianceDiagSetting [-Account< IamAccountRelationship>][-Addition
 ```
 
 ## DESCRIPTION
-Create a &apos;ApplianceDiagSetting&apos; resource.
+Create a &amp;apos;ApplianceDiagSetting&amp;apos; resource.
 
 ## PARAMETERS
 

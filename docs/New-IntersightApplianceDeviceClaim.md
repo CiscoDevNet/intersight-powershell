@@ -19,7 +19,7 @@ New-IntersightApplianceDeviceClaim [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceDeviceClaim&amp;apos; resource.
+Create a &apos;ApplianceDeviceClaim&apos; resource.
 
 ## PARAMETERS
 

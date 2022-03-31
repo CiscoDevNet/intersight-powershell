@@ -570,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageClientVlan
-The named VLAN associated with this cluster&amp;apos;s storage client network. This applies to Intersight Workload Engine clusters only.
+The named VLAN associated with this cluster&apos;s storage client network. This applies to Intersight Workload Engine clusters only.
 
 Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
 
@@ -791,9 +791,9 @@ PS C:\> Set-IntersightHyperflexClusterProfile
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
-
 [New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
+
+[Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
 [Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
 

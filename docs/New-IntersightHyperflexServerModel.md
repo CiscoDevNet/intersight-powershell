@@ -162,11 +162,11 @@ PS C:\> New-IntersightHyperflexServerModel
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
+[Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
 
 [Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 
-[Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
+[Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 
 [Initialize-IntersightHyperflexServerModelEntry](./Initialize-IntersightHyperflexServerModelEntry.md)
 

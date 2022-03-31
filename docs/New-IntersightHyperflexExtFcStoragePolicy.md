@@ -19,7 +19,7 @@ New-IntersightHyperflexExtFcStoragePolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexExtFcStoragePolicy&amp;apos; resource.
+Create a &apos;HyperflexExtFcStoragePolicy&apos; resource.
 
 ## PARAMETERS
 

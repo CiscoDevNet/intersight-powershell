@@ -17,7 +17,7 @@ Remove-IntersightVnicIscsiBootPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;VnicIscsiBootPolicy&apos; resource.
+Delete a &amp;apos;VnicIscsiBootPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

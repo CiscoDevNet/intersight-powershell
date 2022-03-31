@@ -19,7 +19,7 @@ New-IntersightTaskServerScopedInventory [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;TaskServerScopedInventory&apos; resource.
+Create a &amp;apos;TaskServerScopedInventory&amp;apos; resource.
 
 ## PARAMETERS
 

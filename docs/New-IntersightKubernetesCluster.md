@@ -229,10 +229,10 @@ PS C:\> New-IntersightKubernetesCluster
 
 ## RELATED LINKS
 
-[Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
-
 [Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
 
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
+
+[Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

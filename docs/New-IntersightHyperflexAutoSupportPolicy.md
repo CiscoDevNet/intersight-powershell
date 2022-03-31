@@ -19,7 +19,7 @@ New-IntersightHyperflexAutoSupportPolicy [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &apos;HyperflexAutoSupportPolicy&apos; resource.
+Create a &amp;apos;HyperflexAutoSupportPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -223,10 +223,10 @@ PS C:\> New-IntersightHyperflexAutoSupportPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexAutoSupportPolicy](./Get-IntersightHyperflexAutoSupportPolicy.md)
-
 [Set-IntersightHyperflexAutoSupportPolicy](./Set-IntersightHyperflexAutoSupportPolicy.md)
 
 [Remove-IntersightHyperflexAutoSupportPolicy](./Remove-IntersightHyperflexAutoSupportPolicy.md)
+
+[Get-IntersightHyperflexAutoSupportPolicy](./Get-IntersightHyperflexAutoSupportPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

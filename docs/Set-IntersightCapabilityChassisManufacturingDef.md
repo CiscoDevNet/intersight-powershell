@@ -19,7 +19,7 @@ Set-IntersightCapabilityChassisManufacturingDef [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityChassisManufacturingDef&amp;apos; resource.
+Update a &apos;CapabilityChassisManufacturingDef&apos; resource.
 
 ## PARAMETERS
 

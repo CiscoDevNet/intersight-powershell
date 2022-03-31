@@ -17,7 +17,7 @@ Remove-IntersightSoftwareHclMeta -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SoftwareHclMeta&amp;apos; resource.
+Delete a &apos;SoftwareHclMeta&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
+
 [Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
 
 [New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
-
-[Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
 

@@ -19,7 +19,7 @@ New-IntersightSmtpPolicy [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &apos;SmtpPolicy&apos; resource.
+Create a &amp;apos;SmtpPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -379,10 +379,10 @@ PS C:\> New-IntersightSmtpPolicy
 
 ## RELATED LINKS
 
+[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
+
 [Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
 
 [Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
-
-[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

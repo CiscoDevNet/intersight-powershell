@@ -17,7 +17,7 @@ Remove-IntersightHyperflexNodeProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexNodeProfile&apos; resource.
+Delete a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
 
 ## EXAMPLES
 

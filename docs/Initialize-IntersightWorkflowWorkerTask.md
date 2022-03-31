@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowWorkerTask.ObjectTypeEnum
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -VariableParameters
-JSON formatted key-value pairs that perform variable update at the end of the task execution. Mapping for variables can be provided as either static values, direct mapping or advanced mapping using templates. The direct mapping can be specified as &amp;apos;${Source.&amp;lt; input | output | variable&amp;gt;.&amp;lt;JSONPath&amp;gt;}&amp;apos;. &amp;apos;Source&amp;apos; can be either workflow or the name of the current or an earlier task within the workflow. You can map the variable to either a workflow input, a task output or another variable. Golang template syntax is supported for advanced mapping. A simple flattened example is \&quot;VariableParameters\&quot;:{ \&quot;var1\&quot;:\&quot;${task1.output.output1}\&quot;, \&quot;var2\&quot;:\&quot;{{ Itoa .global.workflow.variable.varInt}}\&quot; } where variable var1 is mapped directly to output1 of task1 and variable var2 is using a template to convert another variable varInt to string and assign that value.
+JSON formatted key-value pairs that perform variable update at the end of the task execution. Mapping for variables can be provided as either static values, direct mapping or advanced mapping using templates. The direct mapping can be specified as &apos;${Source.&amp;lt; input | output | variable&amp;gt;.&amp;lt;JSONPath&amp;gt;}&apos;. &apos;Source&apos; can be either workflow or the name of the current or an earlier task within the workflow. You can map the variable to either a workflow input, a task output or another variable. Golang template syntax is supported for advanced mapping. A simple flattened example is \&quot;VariableParameters\&quot;:{ \&quot;var1\&quot;:\&quot;${task1.output.output1}\&quot;, \&quot;var2\&quot;:\&quot;{{ Itoa .global.workflow.variable.varInt}}\&quot; } where variable var1 is mapped directly to output1 of task1 and variable var2 is using a template to convert another variable varInt to string and assign that value.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

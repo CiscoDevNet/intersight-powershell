@@ -17,7 +17,7 @@ Remove-IntersightFabricServerRole -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FabricServerRole&apos; resource.
+Delete a &amp;apos;FabricServerRole&amp;apos; resource.
 
 ## EXAMPLES
 

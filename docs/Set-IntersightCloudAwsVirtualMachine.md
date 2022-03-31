@@ -19,7 +19,7 @@ Set-IntersightCloudAwsVirtualMachine [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CloudAwsVirtualMachine&amp;apos; resource.
+Update a &apos;CloudAwsVirtualMachine&apos; resource.
 
 ## PARAMETERS
 

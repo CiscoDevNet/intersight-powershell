@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareHost [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &apos;VirtualizationVmwareHost&apos; resource.
+Update a &amp;apos;VirtualizationVmwareHost&amp;apos; resource.
 
 ## PARAMETERS
 

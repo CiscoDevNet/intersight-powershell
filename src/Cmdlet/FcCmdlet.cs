@@ -244,6 +244,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        // <summary>
+        /// <para type="description">"World Wide Name of the port channel."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Wwn {
+            get;
+            set;
+        }
 
         
     }
@@ -257,7 +267,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new FcApi(Config);
             ModelObject = new FcPhysicalPort();
-            MethodName = "UpdateFcPhysicalPortWithHttpInfo";
+            MethodName = "PatchFcPhysicalPortWithHttpInfo";
 		}
         
         
@@ -283,6 +293,7 @@ namespace Intersight.PowerShell
         
         
         
+        
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -292,6 +303,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
         
         
         
@@ -363,6 +375,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string AdminState {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Breakout port member in the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long AggregatePortId {
             get;
             set;
         }
@@ -464,6 +486,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Name of the physical port of FC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Name {
             get;
             set;
         }

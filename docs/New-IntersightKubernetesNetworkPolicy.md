@@ -19,7 +19,7 @@ New-IntersightKubernetesNetworkPolicy [-AdditionalProperties< System.Collections
 ```
 
 ## DESCRIPTION
-Create a &apos;KubernetesNetworkPolicy&apos; resource.
+Create a &amp;apos;KubernetesNetworkPolicy&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -255,11 +255,11 @@ PS C:\> New-IntersightKubernetesNetworkPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesNetworkPolicy](./Set-IntersightKubernetesNetworkPolicy.md)
+[Get-IntersightKubernetesNetworkPolicy](./Get-IntersightKubernetesNetworkPolicy.md)
 
 [Remove-IntersightKubernetesNetworkPolicy](./Remove-IntersightKubernetesNetworkPolicy.md)
 
-[Get-IntersightKubernetesNetworkPolicy](./Get-IntersightKubernetesNetworkPolicy.md)
+[Set-IntersightKubernetesNetworkPolicy](./Set-IntersightKubernetesNetworkPolicy.md)
 
 [Initialize-IntersightKubernetesCniConfig](./Initialize-IntersightKubernetesCniConfig.md)
 

@@ -19,7 +19,7 @@ New-IntersightRecoveryBackupConfigPolicy [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryBackupConfigPolicy&amp;apos; resource.
+Create a &apos;RecoveryBackupConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -300,8 +300,8 @@ PS C:\> New-IntersightRecoveryBackupConfigPolicy
 
 [Get-IntersightRecoveryBackupConfigPolicy](./Get-IntersightRecoveryBackupConfigPolicy.md)
 
-[Set-IntersightRecoveryBackupConfigPolicy](./Set-IntersightRecoveryBackupConfigPolicy.md)
-
 [Remove-IntersightRecoveryBackupConfigPolicy](./Remove-IntersightRecoveryBackupConfigPolicy.md)
+
+[Set-IntersightRecoveryBackupConfigPolicy](./Set-IntersightRecoveryBackupConfigPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

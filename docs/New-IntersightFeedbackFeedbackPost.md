@@ -19,7 +19,7 @@ New-IntersightFeedbackFeedbackPost [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &apos;FeedbackFeedbackPost&apos; resource.
+Create a &amp;apos;FeedbackFeedbackPost&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFolderPath
-Relative folder Path where &apos;sourceFolderName&apos; is located.
+Relative folder Path where &amp;apos;sourceFolderName&amp;apos; is located.
 
 ```yaml
 Type: string
@@ -385,11 +385,11 @@ PS C:\> Set-IntersightTerraformExecutor
 
 ## RELATED LINKS
 
-[Remove-IntersightTerraformExecutor](./Remove-IntersightTerraformExecutor.md)
-
 [Get-IntersightTerraformExecutor](./Get-IntersightTerraformExecutor.md)
 
 [New-IntersightTerraformExecutor](./New-IntersightTerraformExecutor.md)
+
+[Remove-IntersightTerraformExecutor](./Remove-IntersightTerraformExecutor.md)
 
 [Initialize-IntersightTerraformCloudResource](./Initialize-IntersightTerraformCloudResource.md)
 

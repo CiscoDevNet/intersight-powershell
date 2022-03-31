@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set SdcardPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New SdcardPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSdcardPolicy")]
-    public class SetIntersightSdcardPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightSdcardPolicy")]
+    public class NewIntersightSdcardPolicy:NewCmdletBase
 	{
-		public SetIntersightSdcardPolicy()
+		public NewIntersightSdcardPolicy()
 		{
 			ApiInstance = new SdcardApi(Config);
             ModelObject = new SdcardPolicy();
-            MethodName = "UpdateSdcardPolicyWithHttpInfo";
+            MethodName = "CreateSdcardPolicyWithHttpInfo";
 		}
         
         
@@ -48,7 +48,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -58,7 +58,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -109,18 +109,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SdcardPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdcardPolicy")]
-    public class RemoveIntersightSdcardPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightSdcardPolicy()
-		{
-			ApiInstance = new SdcardApi(Config);
-            MethodName = "DeleteSdcardPolicyWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SdcardPolicy.</para>
@@ -245,16 +233,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New SdcardPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set SdcardPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSdcardPolicy")]
-    public class NewIntersightSdcardPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightSdcardPolicy")]
+    public class SetIntersightSdcardPolicy:SetCmdletBase
 	{
-		public NewIntersightSdcardPolicy()
+		public SetIntersightSdcardPolicy()
 		{
 			ApiInstance = new SdcardApi(Config);
             ModelObject = new SdcardPolicy();
-            MethodName = "CreateSdcardPolicyWithHttpInfo";
+            MethodName = "UpdateSdcardPolicyWithHttpInfo";
 		}
         
         
@@ -285,7 +273,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -295,7 +283,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -346,5 +334,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove SdcardPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdcardPolicy")]
+    public class RemoveIntersightSdcardPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightSdcardPolicy()
+		{
+			ApiInstance = new SdcardApi(Config);
+            MethodName = "DeleteSdcardPolicyWithHttpInfo";
+		}
     }
 }

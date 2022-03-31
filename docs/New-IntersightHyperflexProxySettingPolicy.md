@@ -19,7 +19,7 @@ New-IntersightHyperflexProxySettingPolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexProxySettingPolicy&amp;apos; resource.
+Create a &apos;HyperflexProxySettingPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -253,10 +253,10 @@ PS C:\> New-IntersightHyperflexProxySettingPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
-
 [Set-IntersightHyperflexProxySettingPolicy](./Set-IntersightHyperflexProxySettingPolicy.md)
 
 [Remove-IntersightHyperflexProxySettingPolicy](./Remove-IntersightHyperflexProxySettingPolicy.md)
+
+[Get-IntersightHyperflexProxySettingPolicy](./Get-IntersightHyperflexProxySettingPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

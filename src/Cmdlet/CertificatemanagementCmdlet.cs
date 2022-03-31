@@ -8,16 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set CertificatemanagementPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to New CertificatemanagementPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCertificatemanagementPolicy")]
-    public class SetIntersightCertificatemanagementPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightCertificatemanagementPolicy")]
+    public class NewIntersightCertificatemanagementPolicy:NewCmdletBase
 	{
-		public SetIntersightCertificatemanagementPolicy()
+		public NewIntersightCertificatemanagementPolicy()
 		{
 			ApiInstance = new CertificatemanagementApi(Config);
             ModelObject = new CertificatemanagementPolicy();
-            MethodName = "UpdateCertificatemanagementPolicyWithHttpInfo";
+            MethodName = "CreateCertificatemanagementPolicyWithHttpInfo";
 		}
         
         
@@ -58,7 +58,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -68,7 +68,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -109,18 +109,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove CertificatemanagementPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCertificatemanagementPolicy")]
-    public class RemoveIntersightCertificatemanagementPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightCertificatemanagementPolicy()
-		{
-			ApiInstance = new CertificatemanagementApi(Config);
-            MethodName = "DeleteCertificatemanagementPolicyWithHttpInfo";
-		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CertificatemanagementPolicy.</para>
@@ -245,16 +233,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New CertificatemanagementPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Set CertificatemanagementPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCertificatemanagementPolicy")]
-    public class NewIntersightCertificatemanagementPolicy:NewCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightCertificatemanagementPolicy")]
+    public class SetIntersightCertificatemanagementPolicy:SetCmdletBase
 	{
-		public NewIntersightCertificatemanagementPolicy()
+		public SetIntersightCertificatemanagementPolicy()
 		{
 			ApiInstance = new CertificatemanagementApi(Config);
             ModelObject = new CertificatemanagementPolicy();
-            MethodName = "CreateCertificatemanagementPolicyWithHttpInfo";
+            MethodName = "UpdateCertificatemanagementPolicyWithHttpInfo";
 		}
         
         
@@ -295,7 +283,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -305,7 +293,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
         public string Name {
             get;
@@ -346,5 +334,17 @@ namespace Intersight.PowerShell
             set;
         }
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CertificatemanagementPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCertificatemanagementPolicy")]
+    public class RemoveIntersightCertificatemanagementPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightCertificatemanagementPolicy()
+		{
+			ApiInstance = new CertificatemanagementApi(Config);
+            MethodName = "DeleteCertificatemanagementPolicyWithHttpInfo";
+		}
     }
 }

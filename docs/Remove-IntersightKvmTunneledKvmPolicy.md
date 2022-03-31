@@ -17,7 +17,7 @@ Remove-IntersightKvmTunneledKvmPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KvmTunneledKvmPolicy&amp;apos; resource.
+Delete a &apos;KvmTunneledKvmPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKvmTunneledKvmPolicy](./Set-IntersightKvmTunneledKvmPolicy.md)
+[New-IntersightKvmTunneledKvmPolicy](./New-IntersightKvmTunneledKvmPolicy.md)
 
 [Get-IntersightKvmTunneledKvmPolicy](./Get-IntersightKvmTunneledKvmPolicy.md)
 
-[New-IntersightKvmTunneledKvmPolicy](./New-IntersightKvmTunneledKvmPolicy.md)
+[Set-IntersightKvmTunneledKvmPolicy](./Set-IntersightKvmTunneledKvmPolicy.md)
 

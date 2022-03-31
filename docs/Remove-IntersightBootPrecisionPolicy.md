@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightBootPrecisionPolicy](./New-IntersightBootPrecisionPolicy.md)
-
 [Get-IntersightBootPrecisionPolicy](./Get-IntersightBootPrecisionPolicy.md)
+
+[New-IntersightBootPrecisionPolicy](./New-IntersightBootPrecisionPolicy.md)
 
 [Set-IntersightBootPrecisionPolicy](./Set-IntersightBootPrecisionPolicy.md)
 

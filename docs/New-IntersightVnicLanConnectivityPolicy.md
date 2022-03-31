@@ -19,7 +19,7 @@ New-IntersightVnicLanConnectivityPolicy [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &apos;VnicLanConnectivityPolicy&apos; resource.
+Create a &amp;apos;VnicLanConnectivityPolicy&amp;apos; resource.
 
 ## PARAMETERS
 

@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -MacAgingTime
-Define the MAC address aging time in seconds. This field is valid when the \&quot;Custom\&quot; MAC address aging option is selected.
+Define the MAC address aging time in seconds. This field is valid when the \&amp;quot;Custom\&amp;quot; MAC address aging option is selected.
 
 ```yaml
 Type: int

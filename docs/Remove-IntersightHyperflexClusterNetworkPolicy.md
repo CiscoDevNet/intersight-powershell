@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterNetworkPolicy -Moid <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexClusterNetworkPolicy&apos; resource.
+Delete a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
 
 ## EXAMPLES
 

@@ -19,7 +19,7 @@ New-IntersightDeviceconnectorPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;DeviceconnectorPolicy&amp;apos; resource.
+Create a &apos;DeviceconnectorPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -208,10 +208,10 @@ PS C:\> New-IntersightDeviceconnectorPolicy
 
 ## RELATED LINKS
 
-[Get-IntersightDeviceconnectorPolicy](./Get-IntersightDeviceconnectorPolicy.md)
-
 [Set-IntersightDeviceconnectorPolicy](./Set-IntersightDeviceconnectorPolicy.md)
 
 [Remove-IntersightDeviceconnectorPolicy](./Remove-IntersightDeviceconnectorPolicy.md)
+
+[Get-IntersightDeviceconnectorPolicy](./Get-IntersightDeviceconnectorPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -17,7 +17,7 @@ Remove-IntersightHyperflexBackupCluster -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;HyperflexBackupCluster&apos; resource.
+Delete a &amp;apos;HyperflexBackupCluster&amp;apos; resource.
 
 ## EXAMPLES
 

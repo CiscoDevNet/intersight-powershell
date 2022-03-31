@@ -19,7 +19,7 @@ New-IntersightKvmTunnel [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Create a &apos;KvmTunnel&apos; resource.
+Create a &amp;apos;KvmTunnel&amp;apos; resource.
 
 ## PARAMETERS
 

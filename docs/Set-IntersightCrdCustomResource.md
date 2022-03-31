@@ -19,7 +19,7 @@ Set-IntersightCrdCustomResource [-Account< IamAccountRelationship>][-AdditionalP
 ```
 
 ## DESCRIPTION
-Update a &apos;CrdCustomResource&apos; resource.
+Update a &amp;apos;CrdCustomResource&amp;apos; resource.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DcLauncher
-Type of custom resource or &apos;kind&apos; in K8s.
+Type of custom resource or &amp;apos;kind&amp;apos; in K8s.
 
 ```yaml
 Type: string
@@ -282,11 +282,11 @@ PS C:\> Set-IntersightCrdCustomResource
 
 ## RELATED LINKS
 
+[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
+
 [Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
 [New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
-
-[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
 
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
 

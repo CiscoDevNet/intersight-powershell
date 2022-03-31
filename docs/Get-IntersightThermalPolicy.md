@@ -25,7 +25,7 @@ Get-IntersightThermalPolicy [-Count <Boolean>] [-InlineCount <String>] [-Select 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;ThermalPolicy&amp;apos; resource.,
+Read a &apos;ThermalPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)
-
 [Set-IntersightThermalPolicy](./Set-IntersightThermalPolicy.md)
 
 [Remove-IntersightThermalPolicy](./Remove-IntersightThermalPolicy.md)
+
+[New-IntersightThermalPolicy](./New-IntersightThermalPolicy.md)
 

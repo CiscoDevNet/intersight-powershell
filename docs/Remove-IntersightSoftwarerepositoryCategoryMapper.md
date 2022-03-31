@@ -17,7 +17,7 @@ Remove-IntersightSoftwarerepositoryCategoryMapper -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
+Delete a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)
-
 [Get-IntersightSoftwarerepositoryCategoryMapper](./Get-IntersightSoftwarerepositoryCategoryMapper.md)
 
 [New-IntersightSoftwarerepositoryCategoryMapper](./New-IntersightSoftwarerepositoryCategoryMapper.md)
+
+[Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)
 

@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mtu
-Maximum transmission unit (MTU) is the largest size packet or frame,\nthat can be sent in a packet- or frame-based network such as the Internet.\nUser can select from the following:\n1. Any value between 1500 and 9216\n2. &amp;apos;Normal&amp;apos; (default) mapping to a value of 1500.\n3. &amp;apos;FC&amp;apos; mapping to a value of 2240.
+Maximum transmission unit (MTU) is the largest size packet or frame,\nthat can be sent in a packet- or frame-based network such as the Internet.\nUser can select from the following:\n1. Any value between 1500 and 9216\n2. &apos;Normal&apos; (default) mapping to a value of 1500.\n3. &apos;FC&apos; mapping to a value of 2240.
 
 ```yaml
 Type: long
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &amp;apos;name&amp;apos; of this QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic.
+The &apos;name&apos; of this QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic.
 
 ```yaml
 Type: FabricQosClass.NameEnum
