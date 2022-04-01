@@ -175,10 +175,10 @@ PS C:\> Set-IntersightIamLdapProvider
 
 ## RELATED LINKS
 
-[New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
-
 [Get-IntersightIamLdapProvider](./Get-IntersightIamLdapProvider.md)
 
-[Remove-IntersightIamLdapProvider](./Remove-IntersightIamLdapProvider.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
+
+[Remove-IntersightIamLdapProvider](./Remove-IntersightIamLdapProvider.md)

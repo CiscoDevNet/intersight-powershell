@@ -242,12 +242,12 @@ PS C:\> Set-IntersightHyperflexExtIscsiStoragePolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexExtIscsiStoragePolicy](./Remove-IntersightHyperflexExtIscsiStoragePolicy.md)
-
 [Get-IntersightHyperflexExtIscsiStoragePolicy](./Get-IntersightHyperflexExtIscsiStoragePolicy.md)
-
-[New-IntersightHyperflexExtIscsiStoragePolicy](./New-IntersightHyperflexExtIscsiStoragePolicy.md)
 
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightHyperflexExtIscsiStoragePolicy](./New-IntersightHyperflexExtIscsiStoragePolicy.md)
+
+[Remove-IntersightHyperflexExtIscsiStoragePolicy](./Remove-IntersightHyperflexExtIscsiStoragePolicy.md)

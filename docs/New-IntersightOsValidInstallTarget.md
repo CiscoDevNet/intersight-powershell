@@ -160,10 +160,10 @@ PS C:\> New-IntersightOsValidInstallTarget
 
 ## RELATED LINKS
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [Initialize-IntersightOsInstallTargetResponse](./Initialize-IntersightOsInstallTargetResponse.md)
 
 [Initialize-IntersightOsPhysicalDiskResponse](./Initialize-IntersightOsPhysicalDiskResponse.md)
 
 [Initialize-IntersightOsVirtualDriveResponse](./Initialize-IntersightOsVirtualDriveResponse.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

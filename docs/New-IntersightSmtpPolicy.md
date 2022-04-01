@@ -379,10 +379,10 @@ PS C:\> New-IntersightSmtpPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
-
-[Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
-
 [Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
+
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)

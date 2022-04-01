@@ -205,10 +205,10 @@ PS C:\> Set-IntersightOprsSyncTargetListMessage
 
 ## RELATED LINKS
 
-[Remove-IntersightOprsSyncTargetListMessage](./Remove-IntersightOprsSyncTargetListMessage.md)
-
 [Get-IntersightOprsSyncTargetListMessage](./Get-IntersightOprsSyncTargetListMessage.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightOprsSyncTargetListMessage](./New-IntersightOprsSyncTargetListMessage.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightOprsSyncTargetListMessage](./Remove-IntersightOprsSyncTargetListMessage.md)

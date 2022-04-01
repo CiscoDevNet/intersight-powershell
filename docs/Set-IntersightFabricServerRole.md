@@ -190,10 +190,10 @@ PS C:\> Set-IntersightFabricServerRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
-
 [Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)

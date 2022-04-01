@@ -205,10 +205,10 @@ PS C:\> Set-IntersightFabricPortMode
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)
-
 [Get-IntersightFabricPortMode](./Get-IntersightFabricPortMode.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightFabricPortMode](./New-IntersightFabricPortMode.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFabricPortMode](./Remove-IntersightFabricPortMode.md)

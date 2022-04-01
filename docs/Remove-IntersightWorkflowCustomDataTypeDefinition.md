@@ -17,7 +17,7 @@ Remove-IntersightWorkflowCustomDataTypeDefinition -Moid <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;WorkflowCustomDataTypeDefinition&amp;apos; resource.
+Delete a &apos;WorkflowCustomDataTypeDefinition&apos; resource.
 
 ## EXAMPLES
 

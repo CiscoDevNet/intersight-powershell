@@ -209,10 +209,10 @@ PS C:\> Set-IntersightVnicEthNetworkPolicy
 
 [Get-IntersightVnicEthNetworkPolicy](./Get-IntersightVnicEthNetworkPolicy.md)
 
-[New-IntersightVnicEthNetworkPolicy](./New-IntersightVnicEthNetworkPolicy.md)
-
-[Remove-IntersightVnicEthNetworkPolicy](./Remove-IntersightVnicEthNetworkPolicy.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicVlanSettings](./Initialize-IntersightVnicVlanSettings.md)
+
+[New-IntersightVnicEthNetworkPolicy](./New-IntersightVnicEthNetworkPolicy.md)
+
+[Remove-IntersightVnicEthNetworkPolicy](./Remove-IntersightVnicEthNetworkPolicy.md)

@@ -383,14 +383,14 @@ PS C:\> New-IntersightHyperflexNodeProfile
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)
-
-[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
-
 [Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
+
+[Set-IntersightHyperflexNodeProfile](./Set-IntersightHyperflexNodeProfile.md)

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightIamLdapProvider](./New-IntersightIamLdapProvider.md)
 
-[Set-IntersightIamLdapProvider](./Set-IntersightIamLdapProvider.md)
-
 [Remove-IntersightIamLdapProvider](./Remove-IntersightIamLdapProvider.md)
+
+[Set-IntersightIamLdapProvider](./Set-IntersightIamLdapProvider.md)
 

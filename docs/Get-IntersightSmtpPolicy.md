@@ -25,7 +25,7 @@ Get-IntersightSmtpPolicy [-Count <Boolean>] [-InlineCount <String>] [-Select <St
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SmtpPolicy&amp;apos; resource.,
+Read a &apos;SmtpPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
+[New-IntersightSmtpPolicy](./New-IntersightSmtpPolicy.md)
 
 [Remove-IntersightSmtpPolicy](./Remove-IntersightSmtpPolicy.md)
 
-[New-IntersightSmtpPolicy](./New-IntersightSmtpPolicy.md)
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
 

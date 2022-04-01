@@ -19,7 +19,7 @@ New-IntersightHyperflexKeyEncryptionKey [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexKeyEncryptionKey&amp;apos; resource.
+Create a &apos;HyperflexKeyEncryptionKey&apos; resource.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Kek
-Key encryption key used to encrypt the DEK&amp;apos;s on the HyperFlex cluster.
+Key encryption key used to encrypt the DEK&apos;s on the HyperFlex cluster.
 
 ```yaml
 Type: string
@@ -285,8 +285,8 @@ PS C:\> New-IntersightHyperflexKeyEncryptionKey
 
 [Get-IntersightHyperflexKeyEncryptionKey](./Get-IntersightHyperflexKeyEncryptionKey.md)
 
-[Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightHyperflexKeyEncryptionKey](./Remove-IntersightHyperflexKeyEncryptionKey.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)

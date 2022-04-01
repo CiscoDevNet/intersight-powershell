@@ -144,8 +144,8 @@ PS C:\> Set-IntersightTechsupportmanagementCollectionControlPolicy
 
 [Get-IntersightTechsupportmanagementCollectionControlPolicy](./Get-IntersightTechsupportmanagementCollectionControlPolicy.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightTechsupportmanagementCollectionControlPolicy](./New-IntersightTechsupportmanagementCollectionControlPolicy.md)
 
 [Remove-IntersightTechsupportmanagementCollectionControlPolicy](./Remove-IntersightTechsupportmanagementCollectionControlPolicy.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

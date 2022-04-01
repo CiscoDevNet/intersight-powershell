@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightVmediaPolicy](./New-IntersightVmediaPolicy.md)
-
 [Get-IntersightVmediaPolicy](./Get-IntersightVmediaPolicy.md)
+
+[New-IntersightVmediaPolicy](./New-IntersightVmediaPolicy.md)
 
 [Set-IntersightVmediaPolicy](./Set-IntersightVmediaPolicy.md)
 

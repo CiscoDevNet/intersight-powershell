@@ -19,7 +19,7 @@ Set-IntersightKubernetesAddonDefinition [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAddonDefinition&amp;apos; resource.
+Update a &apos;KubernetesAddonDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -343,10 +343,10 @@ PS C:\> Set-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
-
 [Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightKubernetesAddonDefinition](./New-IntersightKubernetesAddonDefinition.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)

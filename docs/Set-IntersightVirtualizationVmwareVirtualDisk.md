@@ -449,6 +449,6 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualDisk
 
 [Get-IntersightVirtualizationVmwareVirtualDisk](./Get-IntersightVirtualizationVmwareVirtualDisk.md)
 
-[Initialize-IntersightVirtualizationVmwareSharesInfo](./Initialize-IntersightVirtualizationVmwareSharesInfo.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationVmwareSharesInfo](./Initialize-IntersightVirtualizationVmwareSharesInfo.md)

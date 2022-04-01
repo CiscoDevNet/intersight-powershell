@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: ConnectorHttpRequest.ObjectTypeEnum
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &amp;apos;AES&amp;apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -314,8 +314,8 @@ PS C:\> Initialize-IntersightConnectorHttpRequest
 
 ## RELATED LINKS
 
+[Initialize-IntersightConnectorUrl](./Initialize-IntersightConnectorUrl.md)
+
 [Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
-[Initialize-IntersightConnectorUrl](./Initialize-IntersightConnectorUrl.md)

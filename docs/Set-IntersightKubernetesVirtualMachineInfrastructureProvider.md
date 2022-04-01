@@ -19,7 +19,7 @@ Set-IntersightKubernetesVirtualMachineInfrastructureProvider [-AdditionalPropert
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesVirtualMachineInfrastructureProvider&amp;apos; resource.
+Update a &apos;KubernetesVirtualMachineInfrastructureProvider&apos; resource.
 
 ## PARAMETERS
 
@@ -248,8 +248,8 @@ PS C:\> Set-IntersightKubernetesVirtualMachineInfrastructureProvider
 
 [Get-IntersightKubernetesVirtualMachineInfrastructureProvider](./Get-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
 
-[New-IntersightKubernetesVirtualMachineInfrastructureProvider](./New-IntersightKubernetesVirtualMachineInfrastructureProvider.md)
-
 [Initialize-IntersightKubernetesBaseVirtualMachineInfraConfig](./Initialize-IntersightKubernetesBaseVirtualMachineInfraConfig.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightKubernetesVirtualMachineInfrastructureProvider](./New-IntersightKubernetesVirtualMachineInfrastructureProvider.md)

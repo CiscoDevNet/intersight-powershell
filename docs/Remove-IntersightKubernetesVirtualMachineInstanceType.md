@@ -17,7 +17,7 @@ Remove-IntersightKubernetesVirtualMachineInstanceType -Moid <String> [<CommonPar
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesVirtualMachineInstanceType&amp;apos; resource.
+Delete a &apos;KubernetesVirtualMachineInstanceType&apos; resource.
 
 ## EXAMPLES
 

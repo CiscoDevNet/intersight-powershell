@@ -17,7 +17,7 @@ Remove-IntersightVnicEthAdapterPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
+Delete a &apos;VnicEthAdapterPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicEthAdapterPolicy](./Set-IntersightVnicEthAdapterPolicy.md)
-
 [Get-IntersightVnicEthAdapterPolicy](./Get-IntersightVnicEthAdapterPolicy.md)
 
 [New-IntersightVnicEthAdapterPolicy](./New-IntersightVnicEthAdapterPolicy.md)
+
+[Set-IntersightVnicEthAdapterPolicy](./Set-IntersightVnicEthAdapterPolicy.md)
 

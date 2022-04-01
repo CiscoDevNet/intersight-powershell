@@ -164,10 +164,10 @@ PS C:\> Set-IntersightStorageNetAppCluster
 
 [Get-IntersightStorageNetAppCluster](./Get-IntersightStorageNetAppCluster.md)
 
-[Initialize-IntersightStorageNetAppPerformanceMetricsAverage](./Initialize-IntersightStorageNetAppPerformanceMetricsAverage.md)
-
-[Initialize-IntersightStorageNetAppStorageClusterEfficiency](./Initialize-IntersightStorageNetAppStorageClusterEfficiency.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightStorageBaseCapacity](./Initialize-IntersightStorageBaseCapacity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightStorageNetAppPerformanceMetricsAverage](./Initialize-IntersightStorageNetAppPerformanceMetricsAverage.md)
+
+[Initialize-IntersightStorageNetAppStorageClusterEfficiency](./Initialize-IntersightStorageNetAppStorageClusterEfficiency.md)

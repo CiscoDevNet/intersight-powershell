@@ -19,7 +19,7 @@ Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VnicEthIf&amp;apos; resource.
+Update a &apos;VnicEthIf&apos; resource.
 
 ## PARAMETERS
 
@@ -468,20 +468,20 @@ PS C:\> Set-IntersightVnicEthIf
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
-
 [Get-IntersightVnicEthIf](./Get-IntersightVnicEthIf.md)
 
-[New-IntersightVnicEthIf](./New-IntersightVnicEthIf.md)
+[Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
-
-[Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 
 [Initialize-IntersightVnicUsnicSettings](./Initialize-IntersightVnicUsnicSettings.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
 [Initialize-IntersightVnicVmqSettings](./Initialize-IntersightVnicVmqSettings.md)
+
+[New-IntersightVnicEthIf](./New-IntersightVnicEthIf.md)
+
+[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)

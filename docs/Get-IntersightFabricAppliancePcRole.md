@@ -25,7 +25,7 @@ Get-IntersightFabricAppliancePcRole [-Count <Boolean>] [-InlineCount <String>] [
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FabricAppliancePcRole&amp;apos; resource.,
+Read a &apos;FabricAppliancePcRole&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFabricAppliancePcRole](./Set-IntersightFabricAppliancePcRole.md)
+[New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
 
 [Remove-IntersightFabricAppliancePcRole](./Remove-IntersightFabricAppliancePcRole.md)
 
-[New-IntersightFabricAppliancePcRole](./New-IntersightFabricAppliancePcRole.md)
+[Set-IntersightFabricAppliancePcRole](./Set-IntersightFabricAppliancePcRole.md)
 

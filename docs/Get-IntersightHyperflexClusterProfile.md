@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexClusterProfile](./New-IntersightHyperflexClusterProfile.md)
 
-[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
-
 [Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
+
+[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
 

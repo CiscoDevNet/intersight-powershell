@@ -269,9 +269,9 @@ PS C:\> Initialize-IntersightVirtualizationEsxiVmConfiguration
 
 ## RELATED LINKS
 
-[Initialize-IntersightVirtualizationEsxiVmComputeConfiguration](./Initialize-IntersightVirtualizationEsxiVmComputeConfiguration.md)
-
 [Initialize-IntersightVirtualizationBaseCustomSpec](./Initialize-IntersightVirtualizationBaseCustomSpec.md)
+
+[Initialize-IntersightVirtualizationEsxiVmComputeConfiguration](./Initialize-IntersightVirtualizationEsxiVmComputeConfiguration.md)
 
 [Initialize-IntersightVirtualizationEsxiVmNetworkConfiguration](./Initialize-IntersightVirtualizationEsxiVmNetworkConfiguration.md)
 

@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowSshBatchExecutor](./Set-IntersightWorkflowSshBatchExecutor.md)
-
 [Get-IntersightWorkflowSshBatchExecutor](./Get-IntersightWorkflowSshBatchExecutor.md)
 
 [New-IntersightWorkflowSshBatchExecutor](./New-IntersightWorkflowSshBatchExecutor.md)
+
+[Set-IntersightWorkflowSshBatchExecutor](./Set-IntersightWorkflowSshBatchExecutor.md)
 

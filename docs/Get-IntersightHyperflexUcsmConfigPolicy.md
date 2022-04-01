@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexUcsmConfigPolicy](./New-IntersightHyperflexUcsmConfigPolicy.md)
 
-[Set-IntersightHyperflexUcsmConfigPolicy](./Set-IntersightHyperflexUcsmConfigPolicy.md)
-
 [Remove-IntersightHyperflexUcsmConfigPolicy](./Remove-IntersightHyperflexUcsmConfigPolicy.md)
+
+[Set-IntersightHyperflexUcsmConfigPolicy](./Set-IntersightHyperflexUcsmConfigPolicy.md)
 

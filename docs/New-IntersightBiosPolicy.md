@@ -6045,8 +6045,8 @@ PS C:\> New-IntersightBiosPolicy
 
 [Get-IntersightBiosPolicy](./Get-IntersightBiosPolicy.md)
 
-[Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightBiosPolicy](./Remove-IntersightBiosPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightBiosPolicy](./Set-IntersightBiosPolicy.md)

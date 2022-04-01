@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&amp;apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
-The input/output payload to/from the pseudo terminal session. When sent from the cloud service if the msgType is CommandInput stream is piped to stdin of the command or a resize message if msgType is CommandResize. From the device connector value is always the combined output of stdout &amp; stderr.
+The input/output payload to/from the pseudo terminal session. When sent from the cloud service if the msgType is CommandInput stream is piped to stdin of the command or a resize message if msgType is CommandResize. From the device connector value is always the combined output of stdout $amp stderr.
 
 Note :- Use Initialize-Intersightbyte[] to create the object of complex type byte[]
 
@@ -220,6 +220,6 @@ PS C:\> Initialize-IntersightConnectorCommandTerminalStream
 
 ## RELATED LINKS
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

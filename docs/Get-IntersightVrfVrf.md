@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVrfVrf](./Set-IntersightVrfVrf.md)
+[New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
 
 [Remove-IntersightVrfVrf](./Remove-IntersightVrfVrf.md)
 
-[New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
+[Set-IntersightVrfVrf](./Set-IntersightVrfVrf.md)
 

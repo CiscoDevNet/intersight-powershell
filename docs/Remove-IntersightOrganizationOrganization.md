@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
+[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
 
 [New-IntersightOrganizationOrganization](./New-IntersightOrganizationOrganization.md)
 
-[Get-IntersightOrganizationOrganization](./Get-IntersightOrganizationOrganization.md)
+[Set-IntersightOrganizationOrganization](./Set-IntersightOrganizationOrganization.md)
 

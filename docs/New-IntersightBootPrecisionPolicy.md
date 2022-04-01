@@ -19,7 +19,7 @@ New-IntersightBootPrecisionPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;BootPrecisionPolicy&amp;apos; resource.
+Create a &apos;BootPrecisionPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -255,10 +255,10 @@ PS C:\> New-IntersightBootPrecisionPolicy
 
 [Get-IntersightBootPrecisionPolicy](./Get-IntersightBootPrecisionPolicy.md)
 
-[Set-IntersightBootPrecisionPolicy](./Set-IntersightBootPrecisionPolicy.md)
-
-[Remove-IntersightBootPrecisionPolicy](./Remove-IntersightBootPrecisionPolicy.md)
-
 [Initialize-IntersightBootDeviceBase](./Initialize-IntersightBootDeviceBase.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightBootPrecisionPolicy](./Remove-IntersightBootPrecisionPolicy.md)
+
+[Set-IntersightBootPrecisionPolicy](./Set-IntersightBootPrecisionPolicy.md)

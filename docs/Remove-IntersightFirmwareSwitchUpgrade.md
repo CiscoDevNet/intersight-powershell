@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareSwitchUpgrade](./New-IntersightFirmwareSwitchUpgrade.md)
-
 [Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
+
+[New-IntersightFirmwareSwitchUpgrade](./New-IntersightFirmwareSwitchUpgrade.md)
 

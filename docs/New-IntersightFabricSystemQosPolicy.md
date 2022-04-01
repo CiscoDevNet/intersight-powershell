@@ -212,10 +212,10 @@ PS C:\> New-IntersightFabricSystemQosPolicy
 
 [Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
 
-[Set-IntersightFabricSystemQosPolicy](./Set-IntersightFabricSystemQosPolicy.md)
-
-[Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
-
 [Initialize-IntersightFabricQosClass](./Initialize-IntersightFabricQosClass.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightFabricSystemQosPolicy](./Remove-IntersightFabricSystemQosPolicy.md)
+
+[Set-IntersightFabricSystemQosPolicy](./Set-IntersightFabricSystemQosPolicy.md)

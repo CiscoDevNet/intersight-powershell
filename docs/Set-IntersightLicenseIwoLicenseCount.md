@@ -19,7 +19,7 @@ Set-IntersightLicenseIwoLicenseCount [-AccountLicenseData< LicenseAccountLicense
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseIwoLicenseCount&amp;apos; resource.
+Update a &apos;LicenseIwoLicenseCount&apos; resource.
 
 ## PARAMETERS
 
@@ -147,6 +147,6 @@ PS C:\> Set-IntersightLicenseIwoLicenseCount
 
 [Get-IntersightLicenseIwoLicenseCount](./Get-IntersightLicenseIwoLicenseCount.md)
 
-[New-IntersightLicenseIwoLicenseCount](./New-IntersightLicenseIwoLicenseCount.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightLicenseIwoLicenseCount](./New-IntersightLicenseIwoLicenseCount.md)

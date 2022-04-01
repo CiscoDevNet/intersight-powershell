@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFabricUplinkPcRole](./New-IntersightFabricUplinkPcRole.md)
 
-[Set-IntersightFabricUplinkPcRole](./Set-IntersightFabricUplinkPcRole.md)
-
 [Remove-IntersightFabricUplinkPcRole](./Remove-IntersightFabricUplinkPcRole.md)
+
+[Set-IntersightFabricUplinkPcRole](./Set-IntersightFabricUplinkPcRole.md)
 

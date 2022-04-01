@@ -276,10 +276,6 @@ PS C:\> New-IntersightMemoryPersistentMemoryPolicy
 
 [Get-IntersightMemoryPersistentMemoryPolicy](./Get-IntersightMemoryPersistentMemoryPolicy.md)
 
-[Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)
-
-[Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
-
 [Initialize-IntersightMemoryPersistentMemoryGoal](./Initialize-IntersightMemoryPersistentMemoryGoal.md)
 
 [Initialize-IntersightMemoryPersistentMemoryLocalSecurity](./Initialize-IntersightMemoryPersistentMemoryLocalSecurity.md)
@@ -287,3 +283,7 @@ PS C:\> New-IntersightMemoryPersistentMemoryPolicy
 [Initialize-IntersightMemoryPersistentMemoryLogicalNamespace](./Initialize-IntersightMemoryPersistentMemoryLogicalNamespace.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightMemoryPersistentMemoryPolicy](./Remove-IntersightMemoryPersistentMemoryPolicy.md)
+
+[Set-IntersightMemoryPersistentMemoryPolicy](./Set-IntersightMemoryPersistentMemoryPolicy.md)

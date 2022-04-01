@@ -19,7 +19,7 @@ Set-IntersightGraphicsCard [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;GraphicsCard&amp;apos; resource.
+Update a &apos;GraphicsCard&apos; resource.
 
 ## PARAMETERS
 

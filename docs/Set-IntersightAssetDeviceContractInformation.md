@@ -142,8 +142,6 @@ PS C:\> Set-IntersightAssetDeviceContractInformation
 
 ## RELATED LINKS
 
-[Remove-IntersightAssetDeviceContractInformation](./Remove-IntersightAssetDeviceContractInformation.md)
-
 [Get-IntersightAssetDeviceContractInformation](./Get-IntersightAssetDeviceContractInformation.md)
 
 [Initialize-IntersightAssetContractInformation](./Initialize-IntersightAssetContractInformation.md)
@@ -155,3 +153,5 @@ PS C:\> Set-IntersightAssetDeviceContractInformation
 [Initialize-IntersightAssetProductInformation](./Initialize-IntersightAssetProductInformation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightAssetDeviceContractInformation](./Remove-IntersightAssetDeviceContractInformation.md)

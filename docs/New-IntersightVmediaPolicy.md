@@ -257,10 +257,10 @@ PS C:\> New-IntersightVmediaPolicy
 
 [Get-IntersightVmediaPolicy](./Get-IntersightVmediaPolicy.md)
 
-[Set-IntersightVmediaPolicy](./Set-IntersightVmediaPolicy.md)
-
-[Remove-IntersightVmediaPolicy](./Remove-IntersightVmediaPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVmediaMapping](./Initialize-IntersightVmediaMapping.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVmediaPolicy](./Remove-IntersightVmediaPolicy.md)
+
+[Set-IntersightVmediaPolicy](./Set-IntersightVmediaPolicy.md)

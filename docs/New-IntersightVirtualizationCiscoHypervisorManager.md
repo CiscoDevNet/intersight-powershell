@@ -19,7 +19,7 @@ New-IntersightVirtualizationCiscoHypervisorManager [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationCiscoHypervisorManager&amp;apos; resource.
+Create a &apos;VirtualizationCiscoHypervisorManager&apos; resource.
 
 ## PARAMETERS
 
@@ -162,6 +162,6 @@ PS C:\> New-IntersightVirtualizationCiscoHypervisorManager
 
 [Get-IntersightVirtualizationCiscoHypervisorManager](./Get-IntersightVirtualizationCiscoHypervisorManager.md)
 
-[Set-IntersightVirtualizationCiscoHypervisorManager](./Set-IntersightVirtualizationCiscoHypervisorManager.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightVirtualizationCiscoHypervisorManager](./Set-IntersightVirtualizationCiscoHypervisorManager.md)

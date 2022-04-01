@@ -19,7 +19,7 @@ Set-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BulkExport&amp;apos; resource.
+Update a &apos;BulkExport&apos; resource.
 
 ## PARAMETERS
 
@@ -209,14 +209,14 @@ PS C:\> Set-IntersightBulkExport
 
 [Get-IntersightBulkExport](./Get-IntersightBulkExport.md)
 
-[New-IntersightBulkExport](./New-IntersightBulkExport.md)
-
-[Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
-
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
 
 [Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)
+
+[New-IntersightBulkExport](./New-IntersightBulkExport.md)
+
+[Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)

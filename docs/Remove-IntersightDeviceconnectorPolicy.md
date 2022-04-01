@@ -17,7 +17,7 @@ Remove-IntersightDeviceconnectorPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;DeviceconnectorPolicy&amp;apos; resource.
+Delete a &apos;DeviceconnectorPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
-
 [Get-IntersightDeviceconnectorPolicy](./Get-IntersightDeviceconnectorPolicy.md)
+
+[New-IntersightDeviceconnectorPolicy](./New-IntersightDeviceconnectorPolicy.md)
 
 [Set-IntersightDeviceconnectorPolicy](./Set-IntersightDeviceconnectorPolicy.md)
 

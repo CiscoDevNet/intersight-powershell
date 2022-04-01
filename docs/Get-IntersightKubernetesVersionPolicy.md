@@ -25,7 +25,7 @@ Get-IntersightKubernetesVersionPolicy [-Count <Boolean>] [-InlineCount <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;KubernetesVersionPolicy&amp;apos; resource.,
+Read a &apos;KubernetesVersionPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
+[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
 
 [Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
 
-[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
+[Set-IntersightKubernetesVersionPolicy](./Set-IntersightKubernetesVersionPolicy.md)
 

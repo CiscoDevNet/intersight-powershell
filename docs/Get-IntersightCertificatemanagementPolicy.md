@@ -25,7 +25,7 @@ Get-IntersightCertificatemanagementPolicy [-Count <Boolean>] [-InlineCount <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;CertificatemanagementPolicy&amp;apos; resource.,
+Read a &apos;CertificatemanagementPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCertificatemanagementPolicy](./Set-IntersightCertificatemanagementPolicy.md)
+[New-IntersightCertificatemanagementPolicy](./New-IntersightCertificatemanagementPolicy.md)
 
 [Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)
 
-[New-IntersightCertificatemanagementPolicy](./New-IntersightCertificatemanagementPolicy.md)
+[Set-IntersightCertificatemanagementPolicy](./Set-IntersightCertificatemanagementPolicy.md)
 

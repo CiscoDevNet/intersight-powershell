@@ -226,12 +226,12 @@ PS C:\> Set-IntersightFabricSwitchClusterProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)
-
 [Get-IntersightFabricSwitchClusterProfile](./Get-IntersightFabricSwitchClusterProfile.md)
 
-[New-IntersightFabricSwitchClusterProfile](./New-IntersightFabricSwitchClusterProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightFabricSwitchClusterProfile](./New-IntersightFabricSwitchClusterProfile.md)
+
+[Remove-IntersightFabricSwitchClusterProfile](./Remove-IntersightFabricSwitchClusterProfile.md)

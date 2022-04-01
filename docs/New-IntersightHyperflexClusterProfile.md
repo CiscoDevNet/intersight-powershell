@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterProfile [-Action< string>][-ActionParams< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
+Create a &apos;HyperflexClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -793,16 +793,16 @@ PS C:\> New-IntersightHyperflexClusterProfile
 
 [Get-IntersightHyperflexClusterProfile](./Get-IntersightHyperflexClusterProfile.md)
 
-[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)
-
-[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
-
-[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
-
 [Initialize-IntersightCommIpV4Interface](./Initialize-IntersightCommIpV4Interface.md)
-
-[Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
+
+[Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Remove-IntersightHyperflexClusterProfile](./Remove-IntersightHyperflexClusterProfile.md)
+
+[Set-IntersightHyperflexClusterProfile](./Set-IntersightHyperflexClusterProfile.md)

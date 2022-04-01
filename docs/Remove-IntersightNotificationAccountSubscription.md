@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightNotificationAccountSubscription](./Set-IntersightNotificationAccountSubscription.md)
-
 [Get-IntersightNotificationAccountSubscription](./Get-IntersightNotificationAccountSubscription.md)
 
 [New-IntersightNotificationAccountSubscription](./New-IntersightNotificationAccountSubscription.md)
+
+[Set-IntersightNotificationAccountSubscription](./Set-IntersightNotificationAccountSubscription.md)
 

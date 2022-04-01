@@ -19,7 +19,7 @@ New-IntersightVirtualizationEsxiConsole [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationEsxiConsole&amp;apos; resource.
+Create a &apos;VirtualizationEsxiConsole&apos; resource.
 
 ## PARAMETERS
 
@@ -180,6 +180,6 @@ PS C:\> New-IntersightVirtualizationEsxiConsole
 
 [Get-IntersightVirtualizationEsxiConsole](./Get-IntersightVirtualizationEsxiConsole.md)
 
-[Set-IntersightVirtualizationEsxiConsole](./Set-IntersightVirtualizationEsxiConsole.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightVirtualizationEsxiConsole](./Set-IntersightVirtualizationEsxiConsole.md)

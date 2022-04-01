@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightSyslogPolicy](./New-IntersightSyslogPolicy.md)
 
-[Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
-
 [Remove-IntersightSyslogPolicy](./Remove-IntersightSyslogPolicy.md)
+
+[Set-IntersightSyslogPolicy](./Set-IntersightSyslogPolicy.md)
 

@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionType
-Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &amp;apos;discovered&amp;apos; and not created from Intersight. No provisioning information is available.
+Identifies the provision type to create a new virtual machine.\n* `OVA` - Deploy virtual machine using OVA/F file.\n* `Template` - Provision virtual machine using a template file.\n* `Discovered` - A virtual machine was &apos;discovered&apos; and not created from Intersight. No provisioning information is available.
 
 ```yaml
 Type: VirtualizationVirtualMachine.ProvisionTypeEnum
@@ -452,20 +452,20 @@ PS C:\> Set-IntersightVirtualizationVirtualMachine
 
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
-[New-IntersightVirtualizationVirtualMachine](./New-IntersightVirtualizationVirtualMachine.md)
-
-[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
-
-[Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
-
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
-
-[Initialize-IntersightVirtualizationCloudInitConfig](./Initialize-IntersightVirtualizationCloudInitConfig.md)
-
-[Initialize-IntersightVirtualizationVirtualMachineDisk](./Initialize-IntersightVirtualizationVirtualMachineDisk.md)
-
-[Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
+[Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
+
 [Initialize-IntersightVirtualizationBaseVmConfiguration](./Initialize-IntersightVirtualizationBaseVmConfiguration.md)
+
+[Initialize-IntersightVirtualizationCloudInitConfig](./Initialize-IntersightVirtualizationCloudInitConfig.md)
+
+[Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)
+
+[Initialize-IntersightVirtualizationVirtualMachineDisk](./Initialize-IntersightVirtualizationVirtualMachineDisk.md)
+
+[New-IntersightVirtualizationVirtualMachine](./New-IntersightVirtualizationVirtualMachine.md)
+
+[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)

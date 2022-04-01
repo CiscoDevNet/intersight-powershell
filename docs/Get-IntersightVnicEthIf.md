@@ -25,7 +25,7 @@ Get-IntersightVnicEthIf [-Count <Boolean>] [-InlineCount <String>] [-Select <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;VnicEthIf&amp;apos; resource.,
+Read a &apos;VnicEthIf&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)
+[New-IntersightVnicEthIf](./New-IntersightVnicEthIf.md)
 
 [Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
 
-[New-IntersightVnicEthIf](./New-IntersightVnicEthIf.md)
+[Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)
 

@@ -19,7 +19,7 @@ New-IntersightIamIpAddress [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamIpAddress&amp;apos; resource.
+Create a &apos;IamIpAddress&apos; resource.
 
 ## PARAMETERS
 
@@ -157,10 +157,10 @@ PS C:\> New-IntersightIamIpAddress
 
 ## RELATED LINKS
 
-[Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)
-
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
-
 [Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
+
+[Set-IntersightIamIpAddress](./Set-IntersightIamIpAddress.md)

@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareVirtualMachine&amp;apos; resource.
+Update a &apos;VirtualizationVmwareVirtualMachine&apos; resource.
 
 ## PARAMETERS
 
@@ -952,7 +952,7 @@ Accept wildcard characters: False
 ```
 
 ### -VnicDeviceConfigId
-Information related to the guest info&amp;apos;s VNIC virtual device. It is a comma-separated list.
+Information related to the guest info&apos;s VNIC virtual device. It is a comma-separated list.
 
 ```yaml
 Type: string
@@ -1027,22 +1027,22 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualMachine
 
 [Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
+
+[Initialize-IntersightVirtualizationGuestInfo](./Initialize-IntersightVirtualizationGuestInfo.md)
+
+[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
+
+[Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo](./Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo.md)
+
 [Initialize-IntersightVirtualizationVmwareVmCpuShareInfo](./Initialize-IntersightVirtualizationVmwareVmCpuShareInfo.md)
 
 [Initialize-IntersightVirtualizationVmwareVmCpuSocketInfo](./Initialize-IntersightVirtualizationVmwareVmCpuSocketInfo.md)
 
 [Initialize-IntersightVirtualizationVmwareVmDiskCommitInfo](./Initialize-IntersightVirtualizationVmwareVmDiskCommitInfo.md)
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
-[Initialize-IntersightVirtualizationGuestInfo](./Initialize-IntersightVirtualizationGuestInfo.md)
-
 [Initialize-IntersightVirtualizationVmwareVmMemoryShareInfo](./Initialize-IntersightVirtualizationVmwareVmMemoryShareInfo.md)
 
-[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
-
-[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
-
-[Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo](./Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

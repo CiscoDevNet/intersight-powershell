@@ -19,7 +19,7 @@ Set-IntersightSshPolicy [-AdditionalProperties< System.Collections.Generic.Dicti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SshPolicy&amp;apos; resource.
+Update a &apos;SshPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -238,10 +238,10 @@ PS C:\> Set-IntersightSshPolicy
 
 ## RELATED LINKS
 
-[New-IntersightSshPolicy](./New-IntersightSshPolicy.md)
-
 [Get-IntersightSshPolicy](./Get-IntersightSshPolicy.md)
 
-[Remove-IntersightSshPolicy](./Remove-IntersightSshPolicy.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightSshPolicy](./New-IntersightSshPolicy.md)
+
+[Remove-IntersightSshPolicy](./Remove-IntersightSshPolicy.md)

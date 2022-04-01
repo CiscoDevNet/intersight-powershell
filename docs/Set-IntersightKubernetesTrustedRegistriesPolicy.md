@@ -223,10 +223,10 @@ PS C:\> Set-IntersightKubernetesTrustedRegistriesPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesTrustedRegistriesPolicy](./Remove-IntersightKubernetesTrustedRegistriesPolicy.md)
-
 [Get-IntersightKubernetesTrustedRegistriesPolicy](./Get-IntersightKubernetesTrustedRegistriesPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightKubernetesTrustedRegistriesPolicy](./New-IntersightKubernetesTrustedRegistriesPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightKubernetesTrustedRegistriesPolicy](./Remove-IntersightKubernetesTrustedRegistriesPolicy.md)

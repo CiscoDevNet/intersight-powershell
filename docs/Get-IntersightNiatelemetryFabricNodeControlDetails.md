@@ -25,7 +25,7 @@ Get-IntersightNiatelemetryFabricNodeControlDetails [-Count <Boolean>] [-InlineCo
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;NiatelemetryFabricNodeControlDetails&amp;apos; resource.,
+Read a &apos;NiatelemetryFabricNodeControlDetails&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

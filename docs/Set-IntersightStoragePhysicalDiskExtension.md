@@ -19,7 +19,7 @@ Set-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;StoragePhysicalDiskExtension&amp;apos; resource.
+Update a &apos;StoragePhysicalDiskExtension&apos; resource.
 
 ## PARAMETERS
 

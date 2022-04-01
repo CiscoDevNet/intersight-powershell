@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerState
-Power state of the virtual machine.\n* `Unknown` - The entity&amp;apos;s power state is unknown.\n* `PoweringOn` - The entity is powering on.\n* `PoweredOn` - The entity is powered on.\n* `PoweringOff` - The entity is powering off.\n* `PoweredOff` - The entity is powered down.\n* `StandBy` - The entity is in standby mode.\n* `Paused` - The entity is in pause state.\n* `Rebooting` - The entity reboot is in progress.\n* `` - The entity&amp;apos;s power state is not available.
+Power state of the virtual machine.\n* `Unknown` - The entity&apos;s power state is unknown.\n* `PoweringOn` - The entity is powering on.\n* `PoweredOn` - The entity is powered on.\n* `PoweringOff` - The entity is powering off.\n* `PoweredOff` - The entity is powered down.\n* `StandBy` - The entity is in standby mode.\n* `Paused` - The entity is in pause state.\n* `Rebooting` - The entity reboot is in progress.\n* `` - The entity&apos;s power state is not available.
 
 ```yaml
 Type: VirtualizationIweVirtualMachine.PowerStateEnum
@@ -555,18 +555,18 @@ PS C:\> Set-IntersightVirtualizationIweVirtualMachine
 
 [Get-IntersightVirtualizationIweVirtualMachine](./Get-IntersightVirtualizationIweVirtualMachine.md)
 
-[Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
-
 [Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
 
-[Initialize-IntersightVirtualizationVmDisk](./Initialize-IntersightVirtualizationVmDisk.md)
+[Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
 
-[Initialize-IntersightVirtualizationGuestInfo](./Initialize-IntersightVirtualizationGuestInfo.md)
-
-[Initialize-IntersightVirtualizationVmInterface](./Initialize-IntersightVirtualizationVmInterface.md)
-
-[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightVirtualizationGuestInfo](./Initialize-IntersightVirtualizationGuestInfo.md)
+
+[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
+
+[Initialize-IntersightVirtualizationVmDisk](./Initialize-IntersightVirtualizationVmDisk.md)
+
+[Initialize-IntersightVirtualizationVmInterface](./Initialize-IntersightVirtualizationVmInterface.md)

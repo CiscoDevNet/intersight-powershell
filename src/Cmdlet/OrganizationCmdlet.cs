@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new OrganizationApi(Config);
             ModelObject = new OrganizationOrganization();
-            MethodName = "UpdateOrganizationOrganizationWithHttpInfo";
+            MethodName = "PatchOrganizationOrganizationWithHttpInfo";
 		}
         
         

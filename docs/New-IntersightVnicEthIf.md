@@ -468,20 +468,20 @@ PS C:\> New-IntersightVnicEthIf
 
 ## RELATED LINKS
 
-[Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)
-
-[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
-
 [Get-IntersightVnicEthIf](./Get-IntersightVnicEthIf.md)
 
-[Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
-
 [Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 
 [Initialize-IntersightVnicUsnicSettings](./Initialize-IntersightVnicUsnicSettings.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
 [Initialize-IntersightVnicVmqSettings](./Initialize-IntersightVnicVmqSettings.md)
+
+[Remove-IntersightVnicEthIf](./Remove-IntersightVnicEthIf.md)
+
+[Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)

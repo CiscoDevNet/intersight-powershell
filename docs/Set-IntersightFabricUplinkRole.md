@@ -276,8 +276,8 @@ PS C:\> Set-IntersightFabricUplinkRole
 
 [Get-IntersightFabricUplinkRole](./Get-IntersightFabricUplinkRole.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightFabricUplinkRole](./New-IntersightFabricUplinkRole.md)
 
 [Remove-IntersightFabricUplinkRole](./Remove-IntersightFabricUplinkRole.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

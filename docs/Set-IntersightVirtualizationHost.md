@@ -191,6 +191,6 @@ PS C:\> Set-IntersightVirtualizationHost
 
 [Get-IntersightVirtualizationHost](./Get-IntersightVirtualizationHost.md)
 
-[Initialize-IntersightVirtualizationBaseHostConfiguration](./Initialize-IntersightVirtualizationBaseHostConfiguration.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationBaseHostConfiguration](./Initialize-IntersightVirtualizationBaseHostConfiguration.md)

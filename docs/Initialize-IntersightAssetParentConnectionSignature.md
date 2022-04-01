@@ -188,6 +188,6 @@ PS C:\> Initialize-IntersightAssetParentConnectionSignature
 
 ## RELATED LINKS
 
-[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
-
 [Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
+
+[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)

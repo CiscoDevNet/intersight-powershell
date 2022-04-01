@@ -147,6 +147,6 @@ PS C:\> Set-IntersightStorageHitachiArray
 
 [Get-IntersightStorageHitachiArray](./Get-IntersightStorageHitachiArray.md)
 
-[Initialize-IntersightStorageBaseCapacity](./Initialize-IntersightStorageBaseCapacity.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightStorageBaseCapacity](./Initialize-IntersightStorageBaseCapacity.md)

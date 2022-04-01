@@ -209,12 +209,12 @@ PS C:\> New-IntersightResourceGroup
 
 [Get-IntersightResourceGroup](./Get-IntersightResourceGroup.md)
 
-[Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
-
-[Remove-IntersightResourceGroup](./Remove-IntersightResourceGroup.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightResourcePerTypeCombinedSelector](./Initialize-IntersightResourcePerTypeCombinedSelector.md)
 
 [Initialize-IntersightResourceSelector](./Initialize-IntersightResourceSelector.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightResourceGroup](./Remove-IntersightResourceGroup.md)
+
+[Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)

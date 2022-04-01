@@ -242,10 +242,10 @@ PS C:\> New-IntersightKubernetesAddonRepository
 
 [Get-IntersightKubernetesAddonRepository](./Get-IntersightKubernetesAddonRepository.md)
 
-[Set-IntersightKubernetesAddonRepository](./Set-IntersightKubernetesAddonRepository.md)
-
-[Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightX509Certificate](./Initialize-IntersightX509Certificate.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)
+
+[Set-IntersightKubernetesAddonRepository](./Set-IntersightKubernetesAddonRepository.md)

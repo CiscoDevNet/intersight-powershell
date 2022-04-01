@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexAutoSupportPolicy](./New-IntersightHyperflexAutoSupportPolicy.md)
 
-[Set-IntersightHyperflexAutoSupportPolicy](./Set-IntersightHyperflexAutoSupportPolicy.md)
-
 [Remove-IntersightHyperflexAutoSupportPolicy](./Remove-IntersightHyperflexAutoSupportPolicy.md)
+
+[Set-IntersightHyperflexAutoSupportPolicy](./Set-IntersightHyperflexAutoSupportPolicy.md)
 

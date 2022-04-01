@@ -174,8 +174,8 @@ PS C:\> Set-IntersightForecastInstance
 
 [Get-IntersightForecastInstance](./Get-IntersightForecastInstance.md)
 
-[Initialize-Intersightdecimal](./Initialize-Intersightdecimal.md)
-
 [Initialize-IntersightForecastModel](./Initialize-IntersightForecastModel.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-Intersightdecimal](./Initialize-Intersightdecimal.md)

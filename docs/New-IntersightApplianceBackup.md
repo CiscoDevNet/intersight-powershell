@@ -252,6 +252,6 @@ PS C:\> New-IntersightApplianceBackup
 
 [Get-IntersightApplianceBackup](./Get-IntersightApplianceBackup.md)
 
-[Remove-IntersightApplianceBackup](./Remove-IntersightApplianceBackup.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightApplianceBackup](./Remove-IntersightApplianceBackup.md)

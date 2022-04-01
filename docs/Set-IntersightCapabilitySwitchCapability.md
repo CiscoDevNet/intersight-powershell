@@ -579,18 +579,18 @@ PS C:\> Set-IntersightCapabilitySwitchCapability
 
 [Get-IntersightCapabilitySwitchCapability](./Get-IntersightCapabilitySwitchCapability.md)
 
-[New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
-
-[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)
-
 [Initialize-IntersightCapabilityPortRange](./Initialize-IntersightCapabilityPortRange.md)
 
 [Initialize-IntersightCapabilitySwitchNetworkLimits](./Initialize-IntersightCapabilitySwitchNetworkLimits.md)
 
 [Initialize-IntersightCapabilitySwitchStorageLimits](./Initialize-IntersightCapabilitySwitchStorageLimits.md)
 
-[Initialize-IntersightCapabilitySwitchingModeCapability](./Initialize-IntersightCapabilitySwitchingModeCapability.md)
-
 [Initialize-IntersightCapabilitySwitchSystemLimits](./Initialize-IntersightCapabilitySwitchSystemLimits.md)
 
+[Initialize-IntersightCapabilitySwitchingModeCapability](./Initialize-IntersightCapabilitySwitchingModeCapability.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightCapabilitySwitchCapability](./New-IntersightCapabilitySwitchCapability.md)
+
+[Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)

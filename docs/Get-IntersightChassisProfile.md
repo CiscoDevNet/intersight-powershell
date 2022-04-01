@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightChassisProfile](./New-IntersightChassisProfile.md)
 
-[Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
-
 [Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
+
+[Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
 

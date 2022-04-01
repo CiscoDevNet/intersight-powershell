@@ -19,7 +19,7 @@ Set-IntersightKubernetesAddonPolicy [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAddonPolicy&amp;apos; resource.
+Update a &apos;KubernetesAddonPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -212,10 +212,10 @@ PS C:\> Set-IntersightKubernetesAddonPolicy
 
 [Get-IntersightKubernetesAddonPolicy](./Get-IntersightKubernetesAddonPolicy.md)
 
-[New-IntersightKubernetesAddonPolicy](./New-IntersightKubernetesAddonPolicy.md)
-
-[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
-
 [Initialize-IntersightKubernetesAddonConfiguration](./Initialize-IntersightKubernetesAddonConfiguration.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightKubernetesAddonPolicy](./New-IntersightKubernetesAddonPolicy.md)
+
+[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)

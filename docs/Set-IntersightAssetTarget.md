@@ -244,12 +244,12 @@ PS C:\> Set-IntersightAssetTarget
 
 [Get-IntersightAssetTarget](./Get-IntersightAssetTarget.md)
 
-[New-IntersightAssetTarget](./New-IntersightAssetTarget.md)
-
-[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
-
 [Initialize-IntersightAssetConnection](./Initialize-IntersightAssetConnection.md)
 
 [Initialize-IntersightAssetService](./Initialize-IntersightAssetService.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightAssetTarget](./New-IntersightAssetTarget.md)
+
+[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
