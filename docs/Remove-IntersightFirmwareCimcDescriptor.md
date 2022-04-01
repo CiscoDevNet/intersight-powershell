@@ -17,7 +17,7 @@ Remove-IntersightFirmwareCimcDescriptor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FirmwareCimcDescriptor&amp;apos; resource.
+Delete a &apos;FirmwareCimcDescriptor&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareCimcDescriptor](./Set-IntersightFirmwareCimcDescriptor.md)
-
 [Get-IntersightFirmwareCimcDescriptor](./Get-IntersightFirmwareCimcDescriptor.md)
 
 [New-IntersightFirmwareCimcDescriptor](./New-IntersightFirmwareCimcDescriptor.md)
+
+[Set-IntersightFirmwareCimcDescriptor](./Set-IntersightFirmwareCimcDescriptor.md)
 

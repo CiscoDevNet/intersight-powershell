@@ -19,7 +19,7 @@ New-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Diction
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamUser&amp;apos; resource.
+Create a &apos;IamUser&apos; resource.
 
 ## PARAMETERS
 
@@ -213,8 +213,8 @@ PS C:\> New-IntersightIamUser
 
 [Get-IntersightIamUser](./Get-IntersightIamUser.md)
 
-[Set-IntersightIamUser](./Set-IntersightIamUser.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamUser](./Remove-IntersightIamUser.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightIamUser](./Set-IntersightIamUser.md)

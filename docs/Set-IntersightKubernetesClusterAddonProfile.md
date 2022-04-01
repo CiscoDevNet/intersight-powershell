@@ -197,10 +197,10 @@ PS C:\> Set-IntersightKubernetesClusterAddonProfile
 
 [Get-IntersightKubernetesClusterAddonProfile](./Get-IntersightKubernetesClusterAddonProfile.md)
 
-[New-IntersightKubernetesClusterAddonProfile](./New-IntersightKubernetesClusterAddonProfile.md)
-
-[Remove-IntersightKubernetesClusterAddonProfile](./Remove-IntersightKubernetesClusterAddonProfile.md)
-
 [Initialize-IntersightKubernetesAddon](./Initialize-IntersightKubernetesAddon.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightKubernetesClusterAddonProfile](./New-IntersightKubernetesClusterAddonProfile.md)
+
+[Remove-IntersightKubernetesClusterAddonProfile](./Remove-IntersightKubernetesClusterAddonProfile.md)

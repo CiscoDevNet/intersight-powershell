@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightCommHttpProxyPolicy](./Set-IntersightCommHttpProxyPolicy.md)
+[New-IntersightCommHttpProxyPolicy](./New-IntersightCommHttpProxyPolicy.md)
 
 [Remove-IntersightCommHttpProxyPolicy](./Remove-IntersightCommHttpProxyPolicy.md)
 
-[New-IntersightCommHttpProxyPolicy](./New-IntersightCommHttpProxyPolicy.md)
+[Set-IntersightCommHttpProxyPolicy](./Set-IntersightCommHttpProxyPolicy.md)
 

@@ -17,7 +17,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new VrfApi(Config);
             ModelObject = new VrfVrf();
-            MethodName = "PatchVrfVrfWithHttpInfo";
+            MethodName = "UpdateVrfVrfWithHttpInfo";
 		}
         
         

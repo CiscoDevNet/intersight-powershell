@@ -19,7 +19,7 @@ Set-IntersightVirtualizationIweDatacenter [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationIweDatacenter&amp;apos; resource.
+Update a &apos;VirtualizationIweDatacenter&apos; resource.
 
 ## PARAMETERS
 
@@ -147,8 +147,8 @@ PS C:\> Set-IntersightVirtualizationIweDatacenter
 
 [Get-IntersightVirtualizationIweDatacenter](./Get-IntersightVirtualizationIweDatacenter.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightVirtualizationIweDatacenter](./New-IntersightVirtualizationIweDatacenter.md)
 
 [Remove-IntersightVirtualizationIweDatacenter](./Remove-IntersightVirtualizationIweDatacenter.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

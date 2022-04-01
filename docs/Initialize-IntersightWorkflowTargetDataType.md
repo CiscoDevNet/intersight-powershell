@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowTargetDataType.ObjectTypeEnum
@@ -322,6 +322,6 @@ PS C:\> Initialize-IntersightWorkflowTargetDataType
 
 [Initialize-IntersightWorkflowDisplayMeta](./Initialize-IntersightWorkflowDisplayMeta.md)
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-IntersightWorkflowTargetProperty](./Initialize-IntersightWorkflowTargetProperty.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

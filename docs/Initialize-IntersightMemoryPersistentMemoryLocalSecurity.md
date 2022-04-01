@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurePassphrase
-Secure passphrase to be applied on the Persistent Memory Modules on the server. The allowed characters are a-z, A to Z, 0-9, and special characters =, \\u0021, &amp;, \\#, $, %, +, ^, @, _, *, -.
+Secure passphrase to be applied on the Persistent Memory Modules on the server. The allowed characters are a-z, A to Z, 0-9, and special characters =, \\u0021, $amp, \\#, $, %, +, ^, @, _, *, -.
 
 ```yaml
 Type: string

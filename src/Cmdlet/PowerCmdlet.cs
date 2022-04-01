@@ -8,113 +8,67 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get PowerControlState.</para>
+    /// <para type="synopsis">This is the cmdlet to Set PowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPowerControlState", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightPowerControlState:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightPowerPolicy")]
+    public class SetIntersightPowerPolicy:SetCmdletBase
 	{
-		public GetIntersightPowerControlState()
+		public SetIntersightPowerPolicy()
 		{
 			ApiInstance = new PowerApi(Config);
-            MethodName = "GetPowerControlStateListWithHttpInfo";
+            ModelObject = new PowerPolicy();
+            MethodName = "UpdatePowerPolicyWithHttpInfo";
 		}
         
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string AccountMoid {
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Allocated Power Budget of the System (in Watts). This field is only supported for Cisco UCS X series Chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AllocatedBudget {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
             get;
             set;
         }
         
         
         // <summary>
-        /// <para type="description">"This field identifies the allocated power on the chassis in Watts."</para>
+        /// <para type="description">"Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long AllocatedPower {
+        public PowerPolicy.DynamicRebalancingEnum DynamicRebalancing {
             get;
             set;
         }
         
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public EquipmentChassisRelationship EquipmentChassis {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in grid mode in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long GridMaxPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the maximum power required by the endpoint in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long MaxRequiredPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"This field identifies the minimum power required by the endpoint in Watts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long MinRequiredPower {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
@@ -122,90 +76,111 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in N+1 mode in Watts."</para>
+        /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public long N1MaxPower {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in N+2 mode in Watts."</para>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long N2MaxPower {
+        public OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerPriorityEnum PowerPriority {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"This field identifies the available power when PSUs are in non-redundant mode in Watts."</para>
+        /// <para type="description">"Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public long NonRedundantMaxPower {
+        public PowerPolicy.PowerProfilingEnum PowerProfiling {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Restore State of the Server. This field is only supported for Cisco UCS X series servers.\n* `AlwaysOff` - Set the Power Restore Mode to Off.\n* `AlwaysOn` - Set the Power Restore Mode to On.\n* `LastState` - Set the Power Restore Mode to LastState."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerRestoreStateEnum PowerRestoreState {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.PowerSaveModeEnum PowerSaveMode {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<PolicyAbstractConfigProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Sets the Power Redundancy of the System. N+2 mode is only supported for Cisco UCS X series Chassis.\n* `Grid` - Grid Mode requires two power sources. If one source fails, the surviving PSUs connected to the other source provides power to the chassis.\n* `NotRedundant` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements. No Redundant PSUs are maintained.\n* `N+1` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus one additional PSU for redundancy.\n* `N+2` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus two additional PSU for redundancy. This Mode is only supported for UCS X series Chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PowerPolicy.RedundancyModeEnum RedundancyMode {
             get;
             set;
         }
         
         
         // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public MoBaseMoRelationship Parent {
+        public List<MoTag> Tags {
             get;
             set;
         }
         
-        
-        // <summary>
-        /// <para type="description">"The status of power rebalancing mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public PowerControlState.PowerRebalancingEnum PowerRebalancing {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The status of power save mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public PowerControlState.PowerSaveModeEnum PowerSaveMode {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public AssetDeviceRegistrationRelationship RegisteredDevice {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove PowerPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightPowerPolicy")]
+    public class RemoveIntersightPowerPolicy:RemoveCmdletBase
+	{
+		public RemoveIntersightPowerPolicy()
+		{
+			ApiInstance = new PowerApi(Config);
+            MethodName = "DeletePowerPolicyWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PowerPolicy.</para>
@@ -562,67 +537,113 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set PowerPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Get PowerControlState.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPowerPolicy")]
-    public class SetIntersightPowerPolicy:SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightPowerControlState", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPowerControlState:GetCmdletBase
 	{
-		public SetIntersightPowerPolicy()
+		public GetIntersightPowerControlState()
 		{
 			ApiInstance = new PowerApi(Config);
-            ModelObject = new PowerPolicy();
-            MethodName = "UpdatePowerPolicyWithHttpInfo";
+            MethodName = "GetPowerControlStateListWithHttpInfo";
 		}
         
-        
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"The Account ID for this managed object."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Sets the Allocated Power Budget of the System (in Watts). This field is only supported for Cisco UCS X series Chassis."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public long AllocatedBudget {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description {
+        public string AccountMoid {
             get;
             set;
         }
         
         
         // <summary>
-        /// <para type="description">"Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// <para type="description">"This field identifies the allocated power on the chassis in Watts."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public PowerPolicy.DynamicRebalancingEnum DynamicRebalancing {
+        public long AllocatedPower {
             get;
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public EquipmentChassisRelationship EquipmentChassis {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the available power when PSUs are in grid mode in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long GridMaxPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the maximum power required by the endpoint in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long MaxRequiredPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"This field identifies the minimum power required by the endpoint in Watts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long MinRequiredPower {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public string Moid {
             get;
@@ -630,110 +651,89 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
+        /// <para type="description">"This field identifies the available power when PSUs are in N+1 mode in Watts."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public long N1MaxPower {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"This field identifies the available power when PSUs are in N+2 mode in Watts."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public OrganizationOrganizationRelationship Organization {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PowerPolicy.PowerPriorityEnum PowerPriority {
+        public long N2MaxPower {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// <para type="description">"This field identifies the available power when PSUs are in non-redundant mode in Watts."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public PowerPolicy.PowerProfilingEnum PowerProfiling {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Sets the Power Restore State of the Server. This field is only supported for Cisco UCS X series servers.\n* `AlwaysOff` - Set the Power Restore Mode to Off.\n* `AlwaysOn` - Set the Power Restore Mode to On.\n* `LastState` - Set the Power Restore Mode to LastState."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PowerPolicy.PowerRestoreStateEnum PowerRestoreState {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PowerPolicy.PowerSaveModeEnum PowerSaveMode {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<PolicyAbstractConfigProfileRelationship> Profiles {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Sets the Power Redundancy of the System. N+2 mode is only supported for Cisco UCS X series Chassis.\n* `Grid` - Grid Mode requires two power sources. If one source fails, the surviving PSUs connected to the other source provides power to the chassis.\n* `NotRedundant` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements. No Redundant PSUs are maintained.\n* `N+1` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus one additional PSU for redundancy.\n* `N+2` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus two additional PSU for redundancy. This Mode is only supported for UCS X series Chassis."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public PowerPolicy.RedundancyModeEnum RedundancyMode {
+        public long NonRedundantMaxPower {
             get;
             set;
         }
         
         
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
         
-        public List<MoTag> Tags {
+        public MoBaseMoRelationship Parent {
             get;
             set;
         }
         
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove PowerPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPowerPolicy")]
-    public class RemoveIntersightPowerPolicy:RemoveCmdletBase
-	{
-		public RemoveIntersightPowerPolicy()
-		{
-			ApiInstance = new PowerApi(Config);
-            MethodName = "DeletePowerPolicyWithHttpInfo";
-		}
+        
+        // <summary>
+        /// <para type="description">"The status of power rebalancing mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerControlState.PowerRebalancingEnum PowerRebalancing {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The status of power save mode of the chassis power state.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public PowerControlState.PowerSaveModeEnum PowerSaveMode {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public AssetDeviceRegistrationRelationship RegisteredDevice {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
     }
 }

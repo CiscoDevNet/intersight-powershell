@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightVnicIscsiStaticTargetPolicy](./New-IntersightVnicIscsiStaticTargetPolicy.md)
 
-[Set-IntersightVnicIscsiStaticTargetPolicy](./Set-IntersightVnicIscsiStaticTargetPolicy.md)
-
 [Remove-IntersightVnicIscsiStaticTargetPolicy](./Remove-IntersightVnicIscsiStaticTargetPolicy.md)
+
+[Set-IntersightVnicIscsiStaticTargetPolicy](./Set-IntersightVnicIscsiStaticTargetPolicy.md)
 

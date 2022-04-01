@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)
-
 [New-IntersightApplianceDeviceClaim](./New-IntersightApplianceDeviceClaim.md)
+
+[Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)
 

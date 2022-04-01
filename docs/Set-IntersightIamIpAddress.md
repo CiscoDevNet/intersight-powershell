@@ -157,10 +157,10 @@ PS C:\> Set-IntersightIamIpAddress
 
 ## RELATED LINKS
 
-[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)
-
 [Get-IntersightIamIpAddress](./Get-IntersightIamIpAddress.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightIamIpAddress](./New-IntersightIamIpAddress.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightIamIpAddress](./Remove-IntersightIamIpAddress.md)

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
 
-[Set-IntersightHyperflexServiceAuthToken](./Set-IntersightHyperflexServiceAuthToken.md)
-
 [Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
+
+[Set-IntersightHyperflexServiceAuthToken](./Set-IntersightHyperflexServiceAuthToken.md)
 

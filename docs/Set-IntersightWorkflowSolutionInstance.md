@@ -195,8 +195,8 @@ PS C:\> Set-IntersightWorkflowSolutionInstance
 
 [Get-IntersightWorkflowSolutionInstance](./Get-IntersightWorkflowSolutionInstance.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightWorkflowSolutionInstance](./New-IntersightWorkflowSolutionInstance.md)
 
 [Remove-IntersightWorkflowSolutionInstance](./Remove-IntersightWorkflowSolutionInstance.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

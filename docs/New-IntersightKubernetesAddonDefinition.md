@@ -343,10 +343,10 @@ PS C:\> New-IntersightKubernetesAddonDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
-
-[Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)
-
 [Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightKubernetesAddonDefinition](./Remove-IntersightKubernetesAddonDefinition.md)
+
+[Set-IntersightKubernetesAddonDefinition](./Set-IntersightKubernetesAddonDefinition.md)

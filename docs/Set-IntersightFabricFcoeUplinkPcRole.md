@@ -230,10 +230,10 @@ PS C:\> Set-IntersightFabricFcoeUplinkPcRole
 
 [Get-IntersightFabricFcoeUplinkPcRole](./Get-IntersightFabricFcoeUplinkPcRole.md)
 
-[New-IntersightFabricFcoeUplinkPcRole](./New-IntersightFabricFcoeUplinkPcRole.md)
-
-[Remove-IntersightFabricFcoeUplinkPcRole](./Remove-IntersightFabricFcoeUplinkPcRole.md)
-
 [Initialize-IntersightFabricPortIdentifier](./Initialize-IntersightFabricPortIdentifier.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightFabricFcoeUplinkPcRole](./New-IntersightFabricFcoeUplinkPcRole.md)
+
+[Remove-IntersightFabricFcoeUplinkPcRole](./Remove-IntersightFabricFcoeUplinkPcRole.md)

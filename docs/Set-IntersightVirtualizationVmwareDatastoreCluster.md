@@ -509,6 +509,6 @@ PS C:\> Set-IntersightVirtualizationVmwareDatastoreCluster
 
 [Get-IntersightVirtualizationVmwareDatastoreCluster](./Get-IntersightVirtualizationVmwareDatastoreCluster.md)
 
-[Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)

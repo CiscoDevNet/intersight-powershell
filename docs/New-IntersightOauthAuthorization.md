@@ -172,8 +172,8 @@ PS C:\> New-IntersightOauthAuthorization
 
 ## RELATED LINKS
 
-[Set-IntersightOauthAuthorization](./Set-IntersightOauthAuthorization.md)
-
 [Get-IntersightOauthAuthorization](./Get-IntersightOauthAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightOauthAuthorization](./Set-IntersightOauthAuthorization.md)

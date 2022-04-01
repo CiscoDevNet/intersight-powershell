@@ -427,10 +427,10 @@ PS C:\> Set-IntersightCapabilityEquipmentSlotArray
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
-
 [Get-IntersightCapabilityEquipmentSlotArray](./Get-IntersightCapabilityEquipmentSlotArray.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightCapabilityEquipmentSlotArray](./New-IntersightCapabilityEquipmentSlotArray.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)

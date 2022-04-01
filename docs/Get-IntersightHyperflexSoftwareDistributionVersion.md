@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexSoftwareDistributionVersion](./New-IntersightHyperflexSoftwareDistributionVersion.md)
 
-[Set-IntersightHyperflexSoftwareDistributionVersion](./Set-IntersightHyperflexSoftwareDistributionVersion.md)
-
 [Remove-IntersightHyperflexSoftwareDistributionVersion](./Remove-IntersightHyperflexSoftwareDistributionVersion.md)
+
+[Set-IntersightHyperflexSoftwareDistributionVersion](./Set-IntersightHyperflexSoftwareDistributionVersion.md)
 

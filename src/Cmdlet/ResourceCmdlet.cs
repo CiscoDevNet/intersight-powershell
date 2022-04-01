@@ -129,23 +129,26 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceGroupMember.</para>
+    /// <para type="synopsis">This is the cmdlet to New ResourceGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroupMember", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceGroupMember:GetCmdletBase
+    [Cmdlet(VerbsCommon.New, "IntersightResourceGroup")]
+    public class NewIntersightResourceGroup:NewCmdletBase
 	{
-		public GetIntersightResourceGroupMember()
+		public NewIntersightResourceGroup()
 		{
 			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceGroupMemberListWithHttpInfo";
+            ModelObject = new ResourceGroup();
+            MethodName = "CreateResourceGroupWithHttpInfo";
 		}
         
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string AccountMoid {
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
             get;
             set;
         }
@@ -153,101 +156,93 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
+        /// <para type="description">"The informative description about the usage of this Resource Group."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public DateTime CreateTime {
+        public string Description {
             get;
             set;
         }
         
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"A reference to a resourceGroup resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public ResourceGroupRelationship Group {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
         
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public string Moid {
             get;
             set;
         }
         
+        // <summary>
+        /// <para type="description">"The name of this resource group."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,128}$")]
+        public string Name {
+            get;
+            set;
+        }
         
         // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"An array of relationships to organizationOrganization resources."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public MoBaseMoRelationship Parent {
+        public List<OrganizationOrganizationRelationship> Organizations {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Qualifier shall be used to specify if we want to organize resources using multiple resource group or single For an account, resource groups can be of only one of the above types. (Both the types are mutually exclusive for an account.).\n* `Allow-Selectors` - Resources will be added to resource groups based on ODATA filter. Multiple resource group can be created to organize resources.\n* `Allow-All` - All resources will become part of the Resource Group. Only one resource group can be created to organize resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public ResourceGroup.QualifierEnum Qualifier {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<ResourceSelector> Selectors {
             get;
             set;
         }
         
         
         // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public MoBaseMoRelationship Resource {
+        public List<MoTag> Tags {
             get;
             set;
         }
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceMembershipHolder.</para>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembershipHolder", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceMembershipHolder:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroup", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceGroup:GetCmdletBase
 	{
-		public GetIntersightResourceMembershipHolder()
+		public GetIntersightResourceGroup()
 		{
 			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceMembershipHolderListWithHttpInfo";
+            MethodName = "GetResourceGroupListWithHttpInfo";
 		}
         
         // <summary>
@@ -283,6 +278,16 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
+        /// <para type="description">"The informative description about the usage of this Resource Group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Description {
+            get;
+            set;
+        }
+        
+        // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -313,14 +318,15 @@ namespace Intersight.PowerShell
         }
         
         // <summary>
-        /// <para type="description">"The name of this resource membership holder."</para>
+        /// <para type="description">"The name of this resource group."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,128}$")]
         public string Name {
             get;
             set;
         }
+        
         
         
         // <summary>
@@ -329,6 +335,18 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
         
         public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Qualifier shall be used to specify if we want to organize resources using multiple resource group or single For an account, resource groups can be of only one of the above types. (Both the types are mutually exclusive for an account.).\n* `Allow-Selectors` - Resources will be added to resource groups based on ODATA filter. Multiple resource group can be created to organize resources.\n* `Allow-All` - All resources will become part of the Resource Group. Only one resource group can be created to organize resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public ResourceGroup.QualifierEnum Qualifier {
             get;
             set;
         }
@@ -347,6 +365,106 @@ namespace Intersight.PowerShell
         
 
         
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set ResourceReservation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightResourceReservation")]
+    public class SetIntersightResourceReservation:SetCmdletBase
+	{
+		public SetIntersightResourceReservation()
+		{
+			ApiInstance = new ResourceApi(Config);
+            ModelObject = new ResourceReservation();
+            MethodName = "UpdateResourceReservationWithHttpInfo";
+		}
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"An array of relationships to resourceGroup resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<ResourceGroupRelationship> Groups {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"MarkFail is used to set the reservation status to Failed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool MarkFail {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"Type of resources which will get filled into the resource groups."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ResourceType {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ResourceReservation.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceReservation")]
+    public class RemoveIntersightResourceReservation:RemoveCmdletBase
+	{
+		public RemoveIntersightResourceReservation()
+		{
+			ApiInstance = new ResourceApi(Config);
+            MethodName = "DeleteResourceReservationWithHttpInfo";
+		}
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceReservation.</para>
@@ -589,6 +707,226 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceGroupMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroupMember", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceGroupMember:GetCmdletBase
+	{
+		public GetIntersightResourceGroupMember()
+		{
+			ApiInstance = new ResourceApi(Config);
+            MethodName = "GetResourceGroupMemberListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"A reference to a resourceGroup resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public ResourceGroupRelationship Group {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Resource {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ResourceMembershipHolder.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembershipHolder", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightResourceMembershipHolder:GetCmdletBase
+	{
+		public GetIntersightResourceMembershipHolder()
+		{
+			ApiInstance = new ResourceApi(Config);
+            MethodName = "GetResourceMembershipHolderListWithHttpInfo";
+		}
+        
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public IamAccountRelationship Account {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string AccountMoid {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string DomainGroupMoid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime ModTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The name of this resource membership holder."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Name {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        
+        public MoBaseMoRelationship Parent {
+            get;
+            set;
+        }
+        
+        
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string SharedScope {
+            get;
+            set;
+        }
+        
+        
+
+        
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceMembership.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightResourceMembership", DefaultParameterSetName = "CmdletParam")]
@@ -710,244 +1048,6 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New ResourceGroup.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourceGroup")]
-    public class NewIntersightResourceGroup:NewCmdletBase
-	{
-		public NewIntersightResourceGroup()
-		{
-			ApiInstance = new ResourceApi(Config);
-            ModelObject = new ResourceGroup();
-            MethodName = "CreateResourceGroupWithHttpInfo";
-		}
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The informative description about the usage of this Resource Group."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Description {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The name of this resource group."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,128}$")]
-        public string Name {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"An array of relationships to organizationOrganization resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<OrganizationOrganizationRelationship> Organizations {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Qualifier shall be used to specify if we want to organize resources using multiple resource group or single For an account, resource groups can be of only one of the above types. (Both the types are mutually exclusive for an account.).\n* `Allow-Selectors` - Resources will be added to resource groups based on ODATA filter. Multiple resource group can be created to organize resources.\n* `Allow-All` - All resources will become part of the Resource Group. Only one resource group can be created to organize resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ResourceGroup.QualifierEnum Qualifier {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<ResourceSelector> Selectors {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get ResourceGroup.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroup", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightResourceGroup:GetCmdletBase
-	{
-		public GetIntersightResourceGroup()
-		{
-			ApiInstance = new ResourceApi(Config);
-            MethodName = "GetResourceGroupListWithHttpInfo";
-		}
-        
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public IamAccountRelationship Account {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string AccountMoid {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime CreateTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The informative description about the usage of this Resource Group."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Description {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string DomainGroupMoid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public DateTime ModTime {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The name of this resource group."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,128}$")]
-        public string Name {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-        
-        public MoBaseMoRelationship Parent {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Qualifier shall be used to specify if we want to organize resources using multiple resource group or single For an account, resource groups can be of only one of the above types. (Both the types are mutually exclusive for an account.).\n* `Allow-Selectors` - Resources will be added to resource groups based on ODATA filter. Multiple resource group can be created to organize resources.\n* `Allow-All` - All resources will become part of the Resource Group. Only one resource group can be created to organize resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public ResourceGroup.QualifierEnum Qualifier {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string SharedScope {
-            get;
-            set;
-        }
-        
-        
-
-        
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourceGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightResourceGroup")]
@@ -1062,106 +1162,6 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ResourceApi(Config);
             MethodName = "DeleteResourceGroupWithHttpInfo";
-		}
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set ResourceReservation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourceReservation")]
-    public class SetIntersightResourceReservation:SetCmdletBase
-	{
-		public SetIntersightResourceReservation()
-		{
-			ApiInstance = new ResourceApi(Config);
-            ModelObject = new ResourceReservation();
-            MethodName = "PatchResourceReservationWithHttpInfo";
-		}
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"An array of relationships to resourceGroup resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<ResourceGroupRelationship> Groups {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"MarkFail is used to set the reservation status to Failed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public bool MarkFail {
-            get;
-            set;
-        }
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"Type of resources which will get filled into the resource groups."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string ResourceType {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ResourceReservation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceReservation")]
-    public class RemoveIntersightResourceReservation:RemoveCmdletBase
-	{
-		public RemoveIntersightResourceReservation()
-		{
-			ApiInstance = new ResourceApi(Config);
-            MethodName = "DeleteResourceReservationWithHttpInfo";
 		}
     }
 }

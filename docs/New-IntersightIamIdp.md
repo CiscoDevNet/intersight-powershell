@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSingleLogout
-Setting that indicates whether &amp;apos;Single Logout (SLO)&amp;apos; has been enabled for this IdP.
+Setting that indicates whether &apos;Single Logout (SLO)&apos; has been enabled for this IdP.
 
 ```yaml
 Type: bool
@@ -240,8 +240,8 @@ PS C:\> New-IntersightIamIdp
 
 [Get-IntersightIamIdp](./Get-IntersightIamIdp.md)
 
-[Set-IntersightIamIdp](./Set-IntersightIamIdp.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamIdp](./Remove-IntersightIamIdp.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightIamIdp](./Set-IntersightIamIdp.md)

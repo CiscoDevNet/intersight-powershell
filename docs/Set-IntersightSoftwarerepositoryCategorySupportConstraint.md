@@ -236,10 +236,10 @@ PS C:\> Set-IntersightSoftwarerepositoryCategorySupportConstraint
 
 [Get-IntersightSoftwarerepositoryCategorySupportConstraint](./Get-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
-[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
-
-[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSoftwarerepositoryConstraintModels](./Initialize-IntersightSoftwarerepositoryConstraintModels.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+
+[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)

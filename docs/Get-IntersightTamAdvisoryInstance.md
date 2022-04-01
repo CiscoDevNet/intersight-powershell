@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightTamAdvisoryInstance](./New-IntersightTamAdvisoryInstance.md)
 
-[Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
-
 [Remove-IntersightTamAdvisoryInstance](./Remove-IntersightTamAdvisoryInstance.md)
+
+[Set-IntersightTamAdvisoryInstance](./Set-IntersightTamAdvisoryInstance.md)
 

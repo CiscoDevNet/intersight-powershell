@@ -272,10 +272,10 @@ PS C:\> New-IntersightHyperflexSoftwareVersionPolicy
 
 [Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
 
-[Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)
-
-[Remove-IntersightHyperflexSoftwareVersionPolicy](./Remove-IntersightHyperflexSoftwareVersionPolicy.md)
-
 [Initialize-IntersightHyperflexServerFirmwareVersionInfo](./Initialize-IntersightHyperflexServerFirmwareVersionInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexSoftwareVersionPolicy](./Remove-IntersightHyperflexSoftwareVersionPolicy.md)
+
+[Set-IntersightHyperflexSoftwareVersionPolicy](./Set-IntersightHyperflexSoftwareVersionPolicy.md)

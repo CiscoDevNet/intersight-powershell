@@ -146,6 +146,6 @@ PS C:\> Set-IntersightIamUserPreference
 
 [Get-IntersightIamUserPreference](./Get-IntersightIamUserPreference.md)
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

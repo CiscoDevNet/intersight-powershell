@@ -142,10 +142,10 @@ PS C:\> New-IntersightIamTrustPoint
 
 ## RELATED LINKS
 
-[Remove-IntersightIamTrustPoint](./Remove-IntersightIamTrustPoint.md)
-
 [Get-IntersightIamTrustPoint](./Get-IntersightIamTrustPoint.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightX509Certificate](./Initialize-IntersightX509Certificate.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightIamTrustPoint](./Remove-IntersightIamTrustPoint.md)

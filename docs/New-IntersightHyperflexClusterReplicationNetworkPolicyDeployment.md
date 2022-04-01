@@ -178,10 +178,6 @@ PS C:\> New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
-
-[Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
-
 [Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Get-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
 
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
@@ -189,3 +185,7 @@ PS C:\> New-IntersightHyperflexClusterReplicationNetworkPolicyDeployment
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Remove-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)
+
+[Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment](./Set-IntersightHyperflexClusterReplicationNetworkPolicyDeployment.md)

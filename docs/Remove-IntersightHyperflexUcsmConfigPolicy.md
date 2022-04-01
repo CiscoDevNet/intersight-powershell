@@ -17,7 +17,7 @@ Remove-IntersightHyperflexUcsmConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexUcsmConfigPolicy&amp;apos; resource.
+Delete a &apos;HyperflexUcsmConfigPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexUcsmConfigPolicy](./New-IntersightHyperflexUcsmConfigPolicy.md)
-
 [Get-IntersightHyperflexUcsmConfigPolicy](./Get-IntersightHyperflexUcsmConfigPolicy.md)
+
+[New-IntersightHyperflexUcsmConfigPolicy](./New-IntersightHyperflexUcsmConfigPolicy.md)
 
 [Set-IntersightHyperflexUcsmConfigPolicy](./Set-IntersightHyperflexUcsmConfigPolicy.md)
 

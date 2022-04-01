@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexKeyEncryptionKey](./New-IntersightHyperflexKeyEncryptionKey.md)
 
-[Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)
-
 [Remove-IntersightHyperflexKeyEncryptionKey](./Remove-IntersightHyperflexKeyEncryptionKey.md)
+
+[Set-IntersightHyperflexKeyEncryptionKey](./Set-IntersightHyperflexKeyEncryptionKey.md)
 

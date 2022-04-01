@@ -251,7 +251,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new ThermalApi(Config);
             ModelObject = new ThermalPolicy();
-            MethodName = "UpdateThermalPolicyWithHttpInfo";
+            MethodName = "PatchThermalPolicyWithHttpInfo";
 		}
         
         

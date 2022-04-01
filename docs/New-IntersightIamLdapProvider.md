@@ -177,8 +177,8 @@ PS C:\> New-IntersightIamLdapProvider
 
 [Get-IntersightIamLdapProvider](./Get-IntersightIamLdapProvider.md)
 
-[Set-IntersightIamLdapProvider](./Set-IntersightIamLdapProvider.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamLdapProvider](./Remove-IntersightIamLdapProvider.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightIamLdapProvider](./Set-IntersightIamLdapProvider.md)

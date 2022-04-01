@@ -8,15 +8,150 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get InventoryDeviceInfo.</para>
+    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventoryHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightInventoryDeviceInfo:GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder")]
+    public class SetIntersightInventoryGenericInventoryHolder:SetCmdletBase
 	{
-		public GetIntersightInventoryDeviceInfo()
+		public SetIntersightInventoryGenericInventoryHolder()
 		{
 			ApiInstance = new InventoryApi(Config);
-            MethodName = "GetInventoryDeviceInfoListWithHttpInfo";
+            ModelObject = new InventoryGenericInventoryHolder();
+            MethodName = "UpdateInventoryGenericInventoryHolderWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New InventoryRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightInventoryRequest")]
+    public class NewIntersightInventoryRequest:NewCmdletBase
+	{
+		public NewIntersightInventoryRequest()
+		{
+			ApiInstance = new InventoryApi(Config);
+            ModelObject = new InventoryRequest();
+            MethodName = "CreateInventoryRequestWithHttpInfo";
+		}
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public AssetDeviceRegistrationRelationship Device {
+            get;
+            set;
+        }
+        
+        
+        
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<InventoryInventoryMo> Mos {
+            get;
+            set;
+        }
+        
+        
+        
+        
+        
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<MoTag> Tags {
+            get;
+            set;
+        }
+        
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get InventoryDnMoBinding.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightInventoryDnMoBinding:GetCmdletBase
+	{
+		public GetIntersightInventoryDnMoBinding()
+		{
+			ApiInstance = new InventoryApi(Config);
+            MethodName = "GetInventoryDnMoBindingListWithHttpInfo";
 		}
         
         // <summary>
@@ -32,31 +167,21 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"Configuration state of server profile config context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string ConfigState {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"Control action of server profile config context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string ControlAction {
-            get;
-            set;
-        }
-        
-        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
         public DateTime CreateTime {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The Distinguished Name for this object, used to uniquely identify this object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string Dn {
             get;
             set;
         }
@@ -70,17 +195,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        
-        // <summary>
-        /// <para type="description">"Error state of server profile config context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string ErrorState {
-            get;
-            set;
-        }
-        
         
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -102,16 +216,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-        // <summary>
-        /// <para type="description">"Operational state of server profile config context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string OperState {
-            get;
-            set;
-        }
-        
         
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -123,16 +227,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-        
-        // <summary>
-        /// <para type="description">"Server profile MO ID of the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string ProfileMoId {
-            get;
-            set;
-        }
         
         // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -154,6 +248,26 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"The MO ID of the target MO for this particular Distinguished Name (dn)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string TargetMoId {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The type of the target MO for this particular Distinguished Name (dn)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string TargetMoType {
+            get;
+            set;
+        }
         
 
         
@@ -330,16 +444,16 @@ namespace Intersight.PowerShell
         
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventoryHolder.</para>
+    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder")]
-    public class SetIntersightInventoryGenericInventoryHolder:SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventory")]
+    public class SetIntersightInventoryGenericInventory:SetCmdletBase
 	{
-		public SetIntersightInventoryGenericInventoryHolder()
+		public SetIntersightInventoryGenericInventory()
 		{
 			ApiInstance = new InventoryApi(Config);
-            ModelObject = new InventoryGenericInventoryHolder();
-            MethodName = "UpdateInventoryGenericInventoryHolderWithHttpInfo";
+            ModelObject = new InventoryGenericInventory();
+            MethodName = "UpdateInventoryGenericInventoryWithHttpInfo";
 		}
         
         
@@ -352,8 +466,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        
-        
         
         
         
@@ -390,17 +502,19 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get InventoryDnMoBinding.</para>
+    /// <para type="synopsis">This is the cmdlet to Get InventoryDeviceInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightInventoryDnMoBinding:GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightInventoryDeviceInfo:GetCmdletBase
 	{
-		public GetIntersightInventoryDnMoBinding()
+		public GetIntersightInventoryDeviceInfo()
 		{
 			ApiInstance = new InventoryApi(Config);
-            MethodName = "GetInventoryDnMoBindingListWithHttpInfo";
+            MethodName = "GetInventoryDeviceInfoListWithHttpInfo";
 		}
         
         // <summary>
@@ -416,21 +530,31 @@ namespace Intersight.PowerShell
         
         
         // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
+        /// <para type="description">"Configuration state of server profile config context."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public DateTime CreateTime {
+        public string ConfigState {
             get;
             set;
         }
         
         // <summary>
-        /// <para type="description">"The Distinguished Name for this object, used to uniquely identify this object."</para>
+        /// <para type="description">"Control action of server profile config context."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         
-        public string Dn {
+        public string ControlAction {
+            get;
+            set;
+        }
+        
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public DateTime CreateTime {
             get;
             set;
         }
@@ -444,6 +568,17 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        
+        // <summary>
+        /// <para type="description">"Error state of server profile config context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string ErrorState {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -465,6 +600,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        // <summary>
+        /// <para type="description">"Operational state of server profile config context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string OperState {
+            get;
+            set;
+        }
+        
         
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -476,6 +621,16 @@ namespace Intersight.PowerShell
             set;
         }
         
+        
+        // <summary>
+        /// <para type="description">"Server profile MO ID of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        
+        public string ProfileMoId {
+            get;
+            set;
+        }
         
         // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -497,26 +652,6 @@ namespace Intersight.PowerShell
             set;
         }
         
-        
-        // <summary>
-        /// <para type="description">"The MO ID of the target MO for this particular Distinguished Name (dn)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string TargetMoId {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description">"The type of the target MO for this particular Distinguished Name (dn)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        
-        public string TargetMoType {
-            get;
-            set;
-        }
         
 
         
@@ -699,141 +834,6 @@ namespace Intersight.PowerShell
         }
         
 
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New InventoryRequest.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightInventoryRequest")]
-    public class NewIntersightInventoryRequest:NewCmdletBase
-	{
-		public NewIntersightInventoryRequest()
-		{
-			ApiInstance = new InventoryApi(Config);
-            ModelObject = new InventoryRequest();
-            MethodName = "CreateInventoryRequestWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public AssetDeviceRegistrationRelationship Device {
-            get;
-            set;
-        }
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<InventoryInventoryMo> Mos {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventory.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventory")]
-    public class SetIntersightInventoryGenericInventory:SetCmdletBase
-	{
-		public SetIntersightInventoryGenericInventory()
-		{
-			ApiInstance = new InventoryApi(Config);
-            ModelObject = new InventoryGenericInventory();
-            MethodName = "UpdateInventoryGenericInventoryWithHttpInfo";
-		}
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Moid {
-            get;
-            set;
-        }
-        
-        
-        
-        
-        
-        
-        
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<MoTag> Tags {
-            get;
-            set;
-        }
-        
-        
         
     }
 }

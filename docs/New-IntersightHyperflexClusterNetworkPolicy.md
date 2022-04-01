@@ -19,7 +19,7 @@ New-IntersightHyperflexClusterNetworkPolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexClusterNetworkPolicy&amp;apos; resource.
+Create a &apos;HyperflexClusterNetworkPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -310,10 +310,6 @@ PS C:\> New-IntersightHyperflexClusterNetworkPolicy
 
 [Get-IntersightHyperflexClusterNetworkPolicy](./Get-IntersightHyperflexClusterNetworkPolicy.md)
 
-[Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)
-
-[Remove-IntersightHyperflexClusterNetworkPolicy](./Remove-IntersightHyperflexClusterNetworkPolicy.md)
-
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 
 [Initialize-IntersightHyperflexMacAddrPrefixRange](./Initialize-IntersightHyperflexMacAddrPrefixRange.md)
@@ -321,3 +317,7 @@ PS C:\> New-IntersightHyperflexClusterNetworkPolicy
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexClusterNetworkPolicy](./Remove-IntersightHyperflexClusterNetworkPolicy.md)
+
+[Set-IntersightHyperflexClusterNetworkPolicy](./Set-IntersightHyperflexClusterNetworkPolicy.md)

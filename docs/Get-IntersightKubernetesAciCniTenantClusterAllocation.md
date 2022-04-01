@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightKubernetesAciCniTenantClusterAllocation](./New-IntersightKubernetesAciCniTenantClusterAllocation.md)
 
-[Set-IntersightKubernetesAciCniTenantClusterAllocation](./Set-IntersightKubernetesAciCniTenantClusterAllocation.md)
-
 [Remove-IntersightKubernetesAciCniTenantClusterAllocation](./Remove-IntersightKubernetesAciCniTenantClusterAllocation.md)
+
+[Set-IntersightKubernetesAciCniTenantClusterAllocation](./Set-IntersightKubernetesAciCniTenantClusterAllocation.md)
 

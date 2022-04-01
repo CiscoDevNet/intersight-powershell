@@ -162,6 +162,6 @@ PS C:\> Set-IntersightVncConsole
 
 [Get-IntersightVncConsole](./Get-IntersightVncConsole.md)
 
-[New-IntersightVncConsole](./New-IntersightVncConsole.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightVncConsole](./New-IntersightVncConsole.md)

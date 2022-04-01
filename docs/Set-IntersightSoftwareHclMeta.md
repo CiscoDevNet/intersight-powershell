@@ -487,12 +487,12 @@ PS C:\> Set-IntersightSoftwareHclMeta
 
 [Get-IntersightSoftwareHclMeta](./Get-IntersightSoftwareHclMeta.md)
 
-[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
-
-[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
-
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
+
+[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)

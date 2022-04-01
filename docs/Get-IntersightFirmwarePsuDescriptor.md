@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFirmwarePsuDescriptor](./New-IntersightFirmwarePsuDescriptor.md)
 
-[Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)
-
 [Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)
+
+[Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)
 

@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightSoftwareHyperflexBundleDistributable](./New-IntersightSoftwareHyperflexBundleDistributable.md)
+
 [Remove-IntersightSoftwareHyperflexBundleDistributable](./Remove-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [Set-IntersightSoftwareHyperflexBundleDistributable](./Set-IntersightSoftwareHyperflexBundleDistributable.md)
-
-[New-IntersightSoftwareHyperflexBundleDistributable](./New-IntersightSoftwareHyperflexBundleDistributable.md)
 

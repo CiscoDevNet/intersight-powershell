@@ -8,17 +8,18 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricAppliancePcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
-    public class InitializeIntersightFabricUdldSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricAppliancePcRole")]
+    public class InitializeIntersightFabricAppliancePcRole:PSCmdlet
 	{
-		public InitializeIntersightFabricUdldSettings()
+		public InitializeIntersightFabricAppliancePcRole()
 		{
-            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
-            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
-            Mode = FabricUdldSettings.ModeEnum.Normal;
-            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
+            AdminSpeed = FabricAppliancePcRole.AdminSpeedEnum.Auto;
+            ClassId = FabricAppliancePcRole.ClassIdEnum.FabricAppliancePcRole;
+            Mode = FabricAppliancePcRole.ModeEnum.Trunk;
+            ObjectType = FabricAppliancePcRole.ObjectTypeEnum.FabricAppliancePcRole;
+            Priority = FabricAppliancePcRole.PriorityEnum.BestEffort;
             
 		}
         // <summary>
@@ -31,11 +32,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// <para type="description">"Admin configured speed for the port channel.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `1Gbps` - Admin configurable speed 1Gbps.\n* `10Gbps` - Admin configurable speed 10Gbps.\n* `25Gbps` - Admin configurable speed 25Gbps.\n* `40Gbps` - Admin configurable speed 40Gbps.\n* `100Gbps` - Admin configurable speed 100Gbps."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldSettings.AdminStateEnum AdminState {
+        public FabricAppliancePcRole.AdminSpeedEnum AdminSpeed {
             get;
             set;
         }
@@ -44,16 +45,43 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldSettings.ClassIdEnum ClassId {
+        public FabricAppliancePcRole.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
+        /// <para type="description">"A reference to a fabricEthNetworkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldSettings.ModeEnum Mode {
+        public Model.FabricEthNetworkControlPolicyRelationship EthNetworkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricEthNetworkGroupPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricEthNetworkGroupPolicyRelationship EthNetworkGroupPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port mode to be set on the appliance port-channel.\n* `trunk` - Trunk Mode Switch Port Type.\n* `access` - Access Mode Switch Port Type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricAppliancePcRole.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
             get;
             set;
         }
@@ -62,43 +90,119 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricUdldSettings.ObjectTypeEnum ObjectType {
+        public FabricAppliancePcRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique Identifier of the port-channel, local to this switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 256)]
+        public long PcId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricPortIdentifier> Ports {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The 'name' of the System QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricAppliancePcRole.PriorityEnum Priority {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
+             Intersight.Model.FabricAppliancePcRole initObject = new Intersight.Model.FabricAppliancePcRole();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
             {
-                initObject.AdminState = this.AdminState;
+                initObject.AdminSpeed = this.AdminSpeed;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkControlPolicy"))
+            {
+                initObject.EthNetworkControlPolicy = this.EthNetworkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkGroupPolicy"))
+            {
+                initObject.EthNetworkGroupPolicy = this.EthNetworkGroupPolicy;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
             {
                 initObject.Mode = this.Mode;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcId"))
+            {
+                initObject.PcId = this.PcId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ports"))
+            {
+                initObject.Ports = this.Ports;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Priority"))
+            {
+                initObject.Priority = this.Priority;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricMacAgingSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricMacAgingSettings")]
-    public class InitializeIntersightFabricMacAgingSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricConfigResultEntry")]
+    public class InitializeIntersightFabricConfigResultEntry:PSCmdlet
 	{
-		public InitializeIntersightFabricMacAgingSettings()
+		public InitializeIntersightFabricConfigResultEntry()
 		{
-            ClassId = FabricMacAgingSettings.ClassIdEnum.FabricMacAgingSettings;
-            MacAgingOption = FabricMacAgingSettings.MacAgingOptionEnum.Default;
-            ObjectType = FabricMacAgingSettings.ObjectTypeEnum.FabricMacAgingSettings;
+            ClassId = FabricConfigResultEntry.ClassIdEnum.FabricConfigResultEntry;
+            ObjectType = FabricConfigResultEntry.ObjectTypeEnum.FabricConfigResultEntry;
             
 		}
         // <summary>
@@ -115,25 +219,52 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricMacAgingSettings.ClassIdEnum ClassId {
+        public FabricConfigResultEntry.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"This specifies one of the option to configure the MAC address aging time.\n* `Default` - This option sets the default MAC address aging time to 14500 seconds for End Host mode.\n* `Custom` - This option allows the the user to configure the MAC address aging time on the switch. For Switch Model UCS-FI-6454 or higher, the valid range is 120 to 918000 seconds and the switch will set the lower multiple of 5 of the given time.\n* `Never` - This option disables the MAC address aging process and never allows the MAC address entries to get removed from the table."</para>
+        /// <para type="description">"The completed time of the task in installer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricMacAgingSettings.MacAgingOptionEnum MacAgingOption {
+        public string CompletedTime {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Define the MAC address aging time in seconds. This field is valid when the \"Custom\" MAC address aging option is selected."</para>
+        /// <para type="description">"A reference to a fabricConfigResult resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        [ValidateRange(1, 1e+06)]
-        public int MacAgingTime {
+        
+        public Model.FabricConfigResultRelationship ConfigResult {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Context information on the change."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.PolicyConfigResultContext Context {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Localized message based on the locale setting of the user's context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Message {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
             get;
             set;
         }
@@ -142,42 +273,106 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricMacAgingSettings.ObjectTypeEnum ObjectType {
+        public FabricConfigResultEntry.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The identifier of the object that owns the result message.\nThe owner ID is used to correlate a given result entry to a task or entity. For example, a config result\nentry that describes the result of a workflow task may have the task's instance ID as the owner."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string OwnerId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Values  -- Ok, Ok-with-warning, Errored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string State {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the result is reported during the logical model validation/resource allocation phase. or the configuration applying phase. Values -- validation, config."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Type {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricMacAgingSettings initObject = new Intersight.Model.FabricMacAgingSettings();
+             Intersight.Model.FabricConfigResultEntry initObject = new Intersight.Model.FabricConfigResultEntry();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingOption"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CompletedTime"))
             {
-                initObject.MacAgingOption = this.MacAgingOption;
+                initObject.CompletedTime = this.CompletedTime;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingTime"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigResult"))
             {
-                initObject.MacAgingTime = this.MacAgingTime;
+                initObject.ConfigResult = this.ConfigResult;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Context"))
+            {
+                initObject.Context = this.Context;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Message"))
+            {
+                initObject.Message = this.Message;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OwnerId"))
+            {
+                initObject.OwnerId = this.OwnerId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("State"))
+            {
+                initObject.State = this.State;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
-    public class InitializeIntersightFabricLldpSettings:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricConfigResult")]
+    public class InitializeIntersightFabricConfigResult:PSCmdlet
 	{
-		public InitializeIntersightFabricLldpSettings()
+		public InitializeIntersightFabricConfigResult()
 		{
-            ClassId = FabricLldpSettings.ClassIdEnum.FabricLldpSettings;
-            ObjectType = FabricLldpSettings.ObjectTypeEnum.FabricLldpSettings;
+            ClassId = FabricConfigResult.ClassIdEnum.FabricConfigResult;
+            ObjectType = FabricConfigResult.ObjectTypeEnum.FabricConfigResult;
             
 		}
         // <summary>
@@ -194,7 +389,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricLldpSettings.ClassIdEnum ClassId {
+        public FabricConfigResult.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The current running stage of the configuration or workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ConfigStage {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates overall configuration state for applying the configuration to the end point. Values  -- Ok, Ok-with-warning, Errored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ConfigState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
             get;
             set;
         }
@@ -203,60 +425,87 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricLldpSettings.ObjectTypeEnum ObjectType {
+        public FabricConfigResult.ObjectTypeEnum ObjectType {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Determines if the LLDP frames can be received by an interface on the switch."</para>
+        /// <para type="description">"An array of relationships to fabricConfigResultEntry resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool ReceiveEnabled {
+        public List<Model.FabricConfigResultEntryRelationship> ResultEntries {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Determines if the LLDP frames can be transmitted by an interface on the switch."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public bool TransmitEnabled {
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates overall state for logical model validation. Values  -- Ok, Ok-with-warning, Errored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string ValidationState {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricLldpSettings initObject = new Intersight.Model.FabricLldpSettings();
+             Intersight.Model.FabricConfigResult initObject = new Intersight.Model.FabricConfigResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveEnabled"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigStage"))
             {
-                initObject.ReceiveEnabled = this.ReceiveEnabled;
+                initObject.ConfigStage = this.ConfigStage;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TransmitEnabled"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
             {
-                initObject.TransmitEnabled = this.TransmitEnabled;
+                initObject.ConfigState = this.ConfigState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResultEntries"))
+            {
+                initObject.ResultEntries = this.ResultEntries;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ValidationState"))
+            {
+                initObject.ValidationState = this.ValidationState;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize FabricPortIdentifier.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightFabricPortIdentifier")]
-    public class InitializeIntersightFabricPortIdentifier:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcUplinkRole")]
+    public class InitializeIntersightFabricFcUplinkRole:PSCmdlet
 	{
-		public InitializeIntersightFabricPortIdentifier()
+		public InitializeIntersightFabricFcUplinkRole()
 		{
-            ClassId = FabricPortIdentifier.ClassIdEnum.FabricPortIdentifier;
-            ObjectType = FabricPortIdentifier.ObjectTypeEnum.FabricPortIdentifier;
+            AdminSpeed = FabricFcUplinkRole.AdminSpeedEnum.Auto;
+            ClassId = FabricFcUplinkRole.ClassIdEnum.FabricFcUplinkRole;
+            FillPattern = FabricFcUplinkRole.FillPatternEnum.Idle;
+            ObjectType = FabricFcUplinkRole.ObjectTypeEnum.FabricFcUplinkRole;
             
 		}
         // <summary>
@@ -265,6 +514,15 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcUplinkRole.AdminSpeedEnum AdminSpeed {
             get;
             set;
         }
@@ -282,7 +540,25 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricPortIdentifier.ClassIdEnum ClassId {
+        public FabricFcUplinkRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Fill pattern to differentiate the configs in NPIV.\n* `Idle` - Fc Fill Pattern type Idle.\n* `Arbff` - Fc Fill Pattern type Arbff."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcUplinkRole.FillPatternEnum FillPattern {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
             get;
             set;
         }
@@ -291,7 +567,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public FabricPortIdentifier.ObjectTypeEnum ObjectType {
+        public FabricFcUplinkRole.ObjectTypeEnum ObjectType {
             get;
             set;
         }
@@ -305,6 +581,15 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
@@ -313,27 +598,374 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual San Identifier associated to the FC port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long VsanId {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.FabricPortIdentifier initObject = new Intersight.Model.FabricPortIdentifier();
+             Intersight.Model.FabricFcUplinkRole initObject = new Intersight.Model.FabricFcUplinkRole();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
             {
                 initObject.AggregatePortId = this.AggregatePortId;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FillPattern"))
+            {
+                initObject.FillPattern = this.FillPattern;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
             {
                 initObject.PortId = this.PortId;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
             {
                 initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanId"))
+            {
+                initObject.VsanId = this.VsanId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPcOperation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPcOperation")]
+    public class InitializeIntersightFabricPcOperation:PSCmdlet
+	{
+		public InitializeIntersightFabricPcOperation()
+		{
+            AdminState = FabricPcOperation.AdminStateEnum.Enabled;
+            ClassId = FabricPcOperation.ClassIdEnum.FabricPcOperation;
+            ConfigState = FabricPcOperation.ConfigStateEnum.None;
+            ObjectType = FabricPcOperation.ObjectTypeEnum.FabricPcOperation;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured state to disable the port channel.\n* `Enabled` - Admin configured Enabled State.\n* `Disabled` - Admin configured Disabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPcOperation.AdminStateEnum AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPcOperation.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The configured state of these settings in the target chassis. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the admin state changes are applied successfully in the target FI domain. Applying - This state denotes that the admin state changes are being applied in the target FI domain. Failed - This state denotes that the admin state changes could not be applied in the target FI domain.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPcOperation.ConfigStateEnum ConfigState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NetworkElementRelationship NetworkElement {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPcOperation.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Channel Identifier for the collection of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long PcId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricPcOperation initObject = new Intersight.Model.FabricPcOperation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            {
+                initObject.AdminState = this.AdminState;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
+            {
+                initObject.ConfigState = this.ConfigState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
+            {
+                initObject.NetworkElement = this.NetworkElement;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcId"))
+            {
+                initObject.PcId = this.PcId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcoeUplinkRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcoeUplinkRole")]
+    public class InitializeIntersightFabricFcoeUplinkRole:PSCmdlet
+	{
+		public InitializeIntersightFabricFcoeUplinkRole()
+		{
+            AdminSpeed = FabricFcoeUplinkRole.AdminSpeedEnum.Auto;
+            ClassId = FabricFcoeUplinkRole.ClassIdEnum.FabricFcoeUplinkRole;
+            Fec = FabricFcoeUplinkRole.FecEnum.Auto;
+            ObjectType = FabricFcoeUplinkRole.ObjectTypeEnum.FabricFcoeUplinkRole;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `1Gbps` - Admin configurable speed 1Gbps.\n* `10Gbps` - Admin configurable speed 10Gbps.\n* `25Gbps` - Admin configurable speed 25Gbps.\n* `40Gbps` - Admin configurable speed 40Gbps.\n* `100Gbps` - Admin configurable speed 100Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'.\n* `Cl91` - Forward error correction option 'cl91'.\n* `Cl74` - Forward error correction option 'cl74'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkRole.FecEnum Fec {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkControlPolicyRelationship LinkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 108)]
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricFcoeUplinkRole initObject = new Intersight.Model.FabricFcoeUplinkRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Fec"))
+            {
+                initObject.Fec = this.Fec;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkControlPolicy"))
+            {
+                initObject.LinkControlPolicy = this.LinkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }
@@ -499,6 +1131,1747 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricMulticastPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricMulticastPolicy")]
+    public class InitializeIntersightFabricMulticastPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricMulticastPolicy()
+		{
+            ClassId = FabricMulticastPolicy.ClassIdEnum.FabricMulticastPolicy;
+            ObjectType = FabricMulticastPolicy.ObjectTypeEnum.FabricMulticastPolicy;
+            QuerierState = FabricMulticastPolicy.QuerierStateEnum.Disabled;
+            SnoopingState = FabricMulticastPolicy.SnoopingStateEnum.Enabled;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMulticastPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMulticastPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used to define the IGMP Querier IP address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string QuerierIpAddress {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used to define the IGMP Querier IP address of the peer switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string QuerierIpAddressPeer {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Administrative state of the IGMP Querier for this VLAN.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMulticastPolicy.QuerierStateEnum QuerierState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Administrative state of the IGMP Snooping for this VLAN.\n* `Enabled` - Admin configured Enabled State.\n* `Disabled` - Admin configured Disabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMulticastPolicy.SnoopingStateEnum SnoopingState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricMulticastPolicy initObject = new Intersight.Model.FabricMulticastPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QuerierIpAddress"))
+            {
+                initObject.QuerierIpAddress = this.QuerierIpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QuerierIpAddressPeer"))
+            {
+                initObject.QuerierIpAddressPeer = this.QuerierIpAddressPeer;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QuerierState"))
+            {
+                initObject.QuerierState = this.QuerierState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SnoopingState"))
+            {
+                initObject.SnoopingState = this.SnoopingState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricElementIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricElementIdentity")]
+    public class InitializeIntersightFabricElementIdentity:PSCmdlet
+	{
+		public InitializeIntersightFabricElementIdentity()
+		{
+            AdminAction = FabricElementIdentity.AdminActionEnum.None;
+            ClassId = FabricElementIdentity.ClassIdEnum.FabricElementIdentity;
+            ObjectType = FabricElementIdentity.ObjectTypeEnum.FabricElementIdentity;
+            ReplacementType = FabricElementIdentity.ReplacementTypeEnum.None;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricElementIdentity.AdminActionEnum AdminAction {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricElementIdentity.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricElementIdentity.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NetworkElementRelationship ReplacementTarget {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Replacement type specifies whether it is single FI or domain replacement.\n* `None` - The default action is none.\n* `Individual` - Replacement of single network element.\n* `Domain` - Domain indicates the replacement of Fabric Interconnect domain."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricElementIdentity.ReplacementTypeEnum ReplacementType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricElementIdentity initObject = new Intersight.Model.FabricElementIdentity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminAction"))
+            {
+                initObject.AdminAction = this.AdminAction;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReplacementTarget"))
+            {
+                initObject.ReplacementTarget = this.ReplacementTarget;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReplacementType"))
+            {
+                initObject.ReplacementType = this.ReplacementType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPortPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPortPolicy")]
+    public class InitializeIntersightFabricPortPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricPortPolicy()
+		{
+            ClassId = FabricPortPolicy.ClassIdEnum.FabricPortPolicy;
+            DeviceModel = FabricPortPolicy.DeviceModelEnum.UCSFI6454;
+            ObjectType = FabricPortPolicy.ObjectTypeEnum.FabricPortPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortPolicy.DeviceModelEnum DeviceModel {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricSwitchProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricPortPolicy initObject = new Intersight.Model.FabricPortPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceModel"))
+            {
+                initObject.DeviceModel = this.DeviceModel;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSwitchControlPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSwitchControlPolicy")]
+    public class InitializeIntersightFabricSwitchControlPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricSwitchControlPolicy()
+		{
+            ClassId = FabricSwitchControlPolicy.ClassIdEnum.FabricSwitchControlPolicy;
+            EthernetSwitchingMode = FabricSwitchControlPolicy.EthernetSwitchingModeEnum.EndHost;
+            FcSwitchingMode = FabricSwitchControlPolicy.FcSwitchingModeEnum.EndHost;
+            ObjectType = FabricSwitchControlPolicy.ObjectTypeEnum.FabricSwitchControlPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchControlPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable Ethernet End Host Switching Mode.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchControlPolicy.EthernetSwitchingModeEnum EthernetSwitchingMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable FC End Host Switching Mode.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchControlPolicy.FcSwitchingModeEnum FcSwitchingMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This specifies the MAC aging option and time settings."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricMacAgingSettings MacAgingSettings {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchControlPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricSwitchProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This specifies the UDLD Global configurations for this switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricUdldGlobalSettings UdldSettings {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"To enable or disable the VLAN port count optimization."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool VlanPortOptimizationEnabled {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricSwitchControlPolicy initObject = new Intersight.Model.FabricSwitchControlPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthernetSwitchingMode"))
+            {
+                initObject.EthernetSwitchingMode = this.EthernetSwitchingMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcSwitchingMode"))
+            {
+                initObject.FcSwitchingMode = this.FcSwitchingMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingSettings"))
+            {
+                initObject.MacAgingSettings = this.MacAgingSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UdldSettings"))
+            {
+                initObject.UdldSettings = this.UdldSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanPortOptimizationEnabled"))
+            {
+                initObject.VlanPortOptimizationEnabled = this.VlanPortOptimizationEnabled;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricEthNetworkGroupPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricEthNetworkGroupPolicy")]
+    public class InitializeIntersightFabricEthNetworkGroupPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricEthNetworkGroupPolicy()
+		{
+            ClassId = FabricEthNetworkGroupPolicy.ClassIdEnum.FabricEthNetworkGroupPolicy;
+            ObjectType = FabricEthNetworkGroupPolicy.ObjectTypeEnum.FabricEthNetworkGroupPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkGroupPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkGroupPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN configuration for the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricVlanSettings VlanSettings {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricEthNetworkGroupPolicy initObject = new Intersight.Model.FabricEthNetworkGroupPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanSettings"))
+            {
+                initObject.VlanSettings = this.VlanSettings;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricApplianceRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricApplianceRole")]
+    public class InitializeIntersightFabricApplianceRole:PSCmdlet
+	{
+		public InitializeIntersightFabricApplianceRole()
+		{
+            AdminSpeed = FabricApplianceRole.AdminSpeedEnum.Auto;
+            ClassId = FabricApplianceRole.ClassIdEnum.FabricApplianceRole;
+            Fec = FabricApplianceRole.FecEnum.Auto;
+            Mode = FabricApplianceRole.ModeEnum.Trunk;
+            ObjectType = FabricApplianceRole.ObjectTypeEnum.FabricApplianceRole;
+            Priority = FabricApplianceRole.PriorityEnum.BestEffort;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `1Gbps` - Admin configurable speed 1Gbps.\n* `10Gbps` - Admin configurable speed 10Gbps.\n* `25Gbps` - Admin configurable speed 25Gbps.\n* `40Gbps` - Admin configurable speed 40Gbps.\n* `100Gbps` - Admin configurable speed 100Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricApplianceRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricApplianceRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricEthNetworkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricEthNetworkControlPolicyRelationship EthNetworkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricEthNetworkGroupPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricEthNetworkGroupPolicyRelationship EthNetworkGroupPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'.\n* `Cl91` - Forward error correction option 'cl91'.\n* `Cl74` - Forward error correction option 'cl74'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricApplianceRole.FecEnum Fec {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricFlowControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricFlowControlPolicyRelationship FlowControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkControlPolicyRelationship LinkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port mode to be set on the appliance port.\n* `trunk` - Trunk Mode Switch Port Type.\n* `access` - Access Mode Switch Port Type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricApplianceRole.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricApplianceRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 108)]
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The 'name' of the System QoS Class.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricApplianceRole.PriorityEnum Priority {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricApplianceRole initObject = new Intersight.Model.FabricApplianceRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkControlPolicy"))
+            {
+                initObject.EthNetworkControlPolicy = this.EthNetworkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkGroupPolicy"))
+            {
+                initObject.EthNetworkGroupPolicy = this.EthNetworkGroupPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Fec"))
+            {
+                initObject.Fec = this.Fec;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowControlPolicy"))
+            {
+                initObject.FlowControlPolicy = this.FlowControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkControlPolicy"))
+            {
+                initObject.LinkControlPolicy = this.LinkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Priority"))
+            {
+                initObject.Priority = this.Priority;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricLinkControlPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricLinkControlPolicy")]
+    public class InitializeIntersightFabricLinkControlPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricLinkControlPolicy()
+		{
+            ClassId = FabricLinkControlPolicy.ClassIdEnum.FabricLinkControlPolicy;
+            ObjectType = FabricLinkControlPolicy.ObjectTypeEnum.FabricLinkControlPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLinkControlPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLinkControlPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UDLD related configurations for the port and port-channel."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricUdldSettings UdldSettings {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricLinkControlPolicy initObject = new Intersight.Model.FabricLinkControlPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UdldSettings"))
+            {
+                initObject.UdldSettings = this.UdldSettings;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
+    public class InitializeIntersightFabricLldpSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricLldpSettings()
+		{
+            ClassId = FabricLldpSettings.ClassIdEnum.FabricLldpSettings;
+            ObjectType = FabricLldpSettings.ObjectTypeEnum.FabricLldpSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLldpSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLldpSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the LLDP frames can be received by an interface on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool ReceiveEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the LLDP frames can be transmitted by an interface on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool TransmitEnabled {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricLldpSettings initObject = new Intersight.Model.FabricLldpSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveEnabled"))
+            {
+                initObject.ReceiveEnabled = this.ReceiveEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TransmitEnabled"))
+            {
+                initObject.TransmitEnabled = this.TransmitEnabled;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSwitchProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSwitchProfile")]
+    public class InitializeIntersightFabricSwitchProfile:PSCmdlet
+	{
+		public InitializeIntersightFabricSwitchProfile()
+		{
+            ClassId = FabricSwitchProfile.ClassIdEnum.FabricSwitchProfile;
+            ObjectType = FabricSwitchProfile.ObjectTypeEnum.FabricSwitchProfile;
+            Type = FabricSwitchProfile.TypeEnum.Instance;
+            
+		}
+        // <summary>
+        /// <para type="description">"User initiated action. Each profile type has its own supported actions. For HyperFlex cluster profile, the supported actions are -- Validate, Deploy, Continue, Retry, Abort, Unassign For server profile, the support actions are -- Deploy, Unassign."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Action {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.PolicyActionParam> ActionParams {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NetworkElementRelationship AssignedSwitch {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchProfile.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This lists the pending configuration changes at the summary level. Detailed changes are saved in configChangeDetails as a separate object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.PolicyConfigChange ConfigChanges {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The configuration state and results of the last configuration operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.PolicyConfigContext ConfigContext {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the profile instance or profile template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchProfile.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.PolicyAbstractPolicyRelationship> PolicyBucket {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.PolicyAbstractProfileRelationship SrcTemplate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricSwitchClusterProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricSwitchClusterProfileRelationship SwitchClusterProfile {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchProfile.TypeEnum Type {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricSwitchProfile initObject = new Intersight.Model.FabricSwitchProfile();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActionParams"))
+            {
+                initObject.ActionParams = this.ActionParams;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssignedSwitch"))
+            {
+                initObject.AssignedSwitch = this.AssignedSwitch;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChanges"))
+            {
+                initObject.ConfigChanges = this.ConfigChanges;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigContext"))
+            {
+                initObject.ConfigContext = this.ConfigContext;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolicyBucket"))
+            {
+                initObject.PolicyBucket = this.PolicyBucket;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
+            {
+                initObject.SrcTemplate = this.SrcTemplate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchClusterProfile"))
+            {
+                initObject.SwitchClusterProfile = this.SwitchClusterProfile;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPortMode.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPortMode")]
+    public class InitializeIntersightFabricPortMode:PSCmdlet
+	{
+		public InitializeIntersightFabricPortMode()
+		{
+            ClassId = FabricPortMode.ClassIdEnum.FabricPortMode;
+            CustomMode = FabricPortMode.CustomModeEnum.FibreChannel;
+            ObjectType = FabricPortMode.ObjectTypeEnum.FabricPortMode;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortMode.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Custom Port Mode specified for the port range.\n* `FibreChannel` - Fibre Channel Port Types.\n* `BreakoutEthernet10G` - Breakout Ethernet 10G Port Type.\n* `BreakoutEthernet25G` - Breakout Ethernet 25G Port Type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortMode.CustomModeEnum CustomMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortMode.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ending range of the Port Identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long PortIdEnd {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Starting range of the Port Identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long PortIdStart {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricPortMode initObject = new Intersight.Model.FabricPortMode();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CustomMode"))
+            {
+                initObject.CustomMode = this.CustomMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortIdEnd"))
+            {
+                initObject.PortIdEnd = this.PortIdEnd;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortIdStart"))
+            {
+                initObject.PortIdStart = this.PortIdStart;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSwitchClusterProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSwitchClusterProfile")]
+    public class InitializeIntersightFabricSwitchClusterProfile:PSCmdlet
+	{
+		public InitializeIntersightFabricSwitchClusterProfile()
+		{
+            ClassId = FabricSwitchClusterProfile.ClassIdEnum.FabricSwitchClusterProfile;
+            ObjectType = FabricSwitchClusterProfile.ObjectTypeEnum.FabricSwitchClusterProfile;
+            Type = FabricSwitchClusterProfile.TypeEnum.Instance;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchClusterProfile.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the profile instance or profile template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchClusterProfile.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.PolicyAbstractProfileRelationship SrcTemplate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricSwitchProfileRelationship> SwitchProfiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSwitchClusterProfile.TypeEnum Type {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricSwitchClusterProfile initObject = new Intersight.Model.FabricSwitchClusterProfile();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
+            {
+                initObject.SrcTemplate = this.SrcTemplate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchProfiles"))
+            {
+                initObject.SwitchProfiles = this.SwitchProfiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldGlobalSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldGlobalSettings")]
@@ -579,6 +2952,178 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricVsan.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricVsan")]
+    public class InitializeIntersightFabricVsan:PSCmdlet
+	{
+		public InitializeIntersightFabricVsan()
+		{
+            ClassId = FabricVsan.ClassIdEnum.FabricVsan;
+            DefaultZoning = FabricVsan.DefaultZoningEnum.Enabled;
+            ObjectType = FabricVsan.ObjectTypeEnum.FabricVsan;
+            VsanScope = FabricVsan.VsanScopeEnum.Uplink;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricVsan.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or Disables the default zoning state.\n* `Enabled` - Admin configured Enabled State.\n* `Disabled` - Admin configured Disabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricVsan.DefaultZoningEnum DefaultZoning {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricFcNetworkPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricFcNetworkPolicyRelationship FcNetworkPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Logical grouping mode for fc ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string FcZoneSharingMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"FCOE Vlan associated to the VSAN configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long FcoeVlan {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User given name for the VSAN configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricVsan.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual San Identifier in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long VsanId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used to indicate whether the VSAN Id is defined for storage or uplink or both traffics in FI.\n* `Uplink` - Vsan associated with uplink network.\n* `Storage` - Vsan associated with storage network.\n* `Common` - Vsan that is common for uplink and storage network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricVsan.VsanScopeEnum VsanScope {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricVsan initObject = new Intersight.Model.FabricVsan();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultZoning"))
+            {
+                initObject.DefaultZoning = this.DefaultZoning;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcNetworkPolicy"))
+            {
+                initObject.FcNetworkPolicy = this.FcNetworkPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcZoneSharingMode"))
+            {
+                initObject.FcZoneSharingMode = this.FcZoneSharingMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcoeVlan"))
+            {
+                initObject.FcoeVlan = this.FcoeVlan;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanId"))
+            {
+                initObject.VsanId = this.VsanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanScope"))
+            {
+                initObject.VsanScope = this.VsanScope;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricVlanSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricVlanSettings")]
@@ -653,6 +3198,2866 @@ namespace Intersight.PowerShell
                 initObject.NativeVlan = this.NativeVlan;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcStorageRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcStorageRole")]
+    public class InitializeIntersightFabricFcStorageRole:PSCmdlet
+	{
+		public InitializeIntersightFabricFcStorageRole()
+		{
+            AdminSpeed = FabricFcStorageRole.AdminSpeedEnum.Auto;
+            ClassId = FabricFcStorageRole.ClassIdEnum.FabricFcStorageRole;
+            ObjectType = FabricFcStorageRole.ObjectTypeEnum.FabricFcStorageRole;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcStorageRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcStorageRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcStorageRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 108)]
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual San Identifier associated to the FC port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long VsanId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricFcStorageRole initObject = new Intersight.Model.FabricFcStorageRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanId"))
+            {
+                initObject.VsanId = this.VsanId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFlowControlPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFlowControlPolicy")]
+    public class InitializeIntersightFabricFlowControlPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricFlowControlPolicy()
+		{
+            ClassId = FabricFlowControlPolicy.ClassIdEnum.FabricFlowControlPolicy;
+            ObjectType = FabricFlowControlPolicy.ObjectTypeEnum.FabricFlowControlPolicy;
+            PriorityFlowControlMode = FabricFlowControlPolicy.PriorityFlowControlModeEnum.Auto;
+            ReceiveDirection = FabricFlowControlPolicy.ReceiveDirectionEnum.Disabled;
+            SendDirection = FabricFlowControlPolicy.SendDirectionEnum.Disabled;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFlowControlPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFlowControlPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Configure PFC on a per-port basis to enable the no-drop behavior for the CoS as defined by the active network qos policy.\n* `auto` - Enables the no-drop CoS values to be advertised by the DCBXP and negotiated with the peer.A successful negotiation enables PFC on the no-drop CoS.Any failures because of a mismatch in the capability of peers causes the PFC not to be enabled.\n* `on` - Enables PFC on the local port regardless of the capability of the peers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFlowControlPolicy.PriorityFlowControlModeEnum PriorityFlowControlMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Link-level Flow Control configured in the receive direction.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFlowControlPolicy.ReceiveDirectionEnum ReceiveDirection {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Link-level Flow Control configured in the send direction.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFlowControlPolicy.SendDirectionEnum SendDirection {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricFlowControlPolicy initObject = new Intersight.Model.FabricFlowControlPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PriorityFlowControlMode"))
+            {
+                initObject.PriorityFlowControlMode = this.PriorityFlowControlMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReceiveDirection"))
+            {
+                initObject.ReceiveDirection = this.ReceiveDirection;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SendDirection"))
+            {
+                initObject.SendDirection = this.SendDirection;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricMacAgingSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricMacAgingSettings")]
+    public class InitializeIntersightFabricMacAgingSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricMacAgingSettings()
+		{
+            ClassId = FabricMacAgingSettings.ClassIdEnum.FabricMacAgingSettings;
+            MacAgingOption = FabricMacAgingSettings.MacAgingOptionEnum.Default;
+            ObjectType = FabricMacAgingSettings.ObjectTypeEnum.FabricMacAgingSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMacAgingSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This specifies one of the option to configure the MAC address aging time.\n* `Default` - This option sets the default MAC address aging time to 14500 seconds for End Host mode.\n* `Custom` - This option allows the the user to configure the MAC address aging time on the switch. For Switch Model UCS-FI-6454 or higher, the valid range is 120 to 918000 seconds and the switch will set the lower multiple of 5 of the given time.\n* `Never` - This option disables the MAC address aging process and never allows the MAC address entries to get removed from the table."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMacAgingSettings.MacAgingOptionEnum MacAgingOption {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Define the MAC address aging time in seconds. This field is valid when the \"Custom\" MAC address aging option is selected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 1e+06)]
+        public int MacAgingTime {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricMacAgingSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricMacAgingSettings initObject = new Intersight.Model.FabricMacAgingSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingOption"))
+            {
+                initObject.MacAgingOption = this.MacAgingOption;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingTime"))
+            {
+                initObject.MacAgingTime = this.MacAgingTime;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSystemQosPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSystemQosPolicy")]
+    public class InitializeIntersightFabricSystemQosPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricSystemQosPolicy()
+		{
+            ClassId = FabricSystemQosPolicy.ClassIdEnum.FabricSystemQosPolicy;
+            ObjectType = FabricSystemQosPolicy.ObjectTypeEnum.FabricSystemQosPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSystemQosPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricQosClass> Classes {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricSystemQosPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricSwitchProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricSystemQosPolicy initObject = new Intersight.Model.FabricSystemQosPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Classes"))
+            {
+                initObject.Classes = this.Classes;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUdldSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUdldSettings")]
+    public class InitializeIntersightFabricUdldSettings:PSCmdlet
+	{
+		public InitializeIntersightFabricUdldSettings()
+		{
+            AdminState = FabricUdldSettings.AdminStateEnum.Disabled;
+            ClassId = FabricUdldSettings.ClassIdEnum.FabricUdldSettings;
+            Mode = FabricUdldSettings.ModeEnum.Normal;
+            ObjectType = FabricUdldSettings.ObjectTypeEnum.FabricUdldSettings;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured UDLD State for this port.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.AdminStateEnum AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured UDLD Mode for this port.\n* `normal` - Admin configured 'normal' UDLD mode.\n* `aggressive` - Admin configured 'aggressive' UDLD mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ModeEnum Mode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUdldSettings.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricUdldSettings initObject = new Intersight.Model.FabricUdldSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            {
+                initObject.AdminState = this.AdminState;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPortOperation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPortOperation")]
+    public class InitializeIntersightFabricPortOperation:PSCmdlet
+	{
+		public InitializeIntersightFabricPortOperation()
+		{
+            AdminState = FabricPortOperation.AdminStateEnum.Enabled;
+            ClassId = FabricPortOperation.ClassIdEnum.FabricPortOperation;
+            ConfigState = FabricPortOperation.ConfigStateEnum.None;
+            ObjectType = FabricPortOperation.ObjectTypeEnum.FabricPortOperation;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured state to disable the port.\n* `Enabled` - Admin configured Enabled State.\n* `Disabled` - Admin configured Disabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortOperation.AdminStateEnum AdminState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortOperation.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The configured state of these settings in the target chassis. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the admin state changes are applied successfully in the target FI domain. Applying - This state denotes that the admin state changes are being applied in the target FI domain. Failed - This state denotes that the admin state changes could not be applied in the target FI domain.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortOperation.ConfigStateEnum ConfigState {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.NetworkElementRelationship NetworkElement {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortOperation.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricPortOperation initObject = new Intersight.Model.FabricPortOperation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            {
+                initObject.AdminState = this.AdminState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
+            {
+                initObject.ConfigState = this.ConfigState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
+            {
+                initObject.NetworkElement = this.NetworkElement;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUplinkRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUplinkRole")]
+    public class InitializeIntersightFabricUplinkRole:PSCmdlet
+	{
+		public InitializeIntersightFabricUplinkRole()
+		{
+            AdminSpeed = FabricUplinkRole.AdminSpeedEnum.Auto;
+            ClassId = FabricUplinkRole.ClassIdEnum.FabricUplinkRole;
+            Fec = FabricUplinkRole.FecEnum.Auto;
+            ObjectType = FabricUplinkRole.ObjectTypeEnum.FabricUplinkRole;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `1Gbps` - Admin configurable speed 1Gbps.\n* `10Gbps` - Admin configurable speed 10Gbps.\n* `25Gbps` - Admin configurable speed 25Gbps.\n* `40Gbps` - Admin configurable speed 40Gbps.\n* `100Gbps` - Admin configurable speed 100Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricEthNetworkGroupPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricEthNetworkGroupPolicyRelationship> EthNetworkGroupPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'.\n* `Cl91` - Forward error correction option 'cl91'.\n* `Cl74` - Forward error correction option 'cl74'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkRole.FecEnum Fec {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricFlowControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricFlowControlPolicyRelationship FlowControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkControlPolicyRelationship LinkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 108)]
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricUplinkRole initObject = new Intersight.Model.FabricUplinkRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkGroupPolicy"))
+            {
+                initObject.EthNetworkGroupPolicy = this.EthNetworkGroupPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Fec"))
+            {
+                initObject.Fec = this.Fec;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowControlPolicy"))
+            {
+                initObject.FlowControlPolicy = this.FlowControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkControlPolicy"))
+            {
+                initObject.LinkControlPolicy = this.LinkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPcMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPcMember")]
+    public class InitializeIntersightFabricPcMember:PSCmdlet
+	{
+		public InitializeIntersightFabricPcMember()
+		{
+            ClassId = FabricPcMember.ClassIdEnum.FabricPcMember;
+            ObjectType = FabricPcMember.ObjectTypeEnum.FabricPcMember;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPcMember.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPcMember.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Channel Identifier for the collection of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long PcId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricPcMember initObject = new Intersight.Model.FabricPcMember();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcId"))
+            {
+                initObject.PcId = this.PcId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricVlan.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricVlan")]
+    public class InitializeIntersightFabricVlan:PSCmdlet
+	{
+		public InitializeIntersightFabricVlan()
+		{
+            ClassId = FabricVlan.ClassIdEnum.FabricVlan;
+            ObjectType = FabricVlan.ObjectTypeEnum.FabricVlan;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool AutoAllowOnUplinks {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricVlan.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricEthNetworkPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricEthNetworkPolicyRelationship EthNetworkPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this FI."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool IsNative {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricMulticastPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricMulticastPolicyRelationship MulticastPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The 'name' used to identify this VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricVlan.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The identifier for this Virtual LAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long VlanId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricVlan initObject = new Intersight.Model.FabricVlan();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnUplinks"))
+            {
+                initObject.AutoAllowOnUplinks = this.AutoAllowOnUplinks;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkPolicy"))
+            {
+                initObject.EthNetworkPolicy = this.EthNetworkPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsNative"))
+            {
+                initObject.IsNative = this.IsNative;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MulticastPolicy"))
+            {
+                initObject.MulticastPolicy = this.MulticastPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanId"))
+            {
+                initObject.VlanId = this.VlanId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricServerRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricServerRole")]
+    public class InitializeIntersightFabricServerRole:PSCmdlet
+	{
+		public InitializeIntersightFabricServerRole()
+		{
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricServerRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricServerRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 108)]
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long SlotId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricServerRole initObject = new Intersight.Model.FabricServerRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcUplinkPcRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcUplinkPcRole")]
+    public class InitializeIntersightFabricFcUplinkPcRole:PSCmdlet
+	{
+		public InitializeIntersightFabricFcUplinkPcRole()
+		{
+            AdminSpeed = FabricFcUplinkPcRole.AdminSpeedEnum.Auto;
+            ClassId = FabricFcUplinkPcRole.ClassIdEnum.FabricFcUplinkPcRole;
+            FillPattern = FabricFcUplinkPcRole.FillPatternEnum.Idle;
+            ObjectType = FabricFcUplinkPcRole.ObjectTypeEnum.FabricFcUplinkPcRole;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcUplinkPcRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcUplinkPcRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Fill pattern to differentiate the configs in NPIV.\n* `Idle` - Fc Fill Pattern type Idle.\n* `Arbff` - Fc Fill Pattern type Arbff."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcUplinkPcRole.FillPatternEnum FillPattern {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcUplinkPcRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique Identifier of the port-channel, local to this switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 256)]
+        public long PcId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricPortIdentifier> Ports {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual San Identifier associated to the FC port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long VsanId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricFcUplinkPcRole initObject = new Intersight.Model.FabricFcUplinkPcRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FillPattern"))
+            {
+                initObject.FillPattern = this.FillPattern;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcId"))
+            {
+                initObject.PcId = this.PcId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ports"))
+            {
+                initObject.Ports = this.Ports;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanId"))
+            {
+                initObject.VsanId = this.VsanId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcoeUplinkPcRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcoeUplinkPcRole")]
+    public class InitializeIntersightFabricFcoeUplinkPcRole:PSCmdlet
+	{
+		public InitializeIntersightFabricFcoeUplinkPcRole()
+		{
+            AdminSpeed = FabricFcoeUplinkPcRole.AdminSpeedEnum.Auto;
+            ClassId = FabricFcoeUplinkPcRole.ClassIdEnum.FabricFcoeUplinkPcRole;
+            ObjectType = FabricFcoeUplinkPcRole.ObjectTypeEnum.FabricFcoeUplinkPcRole;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `1Gbps` - Admin configurable speed 1Gbps.\n* `10Gbps` - Admin configurable speed 10Gbps.\n* `25Gbps` - Admin configurable speed 25Gbps.\n* `40Gbps` - Admin configurable speed 40Gbps.\n* `100Gbps` - Admin configurable speed 100Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkPcRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkPcRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkAggregationPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkAggregationPolicyRelationship LinkAggregationPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkControlPolicyRelationship LinkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcoeUplinkPcRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique Identifier of the port-channel, local to this switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 256)]
+        public long PcId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricPortIdentifier> Ports {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricFcoeUplinkPcRole initObject = new Intersight.Model.FabricFcoeUplinkPcRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkAggregationPolicy"))
+            {
+                initObject.LinkAggregationPolicy = this.LinkAggregationPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkControlPolicy"))
+            {
+                initObject.LinkControlPolicy = this.LinkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcId"))
+            {
+                initObject.PcId = this.PcId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ports"))
+            {
+                initObject.Ports = this.Ports;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricEthNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricEthNetworkPolicy")]
+    public class InitializeIntersightFabricEthNetworkPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricEthNetworkPolicy()
+		{
+            ClassId = FabricEthNetworkPolicy.ClassIdEnum.FabricEthNetworkPolicy;
+            ObjectType = FabricEthNetworkPolicy.ObjectTypeEnum.FabricEthNetworkPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricSwitchProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricEthNetworkPolicy initObject = new Intersight.Model.FabricEthNetworkPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPortIdentifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPortIdentifier")]
+    public class InitializeIntersightFabricPortIdentifier:PSCmdlet
+	{
+		public InitializeIntersightFabricPortIdentifier()
+		{
+            ClassId = FabricPortIdentifier.ClassIdEnum.FabricPortIdentifier;
+            ObjectType = FabricPortIdentifier.ObjectTypeEnum.FabricPortIdentifier;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the 'aggregatePortId' port number as labeled on the equipment,\ne.g. the id of the port on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public long AggregatePortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortIdentifier.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricPortIdentifier.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Identifier of the Switch/FEX/Chassis Interface.\nWhen a port is not configured as a breakout port, the portId is the port number as labeled on the equipment,\ne.g. the id of the port on the switch, FEX or chassis.\nWhen a port is configured as a breakout port, the 'portId' represents the port id on the fanout side of the breakout cable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 108)]
+        public long PortId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long SlotId {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricPortIdentifier initObject = new Intersight.Model.FabricPortIdentifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregatePortId"))
+            {
+                initObject.AggregatePortId = this.AggregatePortId;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
+            {
+                initObject.PortId = this.PortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricEthNetworkControlPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricEthNetworkControlPolicy")]
+    public class InitializeIntersightFabricEthNetworkControlPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricEthNetworkControlPolicy()
+		{
+            ClassId = FabricEthNetworkControlPolicy.ClassIdEnum.FabricEthNetworkControlPolicy;
+            ForgeMac = FabricEthNetworkControlPolicy.ForgeMacEnum.Allow;
+            MacRegistrationMode = FabricEthNetworkControlPolicy.MacRegistrationModeEnum.NativeVlanOnly;
+            ObjectType = FabricEthNetworkControlPolicy.ObjectTypeEnum.FabricEthNetworkControlPolicy;
+            UplinkFailAction = FabricEthNetworkControlPolicy.UplinkFailActionEnum.LinkDown;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables the CDP on an interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool CdpEnabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkControlPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the MAC forging is allowed or denied on an interface.\n* `allow` - Allows mac forging on an interface.\n* `deny` - Denies mac forging on an interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkControlPolicy.ForgeMacEnum ForgeMac {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines the LLDP setting on an interface on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLldpSettings LldpSettings {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines the MAC addresses that have to be registered with the switch.\n* `nativeVlanOnly` - Register only the MAC addresses learnt on the native VLAN.\n* `allVlans` - Register all the MAC addresses learnt on all the allowed VLANs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkControlPolicy.MacRegistrationModeEnum MacRegistrationMode {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to vnicEthNetworkPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.VnicEthNetworkPolicyRelationship> NetworkPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkControlPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines the state of the virtual interface (vethernet / vfc) on the switch when a suitable uplink is not pinned.\n* `linkDown` - The vethernet will go down in case a suitable uplink is not pinned.\n* `warning` - The vethernet will remain up even if a suitable uplink is not pinned."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEthNetworkControlPolicy.UplinkFailActionEnum UplinkFailAction {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricEthNetworkControlPolicy initObject = new Intersight.Model.FabricEthNetworkControlPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CdpEnabled"))
+            {
+                initObject.CdpEnabled = this.CdpEnabled;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ForgeMac"))
+            {
+                initObject.ForgeMac = this.ForgeMac;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LldpSettings"))
+            {
+                initObject.LldpSettings = this.LldpSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacRegistrationMode"))
+            {
+                initObject.MacRegistrationMode = this.MacRegistrationMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkPolicy"))
+            {
+                initObject.NetworkPolicy = this.NetworkPolicy;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UplinkFailAction"))
+            {
+                initObject.UplinkFailAction = this.UplinkFailAction;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricLinkAggregationPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricLinkAggregationPolicy")]
+    public class InitializeIntersightFabricLinkAggregationPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricLinkAggregationPolicy()
+		{
+            ClassId = FabricLinkAggregationPolicy.ClassIdEnum.FabricLinkAggregationPolicy;
+            LacpRate = FabricLinkAggregationPolicy.LacpRateEnum.Normal;
+            ObjectType = FabricLinkAggregationPolicy.ObjectTypeEnum.FabricLinkAggregationPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLinkAggregationPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flag used to indicate whether LACP PDUs are to be sent 'fast', i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLinkAggregationPolicy.LacpRateEnum LacpRate {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricLinkAggregationPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flag tells the switch whether to suspend the port if it didn’t receive LACP PDU."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool SuspendIndividual {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricLinkAggregationPolicy initObject = new Intersight.Model.FabricLinkAggregationPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LacpRate"))
+            {
+                initObject.LacpRate = this.LacpRate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SuspendIndividual"))
+            {
+                initObject.SuspendIndividual = this.SuspendIndividual;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricEstimateImpact.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricEstimateImpact")]
+    public class InitializeIntersightFabricEstimateImpact:PSCmdlet
+	{
+		public InitializeIntersightFabricEstimateImpact()
+		{
+            ClassId = FabricEstimateImpact.ClassIdEnum.FabricEstimateImpact;
+            ObjectType = FabricEstimateImpact.ObjectTypeEnum.FabricEstimateImpact;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEstimateImpact.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricEstimateImpact.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricSwitchProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricSwitchProfileRelationship Profile {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricEstimateImpact initObject = new Intersight.Model.FabricEstimateImpact();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
+            {
+                initObject.Profile = this.Profile;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricConfigChangeDetail.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricConfigChangeDetail")]
+    public class InitializeIntersightFabricConfigChangeDetail:PSCmdlet
+	{
+		public InitializeIntersightFabricConfigChangeDetail()
+		{
+            ClassId = FabricConfigChangeDetail.ClassIdEnum.FabricConfigChangeDetail;
+            ConfigChangeFlag = FabricConfigChangeDetail.ConfigChangeFlagEnum.PendingChanges;
+            ModStatus = FabricConfigChangeDetail.ModStatusEnum.None;
+            ObjectType = FabricConfigChangeDetail.ObjectTypeEnum.FabricConfigChangeDetail;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Changes {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricConfigChangeDetail.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Context information on the change."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.PolicyConfigResultContext ConfigChangeContext {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Config change flag to differentiate Pending-changes and Config-drift.\n* `Pending-changes` - Config change flag represents changes are due to not deployed changes from Intersight.\n* `Drift-changes` - Config change flag represents changes are due to endpoint configuration changes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricConfigChangeDetail.ConfigChangeFlagEnum ConfigChangeFlag {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Disruptions {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed description of the config change."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Message {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Modification status of the mo in this config change.\n* `None` - The 'none' operation/state.Indicates a configuration profile has been deployed, and the desired configuration matches the actual device configuration.\n* `Created` - The 'create' operation/state.Indicates a configuration profile has been created and associated with a device, but the configuration specified in the profilehas not been applied yet. For example, this could happen when the user creates a server profile and has not deployed the profile yet.\n* `Modified` - The 'update' operation/state.Indicates some of the desired configuration changes specified in a profile have not been been applied to the associated device.This happens when the user has made changes to a profile and has not deployed the changes yet, or when the workflow to applythe configuration changes has not completed succesfully.\n* `Deleted` - The 'delete' operation/state.Indicates a configuration profile has been been disassociated from a device and the user has not undeployed these changes yet."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricConfigChangeDetail.ModStatusEnum ModStatus {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricConfigChangeDetail.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricConfigChangeDetail initObject = new Intersight.Model.FabricConfigChangeDetail();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Changes"))
+            {
+                initObject.Changes = this.Changes;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChangeContext"))
+            {
+                initObject.ConfigChangeContext = this.ConfigChangeContext;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChangeFlag"))
+            {
+                initObject.ConfigChangeFlag = this.ConfigChangeFlag;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Disruptions"))
+            {
+                initObject.Disruptions = this.Disruptions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Message"))
+            {
+                initObject.Message = this.Message;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ModStatus"))
+            {
+                initObject.ModStatus = this.ModStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcNetworkPolicy")]
+    public class InitializeIntersightFabricFcNetworkPolicy:PSCmdlet
+	{
+		public InitializeIntersightFabricFcNetworkPolicy()
+		{
+            ClassId = FabricFcNetworkPolicy.ClassIdEnum.FabricFcNetworkPolicy;
+            ObjectType = FabricFcNetworkPolicy.ObjectTypeEnum.FabricFcNetworkPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcNetworkPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable Trunking on all of configured FC uplink ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool EnableTrunking {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricFcNetworkPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricSwitchProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricFcNetworkPolicy initObject = new Intersight.Model.FabricFcNetworkPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableTrunking"))
+            {
+                initObject.EnableTrunking = this.EnableTrunking;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricUplinkPcRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricUplinkPcRole")]
+    public class InitializeIntersightFabricUplinkPcRole:PSCmdlet
+	{
+		public InitializeIntersightFabricUplinkPcRole()
+		{
+            AdminSpeed = FabricUplinkPcRole.AdminSpeedEnum.Auto;
+            ClassId = FabricUplinkPcRole.ClassIdEnum.FabricUplinkPcRole;
+            ObjectType = FabricUplinkPcRole.ObjectTypeEnum.FabricUplinkPcRole;
+            
+		}
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `1Gbps` - Admin configurable speed 1Gbps.\n* `10Gbps` - Admin configurable speed 10Gbps.\n* `25Gbps` - Admin configurable speed 25Gbps.\n* `40Gbps` - Admin configurable speed 40Gbps.\n* `100Gbps` - Admin configurable speed 100Gbps."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkPcRole.AdminSpeedEnum AdminSpeed {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkPcRole.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricEthNetworkGroupPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricEthNetworkGroupPolicyRelationship> EthNetworkGroupPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricFlowControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricFlowControlPolicyRelationship FlowControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkAggregationPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkAggregationPolicyRelationship LinkAggregationPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricLinkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricLinkControlPolicyRelationship LinkControlPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public FabricUplinkPcRole.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique Identifier of the port-channel, local to this switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 256)]
+        public long PcId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.FabricPortPolicyRelationship PortPolicy {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.FabricPortIdentifier> Ports {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.FabricUplinkPcRole initObject = new Intersight.Model.FabricUplinkPcRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminSpeed"))
+            {
+                initObject.AdminSpeed = this.AdminSpeed;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkGroupPolicy"))
+            {
+                initObject.EthNetworkGroupPolicy = this.EthNetworkGroupPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowControlPolicy"))
+            {
+                initObject.FlowControlPolicy = this.FlowControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkAggregationPolicy"))
+            {
+                initObject.LinkAggregationPolicy = this.LinkAggregationPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkControlPolicy"))
+            {
+                initObject.LinkControlPolicy = this.LinkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcId"))
+            {
+                initObject.PcId = this.PcId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ports"))
+            {
+                initObject.Ports = this.Ports;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
             WriteObject(initObject);
         }
 

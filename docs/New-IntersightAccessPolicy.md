@@ -19,7 +19,7 @@ New-IntersightAccessPolicy [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AccessPolicy&amp;apos; resource.
+Create a &apos;AccessPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -316,12 +316,12 @@ PS C:\> New-IntersightAccessPolicy
 
 [Get-IntersightAccessPolicy](./Get-IntersightAccessPolicy.md)
 
-[Set-IntersightAccessPolicy](./Set-IntersightAccessPolicy.md)
-
-[Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
-
 [Initialize-IntersightAccessAddressType](./Initialize-IntersightAccessAddressType.md)
 
 [Initialize-IntersightAccessConfigurationType](./Initialize-IntersightAccessConfigurationType.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightAccessPolicy](./Remove-IntersightAccessPolicy.md)
+
+[Set-IntersightAccessPolicy](./Set-IntersightAccessPolicy.md)

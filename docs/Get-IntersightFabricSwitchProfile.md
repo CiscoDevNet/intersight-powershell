@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
 
-[Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
-
 [Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
+
+[Set-IntersightFabricSwitchProfile](./Set-IntersightFabricSwitchProfile.md)
 

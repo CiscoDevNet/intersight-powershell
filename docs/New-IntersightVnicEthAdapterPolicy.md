@@ -19,7 +19,7 @@ New-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicEthAdapterPolicy&amp;apos; resource.
+Create a &apos;VnicEthAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -437,17 +437,19 @@ PS C:\> New-IntersightVnicEthAdapterPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightVnicEthAdapterPolicy](./Set-IntersightVnicEthAdapterPolicy.md)
-
-[Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)
-
 [Get-IntersightVnicEthAdapterPolicy](./Get-IntersightVnicEthAdapterPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicArfsSettings](./Initialize-IntersightVnicArfsSettings.md)
 
 [Initialize-IntersightVnicCompletionQueueSettings](./Initialize-IntersightVnicCompletionQueueSettings.md)
 
 [Initialize-IntersightVnicEthInterruptSettings](./Initialize-IntersightVnicEthInterruptSettings.md)
+
+[Initialize-IntersightVnicEthRxQueueSettings](./Initialize-IntersightVnicEthRxQueueSettings.md)
+
+[Initialize-IntersightVnicEthTxQueueSettings](./Initialize-IntersightVnicEthTxQueueSettings.md)
 
 [Initialize-IntersightVnicNvgreSettings](./Initialize-IntersightVnicNvgreSettings.md)
 
@@ -457,12 +459,10 @@ PS C:\> New-IntersightVnicEthAdapterPolicy
 
 [Initialize-IntersightVnicRssHashSettings](./Initialize-IntersightVnicRssHashSettings.md)
 
-[Initialize-IntersightVnicEthRxQueueSettings](./Initialize-IntersightVnicEthRxQueueSettings.md)
-
 [Initialize-IntersightVnicTcpOffloadSettings](./Initialize-IntersightVnicTcpOffloadSettings.md)
 
-[Initialize-IntersightVnicEthTxQueueSettings](./Initialize-IntersightVnicEthTxQueueSettings.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
 [Initialize-IntersightVnicVxlanSettings](./Initialize-IntersightVnicVxlanSettings.md)
+
+[Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)
+
+[Set-IntersightVnicEthAdapterPolicy](./Set-IntersightVnicEthAdapterPolicy.md)

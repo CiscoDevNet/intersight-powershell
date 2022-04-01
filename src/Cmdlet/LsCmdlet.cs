@@ -217,7 +217,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new LsApi(Config);
             ModelObject = new LsServiceProfile();
-            MethodName = "UpdateLsServiceProfileWithHttpInfo";
+            MethodName = "PatchLsServiceProfileWithHttpInfo";
 		}
         
         

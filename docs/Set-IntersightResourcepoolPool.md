@@ -254,14 +254,14 @@ PS C:\> Set-IntersightResourcepoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)
-
 [Get-IntersightResourcepoolPool](./Get-IntersightResourcepoolPool.md)
 
-[New-IntersightResourcepoolPool](./New-IntersightResourcepoolPool.md)
-
-[Initialize-IntersightResourcepoolResourcePoolParameters](./Initialize-IntersightResourcepoolResourcePoolParameters.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightResourceSelector](./Initialize-IntersightResourceSelector.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightResourcepoolResourcePoolParameters](./Initialize-IntersightResourcepoolResourcePoolParameters.md)
+
+[New-IntersightResourcepoolPool](./New-IntersightResourcepoolPool.md)
+
+[Remove-IntersightResourcepoolPool](./Remove-IntersightResourcepoolPool.md)

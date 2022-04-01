@@ -6273,34 +6273,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gzahidi\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/var/lib/jenkins/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.9.5517",
+    "version": "1.0.9.5508",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj",
+      "projectUniqueName": "/home/jenkins/workspace/Fix-vvb/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.9.5508/src/Intersight.PowerShell.csproj",
       "projectName": "PSIntersight",
-      "projectPath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\Intersight.PowerShell.csproj",
-      "packagesPath": "C:\\Users\\gzahidi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gzahidi\\go\\src\\github.com\\cisco-intersight\\intersight-powershell\\src\\obj\\",
+      "projectPath": "/home/jenkins/workspace/Fix-vvb/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.9.5508/src/Intersight.PowerShell.csproj",
+      "packagesPath": "/var/lib/jenkins/.nuget/packages/",
+      "outputPath": "/home/jenkins/workspace/Fix-vvb/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.9.5508/src/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gzahidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/var/lib/jenkins/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "projectReferences": {}
         }
       },
@@ -6312,6 +6307,7 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
+        "targetAlias": "netcoreapp3.0",
         "dependencies": {
           "CompareNETObjects": {
             "target": "Package",
@@ -6361,10 +6357,6 @@
           {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[3.0.0, 3.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
           }
         ],
         "frameworkReferences": {
@@ -6372,7 +6364,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/5.0.210/RuntimeIdentifierGraph.json"
       }
     }
   }

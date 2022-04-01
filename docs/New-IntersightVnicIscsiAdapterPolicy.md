@@ -222,8 +222,8 @@ PS C:\> New-IntersightVnicIscsiAdapterPolicy
 
 [Get-IntersightVnicIscsiAdapterPolicy](./Get-IntersightVnicIscsiAdapterPolicy.md)
 
-[Set-IntersightVnicIscsiAdapterPolicy](./Set-IntersightVnicIscsiAdapterPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightVnicIscsiAdapterPolicy](./Remove-IntersightVnicIscsiAdapterPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightVnicIscsiAdapterPolicy](./Set-IntersightVnicIscsiAdapterPolicy.md)

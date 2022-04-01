@@ -209,10 +209,10 @@ PS C:\> New-IntersightMacpoolPool
 
 [Get-IntersightMacpoolPool](./Get-IntersightMacpoolPool.md)
 
-[Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)
-
-[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
-
 [Initialize-IntersightMacpoolBlock](./Initialize-IntersightMacpoolBlock.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightMacpoolPool](./Remove-IntersightMacpoolPool.md)
+
+[Set-IntersightMacpoolPool](./Set-IntersightMacpoolPool.md)

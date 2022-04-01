@@ -19,7 +19,7 @@ Set-IntersightLicenseSmartlicenseToken [-AccountLicenseData< LicenseAccountLicen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;LicenseSmartlicenseToken&amp;apos; resource.
+Update a &apos;LicenseSmartlicenseToken&apos; resource.
 
 ## PARAMETERS
 

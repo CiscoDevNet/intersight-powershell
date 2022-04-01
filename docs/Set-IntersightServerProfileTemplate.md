@@ -19,7 +19,7 @@ Set-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ServerProfileTemplate&amp;apos; resource.
+Update a &apos;ServerProfileTemplate&apos; resource.
 
 ## PARAMETERS
 
@@ -325,12 +325,12 @@ PS C:\> Set-IntersightServerProfileTemplate
 
 [Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 
-[New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
-
-[Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
+
+[Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)

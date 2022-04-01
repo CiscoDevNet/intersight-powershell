@@ -17,7 +17,7 @@ Remove-IntersightIamPermission -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;IamPermission&amp;apos; resource.
+Delete a &apos;IamPermission&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamPermission](./Set-IntersightIamPermission.md)
-
 [Get-IntersightIamPermission](./Get-IntersightIamPermission.md)
 
 [New-IntersightIamPermission](./New-IntersightIamPermission.md)
+
+[Set-IntersightIamPermission](./Set-IntersightIamPermission.md)
 

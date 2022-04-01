@@ -25,7 +25,7 @@ Get-IntersightTerraformExecutor [-Count <Boolean>] [-InlineCount <String>] [-Sel
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;TerraformExecutor&amp;apos; resource.,
+Read a &apos;TerraformExecutor&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightTerraformExecutor](./Set-IntersightTerraformExecutor.md)
+[New-IntersightTerraformExecutor](./New-IntersightTerraformExecutor.md)
 
 [Remove-IntersightTerraformExecutor](./Remove-IntersightTerraformExecutor.md)
 
-[New-IntersightTerraformExecutor](./New-IntersightTerraformExecutor.md)
+[Set-IntersightTerraformExecutor](./Set-IntersightTerraformExecutor.md)
 

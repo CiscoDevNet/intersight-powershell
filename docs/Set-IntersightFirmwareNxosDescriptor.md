@@ -19,7 +19,7 @@ Set-IntersightFirmwareNxosDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareNxosDescriptor&amp;apos; resource.
+Update a &apos;FirmwareNxosDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -252,8 +252,8 @@ PS C:\> Set-IntersightFirmwareNxosDescriptor
 
 [Get-IntersightFirmwareNxosDescriptor](./Get-IntersightFirmwareNxosDescriptor.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightFirmwareNxosDescriptor](./New-IntersightFirmwareNxosDescriptor.md)
 
 [Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

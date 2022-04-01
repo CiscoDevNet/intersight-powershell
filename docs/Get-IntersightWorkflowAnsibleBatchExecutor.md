@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightWorkflowAnsibleBatchExecutor](./New-IntersightWorkflowAnsibleBatchExecutor.md)
+
 [Remove-IntersightWorkflowAnsibleBatchExecutor](./Remove-IntersightWorkflowAnsibleBatchExecutor.md)
 
 [Set-IntersightWorkflowAnsibleBatchExecutor](./Set-IntersightWorkflowAnsibleBatchExecutor.md)
-
-[New-IntersightWorkflowAnsibleBatchExecutor](./New-IntersightWorkflowAnsibleBatchExecutor.md)
 

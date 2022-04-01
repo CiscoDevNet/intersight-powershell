@@ -25,7 +25,7 @@ Get-IntersightStorageNetAppFcPortEvent [-Count <Boolean>] [-InlineCount <String>
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;StorageNetAppFcPortEvent&amp;apos; resource.,
+Read a &apos;StorageNetAppFcPortEvent&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

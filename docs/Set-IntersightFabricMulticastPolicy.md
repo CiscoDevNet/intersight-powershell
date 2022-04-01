@@ -237,8 +237,8 @@ PS C:\> Set-IntersightFabricMulticastPolicy
 
 [Get-IntersightFabricMulticastPolicy](./Get-IntersightFabricMulticastPolicy.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightFabricMulticastPolicy](./New-IntersightFabricMulticastPolicy.md)
 
 [Remove-IntersightFabricMulticastPolicy](./Remove-IntersightFabricMulticastPolicy.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

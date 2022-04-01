@@ -19,7 +19,7 @@ New-IntersightHyperflexVcenterConfigPolicy [-AdditionalProperties< System.Collec
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexVcenterConfigPolicy&amp;apos; resource.
+Create a &apos;HyperflexVcenterConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -270,8 +270,8 @@ PS C:\> New-IntersightHyperflexVcenterConfigPolicy
 
 [Get-IntersightHyperflexVcenterConfigPolicy](./Get-IntersightHyperflexVcenterConfigPolicy.md)
 
-[Set-IntersightHyperflexVcenterConfigPolicy](./Set-IntersightHyperflexVcenterConfigPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightHyperflexVcenterConfigPolicy](./Remove-IntersightHyperflexVcenterConfigPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightHyperflexVcenterConfigPolicy](./Set-IntersightHyperflexVcenterConfigPolicy.md)

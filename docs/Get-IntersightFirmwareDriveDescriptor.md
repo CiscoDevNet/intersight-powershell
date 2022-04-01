@@ -25,7 +25,7 @@ Get-IntersightFirmwareDriveDescriptor [-Count <Boolean>] [-InlineCount <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FirmwareDriveDescriptor&amp;apos; resource.,
+Read a &apos;FirmwareDriveDescriptor&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightFirmwareDriveDescriptor](./Set-IntersightFirmwareDriveDescriptor.md)
+[New-IntersightFirmwareDriveDescriptor](./New-IntersightFirmwareDriveDescriptor.md)
 
 [Remove-IntersightFirmwareDriveDescriptor](./Remove-IntersightFirmwareDriveDescriptor.md)
 
-[New-IntersightFirmwareDriveDescriptor](./New-IntersightFirmwareDriveDescriptor.md)
+[Set-IntersightFirmwareDriveDescriptor](./Set-IntersightFirmwareDriveDescriptor.md)
 

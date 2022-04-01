@@ -17,7 +17,7 @@ Remove-IntersightAdapterConfigPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;AdapterConfigPolicy&amp;apos; resource.
+Delete a &apos;AdapterConfigPolicy&apos; resource.
 
 ## EXAMPLES
 

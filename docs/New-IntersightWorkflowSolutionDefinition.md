@@ -287,10 +287,10 @@ PS C:\> New-IntersightWorkflowSolutionDefinition
 
 [Get-IntersightWorkflowSolutionDefinition](./Get-IntersightWorkflowSolutionDefinition.md)
 
-[Set-IntersightWorkflowSolutionDefinition](./Set-IntersightWorkflowSolutionDefinition.md)
-
-[Remove-IntersightWorkflowSolutionDefinition](./Remove-IntersightWorkflowSolutionDefinition.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightWorkflowSolutionDefinition](./Remove-IntersightWorkflowSolutionDefinition.md)
+
+[Set-IntersightWorkflowSolutionDefinition](./Set-IntersightWorkflowSolutionDefinition.md)

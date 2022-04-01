@@ -164,10 +164,10 @@ PS C:\> New-IntersightHyperflexFeatureLimitExternal
 
 [Get-IntersightHyperflexFeatureLimitExternal](./Get-IntersightHyperflexFeatureLimitExternal.md)
 
-[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
-
-[Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
-
 [Initialize-IntersightHyperflexFeatureLimitEntry](./Initialize-IntersightHyperflexFeatureLimitEntry.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
+
+[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)

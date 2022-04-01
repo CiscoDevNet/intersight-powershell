@@ -204,12 +204,12 @@ PS C:\> New-IntersightIamApiKey
 
 ## RELATED LINKS
 
-[Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
-
-[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)
-
 [Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPkixKeyGenerationSpec](./Initialize-IntersightPkixKeyGenerationSpec.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightIamApiKey](./Remove-IntersightIamApiKey.md)
+
+[Set-IntersightIamApiKey](./Set-IntersightIamApiKey.md)

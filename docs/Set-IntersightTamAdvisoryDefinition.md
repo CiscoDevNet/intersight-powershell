@@ -395,20 +395,20 @@ PS C:\> Set-IntersightTamAdvisoryDefinition
 
 ## RELATED LINKS
 
-[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)
-
 [Get-IntersightTamAdvisoryDefinition](./Get-IntersightTamAdvisoryDefinition.md)
 
-[New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 
-[Initialize-IntersightTamBaseAdvisoryDetails](./Initialize-IntersightTamBaseAdvisoryDetails.md)
-
 [Initialize-IntersightTamApiDataSource](./Initialize-IntersightTamApiDataSource.md)
+
+[Initialize-IntersightTamBaseAdvisoryDetails](./Initialize-IntersightTamBaseAdvisoryDetails.md)
 
 [Initialize-IntersightTamS3DataSource](./Initialize-IntersightTamS3DataSource.md)
 
 [Initialize-IntersightTamSeverity](./Initialize-IntersightTamSeverity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightTamAdvisoryDefinition](./New-IntersightTamAdvisoryDefinition.md)
+
+[Remove-IntersightTamAdvisoryDefinition](./Remove-IntersightTamAdvisoryDefinition.md)

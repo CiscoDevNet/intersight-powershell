@@ -19,7 +19,7 @@ New-IntersightFirmwareDimmDescriptor [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareDimmDescriptor&amp;apos; resource.
+Create a &apos;FirmwareDimmDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwareDimmDescriptor
 
 [Get-IntersightFirmwareDimmDescriptor](./Get-IntersightFirmwareDimmDescriptor.md)
 
-[Set-IntersightFirmwareDimmDescriptor](./Set-IntersightFirmwareDimmDescriptor.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightFirmwareDimmDescriptor](./Remove-IntersightFirmwareDimmDescriptor.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightFirmwareDimmDescriptor](./Set-IntersightFirmwareDimmDescriptor.md)

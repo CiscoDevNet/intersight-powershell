@@ -209,14 +209,14 @@ PS C:\> New-IntersightBulkExport
 
 [Get-IntersightBulkExport](./Get-IntersightBulkExport.md)
 
-[Set-IntersightBulkExport](./Set-IntersightBulkExport.md)
-
-[Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
-
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
 
 [Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)
+
+[Remove-IntersightBulkExport](./Remove-IntersightBulkExport.md)
+
+[Set-IntersightBulkExport](./Set-IntersightBulkExport.md)

@@ -19,7 +19,7 @@ Set-IntersightMemoryPersistentMemoryUnit [-AdditionalProperties< System.Collecti
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;MemoryPersistentMemoryUnit&amp;apos; resource.
+Update a &apos;MemoryPersistentMemoryUnit&apos; resource.
 
 ## PARAMETERS
 

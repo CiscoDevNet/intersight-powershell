@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A human-friendly description of this custom data type indicating it&amp;apos;s domain and usage.
+A human-friendly description of this custom data type indicating it&apos;s domain and usage.
 
 ```yaml
 Type: string
@@ -258,14 +258,14 @@ PS C:\> New-IntersightWorkflowCustomDataTypeDefinition
 
 [Get-IntersightWorkflowCustomDataTypeDefinition](./Get-IntersightWorkflowCustomDataTypeDefinition.md)
 
-[Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)
-
-[Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
-
-[Initialize-IntersightWorkflowParameterSet](./Initialize-IntersightWorkflowParameterSet.md)
-
-[Initialize-IntersightWorkflowCustomDataTypeProperties](./Initialize-IntersightWorkflowCustomDataTypeProperties.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightWorkflowCustomDataTypeProperties](./Initialize-IntersightWorkflowCustomDataTypeProperties.md)
+
+[Initialize-IntersightWorkflowParameterSet](./Initialize-IntersightWorkflowParameterSet.md)
+
+[Remove-IntersightWorkflowCustomDataTypeDefinition](./Remove-IntersightWorkflowCustomDataTypeDefinition.md)
+
+[Set-IntersightWorkflowCustomDataTypeDefinition](./Set-IntersightWorkflowCustomDataTypeDefinition.md)

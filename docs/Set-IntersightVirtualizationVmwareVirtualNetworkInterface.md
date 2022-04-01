@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareVirtualNetworkInterface [-AdapterType< string>
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareVirtualNetworkInterface&amp;apos; resource.
+Update a &apos;VirtualizationVmwareVirtualNetworkInterface&apos; resource.
 
 ## PARAMETERS
 

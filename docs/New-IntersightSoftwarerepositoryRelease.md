@@ -220,10 +220,10 @@ PS C:\> New-IntersightSoftwarerepositoryRelease
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwarerepositoryRelease](./Set-IntersightSoftwarerepositoryRelease.md)
-
-[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
-
 [Get-IntersightSoftwarerepositoryRelease](./Get-IntersightSoftwarerepositoryRelease.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
+
+[Set-IntersightSoftwarerepositoryRelease](./Set-IntersightSoftwarerepositoryRelease.md)

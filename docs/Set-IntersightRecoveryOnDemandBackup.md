@@ -19,7 +19,7 @@ Set-IntersightRecoveryOnDemandBackup [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;RecoveryOnDemandBackup&amp;apos; resource.
+Update a &apos;RecoveryOnDemandBackup&apos; resource.
 
 ## PARAMETERS
 
@@ -298,10 +298,10 @@ PS C:\> Set-IntersightRecoveryOnDemandBackup
 
 ## RELATED LINKS
 
-[Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)
-
-[New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
-
 [Get-IntersightRecoveryOnDemandBackup](./Get-IntersightRecoveryOnDemandBackup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightRecoveryOnDemandBackup](./New-IntersightRecoveryOnDemandBackup.md)
+
+[Remove-IntersightRecoveryOnDemandBackup](./Remove-IntersightRecoveryOnDemandBackup.md)

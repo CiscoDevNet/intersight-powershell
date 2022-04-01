@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesVersion](./Set-IntersightKubernetesVersion.md)
-
 [Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
 
 [New-IntersightKubernetesVersion](./New-IntersightKubernetesVersion.md)
+
+[Set-IntersightKubernetesVersion](./Set-IntersightKubernetesVersion.md)
 

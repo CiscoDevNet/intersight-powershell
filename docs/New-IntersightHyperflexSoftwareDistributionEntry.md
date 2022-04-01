@@ -180,8 +180,8 @@ PS C:\> New-IntersightHyperflexSoftwareDistributionEntry
 
 [Get-IntersightHyperflexSoftwareDistributionEntry](./Get-IntersightHyperflexSoftwareDistributionEntry.md)
 
-[Set-IntersightHyperflexSoftwareDistributionEntry](./Set-IntersightHyperflexSoftwareDistributionEntry.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightHyperflexSoftwareDistributionEntry](./Remove-IntersightHyperflexSoftwareDistributionEntry.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightHyperflexSoftwareDistributionEntry](./Set-IntersightHyperflexSoftwareDistributionEntry.md)

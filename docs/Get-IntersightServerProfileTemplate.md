@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightServerProfileTemplate](./New-IntersightServerProfileTemplate.md)
 
-[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
-
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
+
+[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
 

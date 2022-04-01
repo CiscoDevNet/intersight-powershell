@@ -311,16 +311,16 @@ PS C:\> New-IntersightFirmwareUpgrade
 
 [Get-IntersightFirmwareUpgrade](./Get-IntersightFirmwareUpgrade.md)
 
-[Set-IntersightFirmwareUpgrade](./Set-IntersightFirmwareUpgrade.md)
-
-[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
-
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 
 [Initialize-IntersightFirmwareExcludeComponentPidListType](./Initialize-IntersightFirmwareExcludeComponentPidListType.md)
 
-[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
-
 [Initialize-IntersightFirmwareNetworkShare](./Initialize-IntersightFirmwareNetworkShare.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+
+[Remove-IntersightFirmwareUpgrade](./Remove-IntersightFirmwareUpgrade.md)
+
+[Set-IntersightFirmwareUpgrade](./Set-IntersightFirmwareUpgrade.md)

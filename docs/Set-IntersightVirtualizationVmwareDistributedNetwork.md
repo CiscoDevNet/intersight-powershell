@@ -316,8 +316,8 @@ PS C:\> Set-IntersightVirtualizationVmwareDistributedNetwork
 
 [Get-IntersightVirtualizationVmwareDistributedNetwork](./Get-IntersightVirtualizationVmwareDistributedNetwork.md)
 
-[Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)
 
 [Initialize-IntersightVirtualizationVmwareVlanRange](./Initialize-IntersightVirtualizationVmwareVlanRange.md)

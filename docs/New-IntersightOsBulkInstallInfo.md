@@ -19,7 +19,7 @@ New-IntersightOsBulkInstallInfo [-AdditionalProperties< System.Collections.Gener
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;OsBulkInstallInfo&amp;apos; resource.
+Create a &apos;OsBulkInstallInfo&apos; resource.
 
 ## PARAMETERS
 
@@ -266,10 +266,10 @@ PS C:\> New-IntersightOsBulkInstallInfo
 
 [Get-IntersightOsBulkInstallInfo](./Get-IntersightOsBulkInstallInfo.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [Initialize-IntersightOsGlobalConfig](./Initialize-IntersightOsGlobalConfig.md)
 
 [Initialize-IntersightOsServerConfig](./Initialize-IntersightOsServerConfig.md)
 
 [Initialize-IntersightOsValidationInformation](./Initialize-IntersightOsValidationInformation.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

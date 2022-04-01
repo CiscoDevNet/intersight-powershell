@@ -327,9 +327,7 @@ PS C:\> New-IntersightChassisProfile
 
 [Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
 
-[Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)
-
-[Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
@@ -337,4 +335,6 @@ PS C:\> New-IntersightChassisProfile
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
+
+[Set-IntersightChassisProfile](./Set-IntersightChassisProfile.md)

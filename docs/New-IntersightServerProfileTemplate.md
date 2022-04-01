@@ -325,12 +325,12 @@ PS C:\> New-IntersightServerProfileTemplate
 
 [Get-IntersightServerProfileTemplate](./Get-IntersightServerProfileTemplate.md)
 
-[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)
-
-[Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
+
+[Set-IntersightServerProfileTemplate](./Set-IntersightServerProfileTemplate.md)

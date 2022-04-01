@@ -386,9 +386,11 @@ PS C:\> Set-IntersightVirtualizationIweCluster
 
 [Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
 
-[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
-
 [Initialize-IntersightCondAlarmSummary](./Initialize-IntersightCondAlarmSummary.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
 [Initialize-IntersightVirtualizationCpuAllocation](./Initialize-IntersightVirtualizationCpuAllocation.md)
 
@@ -396,6 +398,4 @@ PS C:\> Set-IntersightVirtualizationIweCluster
 
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
-[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)

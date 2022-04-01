@@ -197,7 +197,7 @@ namespace Intersight.PowerShell
 		{
 			ApiInstance = new RackApi(Config);
             ModelObject = new RackUnitPersonality();
-            MethodName = "UpdateRackUnitPersonalityWithHttpInfo";
+            MethodName = "PatchRackUnitPersonalityWithHttpInfo";
 		}
         
         

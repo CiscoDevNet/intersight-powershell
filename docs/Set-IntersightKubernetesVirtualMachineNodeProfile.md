@@ -361,16 +361,16 @@ PS C:\> Set-IntersightKubernetesVirtualMachineNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)
-
-[New-IntersightKubernetesVirtualMachineNodeProfile](./New-IntersightKubernetesVirtualMachineNodeProfile.md)
-
 [Get-IntersightKubernetesVirtualMachineNodeProfile](./Get-IntersightKubernetesVirtualMachineNodeProfile.md)
+
+[Initialize-IntersightKubernetesEthernet](./Initialize-IntersightKubernetesEthernet.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightKubernetesEthernet](./Initialize-IntersightKubernetesEthernet.md)
+[New-IntersightKubernetesVirtualMachineNodeProfile](./New-IntersightKubernetesVirtualMachineNodeProfile.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightKubernetesVirtualMachineNodeProfile](./Remove-IntersightKubernetesVirtualMachineNodeProfile.md)

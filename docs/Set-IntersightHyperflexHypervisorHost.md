@@ -382,16 +382,16 @@ PS C:\> Set-IntersightHyperflexHypervisorHost
 
 [Get-IntersightHyperflexHypervisorHost](./Get-IntersightHyperflexHypervisorHost.md)
 
-[Initialize-IntersightVirtualizationCpuInfo](./Initialize-IntersightVirtualizationCpuInfo.md)
+[Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightNetworkHyperFlexNetworkAddress](./Initialize-IntersightNetworkHyperFlexNetworkAddress.md)
 
-[Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
+[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
+
+[Initialize-IntersightVirtualizationCpuInfo](./Initialize-IntersightVirtualizationCpuInfo.md)
 
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
-[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
-
 [Initialize-IntersightVirtualizationProductInfo](./Initialize-IntersightVirtualizationProductInfo.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

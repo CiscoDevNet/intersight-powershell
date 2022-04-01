@@ -19,7 +19,7 @@ Set-IntersightIamIpAccessManagement [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamIpAccessManagement&amp;apos; resource.
+Update a &apos;IamIpAccessManagement&apos; resource.
 
 ## PARAMETERS
 
@@ -144,6 +144,6 @@ PS C:\> Set-IntersightIamIpAccessManagement
 
 [Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)
 
-[New-IntersightIamIpAccessManagement](./New-IntersightIamIpAccessManagement.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightIamIpAccessManagement](./New-IntersightIamIpAccessManagement.md)

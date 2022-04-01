@@ -17,7 +17,7 @@ Remove-IntersightAssetTarget -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;AssetTarget&amp;apos; resource.
+Delete a &apos;AssetTarget&apos; resource.
 
 ## EXAMPLES
 

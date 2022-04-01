@@ -17,7 +17,7 @@ Remove-IntersightHyperflexClusterProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HyperflexClusterProfile&amp;apos; resource.
+Delete a &apos;HyperflexClusterProfile&apos; resource.
 
 ## EXAMPLES
 

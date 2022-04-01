@@ -237,6 +237,6 @@ PS C:\> Set-IntersightApplianceDeviceClaim
 
 [Get-IntersightApplianceDeviceClaim](./Get-IntersightApplianceDeviceClaim.md)
 
-[New-IntersightApplianceDeviceClaim](./New-IntersightApplianceDeviceClaim.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightApplianceDeviceClaim](./New-IntersightApplianceDeviceClaim.md)

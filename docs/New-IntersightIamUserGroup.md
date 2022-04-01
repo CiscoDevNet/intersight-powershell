@@ -214,10 +214,10 @@ PS C:\> New-IntersightIamUserGroup
 
 ## RELATED LINKS
 
-[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)
-
-[Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
-
 [Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightIamUserGroup](./Remove-IntersightIamUserGroup.md)
+
+[Set-IntersightIamUserGroup](./Set-IntersightIamUserGroup.md)

@@ -59,15 +59,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PolicyActionParam.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChange.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPolicyActionParam")]
-    public class InitializeIntersightPolicyActionParam:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChange")]
+    public class InitializeIntersightPolicyConfigChange:PSCmdlet
 	{
-		public InitializeIntersightPolicyActionParam()
+		public InitializeIntersightPolicyConfigChange()
 		{
-            ClassId = PolicyActionParam.ClassIdEnum.PolicyActionParam;
-            ObjectType = PolicyActionParam.ObjectTypeEnum.PolicyActionParam;
+            ClassId = PolicyConfigChange.ClassIdEnum.PolicyConfigChange;
+            ObjectType = PolicyConfigChange.ObjectTypeEnum.PolicyConfigChange;
             
 		}
         // <summary>
@@ -80,20 +80,29 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyActionParam.ClassIdEnum ClassId {
+        public List<string> Changes {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The action parameter identifier."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public string Name {
+        public PolicyConfigChange.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<string> Disruptions {
             get;
             set;
         }
@@ -102,51 +111,40 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyActionParam.ObjectTypeEnum ObjectType {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The action parameter value."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string Value {
+        public PolicyConfigChange.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PolicyActionParam initObject = new Intersight.Model.PolicyActionParam();
+             Intersight.Model.PolicyConfigChange initObject = new Intersight.Model.PolicyConfigChange();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Changes"))
             {
-                initObject.Name = this.Name;
+                initObject.Changes = this.Changes;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Disruptions"))
+            {
+                initObject.Disruptions = this.Disruptions;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
-            {
-                initObject.Value = this.Value;
-            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeContext.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyActionQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeContext")]
-    public class InitializeIntersightPolicyConfigChangeContext:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyActionQualifier")]
+    public class InitializeIntersightPolicyActionQualifier:PSCmdlet
 	{
-		public InitializeIntersightPolicyConfigChangeContext()
+		public InitializeIntersightPolicyActionQualifier()
 		{
-            ClassId = PolicyConfigChangeContext.ClassIdEnum.PolicyConfigChangeContext;
-            ObjectType = PolicyConfigChangeContext.ObjectTypeEnum.PolicyConfigChangeContext;
             
 		}
         // <summary>
@@ -159,27 +157,27 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyConfigChangeContext.ClassIdEnum ClassId {
+        public PolicyActionQualifier.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyConfigChangeContext.ObjectTypeEnum ObjectType {
+        public PolicyActionQualifier.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PolicyConfigChangeContext initObject = new Intersight.Model.PolicyConfigChangeContext();
+             Intersight.Model.PolicyActionQualifier initObject = new Intersight.Model.PolicyActionQualifier();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -375,15 +373,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChange.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeContext.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChange")]
-    public class InitializeIntersightPolicyConfigChange:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeContext")]
+    public class InitializeIntersightPolicyConfigChangeContext:PSCmdlet
 	{
-		public InitializeIntersightPolicyConfigChange()
+		public InitializeIntersightPolicyConfigChangeContext()
 		{
-            ClassId = PolicyConfigChange.ClassIdEnum.PolicyConfigChange;
-            ObjectType = PolicyConfigChange.ObjectTypeEnum.PolicyConfigChange;
+            ClassId = PolicyConfigChangeContext.ClassIdEnum.PolicyConfigChangeContext;
+            ObjectType = PolicyConfigChangeContext.ObjectTypeEnum.PolicyConfigChangeContext;
             
 		}
         // <summary>
@@ -392,15 +390,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
         public Dictionary<string,object> AdditionalProperties {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Changes {
             get;
             set;
         }
@@ -409,16 +398,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyConfigChange.ClassIdEnum ClassId {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public List<string> Disruptions {
+        public PolicyConfigChangeContext.ClassIdEnum ClassId {
             get;
             set;
         }
@@ -427,40 +407,34 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyConfigChange.ObjectTypeEnum ObjectType {
+        public PolicyConfigChangeContext.ObjectTypeEnum ObjectType {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PolicyConfigChange initObject = new Intersight.Model.PolicyConfigChange();
+             Intersight.Model.PolicyConfigChangeContext initObject = new Intersight.Model.PolicyConfigChangeContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Changes"))
-            {
-                initObject.Changes = this.Changes;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Disruptions"))
-            {
-                initObject.Disruptions = this.Disruptions;
-            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize PolicyActionQualifier.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyActionParam.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightPolicyActionQualifier")]
-    public class InitializeIntersightPolicyActionQualifier:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyActionParam")]
+    public class InitializeIntersightPolicyActionParam:PSCmdlet
 	{
-		public InitializeIntersightPolicyActionQualifier()
+		public InitializeIntersightPolicyActionParam()
 		{
+            ClassId = PolicyActionParam.ClassIdEnum.PolicyActionParam;
+            ObjectType = PolicyActionParam.ObjectTypeEnum.PolicyActionParam;
             
 		}
         // <summary>
@@ -473,33 +447,59 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyActionQualifier.ClassIdEnum ClassId {
+        public PolicyActionParam.ClassIdEnum ClassId {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The action parameter identifier."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
         
-        public PolicyActionQualifier.ObjectTypeEnum ObjectType {
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public PolicyActionParam.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The action parameter value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Value {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.PolicyActionQualifier initObject = new Intersight.Model.PolicyActionQualifier();
+             Intersight.Model.PolicyActionParam initObject = new Intersight.Model.PolicyActionParam();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
             WriteObject(initObject);
         }
 

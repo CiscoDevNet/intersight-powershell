@@ -19,7 +19,7 @@ Set-IntersightBiosBootMode [-ActualBootMode< string>][-AdditionalProperties< Sys
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BiosBootMode&amp;apos; resource.
+Update a &apos;BiosBootMode&apos; resource.
 
 ## PARAMETERS
 

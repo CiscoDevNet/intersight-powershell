@@ -192,12 +192,12 @@ PS C:\> New-IntersightVnicFcNetworkPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightVnicFcNetworkPolicy](./Set-IntersightVnicFcNetworkPolicy.md)
-
-[Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
-
 [Get-IntersightVnicFcNetworkPolicy](./Get-IntersightVnicFcNetworkPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicVsanSettings](./Initialize-IntersightVnicVsanSettings.md)
+
+[Remove-IntersightVnicFcNetworkPolicy](./Remove-IntersightVnicFcNetworkPolicy.md)
+
+[Set-IntersightVnicFcNetworkPolicy](./Set-IntersightVnicFcNetworkPolicy.md)

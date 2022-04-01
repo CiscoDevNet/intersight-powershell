@@ -19,7 +19,7 @@ New-IntersightTaskIweScopedInventory [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;TaskIweScopedInventory&amp;apos; resource.
+Create a &apos;TaskIweScopedInventory&apos; resource.
 
 ## PARAMETERS
 
@@ -207,6 +207,6 @@ PS C:\> New-IntersightTaskIweScopedInventory
 
 ## RELATED LINKS
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

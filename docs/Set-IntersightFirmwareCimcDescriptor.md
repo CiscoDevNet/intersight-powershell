@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareCimcDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareCimcDescriptor](./Remove-IntersightFirmwareCimcDescriptor.md)
-
 [Get-IntersightFirmwareCimcDescriptor](./Get-IntersightFirmwareCimcDescriptor.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightFirmwareCimcDescriptor](./New-IntersightFirmwareCimcDescriptor.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFirmwareCimcDescriptor](./Remove-IntersightFirmwareCimcDescriptor.md)

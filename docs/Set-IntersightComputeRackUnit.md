@@ -19,7 +19,7 @@ Set-IntersightComputeRackUnit [-AdditionalProperties< System.Collections.Generic
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ComputeRackUnit&amp;apos; resource.
+Update a &apos;ComputeRackUnit&apos; resource.
 
 ## PARAMETERS
 

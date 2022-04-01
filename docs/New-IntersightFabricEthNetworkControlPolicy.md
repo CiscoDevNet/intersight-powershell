@@ -19,7 +19,7 @@ New-IntersightFabricEthNetworkControlPolicy [-AdditionalProperties< System.Colle
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FabricEthNetworkControlPolicy&amp;apos; resource.
+Create a &apos;FabricEthNetworkControlPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -270,12 +270,12 @@ PS C:\> New-IntersightFabricEthNetworkControlPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
-
-[Set-IntersightFabricEthNetworkControlPolicy](./Set-IntersightFabricEthNetworkControlPolicy.md)
-
 [Get-IntersightFabricEthNetworkControlPolicy](./Get-IntersightFabricEthNetworkControlPolicy.md)
 
 [Initialize-IntersightFabricLldpSettings](./Initialize-IntersightFabricLldpSettings.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightFabricEthNetworkControlPolicy](./Remove-IntersightFabricEthNetworkControlPolicy.md)
+
+[Set-IntersightFabricEthNetworkControlPolicy](./Set-IntersightFabricEthNetworkControlPolicy.md)

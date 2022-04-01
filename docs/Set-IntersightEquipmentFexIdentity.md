@@ -19,7 +19,7 @@ Set-IntersightEquipmentFexIdentity [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentFexIdentity&amp;apos; resource.
+Update a &apos;EquipmentFexIdentity&apos; resource.
 
 ## PARAMETERS
 

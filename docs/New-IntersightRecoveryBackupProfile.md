@@ -19,7 +19,7 @@ New-IntersightRecoveryBackupProfile [-Action< string>][-ActionParams< System.Col
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;RecoveryBackupProfile&amp;apos; resource.
+Create a &apos;RecoveryBackupProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -346,12 +346,12 @@ PS C:\> New-IntersightRecoveryBackupProfile
 
 [Get-IntersightRecoveryBackupProfile](./Get-IntersightRecoveryBackupProfile.md)
 
-[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
-
-[Set-IntersightRecoveryBackupProfile](./Set-IntersightRecoveryBackupProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightRecoveryBackupProfile](./Remove-IntersightRecoveryBackupProfile.md)
+
+[Set-IntersightRecoveryBackupProfile](./Set-IntersightRecoveryBackupProfile.md)

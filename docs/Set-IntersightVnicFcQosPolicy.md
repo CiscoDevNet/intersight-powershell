@@ -235,10 +235,10 @@ PS C:\> Set-IntersightVnicFcQosPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)
-
 [Get-IntersightVnicFcQosPolicy](./Get-IntersightVnicFcQosPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightVnicFcQosPolicy](./New-IntersightVnicFcQosPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVnicFcQosPolicy](./Remove-IntersightVnicFcQosPolicy.md)

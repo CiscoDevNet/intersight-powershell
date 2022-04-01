@@ -25,7 +25,7 @@ Get-IntersightIamSessionLimits [-Count <Boolean>] [-InlineCount <String>] [-Sele
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;IamSessionLimits&amp;apos; resource.,
+Read a &apos;IamSessionLimits&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
+[New-IntersightIamSessionLimits](./New-IntersightIamSessionLimits.md)
 
 [Remove-IntersightIamSessionLimits](./Remove-IntersightIamSessionLimits.md)
 
-[New-IntersightIamSessionLimits](./New-IntersightIamSessionLimits.md)
+[Set-IntersightIamSessionLimits](./Set-IntersightIamSessionLimits.md)
 

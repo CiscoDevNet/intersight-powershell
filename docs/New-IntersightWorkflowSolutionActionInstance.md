@@ -19,7 +19,7 @@ New-IntersightWorkflowSolutionActionInstance [-Action< WorkflowSolutionActionIns
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;WorkflowSolutionActionInstance&amp;apos; resource.
+Create a &apos;WorkflowSolutionActionInstance&apos; resource.
 
 ## PARAMETERS
 
@@ -197,10 +197,10 @@ PS C:\> New-IntersightWorkflowSolutionActionInstance
 
 [Get-IntersightWorkflowSolutionActionInstance](./Get-IntersightWorkflowSolutionActionInstance.md)
 
-[Set-IntersightWorkflowSolutionActionInstance](./Set-IntersightWorkflowSolutionActionInstance.md)
-
-[Remove-IntersightWorkflowSolutionActionInstance](./Remove-IntersightWorkflowSolutionActionInstance.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightWorkflowSolutionActionInstance](./Remove-IntersightWorkflowSolutionActionInstance.md)
+
+[Set-IntersightWorkflowSolutionActionInstance](./Set-IntersightWorkflowSolutionActionInstance.md)

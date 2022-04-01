@@ -8,6 +8,294 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SnmpPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSnmpPolicy")]
+    public class InitializeIntersightSnmpPolicy:PSCmdlet
+	{
+		public InitializeIntersightSnmpPolicy()
+		{
+            ClassId = SnmpPolicy.ClassIdEnum.SnmpPolicy;
+            CommunityAccess = SnmpPolicy.CommunityAccessEnum.Disabled;
+            ObjectType = SnmpPolicy.ObjectTypeEnum.SnmpPolicy;
+            
+		}
+        // <summary>
+        /// <para type="description">"The default SNMPv1, SNMPv2c community name or SNMPv3 username to include on any trap messages sent to the SNMP host. The name can be 18 characters long."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string AccessCommunityString {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Dictionary<string,object> AdditionalProperties {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SnmpPolicy.ClassIdEnum ClassId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Controls access to the information in the inventory tables. Applicable only for SNMPv1 and SNMPv2c users.\n* `Disabled` - Blocks access to the information in the inventory tables.\n* `Limited` - Partial access to read the information in the inventory tables.\n* `Full` - Full access to read the information in the inventory tables."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SnmpPolicy.CommunityAccessEnum CommunityAccess {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"State of the SNMP Policy on the endpoint. If enabled, the endpoint sends SNMP traps to the designated host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User-defined unique identification of the static engine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[^#!&]*$")]
+        public string EngineId {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string Moid {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public SnmpPolicy.ObjectTypeEnum ObjectType {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public Model.OrganizationOrganizationRelationship Organization {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port on which Cisco IMC SNMP agent runs. Enter a value between 1-65535. Reserved ports not allowed (22, 23, 80, 123, 389, 443, 623, 636, 2068, 3268, 3269)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        [ValidateRange(1, 65535)]
+        public long SnmpPort {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.SnmpTrap> SnmpTraps {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.SnmpUser> SnmpUsers {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Contact person responsible for the SNMP implementation. Enter a string up to 64 characters, such as an email address or a name and telephone number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SysContact {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Location of host on which the SNMP agent (server) runs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string SysLocation {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public List<Model.MoTag> Tags {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SNMP community group used for sending SNMP trap to other devices. Valid only for SNMPv2c users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public string TrapCommunity {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"State of the SNMP v2c on the endpoint. If enabled, the endpoint sends SNMP v2c properties to the designated host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool V2Enabled {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"State of the SNMP v3 on the endpoint. If enabled, the endpoint sends SNMP v3 properties to the designated host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
+        
+        public bool V3Enabled {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+             Intersight.Model.SnmpPolicy initObject = new Intersight.Model.SnmpPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccessCommunityString"))
+            {
+                initObject.AccessCommunityString = this.AccessCommunityString;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CommunityAccess"))
+            {
+                initObject.CommunityAccess = this.CommunityAccess;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EngineId"))
+            {
+                initObject.EngineId = this.EngineId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SnmpPort"))
+            {
+                initObject.SnmpPort = this.SnmpPort;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SnmpTraps"))
+            {
+                initObject.SnmpTraps = this.SnmpTraps;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SnmpUsers"))
+            {
+                initObject.SnmpUsers = this.SnmpUsers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SysContact"))
+            {
+                initObject.SysContact = this.SysContact;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SysLocation"))
+            {
+                initObject.SysLocation = this.SysLocation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TrapCommunity"))
+            {
+                initObject.TrapCommunity = this.TrapCommunity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("V2Enabled"))
+            {
+                initObject.V2Enabled = this.V2Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("V3Enabled"))
+            {
+                initObject.V3Enabled = this.V3Enabled;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SnmpUser.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSnmpUser")]

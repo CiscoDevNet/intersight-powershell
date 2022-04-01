@@ -192,8 +192,8 @@ PS C:\> New-IntersightSoftwareReleaseMeta
 
 [Get-IntersightSoftwareReleaseMeta](./Get-IntersightSoftwareReleaseMeta.md)
 
-[Set-IntersightSoftwareReleaseMeta](./Set-IntersightSoftwareReleaseMeta.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightSoftwareReleaseMeta](./Remove-IntersightSoftwareReleaseMeta.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightSoftwareReleaseMeta](./Set-IntersightSoftwareReleaseMeta.md)
