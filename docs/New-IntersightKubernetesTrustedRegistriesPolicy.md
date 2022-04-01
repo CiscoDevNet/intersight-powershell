@@ -19,7 +19,7 @@ New-IntersightKubernetesTrustedRegistriesPolicy [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesTrustedRegistriesPolicy&amp;apos; resource.
+Create a &apos;KubernetesTrustedRegistriesPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -223,10 +223,10 @@ PS C:\> New-IntersightKubernetesTrustedRegistriesPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesTrustedRegistriesPolicy](./Set-IntersightKubernetesTrustedRegistriesPolicy.md)
-
-[Remove-IntersightKubernetesTrustedRegistriesPolicy](./Remove-IntersightKubernetesTrustedRegistriesPolicy.md)
-
 [Get-IntersightKubernetesTrustedRegistriesPolicy](./Get-IntersightKubernetesTrustedRegistriesPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightKubernetesTrustedRegistriesPolicy](./Remove-IntersightKubernetesTrustedRegistriesPolicy.md)
+
+[Set-IntersightKubernetesTrustedRegistriesPolicy](./Set-IntersightKubernetesTrustedRegistriesPolicy.md)

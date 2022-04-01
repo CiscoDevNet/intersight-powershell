@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightIamAccount](./New-IntersightIamAccount.md)
 
-[Set-IntersightIamAccount](./Set-IntersightIamAccount.md)
-
 [Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)
+
+[Set-IntersightIamAccount](./Set-IntersightIamAccount.md)
 

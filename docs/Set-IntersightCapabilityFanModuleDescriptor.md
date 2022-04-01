@@ -222,8 +222,8 @@ PS C:\> Set-IntersightCapabilityFanModuleDescriptor
 
 [Get-IntersightCapabilityFanModuleDescriptor](./Get-IntersightCapabilityFanModuleDescriptor.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightCapabilityFanModuleDescriptor](./New-IntersightCapabilityFanModuleDescriptor.md)
 
 [Remove-IntersightCapabilityFanModuleDescriptor](./Remove-IntersightCapabilityFanModuleDescriptor.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

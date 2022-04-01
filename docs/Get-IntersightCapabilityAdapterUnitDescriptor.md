@@ -25,7 +25,7 @@ Get-IntersightCapabilityAdapterUnitDescriptor [-Count <Boolean>] [-InlineCount <
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.,
+Read a &apos;CapabilityAdapterUnitDescriptor&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
 
-[Set-IntersightCapabilityAdapterUnitDescriptor](./Set-IntersightCapabilityAdapterUnitDescriptor.md)
-
 [Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
+
+[Set-IntersightCapabilityAdapterUnitDescriptor](./Set-IntersightCapabilityAdapterUnitDescriptor.md)
 

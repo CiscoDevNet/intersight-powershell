@@ -259,12 +259,12 @@ PS C:\> New-IntersightHyperflexClusterReplicationNetworkPolicy
 
 [Get-IntersightHyperflexClusterReplicationNetworkPolicy](./Get-IntersightHyperflexClusterReplicationNetworkPolicy.md)
 
-[Set-IntersightHyperflexClusterReplicationNetworkPolicy](./Set-IntersightHyperflexClusterReplicationNetworkPolicy.md)
-
-[Remove-IntersightHyperflexClusterReplicationNetworkPolicy](./Remove-IntersightHyperflexClusterReplicationNetworkPolicy.md)
-
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 
 [Initialize-IntersightHyperflexNamedVlan](./Initialize-IntersightHyperflexNamedVlan.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexClusterReplicationNetworkPolicy](./Remove-IntersightHyperflexClusterReplicationNetworkPolicy.md)
+
+[Set-IntersightHyperflexClusterReplicationNetworkPolicy](./Set-IntersightHyperflexClusterReplicationNetworkPolicy.md)

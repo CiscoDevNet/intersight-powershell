@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name for the parameter set.  Limited to 64 alphanumeric characters (upper and lower case), and special characters &amp;apos;-&amp;apos; and &amp;apos;_&amp;apos;.
+Name for the parameter set.  Limited to 64 alphanumeric characters (upper and lower case), and special characters &apos;-&apos; and &apos;_&apos;.
 
 ```yaml
 Type: string

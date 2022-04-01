@@ -19,7 +19,7 @@ New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachin
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VirtualizationVirtualMachine&amp;apos; resource.
+Create a &apos;VirtualizationVirtualMachine&apos; resource.
 
 ## PARAMETERS
 
@@ -452,20 +452,20 @@ PS C:\> New-IntersightVirtualizationVirtualMachine
 
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
 
-[Set-IntersightVirtualizationVirtualMachine](./Set-IntersightVirtualizationVirtualMachine.md)
-
-[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
-
-[Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
-
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
-
-[Initialize-IntersightVirtualizationCloudInitConfig](./Initialize-IntersightVirtualizationCloudInitConfig.md)
-
-[Initialize-IntersightVirtualizationVirtualMachineDisk](./Initialize-IntersightVirtualizationVirtualMachineDisk.md)
-
-[Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
+[Initialize-IntersightVirtualizationActionInfo](./Initialize-IntersightVirtualizationActionInfo.md)
+
 [Initialize-IntersightVirtualizationBaseVmConfiguration](./Initialize-IntersightVirtualizationBaseVmConfiguration.md)
+
+[Initialize-IntersightVirtualizationCloudInitConfig](./Initialize-IntersightVirtualizationCloudInitConfig.md)
+
+[Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)
+
+[Initialize-IntersightVirtualizationVirtualMachineDisk](./Initialize-IntersightVirtualizationVirtualMachineDisk.md)
+
+[Remove-IntersightVirtualizationVirtualMachine](./Remove-IntersightVirtualizationVirtualMachine.md)
+
+[Set-IntersightVirtualizationVirtualMachine](./Set-IntersightVirtualizationVirtualMachine.md)

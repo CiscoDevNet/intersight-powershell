@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightCapabilitySwitchManufacturingDef](./New-IntersightCapabilitySwitchManufacturingDef.md)
 
-[Set-IntersightCapabilitySwitchManufacturingDef](./Set-IntersightCapabilitySwitchManufacturingDef.md)
-
 [Remove-IntersightCapabilitySwitchManufacturingDef](./Remove-IntersightCapabilitySwitchManufacturingDef.md)
+
+[Set-IntersightCapabilitySwitchManufacturingDef](./Set-IntersightCapabilitySwitchManufacturingDef.md)
 

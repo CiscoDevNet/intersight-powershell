@@ -213,12 +213,12 @@ PS C:\> Set-IntersightCertificatemanagementPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)
-
 [Get-IntersightCertificatemanagementPolicy](./Get-IntersightCertificatemanagementPolicy.md)
-
-[New-IntersightCertificatemanagementPolicy](./New-IntersightCertificatemanagementPolicy.md)
 
 [Initialize-IntersightCertificatemanagementCertificateBase](./Initialize-IntersightCertificatemanagementCertificateBase.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightCertificatemanagementPolicy](./New-IntersightCertificatemanagementPolicy.md)
+
+[Remove-IntersightCertificatemanagementPolicy](./Remove-IntersightCertificatemanagementPolicy.md)

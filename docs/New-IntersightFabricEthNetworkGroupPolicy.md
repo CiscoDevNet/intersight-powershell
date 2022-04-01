@@ -194,10 +194,10 @@ PS C:\> New-IntersightFabricEthNetworkGroupPolicy
 
 [Get-IntersightFabricEthNetworkGroupPolicy](./Get-IntersightFabricEthNetworkGroupPolicy.md)
 
-[Set-IntersightFabricEthNetworkGroupPolicy](./Set-IntersightFabricEthNetworkGroupPolicy.md)
-
-[Remove-IntersightFabricEthNetworkGroupPolicy](./Remove-IntersightFabricEthNetworkGroupPolicy.md)
+[Initialize-IntersightFabricVlanSettings](./Initialize-IntersightFabricVlanSettings.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Initialize-IntersightFabricVlanSettings](./Initialize-IntersightFabricVlanSettings.md)
+[Remove-IntersightFabricEthNetworkGroupPolicy](./Remove-IntersightFabricEthNetworkGroupPolicy.md)
+
+[Set-IntersightFabricEthNetworkGroupPolicy](./Set-IntersightFabricEthNetworkGroupPolicy.md)

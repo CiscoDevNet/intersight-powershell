@@ -255,8 +255,8 @@ PS C:\> New-IntersightSolPolicy
 
 [Get-IntersightSolPolicy](./Get-IntersightSolPolicy.md)
 
-[Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightSolPolicy](./Remove-IntersightSolPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightSolPolicy](./Set-IntersightSolPolicy.md)

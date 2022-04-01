@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightKubernetesCluster](./New-IntersightKubernetesCluster.md)
 
-[Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
-
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
+
+[Set-IntersightKubernetesCluster](./Set-IntersightKubernetesCluster.md)
 

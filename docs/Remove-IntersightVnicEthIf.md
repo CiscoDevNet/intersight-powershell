@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)
-
 [Get-IntersightVnicEthIf](./Get-IntersightVnicEthIf.md)
 
 [New-IntersightVnicEthIf](./New-IntersightVnicEthIf.md)
+
+[Set-IntersightVnicEthIf](./Set-IntersightVnicEthIf.md)
 

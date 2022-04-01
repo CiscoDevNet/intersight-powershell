@@ -6,8 +6,8 @@ using Intersight.Model;
 
 namespace Intersight.PowerShell.GenericCmdlet
 {
-    [Cmdlet(VerbsData.Initialize,"IntersightPatchDocument")]
-    public class InitializePatchDocument:PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightPatchDocument")]
+    public class InitializePatchDocument : PSCmdlet
     {
         public InitializePatchDocument()
         {
@@ -18,25 +18,25 @@ namespace Intersight.PowerShell.GenericCmdlet
         //[ValidateSet("add","replace","test","remove")]
         public PatchDocument.OpEnum Op
         {
-            get;set;
+            get; set;
         }
 
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
         public string Path
         {
-            get;set;
+            get; set;
         }
 
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
         public object Value
         {
-            get;set;
+            get; set;
         }
 
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true)]
         public string From
         {
-            get;set;
+            get; set;
         }
 
         protected override void ProcessRecord()
@@ -45,7 +45,8 @@ namespace Intersight.PowerShell.GenericCmdlet
             patchDoc.Op = this.Op;
             patchDoc.Path = this.Path;
             patchDoc.Value = this.Value;
-            if (!string.IsNullOrEmpty(From)){
+            if (!string.IsNullOrEmpty(From))
+            {
                 patchDoc.From = From;
             }
             WriteObject(patchDoc);

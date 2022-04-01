@@ -19,7 +19,7 @@ Set-IntersightFirmwareStorageControllerDescriptor [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareStorageControllerDescriptor&amp;apos; resource.
+Update a &apos;FirmwareStorageControllerDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -250,10 +250,10 @@ PS C:\> Set-IntersightFirmwareStorageControllerDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)
-
 [Get-IntersightFirmwareStorageControllerDescriptor](./Get-IntersightFirmwareStorageControllerDescriptor.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightFirmwareStorageControllerDescriptor](./New-IntersightFirmwareStorageControllerDescriptor.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)

@@ -19,7 +19,7 @@ Set-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FcpoolPool&amp;apos; resource.
+Update a &apos;FcpoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -224,10 +224,10 @@ PS C:\> Set-IntersightFcpoolPool
 
 [Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
 
-[New-IntersightFcpoolPool](./New-IntersightFcpoolPool.md)
-
-[Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
-
 [Initialize-IntersightFcpoolBlock](./Initialize-IntersightFcpoolBlock.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightFcpoolPool](./New-IntersightFcpoolPool.md)
+
+[Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)

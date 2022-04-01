@@ -360,12 +360,12 @@ PS C:\> Set-IntersightVnicIscsiBootPolicy
 
 [Get-IntersightVnicIscsiBootPolicy](./Get-IntersightVnicIscsiBootPolicy.md)
 
-[New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
-
-[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
-
-[Initialize-IntersightVnicIscsiAuthProfile](./Initialize-IntersightVnicIscsiAuthProfile.md)
-
 [Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVnicIscsiAuthProfile](./Initialize-IntersightVnicIscsiAuthProfile.md)
+
+[New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
+
+[Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)

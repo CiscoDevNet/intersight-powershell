@@ -164,10 +164,10 @@ PS C:\> Set-IntersightHyperflexServerModel
 
 [Get-IntersightHyperflexServerModel](./Get-IntersightHyperflexServerModel.md)
 
-[New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
-
-[Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
-
 [Initialize-IntersightHyperflexServerModelEntry](./Initialize-IntersightHyperflexServerModelEntry.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
+
+[Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)

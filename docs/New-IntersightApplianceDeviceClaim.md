@@ -19,7 +19,7 @@ New-IntersightApplianceDeviceClaim [-AdditionalProperties< System.Collections.Ge
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceDeviceClaim&amp;apos; resource.
+Create a &apos;ApplianceDeviceClaim&apos; resource.
 
 ## PARAMETERS
 
@@ -235,8 +235,8 @@ PS C:\> New-IntersightApplianceDeviceClaim
 
 ## RELATED LINKS
 
-[Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)
-
 [Get-IntersightApplianceDeviceClaim](./Get-IntersightApplianceDeviceClaim.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightApplianceDeviceClaim](./Set-IntersightApplianceDeviceClaim.md)

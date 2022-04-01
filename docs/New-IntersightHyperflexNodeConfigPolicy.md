@@ -278,10 +278,10 @@ PS C:\> New-IntersightHyperflexNodeConfigPolicy
 
 [Get-IntersightHyperflexNodeConfigPolicy](./Get-IntersightHyperflexNodeConfigPolicy.md)
 
-[Set-IntersightHyperflexNodeConfigPolicy](./Set-IntersightHyperflexNodeConfigPolicy.md)
-
-[Remove-IntersightHyperflexNodeConfigPolicy](./Remove-IntersightHyperflexNodeConfigPolicy.md)
-
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexNodeConfigPolicy](./Remove-IntersightHyperflexNodeConfigPolicy.md)
+
+[Set-IntersightHyperflexNodeConfigPolicy](./Set-IntersightHyperflexNodeConfigPolicy.md)

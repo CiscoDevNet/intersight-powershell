@@ -240,12 +240,12 @@ PS C:\> New-IntersightHyperflexClusterStoragePolicy
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterStoragePolicy](./Set-IntersightHyperflexClusterStoragePolicy.md)
-
-[Remove-IntersightHyperflexClusterStoragePolicy](./Remove-IntersightHyperflexClusterStoragePolicy.md)
-
 [Get-IntersightHyperflexClusterStoragePolicy](./Get-IntersightHyperflexClusterStoragePolicy.md)
 
 [Initialize-IntersightHyperflexLogicalAvailabilityZone](./Initialize-IntersightHyperflexLogicalAvailabilityZone.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexClusterStoragePolicy](./Remove-IntersightHyperflexClusterStoragePolicy.md)
+
+[Set-IntersightHyperflexClusterStoragePolicy](./Set-IntersightHyperflexClusterStoragePolicy.md)

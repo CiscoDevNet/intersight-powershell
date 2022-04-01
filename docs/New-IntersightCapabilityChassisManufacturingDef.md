@@ -19,7 +19,7 @@ New-IntersightCapabilityChassisManufacturingDef [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;CapabilityChassisManufacturingDef&amp;apos; resource.
+Create a &apos;CapabilityChassisManufacturingDef&apos; resource.
 
 ## PARAMETERS
 
@@ -249,8 +249,8 @@ PS C:\> New-IntersightCapabilityChassisManufacturingDef
 
 [Get-IntersightCapabilityChassisManufacturingDef](./Get-IntersightCapabilityChassisManufacturingDef.md)
 
-[Set-IntersightCapabilityChassisManufacturingDef](./Set-IntersightCapabilityChassisManufacturingDef.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightCapabilityChassisManufacturingDef](./Remove-IntersightCapabilityChassisManufacturingDef.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightCapabilityChassisManufacturingDef](./Set-IntersightCapabilityChassisManufacturingDef.md)

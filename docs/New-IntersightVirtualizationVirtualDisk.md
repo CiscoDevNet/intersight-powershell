@@ -334,12 +334,12 @@ PS C:\> New-IntersightVirtualizationVirtualDisk
 
 [Get-IntersightVirtualizationVirtualDisk](./Get-IntersightVirtualizationVirtualDisk.md)
 
-[Set-IntersightVirtualizationVirtualDisk](./Set-IntersightVirtualizationVirtualDisk.md)
-
-[Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightCloudAvailabilityZone](./Initialize-IntersightCloudAvailabilityZone.md)
 
 [Initialize-IntersightCloudVolumeIopsInfo](./Initialize-IntersightCloudVolumeIopsInfo.md)
 
-[Initialize-IntersightCloudAvailabilityZone](./Initialize-IntersightCloudAvailabilityZone.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightVirtualizationVirtualDisk](./Remove-IntersightVirtualizationVirtualDisk.md)
+
+[Set-IntersightVirtualizationVirtualDisk](./Set-IntersightVirtualizationVirtualDisk.md)

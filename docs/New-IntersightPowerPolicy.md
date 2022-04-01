@@ -19,7 +19,7 @@ New-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dic
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;PowerPolicy&amp;apos; resource.
+Create a &apos;PowerPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -300,8 +300,8 @@ PS C:\> New-IntersightPowerPolicy
 
 [Get-IntersightPowerPolicy](./Get-IntersightPowerPolicy.md)
 
-[Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightPowerPolicy](./Remove-IntersightPowerPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightPowerPolicy](./Set-IntersightPowerPolicy.md)

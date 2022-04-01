@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
 Type: AssetClaimSignature.ObjectTypeEnum
@@ -158,6 +158,6 @@ PS C:\> Initialize-IntersightAssetClaimSignature
 
 ## RELATED LINKS
 
-[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
-
 [Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
+
+[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)

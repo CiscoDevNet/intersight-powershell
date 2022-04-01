@@ -19,7 +19,7 @@ New-IntersightIamLdapPolicy [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IamLdapPolicy&amp;apos; resource.
+Create a &apos;IamLdapPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -326,10 +326,6 @@ PS C:\> New-IntersightIamLdapPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)
-
-[Remove-IntersightIamLdapPolicy](./Remove-IntersightIamLdapPolicy.md)
-
 [Get-IntersightIamLdapPolicy](./Get-IntersightIamLdapPolicy.md)
 
 [Initialize-IntersightIamLdapBaseProperties](./Initialize-IntersightIamLdapBaseProperties.md)
@@ -337,3 +333,7 @@ PS C:\> New-IntersightIamLdapPolicy
 [Initialize-IntersightIamLdapDnsParameters](./Initialize-IntersightIamLdapDnsParameters.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightIamLdapPolicy](./Remove-IntersightIamLdapPolicy.md)
+
+[Set-IntersightIamLdapPolicy](./Set-IntersightIamLdapPolicy.md)

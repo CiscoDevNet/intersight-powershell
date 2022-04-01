@@ -240,6 +240,6 @@ PS C:\> Set-IntersightKvmSession
 
 [Get-IntersightKvmSession](./Get-IntersightKvmSession.md)
 
-[New-IntersightKvmSession](./New-IntersightKvmSession.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightKvmSession](./New-IntersightKvmSession.md)

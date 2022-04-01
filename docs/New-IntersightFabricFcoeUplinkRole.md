@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &amp;apos;Auto&amp;apos;.\n* `Cl91` - Forward error correction option &amp;apos;cl91&amp;apos;.\n* `Cl74` - Forward error correction option &amp;apos;cl74&amp;apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
 
 ```yaml
 Type: FabricFcoeUplinkRole.FecEnum
@@ -238,10 +238,10 @@ PS C:\> New-IntersightFabricFcoeUplinkRole
 
 ## RELATED LINKS
 
-[Set-IntersightFabricFcoeUplinkRole](./Set-IntersightFabricFcoeUplinkRole.md)
-
-[Remove-IntersightFabricFcoeUplinkRole](./Remove-IntersightFabricFcoeUplinkRole.md)
-
 [Get-IntersightFabricFcoeUplinkRole](./Get-IntersightFabricFcoeUplinkRole.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightFabricFcoeUplinkRole](./Remove-IntersightFabricFcoeUplinkRole.md)
+
+[Set-IntersightFabricFcoeUplinkRole](./Set-IntersightFabricFcoeUplinkRole.md)

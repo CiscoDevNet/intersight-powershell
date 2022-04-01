@@ -69,7 +69,7 @@ namespace Intersight.PowerShell
             return false;
         }
 
-        
+
         public static string GetObjectTypeDisplayName(string objectType)
         {
             string result = String.Empty;

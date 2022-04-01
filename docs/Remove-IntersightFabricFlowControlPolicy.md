@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFabricFlowControlPolicy](./New-IntersightFabricFlowControlPolicy.md)
-
 [Get-IntersightFabricFlowControlPolicy](./Get-IntersightFabricFlowControlPolicy.md)
+
+[New-IntersightFabricFlowControlPolicy](./New-IntersightFabricFlowControlPolicy.md)
 
 [Set-IntersightFabricFlowControlPolicy](./Set-IntersightFabricFlowControlPolicy.md)
 

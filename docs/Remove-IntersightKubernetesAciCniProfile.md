@@ -17,7 +17,7 @@ Remove-IntersightKubernetesAciCniProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;KubernetesAciCniProfile&amp;apos; resource.
+Delete a &apos;KubernetesAciCniProfile&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
-
 [Get-IntersightKubernetesAciCniProfile](./Get-IntersightKubernetesAciCniProfile.md)
 
 [New-IntersightKubernetesAciCniProfile](./New-IntersightKubernetesAciCniProfile.md)
+
+[Set-IntersightKubernetesAciCniProfile](./Set-IntersightKubernetesAciCniProfile.md)
 

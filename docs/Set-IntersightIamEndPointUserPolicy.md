@@ -228,12 +228,12 @@ PS C:\> Set-IntersightIamEndPointUserPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightIamEndPointUserPolicy](./Remove-IntersightIamEndPointUserPolicy.md)
-
 [Get-IntersightIamEndPointUserPolicy](./Get-IntersightIamEndPointUserPolicy.md)
-
-[New-IntersightIamEndPointUserPolicy](./New-IntersightIamEndPointUserPolicy.md)
 
 [Initialize-IntersightIamEndPointPasswordProperties](./Initialize-IntersightIamEndPointPasswordProperties.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightIamEndPointUserPolicy](./New-IntersightIamEndPointUserPolicy.md)
+
+[Remove-IntersightIamEndPointUserPolicy](./Remove-IntersightIamEndPointUserPolicy.md)

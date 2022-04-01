@@ -17,7 +17,7 @@ Remove-IntersightHclHyperflexSoftwareCompatibilityInfo -Moid <String> [<CommonPa
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;HclHyperflexSoftwareCompatibilityInfo&amp;apos; resource.
+Delete a &apos;HclHyperflexSoftwareCompatibilityInfo&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightHclHyperflexSoftwareCompatibilityInfo](./Set-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
-
 [Get-IntersightHclHyperflexSoftwareCompatibilityInfo](./Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 
 [New-IntersightHclHyperflexSoftwareCompatibilityInfo](./New-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
+
+[Set-IntersightHclHyperflexSoftwareCompatibilityInfo](./Set-IntersightHclHyperflexSoftwareCompatibilityInfo.md)
 

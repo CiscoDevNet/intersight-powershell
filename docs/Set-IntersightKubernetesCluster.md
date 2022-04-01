@@ -231,8 +231,8 @@ PS C:\> Set-IntersightKubernetesCluster
 
 [Get-IntersightKubernetesCluster](./Get-IntersightKubernetesCluster.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightKubernetesCluster](./New-IntersightKubernetesCluster.md)
 
 [Remove-IntersightKubernetesCluster](./Remove-IntersightKubernetesCluster.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

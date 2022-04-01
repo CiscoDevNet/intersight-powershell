@@ -25,7 +25,7 @@ Get-IntersightCapabilityIoCardManufacturingDef [-Count <Boolean>] [-InlineCount 
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;CapabilityIoCardManufacturingDef&amp;apos; resource.,
+Read a &apos;CapabilityIoCardManufacturingDef&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightCapabilityIoCardManufacturingDef](./New-IntersightCapabilityIoCardManufacturingDef.md)
 
-[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
-
 [Remove-IntersightCapabilityIoCardManufacturingDef](./Remove-IntersightCapabilityIoCardManufacturingDef.md)
+
+[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
 

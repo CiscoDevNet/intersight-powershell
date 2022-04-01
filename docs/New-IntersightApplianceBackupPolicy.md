@@ -19,7 +19,7 @@ New-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-Additio
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ApplianceBackupPolicy&amp;apos; resource.
+Create a &apos;ApplianceBackupPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -284,8 +284,8 @@ PS C:\> New-IntersightApplianceBackupPolicy
 
 [Get-IntersightApplianceBackupPolicy](./Get-IntersightApplianceBackupPolicy.md)
 
-[Set-IntersightApplianceBackupPolicy](./Set-IntersightApplianceBackupPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightApplianceBackupPolicy](./Set-IntersightApplianceBackupPolicy.md)

@@ -470,14 +470,14 @@ PS C:\> Set-IntersightSoftwareHyperflexBundleDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwareHyperflexBundleDistributable](./Remove-IntersightSoftwareHyperflexBundleDistributable.md)
-
 [Get-IntersightSoftwareHyperflexBundleDistributable](./Get-IntersightSoftwareHyperflexBundleDistributable.md)
-
-[New-IntersightSoftwareHyperflexBundleDistributable](./New-IntersightSoftwareHyperflexBundleDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightSoftwareHyperflexBundleDistributable](./New-IntersightSoftwareHyperflexBundleDistributable.md)
+
+[Remove-IntersightSoftwareHyperflexBundleDistributable](./Remove-IntersightSoftwareHyperflexBundleDistributable.md)

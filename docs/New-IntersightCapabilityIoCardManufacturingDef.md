@@ -234,8 +234,8 @@ PS C:\> New-IntersightCapabilityIoCardManufacturingDef
 
 [Get-IntersightCapabilityIoCardManufacturingDef](./Get-IntersightCapabilityIoCardManufacturingDef.md)
 
-[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightCapabilityIoCardManufacturingDef](./Remove-IntersightCapabilityIoCardManufacturingDef.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)

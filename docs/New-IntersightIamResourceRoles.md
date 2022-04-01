@@ -183,8 +183,8 @@ PS C:\> New-IntersightIamResourceRoles
 
 [Get-IntersightIamResourceRoles](./Get-IntersightIamResourceRoles.md)
 
-[Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamResourceRoles](./Remove-IntersightIamResourceRoles.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightIamResourceRoles](./Set-IntersightIamResourceRoles.md)

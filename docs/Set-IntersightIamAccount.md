@@ -144,8 +144,8 @@ PS C:\> Set-IntersightIamAccount
 
 [Get-IntersightIamAccount](./Get-IntersightIamAccount.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightIamAccount](./New-IntersightIamAccount.md)
 
 [Remove-IntersightIamAccount](./Remove-IntersightIamAccount.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

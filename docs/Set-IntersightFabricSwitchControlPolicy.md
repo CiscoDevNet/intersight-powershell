@@ -272,14 +272,14 @@ PS C:\> Set-IntersightFabricSwitchControlPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricSwitchControlPolicy](./Remove-IntersightFabricSwitchControlPolicy.md)
-
 [Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
-
-[New-IntersightFabricSwitchControlPolicy](./New-IntersightFabricSwitchControlPolicy.md)
 
 [Initialize-IntersightFabricMacAgingSettings](./Initialize-IntersightFabricMacAgingSettings.md)
 
 [Initialize-IntersightFabricUdldGlobalSettings](./Initialize-IntersightFabricUdldGlobalSettings.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightFabricSwitchControlPolicy](./New-IntersightFabricSwitchControlPolicy.md)
+
+[Remove-IntersightFabricSwitchControlPolicy](./Remove-IntersightFabricSwitchControlPolicy.md)

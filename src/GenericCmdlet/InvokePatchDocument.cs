@@ -8,8 +8,8 @@ using System.Text;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsLifecycle.Invoke,"IntersightPatchDocument")]
-    public class InvokePatchDocument:CmdletBase
+    [Cmdlet(VerbsLifecycle.Invoke, "IntersightPatchDocument")]
+    public class InvokePatchDocument : CmdletBase
     {
         public InvokePatchDocument()
         {
@@ -25,13 +25,13 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
         public string ObjectType
         {
-            get;set;
+            get; set;
         }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName ="jsonData")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "jsonData")]
         public string JsonPatchDocument
         {
-            get;set;
+            get; set;
         }
 
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]

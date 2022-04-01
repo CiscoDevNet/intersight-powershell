@@ -312,9 +312,7 @@ PS C:\> Set-IntersightFabricSwitchProfile
 
 [Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
-[New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
-
-[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
@@ -322,4 +320,6 @@ PS C:\> Set-IntersightFabricSwitchProfile
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightFabricSwitchProfile](./New-IntersightFabricSwitchProfile.md)
+
+[Remove-IntersightFabricSwitchProfile](./Remove-IntersightFabricSwitchProfile.md)

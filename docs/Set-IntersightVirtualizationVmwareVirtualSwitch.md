@@ -284,6 +284,6 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualSwitch
 
 [Get-IntersightVirtualizationVmwareVirtualSwitch](./Get-IntersightVirtualizationVmwareVirtualSwitch.md)
 
-[Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)

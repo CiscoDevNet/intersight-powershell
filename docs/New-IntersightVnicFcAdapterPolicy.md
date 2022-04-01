@@ -19,7 +19,7 @@ New-IntersightVnicFcAdapterPolicy [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;VnicFcAdapterPolicy&amp;apos; resource.
+Create a &apos;VnicFcAdapterPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -371,20 +371,20 @@ PS C:\> New-IntersightVnicFcAdapterPolicy
 
 [Get-IntersightVnicFcAdapterPolicy](./Get-IntersightVnicFcAdapterPolicy.md)
 
-[Set-IntersightVnicFcAdapterPolicy](./Set-IntersightVnicFcAdapterPolicy.md)
-
-[Remove-IntersightVnicFcAdapterPolicy](./Remove-IntersightVnicFcAdapterPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicFcErrorRecoverySettings](./Initialize-IntersightVnicFcErrorRecoverySettings.md)
 
-[Initialize-IntersightVnicFlogiSettings](./Initialize-IntersightVnicFlogiSettings.md)
-
 [Initialize-IntersightVnicFcInterruptSettings](./Initialize-IntersightVnicFcInterruptSettings.md)
-
-[Initialize-IntersightVnicPlogiSettings](./Initialize-IntersightVnicPlogiSettings.md)
 
 [Initialize-IntersightVnicFcQueueSettings](./Initialize-IntersightVnicFcQueueSettings.md)
 
+[Initialize-IntersightVnicFlogiSettings](./Initialize-IntersightVnicFlogiSettings.md)
+
+[Initialize-IntersightVnicPlogiSettings](./Initialize-IntersightVnicPlogiSettings.md)
+
 [Initialize-IntersightVnicScsiQueueSettings](./Initialize-IntersightVnicScsiQueueSettings.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVnicFcAdapterPolicy](./Remove-IntersightVnicFcAdapterPolicy.md)
+
+[Set-IntersightVnicFcAdapterPolicy](./Set-IntersightVnicFcAdapterPolicy.md)

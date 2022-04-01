@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVirtualizationIweCluster](./Set-IntersightVirtualizationIweCluster.md)
-
 [Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
+
+[Set-IntersightVirtualizationIweCluster](./Set-IntersightVirtualizationIweCluster.md)
 

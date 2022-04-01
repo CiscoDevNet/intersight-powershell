@@ -437,17 +437,19 @@ PS C:\> Set-IntersightVnicEthAdapterPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)
-
 [Get-IntersightVnicEthAdapterPolicy](./Get-IntersightVnicEthAdapterPolicy.md)
 
-[New-IntersightVnicEthAdapterPolicy](./New-IntersightVnicEthAdapterPolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicArfsSettings](./Initialize-IntersightVnicArfsSettings.md)
 
 [Initialize-IntersightVnicCompletionQueueSettings](./Initialize-IntersightVnicCompletionQueueSettings.md)
 
 [Initialize-IntersightVnicEthInterruptSettings](./Initialize-IntersightVnicEthInterruptSettings.md)
+
+[Initialize-IntersightVnicEthRxQueueSettings](./Initialize-IntersightVnicEthRxQueueSettings.md)
+
+[Initialize-IntersightVnicEthTxQueueSettings](./Initialize-IntersightVnicEthTxQueueSettings.md)
 
 [Initialize-IntersightVnicNvgreSettings](./Initialize-IntersightVnicNvgreSettings.md)
 
@@ -457,12 +459,10 @@ PS C:\> Set-IntersightVnicEthAdapterPolicy
 
 [Initialize-IntersightVnicRssHashSettings](./Initialize-IntersightVnicRssHashSettings.md)
 
-[Initialize-IntersightVnicEthRxQueueSettings](./Initialize-IntersightVnicEthRxQueueSettings.md)
-
 [Initialize-IntersightVnicTcpOffloadSettings](./Initialize-IntersightVnicTcpOffloadSettings.md)
 
-[Initialize-IntersightVnicEthTxQueueSettings](./Initialize-IntersightVnicEthTxQueueSettings.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
 [Initialize-IntersightVnicVxlanSettings](./Initialize-IntersightVnicVxlanSettings.md)
+
+[New-IntersightVnicEthAdapterPolicy](./New-IntersightVnicEthAdapterPolicy.md)
+
+[Remove-IntersightVnicEthAdapterPolicy](./Remove-IntersightVnicEthAdapterPolicy.md)

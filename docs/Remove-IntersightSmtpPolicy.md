@@ -17,7 +17,7 @@ Remove-IntersightSmtpPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SmtpPolicy&amp;apos; resource.
+Delete a &apos;SmtpPolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
+[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
 
 [New-IntersightSmtpPolicy](./New-IntersightSmtpPolicy.md)
 
-[Get-IntersightSmtpPolicy](./Get-IntersightSmtpPolicy.md)
+[Set-IntersightSmtpPolicy](./Set-IntersightSmtpPolicy.md)
 

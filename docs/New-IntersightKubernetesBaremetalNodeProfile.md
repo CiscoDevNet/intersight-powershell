@@ -360,14 +360,14 @@ PS C:\> New-IntersightKubernetesBaremetalNodeProfile
 
 [Get-IntersightKubernetesBaremetalNodeProfile](./Get-IntersightKubernetesBaremetalNodeProfile.md)
 
-[Set-IntersightKubernetesBaremetalNodeProfile](./Set-IntersightKubernetesBaremetalNodeProfile.md)
+[Initialize-IntersightKubernetesBaremetalNetworkInfo](./Initialize-IntersightKubernetesBaremetalNetworkInfo.md)
 
-[Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightKubernetesBaremetalNetworkInfo](./Initialize-IntersightKubernetesBaremetalNetworkInfo.md)
+[Remove-IntersightKubernetesBaremetalNodeProfile](./Remove-IntersightKubernetesBaremetalNodeProfile.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightKubernetesBaremetalNodeProfile](./Set-IntersightKubernetesBaremetalNodeProfile.md)

@@ -25,7 +25,7 @@ Get-IntersightVnicIscsiBootPolicy [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;VnicIscsiBootPolicy&amp;apos; resource.,
+Read a &apos;VnicIscsiBootPolicy&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightVnicIscsiBootPolicy](./New-IntersightVnicIscsiBootPolicy.md)
 
-[Set-IntersightVnicIscsiBootPolicy](./Set-IntersightVnicIscsiBootPolicy.md)
-
 [Remove-IntersightVnicIscsiBootPolicy](./Remove-IntersightVnicIscsiBootPolicy.md)
+
+[Set-IntersightVnicIscsiBootPolicy](./Set-IntersightVnicIscsiBootPolicy.md)
 

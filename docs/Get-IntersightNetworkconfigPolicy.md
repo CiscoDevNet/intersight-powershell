@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
+[New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
 
 [Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
 
-[New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
+[Set-IntersightNetworkconfigPolicy](./Set-IntersightNetworkconfigPolicy.md)
 

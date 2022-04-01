@@ -333,12 +333,12 @@ PS C:\> New-IntersightHyperflexClusterBackupPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexClusterBackupPolicy](./Set-IntersightHyperflexClusterBackupPolicy.md)
-
-[Remove-IntersightHyperflexClusterBackupPolicy](./Remove-IntersightHyperflexClusterBackupPolicy.md)
-
 [Get-IntersightHyperflexClusterBackupPolicy](./Get-IntersightHyperflexClusterBackupPolicy.md)
 
 [Initialize-IntersightHyperflexReplicationSchedule](./Initialize-IntersightHyperflexReplicationSchedule.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexClusterBackupPolicy](./Remove-IntersightHyperflexClusterBackupPolicy.md)
+
+[Set-IntersightHyperflexClusterBackupPolicy](./Set-IntersightHyperflexClusterBackupPolicy.md)

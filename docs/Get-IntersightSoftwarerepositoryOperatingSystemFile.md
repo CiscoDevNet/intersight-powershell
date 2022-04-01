@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightSoftwarerepositoryOperatingSystemFile](./New-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
-[Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)
-
 [Remove-IntersightSoftwarerepositoryOperatingSystemFile](./Remove-IntersightSoftwarerepositoryOperatingSystemFile.md)
+
+[Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)
 

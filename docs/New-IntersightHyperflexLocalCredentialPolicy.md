@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -HxdpRootPwd
-HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^&amp;*! special characters.
+HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^$amp*! special characters.
 
 ```yaml
 Type: string
@@ -253,10 +253,10 @@ PS C:\> New-IntersightHyperflexLocalCredentialPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightHyperflexLocalCredentialPolicy](./Set-IntersightHyperflexLocalCredentialPolicy.md)
-
-[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
-
 [Get-IntersightHyperflexLocalCredentialPolicy](./Get-IntersightHyperflexLocalCredentialPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexLocalCredentialPolicy](./Remove-IntersightHyperflexLocalCredentialPolicy.md)
+
+[Set-IntersightHyperflexLocalCredentialPolicy](./Set-IntersightHyperflexLocalCredentialPolicy.md)

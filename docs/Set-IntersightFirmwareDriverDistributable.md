@@ -19,7 +19,7 @@ Set-IntersightFirmwareDriverDistributable [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FirmwareDriverDistributable&amp;apos; resource.
+Update a &apos;FirmwareDriverDistributable&apos; resource.
 
 ## PARAMETERS
 
@@ -530,14 +530,14 @@ PS C:\> Set-IntersightFirmwareDriverDistributable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareDriverDistributable](./New-IntersightFirmwareDriverDistributable.md)
-
 [Get-IntersightFirmwareDriverDistributable](./Get-IntersightFirmwareDriverDistributable.md)
-
-[Remove-IntersightFirmwareDriverDistributable](./Remove-IntersightFirmwareDriverDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightFirmwareDriverDistributable](./New-IntersightFirmwareDriverDistributable.md)
+
+[Remove-IntersightFirmwareDriverDistributable](./Remove-IntersightFirmwareDriverDistributable.md)

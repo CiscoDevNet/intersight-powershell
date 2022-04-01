@@ -290,14 +290,14 @@ PS C:\> Set-IntersightStorageStoragePolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)
-
 [Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
 
-[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightStorageM2VirtualDriveConfig](./Initialize-IntersightStorageM2VirtualDriveConfig.md)
 
 [Initialize-IntersightStorageR0Drive](./Initialize-IntersightStorageR0Drive.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
+
+[Remove-IntersightStorageStoragePolicy](./Remove-IntersightStorageStoragePolicy.md)

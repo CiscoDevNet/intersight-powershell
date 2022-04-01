@@ -19,7 +19,7 @@ Set-IntersightNetworkVlanPortInfo [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;NetworkVlanPortInfo&amp;apos; resource.
+Update a &apos;NetworkVlanPortInfo&apos; resource.
 
 ## PARAMETERS
 

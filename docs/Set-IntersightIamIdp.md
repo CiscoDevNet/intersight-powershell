@@ -19,7 +19,7 @@ Set-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictiona
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;IamIdp&amp;apos; resource.
+Update a &apos;IamIdp&apos; resource.
 
 ## PARAMETERS
 
@@ -240,8 +240,8 @@ PS C:\> Set-IntersightIamIdp
 
 [Get-IntersightIamIdp](./Get-IntersightIamIdp.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightIamIdp](./New-IntersightIamIdp.md)
 
 [Remove-IntersightIamIdp](./Remove-IntersightIamIdp.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

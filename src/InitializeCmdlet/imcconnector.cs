@@ -11,117 +11,128 @@ namespace Intersight.PowerShell
     /// <para type="synopsis">This is the cmdlet to Initialize ImcconnectorWebUiMessage.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightImcconnectorWebUiMessage")]
-    public class InitializeIntersightImcconnectorWebUiMessage:PSCmdlet
-	{
-		public InitializeIntersightImcconnectorWebUiMessage()
-		{
+    public class InitializeIntersightImcconnectorWebUiMessage : PSCmdlet
+    {
+        public InitializeIntersightImcconnectorWebUiMessage()
+        {
             ClassId = ImcconnectorWebUiMessage.ClassIdEnum.ImcconnectorWebUiMessage;
             ObjectType = ImcconnectorWebUiMessage.ObjectTypeEnum.ImcconnectorWebUiMessage;
-            
-		}
+
+        }
         // <summary>
         /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public Dictionary<string,object> AdditionalProperties {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ImcconnectorWebUiMessage.ClassIdEnum ClassId {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ImcconnectorWebUiMessage.ClassIdEnum ClassId
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix 'AES' in SecureProperties dictionary."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptedAesKey {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string EncryptedAesKey
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector's public key, an error reponse with appropriate error message is thrown back."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string EncryptionKey {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string EncryptionKey
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public ImcconnectorWebUiMessage.ObjectTypeEnum ObjectType {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ImcconnectorWebUiMessage.ObjectTypeEnum ObjectType
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The platform locale to assign user. A locale defines one or more organizations (domains) the user is allowed access, and access is limited to the organizations specified in the locale."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RemoteUserLocale {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RemoteUserLocale
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The user name passed to the platform for use in platform audit logs."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RemoteUserName {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RemoteUserName
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The list of roles to pass to the platform to validate the action against."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RemoteUserRoles {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RemoteUserRoles
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The session Id passed to the platform for use in platforms auditing."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string RemoteUserSessionId {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RemoteUserSessionId
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a 'AES' prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public object SecureProperties {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object SecureProperties
+        {
             get;
             set;
         }
         // <summary>
         /// <para type="description">"The body content of the UI HTTP request to send to the BMC platform."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ValueFromPipeline = false)]
-        
-        public string WebUiRequest {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string WebUiRequest
+        {
             get;
             set;
         }
 
         protected override void ProcessRecord()
         {
-             Intersight.Model.ImcconnectorWebUiMessage initObject = new Intersight.Model.ImcconnectorWebUiMessage();
+            Intersight.Model.ImcconnectorWebUiMessage initObject = new Intersight.Model.ImcconnectorWebUiMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

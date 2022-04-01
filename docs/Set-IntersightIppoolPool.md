@@ -258,11 +258,7 @@ PS C:\> Set-IntersightIppoolPool
 
 ## RELATED LINKS
 
-[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
-
 [Get-IntersightIppoolPool](./Get-IntersightIppoolPool.md)
-
-[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
 
 [Initialize-IntersightIppoolIpV4Block](./Initialize-IntersightIppoolIpV4Block.md)
 
@@ -273,3 +269,7 @@ PS C:\> Set-IntersightIppoolPool
 [Initialize-IntersightIppoolIpV6Config](./Initialize-IntersightIppoolIpV6Config.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightIppoolPool](./New-IntersightIppoolPool.md)
+
+[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)

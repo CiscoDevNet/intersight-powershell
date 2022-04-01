@@ -191,8 +191,8 @@ PS C:\> Set-IntersightAssetDeviceRegistration
 
 [Get-IntersightAssetDeviceRegistration](./Get-IntersightAssetDeviceRegistration.md)
 
-[Remove-IntersightAssetDeviceRegistration](./Remove-IntersightAssetDeviceRegistration.md)
-
 [Initialize-IntersightAssetClaimSignature](./Initialize-IntersightAssetClaimSignature.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightAssetDeviceRegistration](./Remove-IntersightAssetDeviceRegistration.md)

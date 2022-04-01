@@ -19,7 +19,7 @@ New-IntersightConnectorpackConnectorPackUpgrade [-AdditionalProperties< System.C
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ConnectorpackConnectorPackUpgrade&amp;apos; resource.
+Create a &apos;ConnectorpackConnectorPackUpgrade&apos; resource.
 
 ## PARAMETERS
 
@@ -162,6 +162,6 @@ PS C:\> New-IntersightConnectorpackConnectorPackUpgrade
 
 [Get-IntersightConnectorpackConnectorPackUpgrade](./Get-IntersightConnectorpackConnectorPackUpgrade.md)
 
-[Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightConnectorpackConnectorPackUpgrade](./Remove-IntersightConnectorpackConnectorPackUpgrade.md)

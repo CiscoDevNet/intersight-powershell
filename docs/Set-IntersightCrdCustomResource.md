@@ -284,10 +284,10 @@ PS C:\> Set-IntersightCrdCustomResource
 
 [Get-IntersightCrdCustomResource](./Get-IntersightCrdCustomResource.md)
 
-[New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
-
-[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)
-
 [Initialize-IntersightCrdCustomResourceConfigProperty](./Initialize-IntersightCrdCustomResourceConfigProperty.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightCrdCustomResource](./New-IntersightCrdCustomResource.md)
+
+[Remove-IntersightCrdCustomResource](./Remove-IntersightCrdCustomResource.md)

@@ -225,10 +225,10 @@ PS C:\> New-IntersightOsConfigurationFile
 
 [Get-IntersightOsConfigurationFile](./Get-IntersightOsConfigurationFile.md)
 
-[Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
-
-[Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
+
+[Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)

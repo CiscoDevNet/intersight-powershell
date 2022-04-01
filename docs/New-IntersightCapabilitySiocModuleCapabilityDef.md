@@ -157,10 +157,10 @@ PS C:\> New-IntersightCapabilitySiocModuleCapabilityDef
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilitySiocModuleCapabilityDef](./Set-IntersightCapabilitySiocModuleCapabilityDef.md)
-
-[Remove-IntersightCapabilitySiocModuleCapabilityDef](./Remove-IntersightCapabilitySiocModuleCapabilityDef.md)
-
 [Get-IntersightCapabilitySiocModuleCapabilityDef](./Get-IntersightCapabilitySiocModuleCapabilityDef.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightCapabilitySiocModuleCapabilityDef](./Remove-IntersightCapabilitySiocModuleCapabilityDef.md)
+
+[Set-IntersightCapabilitySiocModuleCapabilityDef](./Set-IntersightCapabilitySiocModuleCapabilityDef.md)

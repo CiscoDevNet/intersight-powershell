@@ -210,6 +210,6 @@ PS C:\> Set-IntersightComputeServerPowerPolicy
 
 [Get-IntersightComputeServerPowerPolicy](./Get-IntersightComputeServerPowerPolicy.md)
 
-[Remove-IntersightComputeServerPowerPolicy](./Remove-IntersightComputeServerPowerPolicy.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightComputeServerPowerPolicy](./Remove-IntersightComputeServerPowerPolicy.md)

@@ -19,7 +19,7 @@ Set-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexNodeProfile&amp;apos; resource.
+Update a &apos;HyperflexNodeProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -383,14 +383,14 @@ PS C:\> Set-IntersightHyperflexNodeProfile
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)
-
 [Get-IntersightHyperflexNodeProfile](./Get-IntersightHyperflexNodeProfile.md)
 
-[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightHyperflexNodeProfile](./New-IntersightHyperflexNodeProfile.md)
+
+[Remove-IntersightHyperflexNodeProfile](./Remove-IntersightHyperflexNodeProfile.md)

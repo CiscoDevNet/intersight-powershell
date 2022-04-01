@@ -228,14 +228,14 @@ PS C:\> New-IntersightStorageDriveGroup
 
 [Get-IntersightStorageDriveGroup](./Get-IntersightStorageDriveGroup.md)
 
-[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)
-
-[Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightStorageAutomaticDriveGroup](./Initialize-IntersightStorageAutomaticDriveGroup.md)
 
 [Initialize-IntersightStorageManualDriveGroup](./Initialize-IntersightStorageManualDriveGroup.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
 [Initialize-IntersightStorageVirtualDriveConfiguration](./Initialize-IntersightStorageVirtualDriveConfiguration.md)
+
+[Remove-IntersightStorageDriveGroup](./Remove-IntersightStorageDriveGroup.md)
+
+[Set-IntersightStorageDriveGroup](./Set-IntersightStorageDriveGroup.md)

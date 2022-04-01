@@ -225,8 +225,8 @@ PS C:\> Set-IntersightHyperflexAutoSupportPolicy
 
 [Get-IntersightHyperflexAutoSupportPolicy](./Get-IntersightHyperflexAutoSupportPolicy.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightHyperflexAutoSupportPolicy](./New-IntersightHyperflexAutoSupportPolicy.md)
 
 [Remove-IntersightHyperflexAutoSupportPolicy](./Remove-IntersightHyperflexAutoSupportPolicy.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

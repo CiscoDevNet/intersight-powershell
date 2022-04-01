@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightWorkflowSolutionActionDefinition](./Set-IntersightWorkflowSolutionActionDefinition.md)
-
 [Get-IntersightWorkflowSolutionActionDefinition](./Get-IntersightWorkflowSolutionActionDefinition.md)
 
 [New-IntersightWorkflowSolutionActionDefinition](./New-IntersightWorkflowSolutionActionDefinition.md)
+
+[Set-IntersightWorkflowSolutionActionDefinition](./Set-IntersightWorkflowSolutionActionDefinition.md)
 

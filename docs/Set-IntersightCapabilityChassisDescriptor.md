@@ -19,7 +19,7 @@ Set-IntersightCapabilityChassisDescriptor [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityChassisDescriptor&amp;apos; resource.
+Update a &apos;CapabilityChassisDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -220,10 +220,10 @@ PS C:\> Set-IntersightCapabilityChassisDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityChassisDescriptor](./Remove-IntersightCapabilityChassisDescriptor.md)
-
 [Get-IntersightCapabilityChassisDescriptor](./Get-IntersightCapabilityChassisDescriptor.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightCapabilityChassisDescriptor](./New-IntersightCapabilityChassisDescriptor.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightCapabilityChassisDescriptor](./Remove-IntersightCapabilityChassisDescriptor.md)

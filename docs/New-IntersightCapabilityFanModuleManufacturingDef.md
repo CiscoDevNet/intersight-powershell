@@ -234,8 +234,8 @@ PS C:\> New-IntersightCapabilityFanModuleManufacturingDef
 
 [Get-IntersightCapabilityFanModuleManufacturingDef](./Get-IntersightCapabilityFanModuleManufacturingDef.md)
 
-[Set-IntersightCapabilityFanModuleManufacturingDef](./Set-IntersightCapabilityFanModuleManufacturingDef.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightCapabilityFanModuleManufacturingDef](./Remove-IntersightCapabilityFanModuleManufacturingDef.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightCapabilityFanModuleManufacturingDef](./Set-IntersightCapabilityFanModuleManufacturingDef.md)

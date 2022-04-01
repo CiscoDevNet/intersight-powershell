@@ -472,12 +472,12 @@ PS C:\> New-IntersightSoftwareUcsdDistributable
 
 [Get-IntersightSoftwareUcsdDistributable](./Get-IntersightSoftwareUcsdDistributable.md)
 
-[Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)
-
-[Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
-
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightSoftwareUcsdDistributable](./Remove-IntersightSoftwareUcsdDistributable.md)
+
+[Set-IntersightSoftwareUcsdDistributable](./Set-IntersightSoftwareUcsdDistributable.md)

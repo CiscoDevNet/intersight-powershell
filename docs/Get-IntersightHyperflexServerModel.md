@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexServerModel](./New-IntersightHyperflexServerModel.md)
 
-[Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
-
 [Remove-IntersightHyperflexServerModel](./Remove-IntersightHyperflexServerModel.md)
+
+[Set-IntersightHyperflexServerModel](./Set-IntersightHyperflexServerModel.md)
 

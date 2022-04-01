@@ -236,6 +236,6 @@ PS C:\> Set-IntersightApplianceDeviceUpgradePolicy
 
 [Get-IntersightApplianceDeviceUpgradePolicy](./Get-IntersightApplianceDeviceUpgradePolicy.md)
 
-[Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightOnpremSchedule](./Initialize-IntersightOnpremSchedule.md)

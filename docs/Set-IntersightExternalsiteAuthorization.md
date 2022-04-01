@@ -19,7 +19,7 @@ Set-IntersightExternalsiteAuthorization [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ExternalsiteAuthorization&amp;apos; resource.
+Update a &apos;ExternalsiteAuthorization&apos; resource.
 
 ## PARAMETERS
 
@@ -172,8 +172,8 @@ PS C:\> Set-IntersightExternalsiteAuthorization
 
 ## RELATED LINKS
 
-[New-IntersightExternalsiteAuthorization](./New-IntersightExternalsiteAuthorization.md)
-
 [Get-IntersightExternalsiteAuthorization](./Get-IntersightExternalsiteAuthorization.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightExternalsiteAuthorization](./New-IntersightExternalsiteAuthorization.md)

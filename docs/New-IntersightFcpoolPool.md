@@ -224,10 +224,10 @@ PS C:\> New-IntersightFcpoolPool
 
 [Get-IntersightFcpoolPool](./Get-IntersightFcpoolPool.md)
 
-[Set-IntersightFcpoolPool](./Set-IntersightFcpoolPool.md)
-
-[Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
-
 [Initialize-IntersightFcpoolBlock](./Initialize-IntersightFcpoolBlock.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightFcpoolPool](./Remove-IntersightFcpoolPool.md)
+
+[Set-IntersightFcpoolPool](./Set-IntersightFcpoolPool.md)

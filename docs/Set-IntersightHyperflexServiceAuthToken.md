@@ -213,8 +213,8 @@ PS C:\> Set-IntersightHyperflexServiceAuthToken
 
 [Get-IntersightHyperflexServiceAuthToken](./Get-IntersightHyperflexServiceAuthToken.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightHyperflexServiceAuthToken](./New-IntersightHyperflexServiceAuthToken.md)
 
 [Remove-IntersightHyperflexServiceAuthToken](./Remove-IntersightHyperflexServiceAuthToken.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

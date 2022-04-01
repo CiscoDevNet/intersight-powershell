@@ -19,7 +19,7 @@ Set-IntersightSoftwareHyperflexDistributable [-AdditionalProperties< System.Coll
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwareHyperflexDistributable&amp;apos; resource.
+Update a &apos;SoftwareHyperflexDistributable&apos; resource.
 
 ## PARAMETERS
 
@@ -470,14 +470,14 @@ PS C:\> Set-IntersightSoftwareHyperflexDistributable
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwareHyperflexDistributable](./Remove-IntersightSoftwareHyperflexDistributable.md)
-
-[New-IntersightSoftwareHyperflexDistributable](./New-IntersightSoftwareHyperflexDistributable.md)
-
 [Get-IntersightSoftwareHyperflexDistributable](./Get-IntersightSoftwareHyperflexDistributable.md)
 
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightSoftwareHyperflexDistributable](./New-IntersightSoftwareHyperflexDistributable.md)
+
+[Remove-IntersightSoftwareHyperflexDistributable](./Remove-IntersightSoftwareHyperflexDistributable.md)

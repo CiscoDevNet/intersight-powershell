@@ -17,7 +17,7 @@ Remove-IntersightConnectorpackConnectorPackUpgrade -Moid <String> [<CommonParame
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ConnectorpackConnectorPackUpgrade&amp;apos; resource.
+Delete a &apos;ConnectorpackConnectorPackUpgrade&apos; resource.
 
 ## EXAMPLES
 

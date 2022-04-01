@@ -252,8 +252,8 @@ PS C:\> New-IntersightFirmwarePsuDescriptor
 
 [Get-IntersightFirmwarePsuDescriptor](./Get-IntersightFirmwarePsuDescriptor.md)
 
-[Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightFirmwarePsuDescriptor](./Remove-IntersightFirmwarePsuDescriptor.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightFirmwarePsuDescriptor](./Set-IntersightFirmwarePsuDescriptor.md)

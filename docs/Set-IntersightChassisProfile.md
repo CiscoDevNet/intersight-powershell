@@ -19,7 +19,7 @@ Set-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ChassisProfile&amp;apos; resource.
+Update a &apos;ChassisProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -327,9 +327,7 @@ PS C:\> Set-IntersightChassisProfile
 
 [Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
 
-[New-IntersightChassisProfile](./New-IntersightChassisProfile.md)
-
-[Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
@@ -337,4 +335,6 @@ PS C:\> Set-IntersightChassisProfile
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightChassisProfile](./New-IntersightChassisProfile.md)
+
+[Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)

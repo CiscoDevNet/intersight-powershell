@@ -224,10 +224,10 @@ PS C:\> New-IntersightIqnpoolPool
 
 [Get-IntersightIqnpoolPool](./Get-IntersightIqnpoolPool.md)
 
-[Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)
-
-[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
-
 [Initialize-IntersightIqnpoolIqnSuffixBlock](./Initialize-IntersightIqnpoolIqnSuffixBlock.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightIqnpoolPool](./Remove-IntersightIqnpoolPool.md)
+
+[Set-IntersightIqnpoolPool](./Set-IntersightIqnpoolPool.md)

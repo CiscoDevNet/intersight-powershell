@@ -19,7 +19,7 @@ New-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;KubernetesClusterProfile&amp;apos; resource.
+Create a &apos;KubernetesClusterProfile&apos; resource.
 
 ## PARAMETERS
 
@@ -538,22 +538,22 @@ PS C:\> New-IntersightKubernetesClusterProfile
 
 [Get-IntersightKubernetesClusterProfile](./Get-IntersightKubernetesClusterProfile.md)
 
-[Set-IntersightKubernetesClusterProfile](./Set-IntersightKubernetesClusterProfile.md)
-
-[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
-
 [Initialize-IntersightKubernetesActionInfo](./Initialize-IntersightKubernetesActionInfo.md)
-
-[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightKubernetesClusterCertificateConfiguration](./Initialize-IntersightKubernetesClusterCertificateConfiguration.md)
 
-[Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
-
-[Initialize-IntersightKubernetesEssentialAddon](./Initialize-IntersightKubernetesEssentialAddon.md)
+[Initialize-IntersightKubernetesClusterManagementConfig](./Initialize-IntersightKubernetesClusterManagementConfig.md)
 
 [Initialize-IntersightKubernetesConfiguration](./Initialize-IntersightKubernetesConfiguration.md)
 
-[Initialize-IntersightKubernetesClusterManagementConfig](./Initialize-IntersightKubernetesClusterManagementConfig.md)
+[Initialize-IntersightKubernetesEssentialAddon](./Initialize-IntersightKubernetesEssentialAddon.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
+
+[Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Remove-IntersightKubernetesClusterProfile](./Remove-IntersightKubernetesClusterProfile.md)
+
+[Set-IntersightKubernetesClusterProfile](./Set-IntersightKubernetesClusterProfile.md)

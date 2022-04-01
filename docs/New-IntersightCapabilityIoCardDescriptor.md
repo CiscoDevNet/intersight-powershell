@@ -250,10 +250,10 @@ PS C:\> New-IntersightCapabilityIoCardDescriptor
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilityIoCardDescriptor](./Remove-IntersightCapabilityIoCardDescriptor.md)
-
-[Set-IntersightCapabilityIoCardDescriptor](./Set-IntersightCapabilityIoCardDescriptor.md)
-
 [Get-IntersightCapabilityIoCardDescriptor](./Get-IntersightCapabilityIoCardDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightCapabilityIoCardDescriptor](./Remove-IntersightCapabilityIoCardDescriptor.md)
+
+[Set-IntersightCapabilityIoCardDescriptor](./Set-IntersightCapabilityIoCardDescriptor.md)

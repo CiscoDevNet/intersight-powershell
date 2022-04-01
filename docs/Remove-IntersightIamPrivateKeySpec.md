@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamPrivateKeySpec](./Set-IntersightIamPrivateKeySpec.md)
-
 [Get-IntersightIamPrivateKeySpec](./Get-IntersightIamPrivateKeySpec.md)
 
 [New-IntersightIamPrivateKeySpec](./New-IntersightIamPrivateKeySpec.md)
+
+[Set-IntersightIamPrivateKeySpec](./Set-IntersightIamPrivateKeySpec.md)
 

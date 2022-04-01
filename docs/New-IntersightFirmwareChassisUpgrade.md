@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkShare
-Deprecated (Use &amp;apos;fileServer&amp;apos; property). Network share options in case of the upgradeType is network share based upgrade.
+Deprecated (Use &apos;fileServer&apos; property). Network share options in case of the upgradeType is network share based upgrade.
 
 Note :- Use Initialize-IntersightFirmwareNetworkShare to create the object of complex type FirmwareNetworkShare
 
@@ -292,14 +292,14 @@ PS C:\> New-IntersightFirmwareChassisUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightFirmwareChassisUpgrade](./Remove-IntersightFirmwareChassisUpgrade.md)
-
 [Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 
-[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
-
 [Initialize-IntersightFirmwareNetworkShare](./Initialize-IntersightFirmwareNetworkShare.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+
+[Remove-IntersightFirmwareChassisUpgrade](./Remove-IntersightFirmwareChassisUpgrade.md)

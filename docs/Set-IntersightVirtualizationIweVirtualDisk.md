@@ -210,6 +210,6 @@ PS C:\> Set-IntersightVirtualizationIweVirtualDisk
 
 [Get-IntersightVirtualizationIweVirtualDisk](./Get-IntersightVirtualizationIweVirtualDisk.md)
 
-[Initialize-IntersightVirtualizationDiskStatus](./Initialize-IntersightVirtualizationDiskStatus.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationDiskStatus](./Initialize-IntersightVirtualizationDiskStatus.md)

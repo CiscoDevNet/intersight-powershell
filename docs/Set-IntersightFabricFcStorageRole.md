@@ -220,10 +220,10 @@ PS C:\> Set-IntersightFabricFcStorageRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricFcStorageRole](./Remove-IntersightFabricFcStorageRole.md)
-
 [Get-IntersightFabricFcStorageRole](./Get-IntersightFabricFcStorageRole.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightFabricFcStorageRole](./New-IntersightFabricFcStorageRole.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFabricFcStorageRole](./Remove-IntersightFabricFcStorageRole.md)

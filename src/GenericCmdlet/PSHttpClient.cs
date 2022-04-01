@@ -38,7 +38,7 @@ namespace Intersight.PowerShell
                 httpWebRequest.ContentType = requestOption.ContentType;
 
                 var signedHeaders = HttpSigningAuthConfig.GetHttpSignedHeader(requestOption);
-                foreach(var item in signedHeaders)
+                foreach (var item in signedHeaders)
                 {
                     httpWebRequest.Headers.Add(item.Key, item.Value);
                 }
@@ -50,13 +50,13 @@ namespace Intersight.PowerShell
                     Stream stream = httpWebRequest.GetRequestStream();
                     stream.Write(bytes, 0, bytes.Length);
                     stream.Close();
-                    
+
                 }
 
                 HttpWebResponse webResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 Stream responseStream = webResponse.GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
-                responseBody =  reader.ReadToEnd();
+                responseBody = reader.ReadToEnd();
 
                 if (!((webResponse.StatusCode == HttpStatusCode.OK) ||
                     (webResponse.StatusCode == HttpStatusCode.Created) ||
@@ -69,17 +69,19 @@ namespace Intersight.PowerShell
                 {
                     throw new Exception(string.Format("{0} : {1}", webResponse.StatusCode, responseBody));
                 }
-                
+
                 return responseBody;
             }
-            catch(Exception ex)
-            {   
+            catch (Exception ex)
+            {
                 WebException webExp = ex as WebException;
-                if (webExp != null){
+                if (webExp != null)
+                {
                     string reqStr = string.Empty;
-                    using(StreamReader sr = new StreamReader(webExp.Response.GetResponseStream())){
+                    using (StreamReader sr = new StreamReader(webExp.Response.GetResponseStream()))
+                    {
                         reqStr = sr.ReadToEnd();
-                        throw new Exception(string.Format("{0}\n{1}",ex.Message,reqStr));
+                        throw new Exception(string.Format("{0}\n{1}", ex.Message, reqStr));
                     }
                 }
                 throw ex;
@@ -98,7 +100,7 @@ namespace Intersight.PowerShell
             UriBuilder uri = new UriBuilder(requestOption.BasePath);
             var path = requestOption.Path;
 
-            foreach(var item in requestOption.PathParameters)
+            foreach (var item in requestOption.PathParameters)
             {
                 var tempPath = path.Replace(item.Key, "0");
                 path = string.Format(tempPath, item.Value);
@@ -106,7 +108,7 @@ namespace Intersight.PowerShell
 
             uri.Path = path;
             var queryString = string.Empty;
-            if (requestOption.QueryParameters.Count > 0) 
+            if (requestOption.QueryParameters.Count > 0)
             {
                 var queryParam = HttpUtility.ParseQueryString(string.Empty);
                 foreach (var item in requestOption.QueryParameters)

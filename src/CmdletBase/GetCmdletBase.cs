@@ -13,7 +13,7 @@ namespace Intersight.PowerShell
     public class GetCmdletBase : CmdletBase
     {
         #region
-        
+
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
         public bool? Count { get; set; } = null;
 
@@ -49,10 +49,10 @@ namespace Intersight.PowerShell
         public string Tag { get; set; } = null;
 
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-		public SwitchParameter Json { get; set; }
+        public SwitchParameter Json { get; set; }
 
-		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-		public SwitchParameter WithHttpInfo { get; set; }
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+        public SwitchParameter WithHttpInfo { get; set; }
 
         private List<object> result;
         #endregion
@@ -78,17 +78,17 @@ namespace Intersight.PowerShell
                 {
                     argList = new object[] { Filter, Orderby, Top, Skip, Select, Expand, Apply, Count, InlineCount, At, Tag };
                 }
-                
+
                 var methodResult = methodInfo.Invoke(ApiInstance, argList);
-                
+
                 if (Json.IsPresent)
                 {
                     WriteResponseJson(methodResult);
                 }
-                else if(WithHttpInfo.IsPresent)
-				{
-					WriteObject(methodResult);
-				}
+                else if (WithHttpInfo.IsPresent)
+                {
+                    WriteObject(methodResult);
+                }
                 else
                 {
                     methodResult = WriteResponseData(methodResult, false);
@@ -135,10 +135,10 @@ namespace Intersight.PowerShell
         {
             StringBuilder queryString = new StringBuilder();
             int i = 0;
-            foreach(var item in  this.MyInvocation.BoundParameters)
+            foreach (var item in this.MyInvocation.BoundParameters)
             {
-                
-                if(item.Value != null && item.Value.GetType().Name == "SwitchParameter")
+
+                if (item.Value != null && item.Value.GetType().Name == "SwitchParameter")
                 {
                     continue;
                 }
@@ -148,7 +148,7 @@ namespace Intersight.PowerShell
                     queryString.Append(" and ");
                 }
 
-                if (item.Value != null &&  item.Value.GetType().Name.EndsWith("Relationship"))
+                if (item.Value != null && item.Value.GetType().Name.EndsWith("Relationship"))
                 {
                     var actualInstance = item.Value.GetType().GetProperty("ActualInstance").GetValue(item.Value);
                     if (actualInstance != null)
@@ -158,7 +158,7 @@ namespace Intersight.PowerShell
                     }
 
                 }
-                else if (item.Value != null &&  item.Value.GetType().Name == "Boolean")
+                else if (item.Value != null && item.Value.GetType().Name == "Boolean")
                 {
                     queryString.Append(string.Format("{0} eq {1}", item.Key, item.Value.ToString().ToLower()));
                 }
@@ -169,7 +169,7 @@ namespace Intersight.PowerShell
                     {
                         var tempList = item.Value.ToString().Split("_");
                         int tempVal;
-                        if(tempList.Length == 2 && int.TryParse(tempList[1],out tempVal))
+                        if (tempList.Length == 2 && int.TryParse(tempList[1], out tempVal))
                         {
                             enumValue = tempList[1];
                             queryString.Append(string.Format("{0} eq {1}", item.Key, enumValue));
@@ -178,7 +178,7 @@ namespace Intersight.PowerShell
                         {
                             queryString.Append(string.Format("{0} eq \'{1}\'", item.Key, enumValue));
                         }
-                        
+
                     }
                     else
                     {
@@ -204,7 +204,7 @@ namespace Intersight.PowerShell
                 {
                     queryString.Append(string.Format("{0} eq {1}", item.Key, item.Value));
                 }
-                              
+
                 i++;
             }
             return queryString.ToString();

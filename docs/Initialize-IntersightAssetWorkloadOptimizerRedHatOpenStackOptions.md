@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-RedHat OpenStack Identity Service (keystone) domain name. Domain is an additional namespaces you can create in keystone to partition users, groups, and projects. Default domain name value is \&amp;quot;Default\&amp;quot;.
+RedHat OpenStack Identity Service (keystone) domain name. Domain is an additional namespaces you can create in keystone to partition users, groups, and projects. Default domain name value is \&quot;Default\&quot;.
 
 ```yaml
 Type: string

@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFirmwareDistributable](./New-IntersightFirmwareDistributable.md)
 
-[Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
-
 [Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
+
+[Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
 

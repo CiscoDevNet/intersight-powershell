@@ -324,8 +324,8 @@ PS C:\> New-IntersightFabricApplianceRole
 
 [Get-IntersightFabricApplianceRole](./Get-IntersightFabricApplianceRole.md)
 
-[Set-IntersightFabricApplianceRole](./Set-IntersightFabricApplianceRole.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightFabricApplianceRole](./Remove-IntersightFabricApplianceRole.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightFabricApplianceRole](./Set-IntersightFabricApplianceRole.md)

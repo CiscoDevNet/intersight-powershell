@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVnicLanConnectivityPolicy](./Set-IntersightVnicLanConnectivityPolicy.md)
+[New-IntersightVnicLanConnectivityPolicy](./New-IntersightVnicLanConnectivityPolicy.md)
 
 [Remove-IntersightVnicLanConnectivityPolicy](./Remove-IntersightVnicLanConnectivityPolicy.md)
 
-[New-IntersightVnicLanConnectivityPolicy](./New-IntersightVnicLanConnectivityPolicy.md)
+[Set-IntersightVnicLanConnectivityPolicy](./Set-IntersightVnicLanConnectivityPolicy.md)
 

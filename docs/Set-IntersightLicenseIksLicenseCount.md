@@ -147,6 +147,6 @@ PS C:\> Set-IntersightLicenseIksLicenseCount
 
 [Get-IntersightLicenseIksLicenseCount](./Get-IntersightLicenseIksLicenseCount.md)
 
-[New-IntersightLicenseIksLicenseCount](./New-IntersightLicenseIksLicenseCount.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightLicenseIksLicenseCount](./New-IntersightLicenseIksLicenseCount.md)

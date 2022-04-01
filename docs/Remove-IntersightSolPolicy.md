@@ -17,7 +17,7 @@ Remove-IntersightSolPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;SolPolicy&amp;apos; resource.
+Delete a &apos;SolPolicy&apos; resource.
 
 ## EXAMPLES
 

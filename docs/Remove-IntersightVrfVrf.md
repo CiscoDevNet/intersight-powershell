@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightVrfVrf](./Set-IntersightVrfVrf.md)
-
 [Get-IntersightVrfVrf](./Get-IntersightVrfVrf.md)
 
 [New-IntersightVrfVrf](./New-IntersightVrfVrf.md)
+
+[Set-IntersightVrfVrf](./Set-IntersightVrfVrf.md)
 

@@ -377,14 +377,14 @@ PS C:\> New-IntersightSnmpPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)
-
-[Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
-
 [Get-IntersightSnmpPolicy](./Get-IntersightSnmpPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSnmpTrap](./Initialize-IntersightSnmpTrap.md)
 
 [Initialize-IntersightSnmpUser](./Initialize-IntersightSnmpUser.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightSnmpPolicy](./Remove-IntersightSnmpPolicy.md)
+
+[Set-IntersightSnmpPolicy](./Set-IntersightSnmpPolicy.md)

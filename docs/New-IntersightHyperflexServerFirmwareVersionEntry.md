@@ -194,10 +194,10 @@ PS C:\> New-IntersightHyperflexServerFirmwareVersionEntry
 
 [Get-IntersightHyperflexServerFirmwareVersionEntry](./Get-IntersightHyperflexServerFirmwareVersionEntry.md)
 
-[Set-IntersightHyperflexServerFirmwareVersionEntry](./Set-IntersightHyperflexServerFirmwareVersionEntry.md)
-
-[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
-
 [Initialize-IntersightHyperflexAppSettingConstraint](./Initialize-IntersightHyperflexAppSettingConstraint.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexServerFirmwareVersionEntry](./Remove-IntersightHyperflexServerFirmwareVersionEntry.md)
+
+[Set-IntersightHyperflexServerFirmwareVersionEntry](./Set-IntersightHyperflexServerFirmwareVersionEntry.md)

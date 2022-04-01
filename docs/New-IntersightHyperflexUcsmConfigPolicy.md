@@ -244,12 +244,12 @@ PS C:\> New-IntersightHyperflexUcsmConfigPolicy
 
 [Get-IntersightHyperflexUcsmConfigPolicy](./Get-IntersightHyperflexUcsmConfigPolicy.md)
 
-[Set-IntersightHyperflexUcsmConfigPolicy](./Set-IntersightHyperflexUcsmConfigPolicy.md)
-
-[Remove-IntersightHyperflexUcsmConfigPolicy](./Remove-IntersightHyperflexUcsmConfigPolicy.md)
-
 [Initialize-IntersightHyperflexIpAddrRange](./Initialize-IntersightHyperflexIpAddrRange.md)
 
 [Initialize-IntersightHyperflexMacAddrPrefixRange](./Initialize-IntersightHyperflexMacAddrPrefixRange.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightHyperflexUcsmConfigPolicy](./Remove-IntersightHyperflexUcsmConfigPolicy.md)
+
+[Set-IntersightHyperflexUcsmConfigPolicy](./Set-IntersightHyperflexUcsmConfigPolicy.md)

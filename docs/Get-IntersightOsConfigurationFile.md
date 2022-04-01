@@ -25,7 +25,7 @@ Get-IntersightOsConfigurationFile [-Count <Boolean>] [-InlineCount <String>] [-S
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;OsConfigurationFile&amp;apos; resource.,
+Read a &apos;OsConfigurationFile&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightOsConfigurationFile](./New-IntersightOsConfigurationFile.md)
 
-[Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
-
 [Remove-IntersightOsConfigurationFile](./Remove-IntersightOsConfigurationFile.md)
+
+[Set-IntersightOsConfigurationFile](./Set-IntersightOsConfigurationFile.md)
 

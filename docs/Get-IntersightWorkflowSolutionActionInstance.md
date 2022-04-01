@@ -284,9 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightWorkflowSolutionActionInstance](./New-IntersightWorkflowSolutionActionInstance.md)
-
-[Set-IntersightWorkflowSolutionActionInstance](./Set-IntersightWorkflowSolutionActionInstance.md)
-
-[Remove-IntersightWorkflowSolutionActionInstance](./Remove-IntersightWorkflowSolutionActionInstance.md)
-

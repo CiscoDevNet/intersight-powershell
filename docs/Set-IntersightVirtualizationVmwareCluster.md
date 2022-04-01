@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CpuOverCommitment< long>][-DatastoreCount< long>][-HypervisorType< VirtualizationVmwareCluster.HypervisorTypeEnum>][-Identity< string>][-InventoryPath< string>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StorageClusters< System.Collections.Generic.List`1[StorageBaseClusterRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CpuOverCommitment< long>][-DatastoreCount< long>][-HypervisorType< VirtualizationVmwareCluster.HypervisorTypeEnum>][-HypervisorVersion< string>][-Identity< string>][-InventoryPath< string>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StorageClusters< System.Collections.Generic.List`1[StorageBaseClusterRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervis
 
 ```yaml
 Type: VirtualizationVmwareCluster.HypervisorTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HypervisorVersion
+Identifies the version of the hypervisor running on this cluster. Keeping the hypervisor version in the cluster makes it convenient for applications to validate their deployment needs. Defaults to an empty string.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -291,8 +306,8 @@ PS C:\> Set-IntersightVirtualizationVmwareCluster
 
 [Initialize-IntersightCondAlarmSummary](./Initialize-IntersightCondAlarmSummary.md)
 
-[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
