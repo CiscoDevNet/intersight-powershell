@@ -25,7 +25,7 @@ Get-IntersightVirtualizationIweDatacenter [-Count <Boolean>] [-InlineCount <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;VirtualizationIweDatacenter&amp;apos; resource.,
+Read a &apos;VirtualizationIweDatacenter&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightVirtualizationIweDatacenter](./New-IntersightVirtualizationIweDatacenter.md)
 
-[Set-IntersightVirtualizationIweDatacenter](./Set-IntersightVirtualizationIweDatacenter.md)
-
 [Remove-IntersightVirtualizationIweDatacenter](./Remove-IntersightVirtualizationIweDatacenter.md)
+
+[Set-IntersightVirtualizationIweDatacenter](./Set-IntersightVirtualizationIweDatacenter.md)
 

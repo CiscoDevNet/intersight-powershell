@@ -269,6 +269,6 @@ PS C:\> Initialize-IntersightConnectorSshMessage
 
 [Initialize-IntersightConnectorExpectPrompt](./Initialize-IntersightConnectorExpectPrompt.md)
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

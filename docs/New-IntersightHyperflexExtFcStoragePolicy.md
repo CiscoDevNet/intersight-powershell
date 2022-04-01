@@ -19,7 +19,7 @@ New-IntersightHyperflexExtFcStoragePolicy [-AdditionalProperties< System.Collect
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;HyperflexExtFcStoragePolicy&amp;apos; resource.
+Create a &apos;HyperflexExtFcStoragePolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -261,12 +261,12 @@ PS C:\> New-IntersightHyperflexExtFcStoragePolicy
 
 [Get-IntersightHyperflexExtFcStoragePolicy](./Get-IntersightHyperflexExtFcStoragePolicy.md)
 
-[Set-IntersightHyperflexExtFcStoragePolicy](./Set-IntersightHyperflexExtFcStoragePolicy.md)
-
-[Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
-
 [Initialize-IntersightHyperflexNamedVsan](./Initialize-IntersightHyperflexNamedVsan.md)
+
+[Initialize-IntersightHyperflexWwxnPrefixRange](./Initialize-IntersightHyperflexWwxnPrefixRange.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Initialize-IntersightHyperflexWwxnPrefixRange](./Initialize-IntersightHyperflexWwxnPrefixRange.md)
+[Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
+
+[Set-IntersightHyperflexExtFcStoragePolicy](./Set-IntersightHyperflexExtFcStoragePolicy.md)

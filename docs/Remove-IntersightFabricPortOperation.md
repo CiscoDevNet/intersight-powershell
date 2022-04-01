@@ -17,7 +17,7 @@ Remove-IntersightFabricPortOperation -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricPortOperation&amp;apos; resource.
+Delete a &apos;FabricPortOperation&apos; resource.
 
 ## EXAMPLES
 

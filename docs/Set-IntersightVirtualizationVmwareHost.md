@@ -582,16 +582,16 @@ PS C:\> Set-IntersightVirtualizationVmwareHost
 
 [Get-IntersightVirtualizationVmwareHost](./Get-IntersightVirtualizationVmwareHost.md)
 
-[Initialize-IntersightVirtualizationCpuInfo](./Initialize-IntersightVirtualizationCpuInfo.md)
-
 [Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
 
-[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
+
+[Initialize-IntersightVirtualizationCpuInfo](./Initialize-IntersightVirtualizationCpuInfo.md)
+
+[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
 [Initialize-IntersightVirtualizationProductInfo](./Initialize-IntersightVirtualizationProductInfo.md)
 
 [Initialize-IntersightVirtualizationVmwareResourceConsumption](./Initialize-IntersightVirtualizationVmwareResourceConsumption.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

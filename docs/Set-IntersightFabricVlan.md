@@ -19,7 +19,7 @@ Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;FabricVlan&amp;apos; resource.
+Update a &apos;FabricVlan&apos; resource.
 
 ## PARAMETERS
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The &amp;apos;name&amp;apos; used to identify this VLAN.
+The &apos;name&apos; used to identify this VLAN.
 
 ```yaml
 Type: string
@@ -223,10 +223,10 @@ PS C:\> Set-IntersightFabricVlan
 
 ## RELATED LINKS
 
-[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
-
 [Get-IntersightFabricVlan](./Get-IntersightFabricVlan.md)
 
-[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightFabricVlan](./New-IntersightFabricVlan.md)
+
+[Remove-IntersightFabricVlan](./Remove-IntersightFabricVlan.md)

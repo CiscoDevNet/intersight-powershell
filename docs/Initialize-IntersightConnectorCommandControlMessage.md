@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: ConnectorCommandControlMessage.ObjectTypeEnum
@@ -310,6 +310,6 @@ PS C:\> Initialize-IntersightConnectorCommandControlMessage
 
 ## RELATED LINKS
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

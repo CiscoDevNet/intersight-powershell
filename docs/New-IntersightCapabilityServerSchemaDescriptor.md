@@ -235,10 +235,10 @@ PS C:\> New-IntersightCapabilityServerSchemaDescriptor
 
 ## RELATED LINKS
 
-[Set-IntersightCapabilityServerSchemaDescriptor](./Set-IntersightCapabilityServerSchemaDescriptor.md)
-
-[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)
-
 [Get-IntersightCapabilityServerSchemaDescriptor](./Get-IntersightCapabilityServerSchemaDescriptor.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightCapabilityServerSchemaDescriptor](./Remove-IntersightCapabilityServerSchemaDescriptor.md)
+
+[Set-IntersightCapabilityServerSchemaDescriptor](./Set-IntersightCapabilityServerSchemaDescriptor.md)

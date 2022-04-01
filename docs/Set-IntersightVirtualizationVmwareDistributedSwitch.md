@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-The running config&amp;apos;s version details are represented.
+The running config&apos;s version details are represented.
 
 ```yaml
 Type: string
@@ -395,12 +395,12 @@ PS C:\> Set-IntersightVirtualizationVmwareDistributedSwitch
 
 [Get-IntersightVirtualizationVmwareDistributedSwitch](./Get-IntersightVirtualizationVmwareDistributedSwitch.md)
 
-[Initialize-IntersightVirtualizationVmwareDiscoveryProtocol](./Initialize-IntersightVirtualizationVmwareDiscoveryProtocol.md)
-
-[Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)
-
-[Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes](./Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightVirtualizationVmwareDiscoveryProtocol](./Initialize-IntersightVirtualizationVmwareDiscoveryProtocol.md)
+
+[Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes](./Initialize-IntersightVirtualizationVmwareResourceAllocationSystemTrafficTypes.md)
+
+[Initialize-IntersightVirtualizationVmwareTeamingAndFailover](./Initialize-IntersightVirtualizationVmwareTeamingAndFailover.md)

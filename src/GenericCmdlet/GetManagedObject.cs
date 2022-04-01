@@ -5,10 +5,10 @@ using System.Management.Automation;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Get, "IntersightManagedObject",DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightManagedObject", DefaultParameterSetName = "CmdletParam")]
     public class GetCmdlet : CmdletBase
     {
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true,ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
         public string Moid
         {
             get; set;
@@ -20,12 +20,12 @@ namespace Intersight.PowerShell
             get; set;
         }
 
-        [Parameter(Mandatory = true,ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "QueryParam")]
         //[ValidatePattern("^[a-z][a-z0-9A-Z]*.[A-Z][a-zA-Z0-9]*")]
         public string ObjectType
         {
-            get;set;
+            get; set;
         }
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
@@ -63,16 +63,16 @@ namespace Intersight.PowerShell
         public string Tag { get; set; } = null;
 
 
-        [Parameter(Mandatory = false,ValueFromPipelineByPropertyName = false)]
-        public Dictionary<string,object> AdditionalProperties
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+        public Dictionary<string, object> AdditionalProperties
         {
-            get;set;
+            get; set;
         }
 
 
         protected override void ProcessRecord()
         {
-           // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
+            // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
 
             //Check the objectType in MoBaseMo.ObjectTypeEnum if it belongs to that enum
             //fetch the display name.
@@ -102,11 +102,11 @@ namespace Intersight.PowerShell
                     {
                         continue;
                     }
-                    if(index != 0)
+                    if (index != 0)
                     {
                         queryStr += " and ";
                     }
-                    queryStr += string.Format("{0} eq \'{1}\'", item.Key,item.Value);
+                    queryStr += string.Format("{0} eq \'{1}\'", item.Key, item.Value);
                     index++;
                 }
 
@@ -115,11 +115,11 @@ namespace Intersight.PowerShell
                     psRequestOption.QueryParameters.Add("$filter", queryStr);
                 }
 
-                
+
             }
             else if (ParameterSetName == "QueryParam")
             {
-                foreach(var item in this.MyInvocation.BoundParameters)
+                foreach (var item in this.MyInvocation.BoundParameters)
                 {
                     if (item.Key == "ObjectType")
                     {
@@ -127,9 +127,9 @@ namespace Intersight.PowerShell
                     }
 
                     psRequestOption.QueryParameters.Add(string.Concat("$", item.Key.ToLower()), item.Value.ToString());
-                }    
+                }
             }
-            
+
             var response = psClient.Execute(psRequestOption);
 
             if (!string.IsNullOrEmpty(response))
@@ -144,7 +144,7 @@ namespace Intersight.PowerShell
                 {
                     WriteObject(response);
                 }
-                
+
             }
         }
     }

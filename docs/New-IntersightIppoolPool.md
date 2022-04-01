@@ -19,7 +19,7 @@ New-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dict
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;IppoolPool&amp;apos; resource.
+Create a &apos;IppoolPool&apos; resource.
 
 ## PARAMETERS
 
@@ -258,10 +258,6 @@ PS C:\> New-IntersightIppoolPool
 
 ## RELATED LINKS
 
-[Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)
-
-[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
-
 [Get-IntersightIppoolPool](./Get-IntersightIppoolPool.md)
 
 [Initialize-IntersightIppoolIpV4Block](./Initialize-IntersightIppoolIpV4Block.md)
@@ -273,3 +269,7 @@ PS C:\> New-IntersightIppoolPool
 [Initialize-IntersightIppoolIpV6Config](./Initialize-IntersightIppoolIpV6Config.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightIppoolPool](./Remove-IntersightIppoolPool.md)
+
+[Set-IntersightIppoolPool](./Set-IntersightIppoolPool.md)

@@ -239,10 +239,10 @@ PS C:\> New-IntersightBulkRequest
 
 [Get-IntersightBulkRequest](./Get-IntersightBulkRequest.md)
 
+[Initialize-IntersightBulkApiResult](./Initialize-IntersightBulkApiResult.md)
+
 [Initialize-IntersightBulkHttpHeader](./Initialize-IntersightBulkHttpHeader.md)
 
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
-
-[Initialize-IntersightBulkApiResult](./Initialize-IntersightBulkApiResult.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -261,12 +261,12 @@ PS C:\> Set-IntersightHyperflexExtFcStoragePolicy
 
 [Get-IntersightHyperflexExtFcStoragePolicy](./Get-IntersightHyperflexExtFcStoragePolicy.md)
 
-[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
-
-[Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)
-
 [Initialize-IntersightHyperflexNamedVsan](./Initialize-IntersightHyperflexNamedVsan.md)
+
+[Initialize-IntersightHyperflexWwxnPrefixRange](./Initialize-IntersightHyperflexWwxnPrefixRange.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Initialize-IntersightHyperflexWwxnPrefixRange](./Initialize-IntersightHyperflexWwxnPrefixRange.md)
+[New-IntersightHyperflexExtFcStoragePolicy](./New-IntersightHyperflexExtFcStoragePolicy.md)
+
+[Remove-IntersightHyperflexExtFcStoragePolicy](./Remove-IntersightHyperflexExtFcStoragePolicy.md)

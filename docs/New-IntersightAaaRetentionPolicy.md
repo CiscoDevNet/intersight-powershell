@@ -174,6 +174,6 @@ PS C:\> New-IntersightAaaRetentionPolicy
 
 [Get-IntersightAaaRetentionPolicy](./Get-IntersightAaaRetentionPolicy.md)
 
-[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightAaaRetentionPolicy](./Set-IntersightAaaRetentionPolicy.md)

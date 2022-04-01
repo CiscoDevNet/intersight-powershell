@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightComputeRackUnitIdentity](./Set-IntersightComputeRackUnitIdentity.md)
-
 [Remove-IntersightComputeRackUnitIdentity](./Remove-IntersightComputeRackUnitIdentity.md)
+
+[Set-IntersightComputeRackUnitIdentity](./Set-IntersightComputeRackUnitIdentity.md)
 

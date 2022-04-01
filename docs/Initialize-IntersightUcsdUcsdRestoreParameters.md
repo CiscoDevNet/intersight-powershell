@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The complete location of the path on the server. The location should be specified in the following format- hostname-or-ipv4address&amp;lt;:port&amp;gt;/absolute-file-path.
+The complete location of the path on the server. The location should be specified in the following format- hostname-or-ipv4address&lt;:port&gt;/absolute-file-path.
 
 ```yaml
 Type: string

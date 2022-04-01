@@ -175,10 +175,10 @@ PS C:\> Set-IntersightApplianceUpgrade
 
 ## RELATED LINKS
 
-[Remove-IntersightApplianceUpgrade](./Remove-IntersightApplianceUpgrade.md)
-
 [Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightOnpremUpgradePhase](./Initialize-IntersightOnpremUpgradePhase.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightApplianceUpgrade](./Remove-IntersightApplianceUpgrade.md)

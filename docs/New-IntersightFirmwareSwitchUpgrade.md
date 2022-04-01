@@ -19,7 +19,7 @@ New-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.G
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;FirmwareSwitchUpgrade&amp;apos; resource.
+Create a &apos;FirmwareSwitchUpgrade&apos; resource.
 
 ## PARAMETERS
 
@@ -294,12 +294,12 @@ PS C:\> New-IntersightFirmwareSwitchUpgrade
 
 [Get-IntersightFirmwareSwitchUpgrade](./Get-IntersightFirmwareSwitchUpgrade.md)
 
-[Remove-IntersightFirmwareSwitchUpgrade](./Remove-IntersightFirmwareSwitchUpgrade.md)
-
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
-
-[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
 [Initialize-IntersightFirmwareNetworkShare](./Initialize-IntersightFirmwareNetworkShare.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
+
+[Remove-IntersightFirmwareSwitchUpgrade](./Remove-IntersightFirmwareSwitchUpgrade.md)

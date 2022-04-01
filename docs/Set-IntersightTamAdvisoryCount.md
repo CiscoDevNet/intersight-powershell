@@ -142,10 +142,10 @@ PS C:\> Set-IntersightTamAdvisoryCount
 
 ## RELATED LINKS
 
-[New-IntersightTamAdvisoryCount](./New-IntersightTamAdvisoryCount.md)
-
 [Get-IntersightTamAdvisoryCount](./Get-IntersightTamAdvisoryCount.md)
 
-[Remove-IntersightTamAdvisoryCount](./Remove-IntersightTamAdvisoryCount.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightTamAdvisoryCount](./New-IntersightTamAdvisoryCount.md)
+
+[Remove-IntersightTamAdvisoryCount](./Remove-IntersightTamAdvisoryCount.md)

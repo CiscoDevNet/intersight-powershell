@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightIamEndPointUserPolicy](./Set-IntersightIamEndPointUserPolicy.md)
-
 [Get-IntersightIamEndPointUserPolicy](./Get-IntersightIamEndPointUserPolicy.md)
 
 [New-IntersightIamEndPointUserPolicy](./New-IntersightIamEndPointUserPolicy.md)
+
+[Set-IntersightIamEndPointUserPolicy](./Set-IntersightIamEndPointUserPolicy.md)
 

@@ -178,10 +178,10 @@ PS C:\> New-IntersightWorkflowTemplateEvaluation
 
 ## RELATED LINKS
 
-[Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightTemplateTransformationStage](./Initialize-IntersightTemplateTransformationStage.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

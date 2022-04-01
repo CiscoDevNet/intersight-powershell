@@ -162,6 +162,6 @@ PS C:\> Set-IntersightApplianceDataExportPolicy
 
 [Get-IntersightApplianceDataExportPolicy](./Get-IntersightApplianceDataExportPolicy.md)
 
-[New-IntersightApplianceDataExportPolicy](./New-IntersightApplianceDataExportPolicy.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightApplianceDataExportPolicy](./New-IntersightApplianceDataExportPolicy.md)

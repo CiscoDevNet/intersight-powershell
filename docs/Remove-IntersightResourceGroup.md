@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightResourceGroup](./New-IntersightResourceGroup.md)
-
 [Get-IntersightResourceGroup](./Get-IntersightResourceGroup.md)
+
+[New-IntersightResourceGroup](./New-IntersightResourceGroup.md)
 
 [Set-IntersightResourceGroup](./Set-IntersightResourceGroup.md)
 

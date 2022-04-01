@@ -19,7 +19,7 @@ Set-IntersightCapabilityFanModuleManufacturingDef [-AdditionalProperties< System
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityFanModuleManufacturingDef&amp;apos; resource.
+Update a &apos;CapabilityFanModuleManufacturingDef&apos; resource.
 
 ## PARAMETERS
 
@@ -234,8 +234,8 @@ PS C:\> Set-IntersightCapabilityFanModuleManufacturingDef
 
 [Get-IntersightCapabilityFanModuleManufacturingDef](./Get-IntersightCapabilityFanModuleManufacturingDef.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightCapabilityFanModuleManufacturingDef](./New-IntersightCapabilityFanModuleManufacturingDef.md)
 
 [Remove-IntersightCapabilityFanModuleManufacturingDef](./Remove-IntersightCapabilityFanModuleManufacturingDef.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

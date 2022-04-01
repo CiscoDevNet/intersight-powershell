@@ -19,7 +19,7 @@ Set-IntersightCapabilitySiocModuleManufacturingDef [-AdditionalProperties< Syste
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilitySiocModuleManufacturingDef&amp;apos; resource.
+Update a &apos;CapabilitySiocModuleManufacturingDef&apos; resource.
 
 ## PARAMETERS
 
@@ -232,10 +232,10 @@ PS C:\> Set-IntersightCapabilitySiocModuleManufacturingDef
 
 ## RELATED LINKS
 
-[Remove-IntersightCapabilitySiocModuleManufacturingDef](./Remove-IntersightCapabilitySiocModuleManufacturingDef.md)
-
 [Get-IntersightCapabilitySiocModuleManufacturingDef](./Get-IntersightCapabilitySiocModuleManufacturingDef.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightCapabilitySiocModuleManufacturingDef](./New-IntersightCapabilitySiocModuleManufacturingDef.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightCapabilitySiocModuleManufacturingDef](./Remove-IntersightCapabilitySiocModuleManufacturingDef.md)

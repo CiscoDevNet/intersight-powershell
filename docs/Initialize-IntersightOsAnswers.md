@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnswerFile
-If the source of the answers is a static file, the content of the file is stored as value\nin this property.\nThe value is mandatory only when the &amp;apos;Source&amp;apos; property has been set to &amp;apos;File&amp;apos;.
+If the source of the answers is a static file, the content of the file is stored as value\nin this property.\nThe value is mandatory only when the &apos;Source&apos; property has been set to &apos;File&apos;.
 
 ```yaml
 Type: string

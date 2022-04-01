@@ -19,7 +19,7 @@ Set-IntersightEquipmentFex [-AdditionalProperties< System.Collections.Generic.Di
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentFex&amp;apos; resource.
+Update a &apos;EquipmentFex&apos; resource.
 
 ## PARAMETERS
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationIweCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ConfiguredCpuOverSubFactor< double>][-CpuAllocation< VirtualizationCpuAllocation>][-CurrentCpuOverSubFactor< double>][-DatacenterName< string>][-FailureReason< string>][-HypervisorBuild< string>][-HypervisorType< VirtualizationIweCluster.HypervisorTypeEnum>][-Identity< string>][-ManagementIpAddress< string>][-MemoryAllocation< VirtualizationMemoryAllocation>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StorageClusters< System.Collections.Generic.List`1[StorageBaseClusterRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationIweCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedProfile< PolicyAbstractProfileRelationship>][-ConfiguredCpuOverSubFactor< double>][-CpuAllocation< VirtualizationCpuAllocation>][-CurrentCpuOverSubFactor< double>][-DatacenterName< string>][-FailureReason< string>][-HypervisorBuild< string>][-HypervisorType< VirtualizationIweCluster.HypervisorTypeEnum>][-HypervisorVersion< string>][-Identity< string>][-ManagementIpAddress< string>][-MemoryAllocation< VirtualizationMemoryAllocation>][-MemoryCapacity< VirtualizationMemoryCapacity>][[-Moid]< string>][-ProcessorCapacity< VirtualizationComputeCapacity>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-StorageClusters< System.Collections.Generic.List`1[StorageBaseClusterRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TotalCores< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -153,6 +153,21 @@ Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervis
 
 ```yaml
 Type: VirtualizationIweCluster.HypervisorTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HypervisorVersion
+Identifies the version of the hypervisor running on this cluster. Keeping the hypervisor version in the cluster makes it convenient for applications to validate their deployment needs. Defaults to an empty string.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -386,9 +401,11 @@ PS C:\> Set-IntersightVirtualizationIweCluster
 
 [Get-IntersightVirtualizationIweCluster](./Get-IntersightVirtualizationIweCluster.md)
 
-[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
-
 [Initialize-IntersightCondAlarmSummary](./Initialize-IntersightCondAlarmSummary.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
 [Initialize-IntersightVirtualizationCpuAllocation](./Initialize-IntersightVirtualizationCpuAllocation.md)
 
@@ -396,6 +413,4 @@ PS C:\> Set-IntersightVirtualizationIweCluster
 
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
-[Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)

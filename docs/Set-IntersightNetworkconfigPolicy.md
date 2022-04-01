@@ -346,10 +346,10 @@ PS C:\> Set-IntersightNetworkconfigPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)
-
 [Get-IntersightNetworkconfigPolicy](./Get-IntersightNetworkconfigPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightNetworkconfigPolicy](./New-IntersightNetworkconfigPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightNetworkconfigPolicy](./Remove-IntersightNetworkconfigPolicy.md)

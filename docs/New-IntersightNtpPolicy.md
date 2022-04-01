@@ -273,12 +273,12 @@ PS C:\> New-IntersightNtpPolicy
 
 ## RELATED LINKS
 
-[Set-IntersightNtpPolicy](./Set-IntersightNtpPolicy.md)
-
-[Remove-IntersightNtpPolicy](./Remove-IntersightNtpPolicy.md)
-
 [Get-IntersightNtpPolicy](./Get-IntersightNtpPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightNtpAuthNtpServer](./Initialize-IntersightNtpAuthNtpServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightNtpPolicy](./Remove-IntersightNtpPolicy.md)
+
+[Set-IntersightNtpPolicy](./Set-IntersightNtpPolicy.md)

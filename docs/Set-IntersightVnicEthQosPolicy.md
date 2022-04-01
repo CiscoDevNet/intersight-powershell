@@ -265,10 +265,10 @@ PS C:\> Set-IntersightVnicEthQosPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)
-
 [Get-IntersightVnicEthQosPolicy](./Get-IntersightVnicEthQosPolicy.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightVnicEthQosPolicy](./New-IntersightVnicEthQosPolicy.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVnicEthQosPolicy](./Remove-IntersightVnicEthQosPolicy.md)

@@ -19,7 +19,7 @@ Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProp
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;VirtualizationVmwareDatastore&amp;apos; resource.
+Update a &apos;VirtualizationVmwareDatastore&apos; resource.
 
 ## PARAMETERS
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-The URL to access this datastore (example - &amp;apos;ds:///vmfs/volumes/562a4e8a-0eeb5372-dd61-78baf9cb9afa/&amp;apos;).
+The URL to access this datastore (example - &apos;ds:///vmfs/volumes/562a4e8a-0eeb5372-dd61-78baf9cb9afa/&apos;).
 
 ```yaml
 Type: string
@@ -410,6 +410,6 @@ PS C:\> Set-IntersightVirtualizationVmwareDatastore
 
 [Get-IntersightVirtualizationVmwareDatastore](./Get-IntersightVirtualizationVmwareDatastore.md)
 
-[Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationStorageCapacity](./Initialize-IntersightVirtualizationStorageCapacity.md)

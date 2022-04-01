@@ -17,7 +17,7 @@ Remove-IntersightBiosPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;BiosPolicy&amp;apos; resource.
+Delete a &apos;BiosPolicy&apos; resource.
 
 ## EXAMPLES
 

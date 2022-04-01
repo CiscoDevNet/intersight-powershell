@@ -19,7 +19,7 @@ Set-IntersightBootSanDevice [-AdditionalProperties< System.Collections.Generic.D
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;BootSanDevice&amp;apos; resource.
+Update a &apos;BootSanDevice&apos; resource.
 
 ## PARAMETERS
 

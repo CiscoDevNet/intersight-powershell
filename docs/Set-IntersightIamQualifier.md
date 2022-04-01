@@ -162,8 +162,8 @@ PS C:\> Set-IntersightIamQualifier
 
 [Get-IntersightIamQualifier](./Get-IntersightIamQualifier.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightIamQualifier](./New-IntersightIamQualifier.md)
 
 [Remove-IntersightIamQualifier](./Remove-IntersightIamQualifier.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

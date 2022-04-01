@@ -258,6 +258,6 @@ PS C:\> Initialize-IntersightWorkflowMoReferenceDataType
 
 [Initialize-IntersightWorkflowDisplayMeta](./Initialize-IntersightWorkflowDisplayMeta.md)
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
-
 [Initialize-IntersightWorkflowMoReferenceProperty](./Initialize-IntersightWorkflowMoReferenceProperty.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

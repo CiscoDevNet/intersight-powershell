@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: BulkRestSubRequest.ObjectTypeEnum
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMoid
-Used with PATCH &amp; DELETE actions. The moid of an existing object instance.
+Used with PATCH $amp DELETE actions. The moid of an existing object instance.
 
 ```yaml
 Type: string

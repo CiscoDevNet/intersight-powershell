@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDetails
-A Json-serialized representation of the &amp;apos;configuration&amp;apos; portion of the Target instance. Ie the representation contains configuration properties like the target&amp;apos;s connectivity information but not operation status. The representation include credential information, encrypted with the RSA public key of the Appliance device connector. Appliance device connector is the sole maintainer of the RSA private key and the only system component which is capable of interpreting the credential.
+A Json-serialized representation of the &apos;configuration&apos; portion of the Target instance. Ie the representation contains configuration properties like the target&apos;s connectivity information but not operation status. The representation include credential information, encrypted with the RSA public key of the Appliance device connector. Appliance device connector is the sole maintainer of the RSA private key and the only system component which is capable of interpreting the credential.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

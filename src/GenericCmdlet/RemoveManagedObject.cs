@@ -7,7 +7,7 @@ using System.Text;
 namespace Intersight.PowerShell
 {
     [Cmdlet(VerbsCommon.Remove, "IntersightManagedObject")]
-    public class RemoveManagedObject:CmdletBase
+    public class RemoveManagedObject : CmdletBase
     {
         public RemoveManagedObject()
         {

@@ -144,6 +144,6 @@ PS C:\> New-IntersightIamIpAccessManagement
 
 [Get-IntersightIamIpAccessManagement](./Get-IntersightIamIpAccessManagement.md)
 
-[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightIamIpAccessManagement](./Set-IntersightIamIpAccessManagement.md)

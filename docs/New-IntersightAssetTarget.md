@@ -19,7 +19,7 @@ New-IntersightAssetTarget [-Account< IamAccountRelationship>][-AdditionalPropert
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;AssetTarget&amp;apos; resource.
+Create a &apos;AssetTarget&apos; resource.
 
 ## PARAMETERS
 
@@ -244,12 +244,12 @@ PS C:\> New-IntersightAssetTarget
 
 [Get-IntersightAssetTarget](./Get-IntersightAssetTarget.md)
 
-[Set-IntersightAssetTarget](./Set-IntersightAssetTarget.md)
-
-[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
-
 [Initialize-IntersightAssetConnection](./Initialize-IntersightAssetConnection.md)
 
 [Initialize-IntersightAssetService](./Initialize-IntersightAssetService.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightAssetTarget](./Remove-IntersightAssetTarget.md)
+
+[Set-IntersightAssetTarget](./Set-IntersightAssetTarget.md)

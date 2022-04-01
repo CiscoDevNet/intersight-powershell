@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerSlot
-Select the M.2 RAID controller slot on which the virtual drive is to be created. Select &amp;apos;MSTOR-RAID-1&amp;apos; to create virtual drive on the M.2 RAID controller in the first slot or in the MSTOR-RAID slot, &amp;apos;MSTOR-RAID-2&amp;apos; for second slot, &amp;apos;MSTOR-RAID-1, MSTOR-RAID-2&amp;apos; for both slots or either slot.\n* `MSTOR-RAID-1` - Virtual drive  will be created on the M.2 RAID controller in the first slot.\n* `MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in the second slot, if available.\n* `MSTOR-RAID-1,MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in both the slots, if available.
+Select the M.2 RAID controller slot on which the virtual drive is to be created. Select &apos;MSTOR-RAID-1&apos; to create virtual drive on the M.2 RAID controller in the first slot or in the MSTOR-RAID slot, &apos;MSTOR-RAID-2&apos; for second slot, &apos;MSTOR-RAID-1, MSTOR-RAID-2&apos; for both slots or either slot.\n* `MSTOR-RAID-1` - Virtual drive  will be created on the M.2 RAID controller in the first slot.\n* `MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in the second slot, if available.\n* `MSTOR-RAID-1,MSTOR-RAID-2` - Virtual drive  will be created on the M.2 RAID controller in both the slots, if available.
 
 ```yaml
 Type: StorageM2VirtualDriveConfig.ControllerSlotEnum
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &amp;apos;ClassId&amp;apos; property.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: StorageM2VirtualDriveConfig.ObjectTypeEnum

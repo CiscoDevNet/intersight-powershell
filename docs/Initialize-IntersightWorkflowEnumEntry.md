@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-Label for the enum value. A user friendly short string to identify the enum value. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), forward slash (/), or an underscore (_) and must be at least 2 characters.
+Label for the enum value. A user friendly short string to identify the enum value. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote (&apos;), forward slash (/), or an underscore (_) and must have an alphanumeric character.
 
 ```yaml
 Type: string

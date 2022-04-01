@@ -19,7 +19,7 @@ Set-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< System.Co
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;SoftwarerepositoryCategoryMapper&amp;apos; resource.
+Update a &apos;SoftwarerepositoryCategoryMapper&apos; resource.
 
 ## PARAMETERS
 
@@ -292,10 +292,10 @@ PS C:\> Set-IntersightSoftwarerepositoryCategoryMapper
 
 ## RELATED LINKS
 
-[Remove-IntersightSoftwarerepositoryCategoryMapper](./Remove-IntersightSoftwarerepositoryCategoryMapper.md)
-
 [Get-IntersightSoftwarerepositoryCategoryMapper](./Get-IntersightSoftwarerepositoryCategoryMapper.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightSoftwarerepositoryCategoryMapper](./New-IntersightSoftwarerepositoryCategoryMapper.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightSoftwarerepositoryCategoryMapper](./Remove-IntersightSoftwarerepositoryCategoryMapper.md)

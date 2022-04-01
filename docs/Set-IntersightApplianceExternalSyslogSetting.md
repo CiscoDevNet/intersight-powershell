@@ -19,7 +19,7 @@ Set-IntersightApplianceExternalSyslogSetting [-Account< IamAccountRelationship>]
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ApplianceExternalSyslogSetting&amp;apos; resource.
+Update a &apos;ApplianceExternalSyslogSetting&apos; resource.
 
 ## PARAMETERS
 

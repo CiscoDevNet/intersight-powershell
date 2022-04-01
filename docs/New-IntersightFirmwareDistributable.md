@@ -517,12 +517,12 @@ PS C:\> New-IntersightFirmwareDistributable
 
 [Get-IntersightFirmwareDistributable](./Get-IntersightFirmwareDistributable.md)
 
-[Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)
-
-[Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
-
 [Initialize-IntersightFirmwareComponentMeta](./Initialize-IntersightFirmwareComponentMeta.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFirmwareDistributable](./Remove-IntersightFirmwareDistributable.md)
+
+[Set-IntersightFirmwareDistributable](./Set-IntersightFirmwareDistributable.md)

@@ -19,7 +19,7 @@ New-IntersightResourceReservation [-AdditionalProperties< System.Collections.Gen
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;ResourceReservation&amp;apos; resource.
+Create a &apos;ResourceReservation&apos; resource.
 
 ## PARAMETERS
 
@@ -177,8 +177,8 @@ PS C:\> New-IntersightResourceReservation
 
 [Get-IntersightResourceReservation](./Get-IntersightResourceReservation.md)
 
-[Set-IntersightResourceReservation](./Set-IntersightResourceReservation.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightResourceReservation](./Remove-IntersightResourceReservation.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightResourceReservation](./Set-IntersightResourceReservation.md)

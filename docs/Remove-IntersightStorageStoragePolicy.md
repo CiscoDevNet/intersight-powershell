@@ -17,7 +17,7 @@ Remove-IntersightStorageStoragePolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;StorageStoragePolicy&amp;apos; resource.
+Delete a &apos;StorageStoragePolicy&apos; resource.
 
 ## EXAMPLES
 
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightStorageStoragePolicy](./Set-IntersightStorageStoragePolicy.md)
-
 [Get-IntersightStorageStoragePolicy](./Get-IntersightStorageStoragePolicy.md)
 
 [New-IntersightStorageStoragePolicy](./New-IntersightStorageStoragePolicy.md)
+
+[Set-IntersightStorageStoragePolicy](./Set-IntersightStorageStoragePolicy.md)
 

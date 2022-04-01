@@ -19,7 +19,7 @@ Set-IntersightCapabilityAdapterUnitDescriptor [-AdapterGeneration< CapabilityAda
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;CapabilityAdapterUnitDescriptor&amp;apos; resource.
+Update a &apos;CapabilityAdapterUnitDescriptor&apos; resource.
 
 ## PARAMETERS
 
@@ -419,10 +419,10 @@ PS C:\> Set-IntersightCapabilityAdapterUnitDescriptor
 
 [Get-IntersightCapabilityAdapterUnitDescriptor](./Get-IntersightCapabilityAdapterUnitDescriptor.md)
 
-[New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
-
-[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)
-
 [Initialize-IntersightCapabilityFeatureConfig](./Initialize-IntersightCapabilityFeatureConfig.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightCapabilityAdapterUnitDescriptor](./New-IntersightCapabilityAdapterUnitDescriptor.md)
+
+[Remove-IntersightCapabilityAdapterUnitDescriptor](./Remove-IntersightCapabilityAdapterUnitDescriptor.md)

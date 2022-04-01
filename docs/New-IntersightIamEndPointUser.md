@@ -180,8 +180,8 @@ PS C:\> New-IntersightIamEndPointUser
 
 [Get-IntersightIamEndPointUser](./Get-IntersightIamEndPointUser.md)
 
-[Set-IntersightIamEndPointUser](./Set-IntersightIamEndPointUser.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamEndPointUser](./Remove-IntersightIamEndPointUser.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Set-IntersightIamEndPointUser](./Set-IntersightIamEndPointUser.md)

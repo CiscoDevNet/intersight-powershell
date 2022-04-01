@@ -19,7 +19,7 @@ Set-IntersightKubernetesAddonRepository [-AdditionalProperties< System.Collectio
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;KubernetesAddonRepository&amp;apos; resource.
+Update a &apos;KubernetesAddonRepository&apos; resource.
 
 ## PARAMETERS
 
@@ -242,10 +242,10 @@ PS C:\> Set-IntersightKubernetesAddonRepository
 
 [Get-IntersightKubernetesAddonRepository](./Get-IntersightKubernetesAddonRepository.md)
 
-[New-IntersightKubernetesAddonRepository](./New-IntersightKubernetesAddonRepository.md)
-
-[Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightX509Certificate](./Initialize-IntersightX509Certificate.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[New-IntersightKubernetesAddonRepository](./New-IntersightKubernetesAddonRepository.md)
+
+[Remove-IntersightKubernetesAddonRepository](./Remove-IntersightKubernetesAddonRepository.md)

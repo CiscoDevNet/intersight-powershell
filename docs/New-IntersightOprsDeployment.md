@@ -284,10 +284,10 @@ PS C:\> New-IntersightOprsDeployment
 
 [Get-IntersightOprsDeployment](./Get-IntersightOprsDeployment.md)
 
-[Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)
-
-[Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightOprsKvpair](./Initialize-IntersightOprsKvpair.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightOprsDeployment](./Remove-IntersightOprsDeployment.md)
+
+[Set-IntersightOprsDeployment](./Set-IntersightOprsDeployment.md)

@@ -396,12 +396,12 @@ PS C:\> New-IntersightVnicFcIf
 
 ## RELATED LINKS
 
-[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
-
-[Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)
-
 [Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
+
+[Set-IntersightVnicFcIf](./Set-IntersightVnicFcIf.md)

@@ -292,10 +292,10 @@ PS C:\> New-IntersightSoftwarerepositoryCategoryMapper
 
 ## RELATED LINKS
 
-[Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)
-
-[Remove-IntersightSoftwarerepositoryCategoryMapper](./Remove-IntersightSoftwarerepositoryCategoryMapper.md)
-
 [Get-IntersightSoftwarerepositoryCategoryMapper](./Get-IntersightSoftwarerepositoryCategoryMapper.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightSoftwarerepositoryCategoryMapper](./Remove-IntersightSoftwarerepositoryCategoryMapper.md)
+
+[Set-IntersightSoftwarerepositoryCategoryMapper](./Set-IntersightSoftwarerepositoryCategoryMapper.md)

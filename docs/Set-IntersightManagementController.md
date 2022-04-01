@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightManagementController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightManagementController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UemStreamAdminState< ManagementController.UemStreamAdminStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;ManagementController&amp;apos; resource.
+Update a &apos;ManagementController&apos; resource.
 
 ## PARAMETERS
 
@@ -78,6 +78,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UemStreamAdminState
+Desired state of the UEM stream.\n* `Disabled` - The UEM event channel is disabled.\n* `Enabled` - The UEM event channel is enabled.
+
+```yaml
+Type: ManagementController.UemStreamAdminStateEnum
 Parameter Sets: (All)
 Aliases:
 

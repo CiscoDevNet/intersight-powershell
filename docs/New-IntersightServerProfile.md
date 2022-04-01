@@ -459,16 +459,16 @@ PS C:\> New-IntersightServerProfile
 
 [Get-IntersightServerProfile](./Get-IntersightServerProfile.md)
 
-[Set-IntersightServerProfile](./Set-IntersightServerProfile.md)
-
-[Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
-[Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
-
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
+
+[Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
+
+[Set-IntersightServerProfile](./Set-IntersightServerProfile.md)

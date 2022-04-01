@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightLicenseLicenseReservationOp](./Set-IntersightLicenseLicenseReservationOp.md)
-
 [New-IntersightLicenseLicenseReservationOp](./New-IntersightLicenseLicenseReservationOp.md)
+
+[Set-IntersightLicenseLicenseReservationOp](./Set-IntersightLicenseLicenseReservationOp.md)
 

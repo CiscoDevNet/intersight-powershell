@@ -19,8 +19,8 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
         public Hashtable AdditionalProperties { get; set; }
 
-        [Parameter(Mandatory = true,ValueFromPipelineByPropertyName = true,ParameterSetName ="jsonData")]
-        public string JsonRequestBody{get;set;}
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "jsonData")]
+        public string JsonRequestBody { get; set; }
 
         protected override void ProcessRecord()
         {
@@ -43,7 +43,7 @@ namespace Intersight.PowerShell
             };
 
 
-            if(ParameterSetName == PSUtils.CmdletParam)
+            if (ParameterSetName == PSUtils.CmdletParam)
             {
                 psRequestOption.RequestData = JsonConvert.SerializeObject(AdditionalProperties, Formatting.Indented);
             }

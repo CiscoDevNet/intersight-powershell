@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-IntersightComputeServerPowerPolicy](./Set-IntersightComputeServerPowerPolicy.md)
-
 [Remove-IntersightComputeServerPowerPolicy](./Remove-IntersightComputeServerPowerPolicy.md)
+
+[Set-IntersightComputeServerPowerPolicy](./Set-IntersightComputeServerPowerPolicy.md)
 

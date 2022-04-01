@@ -25,7 +25,7 @@ Get-IntersightSoftwareHclMeta [-Count <Boolean>] [-InlineCount <String>] [-Selec
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;SoftwareHclMeta&amp;apos; resource.,
+Read a &apos;SoftwareHclMeta&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -286,7 +286,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
 
-[Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
-
 [Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
+
+[Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
 

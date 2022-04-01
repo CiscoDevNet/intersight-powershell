@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricServerRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][[-Moid]< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricServerRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-AutoNegotiationDisabled< bool>][-Fec< FabricServerRole.FecEnum>][[-Moid]< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,36 @@ Breakout port Identifier of the Switch Interface.\nWhen a port is not configured
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoNegotiationDisabled
+Auto negotiation configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 100G speed port on UCS-FI-6536 and should be set as True.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Fec
+Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+
+```yaml
+Type: FabricServerRole.FecEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -190,10 +220,10 @@ PS C:\> Set-IntersightFabricServerRole
 
 ## RELATED LINKS
 
-[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)
-
 [Get-IntersightFabricServerRole](./Get-IntersightFabricServerRole.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [New-IntersightFabricServerRole](./New-IntersightFabricServerRole.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightFabricServerRole](./Remove-IntersightFabricServerRole.md)

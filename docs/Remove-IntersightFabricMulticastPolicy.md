@@ -17,7 +17,7 @@ Remove-IntersightFabricMulticastPolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;FabricMulticastPolicy&amp;apos; resource.
+Delete a &apos;FabricMulticastPolicy&apos; resource.
 
 ## EXAMPLES
 

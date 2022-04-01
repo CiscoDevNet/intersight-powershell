@@ -212,10 +212,10 @@ PS C:\> New-IntersightKubernetesAddonPolicy
 
 [Get-IntersightKubernetesAddonPolicy](./Get-IntersightKubernetesAddonPolicy.md)
 
-[Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)
-
-[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
-
 [Initialize-IntersightKubernetesAddonConfiguration](./Initialize-IntersightKubernetesAddonConfiguration.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightKubernetesAddonPolicy](./Remove-IntersightKubernetesAddonPolicy.md)
+
+[Set-IntersightKubernetesAddonPolicy](./Set-IntersightKubernetesAddonPolicy.md)

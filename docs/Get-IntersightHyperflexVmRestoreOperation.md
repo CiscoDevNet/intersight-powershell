@@ -284,7 +284,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
-
 [New-IntersightHyperflexVmRestoreOperation](./New-IntersightHyperflexVmRestoreOperation.md)
+
+[Remove-IntersightHyperflexVmRestoreOperation](./Remove-IntersightHyperflexVmRestoreOperation.md)
 

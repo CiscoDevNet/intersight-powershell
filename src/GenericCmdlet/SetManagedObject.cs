@@ -6,17 +6,17 @@ using System.Management.Automation;
 namespace Intersight.PowerShell
 {
     [Cmdlet(VerbsCommon.Set, "IntersightManagedObject")]
-    public class SetManagedObject:CmdletBase
+    public class SetManagedObject : CmdletBase
     {
         public SetManagedObject()
         {
 
         }
 
-        [Parameter(Mandatory = true,ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
         public string ObjectType { get; set; }
 
-        [Parameter(Mandatory = true,ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
         public string Moid { get; set; }
 
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
@@ -44,7 +44,7 @@ namespace Intersight.PowerShell
                 Method = "POST",
             };
 
-            if(ParameterSetName == PSUtils.CmdletParam)
+            if (ParameterSetName == PSUtils.CmdletParam)
             {
                 psRequestOption.RequestData = JsonConvert.SerializeObject(AdditionalProperties, Formatting.Indented);
             }

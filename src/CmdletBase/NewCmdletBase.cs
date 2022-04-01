@@ -8,96 +8,97 @@ using System.Text;
 
 namespace Intersight.PowerShell
 {
-	public class NewCmdletBase:CmdletBase
-	{
-		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-		public SwitchParameter Json { get; set; }
+    public class NewCmdletBase : CmdletBase
+    {
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+        public SwitchParameter Json { get; set; }
 
-		[Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-		public SwitchParameter WithHttpInfo { get; set; }
-		
-		public NewCmdletBase()
-		{
-			
-		}
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
+        public SwitchParameter WithHttpInfo { get; set; }
 
-		protected override void ProcessRecord()
-		{
-			try
-			{
-				if(this.ModelObject == null)
-				{
-					throw new Exception(string.Format("{0} ModelObject should not be null", this.MyInvocation.InvocationName));
-				}
+        public NewCmdletBase()
+        {
 
-				ProcessRelationshipParam();	
+        }
 
-				var propertyList = this.ModelObject.GetType().GetProperties();
-				foreach(var item in propertyList)
-				{
-					var propName = item.Name;
-					if (item.Name.StartsWith("_"))
-					{
-						propName = item.Name.TrimStart('_');
-					}
+        protected override void ProcessRecord()
+        {
+            try
+            {
+                if (this.ModelObject == null)
+                {
+                    throw new Exception(string.Format("{0} ModelObject should not be null", this.MyInvocation.InvocationName));
+                }
 
-					if (this.MyInvocation.BoundParameters.ContainsKey(propName))
-					{
-						item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
-					}
-				}
+                ProcessRelationshipParam();
 
-				if (Json.IsPresent)
-				{
-					WriteRequestJson();
-				}
+                var propertyList = this.ModelObject.GetType().GetProperties();
+                foreach (var item in propertyList)
+                {
+                    var propName = item.Name;
+                    if (item.Name.StartsWith("_"))
+                    {
+                        propName = item.Name.TrimStart('_');
+                    }
 
-				var methodInfo = GetMethodInfo(MethodName);
-				Object[] argList = new[] { ModelObject,default(string),default(string) };
-				var result = methodInfo.Invoke(ApiInstance, argList);
-				if (Json.IsPresent)
-				{
-					WriteResponseJson(result);
-				}
-				else if(WithHttpInfo.IsPresent)
-				{
-					WriteObject(result);
-				}
-				else
-				{
-					WriteResponseData(result);
-				}
-			}
-			catch(Exception ex)
-			{
-				throw ex.InnerException;
-			}
-		}
+                    if (this.MyInvocation.BoundParameters.ContainsKey(propName))
+                    {
+                        item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
+                    }
+                }
 
-		internal void ProcessRelationshipParam()
-		{
-			foreach (var item in this.MyInvocation.BoundParameters)
-			{
-				var itemValue = item.Value;
-				if (itemValue.GetType().Name.EndsWith("Relationship"))
-				{
-					var actualInstance = itemValue.GetType().GetProperty("ActualInstance").GetValue(itemValue);
-					if (actualInstance.GetType().Name != "MoMoRef")
-					{
-						string jsonStr = "{{\"ClassId\" : \"mo.MoRef\",\"Moid\" : \"{0}\", \"ObjectType\" :\"{1}\"}}";
-						var moid = actualInstance.GetType().GetProperty("Moid").GetValue(actualInstance);
-						var objectType = actualInstance.GetType().GetProperty("ObjectType",BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance).GetValue(actualInstance);
-						var moRefStr = string.Format(jsonStr, moid,objectType);
-						var fromJsonMethod = itemValue.GetType().GetMethod("FromJson");
-						if (fromJsonMethod != null)
-						{
-							object[] argList = new[] { moRefStr };
-							var moRefInstance = fromJsonMethod.Invoke(null, argList);
-							this.MyInvocation.BoundParameters[item.Key] = moRefInstance;
-						}
-				}	}
-			
-			}
-		}
-	}
+                if (Json.IsPresent)
+                {
+                    WriteRequestJson();
+                }
+
+                var methodInfo = GetMethodInfo(MethodName);
+                Object[] argList = new[] { ModelObject, default(string), default(string) };
+                var result = methodInfo.Invoke(ApiInstance, argList);
+                if (Json.IsPresent)
+                {
+                    WriteResponseJson(result);
+                }
+                else if (WithHttpInfo.IsPresent)
+                {
+                    WriteObject(result);
+                }
+                else
+                {
+                    WriteResponseData(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex.InnerException;
+            }
+        }
+
+        internal void ProcessRelationshipParam()
+        {
+            foreach (var item in this.MyInvocation.BoundParameters)
+            {
+                var itemValue = item.Value;
+                if (itemValue.GetType().Name.EndsWith("Relationship"))
+                {
+                    var actualInstance = itemValue.GetType().GetProperty("ActualInstance").GetValue(itemValue);
+                    if (actualInstance.GetType().Name != "MoMoRef")
+                    {
+                        string jsonStr = "{{\"ClassId\" : \"mo.MoRef\",\"Moid\" : \"{0}\", \"ObjectType\" :\"{1}\"}}";
+                        var moid = actualInstance.GetType().GetProperty("Moid").GetValue(actualInstance);
+                        var objectType = actualInstance.GetType().GetProperty("ObjectType", BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance).GetValue(actualInstance);
+                        var moRefStr = string.Format(jsonStr, moid, objectType);
+                        var fromJsonMethod = itemValue.GetType().GetMethod("FromJson");
+                        if (fromJsonMethod != null)
+                        {
+                            object[] argList = new[] { moRefStr };
+                            var moRefInstance = fromJsonMethod.Invoke(null, argList);
+                            this.MyInvocation.BoundParameters[item.Key] = moRefInstance;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }

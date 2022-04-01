@@ -350,7 +350,7 @@ PS C:\> New-IntersightOsInstall
 
 [Get-IntersightOsInstall](./Get-IntersightOsInstall.md)
 
-[Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightOsAnswers](./Initialize-IntersightOsAnswers.md)
 
@@ -358,4 +358,4 @@ PS C:\> New-IntersightOsInstall
 
 [Initialize-IntersightOsOperatingSystemParameters](./Initialize-IntersightOsOperatingSystemParameters.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightOsPlaceHolder](./Initialize-IntersightOsPlaceHolder.md)

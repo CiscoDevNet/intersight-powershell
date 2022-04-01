@@ -162,12 +162,12 @@ PS C:\> Set-IntersightWorkflowTaskInfo
 
 [Get-IntersightWorkflowTaskInfo](./Get-IntersightWorkflowTaskInfo.md)
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowMessage](./Initialize-IntersightWorkflowMessage.md)
 
-[Initialize-IntersightWorkflowTaskRetryInfo](./Initialize-IntersightWorkflowTaskRetryInfo.md)
-
 [Initialize-IntersightWorkflowTaskLoopInfo](./Initialize-IntersightWorkflowTaskLoopInfo.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightWorkflowTaskRetryInfo](./Initialize-IntersightWorkflowTaskRetryInfo.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

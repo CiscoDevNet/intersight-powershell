@@ -19,7 +19,7 @@ Set-IntersightEquipmentRackEnclosure [-AdditionalProperties< System.Collections.
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;EquipmentRackEnclosure&amp;apos; resource.
+Update a &apos;EquipmentRackEnclosure&apos; resource.
 
 ## PARAMETERS
 

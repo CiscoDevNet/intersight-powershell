@@ -397,12 +397,12 @@ PS C:\> Set-IntersightHyperflexHypervisorVirtualMachine
 
 [Initialize-IntersightInfraHardwareInfo](./Initialize-IntersightInfraHardwareInfo.md)
 
-[Initialize-IntersightVirtualizationGuestInfo](./Initialize-IntersightVirtualizationGuestInfo.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightNetworkHyperFlexNetworkAddress](./Initialize-IntersightNetworkHyperFlexNetworkAddress.md)
 
-[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
-
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Initialize-IntersightVirtualizationGuestInfo](./Initialize-IntersightVirtualizationGuestInfo.md)
+
+[Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)

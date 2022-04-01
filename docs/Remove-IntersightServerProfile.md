@@ -17,7 +17,7 @@ Remove-IntersightServerProfile -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &amp;apos;ServerProfile&amp;apos; resource.
+Delete a &apos;ServerProfile&apos; resource.
 
 ## EXAMPLES
 

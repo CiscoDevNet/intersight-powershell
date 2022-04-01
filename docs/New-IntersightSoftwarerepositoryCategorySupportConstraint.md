@@ -19,7 +19,7 @@ New-IntersightSoftwarerepositoryCategorySupportConstraint [-AdditionalProperties
 ```
 
 ## DESCRIPTION
-Create a &amp;apos;SoftwarerepositoryCategorySupportConstraint&amp;apos; resource.
+Create a &apos;SoftwarerepositoryCategorySupportConstraint&apos; resource.
 
 ## PARAMETERS
 
@@ -236,10 +236,10 @@ PS C:\> New-IntersightSoftwarerepositoryCategorySupportConstraint
 
 [Get-IntersightSoftwarerepositoryCategorySupportConstraint](./Get-IntersightSoftwarerepositoryCategorySupportConstraint.md)
 
-[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)
-
-[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSoftwarerepositoryConstraintModels](./Initialize-IntersightSoftwarerepositoryConstraintModels.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)
+
+[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)

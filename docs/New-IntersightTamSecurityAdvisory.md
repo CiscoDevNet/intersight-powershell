@@ -423,9 +423,7 @@ PS C:\> New-IntersightTamSecurityAdvisory
 
 [Get-IntersightTamSecurityAdvisory](./Get-IntersightTamSecurityAdvisory.md)
 
-[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
-
-[Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightTamAction](./Initialize-IntersightTamAction.md)
 
@@ -433,4 +431,6 @@ PS C:\> New-IntersightTamSecurityAdvisory
 
 [Initialize-IntersightTamSeverity](./Initialize-IntersightTamSeverity.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightTamSecurityAdvisory](./Remove-IntersightTamSecurityAdvisory.md)
+
+[Set-IntersightTamSecurityAdvisory](./Set-IntersightTamSecurityAdvisory.md)

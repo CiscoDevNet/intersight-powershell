@@ -25,7 +25,7 @@ Get-IntersightFirmwareUpgradeImpactStatus [-Count <Boolean>] [-InlineCount <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &amp;apos;FirmwareUpgradeImpactStatus&amp;apos; resource.,
+Read a &apos;FirmwareUpgradeImpactStatus&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.

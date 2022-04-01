@@ -211,10 +211,10 @@ PS C:\> Set-IntersightKubernetesVersionPolicy
 
 ## RELATED LINKS
 
-[Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)
-
-[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
-
 [Get-IntersightKubernetesVersionPolicy](./Get-IntersightKubernetesVersionPolicy.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightKubernetesVersionPolicy](./New-IntersightKubernetesVersionPolicy.md)
+
+[Remove-IntersightKubernetesVersionPolicy](./Remove-IntersightKubernetesVersionPolicy.md)

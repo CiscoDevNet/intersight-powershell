@@ -329,10 +329,10 @@ PS C:\> New-IntersightSoftwarerepositoryOperatingSystemFile
 
 [Get-IntersightSoftwarerepositoryOperatingSystemFile](./Get-IntersightSoftwarerepositoryOperatingSystemFile.md)
 
-[Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)
-
-[Remove-IntersightSoftwarerepositoryOperatingSystemFile](./Remove-IntersightSoftwarerepositoryOperatingSystemFile.md)
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightSoftwarerepositoryFileServer](./Initialize-IntersightSoftwarerepositoryFileServer.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+[Remove-IntersightSoftwarerepositoryOperatingSystemFile](./Remove-IntersightSoftwarerepositoryOperatingSystemFile.md)
+
+[Set-IntersightSoftwarerepositoryOperatingSystemFile](./Set-IntersightSoftwarerepositoryOperatingSystemFile.md)

@@ -18,16 +18,16 @@ namespace Intersight.PowerShell
 
         internal string BasePath { get; set; }
         internal string Path { get; set; }
-        internal Dictionary<string,string> QueryParameters { get; set; }
+        internal Dictionary<string, string> QueryParameters { get; set; }
 
-        internal Dictionary<string,string> PathParameters { get; set; }
+        internal Dictionary<string, string> PathParameters { get; set; }
 
-        internal Dictionary<string,string> HeaderParameters { get; set; }
+        internal Dictionary<string, string> HeaderParameters { get; set; }
 
         internal object RequestBody { get; set; }
 
         internal string RequestData { get; set; } = string.Empty;
 
-        internal string ContentType {get;set;}
+        internal string ContentType { get; set; }
     }
 }

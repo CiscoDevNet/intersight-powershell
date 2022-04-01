@@ -267,6 +267,6 @@ PS C:\> New-IntersightApplianceRestore
 
 [Get-IntersightApplianceRestore](./Get-IntersightApplianceRestore.md)
 
-[Remove-IntersightApplianceRestore](./Remove-IntersightApplianceRestore.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightApplianceRestore](./Remove-IntersightApplianceRestore.md)

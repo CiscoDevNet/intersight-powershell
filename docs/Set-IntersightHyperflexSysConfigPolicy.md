@@ -19,7 +19,7 @@ Set-IntersightHyperflexSysConfigPolicy [-AdditionalProperties< System.Collection
 ```
 
 ## DESCRIPTION
-Update a &amp;apos;HyperflexSysConfigPolicy&amp;apos; resource.
+Update a &apos;HyperflexSysConfigPolicy&apos; resource.
 
 ## PARAMETERS
 
@@ -255,8 +255,8 @@ PS C:\> Set-IntersightHyperflexSysConfigPolicy
 
 [Get-IntersightHyperflexSysConfigPolicy](./Get-IntersightHyperflexSysConfigPolicy.md)
 
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
 [New-IntersightHyperflexSysConfigPolicy](./New-IntersightHyperflexSysConfigPolicy.md)
 
 [Remove-IntersightHyperflexSysConfigPolicy](./Remove-IntersightHyperflexSysConfigPolicy.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
