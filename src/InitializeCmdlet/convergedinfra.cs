@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraHealthCheckExecution.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraAlarmSummary.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraHealthCheckExecution")]
-    public class InitializeIntersightConvergedinfraHealthCheckExecution : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraAlarmSummary")]
+    public class InitializeIntersightConvergedinfraAlarmSummary : PSCmdlet
     {
-        public InitializeIntersightConvergedinfraHealthCheckExecution()
+        public InitializeIntersightConvergedinfraAlarmSummary()
         {
-            ClassId = ConvergedinfraHealthCheckExecution.ClassIdEnum.ConvergedinfraHealthCheckExecution;
-            ObjectType = ConvergedinfraHealthCheckExecution.ObjectTypeEnum.ConvergedinfraHealthCheckExecution;
+            ClassId = ConvergedinfraAlarmSummary.ClassIdEnum.ConvergedinfraAlarmSummary;
+            ObjectType = ConvergedinfraAlarmSummary.ObjectTypeEnum.ConvergedinfraAlarmSummary;
 
         }
         // <summary>
@@ -34,17 +34,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public ConvergedinfraHealthCheckExecution.ClassIdEnum ClassId
+        public ConvergedinfraAlarmSummary.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// <para type="description">"The count of alarms that have severity type Critical."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Moid
+        public long Critical
         {
             get;
             set;
@@ -54,17 +54,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public ConvergedinfraHealthCheckExecution.ObjectTypeEnum ObjectType
+        public ConvergedinfraAlarmSummary.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"The count of alarms that have severity type Warning."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<Model.MoTag> Tags
+        public long Warning
         {
             get;
             set;
@@ -72,20 +72,20 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.ConvergedinfraHealthCheckExecution initObject = new Intersight.Model.ConvergedinfraHealthCheckExecution();
+            Intersight.Model.ConvergedinfraAlarmSummary initObject = new Intersight.Model.ConvergedinfraAlarmSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Critical"))
             {
-                initObject.Moid = this.Moid;
+                initObject.Critical = this.Critical;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Warning"))
             {
-                initObject.Tags = this.Tags;
+                initObject.Warning = this.Warning;
             }
             WriteObject(initObject);
         }
@@ -198,147 +198,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Validated"))
             {
                 initObject.Validated = this.Validated;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraPod.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraPod")]
-    public class InitializeIntersightConvergedinfraPod : PSCmdlet
-    {
-        public InitializeIntersightConvergedinfraPod()
-        {
-            ClassId = ConvergedinfraPod.ClassIdEnum.ConvergedinfraPod;
-            ObjectType = ConvergedinfraPod.ObjectTypeEnum.ConvergedinfraPod;
-            Type = ConvergedinfraPod.TypeEnum.FlexPod;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public ConvergedinfraPod.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the pod. A short note about the nature or purpose of the pod."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the pod. Concrete pod will be created with this name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public ConvergedinfraPod.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Defines the type of the pod.\n* `FlexPod` - Pod type is FlexPod, an integrated infrastructure solution developed by Cisco and NetApp.\n* `FlashStack` - Pod type is FlashStack, an integrated infrastructure solution developed by Cisco and Pure Storage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public ConvergedinfraPod.TypeEnum Type
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.ConvergedinfraPod initObject = new Intersight.Model.ConvergedinfraPod();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
             }
             WriteObject(initObject);
         }
@@ -528,15 +387,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraAlarmSummary.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraHealthCheckExecution.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraAlarmSummary")]
-    public class InitializeIntersightConvergedinfraAlarmSummary : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraHealthCheckExecution")]
+    public class InitializeIntersightConvergedinfraHealthCheckExecution : PSCmdlet
     {
-        public InitializeIntersightConvergedinfraAlarmSummary()
+        public InitializeIntersightConvergedinfraHealthCheckExecution()
         {
-            ClassId = ConvergedinfraAlarmSummary.ClassIdEnum.ConvergedinfraAlarmSummary;
-            ObjectType = ConvergedinfraAlarmSummary.ObjectTypeEnum.ConvergedinfraAlarmSummary;
+            ClassId = ConvergedinfraHealthCheckExecution.ClassIdEnum.ConvergedinfraHealthCheckExecution;
+            ObjectType = ConvergedinfraHealthCheckExecution.ObjectTypeEnum.ConvergedinfraHealthCheckExecution;
 
         }
         // <summary>
@@ -554,17 +413,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public ConvergedinfraAlarmSummary.ClassIdEnum ClassId
+        public ConvergedinfraHealthCheckExecution.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The count of alarms that have severity type Critical."</para>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long Critical
+        public string Moid
         {
             get;
             set;
@@ -574,17 +433,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public ConvergedinfraAlarmSummary.ObjectTypeEnum ObjectType
+        public ConvergedinfraHealthCheckExecution.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The count of alarms that have severity type Warning."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long Warning
+        public List<Model.MoTag> Tags
         {
             get;
             set;
@@ -592,20 +451,161 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.ConvergedinfraAlarmSummary initObject = new Intersight.Model.ConvergedinfraAlarmSummary();
+            Intersight.Model.ConvergedinfraHealthCheckExecution initObject = new Intersight.Model.ConvergedinfraHealthCheckExecution();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Critical"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
-                initObject.Critical = this.Critical;
+                initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Warning"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
-                initObject.Warning = this.Warning;
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConvergedinfraPod.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConvergedinfraPod")]
+    public class InitializeIntersightConvergedinfraPod : PSCmdlet
+    {
+        public InitializeIntersightConvergedinfraPod()
+        {
+            ClassId = ConvergedinfraPod.ClassIdEnum.ConvergedinfraPod;
+            ObjectType = ConvergedinfraPod.ObjectTypeEnum.ConvergedinfraPod;
+            Type = ConvergedinfraPod.TypeEnum.FlexPod;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConvergedinfraPod.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the pod. A short note about the nature or purpose of the pod."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the pod. Concrete pod will be created with this name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConvergedinfraPod.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines the type of the pod.\n* `FlexPod` - Pod type is FlexPod, an integrated infrastructure solution developed by Cisco and NetApp.\n* `FlashStack` - Pod type is FlashStack, an integrated infrastructure solution developed by Cisco and Pure Storage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConvergedinfraPod.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.ConvergedinfraPod initObject = new Intersight.Model.ConvergedinfraPod();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
             }
             WriteObject(initObject);
         }

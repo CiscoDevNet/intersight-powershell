@@ -8,12 +8,12 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NotificationAction.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationAbstractCondition.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNotificationAction")]
-    public class InitializeIntersightNotificationAction : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationAbstractCondition")]
+    public class InitializeIntersightNotificationAbstractCondition : PSCmdlet
     {
-        public InitializeIntersightNotificationAction()
+        public InitializeIntersightNotificationAbstractCondition()
         {
 
         }
@@ -32,7 +32,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public NotificationAction.ClassIdEnum ClassId
+        public NotificationAbstractCondition.ClassIdEnum ClassId
         {
             get;
             set;
@@ -42,7 +42,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public NotificationAction.ObjectTypeEnum ObjectType
+        public NotificationAbstractCondition.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -50,7 +50,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.NotificationAction initObject = new Intersight.Model.NotificationAction();
+            Intersight.Model.NotificationAbstractCondition initObject = new Intersight.Model.NotificationAbstractCondition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -202,82 +202,12 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NotificationSendEmail.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationAction.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNotificationSendEmail")]
-    public class InitializeIntersightNotificationSendEmail : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationAction")]
+    public class InitializeIntersightNotificationAction : PSCmdlet
     {
-        public InitializeIntersightNotificationSendEmail()
-        {
-            ClassId = NotificationSendEmail.ClassIdEnum.NotificationSendEmail;
-            ObjectType = NotificationSendEmail.ObjectTypeEnum.NotificationSendEmail;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public NotificationSendEmail.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Email of the recipient, who expects to be notified about the event that happens in Intersight."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Email
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public NotificationSendEmail.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.NotificationSendEmail initObject = new Intersight.Model.NotificationSendEmail();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Email"))
-            {
-                initObject.Email = this.Email;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize NotificationAbstractCondition.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightNotificationAbstractCondition")]
-    public class InitializeIntersightNotificationAbstractCondition : PSCmdlet
-    {
-        public InitializeIntersightNotificationAbstractCondition()
+        public InitializeIntersightNotificationAction()
         {
 
         }
@@ -296,7 +226,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public NotificationAbstractCondition.ClassIdEnum ClassId
+        public NotificationAction.ClassIdEnum ClassId
         {
             get;
             set;
@@ -306,7 +236,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public NotificationAbstractCondition.ObjectTypeEnum ObjectType
+        public NotificationAction.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -314,7 +244,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.NotificationAbstractCondition initObject = new Intersight.Model.NotificationAbstractCondition();
+            Intersight.Model.NotificationAction initObject = new Intersight.Model.NotificationAction();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -405,6 +335,76 @@ namespace Intersight.PowerShell
             {
                 initObject.Severity = this.Severity;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationSendEmail.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationSendEmail")]
+    public class InitializeIntersightNotificationSendEmail : PSCmdlet
+    {
+        public InitializeIntersightNotificationSendEmail()
+        {
+            ClassId = NotificationSendEmail.ClassIdEnum.NotificationSendEmail;
+            ObjectType = NotificationSendEmail.ObjectTypeEnum.NotificationSendEmail;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSendEmail.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Email of the recipient, who expects to be notified about the event that happens in Intersight."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Email
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSendEmail.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NotificationSendEmail initObject = new Intersight.Model.NotificationSendEmail();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Email"))
+            {
+                initObject.Email = this.Email;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

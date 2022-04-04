@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicScsiQueueSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicArfsSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicScsiQueueSettings")]
-    public class InitializeIntersightVnicScsiQueueSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicArfsSettings")]
+    public class InitializeIntersightVnicArfsSettings : PSCmdlet
     {
-        public InitializeIntersightVnicScsiQueueSettings()
+        public InitializeIntersightVnicArfsSettings()
         {
-            ClassId = VnicScsiQueueSettings.ClassIdEnum.VnicScsiQueueSettings;
-            ObjectType = VnicScsiQueueSettings.ObjectTypeEnum.VnicScsiQueueSettings;
+            ClassId = VnicArfsSettings.ClassIdEnum.VnicArfsSettings;
+            ObjectType = VnicArfsSettings.ObjectTypeEnum.VnicArfsSettings;
 
         }
         // <summary>
@@ -34,603 +34,13 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicScsiQueueSettings.ClassIdEnum ClassId
+        public VnicArfsSettings.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The number of SCSI I/O queue resources the system should allocate."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 245)]
-        public long Count
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicScsiQueueSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of descriptors in each SCSI I/O queue."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(64, 512)]
-        public long RingSize
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicScsiQueueSettings initObject = new Intersight.Model.VnicScsiQueueSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
-            {
-                initObject.Count = this.Count;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
-            {
-                initObject.RingSize = this.RingSize;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicIscsiBootPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicIscsiBootPolicy")]
-    public class InitializeIntersightVnicIscsiBootPolicy : PSCmdlet
-    {
-        public InitializeIntersightVnicIscsiBootPolicy()
-        {
-            ClassId = VnicIscsiBootPolicy.ClassIdEnum.VnicIscsiBootPolicy;
-            InitiatorIpSource = VnicIscsiBootPolicy.InitiatorIpSourceEnum.DHCP;
-            ObjectType = VnicIscsiBootPolicy.ObjectTypeEnum.VnicIscsiBootPolicy;
-            TargetSourceType = VnicIscsiBootPolicy.TargetSourceTypeEnum.Static;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 32 alphanumeric characters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AutoTargetvendorName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CHAP authentication parameters for iSCSI Target."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicIscsiAuthProfile Chap
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicIscsiBootPolicy.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a ippoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.IppoolPoolRelationship InitiatorIpPool
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Source Type of Initiator IP Address - Auto/Static/Pool.\n* `DHCP` - The IP address is assigned using DHCP, if available.\n* `Static` - Static IPv4 address is assigned to the iSCSI boot interface based on the information entered in this area.\n* `Pool` - An IPv4 address is assigned to the iSCSI boot interface from the management IP address pool."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicIscsiBootPolicy.InitiatorIpSourceEnum InitiatorIpSource
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Static IP address provided for iSCSI Initiator."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
-        public string InitiatorStaticIpV4Address
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IPV4 configurations such as Netmask, Gateway and DNS for iSCSI Initiator."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.IppoolIpV4Config InitiatorStaticIpV4Config
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicIscsiAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicIscsiAdapterPolicyRelationship IscsiAdapterPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Mutual CHAP authentication parameters for iSCSI Initiator. Two-way CHAP mechanism."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicIscsiAuthProfile MutualChap
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicIscsiBootPolicy.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicIscsiStaticTargetPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicIscsiStaticTargetPolicyRelationship PrimaryTargetPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicIscsiStaticTargetPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicIscsiStaticTargetPolicyRelationship SecondaryTargetPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Source Type of Targets - Auto/Static.\n* `Static` - Type indicates that static target interface is assigned to iSCSI boot.\n* `Auto` - Type indicates that the system selects the target interface automatically during iSCSI boot."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicIscsiBootPolicy.TargetSourceTypeEnum TargetSourceType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicIscsiBootPolicy initObject = new Intersight.Model.VnicIscsiBootPolicy();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AutoTargetvendorName"))
-            {
-                initObject.AutoTargetvendorName = this.AutoTargetvendorName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Chap"))
-            {
-                initObject.Chap = this.Chap;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorIpPool"))
-            {
-                initObject.InitiatorIpPool = this.InitiatorIpPool;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorIpSource"))
-            {
-                initObject.InitiatorIpSource = this.InitiatorIpSource;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorStaticIpV4Address"))
-            {
-                initObject.InitiatorStaticIpV4Address = this.InitiatorStaticIpV4Address;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorStaticIpV4Config"))
-            {
-                initObject.InitiatorStaticIpV4Config = this.InitiatorStaticIpV4Config;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IscsiAdapterPolicy"))
-            {
-                initObject.IscsiAdapterPolicy = this.IscsiAdapterPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MutualChap"))
-            {
-                initObject.MutualChap = this.MutualChap;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PrimaryTargetPolicy"))
-            {
-                initObject.PrimaryTargetPolicy = this.PrimaryTargetPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecondaryTargetPolicy"))
-            {
-                initObject.SecondaryTargetPolicy = this.SecondaryTargetPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetSourceType"))
-            {
-                initObject.TargetSourceType = this.TargetSourceType;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicVmqSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicVmqSettings")]
-    public class InitializeIntersightVnicVmqSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicVmqSettings()
-        {
-            ClassId = VnicVmqSettings.ClassIdEnum.VnicVmqSettings;
-            ObjectType = VnicVmqSettings.ObjectTypeEnum.VnicVmqSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVmqSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables VMQ feature on the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables Virtual Machine Multi-Queue feature on the virtual interface. VMMQ allows configuration of multiple I/O queues for a single VM and thus distributes traffic across multiple CPU cores in a VM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool MultiQueueSupport
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of interrupt resources to be allocated. Recommended value is the number of CPU threads or logical processors available in the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 514)]
-        public long NumInterrupts
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of sub vNICs to be created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NumSubVnics
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of hardware Virtual Machine Queues to be allocated. The number of VMQs per adapter must be one more than the maximum number of VM NICs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 128)]
-        public long NumVmqs
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVmqSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Ethernet Adapter policy to be associated with the Sub vNICs. The Transmit Queue and Receive Queue resource value of VMMQ adapter policy should be greater than or equal to the configured number of sub vNICs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string VmmqAdapterPolicy
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicVmqSettings initObject = new Intersight.Model.VnicVmqSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MultiQueueSupport"))
-            {
-                initObject.MultiQueueSupport = this.MultiQueueSupport;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumInterrupts"))
-            {
-                initObject.NumInterrupts = this.NumInterrupts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumSubVnics"))
-            {
-                initObject.NumSubVnics = this.NumSubVnics;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumVmqs"))
-            {
-                initObject.NumVmqs = this.NumVmqs;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("VmmqAdapterPolicy"))
-            {
-                initObject.VmmqAdapterPolicy = this.VmmqAdapterPolicy;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicPlogiSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicPlogiSettings")]
-    public class InitializeIntersightVnicPlogiSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicPlogiSettings()
-        {
-            ClassId = VnicPlogiSettings.ClassIdEnum.VnicPlogiSettings;
-            ObjectType = VnicPlogiSettings.ObjectTypeEnum.VnicPlogiSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicPlogiSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicPlogiSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of times that the system tries to log in to a port after the first failure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Retries
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of milliseconds that the system waits before it tries to log in again."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1000, 255000)]
-        public long Timeout
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicPlogiSettings initObject = new Intersight.Model.VnicPlogiSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Retries"))
-            {
-                initObject.Retries = this.Retries;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
-            {
-                initObject.Timeout = this.Timeout;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicVxlanSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicVxlanSettings")]
-    public class InitializeIntersightVnicVxlanSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicVxlanSettings()
-        {
-            ClassId = VnicVxlanSettings.ClassIdEnum.VnicVxlanSettings;
-            ObjectType = VnicVxlanSettings.ObjectTypeEnum.VnicVxlanSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVxlanSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Status of the Virtual Extensible LAN Protocol on the virtual ethernet interface."</para>
+        /// <para type="description">"Status of Accelerated Receive Flow Steering on the virtual ethernet interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -644,7 +54,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicVxlanSettings.ObjectTypeEnum ObjectType
+        public VnicArfsSettings.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -652,7 +62,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicVxlanSettings initObject = new Intersight.Model.VnicVxlanSettings();
+            Intersight.Model.VnicArfsSettings initObject = new Intersight.Model.VnicArfsSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -663,90 +73,6 @@ namespace Intersight.PowerShell
                 initObject.Enabled = this.Enabled;
             }
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthRxQueueSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthRxQueueSettings")]
-    public class InitializeIntersightVnicEthRxQueueSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicEthRxQueueSettings()
-        {
-            ClassId = VnicEthRxQueueSettings.ClassIdEnum.VnicEthRxQueueSettings;
-            ObjectType = VnicEthRxQueueSettings.ObjectTypeEnum.VnicEthRxQueueSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthRxQueueSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of queue resources to allocate."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1000)]
-        public long Count
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthRxQueueSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of descriptors in each queue."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(64, 16384)]
-        public long RingSize
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicEthRxQueueSettings initObject = new Intersight.Model.VnicEthRxQueueSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
-            {
-                initObject.Count = this.Count;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
-            {
-                initObject.RingSize = this.RingSize;
-            }
             WriteObject(initObject);
         }
 
@@ -837,15 +163,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthTxQueueSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicCompletionQueueSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthTxQueueSettings")]
-    public class InitializeIntersightVnicEthTxQueueSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicCompletionQueueSettings")]
+    public class InitializeIntersightVnicCompletionQueueSettings : PSCmdlet
     {
-        public InitializeIntersightVnicEthTxQueueSettings()
+        public InitializeIntersightVnicCompletionQueueSettings()
         {
-            ClassId = VnicEthTxQueueSettings.ClassIdEnum.VnicEthTxQueueSettings;
-            ObjectType = VnicEthTxQueueSettings.ObjectTypeEnum.VnicEthTxQueueSettings;
+            ClassId = VnicCompletionQueueSettings.ClassIdEnum.VnicCompletionQueueSettings;
+            ObjectType = VnicCompletionQueueSettings.ObjectTypeEnum.VnicCompletionQueueSettings;
 
         }
         // <summary>
@@ -863,16 +189,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicEthTxQueueSettings.ClassIdEnum ClassId
+        public VnicCompletionQueueSettings.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The number of queue resources to allocate."</para>
+        /// <para type="description">"The number of completion queue resources to allocate. In general, the number of completion queue resources to allocate is equal to the number of transmit queue resources plus the number of receive queue resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1000)]
+        [ValidateRange(1, 2000)]
         public long Count
         {
             get;
@@ -883,17 +209,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicEthTxQueueSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of descriptors in each queue."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(64, 16384)]
-        public long RingSize
+        public VnicCompletionQueueSettings.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -901,7 +217,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicEthTxQueueSettings initObject = new Intersight.Model.VnicEthTxQueueSettings();
+            Intersight.Model.VnicCompletionQueueSettings initObject = new Intersight.Model.VnicCompletionQueueSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -912,1290 +228,6 @@ namespace Intersight.PowerShell
                 initObject.Count = this.Count;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
-            {
-                initObject.RingSize = this.RingSize;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcErrorRecoverySettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcErrorRecoverySettings")]
-    public class InitializeIntersightVnicFcErrorRecoverySettings : PSCmdlet
-    {
-        public InitializeIntersightVnicFcErrorRecoverySettings()
-        {
-            ClassId = VnicFcErrorRecoverySettings.ClassIdEnum.VnicFcErrorRecoverySettings;
-            ObjectType = VnicFcErrorRecoverySettings.ObjectTypeEnum.VnicFcErrorRecoverySettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcErrorRecoverySettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables Fibre Channel Error recovery."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of times an I/O request to a port is retried because the port is busy before the system decides the port is unavailable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long IoRetryCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of seconds the adapter waits before aborting the pending command and resending the same IO request."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 59)]
-        public long IoRetryTimeout
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of milliseconds the port should actually be down before it is marked down and fabric connectivity is lost."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long LinkDownTimeout
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcErrorRecoverySettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of milliseconds a remote Fibre Channel port should be offline before informing the SCSI upper layer that the port is unavailable. For a server with a VIC adapter running ESXi, the recommended value is 10000. For a server with a port used to boot a Windows OS from the SAN, the recommended value is 5000 milliseconds."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long PortDownTimeout
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicFcErrorRecoverySettings initObject = new Intersight.Model.VnicFcErrorRecoverySettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IoRetryCount"))
-            {
-                initObject.IoRetryCount = this.IoRetryCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IoRetryTimeout"))
-            {
-                initObject.IoRetryTimeout = this.IoRetryTimeout;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("LinkDownTimeout"))
-            {
-                initObject.LinkDownTimeout = this.LinkDownTimeout;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortDownTimeout"))
-            {
-                initObject.PortDownTimeout = this.PortDownTimeout;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicLanConnectivityPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicLanConnectivityPolicy")]
-    public class InitializeIntersightVnicLanConnectivityPolicy : PSCmdlet
-    {
-        public InitializeIntersightVnicLanConnectivityPolicy()
-        {
-            ClassId = VnicLanConnectivityPolicy.ClassIdEnum.VnicLanConnectivityPolicy;
-            IqnAllocationType = VnicLanConnectivityPolicy.IqnAllocationTypeEnum.None;
-            ObjectType = VnicLanConnectivityPolicy.ObjectTypeEnum.VnicLanConnectivityPolicy;
-            PlacementMode = VnicLanConnectivityPolicy.PlacementModeEnum.Custom;
-            TargetPlatform = VnicLanConnectivityPolicy.TargetPlatformEnum.Standalone;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enabling AzureStack-Host QoS on an adapter allows the user to carve out traffic classes for RDMA traffic which ensures that a desired portion of the bandwidth is allocated to it."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool AzureQosEnabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLanConnectivityPolicy.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to vnicEthIf resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.VnicEthIfRelationship> EthIfs
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Allocation Type of iSCSI Qualified Name - Static/Pool/None.\n* `None` - Type indicates that there is no IQN associated to an interface.\n* `Static` - Type represents that static IQN is associated to an interface.\n* `Pool` - Type indicates that IQN value is sourced from an associated pool."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLanConnectivityPolicy.IqnAllocationTypeEnum IqnAllocationType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a iqnpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.IqnpoolPoolRelationship IqnPool
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLanConnectivityPolicy.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The mode used for placement of vNICs on network adapters. It can either be Auto or Custom.\n* `custom` - The placement of the vNICs / vHBAs on network adapters is manually chosen by the user.\n* `auto` - The placement of the vNICs / vHBAs on network adapters is automatically determined by the system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLanConnectivityPolicy.PlacementModeEnum PlacementMode
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"User provided static iSCSI Qualified Name (IQN) for use as initiator identifiers by iSCSI vNICs in a Fabric Interconnect domain."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(?:iqn\\.[0-9]{4}-[0-9]{2}(?:\\.[A-Za-z](?:[A-Za-z0-9\\-]*[A-Za-z0-9])?)+(?::.*)?|eui\\.[0-9A-Fa-f]{16})")]
-        public string StaticIqnName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLanConnectivityPolicy.TargetPlatformEnum TargetPlatform
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicLanConnectivityPolicy initObject = new Intersight.Model.VnicLanConnectivityPolicy();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AzureQosEnabled"))
-            {
-                initObject.AzureQosEnabled = this.AzureQosEnabled;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EthIfs"))
-            {
-                initObject.EthIfs = this.EthIfs;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IqnAllocationType"))
-            {
-                initObject.IqnAllocationType = this.IqnAllocationType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("IqnPool"))
-            {
-                initObject.IqnPool = this.IqnPool;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PlacementMode"))
-            {
-                initObject.PlacementMode = this.PlacementMode;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
-            {
-                initObject.Profiles = this.Profiles;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StaticIqnName"))
-            {
-                initObject.StaticIqnName = this.StaticIqnName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
-            {
-                initObject.TargetPlatform = this.TargetPlatform;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicRssHashSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicRssHashSettings")]
-    public class InitializeIntersightVnicRssHashSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicRssHashSettings()
-        {
-            ClassId = VnicRssHashSettings.ClassIdEnum.VnicRssHashSettings;
-            ObjectType = VnicRssHashSettings.ObjectTypeEnum.VnicRssHashSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicRssHashSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, the IPv4 address is used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Ipv4Hash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, the IPv6 extensions are used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Ipv6ExtHash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, the IPv6 address is used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Ipv6Hash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicRssHashSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, both the IPv4 address and TCP port number are used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool TcpIpv4Hash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, both the IPv6 extensions and TCP port number are used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool TcpIpv6ExtHash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, both the IPv6 address and TCP port number are used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool TcpIpv6Hash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, both the IPv4 address and UDP port number are used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool UdpIpv4Hash
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, both the IPv6 address and UDP port number are used for traffic distribution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool UdpIpv6Hash
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicRssHashSettings initObject = new Intersight.Model.VnicRssHashSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv4Hash"))
-            {
-                initObject.Ipv4Hash = this.Ipv4Hash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv6ExtHash"))
-            {
-                initObject.Ipv6ExtHash = this.Ipv6ExtHash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv6Hash"))
-            {
-                initObject.Ipv6Hash = this.Ipv6Hash;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("TcpIpv4Hash"))
-            {
-                initObject.TcpIpv4Hash = this.TcpIpv4Hash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TcpIpv6ExtHash"))
-            {
-                initObject.TcpIpv6ExtHash = this.TcpIpv6ExtHash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TcpIpv6Hash"))
-            {
-                initObject.TcpIpv6Hash = this.TcpIpv6Hash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UdpIpv4Hash"))
-            {
-                initObject.UdpIpv4Hash = this.UdpIpv4Hash;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UdpIpv6Hash"))
-            {
-                initObject.UdpIpv6Hash = this.UdpIpv6Hash;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicLun.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicLun")]
-    public class InitializeIntersightVnicLun : PSCmdlet
-    {
-        public InitializeIntersightVnicLun()
-        {
-            ClassId = VnicLun.ClassIdEnum.VnicLun;
-            ObjectType = VnicLun.ObjectTypeEnum.VnicLun;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies LUN is bootable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Bootable
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLun.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Identifier of the LUN."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long LunId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLun.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicLun initObject = new Intersight.Model.VnicLun();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Bootable"))
-            {
-                initObject.Bootable = this.Bootable;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LunId"))
-            {
-                initObject.LunId = this.LunId;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicNvgreSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicNvgreSettings")]
-    public class InitializeIntersightVnicNvgreSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicNvgreSettings()
-        {
-            ClassId = VnicNvgreSettings.ClassIdEnum.VnicNvgreSettings;
-            ObjectType = VnicNvgreSettings.ObjectTypeEnum.VnicNvgreSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicNvgreSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Status of the Network Virtualization using Generic Routing Encapsulation on the virtual ethernet interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicNvgreSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicNvgreSettings initObject = new Intersight.Model.VnicNvgreSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcNetworkPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcNetworkPolicy")]
-    public class InitializeIntersightVnicFcNetworkPolicy : PSCmdlet
-    {
-        public InitializeIntersightVnicFcNetworkPolicy()
-        {
-            ClassId = VnicFcNetworkPolicy.ClassIdEnum.VnicFcNetworkPolicy;
-            ObjectType = VnicFcNetworkPolicy.ObjectTypeEnum.VnicFcNetworkPolicy;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcNetworkPolicy.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcNetworkPolicy.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Configuration of vSAN for the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicVsanSettings VsanSettings
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicFcNetworkPolicy initObject = new Intersight.Model.VnicFcNetworkPolicy();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VsanSettings"))
-            {
-                initObject.VsanSettings = this.VsanSettings;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcIf.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcIf")]
-    public class InitializeIntersightVnicFcIf : PSCmdlet
-    {
-        public InitializeIntersightVnicFcIf()
-        {
-            ClassId = VnicFcIf.ClassIdEnum.VnicFcIf;
-            ObjectType = VnicFcIf.ObjectTypeEnum.VnicFcIf;
-            Type = VnicFcIf.TypeEnum.FcInitiator;
-            WwpnAddressType = VnicFcIf.WwpnAddressTypeEnum.POOL;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcIf.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicFcAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicFcAdapterPolicyRelationship FcAdapterPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicFcNetworkPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicFcNetworkPolicyRelationship FcNetworkPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicFcQosPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicFcQosPolicyRelationship FcQosPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the virtual fibre channel interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9\\-\\._:]+$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcIf.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The order in which the virtual interface is brought up. The order assigned to an interface should be unique for all the Ethernet and Fibre-Channel interfaces on each PCI link on a VIC adapter. The maximum value of PCI order is limited by the number of virtual interfaces (Ethernet and Fibre-Channel) on each PCI link on a VIC adapter. All VIC adapters have a single PCI link except VIC 1385 which has two."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Order
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables retention of LUN ID associations in memory until they are manually cleared."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool PersistentBindings
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Placement Settings for the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicPlacementSettings Placement
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a policyAbstractConfigProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.PolicyAbstractConfigProfileRelationship Profile
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicSanConnectivityPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicSanConnectivityPolicyRelationship SanConnectivityPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a vnicFcIf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicFcIfRelationship ScpVhba
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to vnicFcIf resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.VnicFcIfRelationship> SpVhbas
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN's in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|((^20|5[0-9a-fA-F]{1}):([0-9a-fA-F]{2}:){6}([0-9a-fA-F]{2}))")]
-        public string StaticWwpnAddress
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VHBA Type configuration for SAN Connectivity Policy. This configuration is supported only on Cisco VIC 14XX series and higher series of adapters.\n* `fc-initiator` - The default value set for vHBA Type Configuration. Fc-initiator specifies vHBA as a consumer of storage. Enables SCSI commands to transfer data and status information between host and target storage systems.\n* `fc-nvme-initiator` - Fc-nvme-initiator specifies vHBA as a consumer of storage. Enables NVMe-based message commands to transfer data and status information between host and target storage systems.\n* `fc-nvme-target` - Fc-nvme-target specifies vHBA as a provider of storage volumes to initiators. Enables NVMe-based message commands to transfer data and status information between host and target storage systems. Currently tech-preview, only enabled with an asynchronous driver.\n* `fc-target` - Fc-target specifies vHBA as a provider of storage volumes to initiators. Enables SCSI commands to transfer data and status information between host and target storage systems. fc-target is enabled only with an asynchronous driver."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcIf.TypeEnum Type
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of allocation selected to assign a WWPN address to the vhba.\n* `POOL` - The user selects a pool from which the mac/wwn address will be leased for the Virtual Interface.\n* `STATIC` - The user assigns a static mac/wwn address for the Virtual Interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcIf.WwpnAddressTypeEnum WwpnAddressType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a fcpoolLease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.FcpoolLeaseRelationship WwpnLease
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a fcpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.FcpoolPoolRelationship WwpnPool
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicFcIf initObject = new Intersight.Model.VnicFcIf();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcAdapterPolicy"))
-            {
-                initObject.FcAdapterPolicy = this.FcAdapterPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcNetworkPolicy"))
-            {
-                initObject.FcNetworkPolicy = this.FcNetworkPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcQosPolicy"))
-            {
-                initObject.FcQosPolicy = this.FcQosPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Order"))
-            {
-                initObject.Order = this.Order;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentBindings"))
-            {
-                initObject.PersistentBindings = this.PersistentBindings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Placement"))
-            {
-                initObject.Placement = this.Placement;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
-            {
-                initObject.Profile = this.Profile;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SanConnectivityPolicy"))
-            {
-                initObject.SanConnectivityPolicy = this.SanConnectivityPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ScpVhba"))
-            {
-                initObject.ScpVhba = this.ScpVhba;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SpVhbas"))
-            {
-                initObject.SpVhbas = this.SpVhbas;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StaticWwpnAddress"))
-            {
-                initObject.StaticWwpnAddress = this.StaticWwpnAddress;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnAddressType"))
-            {
-                initObject.WwpnAddressType = this.WwpnAddressType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnLease"))
-            {
-                initObject.WwpnLease = this.WwpnLease;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnPool"))
-            {
-                initObject.WwpnPool = this.WwpnPool;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicLcpStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicLcpStatus")]
-    public class InitializeIntersightVnicLcpStatus : PSCmdlet
-    {
-        public InitializeIntersightVnicLcpStatus()
-        {
-            ClassId = VnicLcpStatus.ClassIdEnum.VnicLcpStatus;
-            ObjectType = VnicLcpStatus.ObjectTypeEnum.VnicLcpStatus;
-            Status = VnicLcpStatus.StatusEnum.Ok;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLcpStatus.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLcpStatus.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a policyAbstractConfigProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.PolicyAbstractConfigProfileRelationship Profile
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The reason for the status - it will be empty if status is ok or validating. If error, it will have the appropriate message indicating the reason for failure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Reason
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates if the LCP is ready for Deploy or not.\n* `ok` - No issues with the LCP/SCP/VIF.\n* `error` - The LCP/SCP/VIF cannot be deployed due to error.\n* `validating` - Validation in progress for the LCP."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicLcpStatus.StatusEnum Status
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.VnicVifStatus> VnicInfo
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicLcpStatus initObject = new Intersight.Model.VnicLcpStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
-            {
-                initObject.Profile = this.Profile;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Reason"))
-            {
-                initObject.Reason = this.Reason;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
-            {
-                initObject.Status = this.Status;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VnicInfo"))
-            {
-                initObject.VnicInfo = this.VnicInfo;
-            }
             WriteObject(initObject);
         }
 
@@ -2545,980 +577,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VxlanSettings"))
             {
                 initObject.VxlanSettings = this.VxlanSettings;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicVlanSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicVlanSettings")]
-    public class InitializeIntersightVnicVlanSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicVlanSettings()
-        {
-            ClassId = VnicVlanSettings.ClassIdEnum.VnicVlanSettings;
-            Mode = VnicVlanSettings.ModeEnum.ACCESS;
-            ObjectType = VnicVlanSettings.ObjectTypeEnum.VnicVlanSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Allowed VLAN IDs of the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
-        public string AllowedVlans
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVlanSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Native VLAN ID of the virtual interface or the corresponding vethernet on the peer Fabric Interconnect to which the virtual interface is connected. Setting the ID to 0 will not associate any native VLAN to the traffic on the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long DefaultVlan
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Option to determine if the port can carry single VLAN (Access) or multiple VLANs (Trunk) traffic.\n* `ACCESS` - An access port carries traffic only for a single VLAN on the interface.\n* `TRUNK` - A trunk port can have two or more VLANs configured on the interface. It can carry traffic for several VLANs simultaneously."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVlanSettings.ModeEnum Mode
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVlanSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicVlanSettings initObject = new Intersight.Model.VnicVlanSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AllowedVlans"))
-            {
-                initObject.AllowedVlans = this.AllowedVlans;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultVlan"))
-            {
-                initObject.DefaultVlan = this.DefaultVlan;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthNetworkPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthNetworkPolicy")]
-    public class InitializeIntersightVnicEthNetworkPolicy : PSCmdlet
-    {
-        public InitializeIntersightVnicEthNetworkPolicy()
-        {
-            ClassId = VnicEthNetworkPolicy.ClassIdEnum.VnicEthNetworkPolicy;
-            ObjectType = VnicEthNetworkPolicy.ObjectTypeEnum.VnicEthNetworkPolicy;
-            TargetPlatform = VnicEthNetworkPolicy.TargetPlatformEnum.Standalone;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthNetworkPolicy.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthNetworkPolicy.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthNetworkPolicy.TargetPlatformEnum TargetPlatform
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN configuration for the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicVlanSettings VlanSettings
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicEthNetworkPolicy initObject = new Intersight.Model.VnicEthNetworkPolicy();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
-            {
-                initObject.TargetPlatform = this.TargetPlatform;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VlanSettings"))
-            {
-                initObject.VlanSettings = this.VlanSettings;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicRoceSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicRoceSettings")]
-    public class InitializeIntersightVnicRoceSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicRoceSettings()
-        {
-            ClassId = VnicRoceSettings.ClassIdEnum.VnicRoceSettings;
-            ClassOfService = VnicRoceSettings.ClassOfServiceEnum.NUMBER_5;
-            ObjectType = VnicRoceSettings.ObjectTypeEnum.VnicRoceSettings;
-            Version = VnicRoceSettings.VersionEnum.NUMBER_1;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicRoceSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Class of Service for RoCE on this virtual interface.\n* `5` - RDMA CoS Service Level 5.\n* `1` - RDMA CoS Service Level 1.\n* `2` - RDMA CoS Service Level 2.\n* `4` - RDMA CoS Service Level 4.\n* `6` - RDMA CoS Service Level 6."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicRoceSettings.ClassOfServiceEnum ClassOfService
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"If enabled sets RDMA over Converged Ethernet (RoCE) on this virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of memory regions per adapter. Recommended value = integer power of 2."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MemoryRegions
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicRoceSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of queue pairs per adapter. Recommended value = integer power of 2."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long QueuePairs
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of resource groups per adapter. Recommended value = be an integer power of 2 greater than or equal to the number of CPU cores on the system for optimum performance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ResourceGroups
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Configure RDMA over Converged Ethernet (RoCE) version on the virtual interface. Only RoCEv1 is supported on Cisco VIC 13xx series adapters and only RoCEv2 is supported on Cisco VIC 14xx series adapters.\n* `1` - RDMA over Converged Ethernet Protocol Version 1.\n* `2` - RDMA over Converged Ethernet Protocol Version 2."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicRoceSettings.VersionEnum Version
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicRoceSettings initObject = new Intersight.Model.VnicRoceSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ClassOfService"))
-            {
-                initObject.ClassOfService = this.ClassOfService;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryRegions"))
-            {
-                initObject.MemoryRegions = this.MemoryRegions;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("QueuePairs"))
-            {
-                initObject.QueuePairs = this.QueuePairs;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceGroups"))
-            {
-                initObject.ResourceGroups = this.ResourceGroups;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthInterruptSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthInterruptSettings")]
-    public class InitializeIntersightVnicEthInterruptSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicEthInterruptSettings()
-        {
-            ClassId = VnicEthInterruptSettings.ClassIdEnum.VnicEthInterruptSettings;
-            CoalescingType = VnicEthInterruptSettings.CoalescingTypeEnum.MIN;
-            Mode = VnicEthInterruptSettings.ModeEnum.MSIx;
-            ObjectType = VnicEthInterruptSettings.ObjectTypeEnum.VnicEthInterruptSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthInterruptSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The time to wait between interrupts or the idle period that must be encountered before an interrupt is sent. To turn off interrupt coalescing, enter 0 (zero) in this field."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long CoalescingTime
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Interrupt Coalescing Type. This can be one of the following:- MIN  - The system waits for the time specified in the Coalescing Time field before sending another interrupt event IDLE - The system does not send an interrupt until there is a period of no activity lasting as least as long as the time specified in the Coalescing Time field.\n* `MIN` - The system waits for the time specified in the Coalescing Time field before sending another interrupt event.\n* `IDLE` - The system does not send an interrupt until there is a period of no activity lasting as least as long as the time specified in the Coalescing Time field."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthInterruptSettings.CoalescingTypeEnum CoalescingType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of interrupt resources to allocate. Typical value is be equal to the number of completion queue resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1024)]
-        public long Count
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Preferred driver interrupt mode. This can be one of the following:- MSIx - Message Signaled Interrupts (MSI) with the optional extension. MSI  - MSI only. INTx - PCI INTx interrupts. MSIx is the recommended option.\n* `MSIx` - Message Signaled Interrupt (MSI) mechanism with the optional extension (MSIx). MSIx is the recommended and default option.\n* `MSI` - Message Signaled Interrupt (MSI) mechanism that treats messages as interrupts.\n* `INTx` - Line-based interrupt (INTx) mechanism similar to the one used in Legacy systems."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthInterruptSettings.ModeEnum Mode
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthInterruptSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicEthInterruptSettings initObject = new Intersight.Model.VnicEthInterruptSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CoalescingTime"))
-            {
-                initObject.CoalescingTime = this.CoalescingTime;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("CoalescingType"))
-            {
-                initObject.CoalescingType = this.CoalescingType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
-            {
-                initObject.Count = this.Count;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicPlacementSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicPlacementSettings")]
-    public class InitializeIntersightVnicPlacementSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicPlacementSettings()
-        {
-            ClassId = VnicPlacementSettings.ClassIdEnum.VnicPlacementSettings;
-            ObjectType = VnicPlacementSettings.ObjectTypeEnum.VnicPlacementSettings;
-            SwitchId = VnicPlacementSettings.SwitchIdEnum.None;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicPlacementSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"PCIe Slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|1[0-5]|MLOM)$")]
-        public string Id
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicPlacementSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The PCI Link used as transport for the virtual interface. This field is applicable only for VIC 1385 model (UCSC-PCIE-C40Q-03) which support two PCI links. The value, if specified, for any other VIC model will be ignored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long PciLink
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fabric port to which the vNICs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value 'None' should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicPlacementSettings.SwitchIdEnum SwitchId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Adapter port on which the virtual interface will be created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Uplink
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicPlacementSettings initObject = new Intersight.Model.VnicPlacementSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
-            {
-                initObject.Id = this.Id;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PciLink"))
-            {
-                initObject.PciLink = this.PciLink;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
-            {
-                initObject.SwitchId = this.SwitchId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uplink"))
-            {
-                initObject.Uplink = this.Uplink;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicArfsSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicArfsSettings")]
-    public class InitializeIntersightVnicArfsSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicArfsSettings()
-        {
-            ClassId = VnicArfsSettings.ClassIdEnum.VnicArfsSettings;
-            ObjectType = VnicArfsSettings.ObjectTypeEnum.VnicArfsSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicArfsSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Status of Accelerated Receive Flow Steering on the virtual ethernet interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicArfsSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicArfsSettings initObject = new Intersight.Model.VnicArfsSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicCompletionQueueSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicCompletionQueueSettings")]
-    public class InitializeIntersightVnicCompletionQueueSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicCompletionQueueSettings()
-        {
-            ClassId = VnicCompletionQueueSettings.ClassIdEnum.VnicCompletionQueueSettings;
-            ObjectType = VnicCompletionQueueSettings.ObjectTypeEnum.VnicCompletionQueueSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicCompletionQueueSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of completion queue resources to allocate. In general, the number of completion queue resources to allocate is equal to the number of transmit queue resources plus the number of receive queue resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 2000)]
-        public long Count
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicCompletionQueueSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicCompletionQueueSettings initObject = new Intersight.Model.VnicCompletionQueueSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
-            {
-                initObject.Count = this.Count;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthQosPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthQosPolicy")]
-    public class InitializeIntersightVnicEthQosPolicy : PSCmdlet
-    {
-        public InitializeIntersightVnicEthQosPolicy()
-        {
-            ClassId = VnicEthQosPolicy.ClassIdEnum.VnicEthQosPolicy;
-            ObjectType = VnicEthQosPolicy.ObjectTypeEnum.VnicEthQosPolicy;
-            Priority = VnicEthQosPolicy.PriorityEnum.BestEffort;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The burst traffic, in bytes, allowed on the vNIC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1e+06)]
-        public long Burst
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthQosPolicy.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Class of Service to be associated to the traffic on the virtual interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Cos
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description of the policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1500, 9000)]
-        public long Mtu
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthQosPolicy.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The priortity matching the System QoS specified in the fabric profile.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicEthQosPolicy.PriorityEnum Priority
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The value in Mbps (0-10G/40G/100G depending on Adapter Model) to use for limiting the data rate on the virtual interface. Setting this to zero will turn rate limiting off."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long RateLimit
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Enables usage of the Class of Service provided by the operating system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool TrustHostCos
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicEthQosPolicy initObject = new Intersight.Model.VnicEthQosPolicy();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Burst"))
-            {
-                initObject.Burst = this.Burst;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Cos"))
-            {
-                initObject.Cos = this.Cos;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
-            {
-                initObject.Mtu = this.Mtu;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Priority"))
-            {
-                initObject.Priority = this.Priority;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RateLimit"))
-            {
-                initObject.RateLimit = this.RateLimit;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TrustHostCos"))
-            {
-                initObject.TrustHostCos = this.TrustHostCos;
             }
             WriteObject(initObject);
         }
@@ -3890,15 +948,17 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicTcpOffloadSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthInterruptSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicTcpOffloadSettings")]
-    public class InitializeIntersightVnicTcpOffloadSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthInterruptSettings")]
+    public class InitializeIntersightVnicEthInterruptSettings : PSCmdlet
     {
-        public InitializeIntersightVnicTcpOffloadSettings()
+        public InitializeIntersightVnicEthInterruptSettings()
         {
-            ClassId = VnicTcpOffloadSettings.ClassIdEnum.VnicTcpOffloadSettings;
-            ObjectType = VnicTcpOffloadSettings.ObjectTypeEnum.VnicTcpOffloadSettings;
+            ClassId = VnicEthInterruptSettings.ClassIdEnum.VnicEthInterruptSettings;
+            CoalescingType = VnicEthInterruptSettings.CoalescingTypeEnum.MIN;
+            Mode = VnicEthInterruptSettings.ModeEnum.MSIx;
+            ObjectType = VnicEthInterruptSettings.ObjectTypeEnum.VnicEthInterruptSettings;
 
         }
         // <summary>
@@ -3916,159 +976,57 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicTcpOffloadSettings.ClassIdEnum ClassId
+        public VnicEthInterruptSettings.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Enables the reassembly of segmented packets in hardware before sending them to the CPU."</para>
+        /// <para type="description">"The time to wait between interrupts or the idle period that must be encountered before an interrupt is sent. To turn off interrupt coalescing, enter 0 (zero) in this field."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool LargeReceive
+        public long CoalescingTime
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Enables the CPU to send large packets to the hardware for segmentation."</para>
+        /// <para type="description">"Interrupt Coalescing Type. This can be one of the following:- MIN  - The system waits for the time specified in the Coalescing Time field before sending another interrupt event IDLE - The system does not send an interrupt until there is a period of no activity lasting as least as long as the time specified in the Coalescing Time field.\n* `MIN` - The system waits for the time specified in the Coalescing Time field before sending another interrupt event.\n* `IDLE` - The system does not send an interrupt until there is a period of no activity lasting as least as long as the time specified in the Coalescing Time field."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool LargeSend
+        public VnicEthInterruptSettings.CoalescingTypeEnum CoalescingType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"The number of interrupt resources to allocate. Typical value is be equal to the number of completion queue resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicTcpOffloadSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, the CPU sends all packet checksums to the hardware for validation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool RxChecksum
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When enabled, the CPU sends all packets to the hardware so that the checksum can be calculated."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool TxChecksum
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicTcpOffloadSettings initObject = new Intersight.Model.VnicTcpOffloadSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("LargeReceive"))
-            {
-                initObject.LargeReceive = this.LargeReceive;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("LargeSend"))
-            {
-                initObject.LargeSend = this.LargeSend;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RxChecksum"))
-            {
-                initObject.RxChecksum = this.RxChecksum;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TxChecksum"))
-            {
-                initObject.TxChecksum = this.TxChecksum;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicUsnicSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicUsnicSettings")]
-    public class InitializeIntersightVnicUsnicSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicUsnicSettings()
-        {
-            ClassId = VnicUsnicSettings.ClassIdEnum.VnicUsnicSettings;
-            ObjectType = VnicUsnicSettings.ObjectTypeEnum.VnicUsnicSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicUsnicSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Class of Service to be used for traffic on the usNIC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Cos
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of usNIC interfaces to be created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidateRange(1, 1024)]
         public long Count
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"Preferred driver interrupt mode. This can be one of the following:- MSIx - Message Signaled Interrupts (MSI) with the optional extension. MSI  - MSI only. INTx - PCI INTx interrupts. MSIx is the recommended option.\n* `MSIx` - Message Signaled Interrupt (MSI) mechanism with the optional extension (MSIx). MSIx is the recommended and default option.\n* `MSI` - Message Signaled Interrupt (MSI) mechanism that treats messages as interrupts.\n* `INTx` - Line-based interrupt (INTx) mechanism similar to the one used in Legacy systems."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicUsnicSettings.ObjectTypeEnum ObjectType
+        public VnicEthInterruptSettings.ModeEnum Mode
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Ethernet Adapter policy to be associated with the usNICs."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string UsnicAdapterPolicy
+        public VnicEthInterruptSettings.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -4076,39 +1034,44 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicUsnicSettings initObject = new Intersight.Model.VnicUsnicSettings();
+            Intersight.Model.VnicEthInterruptSettings initObject = new Intersight.Model.VnicEthInterruptSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Cos"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CoalescingTime"))
             {
-                initObject.Cos = this.Cos;
+                initObject.CoalescingTime = this.CoalescingTime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CoalescingType"))
+            {
+                initObject.CoalescingType = this.CoalescingType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
             {
                 initObject.Count = this.Count;
             }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("UsnicAdapterPolicy"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
             {
-                initObject.UsnicAdapterPolicy = this.UsnicAdapterPolicy;
+                initObject.Mode = this.Mode;
             }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicFlogiSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicFlogiSettings")]
-    public class InitializeIntersightVnicFlogiSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthNetworkPolicy")]
+    public class InitializeIntersightVnicEthNetworkPolicy : PSCmdlet
     {
-        public InitializeIntersightVnicFlogiSettings()
+        public InitializeIntersightVnicEthNetworkPolicy()
         {
-            ClassId = VnicFlogiSettings.ClassIdEnum.VnicFlogiSettings;
-            ObjectType = VnicFlogiSettings.ObjectTypeEnum.VnicFlogiSettings;
+            ClassId = VnicEthNetworkPolicy.ClassIdEnum.VnicEthNetworkPolicy;
+            ObjectType = VnicEthNetworkPolicy.ObjectTypeEnum.VnicEthNetworkPolicy;
+            TargetPlatform = VnicEthNetworkPolicy.TargetPlatformEnum.Standalone;
 
         }
         // <summary>
@@ -4126,354 +1089,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicFlogiSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFlogiSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of times that the system tries to log in to the fabric after the first failure. Allowed range is 0-4294967295."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Retries
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of milliseconds that the system waits before it tries to log in again."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1000, 255000)]
-        public long Timeout
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicFlogiSettings initObject = new Intersight.Model.VnicFlogiSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Retries"))
-            {
-                initObject.Retries = this.Retries;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
-            {
-                initObject.Timeout = this.Timeout;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicVsanSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicVsanSettings")]
-    public class InitializeIntersightVnicVsanSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicVsanSettings()
-        {
-            ClassId = VnicVsanSettings.ClassIdEnum.VnicVsanSettings;
-            ObjectType = VnicVsanSettings.ObjectTypeEnum.VnicVsanSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVsanSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Default VLAN of the virtual interface in Standalone Rack server. Setting the value to 0 is equivalent to None and will not associate any Default VLAN to the traffic on the virtual interface (0-4094)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long DefaultVlanId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VSAN ID of the virtual interface in FI attached server (1-4094)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 4094)]
-        public long Id
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVsanSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicVsanSettings initObject = new Intersight.Model.VnicVsanSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultVlanId"))
-            {
-                initObject.DefaultVlanId = this.DefaultVlanId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
-            {
-                initObject.Id = this.Id;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcQueueSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcQueueSettings")]
-    public class InitializeIntersightVnicFcQueueSettings : PSCmdlet
-    {
-        public InitializeIntersightVnicFcQueueSettings()
-        {
-            ClassId = VnicFcQueueSettings.ClassIdEnum.VnicFcQueueSettings;
-            ObjectType = VnicFcQueueSettings.ObjectTypeEnum.VnicFcQueueSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcQueueSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicFcQueueSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of descriptors in each queue."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long RingSize
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicFcQueueSettings initObject = new Intersight.Model.VnicFcQueueSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
-            {
-                initObject.RingSize = this.RingSize;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicVifStatus.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicVifStatus")]
-    public class InitializeIntersightVnicVifStatus : PSCmdlet
-    {
-        public InitializeIntersightVnicVifStatus()
-        {
-            ClassId = VnicVifStatus.ClassIdEnum.VnicVifStatus;
-            ObjectType = VnicVifStatus.ObjectTypeEnum.VnicVifStatus;
-            Status = VnicVifStatus.StatusEnum.Ok;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVifStatus.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the vNIC for which the status is reported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVifStatus.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The reason for the status - it will be empty if status is ok or validating. If error, it will have the appropriate message indicating the reason for failure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Reason
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates if the vNIC / vHBA is ready for deploy or not.\n* `ok` - No issues with the LCP/SCP/VIF.\n* `error` - The LCP/SCP/VIF cannot be deployed due to error.\n* `validating` - Validation in progress for the LCP."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicVifStatus.StatusEnum Status
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.VnicVifStatus initObject = new Intersight.Model.VnicVifStatus();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Reason"))
-            {
-                initObject.Reason = this.Reason;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
-            {
-                initObject.Status = this.Status;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicIscsiAdapterPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicIscsiAdapterPolicy")]
-    public class InitializeIntersightVnicIscsiAdapterPolicy : PSCmdlet
-    {
-        public InitializeIntersightVnicIscsiAdapterPolicy()
-        {
-            ClassId = VnicIscsiAdapterPolicy.ClassIdEnum.VnicIscsiAdapterPolicy;
-            ObjectType = VnicIscsiAdapterPolicy.ObjectTypeEnum.VnicIscsiAdapterPolicy;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VnicIscsiAdapterPolicy.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of seconds to wait until Cisco UCS assumes that the initial login has failed and the iSCSI adapter is unavailable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ConnectionTimeOut
+        public VnicEthNetworkPolicy.ClassIdEnum ClassId
         {
             get;
             set;
@@ -4484,26 +1100,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of seconds to wait before the initiator assumes that the DHCP server is unavailable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(60, 300)]
-        public long DhcpTimeout
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of times to retry the connection in case of a failure during iSCSI LUN discovery."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long LunBusyRetryCount
         {
             get;
             set;
@@ -4533,7 +1129,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicIscsiAdapterPolicy.ObjectTypeEnum ObjectType
+        public VnicEthNetworkPolicy.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -4558,30 +1154,38 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthNetworkPolicy.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN configuration for the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicVlanSettings VlanSettings
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicIscsiAdapterPolicy initObject = new Intersight.Model.VnicIscsiAdapterPolicy();
+            Intersight.Model.VnicEthNetworkPolicy initObject = new Intersight.Model.VnicEthNetworkPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConnectionTimeOut"))
-            {
-                initObject.ConnectionTimeOut = this.ConnectionTimeOut;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DhcpTimeout"))
-            {
-                initObject.DhcpTimeout = this.DhcpTimeout;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("LunBusyRetryCount"))
-            {
-                initObject.LunBusyRetryCount = this.LunBusyRetryCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -4599,6 +1203,393 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanSettings"))
+            {
+                initObject.VlanSettings = this.VlanSettings;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthQosPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthQosPolicy")]
+    public class InitializeIntersightVnicEthQosPolicy : PSCmdlet
+    {
+        public InitializeIntersightVnicEthQosPolicy()
+        {
+            ClassId = VnicEthQosPolicy.ClassIdEnum.VnicEthQosPolicy;
+            ObjectType = VnicEthQosPolicy.ObjectTypeEnum.VnicEthQosPolicy;
+            Priority = VnicEthQosPolicy.PriorityEnum.BestEffort;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The burst traffic, in bytes, allowed on the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 1e+06)]
+        public long Burst
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthQosPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Class of Service to be associated to the traffic on the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Cos
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1500, 9000)]
+        public long Mtu
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthQosPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The priortity matching the System QoS specified in the fabric profile.\n* `Best Effort` - QoS Priority for Best-effort traffic.\n* `FC` - QoS Priority for FC traffic.\n* `Platinum` - QoS Priority for Platinum traffic.\n* `Gold` - QoS Priority for Gold traffic.\n* `Silver` - QoS Priority for Silver traffic.\n* `Bronze` - QoS Priority for Bronze traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthQosPolicy.PriorityEnum Priority
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The value in Mbps (0-10G/40G/100G depending on Adapter Model) to use for limiting the data rate on the virtual interface. Setting this to zero will turn rate limiting off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long RateLimit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables usage of the Class of Service provided by the operating system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TrustHostCos
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicEthQosPolicy initObject = new Intersight.Model.VnicEthQosPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Burst"))
+            {
+                initObject.Burst = this.Burst;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cos"))
+            {
+                initObject.Cos = this.Cos;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
+            {
+                initObject.Mtu = this.Mtu;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Priority"))
+            {
+                initObject.Priority = this.Priority;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RateLimit"))
+            {
+                initObject.RateLimit = this.RateLimit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TrustHostCos"))
+            {
+                initObject.TrustHostCos = this.TrustHostCos;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthRxQueueSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthRxQueueSettings")]
+    public class InitializeIntersightVnicEthRxQueueSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicEthRxQueueSettings()
+        {
+            ClassId = VnicEthRxQueueSettings.ClassIdEnum.VnicEthRxQueueSettings;
+            ObjectType = VnicEthRxQueueSettings.ObjectTypeEnum.VnicEthRxQueueSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthRxQueueSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of queue resources to allocate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 1000)]
+        public long Count
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthRxQueueSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of descriptors in each queue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(64, 16384)]
+        public long RingSize
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicEthRxQueueSettings initObject = new Intersight.Model.VnicEthRxQueueSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
+            {
+                initObject.Count = this.Count;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
+            {
+                initObject.RingSize = this.RingSize;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicEthTxQueueSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicEthTxQueueSettings")]
+    public class InitializeIntersightVnicEthTxQueueSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicEthTxQueueSettings()
+        {
+            ClassId = VnicEthTxQueueSettings.ClassIdEnum.VnicEthTxQueueSettings;
+            ObjectType = VnicEthTxQueueSettings.ObjectTypeEnum.VnicEthTxQueueSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthTxQueueSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of queue resources to allocate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 1000)]
+        public long Count
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicEthTxQueueSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of descriptors in each queue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(64, 16384)]
+        public long RingSize
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicEthTxQueueSettings initObject = new Intersight.Model.VnicEthTxQueueSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
+            {
+                initObject.Count = this.Count;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
+            {
+                initObject.RingSize = this.RingSize;
             }
             WriteObject(initObject);
         }
@@ -4899,6 +1890,653 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcErrorRecoverySettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcErrorRecoverySettings")]
+    public class InitializeIntersightVnicFcErrorRecoverySettings : PSCmdlet
+    {
+        public InitializeIntersightVnicFcErrorRecoverySettings()
+        {
+            ClassId = VnicFcErrorRecoverySettings.ClassIdEnum.VnicFcErrorRecoverySettings;
+            ObjectType = VnicFcErrorRecoverySettings.ObjectTypeEnum.VnicFcErrorRecoverySettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcErrorRecoverySettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables Fibre Channel Error recovery."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of times an I/O request to a port is retried because the port is busy before the system decides the port is unavailable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long IoRetryCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of seconds the adapter waits before aborting the pending command and resending the same IO request."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 59)]
+        public long IoRetryTimeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of milliseconds the port should actually be down before it is marked down and fabric connectivity is lost."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long LinkDownTimeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcErrorRecoverySettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of milliseconds a remote Fibre Channel port should be offline before informing the SCSI upper layer that the port is unavailable. For a server with a VIC adapter running ESXi, the recommended value is 10000. For a server with a port used to boot a Windows OS from the SAN, the recommended value is 5000 milliseconds."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long PortDownTimeout
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicFcErrorRecoverySettings initObject = new Intersight.Model.VnicFcErrorRecoverySettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IoRetryCount"))
+            {
+                initObject.IoRetryCount = this.IoRetryCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IoRetryTimeout"))
+            {
+                initObject.IoRetryTimeout = this.IoRetryTimeout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkDownTimeout"))
+            {
+                initObject.LinkDownTimeout = this.LinkDownTimeout;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortDownTimeout"))
+            {
+                initObject.PortDownTimeout = this.PortDownTimeout;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcIf.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcIf")]
+    public class InitializeIntersightVnicFcIf : PSCmdlet
+    {
+        public InitializeIntersightVnicFcIf()
+        {
+            ClassId = VnicFcIf.ClassIdEnum.VnicFcIf;
+            ObjectType = VnicFcIf.ObjectTypeEnum.VnicFcIf;
+            Type = VnicFcIf.TypeEnum.FcInitiator;
+            WwpnAddressType = VnicFcIf.WwpnAddressTypeEnum.POOL;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcIf.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcAdapterPolicyRelationship FcAdapterPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcNetworkPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcNetworkPolicyRelationship FcNetworkPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcQosPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcQosPolicyRelationship FcQosPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the virtual fibre channel interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9\\-\\._:]+$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcIf.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The order in which the virtual interface is brought up. The order assigned to an interface should be unique for all the Ethernet and Fibre-Channel interfaces on each PCI link on a VIC adapter. The maximum value of PCI order is limited by the number of virtual interfaces (Ethernet and Fibre-Channel) on each PCI link on a VIC adapter. All VIC adapters have a single PCI link except VIC 1385 which has two."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Order
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables retention of LUN ID associations in memory until they are manually cleared."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PersistentBindings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Placement Settings for the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicPlacementSettings Placement
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractConfigProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PolicyAbstractConfigProfileRelationship Profile
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicSanConnectivityPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicSanConnectivityPolicyRelationship SanConnectivityPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcIf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcIfRelationship ScpVhba
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to vnicFcIf resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.VnicFcIfRelationship> SpVhbas
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN's in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|((^20|5[0-9a-fA-F]{1}):([0-9a-fA-F]{2}:){6}([0-9a-fA-F]{2}))")]
+        public string StaticWwpnAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VHBA Type configuration for SAN Connectivity Policy. This configuration is supported only on Cisco VIC 14XX series and higher series of adapters.\n* `fc-initiator` - The default value set for vHBA Type Configuration. Fc-initiator specifies vHBA as a consumer of storage. Enables SCSI commands to transfer data and status information between host and target storage systems.\n* `fc-nvme-initiator` - Fc-nvme-initiator specifies vHBA as a consumer of storage. Enables NVMe-based message commands to transfer data and status information between host and target storage systems.\n* `fc-nvme-target` - Fc-nvme-target specifies vHBA as a provider of storage volumes to initiators. Enables NVMe-based message commands to transfer data and status information between host and target storage systems. Currently tech-preview, only enabled with an asynchronous driver.\n* `fc-target` - Fc-target specifies vHBA as a provider of storage volumes to initiators. Enables SCSI commands to transfer data and status information between host and target storage systems. fc-target is enabled only with an asynchronous driver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcIf.TypeEnum Type
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of allocation selected to assign a WWPN address to the vhba.\n* `POOL` - The user selects a pool from which the mac/wwn address will be leased for the Virtual Interface.\n* `STATIC` - The user assigns a static mac/wwn address for the Virtual Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcIf.WwpnAddressTypeEnum WwpnAddressType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fcpoolLease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FcpoolLeaseRelationship WwpnLease
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fcpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FcpoolPoolRelationship WwpnPool
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicFcIf initObject = new Intersight.Model.VnicFcIf();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcAdapterPolicy"))
+            {
+                initObject.FcAdapterPolicy = this.FcAdapterPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcNetworkPolicy"))
+            {
+                initObject.FcNetworkPolicy = this.FcNetworkPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcQosPolicy"))
+            {
+                initObject.FcQosPolicy = this.FcQosPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Order"))
+            {
+                initObject.Order = this.Order;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentBindings"))
+            {
+                initObject.PersistentBindings = this.PersistentBindings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Placement"))
+            {
+                initObject.Placement = this.Placement;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
+            {
+                initObject.Profile = this.Profile;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SanConnectivityPolicy"))
+            {
+                initObject.SanConnectivityPolicy = this.SanConnectivityPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScpVhba"))
+            {
+                initObject.ScpVhba = this.ScpVhba;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SpVhbas"))
+            {
+                initObject.SpVhbas = this.SpVhbas;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StaticWwpnAddress"))
+            {
+                initObject.StaticWwpnAddress = this.StaticWwpnAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnAddressType"))
+            {
+                initObject.WwpnAddressType = this.WwpnAddressType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnLease"))
+            {
+                initObject.WwpnLease = this.WwpnLease;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnPool"))
+            {
+                initObject.WwpnPool = this.WwpnPool;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcInterruptSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcInterruptSettings")]
+    public class InitializeIntersightVnicFcInterruptSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicFcInterruptSettings()
+        {
+            ClassId = VnicFcInterruptSettings.ClassIdEnum.VnicFcInterruptSettings;
+            Mode = VnicFcInterruptSettings.ModeEnum.MSIx;
+            ObjectType = VnicFcInterruptSettings.ObjectTypeEnum.VnicFcInterruptSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcInterruptSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The preferred driver interrupt mode. This can be one of the following:- MSIx - Message Signaled Interrupts (MSI) with the optional extension. MSI  - MSI only. INTx - PCI INTx interrupts. MSIx is the recommended option.\n* `MSIx` - Message Signaled Interrupt (MSI) mechanism with the optional extension (MSIx). MSIx is the recommended and default option.\n* `MSI` - Message Signaled Interrupt (MSI) mechanism that treats messages as interrupts.\n* `INTx` - Line-based interrupt (INTx) mechanism similar to the one used in Legacy systems."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcInterruptSettings.ModeEnum Mode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcInterruptSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicFcInterruptSettings initObject = new Intersight.Model.VnicFcInterruptSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcNetworkPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcNetworkPolicy")]
+    public class InitializeIntersightVnicFcNetworkPolicy : PSCmdlet
+    {
+        public InitializeIntersightVnicFcNetworkPolicy()
+        {
+            ClassId = VnicFcNetworkPolicy.ClassIdEnum.VnicFcNetworkPolicy;
+            ObjectType = VnicFcNetworkPolicy.ObjectTypeEnum.VnicFcNetworkPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcNetworkPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFcNetworkPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Configuration of vSAN for the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicVsanSettings VsanSettings
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicFcNetworkPolicy initObject = new Intersight.Model.VnicFcNetworkPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanSettings"))
+            {
+                initObject.VsanSettings = this.VsanSettings;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VnicFcQosPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVnicFcQosPolicy")]
@@ -5081,15 +2719,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicPtpSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcQueueSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicPtpSettings")]
-    public class InitializeIntersightVnicPtpSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcQueueSettings")]
+    public class InitializeIntersightVnicFcQueueSettings : PSCmdlet
     {
-        public InitializeIntersightVnicPtpSettings()
+        public InitializeIntersightVnicFcQueueSettings()
         {
-            ClassId = VnicPtpSettings.ClassIdEnum.VnicPtpSettings;
-            ObjectType = VnicPtpSettings.ObjectTypeEnum.VnicPtpSettings;
+            ClassId = VnicFcQueueSettings.ClassIdEnum.VnicFcQueueSettings;
+            ObjectType = VnicFcQueueSettings.ObjectTypeEnum.VnicFcQueueSettings;
 
         }
         // <summary>
@@ -5107,17 +2745,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicPtpSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Status of Precision Time Protocol (PTP) on the virtual ethernet interface. PTP can be enabled only on one vNIC on an adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
+        public VnicFcQueueSettings.ClassIdEnum ClassId
         {
             get;
             set;
@@ -5127,7 +2755,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicPtpSettings.ObjectTypeEnum ObjectType
+        public VnicFcQueueSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of descriptors in each queue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long RingSize
         {
             get;
             set;
@@ -5135,17 +2773,635 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicPtpSettings initObject = new Intersight.Model.VnicPtpSettings();
+            Intersight.Model.VnicFcQueueSettings initObject = new Intersight.Model.VnicFcQueueSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
             {
-                initObject.Enabled = this.Enabled;
+                initObject.RingSize = this.RingSize;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicFlogiSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicFlogiSettings")]
+    public class InitializeIntersightVnicFlogiSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicFlogiSettings()
+        {
+            ClassId = VnicFlogiSettings.ClassIdEnum.VnicFlogiSettings;
+            ObjectType = VnicFlogiSettings.ObjectTypeEnum.VnicFlogiSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFlogiSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicFlogiSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of times that the system tries to log in to the fabric after the first failure. Allowed range is 0-4294967295."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Retries
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of milliseconds that the system waits before it tries to log in again."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1000, 255000)]
+        public long Timeout
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicFlogiSettings initObject = new Intersight.Model.VnicFlogiSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Retries"))
+            {
+                initObject.Retries = this.Retries;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
+            {
+                initObject.Timeout = this.Timeout;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicIscsiAdapterPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicIscsiAdapterPolicy")]
+    public class InitializeIntersightVnicIscsiAdapterPolicy : PSCmdlet
+    {
+        public InitializeIntersightVnicIscsiAdapterPolicy()
+        {
+            ClassId = VnicIscsiAdapterPolicy.ClassIdEnum.VnicIscsiAdapterPolicy;
+            ObjectType = VnicIscsiAdapterPolicy.ObjectTypeEnum.VnicIscsiAdapterPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiAdapterPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of seconds to wait until Cisco UCS assumes that the initial login has failed and the iSCSI adapter is unavailable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ConnectionTimeOut
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of seconds to wait before the initiator assumes that the DHCP server is unavailable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(60, 300)]
+        public long DhcpTimeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of times to retry the connection in case of a failure during iSCSI LUN discovery."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long LunBusyRetryCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiAdapterPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicIscsiAdapterPolicy initObject = new Intersight.Model.VnicIscsiAdapterPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConnectionTimeOut"))
+            {
+                initObject.ConnectionTimeOut = this.ConnectionTimeOut;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DhcpTimeout"))
+            {
+                initObject.DhcpTimeout = this.DhcpTimeout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LunBusyRetryCount"))
+            {
+                initObject.LunBusyRetryCount = this.LunBusyRetryCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicIscsiAuthProfile.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicIscsiAuthProfile")]
+    public class InitializeIntersightVnicIscsiAuthProfile : PSCmdlet
+    {
+        public InitializeIntersightVnicIscsiAuthProfile()
+        {
+            ClassId = VnicIscsiAuthProfile.ClassIdEnum.VnicIscsiAuthProfile;
+            ObjectType = VnicIscsiAuthProfile.ObjectTypeEnum.VnicIscsiAuthProfile;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiAuthProfile.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiAuthProfile.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Password of Initiator/Target Interface. Enter between 12 and 16 characters, including special characters except spaces, tabs, line breaks."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[\\S+]{12,16}$")]
+        public string Password
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User Id of Initiator/Target Interface. Enter between 1 and 128 characters, spaces, or special characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^.{1,128}$")]
+        public string UserId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicIscsiAuthProfile initObject = new Intersight.Model.VnicIscsiAuthProfile();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            {
+                initObject.Password = this.Password;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserId"))
+            {
+                initObject.UserId = this.UserId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicIscsiBootPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicIscsiBootPolicy")]
+    public class InitializeIntersightVnicIscsiBootPolicy : PSCmdlet
+    {
+        public InitializeIntersightVnicIscsiBootPolicy()
+        {
+            ClassId = VnicIscsiBootPolicy.ClassIdEnum.VnicIscsiBootPolicy;
+            InitiatorIpSource = VnicIscsiBootPolicy.InitiatorIpSourceEnum.DHCP;
+            ObjectType = VnicIscsiBootPolicy.ObjectTypeEnum.VnicIscsiBootPolicy;
+            TargetSourceType = VnicIscsiBootPolicy.TargetSourceTypeEnum.Static;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 32 alphanumeric characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string AutoTargetvendorName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CHAP authentication parameters for iSCSI Target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicIscsiAuthProfile Chap
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiBootPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a ippoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IppoolPoolRelationship InitiatorIpPool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source Type of Initiator IP Address - Auto/Static/Pool.\n* `DHCP` - The IP address is assigned using DHCP, if available.\n* `Static` - Static IPv4 address is assigned to the iSCSI boot interface based on the information entered in this area.\n* `Pool` - An IPv4 address is assigned to the iSCSI boot interface from the management IP address pool."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiBootPolicy.InitiatorIpSourceEnum InitiatorIpSource
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Static IP address provided for iSCSI Initiator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string InitiatorStaticIpV4Address
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPV4 configurations such as Netmask, Gateway and DNS for iSCSI Initiator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IppoolIpV4Config InitiatorStaticIpV4Config
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicIscsiAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicIscsiAdapterPolicyRelationship IscsiAdapterPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Mutual CHAP authentication parameters for iSCSI Initiator. Two-way CHAP mechanism."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicIscsiAuthProfile MutualChap
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiBootPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicIscsiStaticTargetPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicIscsiStaticTargetPolicyRelationship PrimaryTargetPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicIscsiStaticTargetPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicIscsiStaticTargetPolicyRelationship SecondaryTargetPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source Type of Targets - Auto/Static.\n* `Static` - Type indicates that static target interface is assigned to iSCSI boot.\n* `Auto` - Type indicates that the system selects the target interface automatically during iSCSI boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiBootPolicy.TargetSourceTypeEnum TargetSourceType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicIscsiBootPolicy initObject = new Intersight.Model.VnicIscsiBootPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AutoTargetvendorName"))
+            {
+                initObject.AutoTargetvendorName = this.AutoTargetvendorName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Chap"))
+            {
+                initObject.Chap = this.Chap;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorIpPool"))
+            {
+                initObject.InitiatorIpPool = this.InitiatorIpPool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorIpSource"))
+            {
+                initObject.InitiatorIpSource = this.InitiatorIpSource;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorStaticIpV4Address"))
+            {
+                initObject.InitiatorStaticIpV4Address = this.InitiatorStaticIpV4Address;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorStaticIpV4Config"))
+            {
+                initObject.InitiatorStaticIpV4Config = this.InitiatorStaticIpV4Config;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IscsiAdapterPolicy"))
+            {
+                initObject.IscsiAdapterPolicy = this.IscsiAdapterPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MutualChap"))
+            {
+                initObject.MutualChap = this.MutualChap;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrimaryTargetPolicy"))
+            {
+                initObject.PrimaryTargetPolicy = this.PrimaryTargetPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecondaryTargetPolicy"))
+            {
+                initObject.SecondaryTargetPolicy = this.SecondaryTargetPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetSourceType"))
+            {
+                initObject.TargetSourceType = this.TargetSourceType;
+            }
             WriteObject(initObject);
         }
 
@@ -5333,16 +3589,257 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicScpStatus.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicLanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicScpStatus")]
-    public class InitializeIntersightVnicScpStatus : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicLanConnectivityPolicy")]
+    public class InitializeIntersightVnicLanConnectivityPolicy : PSCmdlet
     {
-        public InitializeIntersightVnicScpStatus()
+        public InitializeIntersightVnicLanConnectivityPolicy()
         {
-            ClassId = VnicScpStatus.ClassIdEnum.VnicScpStatus;
-            ObjectType = VnicScpStatus.ObjectTypeEnum.VnicScpStatus;
-            Status = VnicScpStatus.StatusEnum.Ok;
+            ClassId = VnicLanConnectivityPolicy.ClassIdEnum.VnicLanConnectivityPolicy;
+            IqnAllocationType = VnicLanConnectivityPolicy.IqnAllocationTypeEnum.None;
+            ObjectType = VnicLanConnectivityPolicy.ObjectTypeEnum.VnicLanConnectivityPolicy;
+            PlacementMode = VnicLanConnectivityPolicy.PlacementModeEnum.Custom;
+            TargetPlatform = VnicLanConnectivityPolicy.TargetPlatformEnum.Standalone;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enabling AzureStack-Host QoS on an adapter allows the user to carve out traffic classes for RDMA traffic which ensures that a desired portion of the bandwidth is allocated to it."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AzureQosEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLanConnectivityPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to vnicEthIf resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.VnicEthIfRelationship> EthIfs
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Allocation Type of iSCSI Qualified Name - Static/Pool/None.\n* `None` - Type indicates that there is no IQN associated to an interface.\n* `Static` - Type represents that static IQN is associated to an interface.\n* `Pool` - Type indicates that IQN value is sourced from an associated pool."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLanConnectivityPolicy.IqnAllocationTypeEnum IqnAllocationType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iqnpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IqnpoolPoolRelationship IqnPool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLanConnectivityPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The mode used for placement of vNICs on network adapters. It can either be Auto or Custom.\n* `custom` - The placement of the vNICs / vHBAs on network adapters is manually chosen by the user.\n* `auto` - The placement of the vNICs / vHBAs on network adapters is automatically determined by the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLanConnectivityPolicy.PlacementModeEnum PlacementMode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User provided static iSCSI Qualified Name (IQN) for use as initiator identifiers by iSCSI vNICs in a Fabric Interconnect domain."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(?:iqn\\.[0-9]{4}-[0-9]{2}(?:\\.[A-Za-z](?:[A-Za-z0-9\\-]*[A-Za-z0-9])?)+(?::.*)?|eui\\.[0-9A-Fa-f]{16})")]
+        public string StaticIqnName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The platform for which the server profile is applicable. It can either be a server that is operating in standalone mode or which is attached to a Fabric Interconnect managed by Intersight.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLanConnectivityPolicy.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicLanConnectivityPolicy initObject = new Intersight.Model.VnicLanConnectivityPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AzureQosEnabled"))
+            {
+                initObject.AzureQosEnabled = this.AzureQosEnabled;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthIfs"))
+            {
+                initObject.EthIfs = this.EthIfs;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IqnAllocationType"))
+            {
+                initObject.IqnAllocationType = this.IqnAllocationType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IqnPool"))
+            {
+                initObject.IqnPool = this.IqnPool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PlacementMode"))
+            {
+                initObject.PlacementMode = this.PlacementMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StaticIqnName"))
+            {
+                initObject.StaticIqnName = this.StaticIqnName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicLcpStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicLcpStatus")]
+    public class InitializeIntersightVnicLcpStatus : PSCmdlet
+    {
+        public InitializeIntersightVnicLcpStatus()
+        {
+            ClassId = VnicLcpStatus.ClassIdEnum.VnicLcpStatus;
+            ObjectType = VnicLcpStatus.ObjectTypeEnum.VnicLcpStatus;
+            Status = VnicLcpStatus.StatusEnum.Ok;
 
         }
         // <summary>
@@ -5360,7 +3857,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicScpStatus.ClassIdEnum ClassId
+        public VnicLcpStatus.ClassIdEnum ClassId
         {
             get;
             set;
@@ -5380,7 +3877,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicScpStatus.ObjectTypeEnum ObjectType
+        public VnicLcpStatus.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -5410,7 +3907,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicScpStatus.StatusEnum Status
+        public VnicLcpStatus.StatusEnum Status
         {
             get;
             set;
@@ -5430,7 +3927,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<Model.VnicVifStatus> VhbaInfo
+        public List<Model.VnicVifStatus> VnicInfo
         {
             get;
             set;
@@ -5438,7 +3935,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicScpStatus initObject = new Intersight.Model.VnicScpStatus();
+            Intersight.Model.VnicLcpStatus initObject = new Intersight.Model.VnicLcpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -5465,25 +3962,108 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VhbaInfo"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("VnicInfo"))
             {
-                initObject.VhbaInfo = this.VhbaInfo;
+                initObject.VnicInfo = this.VnicInfo;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicFcInterruptSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicLun.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicFcInterruptSettings")]
-    public class InitializeIntersightVnicFcInterruptSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicLun")]
+    public class InitializeIntersightVnicLun : PSCmdlet
     {
-        public InitializeIntersightVnicFcInterruptSettings()
+        public InitializeIntersightVnicLun()
         {
-            ClassId = VnicFcInterruptSettings.ClassIdEnum.VnicFcInterruptSettings;
-            Mode = VnicFcInterruptSettings.ModeEnum.MSIx;
-            ObjectType = VnicFcInterruptSettings.ObjectTypeEnum.VnicFcInterruptSettings;
+            ClassId = VnicLun.ClassIdEnum.VnicLun;
+            ObjectType = VnicLun.ObjectTypeEnum.VnicLun;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies LUN is bootable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Bootable
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLun.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Identifier of the LUN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long LunId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicLun.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicLun initObject = new Intersight.Model.VnicLun();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Bootable"))
+            {
+                initObject.Bootable = this.Bootable;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LunId"))
+            {
+                initObject.LunId = this.LunId;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicNvgreSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicNvgreSettings")]
+    public class InitializeIntersightVnicNvgreSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicNvgreSettings()
+        {
+            ClassId = VnicNvgreSettings.ClassIdEnum.VnicNvgreSettings;
+            ObjectType = VnicNvgreSettings.ObjectTypeEnum.VnicNvgreSettings;
 
         }
         // <summary>
@@ -5501,17 +4081,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicFcInterruptSettings.ClassIdEnum ClassId
+        public VnicNvgreSettings.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The preferred driver interrupt mode. This can be one of the following:- MSIx - Message Signaled Interrupts (MSI) with the optional extension. MSI  - MSI only. INTx - PCI INTx interrupts. MSIx is the recommended option.\n* `MSIx` - Message Signaled Interrupt (MSI) mechanism with the optional extension (MSIx). MSIx is the recommended and default option.\n* `MSI` - Message Signaled Interrupt (MSI) mechanism that treats messages as interrupts.\n* `INTx` - Line-based interrupt (INTx) mechanism similar to the one used in Legacy systems."</para>
+        /// <para type="description">"Status of the Network Virtualization using Generic Routing Encapsulation on the virtual ethernet interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicFcInterruptSettings.ModeEnum Mode
+        public bool Enabled
         {
             get;
             set;
@@ -5521,7 +4101,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicFcInterruptSettings.ObjectTypeEnum ObjectType
+        public VnicNvgreSettings.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -5529,15 +4109,15 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicFcInterruptSettings initObject = new Intersight.Model.VnicFcInterruptSettings();
+            Intersight.Model.VnicNvgreSettings initObject = new Intersight.Model.VnicNvgreSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
             {
-                initObject.Mode = this.Mode;
+                initObject.Enabled = this.Enabled;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -5545,15 +4125,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize VnicIscsiAuthProfile.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicPlacementSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightVnicIscsiAuthProfile")]
-    public class InitializeIntersightVnicIscsiAuthProfile : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicPlacementSettings")]
+    public class InitializeIntersightVnicPlacementSettings : PSCmdlet
     {
-        public InitializeIntersightVnicIscsiAuthProfile()
+        public InitializeIntersightVnicPlacementSettings()
         {
-            ClassId = VnicIscsiAuthProfile.ClassIdEnum.VnicIscsiAuthProfile;
-            ObjectType = VnicIscsiAuthProfile.ObjectTypeEnum.VnicIscsiAuthProfile;
+            ClassId = VnicPlacementSettings.ClassIdEnum.VnicPlacementSettings;
+            ObjectType = VnicPlacementSettings.ObjectTypeEnum.VnicPlacementSettings;
+            SwitchId = VnicPlacementSettings.SwitchIdEnum.None;
 
         }
         // <summary>
@@ -5571,7 +4152,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicIscsiAuthProfile.ClassIdEnum ClassId
+        public VnicPlacementSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PCIe Slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|1[0-5]|MLOM)$")]
+        public string Id
         {
             get;
             set;
@@ -5581,27 +4172,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicIscsiAuthProfile.ObjectTypeEnum ObjectType
+        public VnicPlacementSettings.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Password of Initiator/Target Interface. Enter between 12 and 16 characters, including special characters except spaces, tabs, line breaks."</para>
+        /// <para type="description">"The PCI Link used as transport for the virtual interface. This field is applicable only for VIC 1385 model (UCSC-PCIE-C40Q-03) which support two PCI links. The value, if specified, for any other VIC model will be ignored."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[\\S+]{12,16}$")]
-        public string Password
+
+        public long PciLink
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"User Id of Initiator/Target Interface. Enter between 1 and 128 characters, spaces, or special characters."</para>
+        /// <para type="description">"The fabric port to which the vNICs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value 'None' should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^.{1,128}$")]
-        public string UserId
+
+        public VnicPlacementSettings.SwitchIdEnum SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Adapter port on which the virtual interface will be created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Uplink
         {
             get;
             set;
@@ -5609,20 +4210,492 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.VnicIscsiAuthProfile initObject = new Intersight.Model.VnicIscsiAuthProfile();
+            Intersight.Model.VnicPlacementSettings initObject = new Intersight.Model.VnicPlacementSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
+            {
+                initObject.Id = this.Id;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PciLink"))
+            {
+                initObject.PciLink = this.PciLink;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uplink"))
+            {
+                initObject.Uplink = this.Uplink;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicPlogiSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicPlogiSettings")]
+    public class InitializeIntersightVnicPlogiSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicPlogiSettings()
+        {
+            ClassId = VnicPlogiSettings.ClassIdEnum.VnicPlogiSettings;
+            ObjectType = VnicPlogiSettings.ObjectTypeEnum.VnicPlogiSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicPlogiSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicPlogiSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of times that the system tries to log in to a port after the first failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Retries
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of milliseconds that the system waits before it tries to log in again."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1000, 255000)]
+        public long Timeout
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicPlogiSettings initObject = new Intersight.Model.VnicPlogiSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Retries"))
             {
-                initObject.Password = this.Password;
+                initObject.Retries = this.Retries;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UserId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
             {
-                initObject.UserId = this.UserId;
+                initObject.Timeout = this.Timeout;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicPtpSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicPtpSettings")]
+    public class InitializeIntersightVnicPtpSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicPtpSettings()
+        {
+            ClassId = VnicPtpSettings.ClassIdEnum.VnicPtpSettings;
+            ObjectType = VnicPtpSettings.ObjectTypeEnum.VnicPtpSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicPtpSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Status of Precision Time Protocol (PTP) on the virtual ethernet interface. PTP can be enabled only on one vNIC on an adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicPtpSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicPtpSettings initObject = new Intersight.Model.VnicPtpSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicRoceSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicRoceSettings")]
+    public class InitializeIntersightVnicRoceSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicRoceSettings()
+        {
+            ClassId = VnicRoceSettings.ClassIdEnum.VnicRoceSettings;
+            ClassOfService = VnicRoceSettings.ClassOfServiceEnum.NUMBER_5;
+            ObjectType = VnicRoceSettings.ObjectTypeEnum.VnicRoceSettings;
+            Version = VnicRoceSettings.VersionEnum.NUMBER_1;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicRoceSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Class of Service for RoCE on this virtual interface.\n* `5` - RDMA CoS Service Level 5.\n* `1` - RDMA CoS Service Level 1.\n* `2` - RDMA CoS Service Level 2.\n* `4` - RDMA CoS Service Level 4.\n* `6` - RDMA CoS Service Level 6."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicRoceSettings.ClassOfServiceEnum ClassOfService
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If enabled sets RDMA over Converged Ethernet (RoCE) on this virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of memory regions per adapter. Recommended value = integer power of 2."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MemoryRegions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicRoceSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of queue pairs per adapter. Recommended value = integer power of 2."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long QueuePairs
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of resource groups per adapter. Recommended value = be an integer power of 2 greater than or equal to the number of CPU cores on the system for optimum performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ResourceGroups
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Configure RDMA over Converged Ethernet (RoCE) version on the virtual interface. Only RoCEv1 is supported on Cisco VIC 13xx series adapters and only RoCEv2 is supported on Cisco VIC 14xx series adapters.\n* `1` - RDMA over Converged Ethernet Protocol Version 1.\n* `2` - RDMA over Converged Ethernet Protocol Version 2."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicRoceSettings.VersionEnum Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicRoceSettings initObject = new Intersight.Model.VnicRoceSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ClassOfService"))
+            {
+                initObject.ClassOfService = this.ClassOfService;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryRegions"))
+            {
+                initObject.MemoryRegions = this.MemoryRegions;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("QueuePairs"))
+            {
+                initObject.QueuePairs = this.QueuePairs;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceGroups"))
+            {
+                initObject.ResourceGroups = this.ResourceGroups;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicRssHashSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicRssHashSettings")]
+    public class InitializeIntersightVnicRssHashSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicRssHashSettings()
+        {
+            ClassId = VnicRssHashSettings.ClassIdEnum.VnicRssHashSettings;
+            ObjectType = VnicRssHashSettings.ObjectTypeEnum.VnicRssHashSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicRssHashSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the IPv4 address is used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Ipv4Hash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the IPv6 extensions are used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Ipv6ExtHash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the IPv6 address is used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Ipv6Hash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicRssHashSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, both the IPv4 address and TCP port number are used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TcpIpv4Hash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, both the IPv6 extensions and TCP port number are used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TcpIpv6ExtHash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, both the IPv6 address and TCP port number are used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TcpIpv6Hash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, both the IPv4 address and UDP port number are used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool UdpIpv4Hash
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, both the IPv6 address and UDP port number are used for traffic distribution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool UdpIpv6Hash
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicRssHashSettings initObject = new Intersight.Model.VnicRssHashSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv4Hash"))
+            {
+                initObject.Ipv4Hash = this.Ipv4Hash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv6ExtHash"))
+            {
+                initObject.Ipv6ExtHash = this.Ipv6ExtHash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv6Hash"))
+            {
+                initObject.Ipv6Hash = this.Ipv6Hash;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TcpIpv4Hash"))
+            {
+                initObject.TcpIpv4Hash = this.TcpIpv4Hash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TcpIpv6ExtHash"))
+            {
+                initObject.TcpIpv6ExtHash = this.TcpIpv6ExtHash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TcpIpv6Hash"))
+            {
+                initObject.TcpIpv6Hash = this.TcpIpv6Hash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UdpIpv4Hash"))
+            {
+                initObject.UdpIpv4Hash = this.UdpIpv4Hash;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UdpIpv6Hash"))
+            {
+                initObject.UdpIpv6Hash = this.UdpIpv6Hash;
             }
             WriteObject(initObject);
         }
@@ -5851,6 +4924,933 @@ namespace Intersight.PowerShell
             {
                 initObject.WwnnPool = this.WwnnPool;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicScpStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicScpStatus")]
+    public class InitializeIntersightVnicScpStatus : PSCmdlet
+    {
+        public InitializeIntersightVnicScpStatus()
+        {
+            ClassId = VnicScpStatus.ClassIdEnum.VnicScpStatus;
+            ObjectType = VnicScpStatus.ObjectTypeEnum.VnicScpStatus;
+            Status = VnicScpStatus.StatusEnum.Ok;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicScpStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicScpStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractConfigProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PolicyAbstractConfigProfileRelationship Profile
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The reason for the status - it will be empty if status is ok or validating. If error, it will have the appropriate message indicating the reason for failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Reason
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the LCP is ready for Deploy or not.\n* `ok` - No issues with the LCP/SCP/VIF.\n* `error` - The LCP/SCP/VIF cannot be deployed due to error.\n* `validating` - Validation in progress for the LCP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicScpStatus.StatusEnum Status
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.VnicVifStatus> VhbaInfo
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicScpStatus initObject = new Intersight.Model.VnicScpStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
+            {
+                initObject.Profile = this.Profile;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reason"))
+            {
+                initObject.Reason = this.Reason;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VhbaInfo"))
+            {
+                initObject.VhbaInfo = this.VhbaInfo;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicScsiQueueSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicScsiQueueSettings")]
+    public class InitializeIntersightVnicScsiQueueSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicScsiQueueSettings()
+        {
+            ClassId = VnicScsiQueueSettings.ClassIdEnum.VnicScsiQueueSettings;
+            ObjectType = VnicScsiQueueSettings.ObjectTypeEnum.VnicScsiQueueSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicScsiQueueSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of SCSI I/O queue resources the system should allocate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 245)]
+        public long Count
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicScsiQueueSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of descriptors in each SCSI I/O queue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(64, 512)]
+        public long RingSize
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicScsiQueueSettings initObject = new Intersight.Model.VnicScsiQueueSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
+            {
+                initObject.Count = this.Count;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RingSize"))
+            {
+                initObject.RingSize = this.RingSize;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicTcpOffloadSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicTcpOffloadSettings")]
+    public class InitializeIntersightVnicTcpOffloadSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicTcpOffloadSettings()
+        {
+            ClassId = VnicTcpOffloadSettings.ClassIdEnum.VnicTcpOffloadSettings;
+            ObjectType = VnicTcpOffloadSettings.ObjectTypeEnum.VnicTcpOffloadSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicTcpOffloadSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables the reassembly of segmented packets in hardware before sending them to the CPU."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool LargeReceive
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables the CPU to send large packets to the hardware for segmentation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool LargeSend
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicTcpOffloadSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the CPU sends all packet checksums to the hardware for validation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RxChecksum
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the CPU sends all packets to the hardware so that the checksum can be calculated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TxChecksum
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicTcpOffloadSettings initObject = new Intersight.Model.VnicTcpOffloadSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LargeReceive"))
+            {
+                initObject.LargeReceive = this.LargeReceive;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LargeSend"))
+            {
+                initObject.LargeSend = this.LargeSend;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RxChecksum"))
+            {
+                initObject.RxChecksum = this.RxChecksum;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TxChecksum"))
+            {
+                initObject.TxChecksum = this.TxChecksum;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicUsnicSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicUsnicSettings")]
+    public class InitializeIntersightVnicUsnicSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicUsnicSettings()
+        {
+            ClassId = VnicUsnicSettings.ClassIdEnum.VnicUsnicSettings;
+            ObjectType = VnicUsnicSettings.ObjectTypeEnum.VnicUsnicSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicUsnicSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Class of Service to be used for traffic on the usNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Cos
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of usNIC interfaces to be created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Count
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicUsnicSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ethernet Adapter policy to be associated with the usNICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string UsnicAdapterPolicy
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicUsnicSettings initObject = new Intersight.Model.VnicUsnicSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cos"))
+            {
+                initObject.Cos = this.Cos;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
+            {
+                initObject.Count = this.Count;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("UsnicAdapterPolicy"))
+            {
+                initObject.UsnicAdapterPolicy = this.UsnicAdapterPolicy;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVifStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVifStatus")]
+    public class InitializeIntersightVnicVifStatus : PSCmdlet
+    {
+        public InitializeIntersightVnicVifStatus()
+        {
+            ClassId = VnicVifStatus.ClassIdEnum.VnicVifStatus;
+            ObjectType = VnicVifStatus.ObjectTypeEnum.VnicVifStatus;
+            Status = VnicVifStatus.StatusEnum.Ok;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVifStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the vNIC for which the status is reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVifStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The reason for the status - it will be empty if status is ok or validating. If error, it will have the appropriate message indicating the reason for failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Reason
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the vNIC / vHBA is ready for deploy or not.\n* `ok` - No issues with the LCP/SCP/VIF.\n* `error` - The LCP/SCP/VIF cannot be deployed due to error.\n* `validating` - Validation in progress for the LCP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVifStatus.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVifStatus initObject = new Intersight.Model.VnicVifStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reason"))
+            {
+                initObject.Reason = this.Reason;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVlanSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVlanSettings")]
+    public class InitializeIntersightVnicVlanSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicVlanSettings()
+        {
+            ClassId = VnicVlanSettings.ClassIdEnum.VnicVlanSettings;
+            Mode = VnicVlanSettings.ModeEnum.ACCESS;
+            ObjectType = VnicVlanSettings.ObjectTypeEnum.VnicVlanSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Allowed VLAN IDs of the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
+        public string AllowedVlans
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVlanSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Native VLAN ID of the virtual interface or the corresponding vethernet on the peer Fabric Interconnect to which the virtual interface is connected. Setting the ID to 0 will not associate any native VLAN to the traffic on the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DefaultVlan
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Option to determine if the port can carry single VLAN (Access) or multiple VLANs (Trunk) traffic.\n* `ACCESS` - An access port carries traffic only for a single VLAN on the interface.\n* `TRUNK` - A trunk port can have two or more VLANs configured on the interface. It can carry traffic for several VLANs simultaneously."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVlanSettings.ModeEnum Mode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVlanSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVlanSettings initObject = new Intersight.Model.VnicVlanSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllowedVlans"))
+            {
+                initObject.AllowedVlans = this.AllowedVlans;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultVlan"))
+            {
+                initObject.DefaultVlan = this.DefaultVlan;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
+            {
+                initObject.Mode = this.Mode;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVmqSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVmqSettings")]
+    public class InitializeIntersightVnicVmqSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicVmqSettings()
+        {
+            ClassId = VnicVmqSettings.ClassIdEnum.VnicVmqSettings;
+            ObjectType = VnicVmqSettings.ObjectTypeEnum.VnicVmqSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVmqSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables VMQ feature on the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables Virtual Machine Multi-Queue feature on the virtual interface. VMMQ allows configuration of multiple I/O queues for a single VM and thus distributes traffic across multiple CPU cores in a VM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool MultiQueueSupport
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of interrupt resources to be allocated. Recommended value is the number of CPU threads or logical processors available in the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 514)]
+        public long NumInterrupts
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of sub vNICs to be created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NumSubVnics
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of hardware Virtual Machine Queues to be allocated. The number of VMQs per adapter must be one more than the maximum number of VM NICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 128)]
+        public long NumVmqs
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVmqSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ethernet Adapter policy to be associated with the Sub vNICs. The Transmit Queue and Receive Queue resource value of VMMQ adapter policy should be greater than or equal to the configured number of sub vNICs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VmmqAdapterPolicy
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVmqSettings initObject = new Intersight.Model.VnicVmqSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MultiQueueSupport"))
+            {
+                initObject.MultiQueueSupport = this.MultiQueueSupport;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumInterrupts"))
+            {
+                initObject.NumInterrupts = this.NumInterrupts;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumSubVnics"))
+            {
+                initObject.NumSubVnics = this.NumSubVnics;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumVmqs"))
+            {
+                initObject.NumVmqs = this.NumVmqs;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("VmmqAdapterPolicy"))
+            {
+                initObject.VmmqAdapterPolicy = this.VmmqAdapterPolicy;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVsanSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVsanSettings")]
+    public class InitializeIntersightVnicVsanSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicVsanSettings()
+        {
+            ClassId = VnicVsanSettings.ClassIdEnum.VnicVsanSettings;
+            ObjectType = VnicVsanSettings.ObjectTypeEnum.VnicVsanSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVsanSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Default VLAN of the virtual interface in Standalone Rack server. Setting the value to 0 is equivalent to None and will not associate any Default VLAN to the traffic on the virtual interface (0-4094)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DefaultVlanId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VSAN ID of the virtual interface in FI attached server (1-4094)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 4094)]
+        public long Id
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVsanSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVsanSettings initObject = new Intersight.Model.VnicVsanSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultVlanId"))
+            {
+                initObject.DefaultVlanId = this.DefaultVlanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
+            {
+                initObject.Id = this.Id;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVxlanSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVxlanSettings")]
+    public class InitializeIntersightVnicVxlanSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicVxlanSettings()
+        {
+            ClassId = VnicVxlanSettings.ClassIdEnum.VnicVxlanSettings;
+            ObjectType = VnicVxlanSettings.ObjectTypeEnum.VnicVxlanSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVxlanSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Status of the Virtual Extensible LAN Protocol on the virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVxlanSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVxlanSettings initObject = new Intersight.Model.VnicVxlanSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

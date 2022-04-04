@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BiosTokenSettings.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosBootDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBiosTokenSettings")]
-    public class InitializeIntersightBiosTokenSettings : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosBootDevice")]
+    public class InitializeIntersightBiosBootDevice : PSCmdlet
     {
-        public InitializeIntersightBiosTokenSettings()
+        public InitializeIntersightBiosBootDevice()
         {
-            ClassId = BiosTokenSettings.ClassIdEnum.BiosTokenSettings;
-            ObjectType = BiosTokenSettings.ObjectTypeEnum.BiosTokenSettings;
+            ClassId = BiosBootDevice.ClassIdEnum.BiosBootDevice;
+            ObjectType = BiosBootDevice.ObjectTypeEnum.BiosBootDevice;
 
         }
         // <summary>
@@ -34,7 +34,101 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BiosTokenSettings.ClassIdEnum ClassId
+        public BiosBootDevice.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosBootDevice.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BiosBootDevice initObject = new Intersight.Model.BiosBootDevice();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosBootMode.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosBootMode")]
+    public class InitializeIntersightBiosBootMode : PSCmdlet
+    {
+        public InitializeIntersightBiosBootMode()
+        {
+            ClassId = BiosBootMode.ClassIdEnum.BiosBootMode;
+            ObjectType = BiosBootMode.ObjectTypeEnum.BiosBootMode;
+
+        }
+        // <summary>
+        /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ActualBootMode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosBootMode.ClassIdEnum ClassId
         {
             get;
             set;
@@ -74,17 +168,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BiosTokenSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Parent server serial number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Serial
+        public BiosBootMode.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -102,7 +186,11 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.BiosTokenSettings initObject = new Intersight.Model.BiosTokenSettings();
+            Intersight.Model.BiosBootMode initObject = new Intersight.Model.BiosBootMode();
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActualBootMode"))
+            {
+                initObject.ActualBootMode = this.ActualBootMode;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -121,346 +209,6 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
-            {
-                initObject.Serial = this.Serial;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BiosVfSelectMemoryRasConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBiosVfSelectMemoryRasConfiguration")]
-    public class InitializeIntersightBiosVfSelectMemoryRasConfiguration : PSCmdlet
-    {
-        public InitializeIntersightBiosVfSelectMemoryRasConfiguration()
-        {
-            ClassId = BiosVfSelectMemoryRasConfiguration.ClassIdEnum.BiosVfSelectMemoryRasConfiguration;
-            ObjectType = BiosVfSelectMemoryRasConfiguration.ObjectTypeEnum.BiosVfSelectMemoryRasConfiguration;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BiosVfSelectMemoryRasConfiguration.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.ComputeBladeRelationship ComputeBlade
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.ComputeRackUnitRelationship ComputeRackUnit
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BiosVfSelectMemoryRasConfiguration.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Parent server serial number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Serial
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BiosVfSelectMemoryRasConfiguration initObject = new Intersight.Model.BiosVfSelectMemoryRasConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ComputeBlade"))
-            {
-                initObject.ComputeBlade = this.ComputeBlade;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ComputeRackUnit"))
-            {
-                initObject.ComputeRackUnit = this.ComputeRackUnit;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
-            {
-                initObject.Serial = this.Serial;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BiosSystemBootOrder.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBiosSystemBootOrder")]
-    public class InitializeIntersightBiosSystemBootOrder : PSCmdlet
-    {
-        public InitializeIntersightBiosSystemBootOrder()
-        {
-            ClassId = BiosSystemBootOrder.ClassIdEnum.BiosSystemBootOrder;
-            ObjectType = BiosSystemBootOrder.ObjectTypeEnum.BiosSystemBootOrder;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a biosUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.BiosUnitRelationship BiosUnit
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BiosSystemBootOrder.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BiosSystemBootOrder.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BiosSystemBootOrder initObject = new Intersight.Model.BiosSystemBootOrder();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("BiosUnit"))
-            {
-                initObject.BiosUnit = this.BiosUnit;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BiosUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBiosUnit")]
-    public class InitializeIntersightBiosUnit : PSCmdlet
-    {
-        public InitializeIntersightBiosUnit()
-        {
-            ClassId = BiosUnit.ClassIdEnum.BiosUnit;
-            ObjectType = BiosUnit.ObjectTypeEnum.BiosUnit;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BiosUnit.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BiosUnit.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.BiosSystemBootOrderRelationship SystemBootOrder
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BiosUnit initObject = new Intersight.Model.BiosUnit();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
-            {
-                initObject.PreviousFru = this.PreviousFru;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SystemBootOrder"))
-            {
-                initObject.SystemBootOrder = this.SystemBootOrder;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -6446,15 +6194,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BiosBootDevice.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosSystemBootOrder.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBiosBootDevice")]
-    public class InitializeIntersightBiosBootDevice : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosSystemBootOrder")]
+    public class InitializeIntersightBiosSystemBootOrder : PSCmdlet
     {
-        public InitializeIntersightBiosBootDevice()
+        public InitializeIntersightBiosSystemBootOrder()
         {
-            ClassId = BiosBootDevice.ClassIdEnum.BiosBootDevice;
-            ObjectType = BiosBootDevice.ObjectTypeEnum.BiosBootDevice;
+            ClassId = BiosSystemBootOrder.ClassIdEnum.BiosSystemBootOrder;
+            ObjectType = BiosSystemBootOrder.ObjectTypeEnum.BiosSystemBootOrder;
 
         }
         // <summary>
@@ -6468,11 +6216,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a biosUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BiosUnitRelationship BiosUnit
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BiosBootDevice.ClassIdEnum ClassId
+        public BiosSystemBootOrder.ClassIdEnum ClassId
         {
             get;
             set;
@@ -6492,7 +6250,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BiosBootDevice.ObjectTypeEnum ObjectType
+        public BiosSystemBootOrder.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -6510,10 +6268,14 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.BiosBootDevice initObject = new Intersight.Model.BiosBootDevice();
+            Intersight.Model.BiosSystemBootOrder initObject = new Intersight.Model.BiosSystemBootOrder();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BiosUnit"))
+            {
+                initObject.BiosUnit = this.BiosUnit;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
@@ -6530,26 +6292,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BiosBootMode.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTokenSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBiosBootMode")]
-    public class InitializeIntersightBiosBootMode : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTokenSettings")]
+    public class InitializeIntersightBiosTokenSettings : PSCmdlet
     {
-        public InitializeIntersightBiosBootMode()
+        public InitializeIntersightBiosTokenSettings()
         {
-            ClassId = BiosBootMode.ClassIdEnum.BiosBootMode;
-            ObjectType = BiosBootMode.ObjectTypeEnum.BiosBootMode;
+            ClassId = BiosTokenSettings.ClassIdEnum.BiosTokenSettings;
+            ObjectType = BiosTokenSettings.ObjectTypeEnum.BiosTokenSettings;
 
-        }
-        // <summary>
-        /// <para type="description">"The actual BIOS boot mode as reported by the platform BIOS."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ActualBootMode
-        {
-            get;
-            set;
         }
         // <summary>
         /// <para type="description"></para>
@@ -6566,7 +6318,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BiosBootMode.ClassIdEnum ClassId
+        public BiosTokenSettings.ClassIdEnum ClassId
         {
             get;
             set;
@@ -6606,7 +6358,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BiosBootMode.ObjectTypeEnum ObjectType
+        public BiosTokenSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Parent server serial number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Serial
         {
             get;
             set;
@@ -6624,11 +6386,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.BiosBootMode initObject = new Intersight.Model.BiosBootMode();
-            if (this.MyInvocation.BoundParameters.ContainsKey("ActualBootMode"))
-            {
-                initObject.ActualBootMode = this.ActualBootMode;
-            }
+            Intersight.Model.BiosTokenSettings initObject = new Intersight.Model.BiosTokenSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -6647,6 +6405,248 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
+            {
+                initObject.Serial = this.Serial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosUnit")]
+    public class InitializeIntersightBiosUnit : PSCmdlet
+    {
+        public InitializeIntersightBiosUnit()
+        {
+            ClassId = BiosUnit.ClassIdEnum.BiosUnit;
+            ObjectType = BiosUnit.ObjectTypeEnum.BiosUnit;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosUnit.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosUnit.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a biosSystemBootOrder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BiosSystemBootOrderRelationship SystemBootOrder
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BiosUnit initObject = new Intersight.Model.BiosUnit();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
+            {
+                initObject.PreviousFru = this.PreviousFru;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemBootOrder"))
+            {
+                initObject.SystemBootOrder = this.SystemBootOrder;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosVfSelectMemoryRasConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosVfSelectMemoryRasConfiguration")]
+    public class InitializeIntersightBiosVfSelectMemoryRasConfiguration : PSCmdlet
+    {
+        public InitializeIntersightBiosVfSelectMemoryRasConfiguration()
+        {
+            ClassId = BiosVfSelectMemoryRasConfiguration.ClassIdEnum.BiosVfSelectMemoryRasConfiguration;
+            ObjectType = BiosVfSelectMemoryRasConfiguration.ObjectTypeEnum.BiosVfSelectMemoryRasConfiguration;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosVfSelectMemoryRasConfiguration.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ComputeBladeRelationship ComputeBlade
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ComputeRackUnitRelationship ComputeRackUnit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosVfSelectMemoryRasConfiguration.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Parent server serial number."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BiosVfSelectMemoryRasConfiguration initObject = new Intersight.Model.BiosVfSelectMemoryRasConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ComputeBlade"))
+            {
+                initObject.ComputeBlade = this.ComputeBlade;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ComputeRackUnit"))
+            {
+                initObject.ComputeRackUnit = this.ComputeRackUnit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
+            {
+                initObject.Serial = this.Serial;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

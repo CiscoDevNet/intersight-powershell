@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasMostRunTasks.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasConnectorPack.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasMostRunTasks")]
-    public class InitializeIntersightIaasMostRunTasks : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasConnectorPack")]
+    public class InitializeIntersightIaasConnectorPack : PSCmdlet
     {
-        public InitializeIntersightIaasMostRunTasks()
+        public InitializeIntersightIaasConnectorPack()
         {
-            ClassId = IaasMostRunTasks.ClassIdEnum.IaasMostRunTasks;
-            ObjectType = IaasMostRunTasks.ObjectTypeEnum.IaasMostRunTasks;
+            ClassId = IaasConnectorPack.ClassIdEnum.IaasConnectorPack;
+            ObjectType = IaasConnectorPack.ObjectTypeEnum.IaasConnectorPack;
 
         }
         // <summary>
@@ -34,7 +34,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public IaasMostRunTasks.ClassIdEnum ClassId
+        public IaasConnectorPack.ClassIdEnum ClassId
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public IaasMostRunTasks.ObjectTypeEnum ObjectType
+        public IaasConnectorPack.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -72,7 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.IaasMostRunTasks initObject = new Intersight.Model.IaasMostRunTasks();
+            Intersight.Model.IaasConnectorPack initObject = new Intersight.Model.IaasConnectorPack();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -176,6 +176,90 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasDiagnosticMessages.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasDiagnosticMessages")]
+    public class InitializeIntersightIaasDiagnosticMessages : PSCmdlet
+    {
+        public InitializeIntersightIaasDiagnosticMessages()
+        {
+            ClassId = IaasDiagnosticMessages.ClassIdEnum.IaasDiagnosticMessages;
+            ObjectType = IaasDiagnosticMessages.ObjectTypeEnum.IaasDiagnosticMessages;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasDiagnosticMessages.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasDiagnosticMessages.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.IaasDiagnosticMessages initObject = new Intersight.Model.IaasDiagnosticMessages();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseInfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseInfo")]
@@ -260,15 +344,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasConnectorPack.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseKeysInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasConnectorPack")]
-    public class InitializeIntersightIaasConnectorPack : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseKeysInfo")]
+    public class InitializeIntersightIaasLicenseKeysInfo : PSCmdlet
     {
-        public InitializeIntersightIaasConnectorPack()
+        public InitializeIntersightIaasLicenseKeysInfo()
         {
-            ClassId = IaasConnectorPack.ClassIdEnum.IaasConnectorPack;
-            ObjectType = IaasConnectorPack.ObjectTypeEnum.IaasConnectorPack;
+            ClassId = IaasLicenseKeysInfo.ClassIdEnum.IaasLicenseKeysInfo;
+            ObjectType = IaasLicenseKeysInfo.ObjectTypeEnum.IaasLicenseKeysInfo;
 
         }
         // <summary>
@@ -286,7 +370,119 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public IaasConnectorPack.ClassIdEnum ClassId
+        public IaasLicenseKeysInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasLicenseKeysInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.IaasLicenseKeysInfo initObject = new Intersight.Model.IaasLicenseKeysInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseUtilizationInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseUtilizationInfo")]
+    public class InitializeIntersightIaasLicenseUtilizationInfo : PSCmdlet
+    {
+        public InitializeIntersightIaasLicenseUtilizationInfo()
+        {
+            ClassId = IaasLicenseUtilizationInfo.ClassIdEnum.IaasLicenseUtilizationInfo;
+            ObjectType = IaasLicenseUtilizationInfo.ObjectTypeEnum.IaasLicenseUtilizationInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasLicenseUtilizationInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasLicenseUtilizationInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.IaasLicenseUtilizationInfo initObject = new Intersight.Model.IaasLicenseUtilizationInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasMostRunTasks.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasMostRunTasks")]
+    public class InitializeIntersightIaasMostRunTasks : PSCmdlet
+    {
+        public InitializeIntersightIaasMostRunTasks()
+        {
+            ClassId = IaasMostRunTasks.ClassIdEnum.IaasMostRunTasks;
+            ObjectType = IaasMostRunTasks.ObjectTypeEnum.IaasMostRunTasks;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasMostRunTasks.ClassIdEnum ClassId
         {
             get;
             set;
@@ -306,7 +502,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public IaasConnectorPack.ObjectTypeEnum ObjectType
+        public IaasMostRunTasks.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -324,7 +520,175 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.IaasConnectorPack initObject = new Intersight.Model.IaasConnectorPack();
+            Intersight.Model.IaasMostRunTasks initObject = new Intersight.Model.IaasMostRunTasks();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasServiceRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasServiceRequest")]
+    public class InitializeIntersightIaasServiceRequest : PSCmdlet
+    {
+        public InitializeIntersightIaasServiceRequest()
+        {
+            ClassId = IaasServiceRequest.ClassIdEnum.IaasServiceRequest;
+            ObjectType = IaasServiceRequest.ObjectTypeEnum.IaasServiceRequest;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasServiceRequest.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasServiceRequest.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.IaasServiceRequest initObject = new Intersight.Model.IaasServiceRequest();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasUcsdInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasUcsdInfo")]
+    public class InitializeIntersightIaasUcsdInfo : PSCmdlet
+    {
+        public InitializeIntersightIaasUcsdInfo()
+        {
+            ClassId = IaasUcsdInfo.ClassIdEnum.IaasUcsdInfo;
+            ObjectType = IaasUcsdInfo.ObjectTypeEnum.IaasUcsdInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasUcsdInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IaasUcsdInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.IaasUcsdInfo initObject = new Intersight.Model.IaasUcsdInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -428,146 +792,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasWorkflowSteps.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasWorkflowSteps")]
-    public class InitializeIntersightIaasWorkflowSteps : PSCmdlet
-    {
-        public InitializeIntersightIaasWorkflowSteps()
-        {
-            ClassId = IaasWorkflowSteps.ClassIdEnum.IaasWorkflowSteps;
-            ObjectType = IaasWorkflowSteps.ObjectTypeEnum.IaasWorkflowSteps;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasWorkflowSteps.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasWorkflowSteps.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.IaasWorkflowSteps initObject = new Intersight.Model.IaasWorkflowSteps();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasServiceRequest.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasServiceRequest")]
-    public class InitializeIntersightIaasServiceRequest : PSCmdlet
-    {
-        public InitializeIntersightIaasServiceRequest()
-        {
-            ClassId = IaasServiceRequest.ClassIdEnum.IaasServiceRequest;
-            ObjectType = IaasServiceRequest.ObjectTypeEnum.IaasServiceRequest;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasServiceRequest.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasServiceRequest.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.IaasServiceRequest initObject = new Intersight.Model.IaasServiceRequest();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IaasUcsdMessages.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIaasUcsdMessages")]
@@ -652,15 +876,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasDiagnosticMessages.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IaasWorkflowSteps.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasDiagnosticMessages")]
-    public class InitializeIntersightIaasDiagnosticMessages : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIaasWorkflowSteps")]
+    public class InitializeIntersightIaasWorkflowSteps : PSCmdlet
     {
-        public InitializeIntersightIaasDiagnosticMessages()
+        public InitializeIntersightIaasWorkflowSteps()
         {
-            ClassId = IaasDiagnosticMessages.ClassIdEnum.IaasDiagnosticMessages;
-            ObjectType = IaasDiagnosticMessages.ObjectTypeEnum.IaasDiagnosticMessages;
+            ClassId = IaasWorkflowSteps.ClassIdEnum.IaasWorkflowSteps;
+            ObjectType = IaasWorkflowSteps.ObjectTypeEnum.IaasWorkflowSteps;
 
         }
         // <summary>
@@ -678,17 +902,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public IaasDiagnosticMessages.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
+        public IaasWorkflowSteps.ClassIdEnum ClassId
         {
             get;
             set;
@@ -698,17 +912,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public IaasDiagnosticMessages.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
+        public IaasWorkflowSteps.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -716,211 +920,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.IaasDiagnosticMessages initObject = new Intersight.Model.IaasDiagnosticMessages();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseUtilizationInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseUtilizationInfo")]
-    public class InitializeIntersightIaasLicenseUtilizationInfo : PSCmdlet
-    {
-        public InitializeIntersightIaasLicenseUtilizationInfo()
-        {
-            ClassId = IaasLicenseUtilizationInfo.ClassIdEnum.IaasLicenseUtilizationInfo;
-            ObjectType = IaasLicenseUtilizationInfo.ObjectTypeEnum.IaasLicenseUtilizationInfo;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasLicenseUtilizationInfo.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasLicenseUtilizationInfo.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.IaasLicenseUtilizationInfo initObject = new Intersight.Model.IaasLicenseUtilizationInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasUcsdInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasUcsdInfo")]
-    public class InitializeIntersightIaasUcsdInfo : PSCmdlet
-    {
-        public InitializeIntersightIaasUcsdInfo()
-        {
-            ClassId = IaasUcsdInfo.ClassIdEnum.IaasUcsdInfo;
-            ObjectType = IaasUcsdInfo.ObjectTypeEnum.IaasUcsdInfo;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasUcsdInfo.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasUcsdInfo.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.IaasUcsdInfo initObject = new Intersight.Model.IaasUcsdInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IaasLicenseKeysInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIaasLicenseKeysInfo")]
-    public class InitializeIntersightIaasLicenseKeysInfo : PSCmdlet
-    {
-        public InitializeIntersightIaasLicenseKeysInfo()
-        {
-            ClassId = IaasLicenseKeysInfo.ClassIdEnum.IaasLicenseKeysInfo;
-            ObjectType = IaasLicenseKeysInfo.ObjectTypeEnum.IaasLicenseKeysInfo;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasLicenseKeysInfo.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IaasLicenseKeysInfo.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.IaasLicenseKeysInfo initObject = new Intersight.Model.IaasLicenseKeysInfo();
+            Intersight.Model.IaasWorkflowSteps initObject = new Intersight.Model.IaasWorkflowSteps();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

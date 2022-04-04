@@ -251,6 +251,18 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove SdcardPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdcardPolicy")]
+    public class RemoveIntersightSdcardPolicy : RemoveCmdletBase
+    {
+        public RemoveIntersightSdcardPolicy()
+        {
+            ApiInstance = new SdcardApi(Config);
+            MethodName = "DeleteSdcardPolicyWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SdcardPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightSdcardPolicy")]
@@ -260,7 +272,7 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new SdcardApi(Config);
             ModelObject = new SdcardPolicy();
-            MethodName = "PatchSdcardPolicyWithHttpInfo";
+            MethodName = "UpdateSdcardPolicyWithHttpInfo";
         }
 
 
@@ -360,17 +372,5 @@ namespace Intersight.PowerShell
             set;
         }
 
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SdcardPolicy.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdcardPolicy")]
-    public class RemoveIntersightSdcardPolicy : RemoveCmdletBase
-    {
-        public RemoveIntersightSdcardPolicy()
-        {
-            ApiInstance = new SdcardApi(Config);
-            MethodName = "DeleteSdcardPolicyWithHttpInfo";
-        }
     }
 }
