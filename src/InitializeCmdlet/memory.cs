@@ -8,190 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryGoal.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryGoal")]
-    public class InitializeIntersightMemoryPersistentMemoryGoal : PSCmdlet
-    {
-        public InitializeIntersightMemoryPersistentMemoryGoal()
-        {
-            ClassId = MemoryPersistentMemoryGoal.ClassIdEnum.MemoryPersistentMemoryGoal;
-            ObjectType = MemoryPersistentMemoryGoal.ObjectTypeEnum.MemoryPersistentMemoryGoal;
-            PersistentMemoryType = MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum.AppDirect;
-            SocketId = MemoryPersistentMemoryGoal.SocketIdEnum.AllSockets;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryGoal.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Volatile memory percentage."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MemoryModePercentage
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryGoal.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of the Persistent Memory configuration where the Persistent Memory Modules are combined in an interleaved set or not.\n* `app-direct` - The App Direct interleaved Persistent Memory type.\n* `app-direct-non-interleaved` - The App Direct non-interleaved Persistent Memory type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum PersistentMemoryType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"CPU Socket ID to which this goal will be applied.\n* `All Sockets` - All the CPU socket IDs in a server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryGoal.SocketIdEnum SocketId
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.MemoryPersistentMemoryGoal initObject = new Intersight.Model.MemoryPersistentMemoryGoal();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryModePercentage"))
-            {
-                initObject.MemoryModePercentage = this.MemoryModePercentage;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentMemoryType"))
-            {
-                initObject.PersistentMemoryType = this.PersistentMemoryType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SocketId"))
-            {
-                initObject.SocketId = this.SocketId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryConfiguration.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryConfiguration")]
-    public class InitializeIntersightMemoryPersistentMemoryConfiguration : PSCmdlet
-    {
-        public InitializeIntersightMemoryPersistentMemoryConfiguration()
-        {
-            ClassId = MemoryPersistentMemoryConfiguration.ClassIdEnum.MemoryPersistentMemoryConfiguration;
-            ObjectType = MemoryPersistentMemoryConfiguration.ObjectTypeEnum.MemoryPersistentMemoryConfiguration;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryConfiguration.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryConfiguration.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.MemoryPersistentMemoryConfiguration initObject = new Intersight.Model.MemoryPersistentMemoryConfiguration();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize MemoryArray.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightMemoryArray")]
@@ -312,6 +128,358 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryConfigResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryConfigResult")]
+    public class InitializeIntersightMemoryPersistentMemoryConfigResult : PSCmdlet
+    {
+        public InitializeIntersightMemoryPersistentMemoryConfigResult()
+        {
+            ClassId = MemoryPersistentMemoryConfigResult.ClassIdEnum.MemoryPersistentMemoryConfigResult;
+            ObjectType = MemoryPersistentMemoryConfigResult.ObjectTypeEnum.MemoryPersistentMemoryConfigResult;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryConfigResult.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryConfigResult.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MemoryPersistentMemoryConfigResult initObject = new Intersight.Model.MemoryPersistentMemoryConfigResult();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryConfiguration")]
+    public class InitializeIntersightMemoryPersistentMemoryConfiguration : PSCmdlet
+    {
+        public InitializeIntersightMemoryPersistentMemoryConfiguration()
+        {
+            ClassId = MemoryPersistentMemoryConfiguration.ClassIdEnum.MemoryPersistentMemoryConfiguration;
+            ObjectType = MemoryPersistentMemoryConfiguration.ObjectTypeEnum.MemoryPersistentMemoryConfiguration;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryConfiguration.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryConfiguration.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MemoryPersistentMemoryConfiguration initObject = new Intersight.Model.MemoryPersistentMemoryConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryGoal.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryGoal")]
+    public class InitializeIntersightMemoryPersistentMemoryGoal : PSCmdlet
+    {
+        public InitializeIntersightMemoryPersistentMemoryGoal()
+        {
+            ClassId = MemoryPersistentMemoryGoal.ClassIdEnum.MemoryPersistentMemoryGoal;
+            ObjectType = MemoryPersistentMemoryGoal.ObjectTypeEnum.MemoryPersistentMemoryGoal;
+            PersistentMemoryType = MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum.AppDirect;
+            SocketId = MemoryPersistentMemoryGoal.SocketIdEnum.AllSockets;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryGoal.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Volatile memory percentage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MemoryModePercentage
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryGoal.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the Persistent Memory configuration where the Persistent Memory Modules are combined in an interleaved set or not.\n* `app-direct` - The App Direct interleaved Persistent Memory type.\n* `app-direct-non-interleaved` - The App Direct non-interleaved Persistent Memory type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryGoal.PersistentMemoryTypeEnum PersistentMemoryType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CPU Socket ID to which this goal will be applied.\n* `All Sockets` - All the CPU socket IDs in a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryGoal.SocketIdEnum SocketId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MemoryPersistentMemoryGoal initObject = new Intersight.Model.MemoryPersistentMemoryGoal();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryModePercentage"))
+            {
+                initObject.MemoryModePercentage = this.MemoryModePercentage;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentMemoryType"))
+            {
+                initObject.PersistentMemoryType = this.PersistentMemoryType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SocketId"))
+            {
+                initObject.SocketId = this.SocketId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryLocalSecurity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryLocalSecurity")]
+    public class InitializeIntersightMemoryPersistentMemoryLocalSecurity : PSCmdlet
+    {
+        public InitializeIntersightMemoryPersistentMemoryLocalSecurity()
+        {
+            ClassId = MemoryPersistentMemoryLocalSecurity.ClassIdEnum.MemoryPersistentMemoryLocalSecurity;
+            ObjectType = MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum.MemoryPersistentMemoryLocalSecurity;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryLocalSecurity.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Persistent Memory Security state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Secure passphrase to be applied on the Persistent Memory Modules on the server. The allowed characters are a-z, A to Z, 0-9, and special characters =, \\u0021, &, \\#, $, %, +, ^, @, _, *, -."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
+        public string SecurePassphrase
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MemoryPersistentMemoryLocalSecurity initObject = new Intersight.Model.MemoryPersistentMemoryLocalSecurity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecurePassphrase"))
+            {
+                initObject.SecurePassphrase = this.SecurePassphrase;
             }
             WriteObject(initObject);
         }
@@ -447,15 +615,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryRegion.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryNamespace.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryRegion")]
-    public class InitializeIntersightMemoryPersistentMemoryRegion : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryNamespace")]
+    public class InitializeIntersightMemoryPersistentMemoryNamespace : PSCmdlet
     {
-        public InitializeIntersightMemoryPersistentMemoryRegion()
+        public InitializeIntersightMemoryPersistentMemoryNamespace()
         {
-            ClassId = MemoryPersistentMemoryRegion.ClassIdEnum.MemoryPersistentMemoryRegion;
-            ObjectType = MemoryPersistentMemoryRegion.ObjectTypeEnum.MemoryPersistentMemoryRegion;
+            ClassId = MemoryPersistentMemoryNamespace.ClassIdEnum.MemoryPersistentMemoryNamespace;
+            ObjectType = MemoryPersistentMemoryNamespace.ObjectTypeEnum.MemoryPersistentMemoryNamespace;
 
         }
         // <summary>
@@ -473,7 +641,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public MemoryPersistentMemoryRegion.ClassIdEnum ClassId
+        public MemoryPersistentMemoryNamespace.ClassIdEnum ClassId
         {
             get;
             set;
@@ -493,7 +661,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public MemoryPersistentMemoryRegion.ObjectTypeEnum ObjectType
+        public MemoryPersistentMemoryNamespace.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -511,371 +679,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.MemoryPersistentMemoryRegion initObject = new Intersight.Model.MemoryPersistentMemoryRegion();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryLocalSecurity.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryLocalSecurity")]
-    public class InitializeIntersightMemoryPersistentMemoryLocalSecurity : PSCmdlet
-    {
-        public InitializeIntersightMemoryPersistentMemoryLocalSecurity()
-        {
-            ClassId = MemoryPersistentMemoryLocalSecurity.ClassIdEnum.MemoryPersistentMemoryLocalSecurity;
-            ObjectType = MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum.MemoryPersistentMemoryLocalSecurity;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryLocalSecurity.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Persistent Memory Security state."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryLocalSecurity.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Secure passphrase to be applied on the Persistent Memory Modules on the server. The allowed characters are a-z, A to Z, 0-9, and special characters =, \\u0021, &, \\#, $, %, +, ^, @, _, *, -."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
-        public string SecurePassphrase
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.MemoryPersistentMemoryLocalSecurity initObject = new Intersight.Model.MemoryPersistentMemoryLocalSecurity();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SecurePassphrase"))
-            {
-                initObject.SecurePassphrase = this.SecurePassphrase;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryUnit")]
-    public class InitializeIntersightMemoryUnit : PSCmdlet
-    {
-        public InitializeIntersightMemoryUnit()
-        {
-            ClassId = MemoryUnit.ClassIdEnum.MemoryUnit;
-            ObjectType = MemoryUnit.ObjectTypeEnum.MemoryUnit;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryUnit.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryUnit.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.MemoryUnit initObject = new Intersight.Model.MemoryUnit();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
-            {
-                initObject.PreviousFru = this.PreviousFru;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryUnit.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryUnit")]
-    public class InitializeIntersightMemoryPersistentMemoryUnit : PSCmdlet
-    {
-        public InitializeIntersightMemoryPersistentMemoryUnit()
-        {
-            ClassId = MemoryPersistentMemoryUnit.ClassIdEnum.MemoryPersistentMemoryUnit;
-            ObjectType = MemoryPersistentMemoryUnit.ObjectTypeEnum.MemoryPersistentMemoryUnit;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryUnit.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryUnit.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.MemoryPersistentMemoryUnit initObject = new Intersight.Model.MemoryPersistentMemoryUnit();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
-            {
-                initObject.PreviousFru = this.PreviousFru;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryConfigResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryConfigResult")]
-    public class InitializeIntersightMemoryPersistentMemoryConfigResult : PSCmdlet
-    {
-        public InitializeIntersightMemoryPersistentMemoryConfigResult()
-        {
-            ClassId = MemoryPersistentMemoryConfigResult.ClassIdEnum.MemoryPersistentMemoryConfigResult;
-            ObjectType = MemoryPersistentMemoryConfigResult.ObjectTypeEnum.MemoryPersistentMemoryConfigResult;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryConfigResult.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MemoryPersistentMemoryConfigResult.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.MemoryPersistentMemoryConfigResult initObject = new Intersight.Model.MemoryPersistentMemoryConfigResult();
+            Intersight.Model.MemoryPersistentMemoryNamespace initObject = new Intersight.Model.MemoryPersistentMemoryNamespace();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1190,15 +994,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryNamespace.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryRegion.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryNamespace")]
-    public class InitializeIntersightMemoryPersistentMemoryNamespace : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryRegion")]
+    public class InitializeIntersightMemoryPersistentMemoryRegion : PSCmdlet
     {
-        public InitializeIntersightMemoryPersistentMemoryNamespace()
+        public InitializeIntersightMemoryPersistentMemoryRegion()
         {
-            ClassId = MemoryPersistentMemoryNamespace.ClassIdEnum.MemoryPersistentMemoryNamespace;
-            ObjectType = MemoryPersistentMemoryNamespace.ObjectTypeEnum.MemoryPersistentMemoryNamespace;
+            ClassId = MemoryPersistentMemoryRegion.ClassIdEnum.MemoryPersistentMemoryRegion;
+            ObjectType = MemoryPersistentMemoryRegion.ObjectTypeEnum.MemoryPersistentMemoryRegion;
 
         }
         // <summary>
@@ -1216,7 +1020,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public MemoryPersistentMemoryNamespace.ClassIdEnum ClassId
+        public MemoryPersistentMemoryRegion.ClassIdEnum ClassId
         {
             get;
             set;
@@ -1236,7 +1040,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public MemoryPersistentMemoryNamespace.ObjectTypeEnum ObjectType
+        public MemoryPersistentMemoryRegion.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -1254,7 +1058,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.MemoryPersistentMemoryNamespace initObject = new Intersight.Model.MemoryPersistentMemoryNamespace();
+            Intersight.Model.MemoryPersistentMemoryRegion initObject = new Intersight.Model.MemoryPersistentMemoryRegion();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1265,6 +1069,202 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryPersistentMemoryUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryPersistentMemoryUnit")]
+    public class InitializeIntersightMemoryPersistentMemoryUnit : PSCmdlet
+    {
+        public InitializeIntersightMemoryPersistentMemoryUnit()
+        {
+            ClassId = MemoryPersistentMemoryUnit.ClassIdEnum.MemoryPersistentMemoryUnit;
+            ObjectType = MemoryPersistentMemoryUnit.ObjectTypeEnum.MemoryPersistentMemoryUnit;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryUnit.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryPersistentMemoryUnit.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MemoryPersistentMemoryUnit initObject = new Intersight.Model.MemoryPersistentMemoryUnit();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
+            {
+                initObject.PreviousFru = this.PreviousFru;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MemoryUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMemoryUnit")]
+    public class InitializeIntersightMemoryUnit : PSCmdlet
+    {
+        public InitializeIntersightMemoryUnit()
+        {
+            ClassId = MemoryUnit.ClassIdEnum.MemoryUnit;
+            ObjectType = MemoryUnit.ObjectTypeEnum.MemoryUnit;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryUnit.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MemoryUnit.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MemoryUnit initObject = new Intersight.Model.MemoryUnit();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
+            {
+                initObject.PreviousFru = this.PreviousFru;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

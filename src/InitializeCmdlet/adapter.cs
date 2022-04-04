@@ -8,26 +8,16 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterUnitExpander.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterAdapterConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterUnitExpander")]
-    public class InitializeIntersightAdapterUnitExpander : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterAdapterConfig")]
+    public class InitializeIntersightAdapterAdapterConfig : PSCmdlet
     {
-        public InitializeIntersightAdapterUnitExpander()
+        public InitializeIntersightAdapterAdapterConfig()
         {
-            ClassId = AdapterUnitExpander.ClassIdEnum.AdapterUnitExpander;
-            ObjectType = AdapterUnitExpander.ObjectTypeEnum.AdapterUnitExpander;
+            ClassId = AdapterAdapterConfig.ClassIdEnum.AdapterAdapterConfig;
+            ObjectType = AdapterAdapterConfig.ObjectTypeEnum.AdapterAdapterConfig;
 
-        }
-        // <summary>
-        /// <para type="description">"A reference to a adapterUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AdapterUnitRelationship AdapterUnit
-        {
-            get;
-            set;
         }
         // <summary>
         /// <para type="description"></para>
@@ -44,7 +34,143 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AdapterUnitExpander.ClassIdEnum ClassId
+        public AdapterAdapterConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.AdapterDceInterfaceSettings> DceInterfaceSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Global Ethernet settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AdapterEthSettings EthSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Global Fibre Channel settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AdapterFcSettings FcSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterAdapterConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port Channel settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AdapterPortChannelSettings PortChannelSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PCIe slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|1[0-5]|MLOM)$")]
+        public string SlotId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.AdapterAdapterConfig initObject = new Intersight.Model.AdapterAdapterConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DceInterfaceSettings"))
+            {
+                initObject.DceInterfaceSettings = this.DceInterfaceSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthSettings"))
+            {
+                initObject.EthSettings = this.EthSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcSettings"))
+            {
+                initObject.FcSettings = this.FcSettings;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelSettings"))
+            {
+                initObject.PortChannelSettings = this.PortChannelSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterConfigPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterConfigPolicy")]
+    public class InitializeIntersightAdapterConfigPolicy : PSCmdlet
+    {
+        public InitializeIntersightAdapterConfigPolicy()
+        {
+            ClassId = AdapterConfigPolicy.ClassIdEnum.AdapterConfigPolicy;
+            ObjectType = AdapterConfigPolicy.ObjectTypeEnum.AdapterConfigPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterConfigPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
         {
             get;
             set;
@@ -60,21 +186,51 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"Name of the concrete policy."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterUnitExpander.ObjectTypeEnum ObjectType
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.EquipmentFruRelationship PreviousFru
+        public AdapterConfigPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.AdapterAdapterConfig> Settings
         {
             get;
             set;
@@ -92,24 +248,36 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.AdapterUnitExpander initObject = new Intersight.Model.AdapterUnitExpander();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnit"))
-            {
-                initObject.AdapterUnit = this.AdapterUnit;
-            }
+            Intersight.Model.AdapterConfigPolicy initObject = new Intersight.Model.AdapterConfigPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
-                initObject.PreviousFru = this.PreviousFru;
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Settings"))
+            {
+                initObject.Settings = this.Settings;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -268,342 +436,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("LldpEnabled"))
             {
                 initObject.LldpEnabled = this.LldpEnabled;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterAdapterConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterAdapterConfig")]
-    public class InitializeIntersightAdapterAdapterConfig : PSCmdlet
-    {
-        public InitializeIntersightAdapterAdapterConfig()
-        {
-            ClassId = AdapterAdapterConfig.ClassIdEnum.AdapterAdapterConfig;
-            ObjectType = AdapterAdapterConfig.ObjectTypeEnum.AdapterAdapterConfig;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterAdapterConfig.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.AdapterDceInterfaceSettings> DceInterfaceSettings
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Global Ethernet settings for this adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AdapterEthSettings EthSettings
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Global Fibre Channel settings for this adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AdapterFcSettings FcSettings
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterAdapterConfig.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Port Channel settings for this adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AdapterPortChannelSettings PortChannelSettings
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"PCIe slot where the VIC adapter is installed. Supported values are (1-15) and MLOM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^([1-9]|1[0-5]|MLOM)$")]
-        public string SlotId
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.AdapterAdapterConfig initObject = new Intersight.Model.AdapterAdapterConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DceInterfaceSettings"))
-            {
-                initObject.DceInterfaceSettings = this.DceInterfaceSettings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EthSettings"))
-            {
-                initObject.EthSettings = this.EthSettings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcSettings"))
-            {
-                initObject.FcSettings = this.FcSettings;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelSettings"))
-            {
-                initObject.PortChannelSettings = this.PortChannelSettings;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
-            {
-                initObject.SlotId = this.SlotId;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterHostEthInterface.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterHostEthInterface")]
-    public class InitializeIntersightAdapterHostEthInterface : PSCmdlet
-    {
-        public InitializeIntersightAdapterHostEthInterface()
-        {
-            ClassId = AdapterHostEthInterface.ClassIdEnum.AdapterHostEthInterface;
-            ObjectType = AdapterHostEthInterface.ObjectTypeEnum.AdapterHostEthInterface;
-
-        }
-        // <summary>
-        /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EtherPhysicalPortBaseRelationship AcknowledgedPeerInterface
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterHostEthInterface.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterHostEthInterface.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<AdapterHostEthInterface.OperReasonEnum> OperReason
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Operational state of an Interface."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EtherPhysicalPortBaseRelationship PeerInterface
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.AdapterHostEthInterface initObject = new Intersight.Model.AdapterHostEthInterface();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
-            {
-                initObject.AcknowledgedPeerInterface = this.AcknowledgedPeerInterface;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperReason"))
-            {
-                initObject.OperReason = this.OperReason;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperState"))
-            {
-                initObject.OperState = this.OperState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PeerInterface"))
-            {
-                initObject.PeerInterface = this.PeerInterface;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterPortChannelSettings.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterPortChannelSettings")]
-    public class InitializeIntersightAdapterPortChannelSettings : PSCmdlet
-    {
-        public InitializeIntersightAdapterPortChannelSettings()
-        {
-            ClassId = AdapterPortChannelSettings.ClassIdEnum.AdapterPortChannelSettings;
-            ObjectType = AdapterPortChannelSettings.ObjectTypeEnum.AdapterPortChannelSettings;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterPortChannelSettings.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When Port Channel is enabled, two vNICs and two vHBAs are available for use on the adapter card. When disabled, four vNICs and four vHBAs are available for use on the adapter card. Disabling port channel reboots the server. Port Channel is supported only for Cisco VIC 1455/1457 adapters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Enabled
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AdapterPortChannelSettings.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.AdapterPortChannelSettings initObject = new Intersight.Model.AdapterPortChannelSettings();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
-            {
-                initObject.Enabled = this.Enabled;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -807,23 +639,23 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterUnit.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterHostEthInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterUnit")]
-    public class InitializeIntersightAdapterUnit : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterHostEthInterface")]
+    public class InitializeIntersightAdapterHostEthInterface : PSCmdlet
     {
-        public InitializeIntersightAdapterUnit()
+        public InitializeIntersightAdapterHostEthInterface()
         {
-            ClassId = AdapterUnit.ClassIdEnum.AdapterUnit;
-            ObjectType = AdapterUnit.ObjectTypeEnum.AdapterUnit;
+            ClassId = AdapterHostEthInterface.ClassIdEnum.AdapterHostEthInterface;
+            ObjectType = AdapterHostEthInterface.ObjectTypeEnum.AdapterHostEthInterface;
 
         }
         // <summary>
-        /// <para type="description">"A reference to a adapterUnitExpander resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.AdapterUnitExpanderRelationship AdapterUnitExpander
+        public Model.EtherPhysicalPortBaseRelationship AcknowledgedPeerInterface
         {
             get;
             set;
@@ -843,7 +675,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AdapterUnit.ClassIdEnum ClassId
+        public AdapterHostEthInterface.ClassIdEnum ClassId
         {
             get;
             set;
@@ -863,17 +695,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AdapterUnit.ObjectTypeEnum ObjectType
+        public AdapterHostEthInterface.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.EquipmentFruRelationship PreviousFru
+        public List<AdapterHostEthInterface.OperReasonEnum> OperReason
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Operational state of an Interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string OperState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.EtherPhysicalPortBaseRelationship PeerInterface
         {
             get;
             set;
@@ -891,10 +743,10 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.AdapterUnit initObject = new Intersight.Model.AdapterUnit();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnitExpander"))
+            Intersight.Model.AdapterHostEthInterface initObject = new Intersight.Model.AdapterHostEthInterface();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
             {
-                initObject.AdapterUnitExpander = this.AdapterUnitExpander;
+                initObject.AcknowledgedPeerInterface = this.AcknowledgedPeerInterface;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -906,9 +758,17 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("OperReason"))
             {
-                initObject.PreviousFru = this.PreviousFru;
+                initObject.OperReason = this.OperReason;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("OperState"))
+            {
+                initObject.OperState = this.OperState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PeerInterface"))
+            {
+                initObject.PeerInterface = this.PeerInterface;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -1129,15 +989,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize AdapterConfigPolicy.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterPortChannelSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightAdapterConfigPolicy")]
-    public class InitializeIntersightAdapterConfigPolicy : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterPortChannelSettings")]
+    public class InitializeIntersightAdapterPortChannelSettings : PSCmdlet
     {
-        public InitializeIntersightAdapterConfigPolicy()
+        public InitializeIntersightAdapterPortChannelSettings()
         {
-            ClassId = AdapterConfigPolicy.ClassIdEnum.AdapterConfigPolicy;
-            ObjectType = AdapterConfigPolicy.ObjectTypeEnum.AdapterConfigPolicy;
+            ClassId = AdapterPortChannelSettings.ClassIdEnum.AdapterPortChannelSettings;
+            ObjectType = AdapterPortChannelSettings.ObjectTypeEnum.AdapterPortChannelSettings;
 
         }
         // <summary>
@@ -1155,17 +1015,87 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AdapterConfigPolicy.ClassIdEnum ClassId
+        public AdapterPortChannelSettings.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Description of the policy."</para>
+        /// <para type="description">"When Port Channel is enabled, two vNICs and two vHBAs are available for use on the adapter card. When disabled, four vNICs and four vHBAs are available for use on the adapter card. Disabling port channel reboots the server. Port Channel is supported only for Cisco VIC 1455/1457 adapters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
-        public string Description
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterPortChannelSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.AdapterPortChannelSettings initObject = new Intersight.Model.AdapterPortChannelSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterUnit.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterUnit")]
+    public class InitializeIntersightAdapterUnit : PSCmdlet
+    {
+        public InitializeIntersightAdapterUnit()
+        {
+            ClassId = AdapterUnit.ClassIdEnum.AdapterUnit;
+            ObjectType = AdapterUnit.ObjectTypeEnum.AdapterUnit;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a adapterUnitExpander resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AdapterUnitExpanderRelationship AdapterUnitExpander
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterUnit.ClassIdEnum ClassId
         {
             get;
             set;
@@ -1181,51 +1111,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the concrete policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AdapterConfigPolicy.ObjectTypeEnum ObjectType
+        public AdapterUnit.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.AdapterAdapterConfig> Settings
+        public Model.EquipmentFruRelationship PreviousFru
         {
             get;
             set;
@@ -1243,36 +1143,136 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.AdapterConfigPolicy initObject = new Intersight.Model.AdapterConfigPolicy();
+            Intersight.Model.AdapterUnit initObject = new Intersight.Model.AdapterUnit();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnitExpander"))
+            {
+                initObject.AdapterUnitExpander = this.AdapterUnitExpander;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
             {
-                initObject.Name = this.Name;
+                initObject.PreviousFru = this.PreviousFru;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterUnitExpander.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterUnitExpander")]
+    public class InitializeIntersightAdapterUnitExpander : PSCmdlet
+    {
+        public InitializeIntersightAdapterUnitExpander()
+        {
+            ClassId = AdapterUnitExpander.ClassIdEnum.AdapterUnitExpander;
+            ObjectType = AdapterUnitExpander.ObjectTypeEnum.AdapterUnitExpander;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a adapterUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AdapterUnitRelationship AdapterUnit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterUnitExpander.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterUnitExpander.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.AdapterUnitExpander initObject = new Intersight.Model.AdapterUnitExpander();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnit"))
+            {
+                initObject.AdapterUnit = this.AdapterUnit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
             {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
-            {
-                initObject.Profiles = this.Profiles;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Settings"))
-            {
-                initObject.Settings = this.Settings;
+                initObject.PreviousFru = this.PreviousFru;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

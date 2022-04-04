@@ -8,295 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New LicenseLicenseReservationOp.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseReservationOp")]
-    public class NewIntersightLicenseLicenseReservationOp : NewCmdletBase
-    {
-        public NewIntersightLicenseLicenseReservationOp()
-        {
-            ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseLicenseReservationOp();
-            MethodName = "CreateLicenseLicenseReservationOpWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IamAccountRelationship Account
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Revervation code used to install the license."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AuthCode
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"Trigger the generation of request code for specific license reservation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool GenerateRequestCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger the generation of return code for specific license reservation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool GenerateReturnCode
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseLicenseReservationOp.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseReservationOp", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseLicenseReservationOp : GetCmdletBase
-    {
-        public GetIntersightLicenseLicenseReservationOp()
-        {
-            ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseLicenseReservationOpListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public IamAccountRelationship Account
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"Revervation code used to install the license."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AuthCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Flag to indicate whether authorization code is installed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool AuthCodeInstalled
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Confirm code used to complete the license update on smart license account."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string ConfirmCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger the generation of request code for specific license reservation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool GenerateRequestCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger the generation of return code for specific license reservation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool GenerateReturnCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Revervation code used to generate authorization code from CSSM."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string RequestCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Return code used to return the reserved license to smart license account."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string ReturnCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-
-
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseAccountLicenseData.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightLicenseAccountLicenseData", DefaultParameterSetName = "CmdletParam")]
@@ -769,22 +480,21 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set LicenseIksLicenseCount.</para>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIksLicenseCount")]
-    public class SetIntersightLicenseIksLicenseCount : SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseCustomerOp : GetCmdletBase
     {
-        public SetIntersightLicenseIksLicenseCount()
+        public GetIntersightLicenseCustomerOp()
         {
             ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseIksLicenseCount();
-            MethodName = "UpdateLicenseIksLicenseCountWithHttpInfo";
+            MethodName = "GetLicenseCustomerOpListWithHttpInfo";
         }
 
         // <summary>
         /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public LicenseAccountLicenseDataRelationship AccountLicenseData
         {
@@ -792,27 +502,133 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
 
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"The license administrative state.\nSet this property to 'true' to activate the license entitlements."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public Dictionary<string, object> AdditionalProperties
+        public bool ActiveAdmin
         {
             get;
             set;
         }
 
 
+        // <summary>
+        /// <para type="description">"Move all licensed devices to default license tier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AllDevicesToDefaultTier
+        {
+            get;
+            set;
+        }
 
 
+        // <summary>
+        /// <para type="description">"Clear the status of smart API sync."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
+        public bool ClearApiSyncStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger de-registration/disable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool DeregisterDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable trial for Intersight licensing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableTrial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The default Trial or Grace period customer is entitled to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long EvaluationPeriod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
         {
@@ -821,31 +637,510 @@ namespace Intersight.PowerShell
         }
 
 
-
-
-
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
-        public List<MoTag> Tags
+        public MoBaseMoRelationship Parent
         {
             get;
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Trigger renew authorization."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RenewAuthorization
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger renew registration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RenewIdCertificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger show tech support feature."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool ShowAgentTechSupport
+        {
+            get;
+            set;
+        }
+
+
+
+
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseSmartlicenseToken.</para>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseIksCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseSmartlicenseToken", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseSmartlicenseToken : GetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseIksCustomerOp : GetCmdletBase
     {
-        public GetIntersightLicenseSmartlicenseToken()
+        public GetIntersightLicenseIksCustomerOp()
         {
             ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseSmartlicenseTokenListWithHttpInfo";
+            MethodName = "GetLicenseIksCustomerOpListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Intersight Kubernetes Service license administrative state.\nSet this property to 'true' to activate the IKS license entitlements."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool ActiveAdmin
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable trial for IKS licensing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableTrial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The default Trial or Grace period the customer is entitled to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long EvaluationPeriod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseIksLicenseCount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksLicenseCount", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseIksLicenseCount : GetCmdletBase
+    {
+        public GetIntersightLicenseIksLicenseCount()
+        {
+            ApiInstance = new LicenseApi(Config);
+            MethodName = "GetLicenseIksLicenseCountListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The total number of devices claimed in the IKS Advantage tier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long AdvantageCount
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseIwoCustomerOp.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseIwoCustomerOp : GetCmdletBase
+    {
+        public GetIntersightLicenseIwoCustomerOp()
+        {
+            ApiInstance = new LicenseApi(Config);
+            MethodName = "GetLicenseIwoCustomerOpListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The workload optimizer license administrative state.\nSet this property to 'true' to activate the workload optimizer license entitlements."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool ActiveAdmin
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Active workload optimizer license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public LicenseIwoCustomerOp.ActiveLicenseTypeEnum ActiveLicenseType
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable trial for Intersight licensing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableTrial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The default Trial or Grace period customer is entitled to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long EvaluationPeriod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseIwoLicenseCount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoLicenseCount", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseIwoLicenseCount : GetCmdletBase
+    {
+        public GetIntersightLicenseIwoLicenseCount()
+        {
+            ApiInstance = new LicenseApi(Config);
+            MethodName = "GetLicenseIwoLicenseCountListWithHttpInfo";
         }
 
         // <summary>
@@ -941,17 +1236,17 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
-        /// <para type="description">"Smart license registration token."</para>
+        /// <para type="description">"The total number of devices claimed in the Intersight account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string Token
+        public long VmLicenseCount
         {
             get;
             set;
         }
-
 
 
     }
@@ -1218,6 +1513,446 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseLicenseReservationOp.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseReservationOp", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseLicenseReservationOp : GetCmdletBase
+    {
+        public GetIntersightLicenseLicenseReservationOp()
+        {
+            ApiInstance = new LicenseApi(Config);
+            MethodName = "GetLicenseLicenseReservationOpListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Revervation code used to install the license."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AuthCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Flag to indicate whether authorization code is installed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AuthCodeInstalled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Confirm code used to complete the license update on smart license account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ConfirmCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger the generation of request code for specific license reservation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool GenerateRequestCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger the generation of return code for specific license reservation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool GenerateReturnCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Revervation code used to generate authorization code from CSSM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RequestCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Return code used to return the reserved license to smart license account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ReturnCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get LicenseSmartlicenseToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseSmartlicenseToken", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightLicenseSmartlicenseToken : GetCmdletBase
+    {
+        public GetIntersightLicenseSmartlicenseToken()
+        {
+            ApiInstance = new LicenseApi(Config);
+            MethodName = "GetLicenseSmartlicenseTokenListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Smart license registration token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Token
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New LicenseIksLicenseCount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseIksLicenseCount")]
+    public class NewIntersightLicenseIksLicenseCount : NewCmdletBase
+    {
+        public NewIntersightLicenseIksLicenseCount()
+        {
+            ApiInstance = new LicenseApi(Config);
+            ModelObject = new LicenseIksLicenseCount();
+            MethodName = "CreateLicenseIksLicenseCountWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New LicenseIwoLicenseCount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseIwoLicenseCount")]
+    public class NewIntersightLicenseIwoLicenseCount : NewCmdletBase
+    {
+        public NewIntersightLicenseIwoLicenseCount()
+        {
+            ApiInstance = new LicenseApi(Config);
+            ModelObject = new LicenseIwoLicenseCount();
+            MethodName = "CreateLicenseIwoLicenseCountWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseLicenseInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseInfo")]
@@ -1316,6 +2051,110 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New LicenseLicenseReservationOp.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseReservationOp")]
+    public class NewIntersightLicenseLicenseReservationOp : NewCmdletBase
+    {
+        public NewIntersightLicenseLicenseReservationOp()
+        {
+            ApiInstance = new LicenseApi(Config);
+            ModelObject = new LicenseLicenseReservationOp();
+            MethodName = "CreateLicenseLicenseReservationOpWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Revervation code used to install the license."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string AuthCode
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Trigger the generation of request code for specific license reservation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool GenerateRequestCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger the generation of return code for specific license reservation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool GenerateReturnCode
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
     }
     /// <summary>
@@ -1509,7 +2348,7 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new LicenseApi(Config);
             ModelObject = new LicenseCustomerOp();
-            MethodName = "PatchLicenseCustomerOpWithHttpInfo";
+            MethodName = "UpdateLicenseCustomerOpWithHttpInfo";
         }
 
         // <summary>
@@ -1788,239 +2627,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseReservationOp.</para>
+    /// <para type="synopsis">This is the cmdlet to Set LicenseIksLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseReservationOp")]
-    public class SetIntersightLicenseLicenseReservationOp : SetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIksLicenseCount")]
+    public class SetIntersightLicenseIksLicenseCount : SetCmdletBase
     {
-        public SetIntersightLicenseLicenseReservationOp()
+        public SetIntersightLicenseIksLicenseCount()
         {
             ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseLicenseReservationOp();
-            MethodName = "UpdateLicenseLicenseReservationOpWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IamAccountRelationship Account
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Revervation code used to install the license."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AuthCode
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"Trigger the generation of request code for specific license reservation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool GenerateRequestCode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger the generation of return code for specific license reservation."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool GenerateReturnCode
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseIwoLicenseCount.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoLicenseCount", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseIwoLicenseCount : GetCmdletBase
-    {
-        public GetIntersightLicenseIwoLicenseCount()
-        {
-            ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseIwoLicenseCountListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"The total number of devices claimed in the Intersight account."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long VmLicenseCount
-        {
-            get;
-            set;
-        }
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New LicenseIwoLicenseCount.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseIwoLicenseCount")]
-    public class NewIntersightLicenseIwoLicenseCount : NewCmdletBase
-    {
-        public NewIntersightLicenseIwoLicenseCount()
-        {
-            ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseIwoLicenseCount();
-            MethodName = "CreateLicenseIwoLicenseCountWithHttpInfo";
+            ModelObject = new LicenseIksLicenseCount();
+            MethodName = "UpdateLicenseIksLicenseCountWithHttpInfo";
         }
 
         // <summary>
@@ -2046,73 +2662,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set LicenseIwoLicenseCount.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIwoLicenseCount")]
-    public class SetIntersightLicenseIwoLicenseCount : SetCmdletBase
-    {
-        public SetIntersightLicenseIwoLicenseCount()
-        {
-            ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseIwoLicenseCount();
-            MethodName = "UpdateLicenseIwoLicenseCountWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
 
 
 
@@ -2143,567 +2692,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set LicenseSmartlicenseToken.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseSmartlicenseToken")]
-    public class SetIntersightLicenseSmartlicenseToken : SetCmdletBase
-    {
-        public SetIntersightLicenseSmartlicenseToken()
-        {
-            ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseSmartlicenseToken();
-            MethodName = "UpdateLicenseSmartlicenseTokenWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Smart license registration token."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Token
-        {
-            get;
-            set;
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseInfo")]
-    public class SetIntersightLicenseLicenseInfo : SetCmdletBase
-    {
-        public SetIntersightLicenseLicenseInfo()
-        {
-            ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseLicenseInfo();
-            MethodName = "UpdateLicenseLicenseInfoWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"The default Trial or Grace period customer is entitled to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long EvaluationPeriod
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"The number of days the trial Trial or Grace period is extended.\nThe trial or grace period can be extended once."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ExtraEvaluation
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseCustomerOp.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseCustomerOp", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseCustomerOp : GetCmdletBase
-    {
-        public GetIntersightLicenseCustomerOp()
-        {
-            ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseCustomerOpListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The license administrative state.\nSet this property to 'true' to activate the license entitlements."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool ActiveAdmin
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Move all licensed devices to default license tier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool AllDevicesToDefaultTier
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Clear the status of smart API sync."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool ClearApiSyncStatus
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger de-registration/disable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool DeregisterDevice
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Enable trial for Intersight licensing."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool EnableTrial
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The default Trial or Grace period customer is entitled to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long EvaluationPeriod
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long ExtraEvaluation
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Trigger renew authorization."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool RenewAuthorization
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger renew registration."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool RenewIdCertificate
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Trigger show tech support feature."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool ShowAgentTechSupport
-        {
-            get;
-            set;
-        }
-
-
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseIwoCustomerOp.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoCustomerOp", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseIwoCustomerOp : GetCmdletBase
-    {
-        public GetIntersightLicenseIwoCustomerOp()
-        {
-            ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseIwoCustomerOpListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The workload optimizer license administrative state.\nSet this property to 'true' to activate the workload optimizer license entitlements."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool ActiveAdmin
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Active workload optimizer license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public LicenseIwoCustomerOp.ActiveLicenseTypeEnum ActiveLicenseType
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Enable trial for Intersight licensing."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool EnableTrial
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The default Trial or Grace period customer is entitled to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long EvaluationPeriod
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long ExtraEvaluation
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-
-
 
     }
     /// <summary>
@@ -2829,287 +2817,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseIksCustomerOp.</para>
+    /// <para type="synopsis">This is the cmdlet to Set LicenseIwoLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksCustomerOp", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseIksCustomerOp : GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIwoLicenseCount")]
+    public class SetIntersightLicenseIwoLicenseCount : SetCmdletBase
     {
-        public GetIntersightLicenseIksCustomerOp()
+        public SetIntersightLicenseIwoLicenseCount()
         {
             ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseIksCustomerOpListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Intersight Kubernetes Service license administrative state.\nSet this property to 'true' to activate the IKS license entitlements."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool ActiveAdmin
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Enable trial for IKS licensing."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool EnableTrial
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The default Trial or Grace period the customer is entitled to."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long EvaluationPeriod
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long ExtraEvaluation
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get LicenseIksLicenseCount.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksLicenseCount", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightLicenseIksLicenseCount : GetCmdletBase
-    {
-        public GetIntersightLicenseIksLicenseCount()
-        {
-            ApiInstance = new LicenseApi(Config);
-            MethodName = "GetLicenseIksLicenseCountListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public LicenseAccountLicenseDataRelationship AccountLicenseData
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"The total number of devices claimed in the IKS Advantage tier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long AdvantageCount
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New LicenseIksLicenseCount.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseIksLicenseCount")]
-    public class NewIntersightLicenseIksLicenseCount : NewCmdletBase
-    {
-        public NewIntersightLicenseIksLicenseCount()
-        {
-            ApiInstance = new LicenseApi(Config);
-            ModelObject = new LicenseIksLicenseCount();
-            MethodName = "CreateLicenseIksLicenseCountWithHttpInfo";
+            ModelObject = new LicenseIwoLicenseCount();
+            MethodName = "UpdateLicenseIwoLicenseCountWithHttpInfo";
         }
 
         // <summary>
@@ -3139,11 +2856,10 @@ namespace Intersight.PowerShell
 
 
 
-
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
         {
@@ -3161,6 +2877,290 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseInfo")]
+    public class SetIntersightLicenseLicenseInfo : SetCmdletBase
+    {
+        public SetIntersightLicenseLicenseInfo()
+        {
+            ApiInstance = new LicenseApi(Config);
+            ModelObject = new LicenseLicenseInfo();
+            MethodName = "UpdateLicenseLicenseInfoWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The default Trial or Grace period customer is entitled to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EvaluationPeriod
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The number of days the trial Trial or Grace period is extended.\nThe trial or grace period can be extended once."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseReservationOp.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseReservationOp")]
+    public class SetIntersightLicenseLicenseReservationOp : SetCmdletBase
+    {
+        public SetIntersightLicenseLicenseReservationOp()
+        {
+            ApiInstance = new LicenseApi(Config);
+            ModelObject = new LicenseLicenseReservationOp();
+            MethodName = "UpdateLicenseLicenseReservationOpWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Revervation code used to install the license."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string AuthCode
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Trigger the generation of request code for specific license reservation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool GenerateRequestCode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Trigger the generation of return code for specific license reservation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool GenerateReturnCode
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set LicenseSmartlicenseToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseSmartlicenseToken")]
+    public class SetIntersightLicenseSmartlicenseToken : SetCmdletBase
+    {
+        public SetIntersightLicenseSmartlicenseToken()
+        {
+            ApiInstance = new LicenseApi(Config);
+            ModelObject = new LicenseSmartlicenseToken();
+            MethodName = "UpdateLicenseSmartlicenseTokenWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Smart license registration token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Token
         {
             get;
             set;

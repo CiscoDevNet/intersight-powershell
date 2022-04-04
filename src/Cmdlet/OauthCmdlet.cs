@@ -448,7 +448,7 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new OauthApi(Config);
             ModelObject = new OauthAuthorization();
-            MethodName = "PatchOauthAuthorizationWithHttpInfo";
+            MethodName = "UpdateOauthAuthorizationWithHttpInfo";
         }
 
 

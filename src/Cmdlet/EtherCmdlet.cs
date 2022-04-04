@@ -347,127 +347,32 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set EtherPhysicalPort.</para>
+    /// <para type="synopsis">This is the cmdlet to Get EtherNetworkPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherPhysicalPort")]
-    public class SetIntersightEtherPhysicalPort : SetCmdletBase
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherNetworkPort", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEtherNetworkPort : GetCmdletBase
     {
-        public SetIntersightEtherPhysicalPort()
+        public GetIntersightEtherNetworkPort()
         {
             ApiInstance = new EtherApi(Config);
-            ModelObject = new EtherPhysicalPort();
-            MethodName = "UpdateEtherPhysicalPortWithHttpInfo";
+            MethodName = "GetEtherNetworkPortListWithHttpInfo";
         }
 
-
         // <summary>
-        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"The Account ID for this managed object."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public PortInterfaceBaseRelationship AcknowledgedPeerInterface
+        public string AccountMoid
         {
             get;
             set;
         }
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public PortInterfaceBaseRelationship PeerInterface
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set EtherNetworkPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherNetworkPort")]
-    public class SetIntersightEtherNetworkPort : SetCmdletBase
-    {
-        public SetIntersightEtherNetworkPort()
-        {
-            ApiInstance = new EtherApi(Config);
-            ModelObject = new EtherNetworkPort();
-            MethodName = "UpdateEtherNetworkPortWithHttpInfo";
-        }
-
 
         // <summary>
         /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public EtherPhysicalPortBaseRelationship AcknowledgedPeerInterface
         {
@@ -475,26 +380,56 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Dictionary<string, object> AdditionalProperties
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
         {
             get;
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
 
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
+        public string Dn
+        {
+            get;
+            set;
+        }
 
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public EquipmentIoCardBaseRelationship EquipmentIoCardBase
         {
@@ -502,11 +437,21 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Febric extender identifier for this port."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long ModuleId
         {
@@ -517,7 +462,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
         {
@@ -528,7 +473,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Operational state of an Interface."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string OperState
         {
@@ -537,11 +482,21 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Peer DN for network host port of fabric extender."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string PeerDn
         {
@@ -552,7 +507,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public EtherPhysicalPortBaseRelationship PeerInterface
         {
@@ -564,7 +519,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Switch physical port identifier."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long PortId
         {
@@ -572,13 +527,43 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
 
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Switch expansion slot module identifier."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long SlotId
         {
@@ -586,11 +571,21 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Network Port Speed of IO card or fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Speed
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Switch Identifier that is local to a cluster."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SwitchId
         {
@@ -598,133 +593,7 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set EtherHostPort.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherHostPort")]
-    public class SetIntersightEtherHostPort : SetCmdletBase
-    {
-        public SetIntersightEtherHostPort()
-        {
-            ApiInstance = new EtherApi(Config);
-            ModelObject = new EtherHostPort();
-            MethodName = "UpdateEtherHostPortWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public PortInterfaceBaseRelationship AcknowledgedPeerInterface
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentIoCardBaseRelationship EquipmentIoCardBase
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"Fabric extender identifier for this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ModuleId
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public PortInterfaceBaseRelationship PeerInterface
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
 
 
     }
@@ -1407,34 +1276,36 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get EtherNetworkPort.</para>
+    /// <para type="synopsis">This is the cmdlet to Set EtherHostPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherNetworkPort", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightEtherNetworkPort : GetCmdletBase
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherHostPort")]
+    public class SetIntersightEtherHostPort : SetCmdletBase
     {
-        public GetIntersightEtherNetworkPort()
+        public SetIntersightEtherHostPort()
         {
             ApiInstance = new EtherApi(Config);
-            MethodName = "GetEtherNetworkPortListWithHttpInfo";
+            ModelObject = new EtherHostPort();
+            MethodName = "UpdateEtherHostPortWithHttpInfo";
         }
 
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string AccountMoid
+        // <summary>
+        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PortInterfaceBaseRelationship AcknowledgedPeerInterface
         {
             get;
             set;
         }
 
         // <summary>
-        /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public EtherPhysicalPortBaseRelationship AcknowledgedPeerInterface
+        public Dictionary<string, object> AdditionalProperties
         {
             get;
             set;
@@ -1442,54 +1313,13 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
 
-        // <summary>
-        /// <para type="description">"The database identifier of the registered device of an object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DeviceMoId
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Dn
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public EquipmentIoCardBaseRelationship EquipmentIoCardBase
         {
@@ -1497,21 +1327,13 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
+
 
         // <summary>
-        /// <para type="description">"Febric extender identifier for this port."</para>
+        /// <para type="description">"Fabric extender identifier for this port."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long ModuleId
         {
@@ -1522,7 +1344,123 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PortInterfaceBaseRelationship PeerInterface
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set EtherNetworkPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherNetworkPort")]
+    public class SetIntersightEtherNetworkPort : SetCmdletBase
+    {
+        public SetIntersightEtherNetworkPort()
+        {
+            ApiInstance = new EtherApi(Config);
+            ModelObject = new EtherNetworkPort();
+            MethodName = "UpdateEtherNetworkPortWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EtherPhysicalPortBaseRelationship AcknowledgedPeerInterface
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentIoCardBaseRelationship EquipmentIoCardBase
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Febric extender identifier for this port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ModuleId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
         {
@@ -1533,7 +1471,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Operational state of an Interface."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string OperState
         {
@@ -1542,21 +1480,11 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"Peer DN for network host port of fabric extender."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string PeerDn
         {
@@ -1567,7 +1495,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public EtherPhysicalPortBaseRelationship PeerInterface
         {
@@ -1579,7 +1507,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Switch physical port identifier."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long PortId
         {
@@ -1587,43 +1515,13 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
 
-        // <summary>
-        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Rn
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"Switch expansion slot module identifier."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long SlotId
         {
@@ -1631,21 +1529,11 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"Network Port Speed of IO card or fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Speed
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"Switch Identifier that is local to a cluster."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string SwitchId
         {
@@ -1653,7 +1541,119 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set EtherPhysicalPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherPhysicalPort")]
+    public class SetIntersightEtherPhysicalPort : SetCmdletBase
+    {
+        public SetIntersightEtherPhysicalPort()
+        {
+            ApiInstance = new EtherApi(Config);
+            ModelObject = new EtherPhysicalPort();
+            MethodName = "UpdateEtherPhysicalPortWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PortInterfaceBaseRelationship AcknowledgedPeerInterface
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a portInterfaceBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PortInterfaceBaseRelationship PeerInterface
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
 
     }

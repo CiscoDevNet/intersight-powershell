@@ -465,6 +465,18 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove TerraformExecutor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightTerraformExecutor")]
+    public class RemoveIntersightTerraformExecutor : RemoveCmdletBase
+    {
+        public RemoveIntersightTerraformExecutor()
+        {
+            ApiInstance = new TerraformApi(Config);
+            MethodName = "DeleteTerraformExecutorWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TerraformExecutor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightTerraformExecutor")]
@@ -696,17 +708,5 @@ namespace Intersight.PowerShell
         }
 
 
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove TerraformExecutor.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTerraformExecutor")]
-    public class RemoveIntersightTerraformExecutor : RemoveCmdletBase
-    {
-        public RemoveIntersightTerraformExecutor()
-        {
-            ApiInstance = new TerraformApi(Config);
-            MethodName = "DeleteTerraformExecutorWithHttpInfo";
-        }
     }
 }

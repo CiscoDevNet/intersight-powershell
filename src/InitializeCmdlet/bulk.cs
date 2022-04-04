@@ -8,6 +8,217 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkApiResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkApiResult")]
+    public class InitializeIntersightBulkApiResult : PSCmdlet
+    {
+        public InitializeIntersightBulkApiResult()
+        {
+            ClassId = BulkApiResult.ClassIdEnum.BulkRestResult;
+            ObjectType = BulkApiResult.ObjectTypeEnum.BulkRestResult;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkApiResult.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkApiResult.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BulkApiResult initObject = new Intersight.Model.BulkApiResult();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkExport.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkExport")]
+    public class InitializeIntersightBulkExport : PSCmdlet
+    {
+        public InitializeIntersightBulkExport()
+        {
+            Action = BulkExport.ActionEnum.Start;
+            ClassId = BulkExport.ClassIdEnum.BulkExport;
+            ObjectType = BulkExport.ObjectTypeEnum.BulkExport;
+
+        }
+        // <summary>
+        /// <para type="description">"Action to be performed on the export operation.\n* `Start` - Starts the export operation.\n* `Cancel` - Cancels the export operation that is in progress."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkExport.ActionEnum Action
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkExport.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies whether tags must be exported and will be considered for all the items MOs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ExportTags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoMoRef> Items
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An identifier for the export instance. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9_-]{1,92}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkExport.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BulkExport initObject = new Intersight.Model.BulkExport();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExportTags"))
+            {
+                initObject.ExportTags = this.ExportTags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Items"))
+            {
+                initObject.Items = this.Items;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BulkExportedItem.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBulkExportedItem")]
@@ -87,6 +298,62 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkHttpHeader.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkHttpHeader")]
+    public class InitializeIntersightBulkHttpHeader : PSCmdlet
+    {
+        public InitializeIntersightBulkHttpHeader()
+        {
+            ClassId = BulkHttpHeader.ClassIdEnum.BulkHttpHeader;
+            ObjectType = BulkHttpHeader.ObjectTypeEnum.BulkHttpHeader;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkHttpHeader.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkHttpHeader.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -218,71 +485,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkApiResult.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkMoMerger.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkApiResult")]
-    public class InitializeIntersightBulkApiResult : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkMoMerger")]
+    public class InitializeIntersightBulkMoMerger : PSCmdlet
     {
-        public InitializeIntersightBulkApiResult()
+        public InitializeIntersightBulkMoMerger()
         {
-            ClassId = BulkApiResult.ClassIdEnum.BulkRestResult;
-            ObjectType = BulkApiResult.ObjectTypeEnum.BulkRestResult;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkApiResult.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkApiResult.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BulkApiResult initObject = new Intersight.Model.BulkApiResult();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkHttpHeader.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkHttpHeader")]
-    public class InitializeIntersightBulkHttpHeader : PSCmdlet
-    {
-        public InitializeIntersightBulkHttpHeader()
-        {
-            ClassId = BulkHttpHeader.ClassIdEnum.BulkHttpHeader;
-            ObjectType = BulkHttpHeader.ObjectTypeEnum.BulkHttpHeader;
+            ClassId = BulkMoMerger.ClassIdEnum.BulkMoMerger;
+            MergeAction = BulkMoMerger.MergeActionEnum.Merge;
+            ObjectType = BulkMoMerger.ObjectTypeEnum.BulkMoMerger;
 
         }
         // <summary>
@@ -300,7 +512,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkHttpHeader.ClassIdEnum ClassId
+        public BulkMoMerger.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of merge action to be applied on the target MOs. \n* `Merge` - The null properties/relationships of the source MO will be ignored for the target MO. The non-null properties/relationships of the source will override the target MO properties/relationships.\n* `Replace` - Merge action as described in RFC 7386. The null properties/relationships of the source MO will be deleted on the target MO.The non-null properties/relationships of the source will override the target MO properties/relationships.When source object type is different from target, only the properties common to both source and target  will be affected.Other properties on the target will be ignored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkMoMerger.MergeActionEnum MergeAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
         {
             get;
             set;
@@ -310,63 +542,57 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkHttpHeader.ObjectTypeEnum ObjectType
+        public BulkMoMerger.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        protected override void ProcessRecord()
+        public Model.OrganizationOrganizationRelationship Organization
         {
-            Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkRestResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkRestResult")]
-    public class InitializeIntersightBulkRestResult : PSCmdlet
-    {
-        public InitializeIntersightBulkRestResult()
-        {
-            ClassId = BulkRestResult.ClassIdEnum.BulkRestResult;
-            ObjectType = BulkRestResult.ObjectTypeEnum.BulkRestResult;
-
+            get;
+            set;
         }
         // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Dictionary<string, object> AdditionalProperties
+        public List<Model.MoBaseMo> Sources
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkRestResult.ClassIdEnum ClassId
+        public List<Model.MoTag> Tags
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"JSON document specifying the configuration, if applicable, to be applied on all the target MOs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkRestResult.ObjectTypeEnum ObjectType
+        public Model.MoBaseMo TargetConfig
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoBaseMo> Targets
         {
             get;
             set;
@@ -374,13 +600,41 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.BulkRestResult initObject = new Intersight.Model.BulkRestResult();
+            Intersight.Model.BulkMoMerger initObject = new Intersight.Model.BulkMoMerger();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MergeAction"))
+            {
+                initObject.MergeAction = this.MergeAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sources"))
+            {
+                initObject.Sources = this.Sources;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetConfig"))
+            {
+                initObject.TargetConfig = this.TargetConfig;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Targets"))
+            {
+                initObject.Targets = this.Targets;
+            }
             WriteObject(initObject);
         }
 
@@ -570,6 +824,62 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkRestResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkRestResult")]
+    public class InitializeIntersightBulkRestResult : PSCmdlet
+    {
+        public InitializeIntersightBulkRestResult()
+        {
+            ClassId = BulkRestResult.ClassIdEnum.BulkRestResult;
+            ObjectType = BulkRestResult.ObjectTypeEnum.BulkRestResult;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkRestResult.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkRestResult.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BulkRestResult initObject = new Intersight.Model.BulkRestResult();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BulkRestSubRequest.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBulkRestSubRequest")]
@@ -683,16 +993,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkMoMerger.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkSubRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkMoMerger")]
-    public class InitializeIntersightBulkMoMerger : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkSubRequest")]
+    public class InitializeIntersightBulkSubRequest : PSCmdlet
     {
-        public InitializeIntersightBulkMoMerger()
+        public InitializeIntersightBulkSubRequest()
         {
-            ClassId = BulkMoMerger.ClassIdEnum.BulkMoMerger;
-            MergeAction = BulkMoMerger.MergeActionEnum.Merge;
-            ObjectType = BulkMoMerger.ObjectTypeEnum.BulkMoMerger;
+            ClassId = BulkSubRequest.ClassIdEnum.BulkRestSubRequest;
+            ObjectType = BulkSubRequest.ObjectTypeEnum.BulkRestSubRequest;
+            Verb = BulkSubRequest.VerbEnum.POST;
 
         }
         // <summary>
@@ -706,91 +1016,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkMoMerger.ClassIdEnum ClassId
+        public BulkSubRequest.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The type of merge action to be applied on the target MOs. \n* `Merge` - The null properties/relationships of the source MO will be ignored for the target MO. The non-null properties/relationships of the source will override the target MO properties/relationships.\n* `Replace` - Merge action as described in RFC 7386. The null properties/relationships of the source MO will be deleted on the target MO.The non-null properties/relationships of the source will override the target MO properties/relationships.When source object type is different from target, only the properties common to both source and target  will be affected.Other properties on the target will be ignored."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkMoMerger.MergeActionEnum MergeAction
+        public BulkSubRequest.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// <para type="description">"The URI on which this action is to be performed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Moid
+        public string Uri
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\nThe value is used to override the top level verb.\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public BulkMoMerger.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoBaseMo> Sources
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"JSON document specifying the configuration, if applicable, to be applied on all the target MOs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.MoBaseMo TargetConfig
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoBaseMo> Targets
+        public BulkSubRequest.VerbEnum Verb
         {
             get;
             set;
@@ -798,195 +1058,20 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.BulkMoMerger initObject = new Intersight.Model.BulkMoMerger();
+            Intersight.Model.BulkSubRequest initObject = new Intersight.Model.BulkSubRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MergeAction"))
-            {
-                initObject.MergeAction = this.MergeAction;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
             {
-                initObject.Organization = this.Organization;
+                initObject.Uri = this.Uri;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sources"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Verb"))
             {
-                initObject.Sources = this.Sources;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetConfig"))
-            {
-                initObject.TargetConfig = this.TargetConfig;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Targets"))
-            {
-                initObject.Targets = this.Targets;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkExport.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkExport")]
-    public class InitializeIntersightBulkExport : PSCmdlet
-    {
-        public InitializeIntersightBulkExport()
-        {
-            Action = BulkExport.ActionEnum.Start;
-            ClassId = BulkExport.ClassIdEnum.BulkExport;
-            ObjectType = BulkExport.ObjectTypeEnum.BulkExport;
-
-        }
-        // <summary>
-        /// <para type="description">"Action to be performed on the export operation.\n* `Start` - Starts the export operation.\n* `Cancel` - Cancels the export operation that is in progress."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkExport.ActionEnum Action
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkExport.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Specifies whether tags must be exported and will be considered for all the items MOs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool ExportTags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoMoRef> Items
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An identifier for the export instance. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9_-]{1,92}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkExport.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BulkExport initObject = new Intersight.Model.BulkExport();
-            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
-            {
-                initObject.Action = this.Action;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExportTags"))
-            {
-                initObject.ExportTags = this.ExportTags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Items"))
-            {
-                initObject.Items = this.Items;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
+                initObject.Verb = this.Verb;
             }
             WriteObject(initObject);
         }
@@ -1121,91 +1206,6 @@ namespace Intersight.PowerShell
             {
                 initObject.TargetMoid = this.TargetMoid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
-            {
-                initObject.Uri = this.Uri;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Verb"))
-            {
-                initObject.Verb = this.Verb;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkSubRequest.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkSubRequest")]
-    public class InitializeIntersightBulkSubRequest : PSCmdlet
-    {
-        public InitializeIntersightBulkSubRequest()
-        {
-            ClassId = BulkSubRequest.ClassIdEnum.BulkRestSubRequest;
-            ObjectType = BulkSubRequest.ObjectTypeEnum.BulkRestSubRequest;
-            Verb = BulkSubRequest.VerbEnum.POST;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkSubRequest.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkSubRequest.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The URI on which this action is to be performed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Uri
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of operation to be performed.\nOne of - Post (Create), Patch (Update) or Delete (Remove).\nThe value is used to override the top level verb.\n* `POST` - Used to create a REST resource.\n* `PATCH` - Used to update a REST resource.\n* `DELETE` - Used to delete a REST resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkSubRequest.VerbEnum Verb
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BulkSubRequest initObject = new Intersight.Model.BulkSubRequest();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
             {
                 initObject.Uri = this.Uri;

@@ -8,1772 +8,6 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchDescriptor.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchDescriptor")]
-    public class InitializeIntersightCapabilitySwitchDescriptor : PSCmdlet
-    {
-        public InitializeIntersightCapabilitySwitchDescriptor()
-        {
-            ClassId = CapabilitySwitchDescriptor.ClassIdEnum.CapabilitySwitchDescriptor;
-            ObjectType = CapabilitySwitchDescriptor.ObjectTypeEnum.CapabilitySwitchDescriptor;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.CapabilityCapabilityRelationship> Capabilities
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchDescriptor.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Detailed information about the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The total expected memory for this hardware."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ExpectedMemory
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Model
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchDescriptor.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Revision for the fabric interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Revision
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vendor
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Version
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilitySwitchDescriptor initObject = new Intersight.Model.CapabilitySwitchDescriptor();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
-            {
-                initObject.Capabilities = this.Capabilities;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExpectedMemory"))
-            {
-                initObject.ExpectedMemory = this.ExpectedMemory;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
-            {
-                initObject.Model = this.Model;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
-            {
-                initObject.Revision = this.Revision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityCatalog.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityCatalog")]
-    public class InitializeIntersightCapabilityCatalog : PSCmdlet
-    {
-        public InitializeIntersightCapabilityCatalog()
-        {
-            ClassId = CapabilityCatalog.ClassIdEnum.CapabilityCatalog;
-            ObjectType = CapabilityCatalog.ObjectTypeEnum.CapabilityCatalog;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityCatalog.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A unique name for the catalog."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityCatalog.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityCatalog initObject = new Intersight.Model.CapabilityCatalog();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchStorageLimits.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchStorageLimits")]
-    public class InitializeIntersightCapabilitySwitchStorageLimits : PSCmdlet
-    {
-        public InitializeIntersightCapabilitySwitchStorageLimits()
-        {
-            ClassId = CapabilitySwitchStorageLimits.ClassIdEnum.CapabilitySwitchStorageLimits;
-            ObjectType = CapabilitySwitchStorageLimits.ObjectTypeEnum.CapabilitySwitchStorageLimits;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchStorageLimits.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum user zones per Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MaximumUserZoneCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum configurable Virtual Fibre Channel interfaces on Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MaximumVirtualFcInterfaces
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum configurable Virtual Fibre Channel interfaces per blade."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MaximumVirtualFcInterfacesPerBladeServer
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum configurable VSANs on Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MaximumVsans
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Zone limit per Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MaximumZoneCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchStorageLimits.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilitySwitchStorageLimits initObject = new Intersight.Model.CapabilitySwitchStorageLimits();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumUserZoneCount"))
-            {
-                initObject.MaximumUserZoneCount = this.MaximumUserZoneCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumVirtualFcInterfaces"))
-            {
-                initObject.MaximumVirtualFcInterfaces = this.MaximumVirtualFcInterfaces;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumVirtualFcInterfacesPerBladeServer"))
-            {
-                initObject.MaximumVirtualFcInterfacesPerBladeServer = this.MaximumVirtualFcInterfacesPerBladeServer;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumVsans"))
-            {
-                initObject.MaximumVsans = this.MaximumVsans;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumZoneCount"))
-            {
-                initObject.MaximumZoneCount = this.MaximumZoneCount;
-            }
-            initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityCimcFirmwareDescriptor.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityCimcFirmwareDescriptor")]
-    public class InitializeIntersightCapabilityCimcFirmwareDescriptor : PSCmdlet
-    {
-        public InitializeIntersightCapabilityCimcFirmwareDescriptor()
-        {
-            ClassId = CapabilityCimcFirmwareDescriptor.ClassIdEnum.CapabilityCimcFirmwareDescriptor;
-            ObjectType = CapabilityCimcFirmwareDescriptor.ObjectTypeEnum.CapabilityCimcFirmwareDescriptor;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.CapabilityCapabilityRelationship> Capabilities
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityCimcFirmwareDescriptor.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Detailed information about the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Model
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityCimcFirmwareDescriptor.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Revision information for the server."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Revision
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vendor
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Version
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityCimcFirmwareDescriptor initObject = new Intersight.Model.CapabilityCimcFirmwareDescriptor();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
-            {
-                initObject.Capabilities = this.Capabilities;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
-            {
-                initObject.Model = this.Model;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
-            {
-                initObject.Revision = this.Revision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySiocModuleManufacturingDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySiocModuleManufacturingDef")]
-    public class InitializeIntersightCapabilitySiocModuleManufacturingDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilitySiocModuleManufacturingDef()
-        {
-            ClassId = CapabilitySiocModuleManufacturingDef.ClassIdEnum.CapabilitySiocModuleManufacturingDef;
-            ObjectType = CapabilitySiocModuleManufacturingDef.ObjectTypeEnum.CapabilitySiocModuleManufacturingDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Caption for a chassis SIOC module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySiocModuleManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for a chassis SIOC module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySiocModuleManufacturingDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a chassis SIOC module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for SIOC Module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for a chassis SIOC module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for a chassis SIOC module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilitySiocModuleManufacturingDef initObject = new Intersight.Model.CapabilitySiocModuleManufacturingDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchingModeCapability.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchingModeCapability")]
-    public class InitializeIntersightCapabilitySwitchingModeCapability : PSCmdlet
-    {
-        public InitializeIntersightCapabilitySwitchingModeCapability()
-        {
-            ClassId = CapabilitySwitchingModeCapability.ClassIdEnum.CapabilitySwitchingModeCapability;
-            ObjectType = CapabilitySwitchingModeCapability.ObjectTypeEnum.CapabilitySwitchingModeCapability;
-            SwitchingMode = CapabilitySwitchingModeCapability.SwitchingModeEnum.EndHost;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchingModeCapability.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchingModeCapability.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switching mode type (endhost, switch) of the switch.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchingModeCapability.SwitchingModeEnum SwitchingMode
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VP Compression support on this switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool VpCompressionSupported
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilitySwitchingModeCapability initObject = new Intersight.Model.CapabilitySwitchingModeCapability();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchingMode"))
-            {
-                initObject.SwitchingMode = this.SwitchingMode;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VpCompressionSupported"))
-            {
-                initObject.VpCompressionSupported = this.VpCompressionSupported;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPsuManufacturingDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPsuManufacturingDef")]
-    public class InitializeIntersightCapabilityPsuManufacturingDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilityPsuManufacturingDef()
-        {
-            ClassId = CapabilityPsuManufacturingDef.ClassIdEnum.CapabilityPsuManufacturingDef;
-            ObjectType = CapabilityPsuManufacturingDef.ObjectTypeEnum.CapabilityPsuManufacturingDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Caption for a power supply unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityPsuManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for a power supply unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityPsuManufacturingDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a power supply unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for Power Supplu Unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for a power supply unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for a power supply unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityPsuManufacturingDef initObject = new Intersight.Model.CapabilityPsuManufacturingDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFexManufacturingDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFexManufacturingDef")]
-    public class InitializeIntersightCapabilityFexManufacturingDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilityFexManufacturingDef()
-        {
-            ClassId = CapabilityFexManufacturingDef.ClassIdEnum.CapabilityFexManufacturingDef;
-            ObjectType = CapabilityFexManufacturingDef.ObjectTypeEnum.CapabilityFexManufacturingDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Caption for Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityFexManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Code Name for Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string FexCodeName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityFexManufacturingDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for Fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityFexManufacturingDef initObject = new Intersight.Model.CapabilityFexManufacturingDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FexCodeName"))
-            {
-                initObject.FexCodeName = this.FexCodeName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityIoCardDescriptor.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityIoCardDescriptor")]
-    public class InitializeIntersightCapabilityIoCardDescriptor : PSCmdlet
-    {
-        public InitializeIntersightCapabilityIoCardDescriptor()
-        {
-            ClassId = CapabilityIoCardDescriptor.ClassIdEnum.CapabilityIoCardDescriptor;
-            ObjectType = CapabilityIoCardDescriptor.ObjectTypeEnum.CapabilityIoCardDescriptor;
-            UifConnectivity = CapabilityIoCardDescriptor.UifConnectivityEnum.Inline;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.CapabilityCapabilityRelationship> Capabilities
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityIoCardDescriptor.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Detailed information about the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Model
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of hif ports per blade for the iocard module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NumHifPorts
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityIoCardDescriptor.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Revision for the iocard module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Revision
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Connectivity information between UIF Uplink ports and IOM ports.\n* `inline` - UIF uplink ports and IOM ports are connected inline.\n* `cross-connected` - UIF uplink ports and IOM ports are cross-connected, a case in washington chassis."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityIoCardDescriptor.UifConnectivityEnum UifConnectivity
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vendor
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Version
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityIoCardDescriptor initObject = new Intersight.Model.CapabilityIoCardDescriptor();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
-            {
-                initObject.Capabilities = this.Capabilities;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
-            {
-                initObject.Model = this.Model;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumHifPorts"))
-            {
-                initObject.NumHifPorts = this.NumHifPorts;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
-            {
-                initObject.Revision = this.Revision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UifConnectivity"))
-            {
-                initObject.UifConnectivity = this.UifConnectivity;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPortGroupAggregationDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPortGroupAggregationDef")]
-    public class InitializeIntersightCapabilityPortGroupAggregationDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilityPortGroupAggregationDef()
-        {
-            ClassId = CapabilityPortGroupAggregationDef.ClassIdEnum.CapabilityPortGroupAggregationDef;
-            ObjectType = CapabilityPortGroupAggregationDef.ObjectTypeEnum.CapabilityPortGroupAggregationDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Aggregation capability for port group."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AggregationCap
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityPortGroupAggregationDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates support for 40G port group capability."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Hw40GPortGroupCap
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityPortGroupAggregationDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of port group for which this capability is defined."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Pgtype
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityPortGroupAggregationDef initObject = new Intersight.Model.CapabilityPortGroupAggregationDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AggregationCap"))
-            {
-                initObject.AggregationCap = this.AggregationCap;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Hw40GPortGroupCap"))
-            {
-                initObject.Hw40GPortGroupCap = this.Hw40GPortGroupCap;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pgtype"))
-            {
-                initObject.Pgtype = this.Pgtype;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityChassisManufacturingDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityChassisManufacturingDef")]
-    public class InitializeIntersightCapabilityChassisManufacturingDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilityChassisManufacturingDef()
-        {
-            ClassId = CapabilityChassisManufacturingDef.ClassIdEnum.CapabilityChassisManufacturingDef;
-            ObjectType = CapabilityChassisManufacturingDef.ObjectTypeEnum.CapabilityChassisManufacturingDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Caption for Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Chassis Code Name for Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ChassisCodeName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityChassisManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityChassisManufacturingDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for Chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityChassisManufacturingDef initObject = new Intersight.Model.CapabilityChassisManufacturingDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisCodeName"))
-            {
-                initObject.ChassisCodeName = this.ChassisCodeName;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CapabilityAdapterUnitDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCapabilityAdapterUnitDescriptor")]
@@ -2125,15 +359,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityIoCardManufacturingDef.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityIoCardManufacturingDef")]
-    public class InitializeIntersightCapabilityIoCardManufacturingDef : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityCatalog")]
+    public class InitializeIntersightCapabilityCatalog : PSCmdlet
     {
-        public InitializeIntersightCapabilityIoCardManufacturingDef()
+        public InitializeIntersightCapabilityCatalog()
         {
-            ClassId = CapabilityIoCardManufacturingDef.ClassIdEnum.CapabilityIoCardManufacturingDef;
-            ObjectType = CapabilityIoCardManufacturingDef.ObjectTypeEnum.CapabilityIoCardManufacturingDef;
+            ClassId = CapabilityCatalog.ClassIdEnum.CapabilityCatalog;
+            ObjectType = CapabilityCatalog.ObjectTypeEnum.CapabilityCatalog;
 
         }
         // <summary>
@@ -2147,31 +381,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Caption for a chassis Iocard module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityIoCardManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for a chassis Iocard module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
+        public CapabilityCatalog.ClassIdEnum ClassId
         {
             get;
             set;
@@ -2187,7 +401,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// <para type="description">"A unique name for the catalog."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2201,37 +415,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityIoCardManufacturingDef.ObjectTypeEnum ObjectType
+        public CapabilityCatalog.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Product Identifier for a chassis Iocard module."</para>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for IO Card Module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for a chassis Iocard module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
+        public Model.OrganizationOrganizationRelationship Organization
         {
             get;
             set;
@@ -2246,33 +440,15 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"VID information for a chassis Iocard module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityIoCardManufacturingDef initObject = new Intersight.Model.CapabilityIoCardManufacturingDef();
+            Intersight.Model.CapabilityCatalog initObject = new Intersight.Model.CapabilityCatalog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -2282,40 +458,28 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
+                initObject.Organization = this.Organization;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
             }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPsuDescriptor.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityChassisDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPsuDescriptor")]
-    public class InitializeIntersightCapabilityPsuDescriptor : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityChassisDescriptor")]
+    public class InitializeIntersightCapabilityChassisDescriptor : PSCmdlet
     {
-        public InitializeIntersightCapabilityPsuDescriptor()
+        public InitializeIntersightCapabilityChassisDescriptor()
         {
-            ClassId = CapabilityPsuDescriptor.ClassIdEnum.CapabilityPsuDescriptor;
-            ObjectType = CapabilityPsuDescriptor.ObjectTypeEnum.CapabilityPsuDescriptor;
+            ClassId = CapabilityChassisDescriptor.ClassIdEnum.CapabilityChassisDescriptor;
+            ObjectType = CapabilityChassisDescriptor.ObjectTypeEnum.CapabilityChassisDescriptor;
 
         }
         // <summary>
@@ -2343,7 +507,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityPsuDescriptor.ClassIdEnum ClassId
+        public CapabilityChassisDescriptor.ClassIdEnum ClassId
         {
             get;
             set;
@@ -2383,666 +547,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityPsuDescriptor.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Revision for the power supply."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Revision
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vendor
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Version
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityPsuDescriptor initObject = new Intersight.Model.CapabilityPsuDescriptor();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
-            {
-                initObject.Capabilities = this.Capabilities;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
-            {
-                initObject.Model = this.Model;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
-            {
-                initObject.Revision = this.Revision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchManufacturingDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchManufacturingDef")]
-    public class InitializeIntersightCapabilitySwitchManufacturingDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilitySwitchManufacturingDef()
-        {
-            ClassId = CapabilitySwitchManufacturingDef.ClassIdEnum.CapabilitySwitchManufacturingDef;
-            ObjectType = CapabilitySwitchManufacturingDef.ObjectTypeEnum.CapabilitySwitchManufacturingDef;
-            Pid = CapabilitySwitchManufacturingDef.PidEnum.UCSFI6454;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Caption for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchManufacturingDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Part Number for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PartNumber
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a Switch/Fabric-Interconnect.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySwitchManufacturingDef.PidEnum Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilitySwitchManufacturingDef initObject = new Intersight.Model.CapabilitySwitchManufacturingDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
-            {
-                initObject.PartNumber = this.PartNumber;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFanModuleManufacturingDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFanModuleManufacturingDef")]
-    public class InitializeIntersightCapabilityFanModuleManufacturingDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilityFanModuleManufacturingDef()
-        {
-            ClassId = CapabilityFanModuleManufacturingDef.ClassIdEnum.CapabilityFanModuleManufacturingDef;
-            ObjectType = CapabilityFanModuleManufacturingDef.ObjectTypeEnum.CapabilityFanModuleManufacturingDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Caption for a fan module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Caption
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityFanModuleManufacturingDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Description for a fan module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityFanModuleManufacturingDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a fan module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Name for Fan Module Unit."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ProductName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for a fan module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for a fan module."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilityFanModuleManufacturingDef initObject = new Intersight.Model.CapabilityFanModuleManufacturingDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
-            {
-                initObject.Caption = this.Caption;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
-            {
-                initObject.ProductName = this.ProductName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySiocModuleCapabilityDef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySiocModuleCapabilityDef")]
-    public class InitializeIntersightCapabilitySiocModuleCapabilityDef : PSCmdlet
-    {
-        public InitializeIntersightCapabilitySiocModuleCapabilityDef()
-        {
-            ClassId = CapabilitySiocModuleCapabilityDef.ClassIdEnum.CapabilitySiocModuleCapabilityDef;
-            ObjectType = CapabilitySiocModuleCapabilityDef.ObjectTypeEnum.CapabilitySiocModuleCapabilityDef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySiocModuleCapabilityDef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Device connector support on SIOC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool DcSupported
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilitySiocModuleCapabilityDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.CapabilitySiocModuleCapabilityDef initObject = new Intersight.Model.CapabilitySiocModuleCapabilityDef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DcSupported"))
-            {
-                initObject.DcSupported = this.DcSupported;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFanModuleDescriptor.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFanModuleDescriptor")]
-    public class InitializeIntersightCapabilityFanModuleDescriptor : PSCmdlet
-    {
-        public InitializeIntersightCapabilityFanModuleDescriptor()
-        {
-            ClassId = CapabilityFanModuleDescriptor.ClassIdEnum.CapabilityFanModuleDescriptor;
-            ObjectType = CapabilityFanModuleDescriptor.ObjectTypeEnum.CapabilityFanModuleDescriptor;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.CapabilityCapabilityRelationship> Capabilities
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityFanModuleDescriptor.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Detailed information about the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Model
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityFanModuleDescriptor.ObjectTypeEnum ObjectType
+        public CapabilityChassisDescriptor.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -3090,7 +595,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityFanModuleDescriptor initObject = new Intersight.Model.CapabilityFanModuleDescriptor();
+            Intersight.Model.CapabilityChassisDescriptor initObject = new Intersight.Model.CapabilityChassisDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -3134,15 +639,211 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySiocModuleDescriptor.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityChassisManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySiocModuleDescriptor")]
-    public class InitializeIntersightCapabilitySiocModuleDescriptor : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityChassisManufacturingDef")]
+    public class InitializeIntersightCapabilityChassisManufacturingDef : PSCmdlet
     {
-        public InitializeIntersightCapabilitySiocModuleDescriptor()
+        public InitializeIntersightCapabilityChassisManufacturingDef()
         {
-            ClassId = CapabilitySiocModuleDescriptor.ClassIdEnum.CapabilitySiocModuleDescriptor;
-            ObjectType = CapabilitySiocModuleDescriptor.ObjectTypeEnum.CapabilitySiocModuleDescriptor;
+            ClassId = CapabilityChassisManufacturingDef.ClassIdEnum.CapabilityChassisManufacturingDef;
+            ObjectType = CapabilityChassisManufacturingDef.ObjectTypeEnum.CapabilityChassisManufacturingDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Caption for Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chassis Code Name for Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ChassisCodeName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityChassisManufacturingDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description for Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityChassisManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for Chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityChassisManufacturingDef initObject = new Intersight.Model.CapabilityChassisManufacturingDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
+            {
+                initObject.Caption = this.Caption;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisCodeName"))
+            {
+                initObject.ChassisCodeName = this.ChassisCodeName;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityCimcFirmwareDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityCimcFirmwareDescriptor")]
+    public class InitializeIntersightCapabilityCimcFirmwareDescriptor : PSCmdlet
+    {
+        public InitializeIntersightCapabilityCimcFirmwareDescriptor()
+        {
+            ClassId = CapabilityCimcFirmwareDescriptor.ClassIdEnum.CapabilityCimcFirmwareDescriptor;
+            ObjectType = CapabilityCimcFirmwareDescriptor.ObjectTypeEnum.CapabilityCimcFirmwareDescriptor;
 
         }
         // <summary>
@@ -3170,7 +871,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilitySiocModuleDescriptor.ClassIdEnum ClassId
+        public CapabilityCimcFirmwareDescriptor.ClassIdEnum ClassId
         {
             get;
             set;
@@ -3210,13 +911,13 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilitySiocModuleDescriptor.ObjectTypeEnum ObjectType
+        public CapabilityCimcFirmwareDescriptor.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Revision for the SIOC module."</para>
+        /// <para type="description">"Revision information for the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -3258,7 +959,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilitySiocModuleDescriptor initObject = new Intersight.Model.CapabilitySiocModuleDescriptor();
+            Intersight.Model.CapabilityCimcFirmwareDescriptor initObject = new Intersight.Model.CapabilityCimcFirmwareDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -3302,15 +1003,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPortRange.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityEquipmentPhysicalDef.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPortRange")]
-    public class InitializeIntersightCapabilityPortRange : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityEquipmentPhysicalDef")]
+    public class InitializeIntersightCapabilityEquipmentPhysicalDef : PSCmdlet
     {
-        public InitializeIntersightCapabilityPortRange()
+        public InitializeIntersightCapabilityEquipmentPhysicalDef()
         {
-            ClassId = CapabilityPortRange.ClassIdEnum.CapabilityPortRange;
-            ObjectType = CapabilityPortRange.ObjectTypeEnum.CapabilityPortRange;
+            ClassId = CapabilityEquipmentPhysicalDef.ClassIdEnum.CapabilityEquipmentPhysicalDef;
+            ObjectType = CapabilityEquipmentPhysicalDef.ObjectTypeEnum.CapabilityEquipmentPhysicalDef;
+            Pid = CapabilityEquipmentPhysicalDef.PidEnum.UCSFI6454;
 
         }
         // <summary>
@@ -3328,27 +1030,77 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityPortRange.ClassIdEnum ClassId
+        public CapabilityEquipmentPhysicalDef.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Ending Port ID in this range of ports."</para>
+        /// <para type="description">"Depth information for a Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long EndPortId
+        public float Depth
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Ending Slot ID in this range of ports."</para>
+        /// <para type="description">"Height information for a Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long EndSlotId
+        public float Height
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Max Power information for a Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MaxPower
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Min Power information for a Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MinPower
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Nominal Power information for a Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NominalPower
         {
             get;
             set;
@@ -3358,27 +1110,67 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityPortRange.ObjectTypeEnum ObjectType
+        public CapabilityEquipmentPhysicalDef.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Starting Port ID in this range of ports."</para>
+        /// <para type="description">"Product Identifier for a Switch/Fabric-Interconnect.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long StartPortId
+        public CapabilityEquipmentPhysicalDef.PidEnum Pid
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Starting Slot ID in this range of ports."</para>
+        /// <para type="description">"SKU information for Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long StartSlotId
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Weight information for a Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float Weight
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Width information for a Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float Width
         {
             get;
             set;
@@ -3386,28 +1178,64 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityPortRange initObject = new Intersight.Model.CapabilityPortRange();
+            Intersight.Model.CapabilityEquipmentPhysicalDef initObject = new Intersight.Model.CapabilityEquipmentPhysicalDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EndPortId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Depth"))
             {
-                initObject.EndPortId = this.EndPortId;
+                initObject.Depth = this.Depth;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EndSlotId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Height"))
             {
-                initObject.EndSlotId = this.EndSlotId;
+                initObject.Height = this.Height;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaxPower"))
+            {
+                initObject.MaxPower = this.MaxPower;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MinPower"))
+            {
+                initObject.MinPower = this.MinPower;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NominalPower"))
+            {
+                initObject.NominalPower = this.NominalPower;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("StartPortId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
             {
-                initObject.StartPortId = this.StartPortId;
+                initObject.Pid = this.Pid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StartSlotId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
             {
-                initObject.StartSlotId = this.StartSlotId;
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Weight"))
+            {
+                initObject.Weight = this.Weight;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Width"))
+            {
+                initObject.Width = this.Width;
             }
             WriteObject(initObject);
         }
@@ -3779,6 +1607,483 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFanModuleDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFanModuleDescriptor")]
+    public class InitializeIntersightCapabilityFanModuleDescriptor : PSCmdlet
+    {
+        public InitializeIntersightCapabilityFanModuleDescriptor()
+        {
+            ClassId = CapabilityFanModuleDescriptor.ClassIdEnum.CapabilityFanModuleDescriptor;
+            ObjectType = CapabilityFanModuleDescriptor.ObjectTypeEnum.CapabilityFanModuleDescriptor;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFanModuleDescriptor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFanModuleDescriptor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Revision for the chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityFanModuleDescriptor initObject = new Intersight.Model.CapabilityFanModuleDescriptor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
+            {
+                initObject.Capabilities = this.Capabilities;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            {
+                initObject.Revision = this.Revision;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFanModuleManufacturingDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFanModuleManufacturingDef")]
+    public class InitializeIntersightCapabilityFanModuleManufacturingDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilityFanModuleManufacturingDef()
+        {
+            ClassId = CapabilityFanModuleManufacturingDef.ClassIdEnum.CapabilityFanModuleManufacturingDef;
+            ObjectType = CapabilityFanModuleManufacturingDef.ObjectTypeEnum.CapabilityFanModuleManufacturingDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Caption for a fan module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFanModuleManufacturingDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description for a fan module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFanModuleManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a fan module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for Fan Module Unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for a fan module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for a fan module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityFanModuleManufacturingDef initObject = new Intersight.Model.CapabilityFanModuleManufacturingDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
+            {
+                initObject.Caption = this.Caption;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFeatureConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFeatureConfig")]
+    public class InitializeIntersightCapabilityFeatureConfig : PSCmdlet
+    {
+        public InitializeIntersightCapabilityFeatureConfig()
+        {
+            ClassId = CapabilityFeatureConfig.ClassIdEnum.CapabilityFeatureConfig;
+            FeatureName = CapabilityFeatureConfig.FeatureNameEnum.RoCEv2;
+            ObjectType = CapabilityFeatureConfig.ObjectTypeEnum.CapabilityFeatureConfig;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFeatureConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the feature that identifies the specific adapter configuration.\n* `RoCEv2` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 2.\n* `RoCEv1` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 1.\n* `VMQ` - Capability indicator of the Virtual Machine Queue (VMQ) feature.\n* `VMMQ` - Capability indicator of the Virtual Machine Multi-Queue (VMMQ) feature.\n* `VMQInterrupts` - Capability indicator of the Virtual Machine Queue (VMQ) Interrupts feature.\n* `NVGRE` - Capability indicator of the Network Virtualization using Generic Routing Encapsulation (NVGRE) feature.\n* `ARFS` - Capability indicator of the Accelerated Receive Flow Steering (ARFS) feature.\n* `VXLAN` - Capability indicator of the Virtual Extensible LAN (VXLAN) feature."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFeatureConfig.FeatureNameEnum FeatureName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Firmware version from which support for this feature is available."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MinFwVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFeatureConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> SupportedFwVersions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> SupportedInAdapters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CapabilityFeatureConfig.SupportedInGenerationsEnum> SupportedInGenerations
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityFeatureConfig initObject = new Intersight.Model.CapabilityFeatureConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FeatureName"))
+            {
+                initObject.FeatureName = this.FeatureName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MinFwVersion"))
+            {
+                initObject.MinFwVersion = this.MinFwVersion;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedFwVersions"))
+            {
+                initObject.SupportedFwVersions = this.SupportedFwVersions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedInAdapters"))
+            {
+                initObject.SupportedInAdapters = this.SupportedInAdapters;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedInGenerations"))
+            {
+                initObject.SupportedInGenerations = this.SupportedInGenerations;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFexDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFexDescriptor")]
@@ -3947,6 +2252,1295 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFexManufacturingDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFexManufacturingDef")]
+    public class InitializeIntersightCapabilityFexManufacturingDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilityFexManufacturingDef()
+        {
+            ClassId = CapabilityFexManufacturingDef.ClassIdEnum.CapabilityFexManufacturingDef;
+            ObjectType = CapabilityFexManufacturingDef.ObjectTypeEnum.CapabilityFexManufacturingDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Caption for Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFexManufacturingDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description for Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Code Name for Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FexCodeName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityFexManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for Fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityFexManufacturingDef initObject = new Intersight.Model.CapabilityFexManufacturingDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
+            {
+                initObject.Caption = this.Caption;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FexCodeName"))
+            {
+                initObject.FexCodeName = this.FexCodeName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityIoCardCapabilityDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityIoCardCapabilityDef")]
+    public class InitializeIntersightCapabilityIoCardCapabilityDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilityIoCardCapabilityDef()
+        {
+            ClassId = CapabilityIoCardCapabilityDef.ClassIdEnum.CapabilityIoCardCapabilityDef;
+            ObjectType = CapabilityIoCardCapabilityDef.ObjectTypeEnum.CapabilityIoCardCapabilityDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardCapabilityDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Device connector support on Iocard."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool DcSupported
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardCapabilityDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityIoCardCapabilityDef initObject = new Intersight.Model.CapabilityIoCardCapabilityDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DcSupported"))
+            {
+                initObject.DcSupported = this.DcSupported;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityIoCardDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityIoCardDescriptor")]
+    public class InitializeIntersightCapabilityIoCardDescriptor : PSCmdlet
+    {
+        public InitializeIntersightCapabilityIoCardDescriptor()
+        {
+            ClassId = CapabilityIoCardDescriptor.ClassIdEnum.CapabilityIoCardDescriptor;
+            ObjectType = CapabilityIoCardDescriptor.ObjectTypeEnum.CapabilityIoCardDescriptor;
+            UifConnectivity = CapabilityIoCardDescriptor.UifConnectivityEnum.Inline;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardDescriptor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of hif ports per blade for the iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NumHifPorts
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardDescriptor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Revision for the iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Connectivity information between UIF Uplink ports and IOM ports.\n* `inline` - UIF uplink ports and IOM ports are connected inline.\n* `cross-connected` - UIF uplink ports and IOM ports are cross-connected, a case in washington chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardDescriptor.UifConnectivityEnum UifConnectivity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityIoCardDescriptor initObject = new Intersight.Model.CapabilityIoCardDescriptor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
+            {
+                initObject.Capabilities = this.Capabilities;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumHifPorts"))
+            {
+                initObject.NumHifPorts = this.NumHifPorts;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            {
+                initObject.Revision = this.Revision;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UifConnectivity"))
+            {
+                initObject.UifConnectivity = this.UifConnectivity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityIoCardManufacturingDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityIoCardManufacturingDef")]
+    public class InitializeIntersightCapabilityIoCardManufacturingDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilityIoCardManufacturingDef()
+        {
+            ClassId = CapabilityIoCardManufacturingDef.ClassIdEnum.CapabilityIoCardManufacturingDef;
+            ObjectType = CapabilityIoCardManufacturingDef.ObjectTypeEnum.CapabilityIoCardManufacturingDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Caption for a chassis Iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardManufacturingDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description for a chassis Iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityIoCardManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a chassis Iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for IO Card Module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for a chassis Iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for a chassis Iocard module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityIoCardManufacturingDef initObject = new Intersight.Model.CapabilityIoCardManufacturingDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
+            {
+                initObject.Caption = this.Caption;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPortGroupAggregationDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPortGroupAggregationDef")]
+    public class InitializeIntersightCapabilityPortGroupAggregationDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilityPortGroupAggregationDef()
+        {
+            ClassId = CapabilityPortGroupAggregationDef.ClassIdEnum.CapabilityPortGroupAggregationDef;
+            ObjectType = CapabilityPortGroupAggregationDef.ObjectTypeEnum.CapabilityPortGroupAggregationDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Aggregation capability for port group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string AggregationCap
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPortGroupAggregationDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates support for 40G port group capability."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Hw40GPortGroupCap
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPortGroupAggregationDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of port group for which this capability is defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pgtype
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityPortGroupAggregationDef initObject = new Intersight.Model.CapabilityPortGroupAggregationDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AggregationCap"))
+            {
+                initObject.AggregationCap = this.AggregationCap;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Hw40GPortGroupCap"))
+            {
+                initObject.Hw40GPortGroupCap = this.Hw40GPortGroupCap;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pgtype"))
+            {
+                initObject.Pgtype = this.Pgtype;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPortRange.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPortRange")]
+    public class InitializeIntersightCapabilityPortRange : PSCmdlet
+    {
+        public InitializeIntersightCapabilityPortRange()
+        {
+            ClassId = CapabilityPortRange.ClassIdEnum.CapabilityPortRange;
+            ObjectType = CapabilityPortRange.ObjectTypeEnum.CapabilityPortRange;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPortRange.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ending Port ID in this range of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EndPortId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ending Slot ID in this range of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EndSlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPortRange.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Starting Port ID in this range of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long StartPortId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Starting Slot ID in this range of ports."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long StartSlotId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityPortRange initObject = new Intersight.Model.CapabilityPortRange();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndPortId"))
+            {
+                initObject.EndPortId = this.EndPortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndSlotId"))
+            {
+                initObject.EndSlotId = this.EndSlotId;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("StartPortId"))
+            {
+                initObject.StartPortId = this.StartPortId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StartSlotId"))
+            {
+                initObject.StartSlotId = this.StartSlotId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPsuDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPsuDescriptor")]
+    public class InitializeIntersightCapabilityPsuDescriptor : PSCmdlet
+    {
+        public InitializeIntersightCapabilityPsuDescriptor()
+        {
+            ClassId = CapabilityPsuDescriptor.ClassIdEnum.CapabilityPsuDescriptor;
+            ObjectType = CapabilityPsuDescriptor.ObjectTypeEnum.CapabilityPsuDescriptor;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPsuDescriptor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPsuDescriptor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Revision for the power supply."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityPsuDescriptor initObject = new Intersight.Model.CapabilityPsuDescriptor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
+            {
+                initObject.Capabilities = this.Capabilities;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            {
+                initObject.Revision = this.Revision;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityPsuManufacturingDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityPsuManufacturingDef")]
+    public class InitializeIntersightCapabilityPsuManufacturingDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilityPsuManufacturingDef()
+        {
+            ClassId = CapabilityPsuManufacturingDef.ClassIdEnum.CapabilityPsuManufacturingDef;
+            ObjectType = CapabilityPsuManufacturingDef.ObjectTypeEnum.CapabilityPsuManufacturingDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Caption for a power supply unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPsuManufacturingDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description for a power supply unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityPsuManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a power supply unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for Power Supplu Unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for a power supply unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for a power supply unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityPsuManufacturingDef initObject = new Intersight.Model.CapabilityPsuManufacturingDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
+            {
+                initObject.Caption = this.Caption;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CapabilityServerModelsCapabilityDef.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCapabilityServerModelsCapabilityDef")]
@@ -4073,15 +3667,197 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchSystemLimits.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityServerSchemaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchSystemLimits")]
-    public class InitializeIntersightCapabilitySwitchSystemLimits : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityServerSchemaDescriptor")]
+    public class InitializeIntersightCapabilityServerSchemaDescriptor : PSCmdlet
     {
-        public InitializeIntersightCapabilitySwitchSystemLimits()
+        public InitializeIntersightCapabilityServerSchemaDescriptor()
         {
-            ClassId = CapabilitySwitchSystemLimits.ClassIdEnum.CapabilitySwitchSystemLimits;
-            ObjectType = CapabilitySwitchSystemLimits.ObjectTypeEnum.CapabilitySwitchSystemLimits;
+            ClassId = CapabilityServerSchemaDescriptor.ClassIdEnum.CapabilityServerSchemaDescriptor;
+            ObjectType = CapabilityServerSchemaDescriptor.ObjectTypeEnum.CapabilityServerSchemaDescriptor;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityServerSchemaDescriptor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Redfish property name for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LocatorLedName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityServerSchemaDescriptor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Redfish version information for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RedfishSchema
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityServerSchemaDescriptor initObject = new Intersight.Model.CapabilityServerSchemaDescriptor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
+            {
+                initObject.Capabilities = this.Capabilities;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LocatorLedName"))
+            {
+                initObject.LocatorLedName = this.LocatorLedName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RedfishSchema"))
+            {
+                initObject.RedfishSchema = this.RedfishSchema;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySiocModuleCapabilityDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySiocModuleCapabilityDef")]
+    public class InitializeIntersightCapabilitySiocModuleCapabilityDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilitySiocModuleCapabilityDef()
+        {
+            ClassId = CapabilitySiocModuleCapabilityDef.ClassIdEnum.CapabilitySiocModuleCapabilityDef;
+            ObjectType = CapabilitySiocModuleCapabilityDef.ObjectTypeEnum.CapabilitySiocModuleCapabilityDef;
 
         }
         // <summary>
@@ -4099,37 +3875,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilitySwitchSystemLimits.ClassIdEnum ClassId
+        public CapabilitySiocModuleCapabilityDef.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Maximum UCS chassis that can be connected to this Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"Device connector support on SIOC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long MaximumChassisCount
+        public bool DcSupported
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Maximum UCS Fabric-extenders (FEX) per Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long MaximumFexPerDomain
+        public string Moid
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Maximum UCS servers per Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long MaximumServersPerDomain
+        public string Name
         {
             get;
             set;
@@ -4139,7 +3915,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilitySwitchSystemLimits.ObjectTypeEnum ObjectType
+        public CapabilitySiocModuleCapabilityDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
         {
             get;
             set;
@@ -4147,25 +3933,379 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilitySwitchSystemLimits initObject = new Intersight.Model.CapabilitySwitchSystemLimits();
+            Intersight.Model.CapabilitySiocModuleCapabilityDef initObject = new Intersight.Model.CapabilitySiocModuleCapabilityDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumChassisCount"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DcSupported"))
             {
-                initObject.MaximumChassisCount = this.MaximumChassisCount;
+                initObject.DcSupported = this.DcSupported;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumFexPerDomain"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
-                initObject.MaximumFexPerDomain = this.MaximumFexPerDomain;
+                initObject.Moid = this.Moid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumServersPerDomain"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
-                initObject.MaximumServersPerDomain = this.MaximumServersPerDomain;
+                initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySiocModuleDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySiocModuleDescriptor")]
+    public class InitializeIntersightCapabilitySiocModuleDescriptor : PSCmdlet
+    {
+        public InitializeIntersightCapabilitySiocModuleDescriptor()
+        {
+            ClassId = CapabilitySiocModuleDescriptor.ClassIdEnum.CapabilitySiocModuleDescriptor;
+            ObjectType = CapabilitySiocModuleDescriptor.ObjectTypeEnum.CapabilitySiocModuleDescriptor;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilitySiocModuleDescriptor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilitySiocModuleDescriptor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Revision for the SIOC module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilitySiocModuleDescriptor initObject = new Intersight.Model.CapabilitySiocModuleDescriptor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
+            {
+                initObject.Capabilities = this.Capabilities;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            {
+                initObject.Revision = this.Revision;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySiocModuleManufacturingDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySiocModuleManufacturingDef")]
+    public class InitializeIntersightCapabilitySiocModuleManufacturingDef : PSCmdlet
+    {
+        public InitializeIntersightCapabilitySiocModuleManufacturingDef()
+        {
+            ClassId = CapabilitySiocModuleManufacturingDef.ClassIdEnum.CapabilitySiocModuleManufacturingDef;
+            ObjectType = CapabilitySiocModuleManufacturingDef.ObjectTypeEnum.CapabilitySiocModuleManufacturingDef;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Caption for a chassis SIOC module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilitySiocModuleManufacturingDef.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description for a chassis SIOC module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilitySiocModuleManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a chassis SIOC module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for SIOC Module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for a chassis SIOC module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VID information for a chassis SIOC module."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilitySiocModuleManufacturingDef initObject = new Intersight.Model.CapabilitySiocModuleManufacturingDef();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
+            {
+                initObject.Caption = this.Caption;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
+            {
+                initObject.Pid = this.Pid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
+            {
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
+            }
             WriteObject(initObject);
         }
 
@@ -4648,15 +4788,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityServerSchemaDescriptor.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityServerSchemaDescriptor")]
-    public class InitializeIntersightCapabilityServerSchemaDescriptor : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchDescriptor")]
+    public class InitializeIntersightCapabilitySwitchDescriptor : PSCmdlet
     {
-        public InitializeIntersightCapabilityServerSchemaDescriptor()
+        public InitializeIntersightCapabilitySwitchDescriptor()
         {
-            ClassId = CapabilityServerSchemaDescriptor.ClassIdEnum.CapabilityServerSchemaDescriptor;
-            ObjectType = CapabilityServerSchemaDescriptor.ObjectTypeEnum.CapabilityServerSchemaDescriptor;
+            ClassId = CapabilitySwitchDescriptor.ClassIdEnum.CapabilitySwitchDescriptor;
+            ObjectType = CapabilitySwitchDescriptor.ObjectTypeEnum.CapabilitySwitchDescriptor;
 
         }
         // <summary>
@@ -4684,7 +4824,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityServerSchemaDescriptor.ClassIdEnum ClassId
+        public CapabilitySwitchDescriptor.ClassIdEnum ClassId
         {
             get;
             set;
@@ -4700,11 +4840,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Redfish property name for the server."</para>
+        /// <para type="description">"The total expected memory for this hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string LocatorLedName
+        public long ExpectedMemory
         {
             get;
             set;
@@ -4734,17 +4874,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityServerSchemaDescriptor.ObjectTypeEnum ObjectType
+        public CapabilitySwitchDescriptor.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Redfish version information for the server."</para>
+        /// <para type="description">"Revision for the fabric interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string RedfishSchema
+        public string Revision
         {
             get;
             set;
@@ -4782,7 +4922,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityServerSchemaDescriptor initObject = new Intersight.Model.CapabilityServerSchemaDescriptor();
+            Intersight.Model.CapabilitySwitchDescriptor initObject = new Intersight.Model.CapabilitySwitchDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -4796,9 +4936,9 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("LocatorLedName"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExpectedMemory"))
             {
-                initObject.LocatorLedName = this.LocatorLedName;
+                initObject.ExpectedMemory = this.ExpectedMemory;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
             {
@@ -4809,9 +4949,9 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RedfishSchema"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
             {
-                initObject.RedfishSchema = this.RedfishSchema;
+                initObject.Revision = this.Revision;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -4830,16 +4970,16 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityFeatureConfig.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityFeatureConfig")]
-    public class InitializeIntersightCapabilityFeatureConfig : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchManufacturingDef")]
+    public class InitializeIntersightCapabilitySwitchManufacturingDef : PSCmdlet
     {
-        public InitializeIntersightCapabilityFeatureConfig()
+        public InitializeIntersightCapabilitySwitchManufacturingDef()
         {
-            ClassId = CapabilityFeatureConfig.ClassIdEnum.CapabilityFeatureConfig;
-            FeatureName = CapabilityFeatureConfig.FeatureNameEnum.RoCEv2;
-            ObjectType = CapabilityFeatureConfig.ObjectTypeEnum.CapabilityFeatureConfig;
+            ClassId = CapabilitySwitchManufacturingDef.ClassIdEnum.CapabilitySwitchManufacturingDef;
+            ObjectType = CapabilitySwitchManufacturingDef.ObjectTypeEnum.CapabilitySwitchManufacturingDef;
+            Pid = CapabilitySwitchManufacturingDef.PidEnum.UCSFI6454;
 
         }
         // <summary>
@@ -4853,31 +4993,51 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Caption for Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Caption
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityFeatureConfig.ClassIdEnum ClassId
+        public CapabilitySwitchManufacturingDef.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Name of the feature that identifies the specific adapter configuration.\n* `RoCEv2` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 2.\n* `RoCEv1` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 1.\n* `VMQ` - Capability indicator of the Virtual Machine Queue (VMQ) feature.\n* `VMMQ` - Capability indicator of the Virtual Machine Multi-Queue (VMMQ) feature.\n* `VMQInterrupts` - Capability indicator of the Virtual Machine Queue (VMQ) Interrupts feature.\n* `NVGRE` - Capability indicator of the Network Virtualization using Generic Routing Encapsulation (NVGRE) feature.\n* `ARFS` - Capability indicator of the Accelerated Receive Flow Steering (ARFS) feature.\n* `VXLAN` - Capability indicator of the Virtual Extensible LAN (VXLAN) feature."</para>
+        /// <para type="description">"Description for Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityFeatureConfig.FeatureNameEnum FeatureName
+        public string Description
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Firmware version from which support for this feature is available."</para>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string MinFwVersion
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
         {
             get;
             set;
@@ -4887,7 +5047,47 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityFeatureConfig.ObjectTypeEnum ObjectType
+        public CapabilitySwitchManufacturingDef.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Part Number for Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PartNumber
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Identifier for a Switch/Fabric-Interconnect.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilitySwitchManufacturingDef.PidEnum Pid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product Name for Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"SKU information for Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Sku
         {
             get;
             set;
@@ -4897,27 +5097,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> SupportedFwVersions
+        public List<Model.MoTag> Tags
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"VID information for Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> SupportedInAdapters
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<CapabilityFeatureConfig.SupportedInGenerationsEnum> SupportedInGenerations
+        public string Vid
         {
             get;
             set;
@@ -4925,32 +5115,52 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityFeatureConfig initObject = new Intersight.Model.CapabilityFeatureConfig();
+            Intersight.Model.CapabilitySwitchManufacturingDef initObject = new Intersight.Model.CapabilitySwitchManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("FeatureName"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Caption"))
             {
-                initObject.FeatureName = this.FeatureName;
+                initObject.Caption = this.Caption;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MinFwVersion"))
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
-                initObject.MinFwVersion = this.MinFwVersion;
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedFwVersions"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
             {
-                initObject.SupportedFwVersions = this.SupportedFwVersions;
+                initObject.PartNumber = this.PartNumber;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedInAdapters"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
             {
-                initObject.SupportedInAdapters = this.SupportedInAdapters;
+                initObject.Pid = this.Pid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SupportedInGenerations"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductName"))
             {
-                initObject.SupportedInGenerations = this.SupportedInGenerations;
+                initObject.ProductName = this.ProductName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
+            {
+                initObject.Sku = this.Sku;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
+            {
+                initObject.Vid = this.Vid;
             }
             WriteObject(initObject);
         }
@@ -5223,15 +5433,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityIoCardCapabilityDef.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchStorageLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityIoCardCapabilityDef")]
-    public class InitializeIntersightCapabilityIoCardCapabilityDef : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchStorageLimits")]
+    public class InitializeIntersightCapabilitySwitchStorageLimits : PSCmdlet
     {
-        public InitializeIntersightCapabilityIoCardCapabilityDef()
+        public InitializeIntersightCapabilitySwitchStorageLimits()
         {
-            ClassId = CapabilityIoCardCapabilityDef.ClassIdEnum.CapabilityIoCardCapabilityDef;
-            ObjectType = CapabilityIoCardCapabilityDef.ObjectTypeEnum.CapabilityIoCardCapabilityDef;
+            ClassId = CapabilitySwitchStorageLimits.ClassIdEnum.CapabilitySwitchStorageLimits;
+            ObjectType = CapabilitySwitchStorageLimits.ObjectTypeEnum.CapabilitySwitchStorageLimits;
 
         }
         // <summary>
@@ -5249,37 +5459,57 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityIoCardCapabilityDef.ClassIdEnum ClassId
+        public CapabilitySwitchStorageLimits.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Device connector support on Iocard."</para>
+        /// <para type="description">"Maximum user zones per Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool DcSupported
+        public long MaximumUserZoneCount
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// <para type="description">"Maximum configurable Virtual Fibre Channel interfaces on Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Moid
+        public long MaximumVirtualFcInterfaces
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// <para type="description">"Maximum configurable Virtual Fibre Channel interfaces per blade."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Name
+        public long MaximumVirtualFcInterfacesPerBladeServer
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum configurable VSANs on Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MaximumVsans
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Zone limit per Switch/Fabric-Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MaximumZoneCount
         {
             get;
             set;
@@ -5289,17 +5519,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityIoCardCapabilityDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
+        public CapabilitySwitchStorageLimits.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -5307,44 +5527,47 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityIoCardCapabilityDef initObject = new Intersight.Model.CapabilityIoCardCapabilityDef();
+            Intersight.Model.CapabilitySwitchStorageLimits initObject = new Intersight.Model.CapabilitySwitchStorageLimits();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DcSupported"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumUserZoneCount"))
             {
-                initObject.DcSupported = this.DcSupported;
+                initObject.MaximumUserZoneCount = this.MaximumUserZoneCount;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumVirtualFcInterfaces"))
             {
-                initObject.Moid = this.Moid;
+                initObject.MaximumVirtualFcInterfaces = this.MaximumVirtualFcInterfaces;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumVirtualFcInterfacesPerBladeServer"))
             {
-                initObject.Name = this.Name;
+                initObject.MaximumVirtualFcInterfacesPerBladeServer = this.MaximumVirtualFcInterfacesPerBladeServer;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumVsans"))
+            {
+                initObject.MaximumVsans = this.MaximumVsans;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumZoneCount"))
+            {
+                initObject.MaximumZoneCount = this.MaximumZoneCount;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityEquipmentPhysicalDef.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchSystemLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityEquipmentPhysicalDef")]
-    public class InitializeIntersightCapabilityEquipmentPhysicalDef : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchSystemLimits")]
+    public class InitializeIntersightCapabilitySwitchSystemLimits : PSCmdlet
     {
-        public InitializeIntersightCapabilityEquipmentPhysicalDef()
+        public InitializeIntersightCapabilitySwitchSystemLimits()
         {
-            ClassId = CapabilityEquipmentPhysicalDef.ClassIdEnum.CapabilityEquipmentPhysicalDef;
-            ObjectType = CapabilityEquipmentPhysicalDef.ObjectTypeEnum.CapabilityEquipmentPhysicalDef;
-            Pid = CapabilityEquipmentPhysicalDef.PidEnum.UCSFI6454;
+            ClassId = CapabilitySwitchSystemLimits.ClassIdEnum.CapabilitySwitchSystemLimits;
+            ObjectType = CapabilitySwitchSystemLimits.ObjectTypeEnum.CapabilitySwitchSystemLimits;
 
         }
         // <summary>
@@ -5362,77 +5585,37 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityEquipmentPhysicalDef.ClassIdEnum ClassId
+        public CapabilitySwitchSystemLimits.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Depth information for a Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"Maximum UCS chassis that can be connected to this Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public float Depth
+        public long MaximumChassisCount
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Height information for a Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"Maximum UCS Fabric-extenders (FEX) per Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public float Height
+        public long MaximumFexPerDomain
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Max Power information for a Switch/Fabric-Interconnect."</para>
+        /// <para type="description">"Maximum UCS servers per Switch/Fabric-Interconnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long MaxPower
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Min Power information for a Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long MinPower
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An unique identifer for a capability descriptor."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Nominal Power information for a Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NominalPower
+        public long MaximumServersPerDomain
         {
             get;
             set;
@@ -5442,67 +5625,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityEquipmentPhysicalDef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Product Identifier for a Switch/Fabric-Interconnect.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CapabilityEquipmentPhysicalDef.PidEnum Pid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"SKU information for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Sku
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VID information for Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Weight information for a Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public float Weight
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Width information for a Switch/Fabric-Interconnect."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public float Width
+        public CapabilitySwitchSystemLimits.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -5510,79 +5633,40 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityEquipmentPhysicalDef initObject = new Intersight.Model.CapabilityEquipmentPhysicalDef();
+            Intersight.Model.CapabilitySwitchSystemLimits initObject = new Intersight.Model.CapabilitySwitchSystemLimits();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Depth"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumChassisCount"))
             {
-                initObject.Depth = this.Depth;
+                initObject.MaximumChassisCount = this.MaximumChassisCount;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Height"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumFexPerDomain"))
             {
-                initObject.Height = this.Height;
+                initObject.MaximumFexPerDomain = this.MaximumFexPerDomain;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MaxPower"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaximumServersPerDomain"))
             {
-                initObject.MaxPower = this.MaxPower;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MinPower"))
-            {
-                initObject.MinPower = this.MinPower;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NominalPower"))
-            {
-                initObject.NominalPower = this.NominalPower;
+                initObject.MaximumServersPerDomain = this.MaximumServersPerDomain;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Pid"))
-            {
-                initObject.Pid = this.Pid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sku"))
-            {
-                initObject.Sku = this.Sku;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vid"))
-            {
-                initObject.Vid = this.Vid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Weight"))
-            {
-                initObject.Weight = this.Weight;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Width"))
-            {
-                initObject.Width = this.Width;
-            }
             WriteObject(initObject);
         }
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityChassisDescriptor.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilitySwitchingModeCapability.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityChassisDescriptor")]
-    public class InitializeIntersightCapabilityChassisDescriptor : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilitySwitchingModeCapability")]
+    public class InitializeIntersightCapabilitySwitchingModeCapability : PSCmdlet
     {
-        public InitializeIntersightCapabilityChassisDescriptor()
+        public InitializeIntersightCapabilitySwitchingModeCapability()
         {
-            ClassId = CapabilityChassisDescriptor.ClassIdEnum.CapabilityChassisDescriptor;
-            ObjectType = CapabilityChassisDescriptor.ObjectTypeEnum.CapabilityChassisDescriptor;
+            ClassId = CapabilitySwitchingModeCapability.ClassIdEnum.CapabilitySwitchingModeCapability;
+            ObjectType = CapabilitySwitchingModeCapability.ObjectTypeEnum.CapabilitySwitchingModeCapability;
+            SwitchingMode = CapabilitySwitchingModeCapability.SwitchingModeEnum.EndHost;
 
         }
         // <summary>
@@ -5596,51 +5680,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.CapabilityCapabilityRelationship> Capabilities
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityChassisDescriptor.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Detailed information about the endpoint."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Model
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
+        public CapabilitySwitchingModeCapability.ClassIdEnum ClassId
         {
             get;
             set;
@@ -5650,47 +5694,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public CapabilityChassisDescriptor.ObjectTypeEnum ObjectType
+        public CapabilitySwitchingModeCapability.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Revision for the chassis enclosure."</para>
+        /// <para type="description">"Switching mode type (endhost, switch) of the switch.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Revision
+        public CapabilitySwitchingModeCapability.SwitchingModeEnum SwitchingMode
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description"></para>
+        /// <para type="description">"VP Compression support on this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vendor
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Version
+        public bool VpCompressionSupported
         {
             get;
             set;
@@ -5698,44 +5722,20 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.CapabilityChassisDescriptor initObject = new Intersight.Model.CapabilityChassisDescriptor();
+            Intersight.Model.CapabilitySwitchingModeCapability initObject = new Intersight.Model.CapabilitySwitchingModeCapability();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Capabilities"))
-            {
-                initObject.Capabilities = this.Capabilities;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
-            {
-                initObject.Model = this.Model;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchingMode"))
             {
-                initObject.Revision = this.Revision;
+                initObject.SwitchingMode = this.SwitchingMode;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpCompressionSupported"))
             {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
+                initObject.VpCompressionSupported = this.VpCompressionSupported;
             }
             WriteObject(initObject);
         }

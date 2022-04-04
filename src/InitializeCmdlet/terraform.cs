@@ -8,15 +8,15 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TerraformRunstate.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize TerraformCloudResource.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTerraformRunstate")]
-    public class InitializeIntersightTerraformRunstate : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightTerraformCloudResource")]
+    public class InitializeIntersightTerraformCloudResource : PSCmdlet
     {
-        public InitializeIntersightTerraformRunstate()
+        public InitializeIntersightTerraformCloudResource()
         {
-            ClassId = TerraformRunstate.ClassIdEnum.TerraformRunstate;
-            ObjectType = TerraformRunstate.ObjectTypeEnum.TerraformRunstate;
+            ClassId = TerraformCloudResource.ClassIdEnum.TerraformCloudResource;
+            ObjectType = TerraformCloudResource.ObjectTypeEnum.TerraformCloudResource;
 
         }
         // <summary>
@@ -34,7 +34,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public TerraformRunstate.ClassIdEnum ClassId
+        public TerraformCloudResource.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Currentstatus of the resource if applicable on the cloud."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CurrentStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desiredstatus of the resource if applicable on the cloud."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DesiredStatus
         {
             get;
             set;
@@ -44,27 +64,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public TerraformRunstate.ObjectTypeEnum ObjectType
+        public TerraformCloudResource.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Run identifier for every terraform execution."</para>
+        /// <para type="description">"Unique id of the resource from the cloud provider."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string RunId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"StateFile identifier of terraform execution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string StateFile
+        public string ResourceId
         {
             get;
             set;
@@ -72,20 +82,24 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.TerraformRunstate initObject = new Intersight.Model.TerraformRunstate();
+            Intersight.Model.TerraformCloudResource initObject = new Intersight.Model.TerraformCloudResource();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RunId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CurrentStatus"))
             {
-                initObject.RunId = this.RunId;
+                initObject.CurrentStatus = this.CurrentStatus;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("StateFile"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DesiredStatus"))
             {
-                initObject.StateFile = this.StateFile;
+                initObject.DesiredStatus = this.DesiredStatus;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceId"))
+            {
+                initObject.ResourceId = this.ResourceId;
             }
             WriteObject(initObject);
         }
@@ -401,15 +415,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize TerraformCloudResource.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize TerraformRunstate.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightTerraformCloudResource")]
-    public class InitializeIntersightTerraformCloudResource : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightTerraformRunstate")]
+    public class InitializeIntersightTerraformRunstate : PSCmdlet
     {
-        public InitializeIntersightTerraformCloudResource()
+        public InitializeIntersightTerraformRunstate()
         {
-            ClassId = TerraformCloudResource.ClassIdEnum.TerraformCloudResource;
-            ObjectType = TerraformCloudResource.ObjectTypeEnum.TerraformCloudResource;
+            ClassId = TerraformRunstate.ClassIdEnum.TerraformRunstate;
+            ObjectType = TerraformRunstate.ObjectTypeEnum.TerraformRunstate;
 
         }
         // <summary>
@@ -427,27 +441,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public TerraformCloudResource.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Currentstatus of the resource if applicable on the cloud."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string CurrentStatus
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Desiredstatus of the resource if applicable on the cloud."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string DesiredStatus
+        public TerraformRunstate.ClassIdEnum ClassId
         {
             get;
             set;
@@ -457,17 +451,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public TerraformCloudResource.ObjectTypeEnum ObjectType
+        public TerraformRunstate.ObjectTypeEnum ObjectType
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Unique id of the resource from the cloud provider."</para>
+        /// <para type="description">"Run identifier for every terraform execution."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string ResourceId
+        public string RunId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"StateFile identifier of terraform execution."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string StateFile
         {
             get;
             set;
@@ -475,24 +479,20 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.TerraformCloudResource initObject = new Intersight.Model.TerraformCloudResource();
+            Intersight.Model.TerraformRunstate initObject = new Intersight.Model.TerraformRunstate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CurrentStatus"))
-            {
-                initObject.CurrentStatus = this.CurrentStatus;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DesiredStatus"))
-            {
-                initObject.DesiredStatus = this.DesiredStatus;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceId"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RunId"))
             {
-                initObject.ResourceId = this.ResourceId;
+                initObject.RunId = this.RunId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StateFile"))
+            {
+                initObject.StateFile = this.StateFile;
             }
             WriteObject(initObject);
         }
