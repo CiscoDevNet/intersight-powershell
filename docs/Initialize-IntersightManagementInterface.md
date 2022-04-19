@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightManagementInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ManagementInterface.ClassIdEnum>][-HostName< string>][-Ipv6Address< string>][-Ipv6Gateway< string>][-Ipv6Prefix< long>][-Moid< string>][-ObjectType< ManagementInterface.ObjectTypeEnum>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UemConnStatus< string>][-VirtualHostName< string>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightManagementInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ManagementInterface.ClassIdEnum>][-EquipmentChassis< Model.EquipmentChassisRelationship>][-HostName< string>][-Ipv6Address< string>][-Ipv6Gateway< string>][-Ipv6Prefix< long>][-Moid< string>][-ObjectType< ManagementInterface.ObjectTypeEnum>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UemConnStatus< string>][-VirtualHostName< string>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,24 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ManagementInterface.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EquipmentChassis
+A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.EquipmentChassisRelationship
 Parameter Sets: (All)
 Aliases:
 

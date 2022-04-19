@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAdapterHostFcInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostFcInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostFcInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostFcInterface.OperReasonEnum]>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAdapterHostFcInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostFcInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostFcInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostFcInterface.OperReasonEnum]>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,39 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[AdapterHostFcInterface.OperReasonEnum]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinGroupName
+Name given for San PinGroup.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinnedInterface
+A reference to a inventoryInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.InventoryInterfaceRelationship
 Parameter Sets: (All)
 Aliases:
 

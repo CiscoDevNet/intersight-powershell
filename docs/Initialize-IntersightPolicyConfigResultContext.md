@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyConfigResultContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigResultContext.ClassIdEnum>][-EntityData< object>][-EntityMoid< string>][-EntityName< string>][-EntityType< string>][-ObjectType< PolicyConfigResultContext.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyConfigResultContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigResultContext.ClassIdEnum>][-EntityData< object>][-EntityMoid< string>][-EntityName< string>][-EntityType< string>][-ObjectType< PolicyConfigResultContext.ObjectTypeEnum>][-ParentMoid< string>][-ParentType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -121,6 +121,36 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: PolicyConfigResultContext.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ParentMoid
+The Moid of the parent object present in config result context.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ParentType
+The type of the parent object present in config result context.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

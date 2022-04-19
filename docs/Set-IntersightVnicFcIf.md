@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-ScpVhba< VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-ScpVhba< VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -142,6 +142,21 @@ Enables retention of LUN ID associations in memory until they are manually clear
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinGroupName
+Pingroup name associated to vfc for static pinning. SCP deploy will resolve pingroup name and fetches the correspoding uplink port/port channel to pin the vfc traffic.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

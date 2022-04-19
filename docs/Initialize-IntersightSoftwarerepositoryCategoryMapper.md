@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-ClassId< SoftwarerepositoryCategoryMapper.ClassIdEnum>][-FileType< SoftwarerepositoryCategoryMapper.FileTypeEnum>][-ImageType< string>][-MdfId< string>][-Moid< string>][-Name< string>][-ObjectType< SoftwarerepositoryCategoryMapper.ObjectTypeEnum>][-RegexPattern< string>][-Source< SoftwarerepositoryCategoryMapper.SourceEnum>][-SupportedModels< System.Collections.Generic.List`1[string]>][-SwId< string>][-TagTypes< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSoftwarerepositoryCategoryMapper [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-ClassId< SoftwarerepositoryCategoryMapper.ClassIdEnum>][-FileType< SoftwarerepositoryCategoryMapper.FileTypeEnum>][-ImageType< string>][-IsNfsUpgradeSupported< bool>][-MdfId< string>][-Moid< string>][-Name< string>][-ObjectType< SoftwarerepositoryCategoryMapper.ObjectTypeEnum>][-RegexPattern< string>][-Source< SoftwarerepositoryCategoryMapper.SourceEnum>][-SupportedModels< System.Collections.Generic.List`1[string]>][-SwId< string>][-TagTypes< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,21 @@ The type of image based on the endpoint it can upgrade. For example, ucs-c420m5-
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsNfsUpgradeSupported
+Defines whether NFS firmware upgrade is supported with this image type.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

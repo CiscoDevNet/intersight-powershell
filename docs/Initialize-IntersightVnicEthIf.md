@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicEthIf.ClassIdEnum>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< Model.IppoolIpLeaseRelationship>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< Model.VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< Model.MacpoolLeaseRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicEthIf.ObjectTypeEnum>][-Order< long>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicEthIf.ClassIdEnum>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< Model.IppoolIpLeaseRelationship>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< Model.VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< Model.MacpoolLeaseRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicEthIf.ObjectTypeEnum>][-Order< long>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -331,6 +331,21 @@ The order in which the virtual interface is brought up. The order assigned to an
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinGroupName
+Pingroup name associated to vNIC for static pinning. LCP deploy will resolve pingroup name and fetches the correspoding uplink port/port channel to pin the vNIC traffic.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

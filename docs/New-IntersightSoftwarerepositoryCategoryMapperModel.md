@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSoftwarerepositoryCategoryMapperModel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-DistTag< string>][-ImageType< string>][-Moid< string>][[-Name]< string>][-RegexPattern< string>][-SeriesId< string>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightSoftwarerepositoryCategoryMapperModel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-DistTag< string>][-ImageType< string>][-IsNfsUpgradeSupported< bool>][-Moid< string>][[-Name]< string>][-RegexPattern< string>][-SeriesId< string>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ The type of image based on the endpoint it can upgrade. For example, ucs-bundle-
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsNfsUpgradeSupported
+Defines whether NFS firmware upgrade is supported with this image type.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

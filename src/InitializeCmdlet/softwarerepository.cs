@@ -520,6 +520,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNfsUpgradeSupported
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Cisco software repository image category identifier."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -650,6 +660,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImageType = this.ImageType;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsNfsUpgradeSupported"))
+            {
+                initObject.IsNfsUpgradeSupported = this.IsNfsUpgradeSupported;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("MdfId"))
             {
                 initObject.MdfId = this.MdfId;
@@ -758,6 +772,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNfsUpgradeSupported
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -847,6 +871,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ImageType"))
             {
                 initObject.ImageType = this.ImageType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsNfsUpgradeSupported"))
+            {
+                initObject.IsNfsUpgradeSupported = this.IsNfsUpgradeSupported;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {

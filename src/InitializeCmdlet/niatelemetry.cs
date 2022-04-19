@@ -8066,6 +8066,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Flow setting status of the Insight group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FlowSettingsStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Name of the Insight group."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8187,6 +8197,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FlowSettingsCount"))
             {
                 initObject.FlowSettingsCount = this.FlowSettingsCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowSettingsStatus"))
+            {
+                initObject.FlowSettingsStatus = this.FlowSettingsStatus;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("GroupName"))
             {
@@ -14002,7 +14016,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool FeaturePtp
+        public string FeaturePtp
         {
             get;
             set;
@@ -16234,6 +16248,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Returns the total number of connectivity Analysis run for EPs in NDFC Fabrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ConnectivityAnalysisCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Version of the specified site."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -16356,6 +16380,10 @@ namespace Intersight.PowerShell
                 initObject.Apps = this.Apps;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConnectivityAnalysisCount"))
+            {
+                initObject.ConnectivityAnalysisCount = this.ConnectivityAnalysisCount;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FirmwareVersion"))
             {
                 initObject.FirmwareVersion = this.FirmwareVersion;

@@ -731,6 +731,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Name given for Lan PinGroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PinGroupName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a inventoryInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.InventoryInterfaceRelationship PinnedInterface
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -769,6 +789,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PeerInterface"))
             {
                 initObject.PeerInterface = this.PeerInterface;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PinGroupName"))
+            {
+                initObject.PinGroupName = this.PinGroupName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PinnedInterface"))
+            {
+                initObject.PinnedInterface = this.PinnedInterface;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -841,6 +869,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Name given for San PinGroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PinGroupName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a inventoryInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.InventoryInterfaceRelationship PinnedInterface
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -877,6 +925,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("OperReason"))
             {
                 initObject.OperReason = this.OperReason;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PinGroupName"))
+            {
+                initObject.PinGroupName = this.PinGroupName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PinnedInterface"))
+            {
+                initObject.PinnedInterface = this.PinnedInterface;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
             {

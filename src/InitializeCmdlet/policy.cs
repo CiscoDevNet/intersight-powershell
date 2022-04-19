@@ -451,6 +451,26 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The Moid of the parent object present in config result context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ParentMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of the parent object present in config result context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ParentType
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -477,6 +497,127 @@ namespace Intersight.PowerShell
                 initObject.EntityType = this.EntityType;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ParentMoid"))
+            {
+                initObject.ParentMoid = this.ParentMoid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ParentType"))
+            {
+                initObject.ParentType = this.ParentType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyPolicyStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyPolicyStatus")]
+    public class InitializeIntersightPolicyPolicyStatus : PSCmdlet
+    {
+        public InitializeIntersightPolicyPolicyStatus()
+        {
+            ClassId = PolicyPolicyStatus.ClassIdEnum.PolicyPolicyStatus;
+            ObjectType = PolicyPolicyStatus.ObjectTypeEnum.PolicyPolicyStatus;
+            Status = PolicyPolicyStatus.StatusEnum.Ok;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyPolicyStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The object id of the policy being attached."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyPolicyStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The reason for the status - it will be empty if status is ok or validating. If error, it will have the appropriate message indicating the reason for failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Reason
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the policy attach/detach was successful or not. Values  -- ok, errored, validating.\n* `ok` - The policy attach/detach is successful.\n* `error` - The policy cannot be attached/detached due to an error.\n* `validating` - The policy preconfig validation is in progress."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyPolicyStatus.StatusEnum Status
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The object type of the policy being attached."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Type
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.PolicyPolicyStatus initObject = new Intersight.Model.PolicyPolicyStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reason"))
+            {
+                initObject.Reason = this.Reason;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
             WriteObject(initObject);
         }
 

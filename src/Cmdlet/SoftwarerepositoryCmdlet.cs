@@ -645,6 +645,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsNfsUpgradeSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Cisco software repository image category identifier."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -837,6 +848,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string ImageType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsNfsUpgradeSupported
         {
             get;
             set;
@@ -1835,6 +1857,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNfsUpgradeSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Cisco software repository image category identifier."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2006,6 +2039,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string ImageType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNfsUpgradeSupported
         {
             get;
             set;
@@ -2755,6 +2799,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNfsUpgradeSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Cisco software repository image category identifier."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2926,6 +2981,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string ImageType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Defines whether NFS firmware upgrade is supported with this image type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNfsUpgradeSupported
         {
             get;
             set;
