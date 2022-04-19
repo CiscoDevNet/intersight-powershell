@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicFcIf.ClassIdEnum>][-FcAdapterPolicy< Model.VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< Model.VnicFcNetworkPolicyRelationship>][-FcQosPolicy< Model.VnicFcQosPolicyRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicFcIf.ObjectTypeEnum>][-Order< long>][-PersistentBindings< bool>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< Model.VnicSanConnectivityPolicyRelationship>][-ScpVhba< Model.VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[Model.VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< Model.FcpoolLeaseRelationship>][-WwpnPool< Model.FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicFcIf.ClassIdEnum>][-FcAdapterPolicy< Model.VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< Model.VnicFcNetworkPolicyRelationship>][-FcQosPolicy< Model.VnicFcQosPolicyRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicFcIf.ObjectTypeEnum>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< Model.VnicSanConnectivityPolicyRelationship>][-ScpVhba< Model.VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[Model.VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< Model.FcpoolLeaseRelationship>][-WwpnPool< Model.FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -173,6 +173,21 @@ Enables retention of LUN ID associations in memory until they are manually clear
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinGroupName
+Pingroup name associated to vfc for static pinning. SCP deploy will resolve pingroup name and fetches the correspoding uplink port/port channel to pin the vfc traffic.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -340,6 +340,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The current running stage of the configuration or workflow."</para>
         /// </summary>
@@ -420,11 +421,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"A reference to a serverProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a serverBaseProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
-        public ServerProfileRelationship Profile
+        public ServerBaseProfileRelationship Profile
         {
             get;
             set;
@@ -1004,6 +1005,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"A reference to a serverConfigResult resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ServerConfigResultRelationship ConfigResult
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -1645,6 +1657,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -2141,6 +2154,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>

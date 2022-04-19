@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNotificationAlarmMoCondition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationAlarmMoCondition.ClassIdEnum>][-Enabled< bool>][-ObjectType< NotificationAlarmMoCondition.ObjectTypeEnum>][-Severity< System.Collections.Generic.List`1[NotificationAlarmMoCondition.SeverityEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNotificationAlarmMoCondition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationAlarmMoCondition.ClassIdEnum>][-Enabled< bool>][-MoType< string>][-ObjectType< NotificationAlarmMoCondition.ObjectTypeEnum>][-Operations< System.Collections.Generic.List`1[NotificationAlarmMoCondition.OperationsEnum]>][-Severity< System.Collections.Generic.List`1[NotificationAlarmMoCondition.SeverityEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,10 +55,25 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Condition can be switched on/off which out necessity to change the subscription\nsettings: actions, conditions etc.\nEx.: Subscription MO can be configured, but switched off.
+The condition can be switched on/off with out necessity to change the subscription\nsettings: actions, conditions, etc.\nEx.: Subscription MO can be configured, but switched off.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MoType
+MoType for which the condition is created.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -74,6 +89,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: NotificationAlarmMoCondition.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Operations
+
+
+```yaml
+Type: System.Collections.Generic.List`1[NotificationAlarmMoCondition.OperationsEnum]
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryInsightGroupDetails [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlertRulesCount< long>][-AnalysisSettingsStatus< string>][-BugScanSettingsStatus< string>][-ClassId< NiatelemetryInsightGroupDetails.ClassIdEnum>][-DeltaAnalysisJobCount< long>][-EmailSettingsCount< long>][-FlowSettingsCount< long>][-GroupName< string>][-InsightSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-KafkaSettingsCount< long>][-MicroBurstSettingsStatus< string>][-Moid< string>][-ObjectType< NiatelemetryInsightGroupDetails.ObjectTypeEnum>][-PrechangeAnalysisCount< long>][-TacCollectionConfigCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryInsightGroupDetails [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlertRulesCount< long>][-AnalysisSettingsStatus< string>][-BugScanSettingsStatus< string>][-ClassId< NiatelemetryInsightGroupDetails.ClassIdEnum>][-DeltaAnalysisJobCount< long>][-EmailSettingsCount< long>][-FlowSettingsCount< long>][-FlowSettingsStatus< string>][-GroupName< string>][-InsightSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-KafkaSettingsCount< long>][-MicroBurstSettingsStatus< string>][-Moid< string>][-ObjectType< NiatelemetryInsightGroupDetails.ObjectTypeEnum>][-PrechangeAnalysisCount< long>][-TacCollectionConfigCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -134,6 +134,21 @@ Flow setting count of the Insight group.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FlowSettingsStatus
+Flow setting status of the Insight group.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowProperties.ClassIdEnum>][-EnableDebug< bool>][-ExternalMeta< bool>][-ObjectType< WorkflowWorkflowProperties.ObjectTypeEnum>][-Retryable< bool>][-SupportStatus< WorkflowWorkflowProperties.SupportStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowProperties.ClassIdEnum>][-EnableDebug< bool>][-ExternalMeta< bool>][-ObjectType< WorkflowWorkflowProperties.ObjectTypeEnum>][-Retryable< bool>][-RollbackOnCancel< bool>][-RollbackOnFailure< bool>][-SupportStatus< WorkflowWorkflowProperties.SupportStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -101,6 +101,36 @@ Accept wildcard characters: False
 
 ### -Retryable
 When true, this workflow can be retried if has not been modified for more than a period of 2 weeks.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RollbackOnCancel
+When set to true, the changes are automatically rolled back if the workflow execution is cancelled.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RollbackOnFailure
+When set to true, the changes are automatically rolled back if the workflow fails to execute.
 
 ```yaml
 Type: bool

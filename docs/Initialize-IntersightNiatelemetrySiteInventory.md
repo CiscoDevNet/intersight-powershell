@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetrySiteInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Apps< System.Collections.Generic.List`1[string]>][-ClassId< NiatelemetrySiteInventory.ClassIdEnum>][-FirmwareVersion< string>][-InstallType< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-Moid< string>][-Name< string>][-NexusDashboard< string>][-Nodes< long>][-ObjectType< NiatelemetrySiteInventory.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetrySiteInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Apps< System.Collections.Generic.List`1[string]>][-ClassId< NiatelemetrySiteInventory.ClassIdEnum>][-ConnectivityAnalysisCount< long>][-FirmwareVersion< string>][-InstallType< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-Moid< string>][-Name< string>][-NexusDashboard< string>][-Nodes< long>][-ObjectType< NiatelemetrySiteInventory.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: NiatelemetrySiteInventory.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ConnectivityAnalysisCount
+Returns the total number of connectivity Analysis run for EPs in NDFC Fabrics.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-ExpanderModules< System.Collections.Generic.List`1[EquipmentExpanderModuleRelationship]>][-FanControl< EquipmentFanControlRelationship>][-FaultSummary< long>][[-Moid]< string>][-PlatformType< string>][-PowerControlState< PowerControlStateRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDriveContainer< System.Collections.Generic.List`1[StorageVirtualDriveContainerRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-ExpanderModules< System.Collections.Generic.List`1[EquipmentExpanderModuleRelationship]>][-FanControl< EquipmentFanControlRelationship>][-FaultSummary< long>][-ManagementInterface< ManagementInterfaceRelationship>][[-Moid]< string>][-PlatformType< string>][-PowerControlState< PowerControlStateRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDriveContainer< System.Collections.Generic.List`1[StorageVirtualDriveContainerRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -96,6 +96,24 @@ This field summarizes the faults on the chassis enclosure.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ManagementInterface
+A reference to a managementInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: ManagementInterfaceRelationship
 Parameter Sets: (All)
 Aliases:
 

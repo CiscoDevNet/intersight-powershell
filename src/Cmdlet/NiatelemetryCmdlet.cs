@@ -7783,6 +7783,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Flow setting status of the Insight group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FlowSettingsStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Name of the Insight group."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12536,7 +12547,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public bool FeaturePtp
+        public string FeaturePtp
         {
             get;
             set;
@@ -13821,6 +13832,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Returns the total number of connectivity Analysis run for EPs in NDFC Fabrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ConnectivityAnalysisCount
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
