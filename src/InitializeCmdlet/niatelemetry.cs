@@ -6728,6 +6728,118 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryFanDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryFanDetails")]
+    public class InitializeIntersightNiatelemetryFanDetails : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryFanDetails()
+        {
+            ClassId = NiatelemetryFanDetails.ClassIdEnum.NiatelemetryFanDetails;
+            ObjectType = NiatelemetryFanDetails.ObjectTypeEnum.NiatelemetryFanDetails;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryFanDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the fan used in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryFanDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Product ID of the fan used in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProductId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the fan used in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SerialNumber
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Vendor Id of the fan used in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VendorId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryFanDetails initObject = new Intersight.Model.NiatelemetryFanDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductId"))
+            {
+                initObject.ProductId = this.ProductId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
+            {
+                initObject.SerialNumber = this.SerialNumber;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VendorId"))
+            {
+                initObject.VendorId = this.VendorId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryFault.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryFault")]
@@ -10728,6 +10840,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Number of sites with vxLan type fabric in Multi-Site Orchestrator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NumberOfVxlanFabricSitesInMso
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -10839,6 +10961,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("NumberOfTenantsInMso"))
             {
                 initObject.NumberOfTenantsInMso = this.NumberOfTenantsInMso;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumberOfVxlanFabricSitesInMso"))
+            {
+                initObject.NumberOfVxlanFabricSitesInMso = this.NumberOfVxlanFabricSitesInMso;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
@@ -12554,6 +12680,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetryFanDetails> DcnmFanDetails
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Returns the License state of the device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13118,6 +13254,10 @@ namespace Intersight.PowerShell
             {
                 initObject.CustomerDeviceConnector = this.CustomerDeviceConnector;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DcnmFanDetails"))
+            {
+                initObject.DcnmFanDetails = this.DcnmFanDetails;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("DcnmLicenseState"))
             {
                 initObject.DcnmLicenseState = this.DcnmLicenseState;
@@ -13508,11 +13648,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"NDFC name information of the setup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NdfcFabricName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"NDFC status information for the setup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NdfcOperState
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Installation type description of controller on DCNM."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.NiatelemetryNetworkInfo NetworkInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the number of DCNM site fabrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NumDcnmSite
         {
             get;
             set;
@@ -13762,9 +13932,21 @@ namespace Intersight.PowerShell
             {
                 initObject.Moid = this.Moid;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NdfcFabricName"))
+            {
+                initObject.NdfcFabricName = this.NdfcFabricName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NdfcOperState"))
+            {
+                initObject.NdfcOperState = this.NdfcOperState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("NetworkInfo"))
             {
                 initObject.NetworkInfo = this.NetworkInfo;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumDcnmSite"))
+            {
+                initObject.NumDcnmSite = this.NumDcnmSite;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("NumFabrics"))
             {
@@ -13877,6 +14059,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long BgpEstablishedInterfaceCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns number of bgw switches in the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long BgwCount
         {
             get;
             set;
@@ -14012,6 +14204,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Fabric type information string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FabricType
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"PTP feature details on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14032,7 +14234,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Check if NXAPI HTTP is enable or not on the fabric."</para>
+        /// <para type="description">"Check if NXAPI HTTP is enabled or not on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14042,7 +14244,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Check if real time backup is enable or not on the fabric."</para>
+        /// <para type="description">"Check if real time backup is enabled or not on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14072,6 +14274,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Is TRM enabled for the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsTrmEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Returns total number of leafs in the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14087,6 +14299,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string LinkStateRouting
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Fabric oper status information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LinkType
         {
             get;
             set;
@@ -14177,6 +14399,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public NiatelemetryNiaInventoryFabric.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Fabric oper status information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string OperStatus
         {
             get;
             set;
@@ -14331,6 +14563,26 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Returns deployed network count for bgw/bgws switches in the MSD fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long XsiteNetworkCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns deployed vrf count for bgw/bgws switches in the MSD fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long XsiteVrfCount
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -14346,6 +14598,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("BgpEstablishedInterfaceCount"))
             {
                 initObject.BgpEstablishedInterfaceCount = this.BgpEstablishedInterfaceCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BgwCount"))
+            {
+                initObject.BgwCount = this.BgwCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("BgwInterfaceUpCount"))
             {
@@ -14396,6 +14652,10 @@ namespace Intersight.PowerShell
             {
                 initObject.FabricTechnology = this.FabricTechnology;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FabricType"))
+            {
+                initObject.FabricType = this.FabricType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FeaturePtp"))
             {
                 initObject.FeaturePtp = this.FeaturePtp;
@@ -14420,6 +14680,10 @@ namespace Intersight.PowerShell
             {
                 initObject.IsScheduledBackUpEnabled = this.IsScheduledBackUpEnabled;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsTrmEnabled"))
+            {
+                initObject.IsTrmEnabled = this.IsTrmEnabled;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("LeafCount"))
             {
                 initObject.LeafCount = this.LeafCount;
@@ -14427,6 +14691,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("LinkStateRouting"))
             {
                 initObject.LinkStateRouting = this.LinkStateRouting;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LinkType"))
+            {
+                initObject.LinkType = this.LinkType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("LogicalLinks"))
             {
@@ -14461,6 +14729,10 @@ namespace Intersight.PowerShell
                 initObject.NxosVrfCount = this.NxosVrfCount;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OperStatus"))
+            {
+                initObject.OperStatus = this.OperStatus;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ReplicationMode"))
             {
                 initObject.ReplicationMode = this.ReplicationMode;
@@ -14520,6 +14792,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VrfDeploymentStatus"))
             {
                 initObject.VrfDeploymentStatus = this.VrfDeploymentStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("XsiteNetworkCount"))
+            {
+                initObject.XsiteNetworkCount = this.XsiteNetworkCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("XsiteVrfCount"))
+            {
+                initObject.XsiteVrfCount = this.XsiteVrfCount;
             }
             WriteObject(initObject);
         }

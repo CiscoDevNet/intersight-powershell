@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-HwVersion< string>][[-Moid]< string>][-Name< string>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-PreviousFru< EquipmentFruRelationship>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[FcPhysicalPortRelationship]>][-HwVersion< string>][[-Moid]< string>][-Name< string>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-PreviousFru< EquipmentFruRelationship>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[FcPortChannelRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FcPorts
+An array of relationships to fcPhysicalPort resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[FcPhysicalPortRelationship]
 Parameter Sets: (All)
 Aliases:
 

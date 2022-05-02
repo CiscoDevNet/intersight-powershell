@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightConvergedinfraHealthCheckExecution
+# Initialize-IntersightNiatelemetryFanDetails
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConvergedinfraHealthCheckExecution [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConvergedinfraHealthCheckExecution.ClassIdEnum>][-Moid< string>][-ObjectType< ConvergedinfraHealthCheckExecution.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryFanDetails [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryFanDetails.ClassIdEnum>][-Name< string>][-ObjectType< NiatelemetryFanDetails.ObjectTypeEnum>][-ProductId< string>][-SerialNumber< string>][-VendorId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: ConvergedinfraHealthCheckExecution.ClassIdEnum
+Type: NiatelemetryFanDetails.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -54,8 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Moid
-The unique identifier of this Managed Object instance.
+### -Name
+Name of the fan used in the switch.
 
 ```yaml
 Type: string
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: ConvergedinfraHealthCheckExecution.ObjectTypeEnum
+Type: NiatelemetryFanDetails.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -84,13 +84,41 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+### -ProductId
+Product ID of the fan used in the switch.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.MoTag]
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SerialNumber
+Serial number of the fan used in the switch.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VendorId
+Vendor Id of the fan used in the switch.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -139,7 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightConvergedinfraHealthCheckExecution
+PS C:\> Initialize-IntersightNiatelemetryFanDetails
 ```
 
 { Add example description here }
@@ -157,5 +185,3 @@ PS C:\> Initialize-IntersightConvergedinfraHealthCheckExecution
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

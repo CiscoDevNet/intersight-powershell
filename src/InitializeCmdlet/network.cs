@@ -103,6 +103,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to fcPortChannel resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FcPortChannelRelationship> FcPortChannels
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to networkFeatureControl resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -364,6 +374,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FaultSummary"))
             {
                 initObject.FaultSummary = this.FaultSummary;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcPortChannels"))
+            {
+                initObject.FcPortChannels = this.FcPortChannels;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("FeatureControl"))
             {
@@ -923,6 +937,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Maximum transmission unit of the interface list."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Mtu
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Name of the interface list."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -963,6 +987,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Interface types supported in Network device like Subinterfaces, Breakout Interfaces."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PortSubType
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Port type of interface list."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -988,6 +1022,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string SlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Port speed of the interface list."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Speed
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Speed Group of the interface list."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SpeedGroup
         {
             get;
             set;
@@ -1037,6 +1091,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Moid = this.Moid;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
+            {
+                initObject.Mtu = this.Mtu;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
@@ -1050,6 +1108,10 @@ namespace Intersight.PowerShell
             {
                 initObject.OperState = this.OperState;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortSubType"))
+            {
+                initObject.PortSubType = this.PortSubType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("PortType"))
             {
                 initObject.PortType = this.PortType;
@@ -1061,6 +1123,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
             {
                 initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Speed"))
+            {
+                initObject.Speed = this.Speed;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SpeedGroup"))
+            {
+                initObject.SpeedGroup = this.SpeedGroup;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -1299,6 +1369,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to fcPhysicalPort resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FcPhysicalPortRelationship> FcPorts
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The hardware version of the supervisor card."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1460,6 +1540,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcPorts"))
+            {
+                initObject.FcPorts = this.FcPorts;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("HardwareVersion"))
             {

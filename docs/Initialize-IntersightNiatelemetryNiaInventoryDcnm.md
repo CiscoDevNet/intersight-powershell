@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNiaInventoryDcnm [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNiaInventoryDcnm.ClassIdEnum>][-ControllerHealth< long>][-Dev< bool>][-EpldImageCount< long>][-GoldenImageDetails< System.Collections.Generic.List`1[Model.NiatelemetryImageDetail]>][-HaEnabled< bool>][-HaReplicationStatus< string>][-Install< string>][-InstallationType< string>][-InstallationTypeDescription< string>][-IsIsnConfigured< bool>][-IsMediaController< bool>][-IsSmartLicenseEnabled< bool>][-Mode< string>][-Moid< string>][-NetworkInfo< Model.NiatelemetryNetworkInfo>][-NumFabrics< long>][-NumFabricsInMsd< long>][-NumIngressReplicationFabrics< long>][-NumLocalUsers< long>][-NumMsd< long>][-NumSviVrfCount< long>][-NumTrmEnabledCount< long>][-NumUpgUsers< long>][-NxosImageCount< long>][-ObjectType< NiatelemetryNiaInventoryDcnm.ObjectTypeEnum>][-OutofbandIp< string>][-Serial< string>][-SiteName< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnderlayPeeringActiveLinksCount< long>][-UpgJobCount< long>][-UpgStatus< System.Collections.Generic.List`1[Model.NiatelemetryJobDetail]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNiaInventoryDcnm [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNiaInventoryDcnm.ClassIdEnum>][-ControllerHealth< long>][-Dev< bool>][-EpldImageCount< long>][-GoldenImageDetails< System.Collections.Generic.List`1[Model.NiatelemetryImageDetail]>][-HaEnabled< bool>][-HaReplicationStatus< string>][-Install< string>][-InstallationType< string>][-InstallationTypeDescription< string>][-IsIsnConfigured< bool>][-IsMediaController< bool>][-IsSmartLicenseEnabled< bool>][-Mode< string>][-Moid< string>][-NdfcFabricName< string>][-NdfcOperState< string>][-NetworkInfo< Model.NiatelemetryNetworkInfo>][-NumDcnmSite< long>][-NumFabrics< long>][-NumFabricsInMsd< long>][-NumIngressReplicationFabrics< long>][-NumLocalUsers< long>][-NumMsd< long>][-NumSviVrfCount< long>][-NumTrmEnabledCount< long>][-NumUpgUsers< long>][-NxosImageCount< long>][-ObjectType< NiatelemetryNiaInventoryDcnm.ObjectTypeEnum>][-OutofbandIp< string>][-Serial< string>][-SiteName< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnderlayPeeringActiveLinksCount< long>][-UpgJobCount< long>][-UpgStatus< System.Collections.Generic.List`1[Model.NiatelemetryJobDetail]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -266,6 +266,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -NdfcFabricName
+NDFC name information of the setup.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NdfcOperState
+NDFC status information for the setup.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -NetworkInfo
 Installation type description of controller on DCNM.
 
@@ -273,6 +303,21 @@ Note :- Use Initialize-IntersightNiatelemetryNetworkInfo to create the object of
 
 ```yaml
 Type: Model.NiatelemetryNetworkInfo
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NumDcnmSite
+Returns the number of DCNM site fabrics.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

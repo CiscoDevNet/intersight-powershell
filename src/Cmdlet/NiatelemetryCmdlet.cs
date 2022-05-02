@@ -9951,6 +9951,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Number of sites with vxLan type fabric in Multi-Site Orchestrator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NumberOfVxlanFabricSitesInMso
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -11400,6 +11411,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Returns the License state of the device."</para>
         /// </summary>
@@ -12135,6 +12147,39 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"NDFC name information of the setup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NdfcFabricName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"NDFC status information for the setup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NdfcOperState
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Returns the number of DCNM site fabrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NumDcnmSite
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Returns total number of fabrics in DCNM set-up."</para>
@@ -12389,6 +12434,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Returns number of bgw switches in the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long BgwCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Count number of active interfaces on border gateways."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12543,6 +12599,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Fabric type information string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FabricType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"PTP feature details on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12565,7 +12632,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Check if NXAPI HTTP is enable or not on the fabric."</para>
+        /// <para type="description">"Check if NXAPI HTTP is enabled or not on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -12576,7 +12643,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Check if real time backup is enable or not on the fabric."</para>
+        /// <para type="description">"Check if real time backup is enabled or not on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -12609,6 +12676,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Is TRM enabled for the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsTrmEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Returns total number of leafs in the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12625,6 +12703,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string LinkStateRouting
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Fabric oper status information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LinkType
         {
             get;
             set;
@@ -12704,6 +12793,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long NxosVrfCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Fabric oper status information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string OperStatus
         {
             get;
             set;
@@ -12879,6 +12979,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Returns deployed network count for bgw/bgws switches in the MSD fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long XsiteNetworkCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns deployed vrf count for bgw/bgws switches in the MSD fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long XsiteVrfCount
+        {
+            get;
+            set;
+        }
 
 
     }

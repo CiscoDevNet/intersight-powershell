@@ -190,6 +190,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"The user configured FC operational mode for this switch (End-Host or Switching).\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode."</para>
         /// </summary>
@@ -1942,6 +1943,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Maximum transmission unit of the interface list."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Mtu
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Name of the interface list."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1986,6 +1998,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Interface types supported in Network device like Subinterfaces, Breakout Interfaces."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PortSubType
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Port type of interface list."</para>
@@ -2037,6 +2060,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SlotId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Port speed of the interface list."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Speed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Speed Group of the interface list."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SpeedGroup
         {
             get;
             set;
@@ -2343,6 +2388,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The hardware version of the supervisor card."</para>
@@ -3142,6 +3188,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"An array of relationships to fcPortChannel resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<FcPortChannelRelationship> FcPortChannels
+        {
+            get;
+            set;
+        }
 
 
         // <summary>

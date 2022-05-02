@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkSupervisorCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkSupervisorCard.ClassIdEnum>][-Description< string>][-HardwareVersion< string>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-NumberOfPorts< long>][-ObjectType< NetworkSupervisorCard.ObjectTypeEnum>][-OperState< string>][-PartNumber< string>][-PowerState< string>][-PreviousFru< Model.EquipmentFruRelationship>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Status< string>][-SupervisorId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkSupervisorCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkSupervisorCard.ClassIdEnum>][-Description< string>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HardwareVersion< string>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-NumberOfPorts< long>][-ObjectType< NetworkSupervisorCard.ObjectTypeEnum>][-OperState< string>][-PartNumber< string>][-PowerState< string>][-PreviousFru< Model.EquipmentFruRelationship>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Status< string>][-SupervisorId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,24 @@ The description of the supervisor card.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FcPorts
+An array of relationships to fcPhysicalPort resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-Chassis< string>][-ConfModTs< string>][-ConfModTsBackup< string>][-Console< System.Collections.Generic.List`1[ConsoleConsoleConfigRelationship]>][-FaultSummary< long>][-FeatureControl< System.Collections.Generic.List`1[NetworkFeatureControlRelationship]>][-InterfaceList< System.Collections.Generic.List`1[NetworkInterfaceListRelationship]>][-LicenseFile< System.Collections.Generic.List`1[NetworkLicenseFileRelationship]>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-PortMacBindings< System.Collections.Generic.List`1[PortMacBindingRelationship]>][-PreviousFru< EquipmentFruRelationship>][-ProcessorUnit< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]>][-SwitchType< NetworkElement.SwitchTypeEnum>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-Version< string>][-Vrf< System.Collections.Generic.List`1[NetworkVrfRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-Chassis< string>][-ConfModTs< string>][-ConfModTsBackup< string>][-Console< System.Collections.Generic.List`1[ConsoleConsoleConfigRelationship]>][-FaultSummary< long>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-FeatureControl< System.Collections.Generic.List`1[NetworkFeatureControlRelationship]>][-InterfaceList< System.Collections.Generic.List`1[NetworkInterfaceListRelationship]>][-LicenseFile< System.Collections.Generic.List`1[NetworkLicenseFileRelationship]>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-PortMacBindings< System.Collections.Generic.List`1[PortMacBindingRelationship]>][-PreviousFru< EquipmentFruRelationship>][-ProcessorUnit< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]>][-SwitchType< NetworkElement.SwitchTypeEnum>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-Version< string>][-Vrf< System.Collections.Generic.List`1[NetworkVrfRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -123,6 +123,24 @@ The fault summary of the network Element out-of-band management interface.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FcPortChannels
+An array of relationships to fcPortChannel resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[FcPortChannelRelationship]
 Parameter Sets: (All)
 Aliases:
 

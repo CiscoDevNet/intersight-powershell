@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcPortChannel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< string>][-ClassId< FcPortChannel.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Mode< string>][-Moid< string>][-ObjectType< FcPortChannel.ObjectTypeEnum>][-OperSpeed< string>][-OperState< string>][-OperStateQual< string>][-PortChannelId< long>][-Role< string>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vsan< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcPortChannel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< string>][-ClassId< FcPortChannel.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Mode< string>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< FcPortChannel.ObjectTypeEnum>][-OperSpeed< string>][-OperState< string>][-OperStateQual< string>][-PortChannelId< long>][-Role< string>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vsan< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -107,6 +107,39 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the port channel.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkElement
+A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.NetworkElementRelationship
 Parameter Sets: (All)
 Aliases:
 

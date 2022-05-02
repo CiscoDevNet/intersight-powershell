@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageNetAppCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppCluster.ClassIdEnum>][-ClusterEfficiency< Model.StorageNetAppStorageClusterEfficiency>][-Moid< string>][-ObjectType< StorageNetAppCluster.ObjectTypeEnum>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageNetAppCluster [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppCluster.ClassIdEnum>][-Moid< string>][-ObjectType< StorageNetAppCluster.ObjectTypeEnum>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,23 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: StorageNetAppCluster.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ClusterEfficiency
-Cluster storage efficiency savings, ratio, and logical used.
-
-Note :- Use Initialize-IntersightStorageNetAppStorageClusterEfficiency to create the object of complex type StorageNetAppStorageClusterEfficiency
-
-```yaml
-Type: Model.StorageNetAppStorageClusterEfficiency
 Parameter Sets: (All)
 Aliases:
 
@@ -194,5 +177,3 @@ PS C:\> Initialize-IntersightStorageNetAppCluster
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-IntersightStorageNetAppStorageClusterEfficiency](./Initialize-IntersightStorageNetAppStorageClusterEfficiency.md)
