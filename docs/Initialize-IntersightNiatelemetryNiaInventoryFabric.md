@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNiaInventoryFabric [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnycastGwMac< string>][-BgpEstablishedInterfaceCount< long>][-BgwInterfaceUpCount< long>][-BorderGatewaySpineCount< long>][-BorderLeafCount< long>][-ClassId< NiatelemetryNiaInventoryFabric.ClassIdEnum>][-CloudsecAutoconfig< bool>][-DciSubnetRange< string>][-DciSubnetTargetMask< string>][-DcnmtrackerEnabled< bool>][-EbgpEvpnLinkUpCount< long>][-FabricId< string>][-FabricName< string>][-FabricParent< string>][-FabricTechnology< string>][-FeaturePtp< string>][-IsBgwPresent< bool>][-IsEnableNxapiHttp< bool>][-IsEnableRealTimeBackup< bool>][-IsNgoamEnabled< bool>][-IsScheduledBackUpEnabled< bool>][-LeafCount< long>][-LinkStateRouting< string>][-LogicalLinks< System.Collections.Generic.List`1[Model.NiatelemetryLogicalLink]>][-Moid< string>][-NetworkDeploymentCount< long>][-NetworkDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-NtpServerIpList< string>][-NxosVniBwSitesCount< long>][-NxosVrfBwSitesCount< long>][-NxosVrfCount< long>][-ObjectType< NiatelemetryNiaInventoryFabric.ObjectTypeEnum>][-ReplicationMode< string>][-RpMode< string>][-Serial< string>][-SiteName< string>][-SoftwareImage< string>][-SpineCount< long>][-SyslogServerIpList< string>][-SyslogSev< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateName< string>][-VlanVniMappings< string>][-VniIpCount< long>][-VpcDetails< System.Collections.Generic.List`1[Model.NiatelemetryVpcDetails]>][-VrfDeploymentCount< long>][-VrfDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNiaInventoryFabric [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnycastGwMac< string>][-BgpEstablishedInterfaceCount< long>][-BgwCount< long>][-BgwInterfaceUpCount< long>][-BorderGatewaySpineCount< long>][-BorderLeafCount< long>][-ClassId< NiatelemetryNiaInventoryFabric.ClassIdEnum>][-CloudsecAutoconfig< bool>][-DciSubnetRange< string>][-DciSubnetTargetMask< string>][-DcnmtrackerEnabled< bool>][-EbgpEvpnLinkUpCount< long>][-FabricId< string>][-FabricName< string>][-FabricParent< string>][-FabricTechnology< string>][-FabricType< string>][-FeaturePtp< string>][-IsBgwPresent< bool>][-IsEnableNxapiHttp< bool>][-IsEnableRealTimeBackup< bool>][-IsNgoamEnabled< bool>][-IsScheduledBackUpEnabled< bool>][-IsTrmEnabled< bool>][-LeafCount< long>][-LinkStateRouting< string>][-LinkType< string>][-LogicalLinks< System.Collections.Generic.List`1[Model.NiatelemetryLogicalLink]>][-Moid< string>][-NetworkDeploymentCount< long>][-NetworkDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-NtpServerIpList< string>][-NxosVniBwSitesCount< long>][-NxosVrfBwSitesCount< long>][-NxosVrfCount< long>][-ObjectType< NiatelemetryNiaInventoryFabric.ObjectTypeEnum>][-OperStatus< string>][-ReplicationMode< string>][-RpMode< string>][-Serial< string>][-SiteName< string>][-SoftwareImage< string>][-SpineCount< long>][-SyslogServerIpList< string>][-SyslogSev< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateName< string>][-VlanVniMappings< string>][-VniIpCount< long>][-VpcDetails< System.Collections.Generic.List`1[Model.NiatelemetryVpcDetails]>][-VrfDeploymentCount< long>][-VrfDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-XsiteNetworkCount< long>][-XsiteVrfCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -56,6 +56,21 @@ Accept wildcard characters: False
 
 ### -BgpEstablishedInterfaceCount
 Counts the number of BGP interfaces that are in established state.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BgwCount
+Returns number of bgw switches in the fabric.
 
 ```yaml
 Type: long
@@ -264,6 +279,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FabricType
+Fabric type information string.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FeaturePtp
 PTP feature details on the fabric.
 
@@ -295,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnableNxapiHttp
-Check if NXAPI HTTP is enable or not on the fabric.
+Check if NXAPI HTTP is enabled or not on the fabric.
 
 ```yaml
 Type: bool
@@ -310,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnableRealTimeBackup
-Check if real time backup is enable or not on the fabric.
+Check if real time backup is enabled or not on the fabric.
 
 ```yaml
 Type: bool
@@ -354,6 +384,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -IsTrmEnabled
+Is TRM enabled for the fabric.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -LeafCount
 Returns total number of leafs in the fabric.
 
@@ -371,6 +416,21 @@ Accept wildcard characters: False
 
 ### -LinkStateRouting
 Link state routing details on the fabric.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LinkType
+Fabric oper status information.
 
 ```yaml
 Type: string
@@ -513,6 +573,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: NiatelemetryNiaInventoryFabric.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OperStatus
+Fabric oper status information.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -744,6 +819,36 @@ Note :- Use Initialize-IntersightNiatelemetryDeploymentStatus to create the obje
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -XsiteNetworkCount
+Returns deployed network count for bgw/bgws switches in the MSD fabric.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -XsiteVrfCount
+Returns deployed vrf count for bgw/bgws switches in the MSD fabric.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

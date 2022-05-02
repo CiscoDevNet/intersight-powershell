@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightConvergedinfraHealthCheckDefinition
+# Initialize-IntersightStorageNetAppNonDataIpInterfaceEvent
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConvergedinfraHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-ClassId< ConvergedinfraHealthCheckDefinition.ClassIdEnum>][-CommonCauses< string>][-Description< string>][-ExecutionMode< ConvergedinfraHealthCheckDefinition.ExecutionModeEnum>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< ConvergedinfraHealthCheckDefinition.ObjectTypeEnum>][-SuggestedResolution< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageNetAppNonDataIpInterfaceEvent [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppNonDataIpInterfaceEvent.ClassIdEnum>][-Moid< string>][-ObjectType< StorageNetAppNonDataIpInterfaceEvent.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,86 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Category
-Category that the health check belongs to.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: ConvergedinfraHealthCheckDefinition.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CommonCauses
-Static information detailing the common causes for the health check failure.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Description
-Description of the health check definition.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ExecutionMode
-Execution mode of the health check on converged infrastructure pod.\n* `OnDemand` - Execute the health check on-demand.\n* `Periodic` - Execute the health check on a periodic basis.
-
-```yaml
-Type: ConvergedinfraHealthCheckDefinition.ExecutionModeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Label
-Label for the health check definition that is displayed on UI.
-
-```yaml
-Type: string
+Type: StorageNetAppNonDataIpInterfaceEvent.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -144,41 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Name of the health check definition.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: ConvergedinfraHealthCheckDefinition.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SuggestedResolution
-Static information detailing the possible remediation actions that can be taken to remedy the health check failure.
-
-```yaml
-Type: string
+Type: StorageNetAppNonDataIpInterfaceEvent.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -244,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightConvergedinfraHealthCheckDefinition
+PS C:\> Initialize-IntersightStorageNetAppNonDataIpInterfaceEvent
 ```
 
 { Add example description here }

@@ -2483,6 +2483,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The name of the service to be deployed for the given target. If more than one service need to be deployed for a given target, multiple target change request is sent to Intersight Assist, each consists of one service type. It is different from the target type e.g., asset.OrchestrationService, asset.TerraformIntegrationService and asset.WorkloadOptimizerService are currently supported in Intersight Assist."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ServiceType
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A Json-serialized representation of the 'configuration' portion of the Target instance. Ie the representation contains configuration properties like the target's connectivity information but not operation status. The representation include credential information, encrypted with the RSA public key of the Appliance device connector. Appliance device connector is the sole maintainer of the RSA private key and the only system component which is capable of interpreting the credential."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2498,6 +2508,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string TargetMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Meta information about the target deployment i.e., docker image URL, memory and CPU limits. This allows Intersight to define supported docker image tag and customize resources for each target deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ConnectorTargetSpecification TargetSpecification
         {
             get;
             set;
@@ -2528,6 +2548,10 @@ namespace Intersight.PowerShell
             {
                 initObject.SecureProperties = this.SecureProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServiceType"))
+            {
+                initObject.ServiceType = this.ServiceType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("TargetDetails"))
             {
                 initObject.TargetDetails = this.TargetDetails;
@@ -2536,6 +2560,136 @@ namespace Intersight.PowerShell
             {
                 initObject.TargetMoid = this.TargetMoid;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetSpecification"))
+            {
+                initObject.TargetSpecification = this.TargetSpecification;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ConnectorTargetSpecification.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightConnectorTargetSpecification")]
+    public class InitializeIntersightConnectorTargetSpecification : PSCmdlet
+    {
+        public InitializeIntersightConnectorTargetSpecification()
+        {
+            ClassId = ConnectorTargetSpecification.ClassIdEnum.ConnectorTargetSpecification;
+            ObjectType = ConnectorTargetSpecification.ObjectTypeEnum.ConnectorTargetSpecification;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConnectorTargetSpecification.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CPU limit assigned to the docker container. It is total amount of CPU time that a container can use every 100ms. A container cannot use more than its share of CPU time during this interval."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CpuLimit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Requested CPU value for a docker container to run in Intersight Assist."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CpuRequest
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Docker image tag used to define kubernetes deployment for each target. Image tag should be the complete URL. This image can be found locally in case of Intersight Appliance or can be pulled from Intersight cloud in Intersight Assist deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ImageTag
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Intersight Assist prevents the docker container from using more than the configured memory limit. If a Container exceeds its memory limit, it might be terminated. If it is restartable, the kubelet will restart it, as with any other type of runtime failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MemoryLimit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Requested memory value for a docker container to run in Intersight Assist."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MemoryRequest
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConnectorTargetSpecification.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.ConnectorTargetSpecification initObject = new Intersight.Model.ConnectorTargetSpecification();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuLimit"))
+            {
+                initObject.CpuLimit = this.CpuLimit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuRequest"))
+            {
+                initObject.CpuRequest = this.CpuRequest;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImageTag"))
+            {
+                initObject.ImageTag = this.ImageTag;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryLimit"))
+            {
+                initObject.MemoryLimit = this.MemoryLimit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemoryRequest"))
+            {
+                initObject.MemoryRequest = this.MemoryRequest;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

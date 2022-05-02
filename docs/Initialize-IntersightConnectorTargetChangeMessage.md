@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorTargetChangeMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorTargetChangeMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ModStatus< ConnectorTargetChangeMessage.ModStatusEnum>][-ObjectType< ConnectorTargetChangeMessage.ObjectTypeEnum>][-SecureProperties< object>][-TargetDetails< object>][-TargetMoid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightConnectorTargetChangeMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorTargetChangeMessage.ClassIdEnum>][-EncryptedAesKey< string>][-EncryptionKey< string>][-ModStatus< ConnectorTargetChangeMessage.ModStatusEnum>][-ObjectType< ConnectorTargetChangeMessage.ObjectTypeEnum>][-SecureProperties< object>][-ServiceType< string>][-TargetDetails< object>][-TargetMoid< string>][-TargetSpecification< Model.ConnectorTargetSpecification>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -131,6 +131,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ServiceType
+The name of the service to be deployed for the given target. If more than one service need to be deployed for a given target, multiple target change request is sent to Intersight Assist, each consists of one service type. It is different from the target type e.g., asset.OrchestrationService, asset.TerraformIntegrationService and asset.WorkloadOptimizerService are currently supported in Intersight Assist.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -TargetDetails
 A Json-serialized representation of the &apos;configuration&apos; portion of the Target instance. Ie the representation contains configuration properties like the target&apos;s connectivity information but not operation status. The representation include credential information, encrypted with the RSA public key of the Appliance device connector. Appliance device connector is the sole maintainer of the RSA private key and the only system component which is capable of interpreting the credential.
 
@@ -153,6 +168,23 @@ The Moid identifying the Target instance being created, modified or deleted.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetSpecification
+Meta information about the target deployment i.e., docker image URL, memory and CPU limits. This allows Intersight to define supported docker image tag and customize resources for each target deployment.
+
+Note :- Use Initialize-IntersightConnectorTargetSpecification to create the object of complex type ConnectorTargetSpecification
+
+```yaml
+Type: Model.ConnectorTargetSpecification
 Parameter Sets: (All)
 Aliases:
 
@@ -219,5 +251,7 @@ PS C:\> Initialize-IntersightConnectorTargetChangeMessage
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightConnectorTargetSpecification](./Initialize-IntersightConnectorTargetSpecification.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)

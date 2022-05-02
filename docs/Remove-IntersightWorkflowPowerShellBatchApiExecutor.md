@@ -5,38 +5,38 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-IntersightConvergedinfraHealthCheckDefinition
+# Remove-IntersightWorkflowPowerShellBatchApiExecutor
 
 ## SYNOPSIS
-Remove the ConvergedinfraHealthCheckDefinition
+Remove the WorkflowPowerShellBatchApiExecutor
 
 ## SYNTAX
 
 ```
-Remove-IntersightConvergedinfraHealthCheckDefinition -Moid <String> [<CommonParameters>]
+Remove-IntersightWorkflowPowerShellBatchApiExecutor -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
+Delete a &apos;WorkflowPowerShellBatchApiExecutor&apos; resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-IntersightConvergedinfraHealthCheckDefinition -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+PS C:\> Remove-IntersightWorkflowPowerShellBatchApiExecutor -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Above cmdlet removes the specified ConvergedinfraHealthCheckDefinition 
+Above cmdlet removes the specified WorkflowPowerShellBatchApiExecutor 
 
 ### Example 2
 ```powershell
-PS C:\>Get-IntersightConvergedinfraHealthCheckDefinition -Name "MoName"|  Remove-IntersightConvergedinfraHealthCheckDefinition
+PS C:\>Get-IntersightWorkflowPowerShellBatchApiExecutor -Name "MoName"|  Remove-IntersightWorkflowPowerShellBatchApiExecutor
 ```
 Above cmdlet pipes the output of Get cmdlet to Remove cmdlet
 
 ## PARAMETERS
 
 ### -Moid
-Specifyies the Moid of ConvergedinfraHealthCheckDefinition.
+Specifyies the Moid of WorkflowPowerShellBatchApiExecutor.
 
 ```yaml
 Type: String
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
+[Get-IntersightWorkflowPowerShellBatchApiExecutor](./Get-IntersightWorkflowPowerShellBatchApiExecutor.md)
 
-[New-IntersightConvergedinfraHealthCheckDefinition](./New-IntersightConvergedinfraHealthCheckDefinition.md)
+[New-IntersightWorkflowPowerShellBatchApiExecutor](./New-IntersightWorkflowPowerShellBatchApiExecutor.md)
 
-[Set-IntersightConvergedinfraHealthCheckDefinition](./Set-IntersightConvergedinfraHealthCheckDefinition.md)
+[Set-IntersightWorkflowPowerShellBatchApiExecutor](./Set-IntersightWorkflowPowerShellBatchApiExecutor.md)
 

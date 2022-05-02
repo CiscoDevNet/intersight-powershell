@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.9.6207
-- C# SDK version: 1.0.9.6207
+- Intersight.PowerShell version: 1.0.9.6484
+- C# SDK version: 1.0.9.6484
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.9.6207"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.9.6484"}
 ```
 or
 
@@ -1016,12 +1016,7 @@ ConnectorpackUpgradeImpact | [**Get-IntersightConnectorpackUpgradeImpact**](docs
 ConnectorpackConnectorPackUpgrade | [**New-IntersightConnectorpackConnectorPackUpgrade**](docs/New-IntersightConnectorpackConnectorPackUpgrade.md) | Create a 'ConnectorpackConnectorPackUpgrade' resource.
 ConnectorpackConnectorPackUpgrade | [**Remove-IntersightConnectorpackConnectorPackUpgrade**](docs/Remove-IntersightConnectorpackConnectorPackUpgrade.md) | Delete a 'ConnectorpackConnectorPackUpgrade' resource.
 ConsoleConsoleConfig | [**Get-IntersightConsoleConsoleConfig**](docs/Get-IntersightConsoleConsoleConfig.md) | Read a 'ConsoleConsoleConfig' resource.
-ConvergedinfraHealthCheckDefinition | [**Get-IntersightConvergedinfraHealthCheckDefinition**](docs/Get-IntersightConvergedinfraHealthCheckDefinition.md) | Read a 'ConvergedinfraHealthCheckDefinition' resource.
-ConvergedinfraHealthCheckExecution | [**Get-IntersightConvergedinfraHealthCheckExecution**](docs/Get-IntersightConvergedinfraHealthCheckExecution.md) | Read a 'ConvergedinfraHealthCheckExecution' resource.
 ConvergedinfraPod | [**Get-IntersightConvergedinfraPod**](docs/Get-IntersightConvergedinfraPod.md) | Read a 'ConvergedinfraPod' resource.
-ConvergedinfraHealthCheckDefinition | [**New-IntersightConvergedinfraHealthCheckDefinition**](docs/New-IntersightConvergedinfraHealthCheckDefinition.md) | Create a 'ConvergedinfraHealthCheckDefinition' resource.
-ConvergedinfraHealthCheckDefinition | [**Remove-IntersightConvergedinfraHealthCheckDefinition**](docs/Remove-IntersightConvergedinfraHealthCheckDefinition.md) | Delete a 'ConvergedinfraHealthCheckDefinition' resource.
-ConvergedinfraHealthCheckDefinition | [**Set-IntersightConvergedinfraHealthCheckDefinition**](docs/Set-IntersightConvergedinfraHealthCheckDefinition.md) | Update a 'ConvergedinfraHealthCheckDefinition' resource.
 ConvergedinfraPod | [**Set-IntersightConvergedinfraPod**](docs/Set-IntersightConvergedinfraPod.md) | Update a 'ConvergedinfraPod' resource.
 CrdCustomResource | [**Get-IntersightCrdCustomResource**](docs/Get-IntersightCrdCustomResource.md) | Read a 'CrdCustomResource' resource.
 CrdCustomResource | [**New-IntersightCrdCustomResource**](docs/New-IntersightCrdCustomResource.md) | Create a 'CrdCustomResource' resource.
@@ -1857,6 +1852,7 @@ MemoryPersistentMemoryUnit | [**Set-IntersightMemoryPersistentMemoryUnit**](docs
 MemoryUnit | [**Set-IntersightMemoryUnit**](docs/Set-IntersightMemoryUnit.md) | Update a 'MemoryUnit' resource.
 MetaDefinition | [**Get-IntersightMetaDefinition**](docs/Get-IntersightMetaDefinition.md) | Read a 'MetaDefinition' resource.
 MetaDefinition | [**Remove-IntersightMetaDefinition**](docs/Remove-IntersightMetaDefinition.md) | Delete a 'MetaDefinition' resource.
+MonitoringHealthStatus | [**Get-IntersightMonitoringHealthStatus**](docs/Get-IntersightMonitoringHealthStatus.md) | Read a 'MonitoringHealthStatus' resource.
 NetworkElement | [**Get-IntersightNetworkElement**](docs/Get-IntersightNetworkElement.md) | Read a 'NetworkElement' resource.
 NetworkElementSummary | [**Get-IntersightNetworkElementSummary**](docs/Get-IntersightNetworkElementSummary.md) | Read a 'NetworkElementSummary' resource.
 NetworkFcZoneInfo | [**Get-IntersightNetworkFcZoneInfo**](docs/Get-IntersightNetworkFcZoneInfo.md) | Read a 'NetworkFcZoneInfo' resource.
@@ -2106,6 +2102,7 @@ SoftwareDownloadHistory | [**Get-IntersightSoftwareDownloadHistory**](docs/Get-I
 SoftwareHclMeta | [**Get-IntersightSoftwareHclMeta**](docs/Get-IntersightSoftwareHclMeta.md) | Read a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**Get-IntersightSoftwareHyperflexBundleDistributable**](docs/Get-IntersightSoftwareHyperflexBundleDistributable.md) | Read a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**Get-IntersightSoftwareHyperflexDistributable**](docs/Get-IntersightSoftwareHyperflexDistributable.md) | Read a 'SoftwareHyperflexDistributable' resource.
+SoftwareIksBundleDistributable | [**Get-IntersightSoftwareIksBundleDistributable**](docs/Get-IntersightSoftwareIksBundleDistributable.md) | Read a 'SoftwareIksBundleDistributable' resource.
 SoftwareReleaseMeta | [**Get-IntersightSoftwareReleaseMeta**](docs/Get-IntersightSoftwareReleaseMeta.md) | Read a 'SoftwareReleaseMeta' resource.
 SoftwareSolutionDistributable | [**Get-IntersightSoftwareSolutionDistributable**](docs/Get-IntersightSoftwareSolutionDistributable.md) | Read a 'SoftwareSolutionDistributable' resource.
 SoftwareUcsdBundleDistributable | [**Get-IntersightSoftwareUcsdBundleDistributable**](docs/Get-IntersightSoftwareUcsdBundleDistributable.md) | Read a 'SoftwareUcsdBundleDistributable' resource.
@@ -2114,6 +2111,7 @@ SoftwareApplianceDistributable | [**New-IntersightSoftwareApplianceDistributable
 SoftwareHclMeta | [**New-IntersightSoftwareHclMeta**](docs/New-IntersightSoftwareHclMeta.md) | Create a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**New-IntersightSoftwareHyperflexBundleDistributable**](docs/New-IntersightSoftwareHyperflexBundleDistributable.md) | Create a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**New-IntersightSoftwareHyperflexDistributable**](docs/New-IntersightSoftwareHyperflexDistributable.md) | Create a 'SoftwareHyperflexDistributable' resource.
+SoftwareIksBundleDistributable | [**New-IntersightSoftwareIksBundleDistributable**](docs/New-IntersightSoftwareIksBundleDistributable.md) | Create a 'SoftwareIksBundleDistributable' resource.
 SoftwareReleaseMeta | [**New-IntersightSoftwareReleaseMeta**](docs/New-IntersightSoftwareReleaseMeta.md) | Create a 'SoftwareReleaseMeta' resource.
 SoftwareSolutionDistributable | [**New-IntersightSoftwareSolutionDistributable**](docs/New-IntersightSoftwareSolutionDistributable.md) | Create a 'SoftwareSolutionDistributable' resource.
 SoftwareUcsdBundleDistributable | [**New-IntersightSoftwareUcsdBundleDistributable**](docs/New-IntersightSoftwareUcsdBundleDistributable.md) | Create a 'SoftwareUcsdBundleDistributable' resource.
@@ -2122,6 +2120,7 @@ SoftwareApplianceDistributable | [**Remove-IntersightSoftwareApplianceDistributa
 SoftwareHclMeta | [**Remove-IntersightSoftwareHclMeta**](docs/Remove-IntersightSoftwareHclMeta.md) | Delete a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**Remove-IntersightSoftwareHyperflexBundleDistributable**](docs/Remove-IntersightSoftwareHyperflexBundleDistributable.md) | Delete a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**Remove-IntersightSoftwareHyperflexDistributable**](docs/Remove-IntersightSoftwareHyperflexDistributable.md) | Delete a 'SoftwareHyperflexDistributable' resource.
+SoftwareIksBundleDistributable | [**Remove-IntersightSoftwareIksBundleDistributable**](docs/Remove-IntersightSoftwareIksBundleDistributable.md) | Delete a 'SoftwareIksBundleDistributable' resource.
 SoftwareReleaseMeta | [**Remove-IntersightSoftwareReleaseMeta**](docs/Remove-IntersightSoftwareReleaseMeta.md) | Delete a 'SoftwareReleaseMeta' resource.
 SoftwareSolutionDistributable | [**Remove-IntersightSoftwareSolutionDistributable**](docs/Remove-IntersightSoftwareSolutionDistributable.md) | Delete a 'SoftwareSolutionDistributable' resource.
 SoftwareUcsdBundleDistributable | [**Remove-IntersightSoftwareUcsdBundleDistributable**](docs/Remove-IntersightSoftwareUcsdBundleDistributable.md) | Delete a 'SoftwareUcsdBundleDistributable' resource.
@@ -2130,6 +2129,7 @@ SoftwareApplianceDistributable | [**Set-IntersightSoftwareApplianceDistributable
 SoftwareHclMeta | [**Set-IntersightSoftwareHclMeta**](docs/Set-IntersightSoftwareHclMeta.md) | Update a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**Set-IntersightSoftwareHyperflexBundleDistributable**](docs/Set-IntersightSoftwareHyperflexBundleDistributable.md) | Update a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**Set-IntersightSoftwareHyperflexDistributable**](docs/Set-IntersightSoftwareHyperflexDistributable.md) | Update a 'SoftwareHyperflexDistributable' resource.
+SoftwareIksBundleDistributable | [**Set-IntersightSoftwareIksBundleDistributable**](docs/Set-IntersightSoftwareIksBundleDistributable.md) | Update a 'SoftwareIksBundleDistributable' resource.
 SoftwareReleaseMeta | [**Set-IntersightSoftwareReleaseMeta**](docs/Set-IntersightSoftwareReleaseMeta.md) | Update a 'SoftwareReleaseMeta' resource.
 SoftwareSolutionDistributable | [**Set-IntersightSoftwareSolutionDistributable**](docs/Set-IntersightSoftwareSolutionDistributable.md) | Update a 'SoftwareSolutionDistributable' resource.
 SoftwareUcsdBundleDistributable | [**Set-IntersightSoftwareUcsdBundleDistributable**](docs/Set-IntersightSoftwareUcsdBundleDistributable.md) | Update a 'SoftwareUcsdBundleDistributable' resource.
@@ -2201,6 +2201,8 @@ StorageNetAppAggregateEvent | [**Get-IntersightStorageNetAppAggregateEvent**](do
 StorageNetAppBaseDisk | [**Get-IntersightStorageNetAppBaseDisk**](docs/Get-IntersightStorageNetAppBaseDisk.md) | Read a 'StorageNetAppBaseDisk' resource.
 StorageNetAppCluster | [**Get-IntersightStorageNetAppCluster**](docs/Get-IntersightStorageNetAppCluster.md) | Read a 'StorageNetAppCluster' resource.
 StorageNetAppClusterEvent | [**Get-IntersightStorageNetAppClusterEvent**](docs/Get-IntersightStorageNetAppClusterEvent.md) | Read a 'StorageNetAppClusterEvent' resource.
+StorageNetAppDataIpInterface | [**Get-IntersightStorageNetAppDataIpInterface**](docs/Get-IntersightStorageNetAppDataIpInterface.md) | Read a 'StorageNetAppDataIpInterface' resource.
+StorageNetAppDataIpInterfaceEvent | [**Get-IntersightStorageNetAppDataIpInterfaceEvent**](docs/Get-IntersightStorageNetAppDataIpInterfaceEvent.md) | Read a 'StorageNetAppDataIpInterfaceEvent' resource.
 StorageNetAppDiskEvent | [**Get-IntersightStorageNetAppDiskEvent**](docs/Get-IntersightStorageNetAppDiskEvent.md) | Read a 'StorageNetAppDiskEvent' resource.
 StorageNetAppEthernetPort | [**Get-IntersightStorageNetAppEthernetPort**](docs/Get-IntersightStorageNetAppEthernetPort.md) | Read a 'StorageNetAppEthernetPort' resource.
 StorageNetAppEthernetPortEvent | [**Get-IntersightStorageNetAppEthernetPortEvent**](docs/Get-IntersightStorageNetAppEthernetPortEvent.md) | Read a 'StorageNetAppEthernetPortEvent' resource.
@@ -2212,13 +2214,19 @@ StorageNetAppFcPortEvent | [**Get-IntersightStorageNetAppFcPortEvent**](docs/Get
 StorageNetAppInitiatorGroup | [**Get-IntersightStorageNetAppInitiatorGroup**](docs/Get-IntersightStorageNetAppInitiatorGroup.md) | Read a 'StorageNetAppInitiatorGroup' resource.
 StorageNetAppIpInterface | [**Get-IntersightStorageNetAppIpInterface**](docs/Get-IntersightStorageNetAppIpInterface.md) | Read a 'StorageNetAppIpInterface' resource.
 StorageNetAppIpInterfaceEvent | [**Get-IntersightStorageNetAppIpInterfaceEvent**](docs/Get-IntersightStorageNetAppIpInterfaceEvent.md) | Read a 'StorageNetAppIpInterfaceEvent' resource.
+StorageNetAppIscsiService | [**Get-IntersightStorageNetAppIscsiService**](docs/Get-IntersightStorageNetAppIscsiService.md) | Read a 'StorageNetAppIscsiService' resource.
 StorageNetAppLicense | [**Get-IntersightStorageNetAppLicense**](docs/Get-IntersightStorageNetAppLicense.md) | Read a 'StorageNetAppLicense' resource.
 StorageNetAppLun | [**Get-IntersightStorageNetAppLun**](docs/Get-IntersightStorageNetAppLun.md) | Read a 'StorageNetAppLun' resource.
 StorageNetAppLunEvent | [**Get-IntersightStorageNetAppLunEvent**](docs/Get-IntersightStorageNetAppLunEvent.md) | Read a 'StorageNetAppLunEvent' resource.
 StorageNetAppLunMap | [**Get-IntersightStorageNetAppLunMap**](docs/Get-IntersightStorageNetAppLunMap.md) | Read a 'StorageNetAppLunMap' resource.
+StorageNetAppNfsService | [**Get-IntersightStorageNetAppNfsService**](docs/Get-IntersightStorageNetAppNfsService.md) | Read a 'StorageNetAppNfsService' resource.
 StorageNetAppNode | [**Get-IntersightStorageNetAppNode**](docs/Get-IntersightStorageNetAppNode.md) | Read a 'StorageNetAppNode' resource.
+StorageNetAppNodeCdpNeighbor | [**Get-IntersightStorageNetAppNodeCdpNeighbor**](docs/Get-IntersightStorageNetAppNodeCdpNeighbor.md) | Read a 'StorageNetAppNodeCdpNeighbor' resource.
 StorageNetAppNodeEvent | [**Get-IntersightStorageNetAppNodeEvent**](docs/Get-IntersightStorageNetAppNodeEvent.md) | Read a 'StorageNetAppNodeEvent' resource.
+StorageNetAppNonDataIpInterface | [**Get-IntersightStorageNetAppNonDataIpInterface**](docs/Get-IntersightStorageNetAppNonDataIpInterface.md) | Read a 'StorageNetAppNonDataIpInterface' resource.
+StorageNetAppNonDataIpInterfaceEvent | [**Get-IntersightStorageNetAppNonDataIpInterfaceEvent**](docs/Get-IntersightStorageNetAppNonDataIpInterfaceEvent.md) | Read a 'StorageNetAppNonDataIpInterfaceEvent' resource.
 StorageNetAppNtpServer | [**Get-IntersightStorageNetAppNtpServer**](docs/Get-IntersightStorageNetAppNtpServer.md) | Read a 'StorageNetAppNtpServer' resource.
+StorageNetAppSchedule | [**Get-IntersightStorageNetAppSchedule**](docs/Get-IntersightStorageNetAppSchedule.md) | Read a 'StorageNetAppSchedule' resource.
 StorageNetAppSensor | [**Get-IntersightStorageNetAppSensor**](docs/Get-IntersightStorageNetAppSensor.md) | Read a 'StorageNetAppSensor' resource.
 StorageNetAppStorageVm | [**Get-IntersightStorageNetAppStorageVm**](docs/Get-IntersightStorageNetAppStorageVm.md) | Read a 'StorageNetAppStorageVm' resource.
 StorageNetAppSvmEvent | [**Get-IntersightStorageNetAppSvmEvent**](docs/Get-IntersightStorageNetAppSvmEvent.md) | Read a 'StorageNetAppSvmEvent' resource.
@@ -2310,7 +2318,9 @@ TaskHitachiScopedInventory | [**New-IntersightTaskHitachiScopedInventory**](docs
 TaskHyperFlexManagementScopedInventory | [**New-IntersightTaskHyperFlexManagementScopedInventory**](docs/New-IntersightTaskHyperFlexManagementScopedInventory.md) | Create a 'TaskHyperFlexManagementScopedInventory' resource.
 TaskHyperflexScopedInventory | [**New-IntersightTaskHyperflexScopedInventory**](docs/New-IntersightTaskHyperflexScopedInventory.md) | Create a 'TaskHyperflexScopedInventory' resource.
 TaskIweScopedInventory | [**New-IntersightTaskIweScopedInventory**](docs/New-IntersightTaskIweScopedInventory.md) | Create a 'TaskIweScopedInventory' resource.
+TaskMdsScopedInventory | [**New-IntersightTaskMdsScopedInventory**](docs/New-IntersightTaskMdsScopedInventory.md) | Create a 'TaskMdsScopedInventory' resource.
 TaskNetAppScopedInventory | [**New-IntersightTaskNetAppScopedInventory**](docs/New-IntersightTaskNetAppScopedInventory.md) | Create a 'TaskNetAppScopedInventory' resource.
+TaskNexusScopedInventory | [**New-IntersightTaskNexusScopedInventory**](docs/New-IntersightTaskNexusScopedInventory.md) | Create a 'TaskNexusScopedInventory' resource.
 TaskPublicCloudScopedInventory | [**New-IntersightTaskPublicCloudScopedInventory**](docs/New-IntersightTaskPublicCloudScopedInventory.md) | Create a 'TaskPublicCloudScopedInventory' resource.
 TaskPureScopedInventory | [**New-IntersightTaskPureScopedInventory**](docs/New-IntersightTaskPureScopedInventory.md) | Create a 'TaskPureScopedInventory' resource.
 TaskServerScopedInventory | [**New-IntersightTaskServerScopedInventory**](docs/New-IntersightTaskServerScopedInventory.md) | Create a 'TaskServerScopedInventory' resource.
@@ -2345,6 +2355,7 @@ UuidpoolPool | [**New-IntersightUuidpoolPool**](docs/New-IntersightUuidpoolPool.
 UuidpoolPool | [**Remove-IntersightUuidpoolPool**](docs/Remove-IntersightUuidpoolPool.md) | Delete a 'UuidpoolPool' resource.
 UuidpoolUuidLease | [**Remove-IntersightUuidpoolUuidLease**](docs/Remove-IntersightUuidpoolUuidLease.md) | Delete a 'UuidpoolUuidLease' resource.
 UuidpoolPool | [**Set-IntersightUuidpoolPool**](docs/Set-IntersightUuidpoolPool.md) | Update a 'UuidpoolPool' resource.
+ViewHealthStatus | [**Get-IntersightViewHealthStatus**](docs/Get-IntersightViewHealthStatus.md) | Read a 'ViewHealthStatus' resource.
 ViewServer | [**Get-IntersightViewServer**](docs/Get-IntersightViewServer.md) | Read a 'ViewServer' resource.
 VirtualizationCiscoHypervisorManager | [**Get-IntersightVirtualizationCiscoHypervisorManager**](docs/Get-IntersightVirtualizationCiscoHypervisorManager.md) | Read a 'VirtualizationCiscoHypervisorManager' resource.
 VirtualizationEsxiConsole | [**Get-IntersightVirtualizationEsxiConsole**](docs/Get-IntersightVirtualizationEsxiConsole.md) | Read a 'VirtualizationEsxiConsole' resource.
@@ -2516,10 +2527,13 @@ WorkflowCatalog | [**Get-IntersightWorkflowCatalog**](docs/Get-IntersightWorkflo
 WorkflowCustomDataTypeDefinition | [**Get-IntersightWorkflowCustomDataTypeDefinition**](docs/Get-IntersightWorkflowCustomDataTypeDefinition.md) | Read a 'WorkflowCustomDataTypeDefinition' resource.
 WorkflowErrorResponseHandler | [**Get-IntersightWorkflowErrorResponseHandler**](docs/Get-IntersightWorkflowErrorResponseHandler.md) | Read a 'WorkflowErrorResponseHandler' resource.
 WorkflowPendingDynamicWorkflowInfo | [**Get-IntersightWorkflowPendingDynamicWorkflowInfo**](docs/Get-IntersightWorkflowPendingDynamicWorkflowInfo.md) | Read a 'WorkflowPendingDynamicWorkflowInfo' resource.
+WorkflowPowerShellBatchApiExecutor | [**Get-IntersightWorkflowPowerShellBatchApiExecutor**](docs/Get-IntersightWorkflowPowerShellBatchApiExecutor.md) | Read a 'WorkflowPowerShellBatchApiExecutor' resource.
 WorkflowRollbackWorkflow | [**Get-IntersightWorkflowRollbackWorkflow**](docs/Get-IntersightWorkflowRollbackWorkflow.md) | Read a 'WorkflowRollbackWorkflow' resource.
 WorkflowServiceItemActionDefinition | [**Get-IntersightWorkflowServiceItemActionDefinition**](docs/Get-IntersightWorkflowServiceItemActionDefinition.md) | Read a 'WorkflowServiceItemActionDefinition' resource.
 WorkflowServiceItemActionInstance | [**Get-IntersightWorkflowServiceItemActionInstance**](docs/Get-IntersightWorkflowServiceItemActionInstance.md) | Read a 'WorkflowServiceItemActionInstance' resource.
 WorkflowServiceItemDefinition | [**Get-IntersightWorkflowServiceItemDefinition**](docs/Get-IntersightWorkflowServiceItemDefinition.md) | Read a 'WorkflowServiceItemDefinition' resource.
+WorkflowServiceItemHealthCheckDefinition | [**Get-IntersightWorkflowServiceItemHealthCheckDefinition**](docs/Get-IntersightWorkflowServiceItemHealthCheckDefinition.md) | Read a 'WorkflowServiceItemHealthCheckDefinition' resource.
+WorkflowServiceItemHealthCheckExecution | [**Get-IntersightWorkflowServiceItemHealthCheckExecution**](docs/Get-IntersightWorkflowServiceItemHealthCheckExecution.md) | Read a 'WorkflowServiceItemHealthCheckExecution' resource.
 WorkflowServiceItemInstance | [**Get-IntersightWorkflowServiceItemInstance**](docs/Get-IntersightWorkflowServiceItemInstance.md) | Read a 'WorkflowServiceItemInstance' resource.
 WorkflowServiceItemOutput | [**Get-IntersightWorkflowServiceItemOutput**](docs/Get-IntersightWorkflowServiceItemOutput.md) | Read a 'WorkflowServiceItemOutput' resource.
 WorkflowSolutionActionDefinition | [**Get-IntersightWorkflowSolutionActionDefinition**](docs/Get-IntersightWorkflowSolutionActionDefinition.md) | Read a 'WorkflowSolutionActionDefinition' resource.
@@ -2541,10 +2555,12 @@ WorkflowAnsibleBatchExecutor | [**New-IntersightWorkflowAnsibleBatchExecutor**](
 WorkflowBatchApiExecutor | [**New-IntersightWorkflowBatchApiExecutor**](docs/New-IntersightWorkflowBatchApiExecutor.md) | Create a 'WorkflowBatchApiExecutor' resource.
 WorkflowCustomDataTypeDefinition | [**New-IntersightWorkflowCustomDataTypeDefinition**](docs/New-IntersightWorkflowCustomDataTypeDefinition.md) | Create a 'WorkflowCustomDataTypeDefinition' resource.
 WorkflowErrorResponseHandler | [**New-IntersightWorkflowErrorResponseHandler**](docs/New-IntersightWorkflowErrorResponseHandler.md) | Create a 'WorkflowErrorResponseHandler' resource.
+WorkflowPowerShellBatchApiExecutor | [**New-IntersightWorkflowPowerShellBatchApiExecutor**](docs/New-IntersightWorkflowPowerShellBatchApiExecutor.md) | Create a 'WorkflowPowerShellBatchApiExecutor' resource.
 WorkflowRollbackWorkflow | [**New-IntersightWorkflowRollbackWorkflow**](docs/New-IntersightWorkflowRollbackWorkflow.md) | Create a 'WorkflowRollbackWorkflow' resource.
 WorkflowServiceItemActionDefinition | [**New-IntersightWorkflowServiceItemActionDefinition**](docs/New-IntersightWorkflowServiceItemActionDefinition.md) | Create a 'WorkflowServiceItemActionDefinition' resource.
 WorkflowServiceItemActionInstance | [**New-IntersightWorkflowServiceItemActionInstance**](docs/New-IntersightWorkflowServiceItemActionInstance.md) | Create a 'WorkflowServiceItemActionInstance' resource.
 WorkflowServiceItemDefinition | [**New-IntersightWorkflowServiceItemDefinition**](docs/New-IntersightWorkflowServiceItemDefinition.md) | Create a 'WorkflowServiceItemDefinition' resource.
+WorkflowServiceItemHealthCheckDefinition | [**New-IntersightWorkflowServiceItemHealthCheckDefinition**](docs/New-IntersightWorkflowServiceItemHealthCheckDefinition.md) | Create a 'WorkflowServiceItemHealthCheckDefinition' resource.
 WorkflowServiceItemInstance | [**New-IntersightWorkflowServiceItemInstance**](docs/New-IntersightWorkflowServiceItemInstance.md) | Create a 'WorkflowServiceItemInstance' resource.
 WorkflowServiceItemOutput | [**New-IntersightWorkflowServiceItemOutput**](docs/New-IntersightWorkflowServiceItemOutput.md) | Create a 'WorkflowServiceItemOutput' resource.
 WorkflowSolutionActionDefinition | [**New-IntersightWorkflowSolutionActionDefinition**](docs/New-IntersightWorkflowSolutionActionDefinition.md) | Create a 'WorkflowSolutionActionDefinition' resource.
@@ -2561,10 +2577,12 @@ WorkflowAnsibleBatchExecutor | [**Remove-IntersightWorkflowAnsibleBatchExecutor*
 WorkflowBatchApiExecutor | [**Remove-IntersightWorkflowBatchApiExecutor**](docs/Remove-IntersightWorkflowBatchApiExecutor.md) | Delete a 'WorkflowBatchApiExecutor' resource.
 WorkflowCustomDataTypeDefinition | [**Remove-IntersightWorkflowCustomDataTypeDefinition**](docs/Remove-IntersightWorkflowCustomDataTypeDefinition.md) | Delete a 'WorkflowCustomDataTypeDefinition' resource.
 WorkflowErrorResponseHandler | [**Remove-IntersightWorkflowErrorResponseHandler**](docs/Remove-IntersightWorkflowErrorResponseHandler.md) | Delete a 'WorkflowErrorResponseHandler' resource.
+WorkflowPowerShellBatchApiExecutor | [**Remove-IntersightWorkflowPowerShellBatchApiExecutor**](docs/Remove-IntersightWorkflowPowerShellBatchApiExecutor.md) | Delete a 'WorkflowPowerShellBatchApiExecutor' resource.
 WorkflowRollbackWorkflow | [**Remove-IntersightWorkflowRollbackWorkflow**](docs/Remove-IntersightWorkflowRollbackWorkflow.md) | Delete a 'WorkflowRollbackWorkflow' resource.
 WorkflowServiceItemActionDefinition | [**Remove-IntersightWorkflowServiceItemActionDefinition**](docs/Remove-IntersightWorkflowServiceItemActionDefinition.md) | Delete a 'WorkflowServiceItemActionDefinition' resource.
 WorkflowServiceItemActionInstance | [**Remove-IntersightWorkflowServiceItemActionInstance**](docs/Remove-IntersightWorkflowServiceItemActionInstance.md) | Delete a 'WorkflowServiceItemActionInstance' resource.
 WorkflowServiceItemDefinition | [**Remove-IntersightWorkflowServiceItemDefinition**](docs/Remove-IntersightWorkflowServiceItemDefinition.md) | Delete a 'WorkflowServiceItemDefinition' resource.
+WorkflowServiceItemHealthCheckDefinition | [**Remove-IntersightWorkflowServiceItemHealthCheckDefinition**](docs/Remove-IntersightWorkflowServiceItemHealthCheckDefinition.md) | Delete a 'WorkflowServiceItemHealthCheckDefinition' resource.
 WorkflowServiceItemInstance | [**Remove-IntersightWorkflowServiceItemInstance**](docs/Remove-IntersightWorkflowServiceItemInstance.md) | Delete a 'WorkflowServiceItemInstance' resource.
 WorkflowServiceItemOutput | [**Remove-IntersightWorkflowServiceItemOutput**](docs/Remove-IntersightWorkflowServiceItemOutput.md) | Delete a 'WorkflowServiceItemOutput' resource.
 WorkflowSolutionActionDefinition | [**Remove-IntersightWorkflowSolutionActionDefinition**](docs/Remove-IntersightWorkflowSolutionActionDefinition.md) | Delete a 'WorkflowSolutionActionDefinition' resource.
@@ -2577,10 +2595,12 @@ WorkflowAnsibleBatchExecutor | [**Set-IntersightWorkflowAnsibleBatchExecutor**](
 WorkflowBatchApiExecutor | [**Set-IntersightWorkflowBatchApiExecutor**](docs/Set-IntersightWorkflowBatchApiExecutor.md) | Update a 'WorkflowBatchApiExecutor' resource.
 WorkflowCustomDataTypeDefinition | [**Set-IntersightWorkflowCustomDataTypeDefinition**](docs/Set-IntersightWorkflowCustomDataTypeDefinition.md) | Update a 'WorkflowCustomDataTypeDefinition' resource.
 WorkflowErrorResponseHandler | [**Set-IntersightWorkflowErrorResponseHandler**](docs/Set-IntersightWorkflowErrorResponseHandler.md) | Update a 'WorkflowErrorResponseHandler' resource.
+WorkflowPowerShellBatchApiExecutor | [**Set-IntersightWorkflowPowerShellBatchApiExecutor**](docs/Set-IntersightWorkflowPowerShellBatchApiExecutor.md) | Update a 'WorkflowPowerShellBatchApiExecutor' resource.
 WorkflowRollbackWorkflow | [**Set-IntersightWorkflowRollbackWorkflow**](docs/Set-IntersightWorkflowRollbackWorkflow.md) | Update a 'WorkflowRollbackWorkflow' resource.
 WorkflowServiceItemActionDefinition | [**Set-IntersightWorkflowServiceItemActionDefinition**](docs/Set-IntersightWorkflowServiceItemActionDefinition.md) | Update a 'WorkflowServiceItemActionDefinition' resource.
 WorkflowServiceItemActionInstance | [**Set-IntersightWorkflowServiceItemActionInstance**](docs/Set-IntersightWorkflowServiceItemActionInstance.md) | Update a 'WorkflowServiceItemActionInstance' resource.
 WorkflowServiceItemDefinition | [**Set-IntersightWorkflowServiceItemDefinition**](docs/Set-IntersightWorkflowServiceItemDefinition.md) | Update a 'WorkflowServiceItemDefinition' resource.
+WorkflowServiceItemHealthCheckDefinition | [**Set-IntersightWorkflowServiceItemHealthCheckDefinition**](docs/Set-IntersightWorkflowServiceItemHealthCheckDefinition.md) | Update a 'WorkflowServiceItemHealthCheckDefinition' resource.
 WorkflowServiceItemInstance | [**Set-IntersightWorkflowServiceItemInstance**](docs/Set-IntersightWorkflowServiceItemInstance.md) | Update a 'WorkflowServiceItemInstance' resource.
 WorkflowServiceItemOutput | [**Set-IntersightWorkflowServiceItemOutput**](docs/Set-IntersightWorkflowServiceItemOutput.md) | Update a 'WorkflowServiceItemOutput' resource.
 WorkflowSolutionActionDefinition | [**Set-IntersightWorkflowSolutionActionDefinition**](docs/Set-IntersightWorkflowSolutionActionDefinition.md) | Update a 'WorkflowSolutionActionDefinition' resource.

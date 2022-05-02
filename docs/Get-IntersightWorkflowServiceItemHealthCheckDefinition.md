@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightConvergedinfraHealthCheckExecution
+# Get-IntersightWorkflowServiceItemHealthCheckDefinition
 
 ## SYNOPSIS
-Get the ConvergedinfraHealthCheckExecution
+Get the WorkflowServiceItemHealthCheckDefinition
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightConvergedinfraHealthCheckExecution [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightWorkflowServiceItemHealthCheckDefinition [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightConvergedinfraHealthCheckExecution [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightWorkflowServiceItemHealthCheckDefinition [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ConvergedinfraHealthCheckExecution&apos; resource.,
+Read a &apos;WorkflowServiceItemHealthCheckDefinition&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightConvergedinfraHealthCheckExecution
+PS C:\> $result = Get-IntersightWorkflowServiceItemHealthCheckDefinition
 ```
-Above example returns the list of ConvergedinfraHealthCheckExecution.
+Above example returns the list of WorkflowServiceItemHealthCheckDefinition.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightConvergedinfraHealthCheckExecution -Name "MoName"
+PS C:\> $result = Get-IntersightWorkflowServiceItemHealthCheckDefinition -Name "MoName"
 ```
-Above example returns the ConvergedinfraHealthCheckExecution matched with name.
+Above example returns the WorkflowServiceItemHealthCheckDefinition matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightConvergedinfraHealthCheckExecution -Organization $organization
+PS C:\> $result = Get-IntersightWorkflowServiceItemHealthCheckDefinition -Organization $organization
 ```
-Above example returns the list of ConvergedinfraHealthCheckExecution available under the $organization .
+Above example returns the list of WorkflowServiceItemHealthCheckDefinition available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightConvergedinfraHealthCheckExecution -InlineCount allpages
+PS C:\> $result = Get-IntersightWorkflowServiceItemHealthCheckDefinition -InlineCount allpages
 ```
-Above example returns the list of ConvergedinfraHealthCheckExecution along with count.
+Above example returns the list of WorkflowServiceItemHealthCheckDefinition along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the ConvergedinfraHealthCheckExecution.
+Specifies the name of the WorkflowServiceItemHealthCheckDefinition.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the ConvergedinfraHealthCheckExecution under it.
+Specifies the organization, to fetch the WorkflowServiceItemHealthCheckDefinition under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -283,4 +283,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-IntersightWorkflowServiceItemHealthCheckDefinition](./New-IntersightWorkflowServiceItemHealthCheckDefinition.md)
+
+[Remove-IntersightWorkflowServiceItemHealthCheckDefinition](./Remove-IntersightWorkflowServiceItemHealthCheckDefinition.md)
+
+[Set-IntersightWorkflowServiceItemHealthCheckDefinition](./Set-IntersightWorkflowServiceItemHealthCheckDefinition.md)
 

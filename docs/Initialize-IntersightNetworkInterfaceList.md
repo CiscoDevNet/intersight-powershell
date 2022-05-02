@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkInterfaceList [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< string>][-ClassId< NetworkInterfaceList.ClassIdEnum>][-IpAddress< string>][-Mac< string>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkInterfaceList.ObjectTypeEnum>][-OperState< string>][-PortType< string>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-SlotId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vlan< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkInterfaceList [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< string>][-ClassId< NetworkInterfaceList.ClassIdEnum>][-IpAddress< string>][-Mac< string>][-Moid< string>][-Mtu< long>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkInterfaceList.ObjectTypeEnum>][-OperState< string>][-PortSubType< string>][-PortType< string>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-SlotId< string>][-Speed< string>][-SpeedGroup< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vlan< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -114,6 +114,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Mtu
+Maximum transmission unit of the interface list.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Name
 Name of the interface list.
 
@@ -177,6 +192,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PortSubType
+Interface types supported in Network device like Subinterfaces, Breakout Interfaces.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PortType
 Port type of interface list.
 
@@ -212,6 +242,36 @@ Accept wildcard characters: False
 
 ### -SlotId
 Slot id of the interface list.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Speed
+Port speed of the interface list.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SpeedGroup
+Speed Group of the interface list.
 
 ```yaml
 Type: string

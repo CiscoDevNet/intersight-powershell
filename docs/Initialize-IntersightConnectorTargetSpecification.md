@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Set-IntersightConvergedinfraHealthCheckDefinition
+# Initialize-IntersightConnectorTargetSpecification
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,12 +14,13 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightConvergedinfraHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-CommonCauses< string>][-Description< string>][-ExecutionMode< ConvergedinfraHealthCheckDefinition.ExecutionModeEnum>][-Label< string>][[-Moid]< string>][-Name< string>][-SuggestedResolution< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightConnectorTargetSpecification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ConnectorTargetSpecification.ClassIdEnum>][-CpuLimit< string>][-CpuRequest< string>][-ImageTag< string>][-MemoryLimit< string>][-MemoryRequest< string>][-ObjectType< ConnectorTargetSpecification.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
 
@@ -38,8 +39,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Category
-Category that the health check belongs to.
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
+
+```yaml
+Type: ConnectorTargetSpecification.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CpuLimit
+CPU limit assigned to the docker container. It is total amount of CPU time that a container can use every 100ms. A container cannot use more than its share of CPU time during this interval.
 
 ```yaml
 Type: string
@@ -53,8 +69,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -CommonCauses
-Static information detailing the common causes for the health check failure.
+### -CpuRequest
+Requested CPU value for a docker container to run in Intersight Assist.
 
 ```yaml
 Type: string
@@ -68,8 +84,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Description
-Description of the health check definition.
+### -ImageTag
+Docker image tag used to define kubernetes deployment for each target. Image tag should be the complete URL. This image can be found locally in case of Intersight Appliance or can be pulled from Intersight cloud in Intersight Assist deployment.
 
 ```yaml
 Type: string
@@ -83,23 +99,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ExecutionMode
-Execution mode of the health check on converged infrastructure pod.\n* `OnDemand` - Execute the health check on-demand.\n* `Periodic` - Execute the health check on a periodic basis.
-
-```yaml
-Type: ConvergedinfraHealthCheckDefinition.ExecutionModeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Label
-Label for the health check definition that is displayed on UI.
+### -MemoryLimit
+Intersight Assist prevents the docker container from using more than the configured memory limit. If a Container exceeds its memory limit, it might be terminated. If it is restartable, the kubelet will restart it, as with any other type of runtime failure.
 
 ```yaml
 Type: string
@@ -113,23 +114,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Moid
-The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the health check definition.
+### -MemoryRequest
+Requested memory value for a docker container to run in Intersight Assist.
 
 ```yaml
 Type: string
@@ -143,28 +129,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SuggestedResolution
-Static information detailing the possible remediation actions that can be taken to remedy the health check failure.
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
-
-```yaml
-Type: System.Collections.Generic.List`1[MoTag]
+Type: ConnectorTargetSpecification.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -213,7 +182,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Set-IntersightConvergedinfraHealthCheckDefinition
+PS C:\> Initialize-IntersightConnectorTargetSpecification
 ```
 
 { Add example description here }
@@ -231,11 +200,3 @@ PS C:\> Set-IntersightConvergedinfraHealthCheckDefinition
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[New-IntersightConvergedinfraHealthCheckDefinition](./New-IntersightConvergedinfraHealthCheckDefinition.md)
-
-[Remove-IntersightConvergedinfraHealthCheckDefinition](./Remove-IntersightConvergedinfraHealthCheckDefinition.md)

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-IntersightConvergedinfraHealthCheckDefinition
+# New-IntersightWorkflowServiceItemHealthCheckDefinition
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,12 +14,12 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightConvergedinfraHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-CommonCauses< string>][-Description< string>][-ExecutionMode< ConvergedinfraHealthCheckDefinition.ExecutionModeEnum>][-Label< string>][-Moid< string>][[-Name]< string>][-SuggestedResolution< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowServiceItemHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-CommonCauseAndResolution< string>][-Description< string>][-ExecutionMode< WorkflowServiceItemHealthCheckDefinition.ExecutionModeEnum>][-HealthCheckWorkflow< WorkflowServiceItemActionWorkflowDefinition>][-Label< string>][-Moid< string>][[-Name]< string>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;ConvergedinfraHealthCheckDefinition&apos; resource.
+Create a &apos;WorkflowServiceItemHealthCheckDefinition&apos; resource.
 
 ## PARAMETERS
 
@@ -53,8 +53,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -CommonCauses
-Static information detailing the common causes for the health check failure.
+### -CommonCauseAndResolution
+Static information detailing the common cause for the health check failure.\nIt also gives possible remediation actions that can be taken to remedy the health check failure.
 
 ```yaml
 Type: string
@@ -84,10 +84,27 @@ Accept wildcard characters: False
 ```
 
 ### -ExecutionMode
-Execution mode of the health check on converged infrastructure pod.\n* `OnDemand` - Execute the health check on-demand.\n* `Periodic` - Execute the health check on a periodic basis.
+Execution mode of the health check on service item.\n* `OnDemand` - Execute the health check on-demand.\n* `Periodic` - Execute the health check on a periodic basis.
 
 ```yaml
-Type: ConvergedinfraHealthCheckDefinition.ExecutionModeEnum
+Type: WorkflowServiceItemHealthCheckDefinition.ExecutionModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HealthCheckWorkflow
+Workflow that is associated with this health check definition. This workflow will be run on execution of the respective health check definition.
+
+Note :- Use Initialize-IntersightWorkflowServiceItemActionWorkflowDefinition to create the object of complex type WorkflowServiceItemActionWorkflowDefinition
+
+```yaml
+Type: WorkflowServiceItemActionWorkflowDefinition
 Parameter Sets: (All)
 Aliases:
 
@@ -143,11 +160,14 @@ Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
-### -SuggestedResolution
-Static information detailing the possible remediation actions that can be taken to remedy the health check failure.
+### -ServiceItemDefinition
+A reference to a workflowServiceItemDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: string
+Type: WorkflowServiceItemDefinitionRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -213,7 +233,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> New-IntersightConvergedinfraHealthCheckDefinition
+PS C:\> New-IntersightWorkflowServiceItemHealthCheckDefinition
 ```
 
 { Add example description here }
@@ -232,10 +252,12 @@ PS C:\> New-IntersightConvergedinfraHealthCheckDefinition
 
 ## RELATED LINKS
 
-[Get-IntersightConvergedinfraHealthCheckDefinition](./Get-IntersightConvergedinfraHealthCheckDefinition.md)
+[Get-IntersightWorkflowServiceItemHealthCheckDefinition](./Get-IntersightWorkflowServiceItemHealthCheckDefinition.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Remove-IntersightConvergedinfraHealthCheckDefinition](./Remove-IntersightConvergedinfraHealthCheckDefinition.md)
+[Initialize-IntersightWorkflowServiceItemActionWorkflowDefinition](./Initialize-IntersightWorkflowServiceItemActionWorkflowDefinition.md)
 
-[Set-IntersightConvergedinfraHealthCheckDefinition](./Set-IntersightConvergedinfraHealthCheckDefinition.md)
+[Remove-IntersightWorkflowServiceItemHealthCheckDefinition](./Remove-IntersightWorkflowServiceItemHealthCheckDefinition.md)
+
+[Set-IntersightWorkflowServiceItemHealthCheckDefinition](./Set-IntersightWorkflowServiceItemHealthCheckDefinition.md)

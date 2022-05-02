@@ -2824,6 +2824,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to fcPhysicalPort resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FcPhysicalPortRelationship> FcPorts
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The Hardware version of the switch hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2973,6 +2983,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FcPortChannels"))
             {
                 initObject.FcPortChannels = this.FcPortChannels;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcPorts"))
+            {
+                initObject.FcPorts = this.FcPorts;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("HwVersion"))
             {
