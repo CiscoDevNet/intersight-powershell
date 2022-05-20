@@ -1,7 +1,7 @@
 
 #Get the VnicEthNetworkPolicy to delete
-$VnicEthNetworkPolicy = Remove-IntersightVnicEthNetworkPolicy -Name VnicEthNetworkPolicyName
+$VnicEthNetworkPolicy = Get-IntersightVnicEthNetworkPolicy -Name VnicEthNetworkPolicyName
 $VnicEthNetworkPolicy | Remove-IntersightVnicEthNetworkPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightVnicEthNetworkPolicy -Moid 123bc2222287wee
+#Remove the VnicEthNetworkPolicy by Moid.
+Remove-IntersightVnicEthNetworkPolicy -Moid '<Replace with Moid>'

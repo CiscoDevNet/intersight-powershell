@@ -1,7 +1,7 @@
 
 #Get the CapabilitySwitchCapability to delete
-$CapabilitySwitchCapability = Remove-IntersightCapabilitySwitchCapability -Name CapabilitySwitchCapabilityName
+$CapabilitySwitchCapability = Get-IntersightCapabilitySwitchCapability -Name CapabilitySwitchCapabilityName
 $CapabilitySwitchCapability | Remove-IntersightCapabilitySwitchCapability
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilitySwitchCapability -Moid 123bc2222287wee
+#Remove the CapabilitySwitchCapability by Moid.
+Remove-IntersightCapabilitySwitchCapability -Moid '<Replace with Moid>'

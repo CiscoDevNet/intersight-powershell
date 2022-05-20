@@ -1,7 +1,7 @@
 #Get the TamAdvisoryInfo by Name
 $TamAdvisoryInfoByName = Get-IntersightTamAdvisoryInfo -Name TamAdvisoryInfoName
 
-#Get the List of ServerProfiles
+#Get the List of TamAdvisoryInfo
 $TamAdvisoryInfoList = Get-IntersightTamAdvisoryInfo
 
 #Get the list of TamAdvisoryInfo under particular organization.

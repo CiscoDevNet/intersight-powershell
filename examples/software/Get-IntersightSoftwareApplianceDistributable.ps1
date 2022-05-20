@@ -1,7 +1,7 @@
 #Get the SoftwareApplianceDistributable by Name
 $SoftwareApplianceDistributableByName = Get-IntersightSoftwareApplianceDistributable -Name SoftwareApplianceDistributableName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwareApplianceDistributable
 $SoftwareApplianceDistributableList = Get-IntersightSoftwareApplianceDistributable
 
 #Get the list of SoftwareApplianceDistributable under particular organization.

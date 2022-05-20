@@ -1,7 +1,6 @@
-
 #Get the SyslogPolicy to delete
-$SyslogPolicy = Remove-IntersightSyslogPolicy -Name SyslogPolicyName
+$SyslogPolicy = Get-IntersightSyslogPolicy -Name SyslogPolicyName
 $SyslogPolicy | Remove-IntersightSyslogPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightSyslogPolicy -Moid 123bc2222287wee
+#Remove the SyslogPolicy by Moid.
+Remove-IntersightSyslogPolicy -Moid '<Replace with Moid>'

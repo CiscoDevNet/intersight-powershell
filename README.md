@@ -650,7 +650,7 @@ Get-IntersightNtpPolicy -Name TestNtp| Invoke-IntersightPatchDocument -JsonPatch
 
 <a name="server-configuration"></a>
 ### 9.1. Example - Server Configuration
-Refer to [ Server Configuration ](./examples/server/serverConfiguration.ps1)
+Refer to [ Server Configuration ](./examples/environmentConfiguration/Set-IntersightConfiguration.ps1)
 
 <a name="firmware-upgrade"></a>
 ### 9.2. Example - Firmware Upgrade

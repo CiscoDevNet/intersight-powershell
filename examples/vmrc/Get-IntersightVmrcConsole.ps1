@@ -1,7 +1,7 @@
 #Get the VmrcConsole by Name
 $VmrcConsoleByName = Get-IntersightVmrcConsole -Name VmrcConsoleName
 
-#Get the List of ServerProfiles
+#Get the List of VmrcConsole
 $VmrcConsoleList = Get-IntersightVmrcConsole
 
 #Get the list of VmrcConsole under particular organization.

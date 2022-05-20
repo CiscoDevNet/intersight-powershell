@@ -1,0 +1,1 @@
+$softwarerepository_authorization = New-IntersightSoftwarerepositoryAuthorization -Password 'ChangeMe' -RepositoryType 'IntersightCloud' -UserId 'user_1'

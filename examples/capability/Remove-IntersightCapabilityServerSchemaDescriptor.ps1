@@ -1,7 +1,7 @@
 
 #Get the CapabilityServerSchemaDescriptor to delete
-$CapabilityServerSchemaDescriptor = Remove-IntersightCapabilityServerSchemaDescriptor -Name CapabilityServerSchemaDescriptorName
+$CapabilityServerSchemaDescriptor = Get-IntersightCapabilityServerSchemaDescriptor -Name CapabilityServerSchemaDescriptorName
 $CapabilityServerSchemaDescriptor | Remove-IntersightCapabilityServerSchemaDescriptor
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilityServerSchemaDescriptor -Moid 123bc2222287wee
+#Remove the CapabilityServerSchemaDescriptor by Moid.
+Remove-IntersightCapabilityServerSchemaDescriptor -Moid '<Replace with Moid>'

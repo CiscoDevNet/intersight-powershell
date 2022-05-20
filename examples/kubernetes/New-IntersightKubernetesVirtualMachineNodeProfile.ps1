@@ -1,0 +1,3 @@
+$config_context1 = Initialize-IntersightPolicyConfigcontext -ControlAction 'Deploy' -ErrorState 'Pre-config-error'
+
+$kubernetes_virtual_machine_node_profile1 = New-IntersightKubernetesVirtualMachineNodeProfile -ConfigContext $config_context1 -Description 'kubernetes virtual machine node profile' -Name 'kubernetes_virtual_machine_node_profile1' -Type Instance -Action 'Deploy' -CloudProvider 'noProvider'

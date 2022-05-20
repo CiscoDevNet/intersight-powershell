@@ -1,7 +1,7 @@
 #Get the SyslogPolicy by Name
 $SyslogPolicyByName = Get-IntersightSyslogPolicy -Name SyslogPolicyName
 
-#Get the List of ServerProfiles
+#Get the List of SyslogPolicy
 $SyslogPolicyList = Get-IntersightSyslogPolicy
 
 #Get the list of SyslogPolicy under particular organization.

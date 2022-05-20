@@ -1,7 +1,7 @@
 #Get the SoftwarerepositoryCategorySupportConstraint by Name
 $SoftwarerepositoryCategorySupportConstraintByName = Get-IntersightSoftwarerepositoryCategorySupportConstraint -Name SoftwarerepositoryCategorySupportConstraintName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwarerepositoryCategorySupportConstraint
 $SoftwarerepositoryCategorySupportConstraintList = Get-IntersightSoftwarerepositoryCategorySupportConstraint
 
 #Get the list of SoftwarerepositoryCategorySupportConstraint under particular organization.

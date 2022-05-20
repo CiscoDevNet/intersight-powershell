@@ -1,7 +1,7 @@
 #Get the WorkflowRollbackWorkflow by Name
 $WorkflowRollbackWorkflowByName = Get-IntersightWorkflowRollbackWorkflow -Name WorkflowRollbackWorkflowName
 
-#Get the List of ServerProfiles
+#Get the List of WorkflowRollbackWorkflow
 $WorkflowRollbackWorkflowList = Get-IntersightWorkflowRollbackWorkflow
 
 #Get the list of WorkflowRollbackWorkflow under particular organization.

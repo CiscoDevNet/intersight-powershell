@@ -1,7 +1,7 @@
 
 #Get the HyperflexLocalCredentialPolicy to delete
-$HyperflexLocalCredentialPolicy = Remove-IntersightHyperflexLocalCredentialPolicy -Name HyperflexLocalCredentialPolicyName
+$HyperflexLocalCredentialPolicy = Get-IntersightHyperflexLocalCredentialPolicy -Name HyperflexLocalCredentialPolicyName
 $HyperflexLocalCredentialPolicy | Remove-IntersightHyperflexLocalCredentialPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexLocalCredentialPolicy -Moid 123bc2222287wee
+#Remove the HyperflexLocalCredentialPolicy by Moid.
+Remove-IntersightHyperflexLocalCredentialPolicy -Moid '<Replace with Moid>'

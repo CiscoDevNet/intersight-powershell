@@ -1,7 +1,7 @@
 
 #Get the RecoveryBackupProfile to delete
-$RecoveryBackupProfile = Remove-IntersightRecoveryBackupProfile -Name RecoveryBackupProfileName
+$RecoveryBackupProfile = Get-IntersightRecoveryBackupProfile -Name RecoveryBackupProfileName
 $RecoveryBackupProfile | Remove-IntersightRecoveryBackupProfile
 
-#Remove the server profile by Moid.
-Remove-IntersightRecoveryBackupProfile -Moid 123bc2222287wee
+#Remove the RecoveryBackupProfile by Moid.
+Remove-IntersightRecoveryBackupProfile -Moid '<Replace with Moid>'

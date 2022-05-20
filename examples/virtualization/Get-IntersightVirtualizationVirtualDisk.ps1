@@ -1,7 +1,7 @@
 #Get the VirtualizationVirtualDisk by Name
 $VirtualizationVirtualDiskByName = Get-IntersightVirtualizationVirtualDisk -Name VirtualizationVirtualDiskName
 
-#Get the List of ServerProfiles
+#Get the List of VirtualizationVirtualDisk
 $VirtualizationVirtualDiskList = Get-IntersightVirtualizationVirtualDisk
 
 #Get the list of VirtualizationVirtualDisk under particular organization.

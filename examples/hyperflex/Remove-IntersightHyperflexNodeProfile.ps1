@@ -1,7 +1,7 @@
 
 #Get the HyperflexNodeProfile to delete
-$HyperflexNodeProfile = Remove-IntersightHyperflexNodeProfile -Name HyperflexNodeProfileName
+$HyperflexNodeProfile = Get-IntersightHyperflexNodeProfile -Name HyperflexNodeProfileName
 $HyperflexNodeProfile | Remove-IntersightHyperflexNodeProfile
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexNodeProfile -Moid 123bc2222287wee
+#Remove the HyperflexNodeProfile by Moid.
+Remove-IntersightHyperflexNodeProfile -Moid '<Replace with Moid>'

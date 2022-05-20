@@ -1,7 +1,7 @@
 #Get the TamSecurityAdvisory by Name
 $TamSecurityAdvisoryByName = Get-IntersightTamSecurityAdvisory -Name TamSecurityAdvisoryName
 
-#Get the List of ServerProfiles
+#Get the List of TamSecurityAdvisory
 $TamSecurityAdvisoryList = Get-IntersightTamSecurityAdvisory
 
 #Get the list of TamSecurityAdvisory under particular organization.

@@ -1,7 +1,7 @@
 
 #Get the HyperflexUcsmConfigPolicy to delete
-$HyperflexUcsmConfigPolicy = Remove-IntersightHyperflexUcsmConfigPolicy -Name HyperflexUcsmConfigPolicyName
+$HyperflexUcsmConfigPolicy = Get-IntersightHyperflexUcsmConfigPolicy -Name HyperflexUcsmConfigPolicyName
 $HyperflexUcsmConfigPolicy | Remove-IntersightHyperflexUcsmConfigPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexUcsmConfigPolicy -Moid 123bc2222287wee
+#Remove the HyperflexUcsmConfigPolicy by Moid.
+Remove-IntersightHyperflexUcsmConfigPolicy -Moid '<Replace with Moid>'

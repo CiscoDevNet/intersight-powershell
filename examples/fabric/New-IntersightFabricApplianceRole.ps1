@@ -1,0 +1,1 @@
+$fabric_appliance_role1 = New-IntersightFabricApplianceRole -AggregatePortId 0 -SlotId 4 -AdminSpeed 'Auto' -Fec 'Auto' -Mode 'trunk' -Priority 'BestEffort'

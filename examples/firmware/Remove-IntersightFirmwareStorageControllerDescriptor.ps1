@@ -1,7 +1,7 @@
 
 #Get the FirmwareStorageControllerDescriptor to delete
-$FirmwareStorageControllerDescriptor = Remove-IntersightFirmwareStorageControllerDescriptor -Name FirmwareStorageControllerDescriptorName
+$FirmwareStorageControllerDescriptor = Get-IntersightFirmwareStorageControllerDescriptor -Name FirmwareStorageControllerDescriptorName
 $FirmwareStorageControllerDescriptor | Remove-IntersightFirmwareStorageControllerDescriptor
 
-#Remove the server profile by Moid.
-Remove-IntersightFirmwareStorageControllerDescriptor -Moid 123bc2222287wee
+#Remove the FirmwareStorageControllerDescriptor by Moid.
+Remove-IntersightFirmwareStorageControllerDescriptor -Moid '<Replace with Moid>'

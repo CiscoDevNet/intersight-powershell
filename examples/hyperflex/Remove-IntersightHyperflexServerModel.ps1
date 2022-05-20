@@ -1,7 +1,7 @@
 
 #Get the HyperflexServerModel to delete
-$HyperflexServerModel = Remove-IntersightHyperflexServerModel -Name HyperflexServerModelName
+$HyperflexServerModel = Get-IntersightHyperflexServerModel -Name HyperflexServerModelName
 $HyperflexServerModel | Remove-IntersightHyperflexServerModel
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexServerModel -Moid 123bc2222287wee
+#Remove the HyperflexServerModel by Moid.
+Remove-IntersightHyperflexServerModel -Moid '<Replace with Moid>'

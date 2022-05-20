@@ -1,7 +1,7 @@
 #Get the SoftwarerepositoryCategoryMapperModel by Name
 $SoftwarerepositoryCategoryMapperModelByName = Get-IntersightSoftwarerepositoryCategoryMapperModel -Name SoftwarerepositoryCategoryMapperModelName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwarerepositoryCategoryMapperModel
 $SoftwarerepositoryCategoryMapperModelList = Get-IntersightSoftwarerepositoryCategoryMapperModel
 
 #Get the list of SoftwarerepositoryCategoryMapperModel under particular organization.

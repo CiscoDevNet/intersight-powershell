@@ -1,0 +1,1 @@
+$kubernetes_version1 = New-IntersightKubernetesVersion -KubernetesVersion 'v1.19.5' -Name 'iks-20210324-2-v1.19.5'

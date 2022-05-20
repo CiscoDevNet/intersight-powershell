@@ -1,7 +1,7 @@
 
 #Get the HyperflexFeatureLimitInternal to delete
-$HyperflexFeatureLimitInternal = Remove-IntersightHyperflexFeatureLimitInternal -Name HyperflexFeatureLimitInternalName
+$HyperflexFeatureLimitInternal = Get-IntersightHyperflexFeatureLimitInternal -Name HyperflexFeatureLimitInternalName
 $HyperflexFeatureLimitInternal | Remove-IntersightHyperflexFeatureLimitInternal
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexFeatureLimitInternal -Moid 123bc2222287wee
+#Remove the HyperflexFeatureLimitInternal by Moid.
+Remove-IntersightHyperflexFeatureLimitInternal -Moid '<Replace with Moid>'

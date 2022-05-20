@@ -1,0 +1,1 @@
+$kubernetes_virtual_machine_infrastructure_provider1 = New-IntersightKubernetesVirtualMachineInfrastructureProvider -Description 'kubernetes virtual machine infrastructure provider' -Name 'kubernetes_virtual_machine_infrastructure_provider1'

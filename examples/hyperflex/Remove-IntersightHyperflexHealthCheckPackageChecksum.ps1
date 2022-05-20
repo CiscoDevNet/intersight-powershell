@@ -1,7 +1,7 @@
 
 #Get the HyperflexHealthCheckPackageChecksum to delete
-$HyperflexHealthCheckPackageChecksum = Remove-IntersightHyperflexHealthCheckPackageChecksum -Name HyperflexHealthCheckPackageChecksumName
+$HyperflexHealthCheckPackageChecksum = Get-IntersightHyperflexHealthCheckPackageChecksum -Name HyperflexHealthCheckPackageChecksumName
 $HyperflexHealthCheckPackageChecksum | Remove-IntersightHyperflexHealthCheckPackageChecksum
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexHealthCheckPackageChecksum -Moid 123bc2222287wee
+#Remove the HyperflexHealthCheckPackageChecksum by Moid.
+Remove-IntersightHyperflexHealthCheckPackageChecksum -Moid '<Replace with Moid>'

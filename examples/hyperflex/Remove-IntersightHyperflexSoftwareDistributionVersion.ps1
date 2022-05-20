@@ -1,7 +1,7 @@
 
 #Get the HyperflexSoftwareDistributionVersion to delete
-$HyperflexSoftwareDistributionVersion = Remove-IntersightHyperflexSoftwareDistributionVersion -Name HyperflexSoftwareDistributionVersionName
+$HyperflexSoftwareDistributionVersion = Get-IntersightHyperflexSoftwareDistributionVersion -Name HyperflexSoftwareDistributionVersionName
 $HyperflexSoftwareDistributionVersion | Remove-IntersightHyperflexSoftwareDistributionVersion
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexSoftwareDistributionVersion -Moid 123bc2222287wee
+#Remove the HyperflexSoftwareDistributionVersion by Moid.
+Remove-IntersightHyperflexSoftwareDistributionVersion -Moid '<Replace with Moid>'

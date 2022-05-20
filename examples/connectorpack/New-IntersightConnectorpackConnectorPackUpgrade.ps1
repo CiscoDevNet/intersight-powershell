@@ -1,0 +1,1 @@
+$connectorpack_connector_pack_upgrade1 = New-IntersightConnectorpackConnectorPackUpgrade -ConnectorPackOpType Install

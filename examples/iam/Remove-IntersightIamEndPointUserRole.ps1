@@ -1,7 +1,7 @@
 
 #Get the IamEndPointUserRole to delete
-$IamEndPointUserRole = Remove-IntersightIamEndPointUserRole -Name IamEndPointUserRoleName
+$IamEndPointUserRole = Get-IntersightIamEndPointUserRole -Name IamEndPointUserRoleName
 $IamEndPointUserRole | Remove-IntersightIamEndPointUserRole
 
 #Remove the server profile by Moid.
-Remove-IntersightIamEndPointUserRole -Moid 123bc2222287wee
+Remove-IntersightIamEndPointUserRole -Moid '<Replace with Moid>'

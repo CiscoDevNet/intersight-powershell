@@ -1,7 +1,8 @@
 
 #Get the IqnpoolLease to delete
-$IqnpoolLease = Remove-IntersightIqnpoolLease -Name IqnpoolLeaseName
+$IqnpoolLease = Get-IntersightIqnpoolLease -Name IqnpoolLeaseName
 $IqnpoolLease | Remove-IntersightIqnpoolLease
 
-#Remove the server profile by Moid.
-Remove-IntersightIqnpoolLease -Moid 123bc2222287wee
+#Remove the IqnpoolLease by Moid.
+Remove-IntersightIqnpoolLease -Moid '<Replace with Moid>'
+

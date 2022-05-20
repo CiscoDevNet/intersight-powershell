@@ -1,7 +1,7 @@
 #Get the VmediaPolicy by Name
 $VmediaPolicyByName = Get-IntersightVmediaPolicy -Name VmediaPolicyName
 
-#Get the List of ServerProfiles
+#Get the List of VmediaPolicy
 $VmediaPolicyList = Get-IntersightVmediaPolicy
 
 #Get the list of VmediaPolicy under particular organization.

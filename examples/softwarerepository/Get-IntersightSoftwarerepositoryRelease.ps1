@@ -1,7 +1,7 @@
 #Get the SoftwarerepositoryRelease by Name
 $SoftwarerepositoryReleaseByName = Get-IntersightSoftwarerepositoryRelease -Name SoftwarerepositoryReleaseName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwarerepositoryRelease
 $SoftwarerepositoryReleaseList = Get-IntersightSoftwarerepositoryRelease
 
 #Get the list of SoftwarerepositoryRelease under particular organization.

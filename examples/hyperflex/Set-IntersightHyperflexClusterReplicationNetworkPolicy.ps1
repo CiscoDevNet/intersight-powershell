@@ -1,0 +1,4 @@
+
+#Get the HyperflexClusterReplicationNetworkPolicy to Update
+$HyperflexClusterReplicationNetworkPolicy = Get-IntersightHyperflexClusterReplicationNetworkPolicy -Name HyperflexClusterReplicationNetworkPolicyName
+$HyperflexClusterReplicationNetworkPolicy | Set-IntersightHyperflexClusterReplicationNetworkPolicy -Description 'Updated description'

@@ -1,7 +1,7 @@
 
 #Get the KvmTunnel to delete
-$KvmTunnel = Remove-IntersightKvmTunnel -Name KvmTunnelName
+$KvmTunnel = Get-IntersightKvmTunnel -Name KvmTunnelName
 $KvmTunnel | Remove-IntersightKvmTunnel
 
-#Remove the server profile by Moid.
-Remove-IntersightKvmTunnel -Moid 123bc2222287wee
+#Remove the KvmTunnel by Moid.
+Remove-IntersightKvmTunnel -Moid '<Replace with Moid>'

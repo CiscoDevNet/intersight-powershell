@@ -1,7 +1,7 @@
 
 #Get the KvmSession to delete
-$KvmSession = Remove-IntersightKvmSession -Name KvmSessionName
+$KvmSession = Get-IntersightKvmSession -Name KvmSessionName
 $KvmSession | Remove-IntersightKvmSession
 
-#Remove the server profile by Moid.
-Remove-IntersightKvmSession -Moid 123bc2222287wee
+#Remove the KvmSession by Moid.
+Remove-IntersightKvmSession -Moid '<Replace with Moid>'

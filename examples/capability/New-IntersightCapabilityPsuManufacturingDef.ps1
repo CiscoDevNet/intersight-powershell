@@ -1,0 +1,1 @@
+$capability_psu_manufacturing_def1 = New-IntersightCapabilityPsuManufacturingDef -Caption 'Cisco UCS S3260 1050W (AC)' -Description 'Cisco UCS S3260 1050W (AC) Power Supply Unit' -Name 'vic_1455' -Pid 'UCSC-PSU1-1050W' -ProductName 'Cisco UCS S3260 1050W (AC)' -Sku 'UCSC-PSU1-1050W' -Vid 'V00'

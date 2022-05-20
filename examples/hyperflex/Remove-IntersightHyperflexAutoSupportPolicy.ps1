@@ -1,7 +1,7 @@
 
 #Get the HyperflexAutoSupportPolicy to delete
-$HyperflexAutoSupportPolicy = Remove-IntersightHyperflexAutoSupportPolicy -Name HyperflexAutoSupportPolicyName
+$HyperflexAutoSupportPolicy = Get-IntersightHyperflexAutoSupportPolicy -Name HyperflexAutoSupportPolicyName
 $HyperflexAutoSupportPolicy | Remove-IntersightHyperflexAutoSupportPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexAutoSupportPolicy -Moid 123bc2222287wee
+#Remove the HyperflexAutoSupportPolicy by Moid.
+Remove-IntersightHyperflexAutoSupportPolicy -Moid '<Replace with Moid>'

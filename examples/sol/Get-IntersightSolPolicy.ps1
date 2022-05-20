@@ -1,7 +1,7 @@
 #Get the SolPolicy by Name
 $SolPolicyByName = Get-IntersightSolPolicy -Name SolPolicyName
 
-#Get the List of ServerProfiles
+#Get the List of SolPolicy
 $SolPolicyList = Get-IntersightSolPolicy
 
 #Get the list of SolPolicy under particular organization.

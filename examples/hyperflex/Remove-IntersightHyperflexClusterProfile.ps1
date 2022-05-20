@@ -1,7 +1,7 @@
 
 #Get the HyperflexClusterProfile to delete
-$HyperflexClusterProfile = Remove-IntersightHyperflexClusterProfile -Name HyperflexClusterProfileName
+$HyperflexClusterProfile = Get-IntersightHyperflexClusterProfile -Name HyperflexClusterProfileName
 $HyperflexClusterProfile | Remove-IntersightHyperflexClusterProfile
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexClusterProfile -Moid 123bc2222287wee
+#Remove the HyperflexClusterProfile by Moid.
+Remove-IntersightHyperflexClusterProfile -Moid '<Replace with Moid>'

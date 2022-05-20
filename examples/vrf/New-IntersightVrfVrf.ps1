@@ -1,0 +1,1 @@
+$vrf_vrf1 = New-IntersightVrfVrf -Name 'vrf_vrf1' -Description 'virtual routing and forwarding'

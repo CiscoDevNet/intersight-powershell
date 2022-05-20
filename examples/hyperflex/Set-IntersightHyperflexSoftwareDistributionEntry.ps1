@@ -1,0 +1,4 @@
+
+#Get the HyperflexSoftwareDistributionEntry to Update
+$HyperflexSoftwareDistributionEntry = Get-IntersightHyperflexSoftwareDistributionEntry -Name HyperflexSoftwareDistributionEntryName
+$HyperflexSoftwareDistributionEntry | Set-IntersightHyperflexSoftwareDistributionEntry -Description 'Updated description'

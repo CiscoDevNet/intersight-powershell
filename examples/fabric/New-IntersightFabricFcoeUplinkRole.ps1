@@ -1,0 +1,1 @@
+$fabric_fcoe_uplink_role1 = New-IntersightFabricFcoeUplinkRole -AdminSpeed 'Auto' -Fec 'Auto'

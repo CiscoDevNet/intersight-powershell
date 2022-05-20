@@ -1,0 +1,1 @@
+$capability_switch_capability1 = New-IntersightCapabilitySwitchCapability -Name 'capability_switch_capability1' -Pid 'UCS-FI-6454' -Sku 'CON-NCF4P-FI6454CH' -Vid 'V00' -DynamicVifsSupported 1 -FanModulesSupported 1 -LocatorBeaconSupported 1

@@ -1,0 +1,1 @@
+$firmware_board_controller_descriptor1 = New-IntersightFirmwareBoardControllerDescriptor -Description 'firmware board controller descriptor' -Model 'UCSC-C220-M3S' -Vendor 'Cisco Systems Inc' -Revision '0'

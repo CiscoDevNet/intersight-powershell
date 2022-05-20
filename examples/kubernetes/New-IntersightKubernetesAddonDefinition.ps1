@@ -1,0 +1,3 @@
+$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+
+$kubernetes_addon_definition1 = New-IntersightKubernetesAddonDefinition -Organization $organization1 -ChartUrl '/path/to/chart/url' -DefaultInstallStrategy 'Always' -DefaultNamespace 'iks' -DefaultUpgradeStrategy 'UpgradeOnly' -Description 'A docker registry' -Digest 'e8b9e7e3aeddc98f480af2b47785d4fe41734571a67ffcadc92d0148c5b6305a' -Name 'essential-registry'

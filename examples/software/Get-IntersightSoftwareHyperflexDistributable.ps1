@@ -1,7 +1,7 @@
 #Get the SoftwareHyperflexDistributable by Name
 $SoftwareHyperflexDistributableByName = Get-IntersightSoftwareHyperflexDistributable -Name SoftwareHyperflexDistributableName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwareHyperflexDistributable
 $SoftwareHyperflexDistributableList = Get-IntersightSoftwareHyperflexDistributable
 
 #Get the list of SoftwareHyperflexDistributable under particular organization.

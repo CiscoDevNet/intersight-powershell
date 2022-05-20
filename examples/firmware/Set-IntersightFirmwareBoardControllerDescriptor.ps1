@@ -1,0 +1,4 @@
+
+#Get the FirmwareBoardControllerDescriptor to Update
+$FirmwareBoardControllerDescriptor = Get-IntersightFirmwareBoardControllerDescriptor -Name FirmwareBoardControllerDescriptorName
+$FirmwareBoardControllerDescriptor | Set-IntersightFirmwareBoardControllerDescriptor -Description 'Updated description'

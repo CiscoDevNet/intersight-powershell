@@ -1,7 +1,8 @@
 
 #Get the FcpoolLease to delete
-$FcpoolLease = Remove-IntersightFcpoolLease -Name FcpoolLeaseName
+$FcpoolLease = Get-IntersightFcpoolLease -Name FcpoolLeaseName
 $FcpoolLease | Remove-IntersightFcpoolLease
 
-#Remove the server profile by Moid.
-Remove-IntersightFcpoolLease -Moid 123bc2222287wee
+#Remove the FcpoolLease by Moid.
+Remove-IntersightFcpoolLease -Moid '<Replace with Moid>'
+

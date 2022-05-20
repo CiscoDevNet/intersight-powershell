@@ -1,0 +1,4 @@
+
+#Get the HyperflexSoftwareDistributionVersion to Update
+$HyperflexSoftwareDistributionVersion = Get-IntersightHyperflexSoftwareDistributionVersion -Name HyperflexSoftwareDistributionVersionName
+$HyperflexSoftwareDistributionVersion | Set-IntersightHyperflexSoftwareDistributionVersion -Description 'Updated description'

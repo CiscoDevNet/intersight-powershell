@@ -1,7 +1,7 @@
 
 #Get the CapabilityEquipmentSlotArray to delete
-$CapabilityEquipmentSlotArray = Remove-IntersightCapabilityEquipmentSlotArray -Name CapabilityEquipmentSlotArrayName
+$CapabilityEquipmentSlotArray = Get-IntersightCapabilityEquipmentSlotArray -Name CapabilityEquipmentSlotArrayName
 $CapabilityEquipmentSlotArray | Remove-IntersightCapabilityEquipmentSlotArray
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilityEquipmentSlotArray -Moid 123bc2222287wee
+#Remove the CapabilityEquipmentSlotArray by Moid.
+Remove-IntersightCapabilityEquipmentSlotArray -Moid '<Replace with Moid>'

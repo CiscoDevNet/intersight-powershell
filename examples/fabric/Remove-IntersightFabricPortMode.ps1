@@ -1,7 +1,7 @@
 
 #Get the FabricPortMode to delete
-$FabricPortMode = Remove-IntersightFabricPortMode -Name FabricPortModeName
+$FabricPortMode = Get-IntersightFabricPortMode -Name FabricPortModeName
 $FabricPortMode | Remove-IntersightFabricPortMode
 
-#Remove the server profile by Moid.
-Remove-IntersightFabricPortMode -Moid 123bc2222287wee
+#Remove the FabricPortMode by Moid.
+Remove-IntersightFabricPortMode -Moid '<Replace with Moid>'

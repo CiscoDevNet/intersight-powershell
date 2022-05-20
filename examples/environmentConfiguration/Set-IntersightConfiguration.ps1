@@ -3,7 +3,7 @@
 
 import-module -Name .\Intersight.PowerShell
 
-#check the imported module uisng 
+#check the imported module using 
 Get-Module 
 
 $onprem = @{

@@ -1,0 +1,4 @@
+
+#Get the HyperflexServerFirmwareVersionEntry to Update
+$HyperflexServerFirmwareVersionEntry = Get-IntersightHyperflexServerFirmwareVersionEntry -Name HyperflexServerFirmwareVersionEntryName
+$HyperflexServerFirmwareVersionEntry | Set-IntersightHyperflexServerFirmwareVersionEntry -Description 'Updated description'

@@ -1,0 +1,1 @@
+$capability_fan_module_manufacturing_def1 = New-IntersightCapabilityFanModuleManufacturingDef -Caption 'Cisco UCS S3260 Fan' -Description 'Cisco UCS S3260 Fan module containing 2x80mm fans FRU' -Name 'fan1' -Pid 'UCSC-C3X60-FANM' -ProductName 'Cisco UCS S3260 Fan module' -Sku 'UCSC-C3X60-FANM' -Vid 'V01'

@@ -1,7 +1,7 @@
 #Get the UuidpoolPool by Name
 $UuidpoolPoolByName = Get-IntersightUuidpoolPool -Name UuidpoolPoolName
 
-#Get the List of ServerProfiles
+#Get the List of UuidpoolPool
 $UuidpoolPoolList = Get-IntersightUuidpoolPool
 
 #Get the list of UuidpoolPool under particular organization.

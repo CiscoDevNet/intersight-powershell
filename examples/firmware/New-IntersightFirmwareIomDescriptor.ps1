@@ -1,0 +1,1 @@
+$firmware_iom_descriptor1 = New-IntersightFirmwareIomDescriptor -Description 'firmware iom descriptor' -Model 'UCS-IOM-2208XP' -Vendor 'Cisco' -Revision '0'

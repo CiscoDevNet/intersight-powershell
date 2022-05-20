@@ -1,7 +1,7 @@
 
 #Get the HyperflexHxdpVersion to delete
-$HyperflexHxdpVersion = Remove-IntersightHyperflexHxdpVersion -Name HyperflexHxdpVersionName
+$HyperflexHxdpVersion = Get-IntersightHyperflexHxdpVersion -Name HyperflexHxdpVersionName
 $HyperflexHxdpVersion | Remove-IntersightHyperflexHxdpVersion
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexHxdpVersion -Moid 123bc2222287wee
+#Remove the HyperflexHxdpVersion by Moid.
+Remove-IntersightHyperflexHxdpVersion -Moid '<Replace with Moid>'

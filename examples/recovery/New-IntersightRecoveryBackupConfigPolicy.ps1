@@ -1,0 +1,3 @@
+$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+
+$recovery_backup_config_policy1 = New-IntersightRecoveryBackupConfigPolicy -Organization $organization1 -Name 'recovery_backup_config_policy1' -Description 'recovery_backup_config_policy' -FileNamePrefix 'file_name' -LocationType LocalStorage  -Password 'ChangeMe' -Path 'path/to/backup' -Protocol 'SCP' -RetentionCount 120 -UserName 'backup_server_name'

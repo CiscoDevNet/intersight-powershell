@@ -1,0 +1,4 @@
+
+#Get the HclHyperflexSoftwareCompatibilityInfo to Update
+$HclHyperflexSoftwareCompatibilityInfo = Get-IntersightHclHyperflexSoftwareCompatibilityInfo -Name HclHyperflexSoftwareCompatibilityInfoName
+$HclHyperflexSoftwareCompatibilityInfo | Set-IntersightHclHyperflexSoftwareCompatibilityInfo -HxdpVersion '4.5(1a)-39020'

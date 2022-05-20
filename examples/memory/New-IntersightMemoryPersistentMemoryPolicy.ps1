@@ -1,0 +1,9 @@
+$goals1 = Initialize-IntersightMemoryPersistentmemorygoal -PersistentMemoryType 'app-direct-non-interleaved' -SocketId 'All Sockets' -ClassId 'memory.PersistentMemoryGoal' -MemoryModePercentage {'object_type': 'memory.PersistentMemoryGoal', 'persistent_memory_type': 'app-direct-non-interleaved', 'socket_id': 'All Sockets', 'class_id': 'memory.PersistentMemoryGoal', 'memory_mode_percentage': 50}
+
+$local_security1 = Initialize-IntersightMemoryPersistentmemorylocalsecurity -Enabled 1 -SecurePassphrase 'ChangeMe'
+
+$logical_namespaces1 = Initialize-IntersightMemoryPersistentmemorylocalsecurity -ClassId 'memory.PersistentMemoryLocalSecurity' -Name 'logical_namespace_test' -Capacity {'class_id': 'memory.PersistentMemoryLocalSecurity', 'name': 'logical_namespace_test', 'capacity': 131072, 'object_type': 'memory.PersistentMemoryLocalSecurity', 'mode': 'block', 'socket_id': 1, 'socket_memory_id': 6} -Mode 'block' -SocketId {'class_id': 'memory.PersistentMemoryLocalSecurity', 'name': 'logical_namespace_test', 'capacity': 131072, 'object_type': 'memory.PersistentMemoryLocalSecurity', 'mode': 'block', 'socket_id': 1, 'socket_memory_id': 6} -SocketMemoryId {'class_id': 'memory.PersistentMemoryLocalSecurity', 'name': 'logical_namespace_test', 'capacity': 131072, 'object_type': 'memory.PersistentMemoryLocalSecurity', 'mode': 'block', 'socket_id': 1, 'socket_memory_id': 6}
+
+$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+
+$memory_persistent_memory_policy1 = New-IntersightMemoryPersistentMemoryPolicy -Goals $goals1 -LocalSecurity $local_security1 -LogicalNamespaces $logical_namespaces1 -Organization $organization1 -Name 'memory_persistent_memory_policy1' -Description 'memory persistent memory policies' -ManagementMode 'configured-from-intersight' -RetainNamespaces 0

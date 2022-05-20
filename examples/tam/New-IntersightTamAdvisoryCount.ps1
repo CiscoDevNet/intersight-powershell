@@ -1,0 +1,1 @@
+$tam_advisory_count = New-IntersightTamAdvisoryCount -AdvisoryCount 2

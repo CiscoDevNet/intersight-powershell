@@ -1,7 +1,7 @@
 
 #Get the IamPermission to delete
-$IamPermission = Remove-IntersightIamPermission -Name IamPermissionName
+$IamPermission = Get-IntersightIamPermission -Name IamPermissionName
 $IamPermission | Remove-IntersightIamPermission
 
 #Remove the server profile by Moid.
-Remove-IntersightIamPermission -Moid 123bc2222287wee
+Remove-IntersightIamPermission -Moid '<Replace with Moid>'

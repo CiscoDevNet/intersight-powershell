@@ -1,7 +1,7 @@
 
 #Get the FirmwareBoardControllerDescriptor to delete
-$FirmwareBoardControllerDescriptor = Remove-IntersightFirmwareBoardControllerDescriptor -Name FirmwareBoardControllerDescriptorName
+$FirmwareBoardControllerDescriptor = Get-IntersightFirmwareBoardControllerDescriptor -Name FirmwareBoardControllerDescriptorName
 $FirmwareBoardControllerDescriptor | Remove-IntersightFirmwareBoardControllerDescriptor
 
-#Remove the server profile by Moid.
-Remove-IntersightFirmwareBoardControllerDescriptor -Moid 123bc2222287wee
+#Remove the FirmwareBoardControllerDescriptor by Moid.
+Remove-IntersightFirmwareBoardControllerDescriptor -Moid '<Replace with Moid>'

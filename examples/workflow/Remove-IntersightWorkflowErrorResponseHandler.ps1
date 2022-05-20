@@ -1,7 +1,7 @@
-
 #Get the WorkflowErrorResponseHandler to delete
-$WorkflowErrorResponseHandler = Remove-IntersightWorkflowErrorResponseHandler -Name WorkflowErrorResponseHandlerName
+$WorkflowErrorResponseHandler = Get-IntersightWorkflowErrorResponseHandler -Name WorkflowErrorResponseHandlerName
 $WorkflowErrorResponseHandler | Remove-IntersightWorkflowErrorResponseHandler
 
-#Remove the server profile by Moid.
-Remove-IntersightWorkflowErrorResponseHandler -Moid 123bc2222287wee
+#Remove the WorkflowErrorResponseHandler by Moid.
+Remove-IntersightWorkflowErrorResponseHandler -Moid '<Replace with Moid>'
+

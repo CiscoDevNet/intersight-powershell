@@ -1,0 +1,4 @@
+
+#Get the KubernetesContainerRuntimePolicy to Update
+$KubernetesContainerRuntimePolicy = Get-IntersightKubernetesContainerRuntimePolicy -Name KubernetesContainerRuntimePolicyName
+$KubernetesContainerRuntimePolicy | Set-IntersightKubernetesContainerRuntimePolicy -Description 'Updated description'

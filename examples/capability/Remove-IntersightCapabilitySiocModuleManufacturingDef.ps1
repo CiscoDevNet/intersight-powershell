@@ -1,7 +1,7 @@
 
 #Get the CapabilitySiocModuleManufacturingDef to delete
-$CapabilitySiocModuleManufacturingDef = Remove-IntersightCapabilitySiocModuleManufacturingDef -Name CapabilitySiocModuleManufacturingDefName
+$CapabilitySiocModuleManufacturingDef = Get-IntersightCapabilitySiocModuleManufacturingDef -Name CapabilitySiocModuleManufacturingDefName
 $CapabilitySiocModuleManufacturingDef | Remove-IntersightCapabilitySiocModuleManufacturingDef
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilitySiocModuleManufacturingDef -Moid 123bc2222287wee
+#Remove the CapabilitySiocModuleManufacturingDef by Moid.
+Remove-IntersightCapabilitySiocModuleManufacturingDef -Moid '<Replace with Moid>'

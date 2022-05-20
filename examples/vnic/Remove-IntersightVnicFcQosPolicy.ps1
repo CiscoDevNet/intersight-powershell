@@ -1,7 +1,8 @@
 
 #Get the VnicFcQosPolicy to delete
-$VnicFcQosPolicy = Remove-IntersightVnicFcQosPolicy -Name VnicFcQosPolicyName
+$VnicFcQosPolicy = Get-IntersightVnicFcQosPolicy -Name VnicFcQosPolicyName
 $VnicFcQosPolicy | Remove-IntersightVnicFcQosPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightVnicFcQosPolicy -Moid 123bc2222287wee
+#Remove the VnicFcQosPolicy by Moid.
+Remove-IntersightVnicFcQosPolicy -Moid '<Replace with Moid>'
+

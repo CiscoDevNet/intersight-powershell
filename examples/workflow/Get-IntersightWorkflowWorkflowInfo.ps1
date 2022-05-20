@@ -1,7 +1,7 @@
 #Get the WorkflowWorkflowInfo by Name
 $WorkflowWorkflowInfoByName = Get-IntersightWorkflowWorkflowInfo -Name WorkflowWorkflowInfoName
 
-#Get the List of ServerProfiles
+#Get the List of WorkflowWorkflowInfo
 $WorkflowWorkflowInfoList = Get-IntersightWorkflowWorkflowInfo
 
 #Get the list of WorkflowWorkflowInfo under particular organization.

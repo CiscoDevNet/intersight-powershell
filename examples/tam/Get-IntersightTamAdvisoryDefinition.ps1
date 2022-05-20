@@ -1,7 +1,7 @@
 #Get the TamAdvisoryDefinition by Name
 $TamAdvisoryDefinitionByName = Get-IntersightTamAdvisoryDefinition -Name TamAdvisoryDefinitionName
 
-#Get the List of ServerProfiles
+#Get the List of TamAdvisoryDefinition
 $TamAdvisoryDefinitionList = Get-IntersightTamAdvisoryDefinition
 
 #Get the list of TamAdvisoryDefinition under particular organization.

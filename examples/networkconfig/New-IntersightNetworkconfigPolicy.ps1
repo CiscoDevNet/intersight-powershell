@@ -1,0 +1,3 @@
+$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+
+$network_config1 = New-IntersightNetworkconfigPolicy -Organization $organization1 -Name 'network_config1' -Description 'demo network configuration policy' -EnableDynamicDns 0 -PreferredIpv6DnsServer '::' -EnableIpv6 1 -EnableIpv6DnsFromDhcp 0 -PreferredIpv4DnsServer '10.10.10.1' -AlternateIpv4DnsServer '10.10.10.1' -AlternateIpv6DnsServer '::' -DynamicDnsDomain '' -EnableIpv4DnsFromDhcp 0

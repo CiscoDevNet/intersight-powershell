@@ -1,0 +1,4 @@
+
+#Get the KubernetesAciCniTenantClusterAllocation to Update
+$KubernetesAciCniTenantClusterAllocation = Get-IntersightKubernetesAciCniTenantClusterAllocation -Name KubernetesAciCniTenantClusterAllocationName
+$KubernetesAciCniTenantClusterAllocation | Set-IntersightKubernetesAciCniTenantClusterAllocation -Description 'Updated description'

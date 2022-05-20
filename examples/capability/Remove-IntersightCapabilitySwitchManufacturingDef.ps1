@@ -1,7 +1,7 @@
 
 #Get the CapabilitySwitchManufacturingDef to delete
-$CapabilitySwitchManufacturingDef = Remove-IntersightCapabilitySwitchManufacturingDef -Name CapabilitySwitchManufacturingDefName
+$CapabilitySwitchManufacturingDef = Get-IntersightCapabilitySwitchManufacturingDef -Name CapabilitySwitchManufacturingDefName
 $CapabilitySwitchManufacturingDef | Remove-IntersightCapabilitySwitchManufacturingDef
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilitySwitchManufacturingDef -Moid 123bc2222287wee
+#Remove the CapabilitySwitchManufacturingDef by Moid.
+Remove-IntersightCapabilitySwitchManufacturingDef -Moid '<Replace with Moid>'

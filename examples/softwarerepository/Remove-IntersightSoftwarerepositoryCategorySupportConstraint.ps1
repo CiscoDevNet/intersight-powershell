@@ -1,7 +1,6 @@
-
 #Get the SoftwarerepositoryCategorySupportConstraint to delete
-$SoftwarerepositoryCategorySupportConstraint = Remove-IntersightSoftwarerepositoryCategorySupportConstraint -Name SoftwarerepositoryCategorySupportConstraintName
+$SoftwarerepositoryCategorySupportConstraint = Get-IntersightSoftwarerepositoryCategorySupportConstraint -Name SoftwarerepositoryCategorySupportConstraintName
 $SoftwarerepositoryCategorySupportConstraint | Remove-IntersightSoftwarerepositoryCategorySupportConstraint
 
-#Remove the server profile by Moid.
-Remove-IntersightSoftwarerepositoryCategorySupportConstraint -Moid 123bc2222287wee
+#Remove the SoftwarerepositoryCategorySupportConstraint by Moid.
+Remove-IntersightSoftwarerepositoryCategorySupportConstraint -Moid '<Replace with Moid>'

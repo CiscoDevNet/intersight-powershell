@@ -1,7 +1,7 @@
 
 #Get the VnicFcIf to delete
-$VnicFcIf = Remove-IntersightVnicFcIf -Name VnicFcIfName
+$VnicFcIf = Get-IntersightVnicFcIf -Name VnicFcIfName
 $VnicFcIf | Remove-IntersightVnicFcIf
 
-#Remove the server profile by Moid.
-Remove-IntersightVnicFcIf -Moid 123bc2222287wee
+#Remove the VnicFcIf by Moid.
+Remove-IntersightVnicFcIf -Moid '<Replace with Moid>'

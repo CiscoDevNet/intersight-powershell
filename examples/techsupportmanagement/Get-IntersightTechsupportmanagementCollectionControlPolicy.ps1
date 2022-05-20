@@ -1,7 +1,7 @@
 #Get the TechsupportmanagementCollectionControlPolicy by Name
 $TechsupportmanagementCollectionControlPolicyByName = Get-IntersightTechsupportmanagementCollectionControlPolicy -Name TechsupportmanagementCollectionControlPolicyName
 
-#Get the List of ServerProfiles
+#Get the List of TechsupportmanagementCollectionControlPolicy
 $TechsupportmanagementCollectionControlPolicyList = Get-IntersightTechsupportmanagementCollectionControlPolicy
 
 #Get the list of TechsupportmanagementCollectionControlPolicy under particular organization.

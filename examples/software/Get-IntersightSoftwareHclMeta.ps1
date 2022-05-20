@@ -1,7 +1,7 @@
 #Get the SoftwareHclMeta by Name
 $SoftwareHclMetaByName = Get-IntersightSoftwareHclMeta -Name SoftwareHclMetaName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwareHclMeta
 $SoftwareHclMetaList = Get-IntersightSoftwareHclMeta
 
 #Get the list of SoftwareHclMeta under particular organization.

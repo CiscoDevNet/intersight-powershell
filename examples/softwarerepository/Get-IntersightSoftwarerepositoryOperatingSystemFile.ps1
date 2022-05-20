@@ -1,7 +1,7 @@
 #Get the SoftwarerepositoryOperatingSystemFile by Name
 $SoftwarerepositoryOperatingSystemFileByName = Get-IntersightSoftwarerepositoryOperatingSystemFile -Name SoftwarerepositoryOperatingSystemFileName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwarerepositoryOperatingSystemFile
 $SoftwarerepositoryOperatingSystemFileList = Get-IntersightSoftwarerepositoryOperatingSystemFile
 
 #Get the list of SoftwarerepositoryOperatingSystemFile under particular organization.

@@ -1,7 +1,7 @@
 
 #Get the FabricFcoeUplinkPcRole to delete
-$FabricFcoeUplinkPcRole = Remove-IntersightFabricFcoeUplinkPcRole -Name FabricFcoeUplinkPcRoleName
+$FabricFcoeUplinkPcRole = Get-IntersightFabricFcoeUplinkPcRole -Name FabricFcoeUplinkPcRoleName
 $FabricFcoeUplinkPcRole | Remove-IntersightFabricFcoeUplinkPcRole
 
-#Remove the server profile by Moid.
-Remove-IntersightFabricFcoeUplinkPcRole -Moid 123bc2222287wee
+#Remove the FabricFcoeUplinkPcRole by Moid.
+Remove-IntersightFabricFcoeUplinkPcRole -Moid '<Replace with Moid>'

@@ -1,0 +1,1 @@
+$capability_chassis_manufacturing_def1 = New-IntersightCapabilityChassisManufacturingDef -Caption 'Cisco UCS 5108 DC2 Blade Server Chassis' -ChassisCodeName 'Blade Server Chassis' -Description 'Cisco DC Blade Server Chassis 6U with Eight Blade Server Slots' -Name 'chm2' -Pid 'UCSB-5108-DC2' -ProductName 'Cisco UCS 5108 DC2 Chassis' -Sku 'UCSB-5108-DC2' -Vid 'V01'

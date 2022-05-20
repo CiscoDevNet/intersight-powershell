@@ -1,7 +1,7 @@
 #Get the SshPolicy by Name
 $SshPolicyByName = Get-IntersightSshPolicy -Name SshPolicyName
 
-#Get the List of ServerProfiles
+#Get the List of SshPolicy
 $SshPolicyList = Get-IntersightSshPolicy
 
 #Get the list of SshPolicy under particular organization.
