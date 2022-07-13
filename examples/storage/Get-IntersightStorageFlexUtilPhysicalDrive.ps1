@@ -5,7 +5,7 @@ $StorageFlexUtilPhysicalDriveByName = Get-IntersightStorageFlexUtilPhysicalDrive
 $StorageFlexUtilPhysicalDriveList = Get-IntersightStorageFlexUtilPhysicalDrive
 
 #Get the list of StorageFlexUtilPhysicalDrive under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageFlexUtilPhysicalDriveByOrg = Get-IntersightStorageFlexUtilPhysicalDrive -Organization $org
 

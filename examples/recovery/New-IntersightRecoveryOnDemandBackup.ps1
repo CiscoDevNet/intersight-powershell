@@ -1,4 +1,4 @@
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $config_result1 = Get-IntersightRecoveryBackupprofile -Moid '<Replace with Moid>'
 

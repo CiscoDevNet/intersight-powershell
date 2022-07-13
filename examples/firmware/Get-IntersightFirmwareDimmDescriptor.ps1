@@ -5,7 +5,7 @@ $FirmwareDimmDescriptorByName = Get-IntersightFirmwareDimmDescriptor -Name Firmw
 $FirmwareDimmDescriptorList = Get-IntersightFirmwareDimmDescriptor
 
 #Get the list of FirmwareDimmDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareDimmDescriptorByOrg = Get-IntersightFirmwareDimmDescriptor -Organization $org
 

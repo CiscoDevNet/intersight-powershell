@@ -5,7 +5,7 @@ $CapabilitySwitchDescriptorByName = Get-IntersightCapabilitySwitchDescriptor -Na
 $CapabilitySwitchDescriptorList = Get-IntersightCapabilitySwitchDescriptor
 
 #Get the list of CapabilitySwitchDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilitySwitchDescriptorByOrg = Get-IntersightCapabilitySwitchDescriptor -Organization $org
 

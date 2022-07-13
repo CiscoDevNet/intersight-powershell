@@ -5,7 +5,7 @@ $HyperflexClusterBackupPolicyByName = Get-IntersightHyperflexClusterBackupPolicy
 $HyperflexClusterBackupPolicyList = Get-IntersightHyperflexClusterBackupPolicy
 
 #Get the list of HyperflexClusterBackupPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexClusterBackupPolicyByOrg = Get-IntersightHyperflexClusterBackupPolicy -Organization $org
 

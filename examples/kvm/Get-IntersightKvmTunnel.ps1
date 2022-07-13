@@ -5,7 +5,7 @@ $KvmTunnelByName = Get-IntersightKvmTunnel -Name KvmTunnelName
 $KvmTunnelList = Get-IntersightKvmTunnel
 
 #Get the list of KvmTunnel under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KvmTunnelByOrg = Get-IntersightKvmTunnel -Organization $org
 

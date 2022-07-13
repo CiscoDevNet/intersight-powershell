@@ -5,7 +5,7 @@ $IaasConnectorPackByName = Get-IntersightIaasConnectorPack -Name IaasConnectorPa
 $IaasConnectorPackList = Get-IntersightIaasConnectorPack
 
 #Get the list of IaasConnectorPack under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasConnectorPackByOrg = Get-IntersightIaasConnectorPack -Organization $org
 

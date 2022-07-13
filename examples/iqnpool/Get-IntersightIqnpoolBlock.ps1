@@ -5,7 +5,7 @@ $IqnpoolBlockByName = Get-IntersightIqnpoolBlock -Name IqnpoolBlockName
 $IqnpoolBlockList = Get-IntersightIqnpoolBlock
 
 #Get the list of IqnpoolBlock under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IqnpoolBlockByOrg = Get-IntersightIqnpoolBlock -Organization $org
 

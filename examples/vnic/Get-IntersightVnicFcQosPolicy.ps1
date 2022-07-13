@@ -5,7 +5,7 @@ $VnicFcQosPolicyByName = Get-IntersightVnicFcQosPolicy -Name VnicFcQosPolicyName
 $VnicFcQosPolicyList = Get-IntersightVnicFcQosPolicy
 
 #Get the list of VnicFcQosPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicFcQosPolicyByOrg = Get-IntersightVnicFcQosPolicy -Organization $org
 

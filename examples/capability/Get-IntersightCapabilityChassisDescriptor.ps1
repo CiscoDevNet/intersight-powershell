@@ -5,7 +5,7 @@ $CapabilityChassisDescriptorByName = Get-IntersightCapabilityChassisDescriptor -
 $CapabilityChassisDescriptorList = Get-IntersightCapabilityChassisDescriptor
 
 #Get the list of CapabilityChassisDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityChassisDescriptorByOrg = Get-IntersightCapabilityChassisDescriptor -Organization $org
 

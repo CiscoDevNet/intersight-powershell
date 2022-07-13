@@ -5,7 +5,7 @@ $ExternalsiteAuthorizationByName = Get-IntersightExternalsiteAuthorization -Name
 $ExternalsiteAuthorizationList = Get-IntersightExternalsiteAuthorization
 
 #Get the list of ExternalsiteAuthorization under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ExternalsiteAuthorizationByOrg = Get-IntersightExternalsiteAuthorization -Organization $org
 

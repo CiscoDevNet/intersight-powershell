@@ -5,7 +5,7 @@ $IamIdpReferenceByName = Get-IntersightIamIdpReference -Name IamIdpReferenceName
 $IamIdpReferenceList = Get-IntersightIamIdpReference
 
 #Get the list of IamIdpReference under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamIdpReferenceByOrg = Get-IntersightIamIdpReference -Organization $org
 

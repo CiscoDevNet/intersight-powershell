@@ -5,7 +5,7 @@ $FirmwareEulaByName = Get-IntersightFirmwareEula -Name FirmwareEulaName
 $FirmwareEulaList = Get-IntersightFirmwareEula
 
 #Get the list of FirmwareEula under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareEulaByOrg = Get-IntersightFirmwareEula -Organization $org
 

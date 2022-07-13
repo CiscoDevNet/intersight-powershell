@@ -5,7 +5,7 @@ $MacpoolUniverseByName = Get-IntersightMacpoolUniverse -Name MacpoolUniverseName
 $MacpoolUniverseList = Get-IntersightMacpoolUniverse
 
 #Get the list of MacpoolUniverse under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MacpoolUniverseByOrg = Get-IntersightMacpoolUniverse -Organization $org
 

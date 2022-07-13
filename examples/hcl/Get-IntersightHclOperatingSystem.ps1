@@ -5,7 +5,7 @@ $HclOperatingSystemByName = Get-IntersightHclOperatingSystem -Name HclOperatingS
 $HclOperatingSystemList = Get-IntersightHclOperatingSystem
 
 #Get the list of HclOperatingSystem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HclOperatingSystemByOrg = Get-IntersightHclOperatingSystem -Organization $org
 

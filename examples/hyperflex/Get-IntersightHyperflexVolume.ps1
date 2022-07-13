@@ -5,7 +5,7 @@ $HyperflexVolumeByName = Get-IntersightHyperflexVolume -Name HyperflexVolumeName
 $HyperflexVolumeList = Get-IntersightHyperflexVolume
 
 #Get the list of HyperflexVolume under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexVolumeByOrg = Get-IntersightHyperflexVolume -Organization $org
 

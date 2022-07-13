@@ -5,7 +5,7 @@ $CapabilityServerSchemaDescriptorByName = Get-IntersightCapabilityServerSchemaDe
 $CapabilityServerSchemaDescriptorList = Get-IntersightCapabilityServerSchemaDescriptor
 
 #Get the list of CapabilityServerSchemaDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityServerSchemaDescriptorByOrg = Get-IntersightCapabilityServerSchemaDescriptor -Organization $org
 

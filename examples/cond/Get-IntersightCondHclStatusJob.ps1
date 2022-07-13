@@ -5,7 +5,7 @@ $CondHclStatusJobByName = Get-IntersightCondHclStatusJob -Name CondHclStatusJobN
 $CondHclStatusJobList = Get-IntersightCondHclStatusJob
 
 #Get the list of CondHclStatusJob under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CondHclStatusJobByOrg = Get-IntersightCondHclStatusJob -Organization $org
 

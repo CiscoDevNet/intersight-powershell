@@ -5,7 +5,7 @@ $StorageNetAppVolumeByName = Get-IntersightStorageNetAppVolume -Name StorageNetA
 $StorageNetAppVolumeList = Get-IntersightStorageNetAppVolume
 
 #Get the list of StorageNetAppVolume under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppVolumeByOrg = Get-IntersightStorageNetAppVolume -Organization $org
 

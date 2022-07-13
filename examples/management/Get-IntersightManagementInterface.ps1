@@ -5,7 +5,7 @@ $ManagementInterfaceByName = Get-IntersightManagementInterface -Name ManagementI
 $ManagementInterfaceList = Get-IntersightManagementInterface
 
 #Get the list of ManagementInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ManagementInterfaceByOrg = Get-IntersightManagementInterface -Organization $org
 

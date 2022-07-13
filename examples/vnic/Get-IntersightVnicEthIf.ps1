@@ -5,7 +5,7 @@ $VnicEthIfByName = Get-IntersightVnicEthIf -Name VnicEthIfName
 $VnicEthIfList = Get-IntersightVnicEthIf
 
 #Get the list of VnicEthIf under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicEthIfByOrg = Get-IntersightVnicEthIf -Organization $org
 

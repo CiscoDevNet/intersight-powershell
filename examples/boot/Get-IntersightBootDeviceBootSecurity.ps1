@@ -5,7 +5,7 @@ $BootDeviceBootSecurityByName = Get-IntersightBootDeviceBootSecurity -Name BootD
 $BootDeviceBootSecurityList = Get-IntersightBootDeviceBootSecurity
 
 #Get the list of BootDeviceBootSecurity under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootDeviceBootSecurityByOrg = Get-IntersightBootDeviceBootSecurity -Organization $org
 

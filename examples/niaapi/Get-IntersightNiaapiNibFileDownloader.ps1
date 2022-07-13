@@ -5,7 +5,7 @@ $NiaapiNibFileDownloaderByName = Get-IntersightNiaapiNibFileDownloader -Name Nia
 $NiaapiNibFileDownloaderList = Get-IntersightNiaapiNibFileDownloader
 
 #Get the list of NiaapiNibFileDownloader under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiNibFileDownloaderByOrg = Get-IntersightNiaapiNibFileDownloader -Organization $org
 

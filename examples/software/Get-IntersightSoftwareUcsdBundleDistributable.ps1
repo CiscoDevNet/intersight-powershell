@@ -5,7 +5,7 @@ $SoftwareUcsdBundleDistributableByName = Get-IntersightSoftwareUcsdBundleDistrib
 $SoftwareUcsdBundleDistributableList = Get-IntersightSoftwareUcsdBundleDistributable
 
 #Get the list of SoftwareUcsdBundleDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareUcsdBundleDistributableByOrg = Get-IntersightSoftwareUcsdBundleDistributable -Organization $org
 

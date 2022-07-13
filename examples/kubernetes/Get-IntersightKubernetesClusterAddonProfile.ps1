@@ -5,7 +5,7 @@ $KubernetesClusterAddonProfileByName = Get-IntersightKubernetesClusterAddonProfi
 $KubernetesClusterAddonProfileList = Get-IntersightKubernetesClusterAddonProfile
 
 #Get the list of KubernetesClusterAddonProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesClusterAddonProfileByOrg = Get-IntersightKubernetesClusterAddonProfile -Organization $org
 

@@ -5,7 +5,7 @@ $EtherPhysicalPortByName = Get-IntersightEtherPhysicalPort -Name EtherPhysicalPo
 $EtherPhysicalPortList = Get-IntersightEtherPhysicalPort
 
 #Get the list of EtherPhysicalPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EtherPhysicalPortByOrg = Get-IntersightEtherPhysicalPort -Organization $org
 

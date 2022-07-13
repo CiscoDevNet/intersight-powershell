@@ -5,7 +5,7 @@ $KubernetesSysConfigPolicyByName = Get-IntersightKubernetesSysConfigPolicy -Name
 $KubernetesSysConfigPolicyList = Get-IntersightKubernetesSysConfigPolicy
 
 #Get the list of KubernetesSysConfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesSysConfigPolicyByOrg = Get-IntersightKubernetesSysConfigPolicy -Organization $org
 

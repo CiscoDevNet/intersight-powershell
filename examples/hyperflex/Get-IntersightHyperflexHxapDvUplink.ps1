@@ -5,7 +5,7 @@ $HyperflexHxapDvUplinkByName = Get-IntersightHyperflexHxapDvUplink -Name Hyperfl
 $HyperflexHxapDvUplinkList = Get-IntersightHyperflexHxapDvUplink
 
 #Get the list of HyperflexHxapDvUplink under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapDvUplinkByOrg = Get-IntersightHyperflexHxapDvUplink -Organization $org
 

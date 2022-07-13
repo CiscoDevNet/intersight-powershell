@@ -5,7 +5,7 @@ $NiaapiApicFieldNoticeByName = Get-IntersightNiaapiApicFieldNotice -Name NiaapiA
 $NiaapiApicFieldNoticeList = Get-IntersightNiaapiApicFieldNotice
 
 #Get the list of NiaapiApicFieldNotice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiApicFieldNoticeByOrg = Get-IntersightNiaapiApicFieldNotice -Organization $org
 

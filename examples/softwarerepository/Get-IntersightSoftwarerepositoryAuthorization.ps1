@@ -5,7 +5,7 @@ $SoftwarerepositoryAuthorizationByName = Get-IntersightSoftwarerepositoryAuthori
 $SoftwarerepositoryAuthorizationList = Get-IntersightSoftwarerepositoryAuthorization
 
 #Get the list of SoftwarerepositoryAuthorization under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryAuthorizationByOrg = Get-IntersightSoftwarerepositoryAuthorization -Organization $org
 

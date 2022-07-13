@@ -5,7 +5,7 @@ $StorageHitachiPoolByName = Get-IntersightStorageHitachiPool -Name StorageHitach
 $StorageHitachiPoolList = Get-IntersightStorageHitachiPool
 
 #Get the list of StorageHitachiPool under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiPoolByOrg = Get-IntersightStorageHitachiPool -Organization $org
 

@@ -1,5 +1,5 @@
 # Get the organization.
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 # Get the TamAdvisoryInfo to Update
 $TamAdvisoryInfo = Get-IntersightTamAdvisoryInfo -Name TamAdvisoryInfoName

@@ -5,7 +5,7 @@ $SolPolicyByName = Get-IntersightSolPolicy -Name SolPolicyName
 $SolPolicyList = Get-IntersightSolPolicy
 
 #Get the list of SolPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SolPolicyByOrg = Get-IntersightSolPolicy -Organization $org
 

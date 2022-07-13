@@ -5,7 +5,7 @@ $HyperflexHxapClusterByName = Get-IntersightHyperflexHxapCluster -Name Hyperflex
 $HyperflexHxapClusterList = Get-IntersightHyperflexHxapCluster
 
 #Get the list of HyperflexHxapCluster under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapClusterByOrg = Get-IntersightHyperflexHxapCluster -Organization $org
 

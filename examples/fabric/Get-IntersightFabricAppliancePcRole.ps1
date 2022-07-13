@@ -5,7 +5,7 @@ $FabricAppliancePcRoleByName = Get-IntersightFabricAppliancePcRole -Name FabricA
 $FabricAppliancePcRoleList = Get-IntersightFabricAppliancePcRole
 
 #Get the list of FabricAppliancePcRole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricAppliancePcRoleByOrg = Get-IntersightFabricAppliancePcRole -Organization $org
 

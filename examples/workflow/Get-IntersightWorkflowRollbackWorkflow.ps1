@@ -5,7 +5,7 @@ $WorkflowRollbackWorkflowByName = Get-IntersightWorkflowRollbackWorkflow -Name W
 $WorkflowRollbackWorkflowList = Get-IntersightWorkflowRollbackWorkflow
 
 #Get the list of WorkflowRollbackWorkflow under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowRollbackWorkflowByOrg = Get-IntersightWorkflowRollbackWorkflow -Organization $org
 

@@ -5,7 +5,7 @@ $OsConfigurationFileByName = Get-IntersightOsConfigurationFile -Name OsConfigura
 $OsConfigurationFileList = Get-IntersightOsConfigurationFile
 
 #Get the list of OsConfigurationFile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OsConfigurationFileByOrg = Get-IntersightOsConfigurationFile -Organization $org
 

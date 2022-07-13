@@ -5,7 +5,7 @@ $HyperflexHxapDvswitchByName = Get-IntersightHyperflexHxapDvswitch -Name Hyperfl
 $HyperflexHxapDvswitchList = Get-IntersightHyperflexHxapDvswitch
 
 #Get the list of HyperflexHxapDvswitch under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapDvswitchByOrg = Get-IntersightHyperflexHxapDvswitch -Organization $org
 

@@ -5,7 +5,7 @@ $StorageNetAppFcInterfaceByName = Get-IntersightStorageNetAppFcInterface -Name S
 $StorageNetAppFcInterfaceList = Get-IntersightStorageNetAppFcInterface
 
 #Get the list of StorageNetAppFcInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppFcInterfaceByOrg = Get-IntersightStorageNetAppFcInterface -Organization $org
 

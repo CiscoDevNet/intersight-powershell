@@ -5,7 +5,7 @@ $HclDriverImageByName = Get-IntersightHclDriverImage -Name HclDriverImageName
 $HclDriverImageList = Get-IntersightHclDriverImage
 
 #Get the list of HclDriverImage under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HclDriverImageByOrg = Get-IntersightHclDriverImage -Organization $org
 

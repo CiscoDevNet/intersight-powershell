@@ -5,7 +5,7 @@ $StorageNetAppStorageVmByName = Get-IntersightStorageNetAppStorageVm -Name Stora
 $StorageNetAppStorageVmList = Get-IntersightStorageNetAppStorageVm
 
 #Get the list of StorageNetAppStorageVm under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppStorageVmByOrg = Get-IntersightStorageNetAppStorageVm -Organization $org
 

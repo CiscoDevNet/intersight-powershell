@@ -5,7 +5,7 @@ $VirtualizationVmwareVirtualNetworkInterfaceByName = Get-IntersightVirtualizatio
 $VirtualizationVmwareVirtualNetworkInterfaceList = Get-IntersightVirtualizationVmwareVirtualNetworkInterface
 
 #Get the list of VirtualizationVmwareVirtualNetworkInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareVirtualNetworkInterfaceByOrg = Get-IntersightVirtualizationVmwareVirtualNetworkInterface -Organization $org
 

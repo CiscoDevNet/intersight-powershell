@@ -5,7 +5,7 @@ $FabricPortOperationByName = Get-IntersightFabricPortOperation -Name FabricPortO
 $FabricPortOperationList = Get-IntersightFabricPortOperation
 
 #Get the list of FabricPortOperation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricPortOperationByOrg = Get-IntersightFabricPortOperation -Organization $org
 

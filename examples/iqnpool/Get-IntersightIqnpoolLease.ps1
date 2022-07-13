@@ -5,7 +5,7 @@ $IqnpoolLeaseByName = Get-IntersightIqnpoolLease -Name IqnpoolLeaseName
 $IqnpoolLeaseList = Get-IntersightIqnpoolLease
 
 #Get the list of IqnpoolLease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IqnpoolLeaseByOrg = Get-IntersightIqnpoolLease -Organization $org
 

@@ -5,7 +5,7 @@ $HyperflexClusterBackupPolicyDeploymentByName = Get-IntersightHyperflexClusterBa
 $HyperflexClusterBackupPolicyDeploymentList = Get-IntersightHyperflexClusterBackupPolicyDeployment
 
 #Get the list of HyperflexClusterBackupPolicyDeployment under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexClusterBackupPolicyDeploymentByOrg = Get-IntersightHyperflexClusterBackupPolicyDeployment -Organization $org
 

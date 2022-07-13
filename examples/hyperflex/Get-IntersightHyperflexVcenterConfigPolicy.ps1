@@ -5,7 +5,7 @@ $HyperflexVcenterConfigPolicyByName = Get-IntersightHyperflexVcenterConfigPolicy
 $HyperflexVcenterConfigPolicyList = Get-IntersightHyperflexVcenterConfigPolicy
 
 #Get the list of HyperflexVcenterConfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexVcenterConfigPolicyByOrg = Get-IntersightHyperflexVcenterConfigPolicy -Organization $org
 

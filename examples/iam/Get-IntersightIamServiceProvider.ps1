@@ -5,7 +5,7 @@ $IamServiceProviderByName = Get-IntersightIamServiceProvider -Name IamServicePro
 $IamServiceProviderList = Get-IntersightIamServiceProvider
 
 #Get the list of IamServiceProvider under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamServiceProviderByOrg = Get-IntersightIamServiceProvider -Organization $org
 

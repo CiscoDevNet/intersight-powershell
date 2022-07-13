@@ -5,7 +5,7 @@ $PciSwitchByName = Get-IntersightPciSwitch -Name PciSwitchName
 $PciSwitchList = Get-IntersightPciSwitch
 
 #Get the list of PciSwitch under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $PciSwitchByOrg = Get-IntersightPciSwitch -Organization $org
 

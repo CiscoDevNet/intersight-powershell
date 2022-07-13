@@ -5,7 +5,7 @@ $EquipmentFexByName = Get-IntersightEquipmentFex -Name EquipmentFexName
 $EquipmentFexList = Get-IntersightEquipmentFex
 
 #Get the list of EquipmentFex under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentFexByOrg = Get-IntersightEquipmentFex -Organization $org
 

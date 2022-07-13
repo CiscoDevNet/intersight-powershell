@@ -1,6 +1,6 @@
 $config_context1 = Initialize-IntersightPolicyConfigcontext -ControlAction 'deploy'
 
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $backup_config1 = Get-IntersightRecoveryBackupprofile -Moid '<Replace with Moid>'
 

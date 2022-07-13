@@ -5,7 +5,7 @@ $StorageNetAppLicenseByName = Get-IntersightStorageNetAppLicense -Name StorageNe
 $StorageNetAppLicenseList = Get-IntersightStorageNetAppLicense
 
 #Get the list of StorageNetAppLicense under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppLicenseByOrg = Get-IntersightStorageNetAppLicense -Organization $org
 

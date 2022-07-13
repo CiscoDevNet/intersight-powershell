@@ -5,7 +5,7 @@ $EquipmentSystemIoControllerByName = Get-IntersightEquipmentSystemIoController -
 $EquipmentSystemIoControllerList = Get-IntersightEquipmentSystemIoController
 
 #Get the list of EquipmentSystemIoController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentSystemIoControllerByOrg = Get-IntersightEquipmentSystemIoController -Organization $org
 

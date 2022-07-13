@@ -5,7 +5,7 @@ $StorageNetAppExportPolicyByName = Get-IntersightStorageNetAppExportPolicy -Name
 $StorageNetAppExportPolicyList = Get-IntersightStorageNetAppExportPolicy
 
 #Get the list of StorageNetAppExportPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppExportPolicyByOrg = Get-IntersightStorageNetAppExportPolicy -Organization $org
 

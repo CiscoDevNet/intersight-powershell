@@ -5,7 +5,7 @@ $NiatelemetrySupervisorModuleDetailsByName = Get-IntersightNiatelemetrySuperviso
 $NiatelemetrySupervisorModuleDetailsList = Get-IntersightNiatelemetrySupervisorModuleDetails
 
 #Get the list of NiatelemetrySupervisorModuleDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetrySupervisorModuleDetailsByOrg = Get-IntersightNiatelemetrySupervisorModuleDetails -Organization $org
 

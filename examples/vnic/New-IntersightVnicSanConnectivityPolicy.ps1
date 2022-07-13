@@ -1,4 +1,4 @@
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $profiles1 = Get-IntersightServerProfile -Moid '<Replace with Moid>'
 

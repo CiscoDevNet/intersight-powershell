@@ -5,7 +5,7 @@ $IamSessionLimitsByName = Get-IntersightIamSessionLimits -Name IamSessionLimitsN
 $IamSessionLimitsList = Get-IntersightIamSessionLimits
 
 #Get the list of IamSessionLimits under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamSessionLimitsByOrg = Get-IntersightIamSessionLimits -Organization $org
 

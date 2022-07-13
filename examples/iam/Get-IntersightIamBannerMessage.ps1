@@ -5,7 +5,7 @@ $IamBannerMessageByName = Get-IntersightIamBannerMessage -Name IamBannerMessageN
 $IamBannerMessageList = Get-IntersightIamBannerMessage
 
 #Get the list of IamBannerMessage under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamBannerMessageByOrg = Get-IntersightIamBannerMessage -Organization $org
 

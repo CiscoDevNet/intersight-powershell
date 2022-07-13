@@ -5,7 +5,7 @@ $ConnectorpackUpgradeImpactByName = Get-IntersightConnectorpackUpgradeImpact -Na
 $ConnectorpackUpgradeImpactList = Get-IntersightConnectorpackUpgradeImpact
 
 #Get the list of ConnectorpackUpgradeImpact under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ConnectorpackUpgradeImpactByOrg = Get-IntersightConnectorpackUpgradeImpact -Organization $org
 

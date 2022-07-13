@@ -5,7 +5,7 @@ $FirmwareMswitchDescriptorByName = Get-IntersightFirmwareMswitchDescriptor -Name
 $FirmwareMswitchDescriptorList = Get-IntersightFirmwareMswitchDescriptor
 
 #Get the list of FirmwareMswitchDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareMswitchDescriptorByOrg = Get-IntersightFirmwareMswitchDescriptor -Organization $org
 

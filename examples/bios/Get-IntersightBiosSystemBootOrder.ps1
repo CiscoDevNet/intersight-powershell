@@ -5,7 +5,7 @@ $BiosSystemBootOrderByName = Get-IntersightBiosSystemBootOrder -Name BiosSystemB
 $BiosSystemBootOrderList = Get-IntersightBiosSystemBootOrder
 
 #Get the list of BiosSystemBootOrder under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BiosSystemBootOrderByOrg = Get-IntersightBiosSystemBootOrder -Organization $org
 

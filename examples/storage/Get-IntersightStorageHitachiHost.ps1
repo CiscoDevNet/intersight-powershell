@@ -5,7 +5,7 @@ $StorageHitachiHostByName = Get-IntersightStorageHitachiHost -Name StorageHitach
 $StorageHitachiHostList = Get-IntersightStorageHitachiHost
 
 #Get the list of StorageHitachiHost under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiHostByOrg = Get-IntersightStorageHitachiHost -Organization $org
 

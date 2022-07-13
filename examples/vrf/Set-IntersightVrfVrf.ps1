@@ -1,5 +1,5 @@
 # Get the organization.
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 # Get the VrfVrf  to Update
 $VrfVrf = Get-IntersightVrfVrf -Name VrfVrfName

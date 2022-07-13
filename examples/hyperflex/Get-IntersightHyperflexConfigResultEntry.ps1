@@ -5,7 +5,7 @@ $HyperflexConfigResultEntryByName = Get-IntersightHyperflexConfigResultEntry -Na
 $HyperflexConfigResultEntryList = Get-IntersightHyperflexConfigResultEntry
 
 #Get the list of HyperflexConfigResultEntry under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexConfigResultEntryByOrg = Get-IntersightHyperflexConfigResultEntry -Organization $org
 

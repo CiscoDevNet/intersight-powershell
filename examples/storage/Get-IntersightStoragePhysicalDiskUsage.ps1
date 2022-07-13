@@ -5,7 +5,7 @@ $StoragePhysicalDiskUsageByName = Get-IntersightStoragePhysicalDiskUsage -Name S
 $StoragePhysicalDiskUsageList = Get-IntersightStoragePhysicalDiskUsage
 
 #Get the list of StoragePhysicalDiskUsage under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePhysicalDiskUsageByOrg = Get-IntersightStoragePhysicalDiskUsage -Organization $org
 

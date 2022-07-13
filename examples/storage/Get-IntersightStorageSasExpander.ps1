@@ -5,7 +5,7 @@ $StorageSasExpanderByName = Get-IntersightStorageSasExpander -Name StorageSasExp
 $StorageSasExpanderList = Get-IntersightStorageSasExpander
 
 #Get the list of StorageSasExpander under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageSasExpanderByOrg = Get-IntersightStorageSasExpander -Organization $org
 

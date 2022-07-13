@@ -5,7 +5,7 @@ $TechsupportmanagementCollectionControlPolicyByName = Get-IntersightTechsupportm
 $TechsupportmanagementCollectionControlPolicyList = Get-IntersightTechsupportmanagementCollectionControlPolicy
 
 #Get the list of TechsupportmanagementCollectionControlPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TechsupportmanagementCollectionControlPolicyByOrg = Get-IntersightTechsupportmanagementCollectionControlPolicy -Organization $org
 

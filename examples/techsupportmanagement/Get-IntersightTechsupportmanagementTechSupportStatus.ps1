@@ -5,7 +5,7 @@ $TechsupportmanagementTechSupportStatusByName = Get-IntersightTechsupportmanagem
 $TechsupportmanagementTechSupportStatusList = Get-IntersightTechsupportmanagementTechSupportStatus
 
 #Get the list of TechsupportmanagementTechSupportStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TechsupportmanagementTechSupportStatusByOrg = Get-IntersightTechsupportmanagementTechSupportStatus -Organization $org
 

@@ -5,7 +5,7 @@ $KubernetesVersionByName = Get-IntersightKubernetesVersion -Name KubernetesVersi
 $KubernetesVersionList = Get-IntersightKubernetesVersion
 
 #Get the list of KubernetesVersion under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesVersionByOrg = Get-IntersightKubernetesVersion -Organization $org
 

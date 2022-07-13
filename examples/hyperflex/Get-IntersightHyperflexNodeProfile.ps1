@@ -5,7 +5,7 @@ $HyperflexNodeProfileByName = Get-IntersightHyperflexNodeProfile -Name Hyperflex
 $HyperflexNodeProfileList = Get-IntersightHyperflexNodeProfile
 
 #Get the list of HyperflexNodeProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexNodeProfileByOrg = Get-IntersightHyperflexNodeProfile -Organization $org
 

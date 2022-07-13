@@ -5,7 +5,7 @@ $BootPchStorageDeviceByName = Get-IntersightBootPchStorageDevice -Name BootPchSt
 $BootPchStorageDeviceList = Get-IntersightBootPchStorageDevice
 
 #Get the list of BootPchStorageDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootPchStorageDeviceByOrg = Get-IntersightBootPchStorageDevice -Organization $org
 

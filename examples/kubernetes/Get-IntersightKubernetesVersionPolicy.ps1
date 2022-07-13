@@ -5,7 +5,7 @@ $KubernetesVersionPolicyByName = Get-IntersightKubernetesVersionPolicy -Name Kub
 $KubernetesVersionPolicyList = Get-IntersightKubernetesVersionPolicy
 
 #Get the list of KubernetesVersionPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesVersionPolicyByOrg = Get-IntersightKubernetesVersionPolicy -Organization $org
 

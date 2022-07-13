@@ -5,7 +5,7 @@ $WorkflowCustomDataTypeDefinitionByName = Get-IntersightWorkflowCustomDataTypeDe
 $WorkflowCustomDataTypeDefinitionList = Get-IntersightWorkflowCustomDataTypeDefinition
 
 #Get the list of WorkflowCustomDataTypeDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowCustomDataTypeDefinitionByOrg = Get-IntersightWorkflowCustomDataTypeDefinition -Organization $org
 

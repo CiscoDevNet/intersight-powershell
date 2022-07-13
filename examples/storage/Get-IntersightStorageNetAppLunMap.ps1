@@ -5,7 +5,7 @@ $StorageNetAppLunMapByName = Get-IntersightStorageNetAppLunMap -Name StorageNetA
 $StorageNetAppLunMapList = Get-IntersightStorageNetAppLunMap
 
 #Get the list of StorageNetAppLunMap under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppLunMapByOrg = Get-IntersightStorageNetAppLunMap -Organization $org
 

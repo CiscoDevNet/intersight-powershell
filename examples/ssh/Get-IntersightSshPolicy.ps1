@@ -5,7 +5,7 @@ $SshPolicyByName = Get-IntersightSshPolicy -Name SshPolicyName
 $SshPolicyList = Get-IntersightSshPolicy
 
 #Get the list of SshPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SshPolicyByOrg = Get-IntersightSshPolicy -Organization $org
 

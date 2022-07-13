@@ -5,7 +5,7 @@ $NiatelemetryAaaTacacsProviderDetailsByName = Get-IntersightNiatelemetryAaaTacac
 $NiatelemetryAaaTacacsProviderDetailsList = Get-IntersightNiatelemetryAaaTacacsProviderDetails
 
 #Get the list of NiatelemetryAaaTacacsProviderDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryAaaTacacsProviderDetailsByOrg = Get-IntersightNiatelemetryAaaTacacsProviderDetails -Organization $org
 

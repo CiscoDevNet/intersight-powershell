@@ -5,7 +5,7 @@ $MacpoolIdBlockByName = Get-IntersightMacpoolIdBlock -Name MacpoolIdBlockName
 $MacpoolIdBlockList = Get-IntersightMacpoolIdBlock
 
 #Get the list of MacpoolIdBlock under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MacpoolIdBlockByOrg = Get-IntersightMacpoolIdBlock -Organization $org
 

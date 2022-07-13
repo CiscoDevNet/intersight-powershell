@@ -1,4 +1,4 @@
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $vxlan_settings1 = Initialize-IntersightVnicVxlansettings -Enabled 0
 

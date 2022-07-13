@@ -5,7 +5,7 @@ $AdapterHostEthInterfaceByName = Get-IntersightAdapterHostEthInterface -Name Ada
 $AdapterHostEthInterfaceList = Get-IntersightAdapterHostEthInterface
 
 #Get the list of AdapterHostEthInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterHostEthInterfaceByOrg = Get-IntersightAdapterHostEthInterface -Organization $org
 

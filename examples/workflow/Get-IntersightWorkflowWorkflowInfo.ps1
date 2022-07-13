@@ -5,7 +5,7 @@ $WorkflowWorkflowInfoByName = Get-IntersightWorkflowWorkflowInfo -Name WorkflowW
 $WorkflowWorkflowInfoList = Get-IntersightWorkflowWorkflowInfo
 
 #Get the list of WorkflowWorkflowInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowWorkflowInfoByOrg = Get-IntersightWorkflowWorkflowInfo -Organization $org
 

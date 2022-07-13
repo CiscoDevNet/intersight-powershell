@@ -5,7 +5,7 @@ $FabricMulticastPolicyByName = Get-IntersightFabricMulticastPolicy -Name FabricM
 $FabricMulticastPolicyList = Get-IntersightFabricMulticastPolicy
 
 #Get the list of FabricMulticastPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricMulticastPolicyByOrg = Get-IntersightFabricMulticastPolicy -Organization $org
 

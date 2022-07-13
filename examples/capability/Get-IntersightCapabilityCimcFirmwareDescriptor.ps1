@@ -5,7 +5,7 @@ $CapabilityCimcFirmwareDescriptorByName = Get-IntersightCapabilityCimcFirmwareDe
 $CapabilityCimcFirmwareDescriptorList = Get-IntersightCapabilityCimcFirmwareDescriptor
 
 #Get the list of CapabilityCimcFirmwareDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityCimcFirmwareDescriptorByOrg = Get-IntersightCapabilityCimcFirmwareDescriptor -Organization $org
 

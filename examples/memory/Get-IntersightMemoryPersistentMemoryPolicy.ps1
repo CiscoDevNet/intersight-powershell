@@ -5,7 +5,7 @@ $MemoryPersistentMemoryPolicyByName = Get-IntersightMemoryPersistentMemoryPolicy
 $MemoryPersistentMemoryPolicyList = Get-IntersightMemoryPersistentMemoryPolicy
 
 #Get the list of MemoryPersistentMemoryPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryPersistentMemoryPolicyByOrg = Get-IntersightMemoryPersistentMemoryPolicy -Organization $org
 

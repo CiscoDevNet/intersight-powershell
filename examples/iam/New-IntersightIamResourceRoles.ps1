@@ -2,7 +2,7 @@ $parent1 = Get-IntersightIamPermission -Moid '<Replace with Moid>'
 
 $permission1 = Get-IntersightIamPermission -Moid '<Replace with Moid>'
 
-$resource1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$resource1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $roles1 = Get-IntersightIamRole -Moid '<Replace with Moid>'
 

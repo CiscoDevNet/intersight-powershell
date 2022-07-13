@@ -2,7 +2,7 @@ $local_clients1 = Initialize-IntersightSyslogLocalfileloggingclient -MinSeverity
 
 $profiles1 = Get-IntersightServerProfile -Moid '<Replace with Moid>'
 
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $remote_clients1 = Initialize-IntersightSyslogRemoteloggingclient -Enabled 1 -Hostname '10.10.10.10' -Port 514 -Protocol 'tcp' -MinSeverity 'emergency'
 

@@ -5,7 +5,7 @@ $HyperflexServerModelByName = Get-IntersightHyperflexServerModel -Name Hyperflex
 $HyperflexServerModelList = Get-IntersightHyperflexServerModel
 
 #Get the list of HyperflexServerModel under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexServerModelByOrg = Get-IntersightHyperflexServerModel -Organization $org
 

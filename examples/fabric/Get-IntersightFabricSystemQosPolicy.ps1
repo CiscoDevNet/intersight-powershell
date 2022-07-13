@@ -5,7 +5,7 @@ $FabricSystemQosPolicyByName = Get-IntersightFabricSystemQosPolicy -Name FabricS
 $FabricSystemQosPolicyList = Get-IntersightFabricSystemQosPolicy
 
 #Get the list of FabricSystemQosPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricSystemQosPolicyByOrg = Get-IntersightFabricSystemQosPolicy -Organization $org
 

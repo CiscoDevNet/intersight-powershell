@@ -5,7 +5,7 @@ $TechsupportmanagementDownloadByName = Get-IntersightTechsupportmanagementDownlo
 $TechsupportmanagementDownloadList = Get-IntersightTechsupportmanagementDownload
 
 #Get the list of TechsupportmanagementDownload under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TechsupportmanagementDownloadByOrg = Get-IntersightTechsupportmanagementDownload -Organization $org
 

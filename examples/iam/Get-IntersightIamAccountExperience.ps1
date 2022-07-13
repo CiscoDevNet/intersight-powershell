@@ -5,7 +5,7 @@ $IamAccountExperienceByName = Get-IntersightIamAccountExperience -Name IamAccoun
 $IamAccountExperienceList = Get-IntersightIamAccountExperience
 
 #Get the list of IamAccountExperience under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamAccountExperienceByOrg = Get-IntersightIamAccountExperience -Organization $org
 

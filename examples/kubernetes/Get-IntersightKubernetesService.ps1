@@ -5,7 +5,7 @@ $KubernetesServiceByName = Get-IntersightKubernetesService -Name KubernetesServi
 $KubernetesServiceList = Get-IntersightKubernetesService
 
 #Get the list of KubernetesService under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesServiceByOrg = Get-IntersightKubernetesService -Organization $org
 

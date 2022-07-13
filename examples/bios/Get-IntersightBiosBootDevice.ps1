@@ -5,7 +5,7 @@ $BiosBootDeviceByName = Get-IntersightBiosBootDevice -Name BiosBootDeviceName
 $BiosBootDeviceList = Get-IntersightBiosBootDevice
 
 #Get the list of BiosBootDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BiosBootDeviceByOrg = Get-IntersightBiosBootDevice -Organization $org
 

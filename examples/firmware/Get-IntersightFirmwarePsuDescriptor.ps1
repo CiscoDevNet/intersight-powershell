@@ -5,7 +5,7 @@ $FirmwarePsuDescriptorByName = Get-IntersightFirmwarePsuDescriptor -Name Firmwar
 $FirmwarePsuDescriptorList = Get-IntersightFirmwarePsuDescriptor
 
 #Get the list of FirmwarePsuDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwarePsuDescriptorByOrg = Get-IntersightFirmwarePsuDescriptor -Organization $org
 

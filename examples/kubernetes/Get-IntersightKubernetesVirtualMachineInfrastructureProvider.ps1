@@ -5,7 +5,7 @@ $KubernetesVirtualMachineInfrastructureProviderByName = Get-IntersightKubernetes
 $KubernetesVirtualMachineInfrastructureProviderList = Get-IntersightKubernetesVirtualMachineInfrastructureProvider
 
 #Get the list of KubernetesVirtualMachineInfrastructureProvider under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesVirtualMachineInfrastructureProviderByOrg = Get-IntersightKubernetesVirtualMachineInfrastructureProvider -Organization $org
 

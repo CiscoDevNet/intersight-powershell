@@ -5,7 +5,7 @@ $HyperflexAppCatalogByName = Get-IntersightHyperflexAppCatalog -Name HyperflexAp
 $HyperflexAppCatalogList = Get-IntersightHyperflexAppCatalog
 
 #Get the list of HyperflexAppCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexAppCatalogByOrg = Get-IntersightHyperflexAppCatalog -Organization $org
 

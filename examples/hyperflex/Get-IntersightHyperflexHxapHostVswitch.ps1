@@ -5,7 +5,7 @@ $HyperflexHxapHostVswitchByName = Get-IntersightHyperflexHxapHostVswitch -Name H
 $HyperflexHxapHostVswitchList = Get-IntersightHyperflexHxapHostVswitch
 
 #Get the list of HyperflexHxapHostVswitch under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapHostVswitchByOrg = Get-IntersightHyperflexHxapHostVswitch -Organization $org
 

@@ -5,7 +5,7 @@ $OsDistributionByName = Get-IntersightOsDistribution -Name OsDistributionName
 $OsDistributionList = Get-IntersightOsDistribution
 
 #Get the list of OsDistribution under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OsDistributionByOrg = Get-IntersightOsDistribution -Organization $org
 

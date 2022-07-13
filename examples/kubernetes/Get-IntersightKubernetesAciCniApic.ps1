@@ -5,7 +5,7 @@ $KubernetesAciCniApicByName = Get-IntersightKubernetesAciCniApic -Name Kubernete
 $KubernetesAciCniApicList = Get-IntersightKubernetesAciCniApic
 
 #Get the list of KubernetesAciCniApic under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesAciCniApicByOrg = Get-IntersightKubernetesAciCniApic -Organization $org
 

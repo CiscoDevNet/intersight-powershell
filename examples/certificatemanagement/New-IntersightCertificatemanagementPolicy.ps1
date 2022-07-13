@@ -1,4 +1,4 @@
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $certificates1 = Initialize-IntersightCertificatemanagementImc -Certificate 'certificate' -Enabled 1 -Privatekey 'privatekey'
 

@@ -5,7 +5,7 @@ $AdapterUnitExpanderByName = Get-IntersightAdapterUnitExpander -Name AdapterUnit
 $AdapterUnitExpanderList = Get-IntersightAdapterUnitExpander
 
 #Get the list of AdapterUnitExpander under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterUnitExpanderByOrg = Get-IntersightAdapterUnitExpander -Organization $org
 

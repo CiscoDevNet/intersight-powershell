@@ -5,7 +5,7 @@ $SecurityUnitByName = Get-IntersightSecurityUnit -Name SecurityUnitName
 $SecurityUnitList = Get-IntersightSecurityUnit
 
 #Get the list of SecurityUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SecurityUnitByOrg = Get-IntersightSecurityUnit -Organization $org
 

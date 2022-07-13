@@ -5,7 +5,7 @@ $IamApiKeyByName = Get-IntersightIamApiKey -Name IamApiKeyName
 $IamApiKeyList = Get-IntersightIamApiKey
 
 #Get the list of IamApiKey under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamApiKeyByOrg = Get-IntersightIamApiKey -Organization $org
 

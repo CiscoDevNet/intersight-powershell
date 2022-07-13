@@ -5,7 +5,7 @@ $StorageHitachiHostLunByName = Get-IntersightStorageHitachiHostLun -Name Storage
 $StorageHitachiHostLunList = Get-IntersightStorageHitachiHostLun
 
 #Get the list of StorageHitachiHostLun under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiHostLunByOrg = Get-IntersightStorageHitachiHostLun -Organization $org
 

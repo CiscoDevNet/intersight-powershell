@@ -5,7 +5,7 @@ $ResourceGroupByName = Get-IntersightResourceGroup -Name ResourceGroupName
 $ResourceGroupList = Get-IntersightResourceGroup
 
 #Get the list of ResourceGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ResourceGroupByOrg = Get-IntersightResourceGroup -Organization $org
 

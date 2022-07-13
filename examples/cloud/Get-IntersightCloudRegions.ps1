@@ -5,7 +5,7 @@ $CloudRegionsByName = Get-IntersightCloudRegions -Name CloudRegionsName
 $CloudRegionsList = Get-IntersightCloudRegions
 
 #Get the list of CloudRegions under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CloudRegionsByOrg = Get-IntersightCloudRegions -Organization $org
 

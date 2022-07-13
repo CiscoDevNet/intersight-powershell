@@ -5,7 +5,7 @@ $EquipmentSwitchCardByName = Get-IntersightEquipmentSwitchCard -Name EquipmentSw
 $EquipmentSwitchCardList = Get-IntersightEquipmentSwitchCard
 
 #Get the list of EquipmentSwitchCard under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentSwitchCardByOrg = Get-IntersightEquipmentSwitchCard -Organization $org
 

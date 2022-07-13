@@ -5,7 +5,7 @@ $ApplianceGroupStatusByName = Get-IntersightApplianceGroupStatus -Name Appliance
 $ApplianceGroupStatusList = Get-IntersightApplianceGroupStatus
 
 #Get the list of ApplianceGroupStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceGroupStatusByOrg = Get-IntersightApplianceGroupStatus -Organization $org
 

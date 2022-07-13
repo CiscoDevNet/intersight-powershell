@@ -5,7 +5,7 @@ $VmrcConsoleByName = Get-IntersightVmrcConsole -Name VmrcConsoleName
 $VmrcConsoleList = Get-IntersightVmrcConsole
 
 #Get the list of VmrcConsole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VmrcConsoleByOrg = Get-IntersightVmrcConsole -Organization $org
 

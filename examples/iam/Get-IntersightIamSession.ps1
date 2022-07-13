@@ -5,7 +5,7 @@ $IamSessionByName = Get-IntersightIamSession -Name IamSessionName
 $IamSessionList = Get-IntersightIamSession
 
 #Get the list of IamSession under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamSessionByOrg = Get-IntersightIamSession -Organization $org
 

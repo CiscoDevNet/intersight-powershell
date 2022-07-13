@@ -5,7 +5,7 @@ $SearchSearchItemByName = Get-IntersightSearchSearchItem -Name SearchSearchItemN
 $SearchSearchItemList = Get-IntersightSearchSearchItem
 
 #Get the list of SearchSearchItem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SearchSearchItemByOrg = Get-IntersightSearchSearchItem -Organization $org
 

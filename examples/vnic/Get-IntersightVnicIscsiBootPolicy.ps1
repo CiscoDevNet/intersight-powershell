@@ -5,7 +5,7 @@ $VnicIscsiBootPolicyByName = Get-IntersightVnicIscsiBootPolicy -Name VnicIscsiBo
 $VnicIscsiBootPolicyList = Get-IntersightVnicIscsiBootPolicy
 
 #Get the list of VnicIscsiBootPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicIscsiBootPolicyByOrg = Get-IntersightVnicIscsiBootPolicy -Organization $org
 

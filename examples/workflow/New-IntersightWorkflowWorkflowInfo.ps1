@@ -1,6 +1,6 @@
 $properties1 = Initialize-IntersightWorkflowWorkflowinfoproperties -Retryable 0
 
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $workflow_definition1 = Get-IntersightWorkflowWorkflowdefinition -Moid '<Replace with Moid>'
 

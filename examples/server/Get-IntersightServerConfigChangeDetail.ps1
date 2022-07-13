@@ -5,7 +5,7 @@ $ServerConfigChangeDetailByName = Get-IntersightServerConfigChangeDetail -Name S
 $ServerConfigChangeDetailList = Get-IntersightServerConfigChangeDetail
 
 #Get the list of ServerConfigChangeDetail under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ServerConfigChangeDetailByOrg = Get-IntersightServerConfigChangeDetail -Organization $org
 

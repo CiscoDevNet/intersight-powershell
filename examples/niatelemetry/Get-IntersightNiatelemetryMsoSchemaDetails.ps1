@@ -5,7 +5,7 @@ $NiatelemetryMsoSchemaDetailsByName = Get-IntersightNiatelemetryMsoSchemaDetails
 $NiatelemetryMsoSchemaDetailsList = Get-IntersightNiatelemetryMsoSchemaDetails
 
 #Get the list of NiatelemetryMsoSchemaDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryMsoSchemaDetailsByOrg = Get-IntersightNiatelemetryMsoSchemaDetails -Organization $org
 

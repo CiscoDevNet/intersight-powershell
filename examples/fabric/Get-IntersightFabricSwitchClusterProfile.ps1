@@ -5,7 +5,7 @@ $FabricSwitchClusterProfileByName = Get-IntersightFabricSwitchClusterProfile -Na
 $FabricSwitchClusterProfileList = Get-IntersightFabricSwitchClusterProfile
 
 #Get the list of FabricSwitchClusterProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricSwitchClusterProfileByOrg = Get-IntersightFabricSwitchClusterProfile -Organization $org
 

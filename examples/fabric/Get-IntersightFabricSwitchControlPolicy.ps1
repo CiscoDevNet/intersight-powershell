@@ -5,7 +5,7 @@ $FabricSwitchControlPolicyByName = Get-IntersightFabricSwitchControlPolicy -Name
 $FabricSwitchControlPolicyList = Get-IntersightFabricSwitchControlPolicy
 
 #Get the list of FabricSwitchControlPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricSwitchControlPolicyByOrg = Get-IntersightFabricSwitchControlPolicy -Organization $org
 

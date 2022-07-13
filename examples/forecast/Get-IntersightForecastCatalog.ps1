@@ -5,7 +5,7 @@ $ForecastCatalogByName = Get-IntersightForecastCatalog -Name ForecastCatalogName
 $ForecastCatalogList = Get-IntersightForecastCatalog
 
 #Get the list of ForecastCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ForecastCatalogByOrg = Get-IntersightForecastCatalog -Organization $org
 

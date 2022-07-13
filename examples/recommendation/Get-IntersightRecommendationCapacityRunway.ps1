@@ -5,7 +5,7 @@ $RecommendationCapacityRunwayByName = Get-IntersightRecommendationCapacityRunway
 $RecommendationCapacityRunwayList = Get-IntersightRecommendationCapacityRunway
 
 #Get the list of RecommendationCapacityRunway under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecommendationCapacityRunwayByOrg = Get-IntersightRecommendationCapacityRunway -Organization $org
 

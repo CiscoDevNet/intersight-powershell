@@ -5,7 +5,7 @@ $StoragePureSnapshotScheduleByName = Get-IntersightStoragePureSnapshotSchedule -
 $StoragePureSnapshotScheduleList = Get-IntersightStoragePureSnapshotSchedule
 
 #Get the list of StoragePureSnapshotSchedule under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureSnapshotScheduleByOrg = Get-IntersightStoragePureSnapshotSchedule -Organization $org
 

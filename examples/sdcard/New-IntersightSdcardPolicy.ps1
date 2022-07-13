@@ -1,4 +1,4 @@
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $virtual_drives = Initialize-IntersightSdcardOperatingSystem -Enable 1
 

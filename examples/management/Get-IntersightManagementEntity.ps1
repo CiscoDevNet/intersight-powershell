@@ -5,7 +5,7 @@ $ManagementEntityByName = Get-IntersightManagementEntity -Name ManagementEntityN
 $ManagementEntityList = Get-IntersightManagementEntity
 
 #Get the list of ManagementEntity under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ManagementEntityByOrg = Get-IntersightManagementEntity -Organization $org
 

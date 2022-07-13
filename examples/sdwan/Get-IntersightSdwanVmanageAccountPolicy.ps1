@@ -5,7 +5,7 @@ $SdwanVmanageAccountPolicyByName = Get-IntersightSdwanVmanageAccountPolicy -Name
 $SdwanVmanageAccountPolicyList = Get-IntersightSdwanVmanageAccountPolicy
 
 #Get the list of SdwanVmanageAccountPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SdwanVmanageAccountPolicyByOrg = Get-IntersightSdwanVmanageAccountPolicy -Organization $org
 

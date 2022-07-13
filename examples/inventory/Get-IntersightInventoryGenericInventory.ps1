@@ -5,7 +5,7 @@ $InventoryGenericInventoryByName = Get-IntersightInventoryGenericInventory -Name
 $InventoryGenericInventoryList = Get-IntersightInventoryGenericInventory
 
 #Get the list of InventoryGenericInventory under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $InventoryGenericInventoryByOrg = Get-IntersightInventoryGenericInventory -Organization $org
 

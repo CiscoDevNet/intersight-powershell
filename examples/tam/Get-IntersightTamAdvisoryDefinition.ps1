@@ -5,7 +5,7 @@ $TamAdvisoryDefinitionByName = Get-IntersightTamAdvisoryDefinition -Name TamAdvi
 $TamAdvisoryDefinitionList = Get-IntersightTamAdvisoryDefinition
 
 #Get the list of TamAdvisoryDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TamAdvisoryDefinitionByOrg = Get-IntersightTamAdvisoryDefinition -Organization $org
 

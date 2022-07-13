@@ -1,4 +1,4 @@
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $registered_devices1 = Get-IntersightAssetDeviceregistrations -Moid '<Replace with Moid>'
 

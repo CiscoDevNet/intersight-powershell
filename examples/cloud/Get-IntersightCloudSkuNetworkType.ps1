@@ -5,7 +5,7 @@ $CloudSkuNetworkTypeByName = Get-IntersightCloudSkuNetworkType -Name CloudSkuNet
 $CloudSkuNetworkTypeList = Get-IntersightCloudSkuNetworkType
 
 #Get the list of CloudSkuNetworkType under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CloudSkuNetworkTypeByOrg = Get-IntersightCloudSkuNetworkType -Organization $org
 

@@ -5,7 +5,7 @@ $AssetDeploymentDeviceByName = Get-IntersightAssetDeploymentDevice -Name AssetDe
 $AssetDeploymentDeviceList = Get-IntersightAssetDeploymentDevice
 
 #Get the list of AssetDeploymentDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetDeploymentDeviceByOrg = Get-IntersightAssetDeploymentDevice -Organization $org
 

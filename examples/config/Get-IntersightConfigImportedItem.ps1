@@ -5,7 +5,7 @@ $ConfigImportedItemByName = Get-IntersightConfigImportedItem -Name ConfigImporte
 $ConfigImportedItemList = Get-IntersightConfigImportedItem
 
 #Get the list of ConfigImportedItem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ConfigImportedItemByOrg = Get-IntersightConfigImportedItem -Organization $org
 

@@ -5,7 +5,7 @@ $LsServiceProfileByName = Get-IntersightLsServiceProfile -Name LsServiceProfileN
 $LsServiceProfileList = Get-IntersightLsServiceProfile
 
 #Get the list of LsServiceProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LsServiceProfileByOrg = Get-IntersightLsServiceProfile -Organization $org
 

@@ -5,7 +5,7 @@ $NetworkFcZoneInfoByName = Get-IntersightNetworkFcZoneInfo -Name NetworkFcZoneIn
 $NetworkFcZoneInfoList = Get-IntersightNetworkFcZoneInfo
 
 #Get the list of NetworkFcZoneInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NetworkFcZoneInfoByOrg = Get-IntersightNetworkFcZoneInfo -Organization $org
 

@@ -5,7 +5,7 @@ $ComputeMappingByName = Get-IntersightComputeMapping -Name ComputeMappingName
 $ComputeMappingList = Get-IntersightComputeMapping
 
 #Get the list of ComputeMapping under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeMappingByOrg = Get-IntersightComputeMapping -Organization $org
 

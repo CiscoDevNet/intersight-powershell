@@ -5,7 +5,7 @@ $InventoryGenericInventoryHolderByName = Get-IntersightInventoryGenericInventory
 $InventoryGenericInventoryHolderList = Get-IntersightInventoryGenericInventoryHolder
 
 #Get the list of InventoryGenericInventoryHolder under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $InventoryGenericInventoryHolderByOrg = Get-IntersightInventoryGenericInventoryHolder -Organization $org
 

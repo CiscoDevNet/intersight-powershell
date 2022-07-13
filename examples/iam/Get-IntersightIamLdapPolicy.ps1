@@ -5,7 +5,7 @@ $IamLdapPolicyByName = Get-IntersightIamLdapPolicy -Name IamLdapPolicyName
 $IamLdapPolicyList = Get-IntersightIamLdapPolicy
 
 #Get the list of IamLdapPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamLdapPolicyByOrg = Get-IntersightIamLdapPolicy -Organization $org
 

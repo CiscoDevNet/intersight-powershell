@@ -5,7 +5,7 @@ $NiatelemetryApicSysLogSrcByName = Get-IntersightNiatelemetryApicSysLogSrc -Name
 $NiatelemetryApicSysLogSrcList = Get-IntersightNiatelemetryApicSysLogSrc
 
 #Get the list of NiatelemetryApicSysLogSrc under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicSysLogSrcByOrg = Get-IntersightNiatelemetryApicSysLogSrc -Organization $org
 

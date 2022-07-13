@@ -5,7 +5,7 @@ $OsCatalogByName = Get-IntersightOsCatalog -Name OsCatalogName
 $OsCatalogList = Get-IntersightOsCatalog
 
 #Get the list of OsCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OsCatalogByOrg = Get-IntersightOsCatalog -Organization $org
 

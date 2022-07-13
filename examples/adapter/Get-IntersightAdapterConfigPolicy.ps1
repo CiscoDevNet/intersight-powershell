@@ -5,7 +5,7 @@ $AdapterConfigPolicyByName = Get-IntersightAdapterConfigPolicy -Name AdapterConf
 $AdapterConfigPolicyList = Get-IntersightAdapterConfigPolicy
 
 #Get the list of AdapterConfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterConfigPolicyByOrg = Get-IntersightAdapterConfigPolicy -Organization $org
 

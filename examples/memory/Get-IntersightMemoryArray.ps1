@@ -5,7 +5,7 @@ $MemoryArrayByName = Get-IntersightMemoryArray -Name MemoryArrayName
 $MemoryArrayList = Get-IntersightMemoryArray
 
 #Get the list of MemoryArray under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryArrayByOrg = Get-IntersightMemoryArray -Organization $org
 

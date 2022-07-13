@@ -5,7 +5,7 @@ $UuidpoolUniverseByName = Get-IntersightUuidpoolUniverse -Name UuidpoolUniverseN
 $UuidpoolUniverseList = Get-IntersightUuidpoolUniverse
 
 #Get the list of UuidpoolUniverse under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $UuidpoolUniverseByOrg = Get-IntersightUuidpoolUniverse -Organization $org
 

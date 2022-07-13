@@ -5,7 +5,7 @@ $UuidpoolPoolByName = Get-IntersightUuidpoolPool -Name UuidpoolPoolName
 $UuidpoolPoolList = Get-IntersightUuidpoolPool
 
 #Get the list of UuidpoolPool under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $UuidpoolPoolByOrg = Get-IntersightUuidpoolPool -Organization $org
 

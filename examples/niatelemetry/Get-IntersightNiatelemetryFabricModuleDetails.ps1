@@ -5,7 +5,7 @@ $NiatelemetryFabricModuleDetailsByName = Get-IntersightNiatelemetryFabricModuleD
 $NiatelemetryFabricModuleDetailsList = Get-IntersightNiatelemetryFabricModuleDetails
 
 #Get the list of NiatelemetryFabricModuleDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryFabricModuleDetailsByOrg = Get-IntersightNiatelemetryFabricModuleDetails -Organization $org
 

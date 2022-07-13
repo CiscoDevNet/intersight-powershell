@@ -5,7 +5,7 @@ $IppoolPoolByName = Get-IntersightIppoolPool -Name IppoolPoolName
 $IppoolPoolList = Get-IntersightIppoolPool
 
 #Get the list of IppoolPool under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IppoolPoolByOrg = Get-IntersightIppoolPool -Organization $org
 

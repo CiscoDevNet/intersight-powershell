@@ -5,7 +5,7 @@ $WorkflowPendingDynamicWorkflowInfoByName = Get-IntersightWorkflowPendingDynamic
 $WorkflowPendingDynamicWorkflowInfoList = Get-IntersightWorkflowPendingDynamicWorkflowInfo
 
 #Get the list of WorkflowPendingDynamicWorkflowInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowPendingDynamicWorkflowInfoByOrg = Get-IntersightWorkflowPendingDynamicWorkflowInfo -Organization $org
 

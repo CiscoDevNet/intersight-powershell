@@ -5,7 +5,7 @@ $SdwanRouterPolicyByName = Get-IntersightSdwanRouterPolicy -Name SdwanRouterPoli
 $SdwanRouterPolicyList = Get-IntersightSdwanRouterPolicy
 
 #Get the list of SdwanRouterPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SdwanRouterPolicyByOrg = Get-IntersightSdwanRouterPolicy -Organization $org
 

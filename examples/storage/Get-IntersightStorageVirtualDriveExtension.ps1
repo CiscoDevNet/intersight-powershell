@@ -5,7 +5,7 @@ $StorageVirtualDriveExtensionByName = Get-IntersightStorageVirtualDriveExtension
 $StorageVirtualDriveExtensionList = Get-IntersightStorageVirtualDriveExtension
 
 #Get the list of StorageVirtualDriveExtension under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageVirtualDriveExtensionByOrg = Get-IntersightStorageVirtualDriveExtension -Organization $org
 

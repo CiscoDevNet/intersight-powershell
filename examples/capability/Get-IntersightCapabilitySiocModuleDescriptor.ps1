@@ -5,7 +5,7 @@ $CapabilitySiocModuleDescriptorByName = Get-IntersightCapabilitySiocModuleDescri
 $CapabilitySiocModuleDescriptorList = Get-IntersightCapabilitySiocModuleDescriptor
 
 #Get the list of CapabilitySiocModuleDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilitySiocModuleDescriptorByOrg = Get-IntersightCapabilitySiocModuleDescriptor -Organization $org
 

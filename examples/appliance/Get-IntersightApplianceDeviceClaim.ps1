@@ -5,7 +5,7 @@ $ApplianceDeviceClaimByName = Get-IntersightApplianceDeviceClaim -Name Appliance
 $ApplianceDeviceClaimList = Get-IntersightApplianceDeviceClaim
 
 #Get the list of ApplianceDeviceClaim under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceDeviceClaimByOrg = Get-IntersightApplianceDeviceClaim -Organization $org
 

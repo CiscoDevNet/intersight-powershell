@@ -5,7 +5,7 @@ $HyperflexDatastoreStatisticByName = Get-IntersightHyperflexDatastoreStatistic -
 $HyperflexDatastoreStatisticList = Get-IntersightHyperflexDatastoreStatistic
 
 #Get the list of HyperflexDatastoreStatistic under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexDatastoreStatisticByOrg = Get-IntersightHyperflexDatastoreStatistic -Organization $org
 

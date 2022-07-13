@@ -1,4 +1,4 @@
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $error_recovery_settings1 = Initialize-IntersightVnicFcerrorrecoverysettings -Enabled 0 -IoRetryCount 255 -IoRetryTimeout 50 -LinkDownTimeout 240000 -PortDownTimeout 240000
 

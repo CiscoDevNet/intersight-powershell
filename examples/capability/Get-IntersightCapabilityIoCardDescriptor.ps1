@@ -5,7 +5,7 @@ $CapabilityIoCardDescriptorByName = Get-IntersightCapabilityIoCardDescriptor -Na
 $CapabilityIoCardDescriptorList = Get-IntersightCapabilityIoCardDescriptor
 
 #Get the list of CapabilityIoCardDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityIoCardDescriptorByOrg = Get-IntersightCapabilityIoCardDescriptor -Organization $org
 

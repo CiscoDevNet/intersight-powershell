@@ -5,7 +5,7 @@ $ChassisIomProfileByName = Get-IntersightChassisIomProfile -Name ChassisIomProfi
 $ChassisIomProfileList = Get-IntersightChassisIomProfile
 
 #Get the list of ChassisIomProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ChassisIomProfileByOrg = Get-IntersightChassisIomProfile -Organization $org
 

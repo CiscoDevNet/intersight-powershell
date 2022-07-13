@@ -5,7 +5,7 @@ $WorkflowBatchApiExecutorByName = Get-IntersightWorkflowBatchApiExecutor -Name W
 $WorkflowBatchApiExecutorList = Get-IntersightWorkflowBatchApiExecutor
 
 #Get the list of WorkflowBatchApiExecutor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowBatchApiExecutorByOrg = Get-IntersightWorkflowBatchApiExecutor -Organization $org
 

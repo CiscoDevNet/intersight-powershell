@@ -5,7 +5,7 @@ $HyperflexHealthCheckPackageChecksumByName = Get-IntersightHyperflexHealthCheckP
 $HyperflexHealthCheckPackageChecksumList = Get-IntersightHyperflexHealthCheckPackageChecksum
 
 #Get the list of HyperflexHealthCheckPackageChecksum under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHealthCheckPackageChecksumByOrg = Get-IntersightHyperflexHealthCheckPackageChecksum -Organization $org
 

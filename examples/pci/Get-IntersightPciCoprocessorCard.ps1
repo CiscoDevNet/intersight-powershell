@@ -5,7 +5,7 @@ $PciCoprocessorCardByName = Get-IntersightPciCoprocessorCard -Name PciCoprocesso
 $PciCoprocessorCardList = Get-IntersightPciCoprocessorCard
 
 #Get the list of PciCoprocessorCard under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $PciCoprocessorCardByOrg = Get-IntersightPciCoprocessorCard -Organization $org
 

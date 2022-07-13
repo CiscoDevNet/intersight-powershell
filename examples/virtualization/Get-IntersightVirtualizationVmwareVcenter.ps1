@@ -5,7 +5,7 @@ $VirtualizationVmwareVcenterByName = Get-IntersightVirtualizationVmwareVcenter -
 $VirtualizationVmwareVcenterList = Get-IntersightVirtualizationVmwareVcenter
 
 #Get the list of VirtualizationVmwareVcenter under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareVcenterByOrg = Get-IntersightVirtualizationVmwareVcenter -Organization $org
 

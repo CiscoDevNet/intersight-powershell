@@ -5,7 +5,7 @@ $VnicIscsiStaticTargetPolicyByName = Get-IntersightVnicIscsiStaticTargetPolicy -
 $VnicIscsiStaticTargetPolicyList = Get-IntersightVnicIscsiStaticTargetPolicy
 
 #Get the list of VnicIscsiStaticTargetPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicIscsiStaticTargetPolicyByOrg = Get-IntersightVnicIscsiStaticTargetPolicy -Organization $org
 

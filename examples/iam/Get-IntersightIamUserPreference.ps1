@@ -5,7 +5,7 @@ $IamUserPreferenceByName = Get-IntersightIamUserPreference -Name IamUserPreferen
 $IamUserPreferenceList = Get-IntersightIamUserPreference
 
 #Get the list of IamUserPreference under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamUserPreferenceByOrg = Get-IntersightIamUserPreference -Organization $org
 

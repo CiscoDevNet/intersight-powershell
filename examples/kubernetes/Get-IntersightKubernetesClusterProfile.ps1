@@ -5,7 +5,7 @@ $KubernetesClusterProfileByName = Get-IntersightKubernetesClusterProfile -Name K
 $KubernetesClusterProfileList = Get-IntersightKubernetesClusterProfile
 
 #Get the list of KubernetesClusterProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesClusterProfileByOrg = Get-IntersightKubernetesClusterProfile -Organization $org
 

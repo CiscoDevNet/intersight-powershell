@@ -5,7 +5,7 @@ $FirmwareUpgradeByName = Get-IntersightFirmwareUpgrade -Name FirmwareUpgradeName
 $FirmwareUpgradeList = Get-IntersightFirmwareUpgrade
 
 #Get the list of FirmwareUpgrade under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareUpgradeByOrg = Get-IntersightFirmwareUpgrade -Organization $org
 

@@ -5,7 +5,7 @@ $ApplianceCertificateSettingByName = Get-IntersightApplianceCertificateSetting -
 $ApplianceCertificateSettingList = Get-IntersightApplianceCertificateSetting
 
 #Get the list of ApplianceCertificateSetting under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceCertificateSettingByOrg = Get-IntersightApplianceCertificateSetting -Organization $org
 

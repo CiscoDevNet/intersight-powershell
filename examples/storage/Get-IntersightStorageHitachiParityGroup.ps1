@@ -5,7 +5,7 @@ $StorageHitachiParityGroupByName = Get-IntersightStorageHitachiParityGroup -Name
 $StorageHitachiParityGroupList = Get-IntersightStorageHitachiParityGroup
 
 #Get the list of StorageHitachiParityGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiParityGroupByOrg = Get-IntersightStorageHitachiParityGroup -Organization $org
 

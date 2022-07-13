@@ -5,7 +5,7 @@ $FirmwareStorageControllerDescriptorByName = Get-IntersightFirmwareStorageContro
 $FirmwareStorageControllerDescriptorList = Get-IntersightFirmwareStorageControllerDescriptor
 
 #Get the list of FirmwareStorageControllerDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareStorageControllerDescriptorByOrg = Get-IntersightFirmwareStorageControllerDescriptor -Organization $org
 

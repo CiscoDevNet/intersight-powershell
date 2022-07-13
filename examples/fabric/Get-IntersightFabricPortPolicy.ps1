@@ -5,7 +5,7 @@ $FabricPortPolicyByName = Get-IntersightFabricPortPolicy -Name FabricPortPolicyN
 $FabricPortPolicyList = Get-IntersightFabricPortPolicy
 
 #Get the list of FabricPortPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricPortPolicyByOrg = Get-IntersightFabricPortPolicy -Organization $org
 

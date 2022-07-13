@@ -5,7 +5,7 @@ $TamAdvisoryInfoByName = Get-IntersightTamAdvisoryInfo -Name TamAdvisoryInfoName
 $TamAdvisoryInfoList = Get-IntersightTamAdvisoryInfo
 
 #Get the list of TamAdvisoryInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TamAdvisoryInfoByOrg = Get-IntersightTamAdvisoryInfo -Organization $org
 

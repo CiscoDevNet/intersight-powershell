@@ -5,7 +5,7 @@ $KubernetesContainerRuntimePolicyByName = Get-IntersightKubernetesContainerRunti
 $KubernetesContainerRuntimePolicyList = Get-IntersightKubernetesContainerRuntimePolicy
 
 #Get the list of KubernetesContainerRuntimePolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesContainerRuntimePolicyByOrg = Get-IntersightKubernetesContainerRuntimePolicy -Organization $org
 

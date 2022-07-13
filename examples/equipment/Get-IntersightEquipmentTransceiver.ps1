@@ -5,7 +5,7 @@ $EquipmentTransceiverByName = Get-IntersightEquipmentTransceiver -Name Equipment
 $EquipmentTransceiverList = Get-IntersightEquipmentTransceiver
 
 #Get the list of EquipmentTransceiver under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentTransceiverByOrg = Get-IntersightEquipmentTransceiver -Organization $org
 

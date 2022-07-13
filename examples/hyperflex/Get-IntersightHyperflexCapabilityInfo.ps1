@@ -5,7 +5,7 @@ $HyperflexCapabilityInfoByName = Get-IntersightHyperflexCapabilityInfo -Name Hyp
 $HyperflexCapabilityInfoList = Get-IntersightHyperflexCapabilityInfo
 
 #Get the list of HyperflexCapabilityInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexCapabilityInfoByOrg = Get-IntersightHyperflexCapabilityInfo -Organization $org
 

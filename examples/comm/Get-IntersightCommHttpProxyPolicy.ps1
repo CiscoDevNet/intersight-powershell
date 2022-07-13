@@ -5,7 +5,7 @@ $CommHttpProxyPolicyByName = Get-IntersightCommHttpProxyPolicy -Name CommHttpPro
 $CommHttpProxyPolicyList = Get-IntersightCommHttpProxyPolicy
 
 #Get the list of CommHttpProxyPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CommHttpProxyPolicyByOrg = Get-IntersightCommHttpProxyPolicy -Organization $org
 

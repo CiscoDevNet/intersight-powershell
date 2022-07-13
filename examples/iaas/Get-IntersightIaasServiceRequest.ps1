@@ -5,7 +5,7 @@ $IaasServiceRequestByName = Get-IntersightIaasServiceRequest -Name IaasServiceRe
 $IaasServiceRequestList = Get-IntersightIaasServiceRequest
 
 #Get the list of IaasServiceRequest under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasServiceRequestByOrg = Get-IntersightIaasServiceRequest -Organization $org
 

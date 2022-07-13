@@ -5,7 +5,7 @@ $BootSanDeviceByName = Get-IntersightBootSanDevice -Name BootSanDeviceName
 $BootSanDeviceList = Get-IntersightBootSanDevice
 
 #Get the list of BootSanDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootSanDeviceByOrg = Get-IntersightBootSanDevice -Organization $org
 

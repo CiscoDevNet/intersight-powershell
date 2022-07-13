@@ -5,7 +5,7 @@ $NiatelemetryAppDetailsByName = Get-IntersightNiatelemetryAppDetails -Name Niate
 $NiatelemetryAppDetailsList = Get-IntersightNiatelemetryAppDetails
 
 #Get the list of NiatelemetryAppDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryAppDetailsByOrg = Get-IntersightNiatelemetryAppDetails -Organization $org
 

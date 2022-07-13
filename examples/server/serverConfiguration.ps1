@@ -1,7 +1,7 @@
 
 # Get organization 
 
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>' | Get-IntersightMoMoRef
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default' | Get-IntersightMoMoRef
 
 # create a couple of server policies
 # Creating NTP policy

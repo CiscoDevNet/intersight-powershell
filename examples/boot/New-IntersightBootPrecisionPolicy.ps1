@@ -1,4 +1,4 @@
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $boot_devices1 = Initialize-IntersightBootLocaldisk -Enabled 1 -Name 'scu-device-hdd' 
 $boot_devices2 = Initialize-IntersightBootVirtualmedia -Enabled 1 -Name 'NIIODCIMCDVD' 

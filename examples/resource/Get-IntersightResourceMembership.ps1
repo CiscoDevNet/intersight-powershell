@@ -5,7 +5,7 @@ $ResourceMembershipByName = Get-IntersightResourceMembership -Name ResourceMembe
 $ResourceMembershipList = Get-IntersightResourceMembership
 
 #Get the list of ResourceMembership under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ResourceMembershipByOrg = Get-IntersightResourceMembership -Organization $org
 

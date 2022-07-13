@@ -5,7 +5,7 @@ $SearchTagItemByName = Get-IntersightSearchTagItem -Name SearchTagItemName
 $SearchTagItemList = Get-IntersightSearchTagItem
 
 #Get the list of SearchTagItem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SearchTagItemByOrg = Get-IntersightSearchTagItem -Organization $org
 

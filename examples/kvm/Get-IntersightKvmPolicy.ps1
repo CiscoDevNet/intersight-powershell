@@ -5,7 +5,7 @@ $KvmPolicyByName = Get-IntersightKvmPolicy -Name KvmPolicyName
 $KvmPolicyList = Get-IntersightKvmPolicy
 
 #Get the list of KvmPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KvmPolicyByOrg = Get-IntersightKvmPolicy -Organization $org
 

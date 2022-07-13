@@ -5,7 +5,7 @@ $VirtualizationVmwareVirtualSwitchByName = Get-IntersightVirtualizationVmwareVir
 $VirtualizationVmwareVirtualSwitchList = Get-IntersightVirtualizationVmwareVirtualSwitch
 
 #Get the list of VirtualizationVmwareVirtualSwitch under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareVirtualSwitchByOrg = Get-IntersightVirtualizationVmwareVirtualSwitch -Organization $org
 

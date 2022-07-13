@@ -5,7 +5,7 @@ $VnicLanConnectivityPolicyByName = Get-IntersightVnicLanConnectivityPolicy -Name
 $VnicLanConnectivityPolicyList = Get-IntersightVnicLanConnectivityPolicy
 
 #Get the list of VnicLanConnectivityPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicLanConnectivityPolicyByOrg = Get-IntersightVnicLanConnectivityPolicy -Organization $org
 

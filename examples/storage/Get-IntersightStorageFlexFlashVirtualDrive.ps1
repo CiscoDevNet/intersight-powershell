@@ -5,7 +5,7 @@ $StorageFlexFlashVirtualDriveByName = Get-IntersightStorageFlexFlashVirtualDrive
 $StorageFlexFlashVirtualDriveList = Get-IntersightStorageFlexFlashVirtualDrive
 
 #Get the list of StorageFlexFlashVirtualDrive under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageFlexFlashVirtualDriveByOrg = Get-IntersightStorageFlexFlashVirtualDrive -Organization $org
 

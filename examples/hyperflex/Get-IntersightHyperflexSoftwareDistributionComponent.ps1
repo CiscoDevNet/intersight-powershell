@@ -5,7 +5,7 @@ $HyperflexSoftwareDistributionComponentByName = Get-IntersightHyperflexSoftwareD
 $HyperflexSoftwareDistributionComponentList = Get-IntersightHyperflexSoftwareDistributionComponent
 
 #Get the list of HyperflexSoftwareDistributionComponent under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexSoftwareDistributionComponentByOrg = Get-IntersightHyperflexSoftwareDistributionComponent -Organization $org
 

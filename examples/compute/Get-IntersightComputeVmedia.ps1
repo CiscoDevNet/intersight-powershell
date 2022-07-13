@@ -5,7 +5,7 @@ $ComputeVmediaByName = Get-IntersightComputeVmedia -Name ComputeVmediaName
 $ComputeVmediaList = Get-IntersightComputeVmedia
 
 #Get the list of ComputeVmedia under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeVmediaByOrg = Get-IntersightComputeVmedia -Organization $org
 

@@ -1,4 +1,4 @@
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $vlan_settings1 = Initialize-IntersightVnicVlansettings -DefaultVlan 1 -Mode 'ACCESS'
 

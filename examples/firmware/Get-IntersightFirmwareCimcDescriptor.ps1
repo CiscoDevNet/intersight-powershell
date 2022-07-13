@@ -5,7 +5,7 @@ $FirmwareCimcDescriptorByName = Get-IntersightFirmwareCimcDescriptor -Name Firmw
 $FirmwareCimcDescriptorList = Get-IntersightFirmwareCimcDescriptor
 
 #Get the list of FirmwareCimcDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareCimcDescriptorByOrg = Get-IntersightFirmwareCimcDescriptor -Organization $org
 

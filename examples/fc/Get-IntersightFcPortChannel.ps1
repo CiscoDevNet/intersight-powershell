@@ -5,7 +5,7 @@ $FcPortChannelByName = Get-IntersightFcPortChannel -Name FcPortChannelName
 $FcPortChannelList = Get-IntersightFcPortChannel
 
 #Get the list of FcPortChannel under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FcPortChannelByOrg = Get-IntersightFcPortChannel -Organization $org
 

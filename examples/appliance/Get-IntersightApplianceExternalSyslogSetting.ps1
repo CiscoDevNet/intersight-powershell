@@ -5,7 +5,7 @@ $ApplianceExternalSyslogSettingByName = Get-IntersightApplianceExternalSyslogSet
 $ApplianceExternalSyslogSettingList = Get-IntersightApplianceExternalSyslogSetting
 
 #Get the list of ApplianceExternalSyslogSetting under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceExternalSyslogSettingByOrg = Get-IntersightApplianceExternalSyslogSetting -Organization $org
 

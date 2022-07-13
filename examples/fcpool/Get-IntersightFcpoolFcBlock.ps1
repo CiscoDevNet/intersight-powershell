@@ -5,7 +5,7 @@ $FcpoolFcBlockByName = Get-IntersightFcpoolFcBlock -Name FcpoolFcBlockName
 $FcpoolFcBlockList = Get-IntersightFcpoolFcBlock
 
 #Get the list of FcpoolFcBlock under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FcpoolFcBlockByOrg = Get-IntersightFcpoolFcBlock -Organization $org
 

@@ -5,7 +5,7 @@ $FirmwareBiosDescriptorByName = Get-IntersightFirmwareBiosDescriptor -Name Firmw
 $FirmwareBiosDescriptorList = Get-IntersightFirmwareBiosDescriptor
 
 #Get the list of FirmwareBiosDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareBiosDescriptorByOrg = Get-IntersightFirmwareBiosDescriptor -Organization $org
 

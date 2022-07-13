@@ -5,7 +5,7 @@ $StorageNetAppEthernetPortByName = Get-IntersightStorageNetAppEthernetPort -Name
 $StorageNetAppEthernetPortList = Get-IntersightStorageNetAppEthernetPort
 
 #Get the list of StorageNetAppEthernetPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppEthernetPortByOrg = Get-IntersightStorageNetAppEthernetPort -Organization $org
 

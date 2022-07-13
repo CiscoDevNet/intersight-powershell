@@ -5,7 +5,7 @@ $IamEndPointUserByName = Get-IntersightIamEndPointUser -Name IamEndPointUserName
 $IamEndPointUserList = Get-IntersightIamEndPointUser
 
 #Get the list of IamEndPointUser under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamEndPointUserByOrg = Get-IntersightIamEndPointUser -Organization $org
 

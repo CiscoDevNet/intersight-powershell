@@ -5,7 +5,7 @@ $IppoolShadowBlockByName = Get-IntersightIppoolShadowBlock -Name IppoolShadowBlo
 $IppoolShadowBlockList = Get-IntersightIppoolShadowBlock
 
 #Get the list of IppoolShadowBlock under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IppoolShadowBlockByOrg = Get-IntersightIppoolShadowBlock -Organization $org
 

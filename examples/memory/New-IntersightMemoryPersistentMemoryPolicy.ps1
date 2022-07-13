@@ -4,6 +4,6 @@ $local_security1 = Initialize-IntersightMemoryPersistentmemorylocalsecurity -Ena
 
 $logical_namespaces1 = Initialize-IntersightMemoryPersistentmemorylocalsecurity -ClassId 'memory.PersistentMemoryLocalSecurity' -Name 'logical_namespace_test' -Capacity {'class_id': 'memory.PersistentMemoryLocalSecurity', 'name': 'logical_namespace_test', 'capacity': 131072, 'object_type': 'memory.PersistentMemoryLocalSecurity', 'mode': 'block', 'socket_id': 1, 'socket_memory_id': 6} -Mode 'block' -SocketId {'class_id': 'memory.PersistentMemoryLocalSecurity', 'name': 'logical_namespace_test', 'capacity': 131072, 'object_type': 'memory.PersistentMemoryLocalSecurity', 'mode': 'block', 'socket_id': 1, 'socket_memory_id': 6} -SocketMemoryId {'class_id': 'memory.PersistentMemoryLocalSecurity', 'name': 'logical_namespace_test', 'capacity': 131072, 'object_type': 'memory.PersistentMemoryLocalSecurity', 'mode': 'block', 'socket_id': 1, 'socket_memory_id': 6}
 
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $memory_persistent_memory_policy1 = New-IntersightMemoryPersistentMemoryPolicy -Goals $goals1 -LocalSecurity $local_security1 -LogicalNamespaces $logical_namespaces1 -Organization $organization1 -Name 'memory_persistent_memory_policy1' -Description 'memory persistent memory policies' -ManagementMode 'configured-from-intersight' -RetainNamespaces 0

@@ -5,7 +5,7 @@ $LicenseLicenseInfoByName = Get-IntersightLicenseLicenseInfo -Name LicenseLicens
 $LicenseLicenseInfoList = Get-IntersightLicenseLicenseInfo
 
 #Get the list of LicenseLicenseInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LicenseLicenseInfoByOrg = Get-IntersightLicenseLicenseInfo -Organization $org
 

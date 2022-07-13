@@ -5,7 +5,7 @@ $NiatelemetryNexusDashboardsByName = Get-IntersightNiatelemetryNexusDashboards -
 $NiatelemetryNexusDashboardsList = Get-IntersightNiatelemetryNexusDashboards
 
 #Get the list of NiatelemetryNexusDashboards under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryNexusDashboardsByOrg = Get-IntersightNiatelemetryNexusDashboards -Organization $org
 

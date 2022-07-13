@@ -5,7 +5,7 @@ $NiaapiDcnmReleaseRecommendByName = Get-IntersightNiaapiDcnmReleaseRecommend -Na
 $NiaapiDcnmReleaseRecommendList = Get-IntersightNiaapiDcnmReleaseRecommend
 
 #Get the list of NiaapiDcnmReleaseRecommend under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiDcnmReleaseRecommendByOrg = Get-IntersightNiaapiDcnmReleaseRecommend -Organization $org
 

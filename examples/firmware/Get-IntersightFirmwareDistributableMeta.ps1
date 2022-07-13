@@ -5,7 +5,7 @@ $FirmwareDistributableMetaByName = Get-IntersightFirmwareDistributableMeta -Name
 $FirmwareDistributableMetaList = Get-IntersightFirmwareDistributableMeta
 
 #Get the list of FirmwareDistributableMeta under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareDistributableMetaByOrg = Get-IntersightFirmwareDistributableMeta -Organization $org
 

@@ -5,7 +5,7 @@ $IaasMostRunTasksByName = Get-IntersightIaasMostRunTasks -Name IaasMostRunTasksN
 $IaasMostRunTasksList = Get-IntersightIaasMostRunTasks
 
 #Get the list of IaasMostRunTasks under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasMostRunTasksByOrg = Get-IntersightIaasMostRunTasks -Organization $org
 

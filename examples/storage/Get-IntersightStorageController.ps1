@@ -5,7 +5,7 @@ $StorageControllerByName = Get-IntersightStorageController -Name StorageControll
 $StorageControllerList = Get-IntersightStorageController
 
 #Get the list of StorageController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageControllerByOrg = Get-IntersightStorageController -Organization $org
 

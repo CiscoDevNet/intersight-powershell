@@ -1,6 +1,6 @@
 $config_context1 = Initialize-IntersightPolicyConfigcontext -ControlAction 'Deploy' -ErrorState 'Pre-config-error'
 
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $workflow_info1 = Get-IntersightWorkflowWorkflowinfo -Moid '<Replace with Moid>'
 

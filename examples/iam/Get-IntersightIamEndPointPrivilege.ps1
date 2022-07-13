@@ -5,7 +5,7 @@ $IamEndPointPrivilegeByName = Get-IntersightIamEndPointPrivilege -Name IamEndPoi
 $IamEndPointPrivilegeList = Get-IntersightIamEndPointPrivilege
 
 #Get the list of IamEndPointPrivilege under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamEndPointPrivilegeByOrg = Get-IntersightIamEndPointPrivilege -Organization $org
 

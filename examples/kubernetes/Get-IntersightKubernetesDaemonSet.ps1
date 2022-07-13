@@ -5,7 +5,7 @@ $KubernetesDaemonSetByName = Get-IntersightKubernetesDaemonSet -Name KubernetesD
 $KubernetesDaemonSetList = Get-IntersightKubernetesDaemonSet
 
 #Get the list of KubernetesDaemonSet under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesDaemonSetByOrg = Get-IntersightKubernetesDaemonSet -Organization $org
 

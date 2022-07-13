@@ -5,7 +5,7 @@ $IamAccountByName = Get-IntersightIamAccount -Name IamAccountName
 $IamAccountList = Get-IntersightIamAccount
 
 #Get the list of IamAccount under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamAccountByOrg = Get-IntersightIamAccount -Organization $org
 

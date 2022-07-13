@@ -5,7 +5,7 @@ $ApplianceDataExportPolicyByName = Get-IntersightApplianceDataExportPolicy -Name
 $ApplianceDataExportPolicyList = Get-IntersightApplianceDataExportPolicy
 
 #Get the list of ApplianceDataExportPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceDataExportPolicyByOrg = Get-IntersightApplianceDataExportPolicy -Organization $org
 

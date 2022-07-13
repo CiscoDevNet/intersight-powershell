@@ -5,7 +5,7 @@ $SoftwareApplianceDistributableByName = Get-IntersightSoftwareApplianceDistribut
 $SoftwareApplianceDistributableList = Get-IntersightSoftwareApplianceDistributable
 
 #Get the list of SoftwareApplianceDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareApplianceDistributableByOrg = Get-IntersightSoftwareApplianceDistributable -Organization $org
 

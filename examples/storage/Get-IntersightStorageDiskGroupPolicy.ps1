@@ -5,7 +5,7 @@ $StorageDiskGroupPolicyByName = Get-IntersightStorageDiskGroupPolicy -Name Stora
 $StorageDiskGroupPolicyList = Get-IntersightStorageDiskGroupPolicy
 
 #Get the list of StorageDiskGroupPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageDiskGroupPolicyByOrg = Get-IntersightStorageDiskGroupPolicy -Organization $org
 

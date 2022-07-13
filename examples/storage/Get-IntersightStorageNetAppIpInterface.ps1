@@ -5,7 +5,7 @@ $StorageNetAppIpInterfaceByName = Get-IntersightStorageNetAppIpInterface -Name S
 $StorageNetAppIpInterfaceList = Get-IntersightStorageNetAppIpInterface
 
 #Get the list of StorageNetAppIpInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppIpInterfaceByOrg = Get-IntersightStorageNetAppIpInterface -Organization $org
 

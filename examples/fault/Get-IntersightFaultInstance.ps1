@@ -5,7 +5,7 @@ $FaultInstanceByName = Get-IntersightFaultInstance -Name FaultInstanceName
 $FaultInstanceList = Get-IntersightFaultInstance
 
 #Get the list of FaultInstance under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FaultInstanceByOrg = Get-IntersightFaultInstance -Organization $org
 

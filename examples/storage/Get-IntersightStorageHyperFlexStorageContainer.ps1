@@ -5,7 +5,7 @@ $StorageHyperFlexStorageContainerByName = Get-IntersightStorageHyperFlexStorageC
 $StorageHyperFlexStorageContainerList = Get-IntersightStorageHyperFlexStorageContainer
 
 #Get the list of StorageHyperFlexStorageContainer under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHyperFlexStorageContainerByOrg = Get-IntersightStorageHyperFlexStorageContainer -Organization $org
 

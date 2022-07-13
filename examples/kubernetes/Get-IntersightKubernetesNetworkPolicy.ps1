@@ -5,7 +5,7 @@ $KubernetesNetworkPolicyByName = Get-IntersightKubernetesNetworkPolicy -Name Kub
 $KubernetesNetworkPolicyList = Get-IntersightKubernetesNetworkPolicy
 
 #Get the list of KubernetesNetworkPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesNetworkPolicyByOrg = Get-IntersightKubernetesNetworkPolicy -Organization $org
 

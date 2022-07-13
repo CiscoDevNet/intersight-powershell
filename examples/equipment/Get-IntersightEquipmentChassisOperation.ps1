@@ -5,7 +5,7 @@ $EquipmentChassisOperationByName = Get-IntersightEquipmentChassisOperation -Name
 $EquipmentChassisOperationList = Get-IntersightEquipmentChassisOperation
 
 #Get the list of EquipmentChassisOperation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentChassisOperationByOrg = Get-IntersightEquipmentChassisOperation -Organization $org
 

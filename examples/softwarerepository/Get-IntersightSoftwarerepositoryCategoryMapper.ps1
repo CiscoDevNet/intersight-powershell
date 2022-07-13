@@ -5,7 +5,7 @@ $SoftwarerepositoryCategoryMapperByName = Get-IntersightSoftwarerepositoryCatego
 $SoftwarerepositoryCategoryMapperList = Get-IntersightSoftwarerepositoryCategoryMapper
 
 #Get the list of SoftwarerepositoryCategoryMapper under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryCategoryMapperByOrg = Get-IntersightSoftwarerepositoryCategoryMapper -Organization $org
 

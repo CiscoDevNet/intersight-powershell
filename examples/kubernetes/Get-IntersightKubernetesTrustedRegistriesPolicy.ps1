@@ -5,7 +5,7 @@ $KubernetesTrustedRegistriesPolicyByName = Get-IntersightKubernetesTrustedRegist
 $KubernetesTrustedRegistriesPolicyList = Get-IntersightKubernetesTrustedRegistriesPolicy
 
 #Get the list of KubernetesTrustedRegistriesPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesTrustedRegistriesPolicyByOrg = Get-IntersightKubernetesTrustedRegistriesPolicy -Organization $org
 

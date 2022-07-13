@@ -5,7 +5,7 @@ $ConfigExporterByName = Get-IntersightConfigExporter -Name ConfigExporterName
 $ConfigExporterList = Get-IntersightConfigExporter
 
 #Get the list of ConfigExporter under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ConfigExporterByOrg = Get-IntersightConfigExporter -Organization $org
 

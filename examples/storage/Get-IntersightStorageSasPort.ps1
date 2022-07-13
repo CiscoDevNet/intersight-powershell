@@ -5,7 +5,7 @@ $StorageSasPortByName = Get-IntersightStorageSasPort -Name StorageSasPortName
 $StorageSasPortList = Get-IntersightStorageSasPort
 
 #Get the list of StorageSasPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageSasPortByOrg = Get-IntersightStorageSasPort -Organization $org
 

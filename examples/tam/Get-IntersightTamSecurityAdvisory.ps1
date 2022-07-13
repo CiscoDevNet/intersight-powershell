@@ -5,7 +5,7 @@ $TamSecurityAdvisoryByName = Get-IntersightTamSecurityAdvisory -Name TamSecurity
 $TamSecurityAdvisoryList = Get-IntersightTamSecurityAdvisory
 
 #Get the list of TamSecurityAdvisory under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TamSecurityAdvisoryByOrg = Get-IntersightTamSecurityAdvisory -Organization $org
 

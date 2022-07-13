@@ -5,7 +5,7 @@ $CapabilityChassisManufacturingDefByName = Get-IntersightCapabilityChassisManufa
 $CapabilityChassisManufacturingDefList = Get-IntersightCapabilityChassisManufacturingDef
 
 #Get the list of CapabilityChassisManufacturingDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityChassisManufacturingDefByOrg = Get-IntersightCapabilityChassisManufacturingDef -Organization $org
 

@@ -5,7 +5,7 @@ $StorageFlexUtilControllerByName = Get-IntersightStorageFlexUtilController -Name
 $StorageFlexUtilControllerList = Get-IntersightStorageFlexUtilController
 
 #Get the list of StorageFlexUtilController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageFlexUtilControllerByOrg = Get-IntersightStorageFlexUtilController -Organization $org
 

@@ -5,7 +5,7 @@ $CrdCustomResourceByName = Get-IntersightCrdCustomResource -Name CrdCustomResour
 $CrdCustomResourceList = Get-IntersightCrdCustomResource
 
 #Get the list of CrdCustomResource under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CrdCustomResourceByOrg = Get-IntersightCrdCustomResource -Organization $org
 

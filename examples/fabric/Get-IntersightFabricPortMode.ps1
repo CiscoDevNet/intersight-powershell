@@ -5,7 +5,7 @@ $FabricPortModeByName = Get-IntersightFabricPortMode -Name FabricPortModeName
 $FabricPortModeList = Get-IntersightFabricPortMode
 
 #Get the list of FabricPortMode under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricPortModeByOrg = Get-IntersightFabricPortMode -Organization $org
 

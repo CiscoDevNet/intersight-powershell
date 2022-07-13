@@ -5,7 +5,7 @@ $HyperflexCiscoHypervisorManagerByName = Get-IntersightHyperflexCiscoHypervisorM
 $HyperflexCiscoHypervisorManagerList = Get-IntersightHyperflexCiscoHypervisorManager
 
 #Get the list of HyperflexCiscoHypervisorManager under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexCiscoHypervisorManagerByOrg = Get-IntersightHyperflexCiscoHypervisorManager -Organization $org
 

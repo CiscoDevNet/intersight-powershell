@@ -5,7 +5,7 @@ $OprsSyncTargetByName = Get-IntersightOprsSyncTarget -Name OprsSyncTargetName
 $OprsSyncTargetList = Get-IntersightOprsSyncTarget
 
 #Get the list of OprsSyncTarget under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OprsSyncTargetByOrg = Get-IntersightOprsSyncTarget -Organization $org
 

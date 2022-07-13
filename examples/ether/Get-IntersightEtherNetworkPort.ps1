@@ -5,7 +5,7 @@ $EtherNetworkPortByName = Get-IntersightEtherNetworkPort -Name EtherNetworkPortN
 $EtherNetworkPortList = Get-IntersightEtherNetworkPort
 
 #Get the list of EtherNetworkPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EtherNetworkPortByOrg = Get-IntersightEtherNetworkPort -Organization $org
 

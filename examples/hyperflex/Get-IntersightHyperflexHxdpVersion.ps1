@@ -5,7 +5,7 @@ $HyperflexHxdpVersionByName = Get-IntersightHyperflexHxdpVersion -Name Hyperflex
 $HyperflexHxdpVersionList = Get-IntersightHyperflexHxdpVersion
 
 #Get the list of HyperflexHxdpVersion under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxdpVersionByOrg = Get-IntersightHyperflexHxdpVersion -Organization $org
 

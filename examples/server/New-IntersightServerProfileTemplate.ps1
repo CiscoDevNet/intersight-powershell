@@ -1,4 +1,4 @@
-$organization1 = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization1 = Get-IntersightOrganizationOrganization -Name 'default'
 
 $policy_bucket1 = Get-IntersightBootPrecisionpolicy -Moid '<Replace with Moid>'
 

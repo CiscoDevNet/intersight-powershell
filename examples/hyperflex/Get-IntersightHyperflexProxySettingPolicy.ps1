@@ -5,7 +5,7 @@ $HyperflexProxySettingPolicyByName = Get-IntersightHyperflexProxySettingPolicy -
 $HyperflexProxySettingPolicyList = Get-IntersightHyperflexProxySettingPolicy
 
 #Get the list of HyperflexProxySettingPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexProxySettingPolicyByOrg = Get-IntersightHyperflexProxySettingPolicy -Organization $org
 

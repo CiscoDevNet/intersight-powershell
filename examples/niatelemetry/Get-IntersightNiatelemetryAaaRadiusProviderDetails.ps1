@@ -5,7 +5,7 @@ $NiatelemetryAaaRadiusProviderDetailsByName = Get-IntersightNiatelemetryAaaRadiu
 $NiatelemetryAaaRadiusProviderDetailsList = Get-IntersightNiatelemetryAaaRadiusProviderDetails
 
 #Get the list of NiatelemetryAaaRadiusProviderDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryAaaRadiusProviderDetailsByOrg = Get-IntersightNiatelemetryAaaRadiusProviderDetails -Organization $org
 

@@ -5,7 +5,7 @@ $HclExemptedCatalogByName = Get-IntersightHclExemptedCatalog -Name HclExemptedCa
 $HclExemptedCatalogList = Get-IntersightHclExemptedCatalog
 
 #Get the list of HclExemptedCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HclExemptedCatalogByOrg = Get-IntersightHclExemptedCatalog -Organization $org
 

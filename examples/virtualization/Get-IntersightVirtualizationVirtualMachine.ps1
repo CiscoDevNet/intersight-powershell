@@ -5,7 +5,7 @@ $VirtualizationVirtualMachineByName = Get-IntersightVirtualizationVirtualMachine
 $VirtualizationVirtualMachineList = Get-IntersightVirtualizationVirtualMachine
 
 #Get the list of VirtualizationVirtualMachine under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVirtualMachineByOrg = Get-IntersightVirtualizationVirtualMachine -Organization $org
 

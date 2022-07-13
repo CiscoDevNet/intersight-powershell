@@ -5,7 +5,7 @@ $FcpoolPoolMemberByName = Get-IntersightFcpoolPoolMember -Name FcpoolPoolMemberN
 $FcpoolPoolMemberList = Get-IntersightFcpoolPoolMember
 
 #Get the list of FcpoolPoolMember under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FcpoolPoolMemberByOrg = Get-IntersightFcpoolPoolMember -Organization $org
 

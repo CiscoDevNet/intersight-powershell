@@ -5,7 +5,7 @@ $NiatelemetryFaultByName = Get-IntersightNiatelemetryFault -Name NiatelemetryFau
 $NiatelemetryFaultList = Get-IntersightNiatelemetryFault
 
 #Get the list of NiatelemetryFault under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryFaultByOrg = Get-IntersightNiatelemetryFault -Organization $org
 

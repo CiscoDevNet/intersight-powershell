@@ -5,7 +5,7 @@ $KubernetesAddonPolicyByName = Get-IntersightKubernetesAddonPolicy -Name Kuberne
 $KubernetesAddonPolicyList = Get-IntersightKubernetesAddonPolicy
 
 #Get the list of KubernetesAddonPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesAddonPolicyByOrg = Get-IntersightKubernetesAddonPolicy -Organization $org
 

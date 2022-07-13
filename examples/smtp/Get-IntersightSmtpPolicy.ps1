@@ -5,7 +5,7 @@ $SmtpPolicyByName = Get-IntersightSmtpPolicy -Name SmtpPolicyName
 $SmtpPolicyList = Get-IntersightSmtpPolicy
 
 #Get the list of SmtpPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SmtpPolicyByOrg = Get-IntersightSmtpPolicy -Organization $org
 

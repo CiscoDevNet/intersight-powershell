@@ -5,7 +5,7 @@ $KubernetesNodeGroupProfileByName = Get-IntersightKubernetesNodeGroupProfile -Na
 $KubernetesNodeGroupProfileList = Get-IntersightKubernetesNodeGroupProfile
 
 #Get the list of KubernetesNodeGroupProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesNodeGroupProfileByOrg = Get-IntersightKubernetesNodeGroupProfile -Organization $org
 

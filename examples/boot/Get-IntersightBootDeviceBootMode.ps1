@@ -5,7 +5,7 @@ $BootDeviceBootModeByName = Get-IntersightBootDeviceBootMode -Name BootDeviceBoo
 $BootDeviceBootModeList = Get-IntersightBootDeviceBootMode
 
 #Get the list of BootDeviceBootMode under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootDeviceBootModeByOrg = Get-IntersightBootDeviceBootMode -Organization $org
 

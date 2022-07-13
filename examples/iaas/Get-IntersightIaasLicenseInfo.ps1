@@ -5,7 +5,7 @@ $IaasLicenseInfoByName = Get-IntersightIaasLicenseInfo -Name IaasLicenseInfoName
 $IaasLicenseInfoList = Get-IntersightIaasLicenseInfo
 
 #Get the list of IaasLicenseInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasLicenseInfoByOrg = Get-IntersightIaasLicenseInfo -Organization $org
 

@@ -5,7 +5,7 @@ $HyperflexClusterNetworkPolicyByName = Get-IntersightHyperflexClusterNetworkPoli
 $HyperflexClusterNetworkPolicyList = Get-IntersightHyperflexClusterNetworkPolicy
 
 #Get the list of HyperflexClusterNetworkPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexClusterNetworkPolicyByOrg = Get-IntersightHyperflexClusterNetworkPolicy -Organization $org
 

@@ -5,7 +5,7 @@ $IamResourcePermissionByName = Get-IntersightIamResourcePermission -Name IamReso
 $IamResourcePermissionList = Get-IntersightIamResourcePermission
 
 #Get the list of IamResourcePermission under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamResourcePermissionByOrg = Get-IntersightIamResourcePermission -Organization $org
 

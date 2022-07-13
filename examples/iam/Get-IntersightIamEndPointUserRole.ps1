@@ -5,7 +5,7 @@ $IamEndPointUserRoleByName = Get-IntersightIamEndPointUserRole -Name IamEndPoint
 $IamEndPointUserRoleList = Get-IntersightIamEndPointUserRole
 
 #Get the list of IamEndPointUserRole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamEndPointUserRoleByOrg = Get-IntersightIamEndPointUserRole -Organization $org
 

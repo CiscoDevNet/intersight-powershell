@@ -5,7 +5,7 @@ $ConfigExportedItemByName = Get-IntersightConfigExportedItem -Name ConfigExporte
 $ConfigExportedItemList = Get-IntersightConfigExportedItem
 
 #Get the list of ConfigExportedItem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ConfigExportedItemByOrg = Get-IntersightConfigExportedItem -Organization $org
 

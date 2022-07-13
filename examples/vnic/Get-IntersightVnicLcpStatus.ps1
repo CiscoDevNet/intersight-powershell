@@ -5,7 +5,7 @@ $VnicLcpStatusByName = Get-IntersightVnicLcpStatus -Name VnicLcpStatusName
 $VnicLcpStatusList = Get-IntersightVnicLcpStatus
 
 #Get the list of VnicLcpStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicLcpStatusByOrg = Get-IntersightVnicLcpStatus -Organization $org
 

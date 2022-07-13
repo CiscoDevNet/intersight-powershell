@@ -5,7 +5,7 @@ $HyperflexHxapVirtualDiskByName = Get-IntersightHyperflexHxapVirtualDisk -Name H
 $HyperflexHxapVirtualDiskList = Get-IntersightHyperflexHxapVirtualDisk
 
 #Get the list of HyperflexHxapVirtualDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapVirtualDiskByOrg = Get-IntersightHyperflexHxapVirtualDisk -Organization $org
 

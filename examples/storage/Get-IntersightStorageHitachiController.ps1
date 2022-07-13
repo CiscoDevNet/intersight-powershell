@@ -5,7 +5,7 @@ $StorageHitachiControllerByName = Get-IntersightStorageHitachiController -Name S
 $StorageHitachiControllerList = Get-IntersightStorageHitachiController
 
 #Get the list of StorageHitachiController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiControllerByOrg = Get-IntersightStorageHitachiController -Organization $org
 

@@ -5,7 +5,7 @@ $StorageDiskSlotByName = Get-IntersightStorageDiskSlot -Name StorageDiskSlotName
 $StorageDiskSlotList = Get-IntersightStorageDiskSlot
 
 #Get the list of StorageDiskSlot under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageDiskSlotByOrg = Get-IntersightStorageDiskSlot -Organization $org
 

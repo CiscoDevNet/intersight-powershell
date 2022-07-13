@@ -5,7 +5,7 @@ $PciDeviceByName = Get-IntersightPciDevice -Name PciDeviceName
 $PciDeviceList = Get-IntersightPciDevice
 
 #Get the list of PciDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $PciDeviceByOrg = Get-IntersightPciDevice -Organization $org
 

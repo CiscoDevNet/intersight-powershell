@@ -5,7 +5,7 @@ $StorageSpanByName = Get-IntersightStorageSpan -Name StorageSpanName
 $StorageSpanList = Get-IntersightStorageSpan
 
 #Get the list of StorageSpan under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageSpanByOrg = Get-IntersightStorageSpan -Organization $org
 

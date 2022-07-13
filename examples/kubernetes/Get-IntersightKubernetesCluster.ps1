@@ -5,7 +5,7 @@ $KubernetesClusterByName = Get-IntersightKubernetesCluster -Name KubernetesClust
 $KubernetesClusterList = Get-IntersightKubernetesCluster
 
 #Get the list of KubernetesCluster under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesClusterByOrg = Get-IntersightKubernetesCluster -Organization $org
 

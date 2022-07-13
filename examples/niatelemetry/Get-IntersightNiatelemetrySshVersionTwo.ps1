@@ -5,7 +5,7 @@ $NiatelemetrySshVersionTwoByName = Get-IntersightNiatelemetrySshVersionTwo -Name
 $NiatelemetrySshVersionTwoList = Get-IntersightNiatelemetrySshVersionTwo
 
 #Get the list of NiatelemetrySshVersionTwo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetrySshVersionTwoByOrg = Get-IntersightNiatelemetrySshVersionTwo -Organization $org
 

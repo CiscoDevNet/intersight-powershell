@@ -5,7 +5,7 @@ $NiatelemetryLcByName = Get-IntersightNiatelemetryLc -Name NiatelemetryLcName
 $NiatelemetryLcList = Get-IntersightNiatelemetryLc
 
 #Get the list of NiatelemetryLc under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryLcByOrg = Get-IntersightNiatelemetryLc -Organization $org
 

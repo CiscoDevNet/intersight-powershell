@@ -1,5 +1,5 @@
 # Get the organization.
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 # Get the SoftwareSolutionDistributable to Update
 $SoftwareSolutionDistributable = Get-IntersightSoftwareSolutionDistributable -Name SoftwareSolutionDistributableName

@@ -5,7 +5,7 @@ $ForecastInstanceByName = Get-IntersightForecastInstance -Name ForecastInstanceN
 $ForecastInstanceList = Get-IntersightForecastInstance
 
 #Get the list of ForecastInstance under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ForecastInstanceByOrg = Get-IntersightForecastInstance -Organization $org
 

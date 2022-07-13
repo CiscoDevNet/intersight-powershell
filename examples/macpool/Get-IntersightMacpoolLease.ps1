@@ -5,7 +5,7 @@ $MacpoolLeaseByName = Get-IntersightMacpoolLease -Name MacpoolLeaseName
 $MacpoolLeaseList = Get-IntersightMacpoolLease
 
 #Get the list of MacpoolLease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MacpoolLeaseByOrg = Get-IntersightMacpoolLease -Organization $org
 

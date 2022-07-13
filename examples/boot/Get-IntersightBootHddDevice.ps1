@@ -5,7 +5,7 @@ $BootHddDeviceByName = Get-IntersightBootHddDevice -Name BootHddDeviceName
 $BootHddDeviceList = Get-IntersightBootHddDevice
 
 #Get the list of BootHddDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootHddDeviceByOrg = Get-IntersightBootHddDevice -Organization $org
 

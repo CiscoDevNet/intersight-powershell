@@ -5,7 +5,7 @@ $KubernetesIngressByName = Get-IntersightKubernetesIngress -Name KubernetesIngre
 $KubernetesIngressList = Get-IntersightKubernetesIngress
 
 #Get the list of KubernetesIngress under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesIngressByOrg = Get-IntersightKubernetesIngress -Organization $org
 

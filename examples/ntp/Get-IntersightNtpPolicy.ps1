@@ -5,7 +5,7 @@ $NtpPolicyByName = Get-IntersightNtpPolicy -Name NtpPolicyName
 $NtpPolicyList = Get-IntersightNtpPolicy
 
 #Get the list of NtpPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NtpPolicyByOrg = Get-IntersightNtpPolicy -Organization $org
 

@@ -5,7 +5,7 @@ $FabricVlanByName = Get-IntersightFabricVlan -Name FabricVlanName
 $FabricVlanList = Get-IntersightFabricVlan
 
 #Get the list of FabricVlan under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricVlanByOrg = Get-IntersightFabricVlan -Organization $org
 

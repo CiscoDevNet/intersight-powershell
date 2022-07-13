@@ -5,7 +5,7 @@ $IamOAuthTokenByName = Get-IntersightIamOAuthToken -Name IamOAuthTokenName
 $IamOAuthTokenList = Get-IntersightIamOAuthToken
 
 #Get the list of IamOAuthToken under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamOAuthTokenByOrg = Get-IntersightIamOAuthToken -Organization $org
 

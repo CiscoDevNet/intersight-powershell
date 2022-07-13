@@ -5,7 +5,7 @@ $VirtualizationVmwareUplinkPortByName = Get-IntersightVirtualizationVmwareUplink
 $VirtualizationVmwareUplinkPortList = Get-IntersightVirtualizationVmwareUplinkPort
 
 #Get the list of VirtualizationVmwareUplinkPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareUplinkPortByOrg = Get-IntersightVirtualizationVmwareUplinkPort -Organization $org
 

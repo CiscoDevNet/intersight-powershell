@@ -5,7 +5,7 @@ $IamResourceLimitsByName = Get-IntersightIamResourceLimits -Name IamResourceLimi
 $IamResourceLimitsList = Get-IntersightIamResourceLimits
 
 #Get the list of IamResourceLimits under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamResourceLimitsByOrg = Get-IntersightIamResourceLimits -Organization $org
 

@@ -5,7 +5,7 @@ $StorageFlexFlashControllerByName = Get-IntersightStorageFlexFlashController -Na
 $StorageFlexFlashControllerList = Get-IntersightStorageFlexFlashController
 
 #Get the list of StorageFlexFlashController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageFlexFlashControllerByOrg = Get-IntersightStorageFlexFlashController -Organization $org
 

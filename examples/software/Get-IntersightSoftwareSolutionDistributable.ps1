@@ -5,7 +5,7 @@ $SoftwareSolutionDistributableByName = Get-IntersightSoftwareSolutionDistributab
 $SoftwareSolutionDistributableList = Get-IntersightSoftwareSolutionDistributable
 
 #Get the list of SoftwareSolutionDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareSolutionDistributableByOrg = Get-IntersightSoftwareSolutionDistributable -Organization $org
 

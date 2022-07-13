@@ -5,7 +5,7 @@ $NiatelemetryAaaLdapProviderDetailsByName = Get-IntersightNiatelemetryAaaLdapPro
 $NiatelemetryAaaLdapProviderDetailsList = Get-IntersightNiatelemetryAaaLdapProviderDetails
 
 #Get the list of NiatelemetryAaaLdapProviderDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryAaaLdapProviderDetailsByOrg = Get-IntersightNiatelemetryAaaLdapProviderDetails -Organization $org
 

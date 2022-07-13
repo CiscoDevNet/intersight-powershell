@@ -4,6 +4,6 @@ $api_data_sources1 = Initialize-IntersightTamApidatasource -Name 'api_data_sourc
 
 $advisory_details1 = Initialize-IntersightTamSecurityadvisorydetails -Description 'tam security advisory' -ClassId 'TamSecurityAdvisoryDetails'
 
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $tam_advisory_definition = New-IntersightTamAdvisoryDefinition -Actions $actions1 -ApiDataSources $api_data_sources1 -AdvisoryDetails $advisory_details1 -Organization $organization -Name 'tam_advisory_definition' -State 'ready' -Type 'securityAdvisory'

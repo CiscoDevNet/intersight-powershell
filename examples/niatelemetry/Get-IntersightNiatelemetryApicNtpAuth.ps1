@@ -5,7 +5,7 @@ $NiatelemetryApicNtpAuthByName = Get-IntersightNiatelemetryApicNtpAuth -Name Nia
 $NiatelemetryApicNtpAuthList = Get-IntersightNiatelemetryApicNtpAuth
 
 #Get the list of NiatelemetryApicNtpAuth under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicNtpAuthByOrg = Get-IntersightNiatelemetryApicNtpAuth -Organization $org
 

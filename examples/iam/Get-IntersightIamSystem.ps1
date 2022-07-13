@@ -5,7 +5,7 @@ $IamSystemByName = Get-IntersightIamSystem -Name IamSystemName
 $IamSystemList = Get-IntersightIamSystem
 
 #Get the list of IamSystem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamSystemByOrg = Get-IntersightIamSystem -Organization $org
 

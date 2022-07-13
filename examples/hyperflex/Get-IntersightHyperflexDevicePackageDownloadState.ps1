@@ -5,7 +5,7 @@ $HyperflexDevicePackageDownloadStateByName = Get-IntersightHyperflexDevicePackag
 $HyperflexDevicePackageDownloadStateList = Get-IntersightHyperflexDevicePackageDownloadState
 
 #Get the list of HyperflexDevicePackageDownloadState under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexDevicePackageDownloadStateByOrg = Get-IntersightHyperflexDevicePackageDownloadState -Organization $org
 

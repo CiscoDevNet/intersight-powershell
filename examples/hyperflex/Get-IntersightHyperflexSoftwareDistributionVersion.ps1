@@ -5,7 +5,7 @@ $HyperflexSoftwareDistributionVersionByName = Get-IntersightHyperflexSoftwareDis
 $HyperflexSoftwareDistributionVersionList = Get-IntersightHyperflexSoftwareDistributionVersion
 
 #Get the list of HyperflexSoftwareDistributionVersion under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexSoftwareDistributionVersionByOrg = Get-IntersightHyperflexSoftwareDistributionVersion -Organization $org
 

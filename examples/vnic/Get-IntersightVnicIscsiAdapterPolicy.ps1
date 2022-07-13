@@ -5,7 +5,7 @@ $VnicIscsiAdapterPolicyByName = Get-IntersightVnicIscsiAdapterPolicy -Name VnicI
 $VnicIscsiAdapterPolicyList = Get-IntersightVnicIscsiAdapterPolicy
 
 #Get the list of VnicIscsiAdapterPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicIscsiAdapterPolicyByOrg = Get-IntersightVnicIscsiAdapterPolicy -Organization $org
 

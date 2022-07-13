@@ -5,7 +5,7 @@ $LicenseIwoCustomerOpByName = Get-IntersightLicenseIwoCustomerOp -Name LicenseIw
 $LicenseIwoCustomerOpList = Get-IntersightLicenseIwoCustomerOp
 
 #Get the list of LicenseIwoCustomerOp under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LicenseIwoCustomerOpByOrg = Get-IntersightLicenseIwoCustomerOp -Organization $org
 

@@ -5,7 +5,7 @@ $EquipmentFexIdentityByName = Get-IntersightEquipmentFexIdentity -Name Equipment
 $EquipmentFexIdentityList = Get-IntersightEquipmentFexIdentity
 
 #Get the list of EquipmentFexIdentity under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentFexIdentityByOrg = Get-IntersightEquipmentFexIdentity -Organization $org
 

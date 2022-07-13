@@ -5,7 +5,7 @@ $ApplianceRestoreByName = Get-IntersightApplianceRestore -Name ApplianceRestoreN
 $ApplianceRestoreList = Get-IntersightApplianceRestore
 
 #Get the list of ApplianceRestore under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceRestoreByOrg = Get-IntersightApplianceRestore -Organization $org
 

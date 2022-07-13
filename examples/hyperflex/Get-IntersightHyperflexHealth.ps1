@@ -5,7 +5,7 @@ $HyperflexHealthByName = Get-IntersightHyperflexHealth -Name HyperflexHealthName
 $HyperflexHealthList = Get-IntersightHyperflexHealth
 
 #Get the list of HyperflexHealth under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHealthByOrg = Get-IntersightHyperflexHealth -Organization $org
 

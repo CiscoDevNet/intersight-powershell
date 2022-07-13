@@ -5,7 +5,7 @@ $StoragePurePortByName = Get-IntersightStoragePurePort -Name StoragePurePortName
 $StoragePurePortList = Get-IntersightStoragePurePort
 
 #Get the list of StoragePurePort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePurePortByOrg = Get-IntersightStoragePurePort -Organization $org
 

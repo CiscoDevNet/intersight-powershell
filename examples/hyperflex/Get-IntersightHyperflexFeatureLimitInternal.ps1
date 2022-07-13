@@ -5,7 +5,7 @@ $HyperflexFeatureLimitInternalByName = Get-IntersightHyperflexFeatureLimitIntern
 $HyperflexFeatureLimitInternalList = Get-IntersightHyperflexFeatureLimitInternal
 
 #Get the list of HyperflexFeatureLimitInternal under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexFeatureLimitInternalByOrg = Get-IntersightHyperflexFeatureLimitInternal -Organization $org
 

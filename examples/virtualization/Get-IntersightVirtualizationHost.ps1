@@ -5,7 +5,7 @@ $VirtualizationHostByName = Get-IntersightVirtualizationHost -Name Virtualizatio
 $VirtualizationHostList = Get-IntersightVirtualizationHost
 
 #Get the list of VirtualizationHost under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationHostByOrg = Get-IntersightVirtualizationHost -Organization $org
 

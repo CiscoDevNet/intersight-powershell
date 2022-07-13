@@ -5,7 +5,7 @@ $CertificatemanagementPolicyByName = Get-IntersightCertificatemanagementPolicy -
 $CertificatemanagementPolicyList = Get-IntersightCertificatemanagementPolicy
 
 #Get the list of CertificatemanagementPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CertificatemanagementPolicyByOrg = Get-IntersightCertificatemanagementPolicy -Organization $org
 

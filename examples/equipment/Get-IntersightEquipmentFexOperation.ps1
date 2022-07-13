@@ -5,7 +5,7 @@ $EquipmentFexOperationByName = Get-IntersightEquipmentFexOperation -Name Equipme
 $EquipmentFexOperationList = Get-IntersightEquipmentFexOperation
 
 #Get the list of EquipmentFexOperation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentFexOperationByOrg = Get-IntersightEquipmentFexOperation -Organization $org
 

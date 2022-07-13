@@ -5,7 +5,7 @@ $IamIdpByName = Get-IntersightIamIdp -Name IamIdpName
 $IamIdpList = Get-IntersightIamIdp
 
 #Get the list of IamIdp under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamIdpByOrg = Get-IntersightIamIdp -Organization $org
 

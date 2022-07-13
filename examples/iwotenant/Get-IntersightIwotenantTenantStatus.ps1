@@ -5,7 +5,7 @@ $IwotenantTenantStatusByName = Get-IntersightIwotenantTenantStatus -Name Iwotena
 $IwotenantTenantStatusList = Get-IntersightIwotenantTenantStatus
 
 #Get the list of IwotenantTenantStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IwotenantTenantStatusByOrg = Get-IntersightIwotenantTenantStatus -Organization $org
 

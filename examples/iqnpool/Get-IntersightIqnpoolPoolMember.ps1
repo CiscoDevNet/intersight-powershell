@@ -5,7 +5,7 @@ $IqnpoolPoolMemberByName = Get-IntersightIqnpoolPoolMember -Name IqnpoolPoolMemb
 $IqnpoolPoolMemberList = Get-IntersightIqnpoolPoolMember
 
 #Get the list of IqnpoolPoolMember under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IqnpoolPoolMemberByOrg = Get-IntersightIqnpoolPoolMember -Organization $org
 

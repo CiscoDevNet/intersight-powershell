@@ -5,7 +5,7 @@ $NiatelemetryNiaInventoryByName = Get-IntersightNiatelemetryNiaInventory -Name N
 $NiatelemetryNiaInventoryList = Get-IntersightNiatelemetryNiaInventory
 
 #Get the list of NiatelemetryNiaInventory under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryNiaInventoryByOrg = Get-IntersightNiatelemetryNiaInventory -Organization $org
 

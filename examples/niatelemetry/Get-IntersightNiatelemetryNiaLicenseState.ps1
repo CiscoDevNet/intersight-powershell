@@ -5,7 +5,7 @@ $NiatelemetryNiaLicenseStateByName = Get-IntersightNiatelemetryNiaLicenseState -
 $NiatelemetryNiaLicenseStateList = Get-IntersightNiatelemetryNiaLicenseState
 
 #Get the list of NiatelemetryNiaLicenseState under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryNiaLicenseStateByOrg = Get-IntersightNiatelemetryNiaLicenseState -Organization $org
 

@@ -5,7 +5,7 @@ $SoftwarerepositoryCategorySupportConstraintByName = Get-IntersightSoftwarerepos
 $SoftwarerepositoryCategorySupportConstraintList = Get-IntersightSoftwarerepositoryCategorySupportConstraint
 
 #Get the list of SoftwarerepositoryCategorySupportConstraint under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryCategorySupportConstraintByOrg = Get-IntersightSoftwarerepositoryCategorySupportConstraint -Organization $org
 

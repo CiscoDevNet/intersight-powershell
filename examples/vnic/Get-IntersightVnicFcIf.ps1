@@ -5,7 +5,7 @@ $VnicFcIfByName = Get-IntersightVnicFcIf -Name VnicFcIfName
 $VnicFcIfList = Get-IntersightVnicFcIf
 
 #Get the list of VnicFcIf under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicFcIfByOrg = Get-IntersightVnicFcIf -Organization $org
 

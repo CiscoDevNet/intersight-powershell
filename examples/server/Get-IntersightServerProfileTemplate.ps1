@@ -5,7 +5,7 @@ $ServerProfileTemplateByName = Get-IntersightServerProfileTemplate -Name ServerP
 $ServerProfileTemplateList = Get-IntersightServerProfileTemplate
 
 #Get the list of ServerProfileTemplate under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ServerProfileTemplateByOrg = Get-IntersightServerProfileTemplate -Organization $org
 

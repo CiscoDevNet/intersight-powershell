@@ -5,7 +5,7 @@ $EquipmentSharedIoModuleByName = Get-IntersightEquipmentSharedIoModule -Name Equ
 $EquipmentSharedIoModuleList = Get-IntersightEquipmentSharedIoModule
 
 #Get the list of EquipmentSharedIoModule under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentSharedIoModuleByOrg = Get-IntersightEquipmentSharedIoModule -Organization $org
 

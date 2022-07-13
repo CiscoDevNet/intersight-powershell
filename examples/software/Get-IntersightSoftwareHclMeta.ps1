@@ -5,7 +5,7 @@ $SoftwareHclMetaByName = Get-IntersightSoftwareHclMeta -Name SoftwareHclMetaName
 $SoftwareHclMetaList = Get-IntersightSoftwareHclMeta
 
 #Get the list of SoftwareHclMeta under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareHclMetaByOrg = Get-IntersightSoftwareHclMeta -Organization $org
 

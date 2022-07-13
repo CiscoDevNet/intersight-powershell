@@ -5,7 +5,7 @@ $CapabilitySiocModuleManufacturingDefByName = Get-IntersightCapabilitySiocModule
 $CapabilitySiocModuleManufacturingDefList = Get-IntersightCapabilitySiocModuleManufacturingDef
 
 #Get the list of CapabilitySiocModuleManufacturingDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilitySiocModuleManufacturingDefByOrg = Get-IntersightCapabilitySiocModuleManufacturingDef -Organization $org
 

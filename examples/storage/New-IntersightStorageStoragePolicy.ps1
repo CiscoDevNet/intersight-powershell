@@ -1,4 +1,4 @@
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $m2_virtual_drive1 = Initialize-IntersightStorageM2Virtualdriveconfig -Enable 0
 

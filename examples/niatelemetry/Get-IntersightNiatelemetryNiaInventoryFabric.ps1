@@ -5,7 +5,7 @@ $NiatelemetryNiaInventoryFabricByName = Get-IntersightNiatelemetryNiaInventoryFa
 $NiatelemetryNiaInventoryFabricList = Get-IntersightNiatelemetryNiaInventoryFabric
 
 #Get the list of NiatelemetryNiaInventoryFabric under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryNiaInventoryFabricByOrg = Get-IntersightNiatelemetryNiaInventoryFabric -Organization $org
 

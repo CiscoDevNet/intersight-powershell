@@ -5,7 +5,7 @@ $ComputeRackUnitByName = Get-IntersightComputeRackUnit -Name ComputeRackUnitName
 $ComputeRackUnitList = Get-IntersightComputeRackUnit
 
 #Get the list of ComputeRackUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeRackUnitByOrg = Get-IntersightComputeRackUnit -Organization $org
 

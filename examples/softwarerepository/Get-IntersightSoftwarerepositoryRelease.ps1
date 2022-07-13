@@ -5,7 +5,7 @@ $SoftwarerepositoryReleaseByName = Get-IntersightSoftwarerepositoryRelease -Name
 $SoftwarerepositoryReleaseList = Get-IntersightSoftwarerepositoryRelease
 
 #Get the list of SoftwarerepositoryRelease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryReleaseByOrg = Get-IntersightSoftwarerepositoryRelease -Organization $org
 

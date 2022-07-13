@@ -5,7 +5,7 @@ $NiaapiVersionRegexByName = Get-IntersightNiaapiVersionRegex -Name NiaapiVersion
 $NiaapiVersionRegexList = Get-IntersightNiaapiVersionRegex
 
 #Get the list of NiaapiVersionRegex under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiVersionRegexByOrg = Get-IntersightNiaapiVersionRegex -Organization $org
 

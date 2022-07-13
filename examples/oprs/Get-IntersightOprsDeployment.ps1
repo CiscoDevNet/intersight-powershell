@@ -5,7 +5,7 @@ $OprsDeploymentByName = Get-IntersightOprsDeployment -Name OprsDeploymentName
 $OprsDeploymentList = Get-IntersightOprsDeployment
 
 #Get the list of OprsDeployment under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OprsDeploymentByOrg = Get-IntersightOprsDeployment -Organization $org
 

@@ -5,7 +5,7 @@ $HyperflexFeatureLimitExternalByName = Get-IntersightHyperflexFeatureLimitExtern
 $HyperflexFeatureLimitExternalList = Get-IntersightHyperflexFeatureLimitExternal
 
 #Get the list of HyperflexFeatureLimitExternal under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexFeatureLimitExternalByOrg = Get-IntersightHyperflexFeatureLimitExternal -Organization $org
 

@@ -5,7 +5,7 @@ $StorageVdMemberEpByName = Get-IntersightStorageVdMemberEp -Name StorageVdMember
 $StorageVdMemberEpList = Get-IntersightStorageVdMemberEp
 
 #Get the list of StorageVdMemberEp under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageVdMemberEpByOrg = Get-IntersightStorageVdMemberEp -Organization $org
 

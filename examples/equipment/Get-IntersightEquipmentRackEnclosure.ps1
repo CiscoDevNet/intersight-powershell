@@ -5,7 +5,7 @@ $EquipmentRackEnclosureByName = Get-IntersightEquipmentRackEnclosure -Name Equip
 $EquipmentRackEnclosureList = Get-IntersightEquipmentRackEnclosure
 
 #Get the list of EquipmentRackEnclosure under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentRackEnclosureByOrg = Get-IntersightEquipmentRackEnclosure -Organization $org
 

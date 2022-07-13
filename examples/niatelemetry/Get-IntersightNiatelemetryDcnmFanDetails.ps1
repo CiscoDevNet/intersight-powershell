@@ -5,7 +5,7 @@ $NiatelemetryDcnmFanDetailsByName = Get-IntersightNiatelemetryDcnmFanDetails -Na
 $NiatelemetryDcnmFanDetailsList = Get-IntersightNiatelemetryDcnmFanDetails
 
 #Get the list of NiatelemetryDcnmFanDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryDcnmFanDetailsByOrg = Get-IntersightNiatelemetryDcnmFanDetails -Organization $org
 

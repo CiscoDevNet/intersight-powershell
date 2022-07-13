@@ -5,7 +5,7 @@ $StorageItemByName = Get-IntersightStorageItem -Name StorageItemName
 $StorageItemList = Get-IntersightStorageItem
 
 #Get the list of StorageItem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageItemByOrg = Get-IntersightStorageItem -Organization $org
 

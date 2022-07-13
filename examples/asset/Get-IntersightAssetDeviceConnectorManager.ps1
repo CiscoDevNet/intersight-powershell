@@ -5,7 +5,7 @@ $AssetDeviceConnectorManagerByName = Get-IntersightAssetDeviceConnectorManager -
 $AssetDeviceConnectorManagerList = Get-IntersightAssetDeviceConnectorManager
 
 #Get the list of AssetDeviceConnectorManager under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetDeviceConnectorManagerByOrg = Get-IntersightAssetDeviceConnectorManager -Organization $org
 

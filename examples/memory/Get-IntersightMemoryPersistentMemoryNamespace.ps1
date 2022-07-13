@@ -5,7 +5,7 @@ $MemoryPersistentMemoryNamespaceByName = Get-IntersightMemoryPersistentMemoryNam
 $MemoryPersistentMemoryNamespaceList = Get-IntersightMemoryPersistentMemoryNamespace
 
 #Get the list of MemoryPersistentMemoryNamespace under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryPersistentMemoryNamespaceByOrg = Get-IntersightMemoryPersistentMemoryNamespace -Organization $org
 

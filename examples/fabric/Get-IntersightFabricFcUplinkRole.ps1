@@ -5,7 +5,7 @@ $FabricFcUplinkRoleByName = Get-IntersightFabricFcUplinkRole -Name FabricFcUplin
 $FabricFcUplinkRoleList = Get-IntersightFabricFcUplinkRole
 
 #Get the list of FabricFcUplinkRole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricFcUplinkRoleByOrg = Get-IntersightFabricFcUplinkRole -Organization $org
 

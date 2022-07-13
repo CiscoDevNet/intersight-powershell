@@ -5,7 +5,7 @@ $IamUserByName = Get-IntersightIamUser -Name IamUserName
 $IamUserList = Get-IntersightIamUser
 
 #Get the list of IamUser under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamUserByOrg = Get-IntersightIamUser -Organization $org
 

@@ -5,7 +5,7 @@ $FcpoolUniverseByName = Get-IntersightFcpoolUniverse -Name FcpoolUniverseName
 $FcpoolUniverseList = Get-IntersightFcpoolUniverse
 
 #Get the list of FcpoolUniverse under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FcpoolUniverseByOrg = Get-IntersightFcpoolUniverse -Organization $org
 

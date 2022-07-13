@@ -5,7 +5,7 @@ $EquipmentRackEnclosureSlotByName = Get-IntersightEquipmentRackEnclosureSlot -Na
 $EquipmentRackEnclosureSlotList = Get-IntersightEquipmentRackEnclosureSlot
 
 #Get the list of EquipmentRackEnclosureSlot under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentRackEnclosureSlotByOrg = Get-IntersightEquipmentRackEnclosureSlot -Organization $org
 

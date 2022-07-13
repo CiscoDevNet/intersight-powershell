@@ -5,7 +5,7 @@ $ComputeBladeIdentityByName = Get-IntersightComputeBladeIdentity -Name ComputeBl
 $ComputeBladeIdentityList = Get-IntersightComputeBladeIdentity
 
 #Get the list of ComputeBladeIdentity under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeBladeIdentityByOrg = Get-IntersightComputeBladeIdentity -Organization $org
 

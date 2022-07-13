@@ -5,7 +5,7 @@ $AssetDeploymentByName = Get-IntersightAssetDeployment -Name AssetDeploymentName
 $AssetDeploymentList = Get-IntersightAssetDeployment
 
 #Get the list of AssetDeployment under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetDeploymentByOrg = Get-IntersightAssetDeployment -Organization $org
 

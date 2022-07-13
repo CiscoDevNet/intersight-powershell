@@ -5,7 +5,7 @@ $NiaapiApicHweolByName = Get-IntersightNiaapiApicHweol -Name NiaapiApicHweolName
 $NiaapiApicHweolList = Get-IntersightNiaapiApicHweol
 
 #Get the list of NiaapiApicHweol under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiApicHweolByOrg = Get-IntersightNiaapiApicHweol -Organization $org
 

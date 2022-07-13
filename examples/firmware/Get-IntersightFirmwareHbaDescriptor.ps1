@@ -5,7 +5,7 @@ $FirmwareHbaDescriptorByName = Get-IntersightFirmwareHbaDescriptor -Name Firmwar
 $FirmwareHbaDescriptorList = Get-IntersightFirmwareHbaDescriptor
 
 #Get the list of FirmwareHbaDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareHbaDescriptorByOrg = Get-IntersightFirmwareHbaDescriptor -Organization $org
 

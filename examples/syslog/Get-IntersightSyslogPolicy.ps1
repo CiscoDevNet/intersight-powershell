@@ -5,7 +5,7 @@ $SyslogPolicyByName = Get-IntersightSyslogPolicy -Name SyslogPolicyName
 $SyslogPolicyList = Get-IntersightSyslogPolicy
 
 #Get the list of SyslogPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SyslogPolicyByOrg = Get-IntersightSyslogPolicy -Organization $org
 

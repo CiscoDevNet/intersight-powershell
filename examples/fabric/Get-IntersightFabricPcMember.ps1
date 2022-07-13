@@ -5,7 +5,7 @@ $FabricPcMemberByName = Get-IntersightFabricPcMember -Name FabricPcMemberName
 $FabricPcMemberList = Get-IntersightFabricPcMember
 
 #Get the list of FabricPcMember under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricPcMemberByOrg = Get-IntersightFabricPcMember -Organization $org
 

@@ -5,7 +5,7 @@ $NiatelemetryApicPsuDetailsByName = Get-IntersightNiatelemetryApicPsuDetails -Na
 $NiatelemetryApicPsuDetailsList = Get-IntersightNiatelemetryApicPsuDetails
 
 #Get the list of NiatelemetryApicPsuDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicPsuDetailsByOrg = Get-IntersightNiatelemetryApicPsuDetails -Organization $org
 

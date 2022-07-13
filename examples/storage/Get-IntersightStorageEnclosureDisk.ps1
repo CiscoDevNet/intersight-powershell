@@ -5,7 +5,7 @@ $StorageEnclosureDiskByName = Get-IntersightStorageEnclosureDisk -Name StorageEn
 $StorageEnclosureDiskList = Get-IntersightStorageEnclosureDisk
 
 #Get the list of StorageEnclosureDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageEnclosureDiskByOrg = Get-IntersightStorageEnclosureDisk -Organization $org
 

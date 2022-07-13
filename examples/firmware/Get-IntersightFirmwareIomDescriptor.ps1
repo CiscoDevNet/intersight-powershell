@@ -5,7 +5,7 @@ $FirmwareIomDescriptorByName = Get-IntersightFirmwareIomDescriptor -Name Firmwar
 $FirmwareIomDescriptorList = Get-IntersightFirmwareIomDescriptor
 
 #Get the list of FirmwareIomDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareIomDescriptorByOrg = Get-IntersightFirmwareIomDescriptor -Organization $org
 

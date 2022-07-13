@@ -5,7 +5,7 @@ $BootNvmeDeviceByName = Get-IntersightBootNvmeDevice -Name BootNvmeDeviceName
 $BootNvmeDeviceList = Get-IntersightBootNvmeDevice
 
 #Get the list of BootNvmeDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootNvmeDeviceByOrg = Get-IntersightBootNvmeDevice -Organization $org
 

@@ -5,7 +5,7 @@ $StorageDriveGroupByName = Get-IntersightStorageDriveGroup -Name StorageDriveGro
 $StorageDriveGroupList = Get-IntersightStorageDriveGroup
 
 #Get the list of StorageDriveGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageDriveGroupByOrg = Get-IntersightStorageDriveGroup -Organization $org
 

@@ -5,7 +5,7 @@ $PortMacBindingByName = Get-IntersightPortMacBinding -Name PortMacBindingName
 $PortMacBindingList = Get-IntersightPortMacBinding
 
 #Get the list of PortMacBinding under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $PortMacBindingByOrg = Get-IntersightPortMacBinding -Organization $org
 

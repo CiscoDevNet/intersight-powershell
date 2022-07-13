@@ -1,5 +1,5 @@
 # Get the organization.
-$organization = Get-IntersightOrganizationOrganization -Moid '<Replace with Moid>'
+$organization = Get-IntersightOrganizationOrganization -Name 'default'
 
 $inband_ip_pool1 = Get-IntersightIppoolpool -Moid '<Replace with Moid>'
 

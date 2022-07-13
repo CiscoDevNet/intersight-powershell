@@ -5,7 +5,7 @@ $FirmwareChassisUpgradeByName = Get-IntersightFirmwareChassisUpgrade -Name Firmw
 $FirmwareChassisUpgradeList = Get-IntersightFirmwareChassisUpgrade
 
 #Get the list of FirmwareChassisUpgrade under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareChassisUpgradeByOrg = Get-IntersightFirmwareChassisUpgrade -Organization $org
 

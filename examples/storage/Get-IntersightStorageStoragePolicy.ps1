@@ -5,7 +5,7 @@ $StorageStoragePolicyByName = Get-IntersightStorageStoragePolicy -Name StorageSt
 $StorageStoragePolicyList = Get-IntersightStorageStoragePolicy
 
 #Get the list of StorageStoragePolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageStoragePolicyByOrg = Get-IntersightStorageStoragePolicy -Organization $org
 

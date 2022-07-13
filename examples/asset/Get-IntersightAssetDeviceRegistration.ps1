@@ -5,7 +5,7 @@ $AssetDeviceRegistrationByName = Get-IntersightAssetDeviceRegistration -Name Ass
 $AssetDeviceRegistrationList = Get-IntersightAssetDeviceRegistration
 
 #Get the list of AssetDeviceRegistration under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetDeviceRegistrationByOrg = Get-IntersightAssetDeviceRegistration -Organization $org
 

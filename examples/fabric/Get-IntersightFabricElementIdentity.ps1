@@ -5,7 +5,7 @@ $FabricElementIdentityByName = Get-IntersightFabricElementIdentity -Name FabricE
 $FabricElementIdentityList = Get-IntersightFabricElementIdentity
 
 #Get the list of FabricElementIdentity under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricElementIdentityByOrg = Get-IntersightFabricElementIdentity -Organization $org
 

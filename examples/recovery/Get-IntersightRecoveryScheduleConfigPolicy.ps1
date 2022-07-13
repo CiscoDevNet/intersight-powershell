@@ -5,7 +5,7 @@ $RecoveryScheduleConfigPolicyByName = Get-IntersightRecoveryScheduleConfigPolicy
 $RecoveryScheduleConfigPolicyList = Get-IntersightRecoveryScheduleConfigPolicy
 
 #Get the list of RecoveryScheduleConfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecoveryScheduleConfigPolicyByOrg = Get-IntersightRecoveryScheduleConfigPolicy -Organization $org
 

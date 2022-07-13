@@ -5,7 +5,7 @@ $KubernetesDeploymentByName = Get-IntersightKubernetesDeployment -Name Kubernete
 $KubernetesDeploymentList = Get-IntersightKubernetesDeployment
 
 #Get the list of KubernetesDeployment under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesDeploymentByOrg = Get-IntersightKubernetesDeployment -Organization $org
 

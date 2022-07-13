@@ -5,7 +5,7 @@ $VnicEthQosPolicyByName = Get-IntersightVnicEthQosPolicy -Name VnicEthQosPolicyN
 $VnicEthQosPolicyList = Get-IntersightVnicEthQosPolicy
 
 #Get the list of VnicEthQosPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicEthQosPolicyByOrg = Get-IntersightVnicEthQosPolicy -Organization $org
 

@@ -5,7 +5,7 @@ $CondHclStatusDetailByName = Get-IntersightCondHclStatusDetail -Name CondHclStat
 $CondHclStatusDetailList = Get-IntersightCondHclStatusDetail
 
 #Get the list of CondHclStatusDetail under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CondHclStatusDetailByOrg = Get-IntersightCondHclStatusDetail -Organization $org
 

@@ -5,7 +5,7 @@ $FabricConfigChangeDetailByName = Get-IntersightFabricConfigChangeDetail -Name F
 $FabricConfigChangeDetailList = Get-IntersightFabricConfigChangeDetail
 
 #Get the list of FabricConfigChangeDetail under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricConfigChangeDetailByOrg = Get-IntersightFabricConfigChangeDetail -Organization $org
 

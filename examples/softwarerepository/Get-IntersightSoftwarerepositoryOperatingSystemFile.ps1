@@ -5,7 +5,7 @@ $SoftwarerepositoryOperatingSystemFileByName = Get-IntersightSoftwarerepositoryO
 $SoftwarerepositoryOperatingSystemFileList = Get-IntersightSoftwarerepositoryOperatingSystemFile
 
 #Get the list of SoftwarerepositoryOperatingSystemFile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryOperatingSystemFileByOrg = Get-IntersightSoftwarerepositoryOperatingSystemFile -Organization $org
 

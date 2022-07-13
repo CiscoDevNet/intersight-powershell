@@ -5,7 +5,7 @@ $IaasDiagnosticMessagesByName = Get-IntersightIaasDiagnosticMessages -Name IaasD
 $IaasDiagnosticMessagesList = Get-IntersightIaasDiagnosticMessages
 
 #Get the list of IaasDiagnosticMessages under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasDiagnosticMessagesByOrg = Get-IntersightIaasDiagnosticMessages -Organization $org
 

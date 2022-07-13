@@ -5,7 +5,7 @@ $OsBulkInstallInfoByName = Get-IntersightOsBulkInstallInfo -Name OsBulkInstallIn
 $OsBulkInstallInfoList = Get-IntersightOsBulkInstallInfo
 
 #Get the list of OsBulkInstallInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OsBulkInstallInfoByOrg = Get-IntersightOsBulkInstallInfo -Organization $org
 

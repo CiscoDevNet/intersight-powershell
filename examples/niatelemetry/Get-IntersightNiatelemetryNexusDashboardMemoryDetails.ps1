@@ -5,7 +5,7 @@ $NiatelemetryNexusDashboardMemoryDetailsByName = Get-IntersightNiatelemetryNexus
 $NiatelemetryNexusDashboardMemoryDetailsList = Get-IntersightNiatelemetryNexusDashboardMemoryDetails
 
 #Get the list of NiatelemetryNexusDashboardMemoryDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryNexusDashboardMemoryDetailsByOrg = Get-IntersightNiatelemetryNexusDashboardMemoryDetails -Organization $org
 

@@ -5,7 +5,7 @@ $VmediaPolicyByName = Get-IntersightVmediaPolicy -Name VmediaPolicyName
 $VmediaPolicyList = Get-IntersightVmediaPolicy
 
 #Get the list of VmediaPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VmediaPolicyByOrg = Get-IntersightVmediaPolicy -Organization $org
 

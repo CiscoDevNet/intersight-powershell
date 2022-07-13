@@ -5,7 +5,7 @@ $VirtualizationVmwareNetworkByName = Get-IntersightVirtualizationVmwareNetwork -
 $VirtualizationVmwareNetworkList = Get-IntersightVirtualizationVmwareNetwork
 
 #Get the list of VirtualizationVmwareNetwork under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareNetworkByOrg = Get-IntersightVirtualizationVmwareNetwork -Organization $org
 

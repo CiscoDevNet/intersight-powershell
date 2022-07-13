@@ -5,7 +5,7 @@ $ChassisConfigChangeDetailByName = Get-IntersightChassisConfigChangeDetail -Name
 $ChassisConfigChangeDetailList = Get-IntersightChassisConfigChangeDetail
 
 #Get the list of ChassisConfigChangeDetail under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ChassisConfigChangeDetailByOrg = Get-IntersightChassisConfigChangeDetail -Organization $org
 

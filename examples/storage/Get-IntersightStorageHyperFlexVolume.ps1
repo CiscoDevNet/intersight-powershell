@@ -5,7 +5,7 @@ $StorageHyperFlexVolumeByName = Get-IntersightStorageHyperFlexVolume -Name Stora
 $StorageHyperFlexVolumeList = Get-IntersightStorageHyperFlexVolume
 
 #Get the list of StorageHyperFlexVolume under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHyperFlexVolumeByOrg = Get-IntersightStorageHyperFlexVolume -Organization $org
 

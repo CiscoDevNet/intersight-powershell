@@ -5,7 +5,7 @@ $MemoryUnitByName = Get-IntersightMemoryUnit -Name MemoryUnitName
 $MemoryUnitList = Get-IntersightMemoryUnit
 
 #Get the list of MemoryUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryUnitByOrg = Get-IntersightMemoryUnit -Organization $org
 

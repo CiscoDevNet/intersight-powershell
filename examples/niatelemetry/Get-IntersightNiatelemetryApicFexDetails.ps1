@@ -5,7 +5,7 @@ $NiatelemetryApicFexDetailsByName = Get-IntersightNiatelemetryApicFexDetails -Na
 $NiatelemetryApicFexDetailsList = Get-IntersightNiatelemetryApicFexDetails
 
 #Get the list of NiatelemetryApicFexDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicFexDetailsByOrg = Get-IntersightNiatelemetryApicFexDetails -Organization $org
 

@@ -5,7 +5,7 @@ $IqnpoolPoolByName = Get-IntersightIqnpoolPool -Name IqnpoolPoolName
 $IqnpoolPoolList = Get-IntersightIqnpoolPool
 
 #Get the list of IqnpoolPool under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IqnpoolPoolByOrg = Get-IntersightIqnpoolPool -Organization $org
 

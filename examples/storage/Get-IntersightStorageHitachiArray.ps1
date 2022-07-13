@@ -5,7 +5,7 @@ $StorageHitachiArrayByName = Get-IntersightStorageHitachiArray -Name StorageHita
 $StorageHitachiArrayList = Get-IntersightStorageHitachiArray
 
 #Get the list of StorageHitachiArray under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiArrayByOrg = Get-IntersightStorageHitachiArray -Organization $org
 

@@ -5,7 +5,7 @@ $UcsdBackupInfoByName = Get-IntersightUcsdBackupInfo -Name UcsdBackupInfoName
 $UcsdBackupInfoList = Get-IntersightUcsdBackupInfo
 
 #Get the list of UcsdBackupInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $UcsdBackupInfoByOrg = Get-IntersightUcsdBackupInfo -Organization $org
 

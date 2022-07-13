@@ -5,7 +5,7 @@ $MemoryPersistentMemoryRegionByName = Get-IntersightMemoryPersistentMemoryRegion
 $MemoryPersistentMemoryRegionList = Get-IntersightMemoryPersistentMemoryRegion
 
 #Get the list of MemoryPersistentMemoryRegion under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryPersistentMemoryRegionByOrg = Get-IntersightMemoryPersistentMemoryRegion -Organization $org
 

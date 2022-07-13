@@ -5,7 +5,7 @@ $SnmpPolicyByName = Get-IntersightSnmpPolicy -Name SnmpPolicyName
 $SnmpPolicyList = Get-IntersightSnmpPolicy
 
 #Get the list of SnmpPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SnmpPolicyByOrg = Get-IntersightSnmpPolicy -Organization $org
 

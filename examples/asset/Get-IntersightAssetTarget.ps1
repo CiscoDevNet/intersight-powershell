@@ -5,7 +5,7 @@ $AssetTargetByName = Get-IntersightAssetTarget -Name AssetTargetName
 $AssetTargetList = Get-IntersightAssetTarget
 
 #Get the list of AssetTarget under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetTargetByOrg = Get-IntersightAssetTarget -Organization $org
 

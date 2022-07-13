@@ -5,7 +5,7 @@ $KubernetesAddonRepositoryByName = Get-IntersightKubernetesAddonRepository -Name
 $KubernetesAddonRepositoryList = Get-IntersightKubernetesAddonRepository
 
 #Get the list of KubernetesAddonRepository under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesAddonRepositoryByOrg = Get-IntersightKubernetesAddonRepository -Organization $org
 

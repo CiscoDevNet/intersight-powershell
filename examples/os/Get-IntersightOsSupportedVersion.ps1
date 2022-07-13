@@ -5,7 +5,7 @@ $OsSupportedVersionByName = Get-IntersightOsSupportedVersion -Name OsSupportedVe
 $OsSupportedVersionList = Get-IntersightOsSupportedVersion
 
 #Get the list of OsSupportedVersion under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OsSupportedVersionByOrg = Get-IntersightOsSupportedVersion -Organization $org
 

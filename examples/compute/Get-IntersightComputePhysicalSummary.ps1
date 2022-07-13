@@ -5,7 +5,7 @@ $ComputePhysicalSummaryByName = Get-IntersightComputePhysicalSummary -Name Compu
 $ComputePhysicalSummaryList = Get-IntersightComputePhysicalSummary
 
 #Get the list of ComputePhysicalSummary under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputePhysicalSummaryByOrg = Get-IntersightComputePhysicalSummary -Organization $org
 

@@ -5,7 +5,7 @@ $CondAlarmByName = Get-IntersightCondAlarm -Name CondAlarmName
 $CondAlarmList = Get-IntersightCondAlarm
 
 #Get the list of CondAlarm under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CondAlarmByOrg = Get-IntersightCondAlarm -Organization $org
 

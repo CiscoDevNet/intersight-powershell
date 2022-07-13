@@ -5,7 +5,7 @@ $PortSubGroupByName = Get-IntersightPortSubGroup -Name PortSubGroupName
 $PortSubGroupList = Get-IntersightPortSubGroup
 
 #Get the list of PortSubGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $PortSubGroupByOrg = Get-IntersightPortSubGroup -Organization $org
 
