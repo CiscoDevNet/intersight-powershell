@@ -732,3 +732,5 @@ PS C:\> Set-IntersightComputeRackUnit
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightComputeRackUnit](./Remove-IntersightComputeRackUnit.md)

@@ -979,7 +979,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -994,6 +994,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricElementIdentity.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to 'Recommission'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Identifier
         {
             get;
             set;
@@ -1061,6 +1071,10 @@ namespace Intersight.PowerShell
                 initObject.AdminAction = this.AdminAction;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Identifier"))
+            {
+                initObject.Identifier = this.Identifier;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -2003,7 +2017,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFabricFcStorageRole()
         {
-            AdminSpeed = FabricFcStorageRole.AdminSpeedEnum.Auto;
+            AdminSpeed = FabricFcStorageRole.AdminSpeedEnum._16Gbps;
             ClassId = FabricFcStorageRole.ClassIdEnum.FabricFcStorageRole;
             ObjectType = FabricFcStorageRole.ObjectTypeEnum.FabricFcStorageRole;
 
@@ -2019,7 +2033,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2172,7 +2186,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFabricFcUplinkPcRole()
         {
-            AdminSpeed = FabricFcUplinkPcRole.AdminSpeedEnum.Auto;
+            AdminSpeed = FabricFcUplinkPcRole.AdminSpeedEnum._16Gbps;
             ClassId = FabricFcUplinkPcRole.ClassIdEnum.FabricFcUplinkPcRole;
             FillPattern = FabricFcUplinkPcRole.FillPatternEnum.Idle;
             ObjectType = FabricFcUplinkPcRole.ObjectTypeEnum.FabricFcUplinkPcRole;
@@ -2189,7 +2203,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2342,7 +2356,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFabricFcUplinkRole()
         {
-            AdminSpeed = FabricFcUplinkRole.AdminSpeedEnum.Auto;
+            AdminSpeed = FabricFcUplinkRole.AdminSpeedEnum._16Gbps;
             ClassId = FabricFcUplinkRole.ClassIdEnum.FabricFcUplinkRole;
             FillPattern = FabricFcUplinkRole.FillPatternEnum.Idle;
             ObjectType = FabricFcUplinkRole.ObjectTypeEnum.FabricFcUplinkRole;
@@ -2359,7 +2373,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2513,6 +2527,274 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VsanId"))
             {
                 initObject.VsanId = this.VsanId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcZoneMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcZoneMember")]
+    public class InitializeIntersightFabricFcZoneMember : PSCmdlet
+    {
+        public InitializeIntersightFabricFcZoneMember()
+        {
+            ClassId = FabricFcZoneMember.ClassIdEnum.FabricFcZoneMember;
+            ObjectType = FabricFcZoneMember.ObjectTypeEnum.FabricFcZoneMember;
+            SwitchId = FabricFcZoneMember.SwitchIdEnum.A;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZoneMember.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name given to the target member."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZoneMember.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique identifier for the Fabric object.\n* `A` - Switch Identifier of Fabric Interconnect A.\n* `B` - Switch Identifier of Fabric Interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZoneMember.SwitchIdEnum SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VSAN with scope defined as Storage in the VSAN policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 4093)]
+        public long VsanId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"WWPN that is a member of the FC zone."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|((^20|5[0-9a-fA-F]{1}):([0-9a-fA-F]{2}:){6}([0-9a-fA-F]{2}))")]
+        public string Wwpn
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.FabricFcZoneMember initObject = new Intersight.Model.FabricFcZoneMember();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VsanId"))
+            {
+                initObject.VsanId = this.VsanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Wwpn"))
+            {
+                initObject.Wwpn = this.Wwpn;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFcZonePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFcZonePolicy")]
+    public class InitializeIntersightFabricFcZonePolicy : PSCmdlet
+    {
+        public InitializeIntersightFabricFcZonePolicy()
+        {
+            ClassId = FabricFcZonePolicy.ClassIdEnum.FabricFcZonePolicy;
+            FcTargetZoningType = FabricFcZonePolicy.FcTargetZoningTypeEnum.SIST;
+            ObjectType = FabricFcZonePolicy.ObjectTypeEnum.FabricFcZonePolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZonePolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricFcZoneMember> FcTargetMembers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of FC zoning. Allowed values are SIST, SIMT and None.\n* `SIST` - The system automatically creates one zone for each vHBA and storage port pair. Each zone has two members.\n* `SIMT` - The system automatically creates one zone for each vHBA. Configure this type of zoning if the number of zones created is likely to exceed the maximum supported number of zones.\n* `None` - FC zoning is not configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZonePolicy.FcTargetZoningTypeEnum FcTargetZoningType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZonePolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.FabricFcZonePolicy initObject = new Intersight.Model.FabricFcZonePolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcTargetMembers"))
+            {
+                initObject.FcTargetMembers = this.FcTargetMembers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcTargetZoningType"))
+            {
+                initObject.FcTargetZoningType = this.FcTargetZoningType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }

@@ -43,6 +43,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -864,6 +865,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

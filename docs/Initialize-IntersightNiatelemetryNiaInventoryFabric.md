@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNiaInventoryFabric [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnycastGwMac< string>][-BgpEstablishedInterfaceCount< long>][-BgwCount< long>][-BgwInterfaceUpCount< long>][-BorderGatewaySpineCount< long>][-BorderLeafCount< long>][-ClassId< NiatelemetryNiaInventoryFabric.ClassIdEnum>][-CloudsecAutoconfig< bool>][-DciSubnetRange< string>][-DciSubnetTargetMask< string>][-DcnmtrackerEnabled< bool>][-EbgpEvpnLinkUpCount< long>][-FabricId< string>][-FabricName< string>][-FabricParent< string>][-FabricTechnology< string>][-FabricType< string>][-FeaturePtp< string>][-IsBgwPresent< bool>][-IsEnableNxapiHttp< bool>][-IsEnableRealTimeBackup< bool>][-IsNgoamEnabled< bool>][-IsScheduledBackUpEnabled< bool>][-IsTrmEnabled< bool>][-LeafCount< long>][-LinkStateRouting< string>][-LinkType< string>][-LogicalLinks< System.Collections.Generic.List`1[Model.NiatelemetryLogicalLink]>][-Moid< string>][-NetworkDeploymentCount< long>][-NetworkDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-NtpServerIpList< string>][-NxosVniBwSitesCount< long>][-NxosVrfBwSitesCount< long>][-NxosVrfCount< long>][-ObjectType< NiatelemetryNiaInventoryFabric.ObjectTypeEnum>][-OperStatus< string>][-ReplicationMode< string>][-RpMode< string>][-Serial< string>][-SiteName< string>][-SoftwareImage< string>][-SpineCount< long>][-SyslogServerIpList< string>][-SyslogSev< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateName< string>][-VlanVniMappings< string>][-VniIpCount< long>][-VpcDetails< System.Collections.Generic.List`1[Model.NiatelemetryVpcDetails]>][-VrfDeploymentCount< long>][-VrfDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-XsiteNetworkCount< long>][-XsiteVrfCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNiaInventoryFabric [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnycastGwMac< string>][-BgpEstablishedInterfaceCount< long>][-BgwCount< long>][-BgwInterfaceUpCount< long>][-BorderGatewaySpineCount< long>][-BorderLeafCount< long>][-ClassId< NiatelemetryNiaInventoryFabric.ClassIdEnum>][-CloudsecAutoconfig< bool>][-DciSubnetRange< string>][-DciSubnetTargetMask< string>][-DcnmtrackerEnabled< bool>][-EbgpEvpnLinkUpCount< long>][-FabricId< string>][-FabricName< string>][-FabricParent< string>][-FabricTechnology< string>][-FabricType< string>][-FeaturePtp< string>][-IsBgwPresent< bool>][-IsEnableNxapiHttp< bool>][-IsEnableRealTimeBackup< bool>][-IsNgoamEnabled< bool>][-IsScheduledBackUpEnabled< bool>][-IsTrmEnabled< bool>][-LeafCount< long>][-LinkStateRouting< string>][-LinkType< string>][-LogicalLinks< System.Collections.Generic.List`1[Model.NiatelemetryLogicalLink]>][-Moid< string>][-NetworkDeploymentCount< long>][-NetworkDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-NtpServerIpList< string>][-NxosVniBwSitesCount< long>][-NxosVrfBwSitesCount< long>][-NxosVrfCount< long>][-ObjectType< NiatelemetryNiaInventoryFabric.ObjectTypeEnum>][-OperStatus< string>][-RecordType< string>][-RecordVersion< string>][-ReplicationMode< string>][-RpMode< string>][-Serial< string>][-SiteName< string>][-SoftwareImage< string>][-SpineCount< long>][-SyslogServerIpList< string>][-SyslogSev< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateName< string>][-VlanVniMappings< string>][-VniIpCount< long>][-VpcDetails< System.Collections.Generic.List`1[Model.NiatelemetryVpcDetails]>][-VrfDeploymentCount< long>][-VrfDeploymentStatus< System.Collections.Generic.List`1[Model.NiatelemetryDeploymentStatus]>][-XsiteNetworkCount< long>][-XsiteVrfCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -585,6 +585,36 @@ Accept wildcard characters: False
 
 ### -OperStatus
 Fabric oper status information.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RecordType
+Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RecordVersion
+Version of record being pushed. This determines what was the API version for data available from the device.
 
 ```yaml
 Type: string

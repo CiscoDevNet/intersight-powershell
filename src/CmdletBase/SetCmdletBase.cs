@@ -51,7 +51,7 @@ namespace Intersight.PowerShell
 
                 var methodInfo = GetMethodInfo(MethodName);
                 var moidVal = ModelObject.GetType().GetProperty("Moid").GetValue(ModelObject);
-                Object[] argList = new[] { moidVal, ModelObject, null };
+                Object[] argList = new[] { moidVal, ModelObject, null, 0 };
                 var result = methodInfo.Invoke(ApiInstance, argList);
                 if (Json.IsPresent)
                 {
@@ -78,7 +78,7 @@ namespace Intersight.PowerShell
             var getMethodInfo = this.ApiInstance.GetType().GetMethod(methodName);
             if (getMethodInfo != null)
             {
-                object[] argList = new[] { moid };
+                object[] argList = new[] { moid, 0 };
                 var result = getMethodInfo.Invoke(ApiInstance, argList);
                 return result;
             }

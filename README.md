@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.9.6484
-- C# SDK version: 1.0.9.6484
+- Intersight.PowerShell version: 1.0.11.7078
+- C# SDK version: 1.0.11.7078
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.9.6484"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.7078"}
 ```
 or
 
@@ -735,6 +735,7 @@ ApplianceFileGateway | [**Get-IntersightApplianceFileGateway**](docs/Get-Intersi
 ApplianceFileSystemStatus | [**Get-IntersightApplianceFileSystemStatus**](docs/Get-IntersightApplianceFileSystemStatus.md) | Read a 'ApplianceFileSystemStatus' resource.
 ApplianceGroupStatus | [**Get-IntersightApplianceGroupStatus**](docs/Get-IntersightApplianceGroupStatus.md) | Read a 'ApplianceGroupStatus' resource.
 ApplianceImageBundle | [**Get-IntersightApplianceImageBundle**](docs/Get-IntersightApplianceImageBundle.md) | Read a 'ApplianceImageBundle' resource.
+ApplianceMetaManifest | [**Get-IntersightApplianceMetaManifest**](docs/Get-IntersightApplianceMetaManifest.md) | Read a 'ApplianceMetaManifest' resource.
 ApplianceNodeInfo | [**Get-IntersightApplianceNodeInfo**](docs/Get-IntersightApplianceNodeInfo.md) | Read a 'ApplianceNodeInfo' resource.
 ApplianceNodeStatus | [**Get-IntersightApplianceNodeStatus**](docs/Get-IntersightApplianceNodeStatus.md) | Read a 'ApplianceNodeStatus' resource.
 ApplianceReleaseNote | [**Get-IntersightApplianceReleaseNote**](docs/Get-IntersightApplianceReleaseNote.md) | Read a 'ApplianceReleaseNote' resource.
@@ -991,11 +992,11 @@ ComputeMapping | [**Get-IntersightComputeMapping**](docs/Get-IntersightComputeMa
 ComputePhysicalSummary | [**Get-IntersightComputePhysicalSummary**](docs/Get-IntersightComputePhysicalSummary.md) | Read a 'ComputePhysicalSummary' resource.
 ComputeRackUnit | [**Get-IntersightComputeRackUnit**](docs/Get-IntersightComputeRackUnit.md) | Read a 'ComputeRackUnit' resource.
 ComputeRackUnitIdentity | [**Get-IntersightComputeRackUnitIdentity**](docs/Get-IntersightComputeRackUnitIdentity.md) | Read a 'ComputeRackUnitIdentity' resource.
+ComputeServerIdPool | [**Get-IntersightComputeServerIdPool**](docs/Get-IntersightComputeServerIdPool.md) | Read a 'ComputeServerIdPool' resource.
 ComputeServerPowerPolicy | [**Get-IntersightComputeServerPowerPolicy**](docs/Get-IntersightComputeServerPowerPolicy.md) | Read a 'ComputeServerPowerPolicy' resource.
 ComputeServerSetting | [**Get-IntersightComputeServerSetting**](docs/Get-IntersightComputeServerSetting.md) | Read a 'ComputeServerSetting' resource.
 ComputeVmedia | [**Get-IntersightComputeVmedia**](docs/Get-IntersightComputeVmedia.md) | Read a 'ComputeVmedia' resource.
-ComputeBladeIdentity | [**Remove-IntersightComputeBladeIdentity**](docs/Remove-IntersightComputeBladeIdentity.md) | Delete a 'ComputeBladeIdentity' resource.
-ComputeRackUnitIdentity | [**Remove-IntersightComputeRackUnitIdentity**](docs/Remove-IntersightComputeRackUnitIdentity.md) | Delete a 'ComputeRackUnitIdentity' resource.
+ComputeRackUnit | [**Remove-IntersightComputeRackUnit**](docs/Remove-IntersightComputeRackUnit.md) | Delete a 'ComputeRackUnit' resource.
 ComputeServerPowerPolicy | [**Remove-IntersightComputeServerPowerPolicy**](docs/Remove-IntersightComputeServerPowerPolicy.md) | Delete a 'ComputeServerPowerPolicy' resource.
 ComputeBlade | [**Set-IntersightComputeBlade**](docs/Set-IntersightComputeBlade.md) | Update a 'ComputeBlade' resource.
 ComputeBladeIdentity | [**Set-IntersightComputeBladeIdentity**](docs/Set-IntersightComputeBladeIdentity.md) | Update a 'ComputeBladeIdentity' resource.
@@ -1027,6 +1028,7 @@ DeviceconnectorPolicy | [**New-IntersightDeviceconnectorPolicy**](docs/New-Inter
 DeviceconnectorPolicy | [**Remove-IntersightDeviceconnectorPolicy**](docs/Remove-IntersightDeviceconnectorPolicy.md) | Delete a 'DeviceconnectorPolicy' resource.
 DeviceconnectorPolicy | [**Set-IntersightDeviceconnectorPolicy**](docs/Set-IntersightDeviceconnectorPolicy.md) | Update a 'DeviceconnectorPolicy' resource.
 EquipmentChassis | [**Get-IntersightEquipmentChassis**](docs/Get-IntersightEquipmentChassis.md) | Read a 'EquipmentChassis' resource.
+EquipmentChassisIdPool | [**Get-IntersightEquipmentChassisIdPool**](docs/Get-IntersightEquipmentChassisIdPool.md) | Read a 'EquipmentChassisIdPool' resource.
 EquipmentChassisIdentity | [**Get-IntersightEquipmentChassisIdentity**](docs/Get-IntersightEquipmentChassisIdentity.md) | Read a 'EquipmentChassisIdentity' resource.
 EquipmentChassisOperation | [**Get-IntersightEquipmentChassisOperation**](docs/Get-IntersightEquipmentChassisOperation.md) | Read a 'EquipmentChassisOperation' resource.
 EquipmentDeviceSummary | [**Get-IntersightEquipmentDeviceSummary**](docs/Get-IntersightEquipmentDeviceSummary.md) | Read a 'EquipmentDeviceSummary' resource.
@@ -1101,6 +1103,7 @@ FabricFcNetworkPolicy | [**Get-IntersightFabricFcNetworkPolicy**](docs/Get-Inter
 FabricFcStorageRole | [**Get-IntersightFabricFcStorageRole**](docs/Get-IntersightFabricFcStorageRole.md) | Read a 'FabricFcStorageRole' resource.
 FabricFcUplinkPcRole | [**Get-IntersightFabricFcUplinkPcRole**](docs/Get-IntersightFabricFcUplinkPcRole.md) | Read a 'FabricFcUplinkPcRole' resource.
 FabricFcUplinkRole | [**Get-IntersightFabricFcUplinkRole**](docs/Get-IntersightFabricFcUplinkRole.md) | Read a 'FabricFcUplinkRole' resource.
+FabricFcZonePolicy | [**Get-IntersightFabricFcZonePolicy**](docs/Get-IntersightFabricFcZonePolicy.md) | Read a 'FabricFcZonePolicy' resource.
 FabricFcoeUplinkPcRole | [**Get-IntersightFabricFcoeUplinkPcRole**](docs/Get-IntersightFabricFcoeUplinkPcRole.md) | Read a 'FabricFcoeUplinkPcRole' resource.
 FabricFcoeUplinkRole | [**Get-IntersightFabricFcoeUplinkRole**](docs/Get-IntersightFabricFcoeUplinkRole.md) | Read a 'FabricFcoeUplinkRole' resource.
 FabricFlowControlPolicy | [**Get-IntersightFabricFlowControlPolicy**](docs/Get-IntersightFabricFlowControlPolicy.md) | Read a 'FabricFlowControlPolicy' resource.
@@ -1133,6 +1136,7 @@ FabricFcNetworkPolicy | [**New-IntersightFabricFcNetworkPolicy**](docs/New-Inter
 FabricFcStorageRole | [**New-IntersightFabricFcStorageRole**](docs/New-IntersightFabricFcStorageRole.md) | Create a 'FabricFcStorageRole' resource.
 FabricFcUplinkPcRole | [**New-IntersightFabricFcUplinkPcRole**](docs/New-IntersightFabricFcUplinkPcRole.md) | Create a 'FabricFcUplinkPcRole' resource.
 FabricFcUplinkRole | [**New-IntersightFabricFcUplinkRole**](docs/New-IntersightFabricFcUplinkRole.md) | Create a 'FabricFcUplinkRole' resource.
+FabricFcZonePolicy | [**New-IntersightFabricFcZonePolicy**](docs/New-IntersightFabricFcZonePolicy.md) | Create a 'FabricFcZonePolicy' resource.
 FabricFcoeUplinkPcRole | [**New-IntersightFabricFcoeUplinkPcRole**](docs/New-IntersightFabricFcoeUplinkPcRole.md) | Create a 'FabricFcoeUplinkPcRole' resource.
 FabricFcoeUplinkRole | [**New-IntersightFabricFcoeUplinkRole**](docs/New-IntersightFabricFcoeUplinkRole.md) | Create a 'FabricFcoeUplinkRole' resource.
 FabricFlowControlPolicy | [**New-IntersightFabricFlowControlPolicy**](docs/New-IntersightFabricFlowControlPolicy.md) | Create a 'FabricFlowControlPolicy' resource.
@@ -1163,6 +1167,7 @@ FabricFcNetworkPolicy | [**Remove-IntersightFabricFcNetworkPolicy**](docs/Remove
 FabricFcStorageRole | [**Remove-IntersightFabricFcStorageRole**](docs/Remove-IntersightFabricFcStorageRole.md) | Delete a 'FabricFcStorageRole' resource.
 FabricFcUplinkPcRole | [**Remove-IntersightFabricFcUplinkPcRole**](docs/Remove-IntersightFabricFcUplinkPcRole.md) | Delete a 'FabricFcUplinkPcRole' resource.
 FabricFcUplinkRole | [**Remove-IntersightFabricFcUplinkRole**](docs/Remove-IntersightFabricFcUplinkRole.md) | Delete a 'FabricFcUplinkRole' resource.
+FabricFcZonePolicy | [**Remove-IntersightFabricFcZonePolicy**](docs/Remove-IntersightFabricFcZonePolicy.md) | Delete a 'FabricFcZonePolicy' resource.
 FabricFcoeUplinkPcRole | [**Remove-IntersightFabricFcoeUplinkPcRole**](docs/Remove-IntersightFabricFcoeUplinkPcRole.md) | Delete a 'FabricFcoeUplinkPcRole' resource.
 FabricFcoeUplinkRole | [**Remove-IntersightFabricFcoeUplinkRole**](docs/Remove-IntersightFabricFcoeUplinkRole.md) | Delete a 'FabricFcoeUplinkRole' resource.
 FabricFlowControlPolicy | [**Remove-IntersightFabricFlowControlPolicy**](docs/Remove-IntersightFabricFlowControlPolicy.md) | Delete a 'FabricFlowControlPolicy' resource.
@@ -1194,6 +1199,7 @@ FabricFcNetworkPolicy | [**Set-IntersightFabricFcNetworkPolicy**](docs/Set-Inter
 FabricFcStorageRole | [**Set-IntersightFabricFcStorageRole**](docs/Set-IntersightFabricFcStorageRole.md) | Update a 'FabricFcStorageRole' resource.
 FabricFcUplinkPcRole | [**Set-IntersightFabricFcUplinkPcRole**](docs/Set-IntersightFabricFcUplinkPcRole.md) | Update a 'FabricFcUplinkPcRole' resource.
 FabricFcUplinkRole | [**Set-IntersightFabricFcUplinkRole**](docs/Set-IntersightFabricFcUplinkRole.md) | Update a 'FabricFcUplinkRole' resource.
+FabricFcZonePolicy | [**Set-IntersightFabricFcZonePolicy**](docs/Set-IntersightFabricFcZonePolicy.md) | Update a 'FabricFcZonePolicy' resource.
 FabricFcoeUplinkPcRole | [**Set-IntersightFabricFcoeUplinkPcRole**](docs/Set-IntersightFabricFcoeUplinkPcRole.md) | Update a 'FabricFcoeUplinkPcRole' resource.
 FabricFcoeUplinkRole | [**Set-IntersightFabricFcoeUplinkRole**](docs/Set-IntersightFabricFcoeUplinkRole.md) | Update a 'FabricFcoeUplinkRole' resource.
 FabricFlowControlPolicy | [**Set-IntersightFabricFlowControlPolicy**](docs/Set-IntersightFabricFlowControlPolicy.md) | Update a 'FabricFlowControlPolicy' resource.
@@ -1693,6 +1699,7 @@ KubernetesConfigResultEntry | [**Get-IntersightKubernetesConfigResultEntry**](do
 KubernetesContainerRuntimePolicy | [**Get-IntersightKubernetesContainerRuntimePolicy**](docs/Get-IntersightKubernetesContainerRuntimePolicy.md) | Read a 'KubernetesContainerRuntimePolicy' resource.
 KubernetesDaemonSet | [**Get-IntersightKubernetesDaemonSet**](docs/Get-IntersightKubernetesDaemonSet.md) | Read a 'KubernetesDaemonSet' resource.
 KubernetesDeployment | [**Get-IntersightKubernetesDeployment**](docs/Get-IntersightKubernetesDeployment.md) | Read a 'KubernetesDeployment' resource.
+KubernetesHttpProxyPolicy | [**Get-IntersightKubernetesHttpProxyPolicy**](docs/Get-IntersightKubernetesHttpProxyPolicy.md) | Read a 'KubernetesHttpProxyPolicy' resource.
 KubernetesIngress | [**Get-IntersightKubernetesIngress**](docs/Get-IntersightKubernetesIngress.md) | Read a 'KubernetesIngress' resource.
 KubernetesNetworkPolicy | [**Get-IntersightKubernetesNetworkPolicy**](docs/Get-IntersightKubernetesNetworkPolicy.md) | Read a 'KubernetesNetworkPolicy' resource.
 KubernetesNode | [**Get-IntersightKubernetesNode**](docs/Get-IntersightKubernetesNode.md) | Read a 'KubernetesNode' resource.
@@ -1719,6 +1726,7 @@ KubernetesCluster | [**New-IntersightKubernetesCluster**](docs/New-IntersightKub
 KubernetesClusterAddonProfile | [**New-IntersightKubernetesClusterAddonProfile**](docs/New-IntersightKubernetesClusterAddonProfile.md) | Create a 'KubernetesClusterAddonProfile' resource.
 KubernetesClusterProfile | [**New-IntersightKubernetesClusterProfile**](docs/New-IntersightKubernetesClusterProfile.md) | Create a 'KubernetesClusterProfile' resource.
 KubernetesContainerRuntimePolicy | [**New-IntersightKubernetesContainerRuntimePolicy**](docs/New-IntersightKubernetesContainerRuntimePolicy.md) | Create a 'KubernetesContainerRuntimePolicy' resource.
+KubernetesHttpProxyPolicy | [**New-IntersightKubernetesHttpProxyPolicy**](docs/New-IntersightKubernetesHttpProxyPolicy.md) | Create a 'KubernetesHttpProxyPolicy' resource.
 KubernetesNetworkPolicy | [**New-IntersightKubernetesNetworkPolicy**](docs/New-IntersightKubernetesNetworkPolicy.md) | Create a 'KubernetesNetworkPolicy' resource.
 KubernetesNodeGroupProfile | [**New-IntersightKubernetesNodeGroupProfile**](docs/New-IntersightKubernetesNodeGroupProfile.md) | Create a 'KubernetesNodeGroupProfile' resource.
 KubernetesSysConfigPolicy | [**New-IntersightKubernetesSysConfigPolicy**](docs/New-IntersightKubernetesSysConfigPolicy.md) | Create a 'KubernetesSysConfigPolicy' resource.
@@ -1742,6 +1750,7 @@ KubernetesClusterProfile | [**Remove-IntersightKubernetesClusterProfile**](docs/
 KubernetesContainerRuntimePolicy | [**Remove-IntersightKubernetesContainerRuntimePolicy**](docs/Remove-IntersightKubernetesContainerRuntimePolicy.md) | Delete a 'KubernetesContainerRuntimePolicy' resource.
 KubernetesDaemonSet | [**Remove-IntersightKubernetesDaemonSet**](docs/Remove-IntersightKubernetesDaemonSet.md) | Delete a 'KubernetesDaemonSet' resource.
 KubernetesDeployment | [**Remove-IntersightKubernetesDeployment**](docs/Remove-IntersightKubernetesDeployment.md) | Delete a 'KubernetesDeployment' resource.
+KubernetesHttpProxyPolicy | [**Remove-IntersightKubernetesHttpProxyPolicy**](docs/Remove-IntersightKubernetesHttpProxyPolicy.md) | Delete a 'KubernetesHttpProxyPolicy' resource.
 KubernetesIngress | [**Remove-IntersightKubernetesIngress**](docs/Remove-IntersightKubernetesIngress.md) | Delete a 'KubernetesIngress' resource.
 KubernetesNetworkPolicy | [**Remove-IntersightKubernetesNetworkPolicy**](docs/Remove-IntersightKubernetesNetworkPolicy.md) | Delete a 'KubernetesNetworkPolicy' resource.
 KubernetesNode | [**Remove-IntersightKubernetesNode**](docs/Remove-IntersightKubernetesNode.md) | Delete a 'KubernetesNode' resource.
@@ -1767,6 +1776,7 @@ KubernetesCluster | [**Set-IntersightKubernetesCluster**](docs/Set-IntersightKub
 KubernetesClusterAddonProfile | [**Set-IntersightKubernetesClusterAddonProfile**](docs/Set-IntersightKubernetesClusterAddonProfile.md) | Update a 'KubernetesClusterAddonProfile' resource.
 KubernetesClusterProfile | [**Set-IntersightKubernetesClusterProfile**](docs/Set-IntersightKubernetesClusterProfile.md) | Update a 'KubernetesClusterProfile' resource.
 KubernetesContainerRuntimePolicy | [**Set-IntersightKubernetesContainerRuntimePolicy**](docs/Set-IntersightKubernetesContainerRuntimePolicy.md) | Update a 'KubernetesContainerRuntimePolicy' resource.
+KubernetesHttpProxyPolicy | [**Set-IntersightKubernetesHttpProxyPolicy**](docs/Set-IntersightKubernetesHttpProxyPolicy.md) | Update a 'KubernetesHttpProxyPolicy' resource.
 KubernetesNetworkPolicy | [**Set-IntersightKubernetesNetworkPolicy**](docs/Set-IntersightKubernetesNetworkPolicy.md) | Update a 'KubernetesNetworkPolicy' resource.
 KubernetesNodeGroupProfile | [**Set-IntersightKubernetesNodeGroupProfile**](docs/Set-IntersightKubernetesNodeGroupProfile.md) | Update a 'KubernetesNodeGroupProfile' resource.
 KubernetesSysConfigPolicy | [**Set-IntersightKubernetesSysConfigPolicy**](docs/Set-IntersightKubernetesSysConfigPolicy.md) | Update a 'KubernetesSysConfigPolicy' resource.
@@ -1866,6 +1876,7 @@ NetworkElement | [**Set-IntersightNetworkElement**](docs/Set-IntersightNetworkEl
 NetworkFcZoneInfo | [**Set-IntersightNetworkFcZoneInfo**](docs/Set-IntersightNetworkFcZoneInfo.md) | Update a 'NetworkFcZoneInfo' resource.
 NetworkVlanPortInfo | [**Set-IntersightNetworkVlanPortInfo**](docs/Set-IntersightNetworkVlanPortInfo.md) | Update a 'NetworkVlanPortInfo' resource.
 NetworkconfigPolicy | [**Get-IntersightNetworkconfigPolicy**](docs/Get-IntersightNetworkconfigPolicy.md) | Read a 'NetworkconfigPolicy' resource.
+NetworkconfigPolicyInventory | [**Get-IntersightNetworkconfigPolicyInventory**](docs/Get-IntersightNetworkconfigPolicyInventory.md) | Read a 'NetworkconfigPolicyInventory' resource.
 NetworkconfigPolicy | [**New-IntersightNetworkconfigPolicy**](docs/New-IntersightNetworkconfigPolicy.md) | Create a 'NetworkconfigPolicy' resource.
 NetworkconfigPolicy | [**Remove-IntersightNetworkconfigPolicy**](docs/Remove-IntersightNetworkconfigPolicy.md) | Delete a 'NetworkconfigPolicy' resource.
 NetworkconfigPolicy | [**Set-IntersightNetworkconfigPolicy**](docs/Set-IntersightNetworkconfigPolicy.md) | Update a 'NetworkconfigPolicy' resource.
@@ -1897,6 +1908,8 @@ NiatelemetryApicFanDetails | [**Get-IntersightNiatelemetryApicFanDetails**](docs
 NiatelemetryApicFexDetails | [**Get-IntersightNiatelemetryApicFexDetails**](docs/Get-IntersightNiatelemetryApicFexDetails.md) | Read a 'NiatelemetryApicFexDetails' resource.
 NiatelemetryApicFlashDetails | [**Get-IntersightNiatelemetryApicFlashDetails**](docs/Get-IntersightNiatelemetryApicFlashDetails.md) | Read a 'NiatelemetryApicFlashDetails' resource.
 NiatelemetryApicNtpAuth | [**Get-IntersightNiatelemetryApicNtpAuth**](docs/Get-IntersightNiatelemetryApicNtpAuth.md) | Read a 'NiatelemetryApicNtpAuth' resource.
+NiatelemetryApicPerformanceData | [**Get-IntersightNiatelemetryApicPerformanceData**](docs/Get-IntersightNiatelemetryApicPerformanceData.md) | Read a 'NiatelemetryApicPerformanceData' resource.
+NiatelemetryApicPodData | [**Get-IntersightNiatelemetryApicPodData**](docs/Get-IntersightNiatelemetryApicPodData.md) | Read a 'NiatelemetryApicPodData' resource.
 NiatelemetryApicPsuDetails | [**Get-IntersightNiatelemetryApicPsuDetails**](docs/Get-IntersightNiatelemetryApicPsuDetails.md) | Read a 'NiatelemetryApicPsuDetails' resource.
 NiatelemetryApicRealmDetails | [**Get-IntersightNiatelemetryApicRealmDetails**](docs/Get-IntersightNiatelemetryApicRealmDetails.md) | Read a 'NiatelemetryApicRealmDetails' resource.
 NiatelemetryApicSnmpClientGrpDetails | [**Get-IntersightNiatelemetryApicSnmpClientGrpDetails**](docs/Get-IntersightNiatelemetryApicSnmpClientGrpDetails.md) | Read a 'NiatelemetryApicSnmpClientGrpDetails' resource.
@@ -1922,6 +1935,7 @@ NiatelemetryFabricNodeControlDetails | [**Get-IntersightNiatelemetryFabricNodeCo
 NiatelemetryFabricPodProfile | [**Get-IntersightNiatelemetryFabricPodProfile**](docs/Get-IntersightNiatelemetryFabricPodProfile.md) | Read a 'NiatelemetryFabricPodProfile' resource.
 NiatelemetryFabricPodSs | [**Get-IntersightNiatelemetryFabricPodSs**](docs/Get-IntersightNiatelemetryFabricPodSs.md) | Read a 'NiatelemetryFabricPodSs' resource.
 NiatelemetryFault | [**Get-IntersightNiatelemetryFault**](docs/Get-IntersightNiatelemetryFault.md) | Read a 'NiatelemetryFault' resource.
+NiatelemetryHealthInsightsData | [**Get-IntersightNiatelemetryHealthInsightsData**](docs/Get-IntersightNiatelemetryHealthInsightsData.md) | Read a 'NiatelemetryHealthInsightsData' resource.
 NiatelemetryHttpsAclContractDetails | [**Get-IntersightNiatelemetryHttpsAclContractDetails**](docs/Get-IntersightNiatelemetryHttpsAclContractDetails.md) | Read a 'NiatelemetryHttpsAclContractDetails' resource.
 NiatelemetryHttpsAclContractFilterMap | [**Get-IntersightNiatelemetryHttpsAclContractFilterMap**](docs/Get-IntersightNiatelemetryHttpsAclContractFilterMap.md) | Read a 'NiatelemetryHttpsAclContractFilterMap' resource.
 NiatelemetryHttpsAclEpgContractMap | [**Get-IntersightNiatelemetryHttpsAclEpgContractMap**](docs/Get-IntersightNiatelemetryHttpsAclEpgContractMap.md) | Read a 'NiatelemetryHttpsAclEpgContractMap' resource.
@@ -1962,6 +1976,7 @@ NotificationAccountSubscription | [**Get-IntersightNotificationAccountSubscripti
 NotificationAccountSubscription | [**New-IntersightNotificationAccountSubscription**](docs/New-IntersightNotificationAccountSubscription.md) | Create a 'NotificationAccountSubscription' resource.
 NotificationAccountSubscription | [**Remove-IntersightNotificationAccountSubscription**](docs/Remove-IntersightNotificationAccountSubscription.md) | Delete a 'NotificationAccountSubscription' resource.
 NotificationAccountSubscription | [**Set-IntersightNotificationAccountSubscription**](docs/Set-IntersightNotificationAccountSubscription.md) | Update a 'NotificationAccountSubscription' resource.
+NtpNtpServer | [**Get-IntersightNtpNtpServer**](docs/Get-IntersightNtpNtpServer.md) | Read a 'NtpNtpServer' resource.
 NtpPolicy | [**Get-IntersightNtpPolicy**](docs/Get-IntersightNtpPolicy.md) | Read a 'NtpPolicy' resource.
 NtpPolicy | [**New-IntersightNtpPolicy**](docs/New-IntersightNtpPolicy.md) | Create a 'NtpPolicy' resource.
 NtpPolicy | [**Remove-IntersightNtpPolicy**](docs/Remove-IntersightNtpPolicy.md) | Delete a 'NtpPolicy' resource.
@@ -2000,9 +2015,11 @@ OsConfigurationFile | [**Set-IntersightOsConfigurationFile**](docs/Set-Intersigh
 PciCoprocessorCard | [**Get-IntersightPciCoprocessorCard**](docs/Get-IntersightPciCoprocessorCard.md) | Read a 'PciCoprocessorCard' resource.
 PciDevice | [**Get-IntersightPciDevice**](docs/Get-IntersightPciDevice.md) | Read a 'PciDevice' resource.
 PciLink | [**Get-IntersightPciLink**](docs/Get-IntersightPciLink.md) | Read a 'PciLink' resource.
+PciNode | [**Get-IntersightPciNode**](docs/Get-IntersightPciNode.md) | Read a 'PciNode' resource.
 PciSwitch | [**Get-IntersightPciSwitch**](docs/Get-IntersightPciSwitch.md) | Read a 'PciSwitch' resource.
 PciDevice | [**Set-IntersightPciDevice**](docs/Set-IntersightPciDevice.md) | Update a 'PciDevice' resource.
 PciLink | [**Set-IntersightPciLink**](docs/Set-IntersightPciLink.md) | Update a 'PciLink' resource.
+PciNode | [**Set-IntersightPciNode**](docs/Set-IntersightPciNode.md) | Update a 'PciNode' resource.
 PciSwitch | [**Set-IntersightPciSwitch**](docs/Set-IntersightPciSwitch.md) | Update a 'PciSwitch' resource.
 PortGroup | [**Get-IntersightPortGroup**](docs/Get-IntersightPortGroup.md) | Read a 'PortGroup' resource.
 PortMacBinding | [**Get-IntersightPortMacBinding**](docs/Get-IntersightPortMacBinding.md) | Read a 'PortMacBinding' resource.
@@ -2170,6 +2187,7 @@ SshPolicyInventory | [**Get-IntersightSshPolicyInventory**](docs/Get-IntersightS
 SshPolicy | [**New-IntersightSshPolicy**](docs/New-IntersightSshPolicy.md) | Create a 'SshPolicy' resource.
 SshPolicy | [**Remove-IntersightSshPolicy**](docs/Remove-IntersightSshPolicy.md) | Delete a 'SshPolicy' resource.
 SshPolicy | [**Set-IntersightSshPolicy**](docs/Set-IntersightSshPolicy.md) | Update a 'SshPolicy' resource.
+StorageBatteryBackupUnit | [**Get-IntersightStorageBatteryBackupUnit**](docs/Get-IntersightStorageBatteryBackupUnit.md) | Read a 'StorageBatteryBackupUnit' resource.
 StorageController | [**Get-IntersightStorageController**](docs/Get-IntersightStorageController.md) | Read a 'StorageController' resource.
 StorageDiskGroup | [**Get-IntersightStorageDiskGroup**](docs/Get-IntersightStorageDiskGroup.md) | Read a 'StorageDiskGroup' resource.
 StorageDiskSlot | [**Get-IntersightStorageDiskSlot**](docs/Get-IntersightStorageDiskSlot.md) | Read a 'StorageDiskSlot' resource.
@@ -2262,6 +2280,7 @@ StorageDriveGroup | [**New-IntersightStorageDriveGroup**](docs/New-IntersightSto
 StorageStoragePolicy | [**New-IntersightStorageStoragePolicy**](docs/New-IntersightStorageStoragePolicy.md) | Create a 'StorageStoragePolicy' resource.
 StorageDriveGroup | [**Remove-IntersightStorageDriveGroup**](docs/Remove-IntersightStorageDriveGroup.md) | Delete a 'StorageDriveGroup' resource.
 StorageStoragePolicy | [**Remove-IntersightStorageStoragePolicy**](docs/Remove-IntersightStorageStoragePolicy.md) | Delete a 'StorageStoragePolicy' resource.
+StorageBatteryBackupUnit | [**Set-IntersightStorageBatteryBackupUnit**](docs/Set-IntersightStorageBatteryBackupUnit.md) | Update a 'StorageBatteryBackupUnit' resource.
 StorageController | [**Set-IntersightStorageController**](docs/Set-IntersightStorageController.md) | Update a 'StorageController' resource.
 StorageDiskGroup | [**Set-IntersightStorageDiskGroup**](docs/Set-IntersightStorageDiskGroup.md) | Update a 'StorageDiskGroup' resource.
 StorageDriveGroup | [**Set-IntersightStorageDriveGroup**](docs/Set-IntersightStorageDriveGroup.md) | Update a 'StorageDriveGroup' resource.
@@ -2319,6 +2338,7 @@ TaskHyperFlexManagementScopedInventory | [**New-IntersightTaskHyperFlexManagemen
 TaskHyperflexScopedInventory | [**New-IntersightTaskHyperflexScopedInventory**](docs/New-IntersightTaskHyperflexScopedInventory.md) | Create a 'TaskHyperflexScopedInventory' resource.
 TaskIweScopedInventory | [**New-IntersightTaskIweScopedInventory**](docs/New-IntersightTaskIweScopedInventory.md) | Create a 'TaskIweScopedInventory' resource.
 TaskMdsScopedInventory | [**New-IntersightTaskMdsScopedInventory**](docs/New-IntersightTaskMdsScopedInventory.md) | Create a 'TaskMdsScopedInventory' resource.
+TaskMdsSystemScopedInventory | [**New-IntersightTaskMdsSystemScopedInventory**](docs/New-IntersightTaskMdsSystemScopedInventory.md) | Create a 'TaskMdsSystemScopedInventory' resource.
 TaskNetAppScopedInventory | [**New-IntersightTaskNetAppScopedInventory**](docs/New-IntersightTaskNetAppScopedInventory.md) | Create a 'TaskNetAppScopedInventory' resource.
 TaskNexusScopedInventory | [**New-IntersightTaskNexusScopedInventory**](docs/New-IntersightTaskNexusScopedInventory.md) | Create a 'TaskNexusScopedInventory' resource.
 TaskPublicCloudScopedInventory | [**New-IntersightTaskPublicCloudScopedInventory**](docs/New-IntersightTaskPublicCloudScopedInventory.md) | Create a 'TaskPublicCloudScopedInventory' resource.
@@ -2382,6 +2402,7 @@ VirtualizationVmwareDistributedNetwork | [**Get-IntersightVirtualizationVmwareDi
 VirtualizationVmwareDistributedSwitch | [**Get-IntersightVirtualizationVmwareDistributedSwitch**](docs/Get-IntersightVirtualizationVmwareDistributedSwitch.md) | Read a 'VirtualizationVmwareDistributedSwitch' resource.
 VirtualizationVmwareFolder | [**Get-IntersightVirtualizationVmwareFolder**](docs/Get-IntersightVirtualizationVmwareFolder.md) | Read a 'VirtualizationVmwareFolder' resource.
 VirtualizationVmwareHost | [**Get-IntersightVirtualizationVmwareHost**](docs/Get-IntersightVirtualizationVmwareHost.md) | Read a 'VirtualizationVmwareHost' resource.
+VirtualizationVmwareHostGpu | [**Get-IntersightVirtualizationVmwareHostGpu**](docs/Get-IntersightVirtualizationVmwareHostGpu.md) | Read a 'VirtualizationVmwareHostGpu' resource.
 VirtualizationVmwareKernelNetwork | [**Get-IntersightVirtualizationVmwareKernelNetwork**](docs/Get-IntersightVirtualizationVmwareKernelNetwork.md) | Read a 'VirtualizationVmwareKernelNetwork' resource.
 VirtualizationVmwareNetwork | [**Get-IntersightVirtualizationVmwareNetwork**](docs/Get-IntersightVirtualizationVmwareNetwork.md) | Read a 'VirtualizationVmwareNetwork' resource.
 VirtualizationVmwarePhysicalNetworkInterface | [**Get-IntersightVirtualizationVmwarePhysicalNetworkInterface**](docs/Get-IntersightVirtualizationVmwarePhysicalNetworkInterface.md) | Read a 'VirtualizationVmwarePhysicalNetworkInterface' resource.
@@ -2389,6 +2410,7 @@ VirtualizationVmwareUplinkPort | [**Get-IntersightVirtualizationVmwareUplinkPort
 VirtualizationVmwareVcenter | [**Get-IntersightVirtualizationVmwareVcenter**](docs/Get-IntersightVirtualizationVmwareVcenter.md) | Read a 'VirtualizationVmwareVcenter' resource.
 VirtualizationVmwareVirtualDisk | [**Get-IntersightVirtualizationVmwareVirtualDisk**](docs/Get-IntersightVirtualizationVmwareVirtualDisk.md) | Read a 'VirtualizationVmwareVirtualDisk' resource.
 VirtualizationVmwareVirtualMachine | [**Get-IntersightVirtualizationVmwareVirtualMachine**](docs/Get-IntersightVirtualizationVmwareVirtualMachine.md) | Read a 'VirtualizationVmwareVirtualMachine' resource.
+VirtualizationVmwareVirtualMachineGpu | [**Get-IntersightVirtualizationVmwareVirtualMachineGpu**](docs/Get-IntersightVirtualizationVmwareVirtualMachineGpu.md) | Read a 'VirtualizationVmwareVirtualMachineGpu' resource.
 VirtualizationVmwareVirtualMachineSnapshot | [**Get-IntersightVirtualizationVmwareVirtualMachineSnapshot**](docs/Get-IntersightVirtualizationVmwareVirtualMachineSnapshot.md) | Read a 'VirtualizationVmwareVirtualMachineSnapshot' resource.
 VirtualizationVmwareVirtualNetworkInterface | [**Get-IntersightVirtualizationVmwareVirtualNetworkInterface**](docs/Get-IntersightVirtualizationVmwareVirtualNetworkInterface.md) | Read a 'VirtualizationVmwareVirtualNetworkInterface' resource.
 VirtualizationVmwareVirtualSwitch | [**Get-IntersightVirtualizationVmwareVirtualSwitch**](docs/Get-IntersightVirtualizationVmwareVirtualSwitch.md) | Read a 'VirtualizationVmwareVirtualSwitch' resource.

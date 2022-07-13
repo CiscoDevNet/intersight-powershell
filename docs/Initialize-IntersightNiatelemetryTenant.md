@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryTenant [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BfdIfPolCount< long>][-BfdIfpCount< long>][-ClassId< NiatelemetryTenant.ClassIdEnum>][-DhcpRsProvCount< long>][-Dn< string>][-FhsBdPolCount< long>][-FvApCount< long>][-FvBdCount< long>][-FvBdSubnetCount< long>][-FvBdnoArpCount< long>][-FvCepCount< long>][-FvRsBdToFhsCount< long>][-FvRsBdToOutCount< long>][-FvSiteConnpCount< long>][-FvSubnetCount< long>][-IpStaticRouteCount< long>][-L3MulticastCount< long>][-L3MulticastCtxCount< long>][-L3MulticastIfCount< long>][-L3outCount< long>][-Moid< string>][-ObjectType< NiatelemetryTenant.ObjectTypeEnum>][-QosCustomPolCount< long>][-RecordType< string>][-RecordVersion< string>][-SiteName< string>][-Ssm< string>][-SsmCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TcamOptCount< long>][-TraceRouteEpCount< long>][-TraceRouteEpExtCount< long>][-TraceRouteExtEpCount< long>][-TraceRouteExtExtCount< long>][-VnsAbsGraphCount< long>][-VnsBackupPolCount< long>][-VnsRedirectDestCount< long>][-VnsSvcRedirectPolCount< long>][-VrfCount< long>][-VzBrCpCount< long>][-VzRtConsCount< long>][-VzRtProvCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryTenant [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BfdIfPolCount< long>][-BfdIfpCount< long>][-ClassId< NiatelemetryTenant.ClassIdEnum>][-DhcpRsProvCount< long>][-Dn< string>][-FhsBdPolCount< long>][-FvApCount< long>][-FvBdCount< long>][-FvBdSubnetCount< long>][-FvBdnoArpCount< long>][-FvCepCount< long>][-FvRsBdToFhsCount< long>][-FvRsBdToOutCount< long>][-FvSiteConnpCount< long>][-FvSubnetCount< long>][-IpStaticRouteCount< long>][-L3MulticastCount< long>][-L3MulticastCtxCount< long>][-L3MulticastIfCount< long>][-L3outCount< long>][-Moid< string>][-ObjectType< NiatelemetryTenant.ObjectTypeEnum>][-QosCustomPolCount< long>][-RecordType< string>][-RecordVersion< string>][-SiteName< string>][-Ssm< string>][-SsmCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TcamOptCount< long>][-TenantHealth< long>][-TraceRouteEpCount< long>][-TraceRouteEpExtCount< long>][-TraceRouteExtEpCount< long>][-TraceRouteExtExtCount< long>][-VnsAbsGraphCount< long>][-VnsBackupPolCount< long>][-VnsRedirectDestCount< long>][-VnsSvcRedirectPolCount< long>][-VrfCount< long>][-VzBrCpCount< long>][-VzRtConsCount< long>][-VzRtProvCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -478,6 +478,21 @@ Accept wildcard characters: False
 
 ### -TcamOptCount
 Number of TCAM optimization enabled per tenant.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TenantHealth
+Health of each tenant in the APIC.
 
 ```yaml
 Type: long

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-ScpVhba< VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][-FcZonePolicies< System.Collections.Generic.List`1[FabricFcZonePolicyRelationship]>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-ScpVhba< VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -82,6 +82,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: VnicFcQosPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FcZonePolicies
+An array of relationships to fabricFcZonePolicy resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[FabricFcZonePolicyRelationship]
 Parameter Sets: (All)
 Aliases:
 

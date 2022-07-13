@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Annotation< string>][-BootTime< DateTime>][-Capacity< Model.InfraHardwareInfo>][-ClassId< VirtualizationVmwareVirtualMachine.ClassIdEnum>][-ConfigName< string>][-ConnectionState< string>][-CpuHotAddEnabled< bool>][-CpuShares< Model.VirtualizationVmwareVmCpuShareInfo>][-CpuSocketInfo< Model.VirtualizationVmwareVmCpuSocketInfo>][-CpuUtilization< float>][-CustomAttributes< System.Collections.Generic.List`1[string]>][-DefaultPowerOffType< string>][-DhcpEnabled< bool>][-DiskCommitInfo< Model.VirtualizationVmwareVmDiskCommitInfo>][-DnsServerList< System.Collections.Generic.List`1[string]>][-DnsSuffixList< System.Collections.Generic.List`1[string]>][-ExtraConfig< object>][-Folder< string>][-GuestInfo< Model.VirtualizationGuestInfo>][-GuestState< VirtualizationVmwareVirtualMachine.GuestStateEnum>][-HostCompatibility< string>][-HypervisorType< VirtualizationVmwareVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-InstanceUuid< string>][-InventoryPath< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-IsTemplate< bool>][-MacAddress< System.Collections.Generic.List`1[string]>][-MemShares< Model.VirtualizationVmwareVmMemoryShareInfo>][-MemoryCapacity< Model.VirtualizationMemoryCapacity>][-MemoryHotAddEnabled< bool>][-MemoryUtilization< float>][-Moid< string>][-Name< string>][-NetworkCount< long>][-ObjectType< VirtualizationVmwareVirtualMachine.ObjectTypeEnum>][-ParentFolder< Model.VirtualizationVmwareFolderRelationship>][-PortGroups< System.Collections.Generic.List`1[string]>][-PowerState< VirtualizationVmwareVirtualMachine.PowerStateEnum>][-ProcessorCapacity< Model.VirtualizationComputeCapacity>][-ProtectedVm< bool>][-Provider< VirtualizationVmwareVirtualMachine.ProviderEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-RemoteDisplayInfo< Model.VirtualizationVmwareRemoteDisplayInfo>][-RemoteDisplayVncEnabled< bool>][-ResourcePool< string>][-ResourcePoolOwner< string>][-ResourcePoolParent< string>][-State< VirtualizationVmwareVirtualMachine.StateEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ToolRunningStatus< string>][-ToolsVersion< string>][-Uuid< string>][-VirtualDisks< System.Collections.Generic.List`1[long]>][-VirtualNetworkInterfaces< System.Collections.Generic.List`1[long]>][-VmCreationTime< DateTime>][-VmDiskCount< long>][-VmOverallStatus< string>][-VmPath< string>][-VmVersion< string>][-VmVnicCount< long>][-VnicDeviceConfigId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Annotation< string>][-BootTime< DateTime>][-Capacity< Model.InfraHardwareInfo>][-ClassId< VirtualizationVmwareVirtualMachine.ClassIdEnum>][-ConfigName< string>][-ConnectionState< string>][-CpuHotAddEnabled< bool>][-CpuShares< Model.VirtualizationVmwareVmCpuShareInfo>][-CpuSocketInfo< Model.VirtualizationVmwareVmCpuSocketInfo>][-CpuUtilization< float>][-CustomAttributes< System.Collections.Generic.List`1[string]>][-DefaultPowerOffType< string>][-DhcpEnabled< bool>][-DiskCommitInfo< Model.VirtualizationVmwareVmDiskCommitInfo>][-DnsServerList< System.Collections.Generic.List`1[string]>][-DnsSuffixList< System.Collections.Generic.List`1[string]>][-Folder< string>][-GuestInfo< Model.VirtualizationGuestInfo>][-GuestState< VirtualizationVmwareVirtualMachine.GuestStateEnum>][-HypervisorType< VirtualizationVmwareVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-InstanceUuid< string>][-InventoryPath< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-IsTemplate< bool>][-MacAddress< System.Collections.Generic.List`1[string]>][-MemShares< Model.VirtualizationVmwareVmMemoryShareInfo>][-MemoryCapacity< Model.VirtualizationMemoryCapacity>][-MemoryHotAddEnabled< bool>][-MemoryUtilization< float>][-Moid< string>][-Name< string>][-NetworkCount< long>][-ObjectType< VirtualizationVmwareVirtualMachine.ObjectTypeEnum>][-ParentFolder< Model.VirtualizationVmwareFolderRelationship>][-PortGroups< System.Collections.Generic.List`1[string]>][-PowerState< VirtualizationVmwareVirtualMachine.PowerStateEnum>][-ProcessorCapacity< Model.VirtualizationComputeCapacity>][-ProtectedVm< bool>][-Provider< VirtualizationVmwareVirtualMachine.ProviderEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-RemoteDisplayInfo< Model.VirtualizationVmwareRemoteDisplayInfo>][-RemoteDisplayVncEnabled< bool>][-ResourcePool< string>][-ResourcePoolOwner< string>][-ResourcePoolParent< string>][-State< VirtualizationVmwareVirtualMachine.StateEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ToolRunningStatus< string>][-ToolsVersion< string>][-Uuid< string>][-VmCreationTime< DateTime>][-VmDiskCount< long>][-VmOverallStatus< string>][-VmPath< string>][-VmVersion< string>][-VmVnicCount< long>][-VnicDeviceConfigId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -287,23 +287,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ExtraConfig
-Additional custom configuration settings applied to this VM. It is a set of name-value pairs stored as json.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Folder
 The folder name associated with this VM.
 
@@ -341,21 +324,6 @@ The state of the guest OS running on this VM. Could be running, not running etc.
 
 ```yaml
 Type: VirtualizationVmwareVirtualMachine.GuestStateEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -HostCompatibility
-Minimum host ESXi version required for the virtual machine.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -862,36 +830,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VirtualDisks
-
-
-```yaml
-Type: System.Collections.Generic.List`1[long]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualNetworkInterfaces
-
-
-```yaml
-Type: System.Collections.Generic.List`1[long]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -VmCreationTime
 Time when this virtualmachine is created.
 
@@ -1075,5 +1013,3 @@ PS C:\> Initialize-IntersightVirtualizationVmwareVirtualMachine
 [Initialize-IntersightVirtualizationVmwareVmDiskCommitInfo](./Initialize-IntersightVirtualizationVmwareVmDiskCommitInfo.md)
 
 [Initialize-IntersightVirtualizationVmwareVmMemoryShareInfo](./Initialize-IntersightVirtualizationVmwareVmMemoryShareInfo.md)
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)

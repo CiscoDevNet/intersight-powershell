@@ -284,7 +284,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightComputeBladeIdentity](./Remove-IntersightComputeBladeIdentity.md)
-
 [Set-IntersightComputeBladeIdentity](./Set-IntersightComputeBladeIdentity.md)
 

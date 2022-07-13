@@ -8450,6 +8450,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightHyperflexNodeProfile()
         {
             ClassId = HyperflexNodeProfile.ClassIdEnum.HyperflexNodeProfile;
+            NodeRole = HyperflexNodeProfile.NodeRoleEnum.Unknown;
             ObjectType = HyperflexNodeProfile.ObjectTypeEnum.HyperflexNodeProfile;
             Type = HyperflexNodeProfile.TypeEnum.Instance;
 
@@ -8615,6 +8616,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The role that this node performs in the HyperFlex cluster.\n* `Unknown` - The node role is not available.\n* `Storage` - The node persists data and contributes to the storage capacity of a cluster.\n* `Compute` - The node contributes to the compute capacity of a cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexNodeProfile.NodeRoleEnum NodeRole
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8728,6 +8739,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NodeRole"))
+            {
+                initObject.NodeRole = this.NodeRole;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("PolicyBucket"))

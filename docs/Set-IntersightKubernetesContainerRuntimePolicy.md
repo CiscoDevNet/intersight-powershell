@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -DockerHttpProxy
-The HTTP proxy configuration for docker. Refer to https://docs.docker.com/network/proxy/ for details.
+The HTTP proxy configuration for docker. Refer to https://docs.docker.com/network/proxy/ for details. Deprecated, assign a HttpProxyPolicy to the ClusterProfile ContainerRuntimeProxyPolicy field instead.
 
 Note :- Use Initialize-IntersightKubernetesProxyConfig to create the object of complex type KubernetesProxyConfig
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DockerHttpsProxy
-The https proxy configuration for docker. Refer to https://docs.docker.com/network/proxy/ for details.
+The https proxy configuration for docker. Refer to https://docs.docker.com/network/proxy/ for details. Deprecated, assign a HttpProxyPolicy to the ClusterProfile ContainerRuntimeProxyPolicy field instead.
 
 Note :- Use Initialize-IntersightKubernetesProxyConfig to create the object of complex type KubernetesProxyConfig
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNiaInventoryDcnm [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNiaInventoryDcnm.ClassIdEnum>][-ControllerHealth< long>][-Dev< bool>][-EpldImageCount< long>][-GoldenImageDetails< System.Collections.Generic.List`1[Model.NiatelemetryImageDetail]>][-HaEnabled< bool>][-HaReplicationStatus< string>][-Install< string>][-InstallationType< string>][-InstallationTypeDescription< string>][-IsIsnConfigured< bool>][-IsMediaController< bool>][-IsSmartLicenseEnabled< bool>][-Mode< string>][-Moid< string>][-NdfcFabricName< string>][-NdfcOperState< string>][-NetworkInfo< Model.NiatelemetryNetworkInfo>][-NumDcnmSite< long>][-NumFabrics< long>][-NumFabricsInMsd< long>][-NumIngressReplicationFabrics< long>][-NumLocalUsers< long>][-NumMsd< long>][-NumSviVrfCount< long>][-NumTrmEnabledCount< long>][-NumUpgUsers< long>][-NxosImageCount< long>][-ObjectType< NiatelemetryNiaInventoryDcnm.ObjectTypeEnum>][-OutofbandIp< string>][-Serial< string>][-SiteName< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnderlayPeeringActiveLinksCount< long>][-UpgJobCount< long>][-UpgStatus< System.Collections.Generic.List`1[Model.NiatelemetryJobDetail]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNiaInventoryDcnm [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNiaInventoryDcnm.ClassIdEnum>][-ControllerHealth< long>][-Dev< bool>][-EpldImageCount< long>][-GoldenImageDetails< System.Collections.Generic.List`1[Model.NiatelemetryImageDetail]>][-HaEnabled< bool>][-HaReplicationStatus< string>][-Install< string>][-InstallationType< string>][-InstallationTypeDescription< string>][-IsIsnConfigured< bool>][-IsMediaController< bool>][-IsSmartLicenseEnabled< bool>][-Mode< string>][-Moid< string>][-NdfcFabricName< string>][-NdfcOperState< string>][-NetworkInfo< Model.NiatelemetryNetworkInfo>][-NumDcnmSite< long>][-NumFabrics< long>][-NumFabricsInMsd< long>][-NumIngressReplicationFabrics< long>][-NumLocalUsers< long>][-NumMsd< long>][-NumSviVrfCount< long>][-NumTrmEnabledCount< long>][-NumUpgUsers< long>][-NxosImageCount< long>][-ObjectType< NiatelemetryNiaInventoryDcnm.ObjectTypeEnum>][-OutofbandIp< string>][-RecordType< string>][-RecordVersion< string>][-Serial< string>][-SiteName< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnderlayPeeringActiveLinksCount< long>][-UpgJobCount< long>][-UpgStatus< System.Collections.Generic.List`1[Model.NiatelemetryJobDetail]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -480,6 +480,36 @@ Accept wildcard characters: False
 
 ### -OutofbandIp
 Out of band IP of controller on DCNM.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RecordType
+Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RecordVersion
+Version of record being pushed. This determines what was the API version for data available from the device.
 
 ```yaml
 Type: string

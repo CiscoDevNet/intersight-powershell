@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][-Moid< string>][[-Name]< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-ClusterProfile< HyperflexClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][-Moid< string>][[-Name]< string>][-NodeRole< HyperflexNodeProfile.NodeRoleEnum>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< HyperflexNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -255,6 +255,21 @@ Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -NodeRole
+The role that this node performs in the HyperFlex cluster.\n* `Unknown` - The node role is not available.\n* `Storage` - The node persists data and contributes to the storage capacity of a cluster.\n* `Compute` - The node contributes to the compute capacity of a cluster.
+
+```yaml
+Type: HyperflexNodeProfile.NodeRoleEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

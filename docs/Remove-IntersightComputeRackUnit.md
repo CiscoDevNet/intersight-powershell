@@ -5,38 +5,38 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-IntersightComputeRackUnitIdentity
+# Remove-IntersightComputeRackUnit
 
 ## SYNOPSIS
-Remove the ComputeRackUnitIdentity
+Remove the ComputeRackUnit
 
 ## SYNTAX
 
 ```
-Remove-IntersightComputeRackUnitIdentity -Moid <String> [<CommonParameters>]
+Remove-IntersightComputeRackUnit -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ComputeRackUnitIdentity&apos; resource.
+Delete a &apos;ComputeRackUnit&apos; resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-IntersightComputeRackUnitIdentity -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+PS C:\> Remove-IntersightComputeRackUnit -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Above cmdlet removes the specified ComputeRackUnitIdentity 
+Above cmdlet removes the specified ComputeRackUnit 
 
 ### Example 2
 ```powershell
-PS C:\>Get-IntersightComputeRackUnitIdentity -Name "MoName"|  Remove-IntersightComputeRackUnitIdentity
+PS C:\>Get-IntersightComputeRackUnit -Name "MoName"|  Remove-IntersightComputeRackUnit
 ```
 Above cmdlet pipes the output of Get cmdlet to Remove cmdlet
 
 ## PARAMETERS
 
 ### -Moid
-Specifyies the Moid of ComputeRackUnitIdentity.
+Specifyies the Moid of ComputeRackUnit.
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightComputeRackUnitIdentity](./Get-IntersightComputeRackUnitIdentity.md)
+[Get-IntersightComputeRackUnit](./Get-IntersightComputeRackUnit.md)
 
-[Set-IntersightComputeRackUnitIdentity](./Set-IntersightComputeRackUnitIdentity.md)
+[Set-IntersightComputeRackUnit](./Set-IntersightComputeRackUnit.md)
 

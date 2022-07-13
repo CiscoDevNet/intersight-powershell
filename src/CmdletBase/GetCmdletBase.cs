@@ -71,12 +71,12 @@ namespace Intersight.PowerShell
                 if (this.ParameterSetName.Equals("CmdletParam", StringComparison.OrdinalIgnoreCase))
                 {
                     var queryString = CreateFilterQuery();
-                    argList = new object[] { queryString, null, null, null, null, null, null, null, null, null, null };
+                    argList = new object[] { queryString, null, null, null, null, null, null, null, null, null, null, 0 };
 
                 }
                 else if (this.ParameterSetName.Equals("QueryParam", StringComparison.OrdinalIgnoreCase))
                 {
-                    argList = new object[] { Filter, Orderby, Top, Skip, Select, Expand, Apply, Count, InlineCount, At, Tag };
+                    argList = new object[] { Filter, Orderby, Top, Skip, Select, Expand, Apply, Count, InlineCount, At, Tag, 0 };
                 }
 
                 var methodResult = methodInfo.Invoke(ApiInstance, argList);

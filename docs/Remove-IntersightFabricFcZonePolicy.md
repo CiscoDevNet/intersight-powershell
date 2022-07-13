@@ -5,38 +5,38 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-IntersightComputeBladeIdentity
+# Remove-IntersightFabricFcZonePolicy
 
 ## SYNOPSIS
-Remove the ComputeBladeIdentity
+Remove the FabricFcZonePolicy
 
 ## SYNTAX
 
 ```
-Remove-IntersightComputeBladeIdentity -Moid <String> [<CommonParameters>]
+Remove-IntersightFabricFcZonePolicy -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;ComputeBladeIdentity&apos; resource.
+Delete a &apos;FabricFcZonePolicy&apos; resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-IntersightComputeBladeIdentity -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+PS C:\> Remove-IntersightFabricFcZonePolicy -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Above cmdlet removes the specified ComputeBladeIdentity 
+Above cmdlet removes the specified FabricFcZonePolicy 
 
 ### Example 2
 ```powershell
-PS C:\>Get-IntersightComputeBladeIdentity -Name "MoName"|  Remove-IntersightComputeBladeIdentity
+PS C:\>Get-IntersightFabricFcZonePolicy -Name "MoName"|  Remove-IntersightFabricFcZonePolicy
 ```
 Above cmdlet pipes the output of Get cmdlet to Remove cmdlet
 
 ## PARAMETERS
 
 ### -Moid
-Specifyies the Moid of ComputeBladeIdentity.
+Specifyies the Moid of FabricFcZonePolicy.
 
 ```yaml
 Type: String
@@ -64,7 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightComputeBladeIdentity](./Get-IntersightComputeBladeIdentity.md)
+[Get-IntersightFabricFcZonePolicy](./Get-IntersightFabricFcZonePolicy.md)
 
-[Set-IntersightComputeBladeIdentity](./Set-IntersightComputeBladeIdentity.md)
+[New-IntersightFabricFcZonePolicy](./New-IntersightFabricFcZonePolicy.md)
+
+[Set-IntersightFabricFcZonePolicy](./Set-IntersightFabricFcZonePolicy.md)
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicFcIf.ClassIdEnum>][-FcAdapterPolicy< Model.VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< Model.VnicFcNetworkPolicyRelationship>][-FcQosPolicy< Model.VnicFcQosPolicyRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicFcIf.ObjectTypeEnum>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< Model.VnicSanConnectivityPolicyRelationship>][-ScpVhba< Model.VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[Model.VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< Model.FcpoolLeaseRelationship>][-WwpnPool< Model.FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicFcIf.ClassIdEnum>][-FcAdapterPolicy< Model.VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< Model.VnicFcNetworkPolicyRelationship>][-FcQosPolicy< Model.VnicFcQosPolicyRelationship>][-FcZonePolicies< System.Collections.Generic.List`1[Model.FabricFcZonePolicyRelationship]>][-Moid< string>][-Name< string>][-ObjectType< VnicFcIf.ObjectTypeEnum>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< Model.VnicSanConnectivityPolicyRelationship>][-ScpVhba< Model.VnicFcIfRelationship>][-SpVhbas< System.Collections.Generic.List`1[Model.VnicFcIfRelationship]>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< Model.FcpoolLeaseRelationship>][-WwpnPool< Model.FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -98,6 +98,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.VnicFcQosPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FcZonePolicies
+An array of relationships to fabricFcZonePolicy resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.FabricFcZonePolicyRelationship]
 Parameter Sets: (All)
 Aliases:
 

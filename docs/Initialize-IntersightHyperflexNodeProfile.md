@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-ClassId< HyperflexNodeProfile.ClassIdEnum>][-ClusterProfile< Model.HyperflexClusterProfileRelationship>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][-Moid< string>][-Name< string>][-ObjectType< HyperflexNodeProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< HyperflexNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHyperflexNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-ClassId< HyperflexNodeProfile.ClassIdEnum>][-ClusterProfile< Model.HyperflexClusterProfileRelationship>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-HxdpDataIp< string>][-HxdpMgmtIp< string>][-HxdpStorageClientIp< string>][-HypervisorControlIp< string>][-HypervisorDataIp< string>][-HypervisorMgmtIp< string>][-Moid< string>][-Name< string>][-NodeRole< HyperflexNodeProfile.NodeRoleEnum>][-ObjectType< HyperflexNodeProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< HyperflexNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -264,6 +264,21 @@ Name of the profile instance or profile template.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NodeRole
+The role that this node performs in the HyperFlex cluster.\n* `Unknown` - The node role is not available.\n* `Storage` - The node persists data and contributes to the storage capacity of a cluster.\n* `Compute` - The node contributes to the compute capacity of a cluster.
+
+```yaml
+Type: HyperflexNodeProfile.NodeRoleEnum
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< Model.KubernetesClusterCertificateConfiguration>][-ClassId< KubernetesClusterProfile.ClassIdEnum>][-ClusterIpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-ConfigContext< Model.PolicyConfigContext>][-ContainerRuntimeConfig< Model.KubernetesContainerRuntimePolicyRelationship>][-Description< string>][-EssentialAddons< System.Collections.Generic.List`1[Model.KubernetesEssentialAddon]>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[Model.IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[Model.IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< Model.KubernetesClusterManagementConfig>][-MasterVipLease< Model.IppoolIpLeaseRelationship>][-Moid< string>][-Name< string>][-NetConfig< Model.KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[Model.KubernetesNodeGroupProfileRelationship]>][-ObjectType< KubernetesClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ParentSolutionProfile< Model.MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< Model.KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TrustedRegistries< Model.KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< Model.KubernetesClusterCertificateConfiguration>][-ClassId< KubernetesClusterProfile.ClassIdEnum>][-ClusterIpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-ConfigContext< Model.PolicyConfigContext>][-ContainerRuntimeConfig< Model.KubernetesContainerRuntimePolicyRelationship>][-ContainerRuntimeProxyPolicy< Model.KubernetesHttpProxyPolicyRelationship>][-Description< string>][-DeviceConnectorProxyPolicy< Model.KubernetesHttpProxyPolicyRelationship>][-EssentialAddons< System.Collections.Generic.List`1[Model.KubernetesEssentialAddon]>][-KubeConfig< Model.KubernetesConfiguration>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[Model.IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[Model.IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< Model.KubernetesClusterManagementConfig>][-MasterVipLease< Model.IppoolIpLeaseRelationship>][-Moid< string>][-Name< string>][-NetConfig< Model.KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[Model.KubernetesNodeGroupProfileRelationship]>][-ObjectType< KubernetesClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ParentSolutionProfile< Model.MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< Model.KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TrustedRegistries< Model.KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -156,11 +156,47 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ContainerRuntimeProxyPolicy
+A reference to a kubernetesHttpProxyPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.KubernetesHttpProxyPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Description
 Description of the profile.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeviceConnectorProxyPolicy
+A reference to a kubernetesHttpProxyPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.KubernetesHttpProxyPolicyRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -178,6 +214,23 @@ Note :- Use Initialize-IntersightKubernetesEssentialAddon to create the object o
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.KubernetesEssentialAddon]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KubeConfig
+Certificates and keys that are used to access a Kubernetes\ncluster.
+
+Note :- Use Initialize-IntersightKubernetesConfiguration to create the object of complex type KubernetesConfiguration
+
+```yaml
+Type: Model.KubernetesConfiguration
 Parameter Sets: (All)
 Aliases:
 
@@ -570,6 +623,8 @@ PS C:\> Initialize-IntersightKubernetesClusterProfile
 [Initialize-IntersightKubernetesClusterCertificateConfiguration](./Initialize-IntersightKubernetesClusterCertificateConfiguration.md)
 
 [Initialize-IntersightKubernetesClusterManagementConfig](./Initialize-IntersightKubernetesClusterManagementConfig.md)
+
+[Initialize-IntersightKubernetesConfiguration](./Initialize-IntersightKubernetesConfiguration.md)
 
 [Initialize-IntersightKubernetesEssentialAddon](./Initialize-IntersightKubernetesEssentialAddon.md)
 

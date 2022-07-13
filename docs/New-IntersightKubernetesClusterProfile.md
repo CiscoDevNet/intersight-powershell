@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-Description< string>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][-Moid< string>][[-Name]< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-ContainerRuntimeProxyPolicy< KubernetesHttpProxyPolicyRelationship>][-Description< string>][-DeviceConnectorProxyPolicy< KubernetesHttpProxyPolicyRelationship>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-KubeConfig< KubernetesConfiguration>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][-Moid< string>][[-Name]< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -140,11 +140,47 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ContainerRuntimeProxyPolicy
+A reference to a kubernetesHttpProxyPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: KubernetesHttpProxyPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Description
 Description of the profile.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeviceConnectorProxyPolicy
+A reference to a kubernetesHttpProxyPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: KubernetesHttpProxyPolicyRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -162,6 +198,23 @@ Note :- Use Initialize-IntersightKubernetesEssentialAddon to create the object o
 
 ```yaml
 Type: System.Collections.Generic.List`1[KubernetesEssentialAddon]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KubeConfig
+Certificates and keys that are used to access a Kubernetes\ncluster.
+
+Note :- Use Initialize-IntersightKubernetesConfiguration to create the object of complex type KubernetesConfiguration
+
+```yaml
+Type: KubernetesConfiguration
 Parameter Sets: (All)
 Aliases:
 
