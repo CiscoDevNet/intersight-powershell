@@ -162,4 +162,6 @@ PS C:\> Set-IntersightManagementController
 
 [Get-IntersightManagementController](./Get-IntersightManagementController.md)
 
+[Initialize-IntersightCertificatemanagementImc](./Initialize-IntersightCertificatemanagementImc.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

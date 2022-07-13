@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-Moid< string>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-Moid< string>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-ShowConsentScreen< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -166,6 +166,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[IamRoleRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ShowConsentScreen
+Set to true if consent screen needs to be shown during the OAuth login process.\nApplicable only for public AppRegistrations, means only &apos;authorization_code&apos; grantType.\nNote that consent screen will be shown on each login.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

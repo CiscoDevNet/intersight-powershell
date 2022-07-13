@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamAppRegistration.ClassIdEnum>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-Moid< string>][-ObjectType< IamAppRegistration.ObjectTypeEnum>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamAppRegistration.ClassIdEnum>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-Moid< string>][-ObjectType< IamAppRegistration.ObjectTypeEnum>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-ShowConsentScreen< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -197,6 +197,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.IamRoleRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ShowConsentScreen
+Set to true if consent screen needs to be shown during the OAuth login process.\nApplicable only for public AppRegistrations, means only &apos;authorization_code&apos; grantType.\nNote that consent screen will be shown on each login.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

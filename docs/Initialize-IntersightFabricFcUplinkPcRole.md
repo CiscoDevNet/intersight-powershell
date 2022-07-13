@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminSpeed
-Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.
+Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default ).
 
 ```yaml
 Type: FabricFcUplinkPcRole.AdminSpeedEnum

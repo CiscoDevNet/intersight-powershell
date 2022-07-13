@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputeRackUnitIdentity [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< ComputeRackUnitIdentity.AdminActionEnum>][-ClassId< ComputeRackUnitIdentity.ClassIdEnum>][-Moid< string>][-ObjectType< ComputeRackUnitIdentity.ObjectTypeEnum>][-PhysicalDeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeRackUnitIdentity [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< ComputeRackUnitIdentity.AdminActionEnum>][-ClassId< ComputeRackUnitIdentity.ClassIdEnum>][-Identifier< long>][-Moid< string>][-ObjectType< ComputeRackUnitIdentity.ObjectTypeEnum>][-PhysicalDeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAction
-Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.
+Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.
 
 ```yaml
 Type: ComputeRackUnitIdentity.AdminActionEnum
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ComputeRackUnitIdentity.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Identifier
+Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to &apos;Recommission&apos;.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

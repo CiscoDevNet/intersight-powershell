@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceId
-The Moid of the device under change. Used to route the message to a devices connection.
+The Moid of the device under change. Used to route the message to a device&apos;s connection.
 
 ```yaml
 Type: string

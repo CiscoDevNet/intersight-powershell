@@ -2710,6 +2710,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to fabricFcZonePolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricFcZonePolicyRelationship> FcZonePolicies
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2899,6 +2909,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FcQosPolicy"))
             {
                 initObject.FcQosPolicy = this.FcQosPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcZonePolicies"))
+            {
+                initObject.FcZonePolicies = this.FcZonePolicies;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {

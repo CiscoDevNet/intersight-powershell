@@ -563,6 +563,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Set to true if consent screen needs to be shown during the OAuth login process.\nApplicable only for public AppRegistrations, means only 'authorization_code' grantType.\nNote that consent screen will be shown on each login."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ShowConsentScreen
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -617,6 +627,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Roles"))
             {
                 initObject.Roles = this.Roles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ShowConsentScreen"))
+            {
+                initObject.ShowConsentScreen = this.ShowConsentScreen;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -2481,7 +2495,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `IWE` - Enables an ability to use Intersight Workload Engine.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server."</para>
+        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `IWE` - Enables an ability to use Intersight Workload Engine.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

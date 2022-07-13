@@ -93,6 +93,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The default domain name configured on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+([-.]{1}[a-zA-Z0-9]+)*$")]
+        public string DefaultDomain
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fault summary of the network Element out-of-band management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -370,6 +380,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Console"))
             {
                 initObject.Console = this.Console;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultDomain"))
+            {
+                initObject.DefaultDomain = this.DefaultDomain;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("FaultSummary"))
             {

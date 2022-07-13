@@ -29,7 +29,7 @@ namespace Intersight.PowerShell
             try
             {
                 var methodInfo = GetMethodInfo(MethodName);
-                var result = methodInfo.Invoke(ApiInstance, new object[] { Moid });
+                var result = methodInfo.Invoke(ApiInstance, new object[] { Moid, 0 });
                 if (Json.IsPresent)
                 {
                     StringBuilder requestJson = new StringBuilder();

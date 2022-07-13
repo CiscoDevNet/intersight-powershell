@@ -2108,6 +2108,468 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryApicPerformanceData.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryApicPerformanceData")]
+    public class InitializeIntersightNiatelemetryApicPerformanceData : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryApicPerformanceData()
+        {
+            ClassId = NiatelemetryApicPerformanceData.ClassIdEnum.NiatelemetryApicPerformanceData;
+            ObjectType = NiatelemetryApicPerformanceData.ObjectTypeEnum.NiatelemetryApicPerformanceData;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryApicPerformanceData.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetryDigitalOpticalMonitoring> DigitalOpticalMonitoring
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Dn of the fabric nodes in the apic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns disk space utilization information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryEqptStorageFirmware EqptStorageFirmware
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns tcam utilization information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryEqptcapacityPolUsage5min EqptcapacityPolUsage5min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns lpm max utilization info in last 15 minutes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryEqptcapacityPrefixEntries15min EqptcapacityPrefixEntries15min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns lpm max utilization info in last 5 minutes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryEqptcapacityPrefixEntries5min EqptcapacityPrefixEntries5min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Health of the fabric nodes in the apic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NodeHealth
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryApicPerformanceData.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns cpu performance info in last 15 mintues."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryProcSysCpu15min ProcSysCpu15min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns cpu performance info in last 5 mintues."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryProcSysCpu5min ProcSysCpu5min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns memory performance info in last 15 mintues."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryProcSysMem15min ProcSysMem15min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns memory performance info in last 5 mintues."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NiatelemetryProcSysMem5min ProcSysMem5min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the APIC site from which this data is being collected.."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetrySwitchDiskUtilization> SwitchDiskUtilization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryApicPerformanceData initObject = new Intersight.Model.NiatelemetryApicPerformanceData();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DigitalOpticalMonitoring"))
+            {
+                initObject.DigitalOpticalMonitoring = this.DigitalOpticalMonitoring;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EqptStorageFirmware"))
+            {
+                initObject.EqptStorageFirmware = this.EqptStorageFirmware;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EqptcapacityPolUsage5min"))
+            {
+                initObject.EqptcapacityPolUsage5min = this.EqptcapacityPolUsage5min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EqptcapacityPrefixEntries15min"))
+            {
+                initObject.EqptcapacityPrefixEntries15min = this.EqptcapacityPrefixEntries15min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EqptcapacityPrefixEntries5min"))
+            {
+                initObject.EqptcapacityPrefixEntries5min = this.EqptcapacityPrefixEntries5min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NodeHealth"))
+            {
+                initObject.NodeHealth = this.NodeHealth;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProcSysCpu15min"))
+            {
+                initObject.ProcSysCpu15min = this.ProcSysCpu15min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProcSysCpu5min"))
+            {
+                initObject.ProcSysCpu5min = this.ProcSysCpu5min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProcSysMem15min"))
+            {
+                initObject.ProcSysMem15min = this.ProcSysMem15min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProcSysMem5min"))
+            {
+                initObject.ProcSysMem5min = this.ProcSysMem5min;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SiteName"))
+            {
+                initObject.SiteName = this.SiteName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchDiskUtilization"))
+            {
+                initObject.SwitchDiskUtilization = this.SwitchDiskUtilization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryApicPodData.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryApicPodData")]
+    public class InitializeIntersightNiatelemetryApicPodData : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryApicPodData()
+        {
+            ClassId = NiatelemetryApicPodData.ClassIdEnum.NiatelemetryApicPodData;
+            ObjectType = NiatelemetryApicPodData.ObjectTypeEnum.NiatelemetryApicPodData;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryApicPodData.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Dn of the pods in the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Health of the pod in the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Health
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryApicPodData.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Pod id of the pod in the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PodId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the APIC site from which this data is being collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryApicPodData initObject = new Intersight.Model.NiatelemetryApicPodData();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Health"))
+            {
+                initObject.Health = this.Health;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PodId"))
+            {
+                initObject.PodId = this.PodId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SiteName"))
+            {
+                initObject.SiteName = this.SiteName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryApicPsuDetails.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryApicPsuDetails")]
@@ -5566,6 +6028,118 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryDigitalOpticalMonitoring.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryDigitalOpticalMonitoring")]
+    public class InitializeIntersightNiatelemetryDigitalOpticalMonitoring : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryDigitalOpticalMonitoring()
+        {
+            ClassId = NiatelemetryDigitalOpticalMonitoring.ClassIdEnum.NiatelemetryDigitalOpticalMonitoring;
+            ObjectType = NiatelemetryDigitalOpticalMonitoring.ObjectTypeEnum.NiatelemetryDigitalOpticalMonitoring;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Alerts count for the interface in the node."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Alerts
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDigitalOpticalMonitoring.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Dn with interface name for the aci nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDigitalOpticalMonitoring.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"RxLos count for the interface in the node."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RxLos
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"TxfaultCount for the interface in the node."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string TxFaultCount
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryDigitalOpticalMonitoring initObject = new Intersight.Model.NiatelemetryDigitalOpticalMonitoring();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Alerts"))
+            {
+                initObject.Alerts = this.Alerts;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RxLos"))
+            {
+                initObject.RxLos = this.RxLos;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TxFaultCount"))
+            {
+                initObject.TxFaultCount = this.TxFaultCount;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryDiskinfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryDiskinfo")]
@@ -5995,6 +6569,328 @@ namespace Intersight.PowerShell
             {
                 initObject.UsegHypervCount = this.UsegHypervCount;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryEqptStorageFirmware.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryEqptStorageFirmware")]
+    public class InitializeIntersightNiatelemetryEqptStorageFirmware : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryEqptStorageFirmware()
+        {
+            ClassId = NiatelemetryEqptStorageFirmware.ClassIdEnum.NiatelemetryEqptStorageFirmware;
+            ObjectType = NiatelemetryEqptStorageFirmware.ObjectTypeEnum.NiatelemetryEqptStorageFirmware;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Availabe disk space in aci nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Available
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptStorageFirmware.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptStorageFirmware.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used disk space in aci nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Used
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryEqptStorageFirmware initObject = new Intersight.Model.NiatelemetryEqptStorageFirmware();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Available"))
+            {
+                initObject.Available = this.Available;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
+            {
+                initObject.Used = this.Used;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryEqptcapacityPolUsage5min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryEqptcapacityPolUsage5min")]
+    public class InitializeIntersightNiatelemetryEqptcapacityPolUsage5min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryEqptcapacityPolUsage5min()
+        {
+            ClassId = NiatelemetryEqptcapacityPolUsage5min.ClassIdEnum.NiatelemetryEqptcapacityPolUsage5min;
+            ObjectType = NiatelemetryEqptcapacityPolUsage5min.ObjectTypeEnum.NiatelemetryEqptcapacityPolUsage5min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptcapacityPolUsage5min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptcapacityPolUsage5min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PolUsageBase information for aci nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PolUsageBase
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PolUsageCapCum information for aci nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PolUsageCapCum
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"PolUsageCum information for aci nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PolUsageCum
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryEqptcapacityPolUsage5min initObject = new Intersight.Model.NiatelemetryEqptcapacityPolUsage5min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolUsageBase"))
+            {
+                initObject.PolUsageBase = this.PolUsageBase;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolUsageCapCum"))
+            {
+                initObject.PolUsageCapCum = this.PolUsageCapCum;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolUsageCum"))
+            {
+                initObject.PolUsageCum = this.PolUsageCum;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryEqptcapacityPrefixEntries15min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryEqptcapacityPrefixEntries15min")]
+    public class InitializeIntersightNiatelemetryEqptcapacityPrefixEntries15min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryEqptcapacityPrefixEntries15min()
+        {
+            ClassId = NiatelemetryEqptcapacityPrefixEntries15min.ClassIdEnum.NiatelemetryEqptcapacityPrefixEntries15min;
+            ObjectType = NiatelemetryEqptcapacityPrefixEntries15min.ObjectTypeEnum.NiatelemetryEqptcapacityPrefixEntries15min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptcapacityPrefixEntries15min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Aci node lpm utilized last."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ExtNormalizedLast
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptcapacityPrefixEntries15min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryEqptcapacityPrefixEntries15min initObject = new Intersight.Model.NiatelemetryEqptcapacityPrefixEntries15min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtNormalizedLast"))
+            {
+                initObject.ExtNormalizedLast = this.ExtNormalizedLast;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryEqptcapacityPrefixEntries5min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryEqptcapacityPrefixEntries5min")]
+    public class InitializeIntersightNiatelemetryEqptcapacityPrefixEntries5min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryEqptcapacityPrefixEntries5min()
+        {
+            ClassId = NiatelemetryEqptcapacityPrefixEntries5min.ClassIdEnum.NiatelemetryEqptcapacityPrefixEntries5min;
+            ObjectType = NiatelemetryEqptcapacityPrefixEntries5min.ObjectTypeEnum.NiatelemetryEqptcapacityPrefixEntries5min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptcapacityPrefixEntries5min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Aci node lpm utilized last."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ExtNormalizedLast
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryEqptcapacityPrefixEntries5min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryEqptcapacityPrefixEntries5min initObject = new Intersight.Model.NiatelemetryEqptcapacityPrefixEntries5min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtNormalizedLast"))
+            {
+                initObject.ExtNormalizedLast = this.ExtNormalizedLast;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -7058,6 +7954,174 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryHealthInsightsData.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryHealthInsightsData")]
+    public class InitializeIntersightNiatelemetryHealthInsightsData : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryHealthInsightsData()
+        {
+            ClassId = NiatelemetryHealthInsightsData.ClassIdEnum.NiatelemetryHealthInsightsData;
+            ObjectType = NiatelemetryHealthInsightsData.ObjectTypeEnum.NiatelemetryHealthInsightsData;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryHealthInsightsData.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flt eqpt flash minor alarm fault count for the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long FltEqptFlashMinorAlarmFaultCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flt eqpt flash worn out fault count for the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long FltEqptFlashWornOutFaultCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryHealthInsightsData.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the APIC site from which this data is being collected.."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ssd fault monitoring count for the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long SsdMonitoringFaultCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryHealthInsightsData initObject = new Intersight.Model.NiatelemetryHealthInsightsData();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FltEqptFlashMinorAlarmFaultCount"))
+            {
+                initObject.FltEqptFlashMinorAlarmFaultCount = this.FltEqptFlashMinorAlarmFaultCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FltEqptFlashWornOutFaultCount"))
+            {
+                initObject.FltEqptFlashWornOutFaultCount = this.FltEqptFlashWornOutFaultCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SiteName"))
+            {
+                initObject.SiteName = this.SiteName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SsdMonitoringFaultCount"))
+            {
+                initObject.SsdMonitoringFaultCount = this.SsdMonitoringFaultCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }
@@ -11036,6 +12100,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Cluster health for the APIC controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ApicClusterHealth
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Number of APIC controllers. This determines the value of controllers for the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12164,6 +13238,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ApicClusterHealth"))
+            {
+                initObject.ApicClusterHealth = this.ApicClusterHealth;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ApicCount"))
             {
@@ -13798,6 +14876,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Serial number of device being inventoried. The serial number is unique per device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13988,6 +15086,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("OutofbandIp"))
             {
                 initObject.OutofbandIp = this.OutofbandIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
             {
@@ -14414,6 +15520,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Replication mode details on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14732,6 +15858,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("OperStatus"))
             {
                 initObject.OperStatus = this.OperStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ReplicationMode"))
             {
@@ -16486,6 +17620,342 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryProcSysCpu15min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryProcSysCpu15min")]
+    public class InitializeIntersightNiatelemetryProcSysCpu15min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryProcSysCpu15min()
+        {
+            ClassId = NiatelemetryProcSysCpu15min.ClassIdEnum.NiatelemetryProcSysCpu15min;
+            ObjectType = NiatelemetryProcSysCpu15min.ObjectTypeEnum.NiatelemetryProcSysCpu15min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysCpu15min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the kernal average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string KernalAvg
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysCpu15min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the user average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string UserAvg
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryProcSysCpu15min initObject = new Intersight.Model.NiatelemetryProcSysCpu15min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("KernalAvg"))
+            {
+                initObject.KernalAvg = this.KernalAvg;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserAvg"))
+            {
+                initObject.UserAvg = this.UserAvg;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryProcSysCpu5min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryProcSysCpu5min")]
+    public class InitializeIntersightNiatelemetryProcSysCpu5min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryProcSysCpu5min()
+        {
+            ClassId = NiatelemetryProcSysCpu5min.ClassIdEnum.NiatelemetryProcSysCpu5min;
+            ObjectType = NiatelemetryProcSysCpu5min.ObjectTypeEnum.NiatelemetryProcSysCpu5min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysCpu5min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the kernal average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string KernalAvg
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysCpu5min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the user average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string UserAvg
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryProcSysCpu5min initObject = new Intersight.Model.NiatelemetryProcSysCpu5min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("KernalAvg"))
+            {
+                initObject.KernalAvg = this.KernalAvg;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserAvg"))
+            {
+                initObject.UserAvg = this.UserAvg;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryProcSysMem15min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryProcSysMem15min")]
+    public class InitializeIntersightNiatelemetryProcSysMem15min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryProcSysMem15min()
+        {
+            ClassId = NiatelemetryProcSysMem15min.ClassIdEnum.NiatelemetryProcSysMem15min;
+            ObjectType = NiatelemetryProcSysMem15min.ObjectTypeEnum.NiatelemetryProcSysMem15min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysMem15min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the free average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FreeAvg
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysMem15min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string TotalAvg
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryProcSysMem15min initObject = new Intersight.Model.NiatelemetryProcSysMem15min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FreeAvg"))
+            {
+                initObject.FreeAvg = this.FreeAvg;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TotalAvg"))
+            {
+                initObject.TotalAvg = this.TotalAvg;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryProcSysMem5min.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryProcSysMem5min")]
+    public class InitializeIntersightNiatelemetryProcSysMem5min : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryProcSysMem5min()
+        {
+            ClassId = NiatelemetryProcSysMem5min.ClassIdEnum.NiatelemetryProcSysMem5min;
+            ObjectType = NiatelemetryProcSysMem5min.ObjectTypeEnum.NiatelemetryProcSysMem5min;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysMem5min.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the free average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FreeAvg
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryProcSysMem5min.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total average value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string TotalAvg
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryProcSysMem5min initObject = new Intersight.Model.NiatelemetryProcSysMem5min();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FreeAvg"))
+            {
+                initObject.FreeAvg = this.FreeAvg;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TotalAvg"))
+            {
+                initObject.TotalAvg = this.TotalAvg;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetrySiteInventory.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetrySiteInventory")]
@@ -17690,6 +19160,118 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetrySwitchDiskUtilization.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetrySwitchDiskUtilization")]
+    public class InitializeIntersightNiatelemetrySwitchDiskUtilization : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetrySwitchDiskUtilization()
+        {
+            ClassId = NiatelemetrySwitchDiskUtilization.ClassIdEnum.NiatelemetrySwitchDiskUtilization;
+            ObjectType = NiatelemetrySwitchDiskUtilization.ObjectTypeEnum.NiatelemetrySwitchDiskUtilization;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Available space in the given path."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Avail
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetrySwitchDiskUtilization.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the path in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetrySwitchDiskUtilization.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Path details for the name in the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Path
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used space in the given path."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Used
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetrySwitchDiskUtilization initObject = new Intersight.Model.NiatelemetrySwitchDiskUtilization();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Avail"))
+            {
+                initObject.Avail = this.Avail;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Path"))
+            {
+                initObject.Path = this.Path;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Used"))
+            {
+                initObject.Used = this.Used;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetrySyslogRemoteDest.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetrySyslogRemoteDest")]
@@ -18768,6 +20350,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Health of each tenant in the APIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long TenantHealth
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Number of ITrace route endpoint per tenant."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -19008,6 +20600,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TcamOptCount"))
             {
                 initObject.TcamOptCount = this.TcamOptCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TenantHealth"))
+            {
+                initObject.TenantHealth = this.TenantHealth;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("TraceRouteEpCount"))
             {

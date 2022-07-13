@@ -458,7 +458,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Number of identifiers this block can hold."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1000)]
+        [ValidateRange(1, 1024)]
         public long Size
         {
             get;
@@ -668,7 +668,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Number of identifiers this block can hold."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1000)]
+        [ValidateRange(1, 1024)]
         public long Size
         {
             get;
@@ -766,7 +766,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"A prefix length which masks the  IP address and divides the IP address into network address and host address."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 127)]
+
         public long Prefix
         {
             get;

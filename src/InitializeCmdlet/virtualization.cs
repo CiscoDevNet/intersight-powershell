@@ -6727,6 +6727,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.InfraBaseGpuConfiguration> GpuConfigs
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Guest operating system running on virtual machine.\n* `linux` - A Linux operating system.\n* `windows` - A Windows operating system."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6910,6 +6920,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ForceDelete"))
             {
                 initObject.ForceDelete = this.ForceDelete;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuConfigs"))
+            {
+                initObject.GpuConfigs = this.GpuConfigs;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("GuestOs"))
             {
@@ -10177,6 +10191,132 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareHostGpu.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareHostGpu")]
+    public class InitializeIntersightVirtualizationVmwareHostGpu : PSCmdlet
+    {
+        public InitializeIntersightVirtualizationVmwareHostGpu()
+        {
+            ClassId = VirtualizationVmwareHostGpu.ClassIdEnum.VirtualizationVmwareHostGpu;
+            ObjectType = VirtualizationVmwareHostGpu.ObjectTypeEnum.VirtualizationVmwareHostGpu;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VirtualizationVmwareHostGpu.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VirtualizationBaseClusterRelationship Cluster
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The internally generated identity of this PCI device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Identity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VirtualizationVmwareHostGpu.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VirtualizationVmwareHostGpu initObject = new Intersight.Model.VirtualizationVmwareHostGpu();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cluster"))
+            {
+                initObject.Cluster = this.Cluster;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Identity"))
+            {
+                initObject.Identity = this.Identity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
+            {
+                initObject.RegisteredDevice = this.RegisteredDevice;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareKernelNetwork.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareKernelNetwork")]
@@ -12235,16 +12375,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Additional custom configuration settings applied to this VM. It is a set of name-value pairs stored as json."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object ExtraConfig
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The folder name associated with this VM."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12270,16 +12400,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public VirtualizationVmwareVirtualMachine.GuestStateEnum GuestState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Minimum host ESXi version required for the virtual machine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string HostCompatibility
         {
             get;
             set;
@@ -12605,26 +12725,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<long> VirtualDisks
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<long> VirtualNetworkInterfaces
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Time when this virtualmachine is created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12763,10 +12863,6 @@ namespace Intersight.PowerShell
             {
                 initObject.DnsSuffixList = this.DnsSuffixList;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraConfig"))
-            {
-                initObject.ExtraConfig = this.ExtraConfig;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Folder"))
             {
                 initObject.Folder = this.Folder;
@@ -12778,10 +12874,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("GuestState"))
             {
                 initObject.GuestState = this.GuestState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("HostCompatibility"))
-            {
-                initObject.HostCompatibility = this.HostCompatibility;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("HypervisorType"))
             {
@@ -12908,14 +13000,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Uuid = this.Uuid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDisks"))
-            {
-                initObject.VirtualDisks = this.VirtualDisks;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualNetworkInterfaces"))
-            {
-                initObject.VirtualNetworkInterfaces = this.VirtualNetworkInterfaces;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("VmCreationTime"))
             {
                 initObject.VmCreationTime = this.VmCreationTime;
@@ -12943,6 +13027,118 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VnicDeviceConfigId"))
             {
                 initObject.VnicDeviceConfigId = this.VnicDeviceConfigId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VirtualizationVmwareVirtualMachineGpu.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVirtualizationVmwareVirtualMachineGpu")]
+    public class InitializeIntersightVirtualizationVmwareVirtualMachineGpu : PSCmdlet
+    {
+        public InitializeIntersightVirtualizationVmwareVirtualMachineGpu()
+        {
+            ClassId = VirtualizationVmwareVirtualMachineGpu.ClassIdEnum.VirtualizationVmwareVirtualMachineGpu;
+            ObjectType = VirtualizationVmwareVirtualMachineGpu.ObjectTypeEnum.VirtualizationVmwareVirtualMachineGpu;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VirtualizationVmwareVirtualMachineGpu.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VirtualizationVmwareVirtualMachineGpu.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a virtualizationBaseVirtualMachine resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VirtualizationBaseVirtualMachineRelationship VirtualMachine
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VirtualizationVmwareVirtualMachineGpu initObject = new Intersight.Model.VirtualizationVmwareVirtualMachineGpu();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
+            {
+                initObject.RegisteredDevice = this.RegisteredDevice;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualMachine"))
+            {
+                initObject.VirtualMachine = this.VirtualMachine;
             }
             WriteObject(initObject);
         }

@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementAddress
-The DNS hostname or IP Address, either IPv4 or IPv6, to be used to connect to the managed target.
+The DNS hostname or IPv4 Address to be used to connect to the managed target.
 
 ```yaml
 Type: string

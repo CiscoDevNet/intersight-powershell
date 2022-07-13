@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachine.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-AntiAffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-CloudInitConfig< VirtualizationCloudInitConfig>][-Cluster< VirtualizationBaseClusterRelationship>][-ClusterEsxi< string>][-Cpu< long>][-Disk< System.Collections.Generic.List`1[VirtualizationVirtualMachineDisk]>][-ForceDelete< bool>][-GuestOs< VirtualizationVirtualMachine.GuestOsEnum>][-Host< VirtualizationBaseHostRelationship>][-HostEsxi< string>][-Interfaces< System.Collections.Generic.List`1[VirtualizationNetworkInterface]>][-Labels< System.Collections.Generic.List`1[InfraMetaData]>][-Memory< long>][-Moid< string>][[-Name]< string>][-PowerState< VirtualizationVirtualMachine.PowerStateEnum>][-ProvisionType< VirtualizationVirtualMachine.ProvisionTypeEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmConfig< VirtualizationBaseVmConfiguration>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachine.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-AntiAffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-CloudInitConfig< VirtualizationCloudInitConfig>][-Cluster< VirtualizationBaseClusterRelationship>][-ClusterEsxi< string>][-Cpu< long>][-Disk< System.Collections.Generic.List`1[VirtualizationVirtualMachineDisk]>][-ForceDelete< bool>][-GpuConfigs< System.Collections.Generic.List`1[InfraBaseGpuConfiguration]>][-GuestOs< VirtualizationVirtualMachine.GuestOsEnum>][-Host< VirtualizationBaseHostRelationship>][-HostEsxi< string>][-Interfaces< System.Collections.Generic.List`1[VirtualizationNetworkInterface]>][-Labels< System.Collections.Generic.List`1[InfraMetaData]>][-Memory< long>][-Moid< string>][[-Name]< string>][-PowerState< VirtualizationVirtualMachine.PowerStateEnum>][-ProvisionType< VirtualizationVirtualMachine.ProvisionTypeEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmConfig< VirtualizationBaseVmConfiguration>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -174,6 +174,23 @@ Normally any virtual machine that is still powered on cannot be deleted. The exp
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GpuConfigs
+
+
+Note :- Use Initialize-IntersightInfraBaseGpuConfiguration to create the object of complex type InfraBaseGpuConfiguration
+
+```yaml
+Type: System.Collections.Generic.List`1[InfraBaseGpuConfiguration]
 Parameter Sets: (All)
 Aliases:
 
@@ -451,6 +468,8 @@ PS C:\> New-IntersightVirtualizationVirtualMachine
 ## RELATED LINKS
 
 [Get-IntersightVirtualizationVirtualMachine](./Get-IntersightVirtualizationVirtualMachine.md)
+
+[Initialize-IntersightInfraBaseGpuConfiguration](./Initialize-IntersightInfraBaseGpuConfiguration.md)
 
 [Initialize-IntersightInfraMetaData](./Initialize-IntersightInfraMetaData.md)
 

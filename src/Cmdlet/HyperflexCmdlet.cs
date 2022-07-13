@@ -10191,6 +10191,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Indicate if encryption is enabled on this storage container."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EncryptionEnabled
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Indicates whether the storage container has volumes."</para>
@@ -15350,6 +15361,16 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The role that this node performs in the HyperFlex cluster.\n* `Unknown` - The node role is not available.\n* `Storage` - The node persists data and contributes to the storage capacity of a cluster.\n* `Compute` - The node contributes to the compute capacity of a cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexNodeProfile.NodeRoleEnum NodeRole
+        {
+            get;
+            set;
+        }
 
 
 
@@ -21405,6 +21426,16 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The role that this node performs in the HyperFlex cluster.\n* `Unknown` - The node role is not available.\n* `Storage` - The node persists data and contributes to the storage capacity of a cluster.\n* `Compute` - The node contributes to the compute capacity of a cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexNodeProfile.NodeRoleEnum NodeRole
+        {
+            get;
+            set;
+        }
 
 
 
@@ -22463,6 +22494,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

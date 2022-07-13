@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentFexIdentity [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< EquipmentFexIdentity.AdminActionEnum>][-Fex< EquipmentFexRelationship>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentFexIdentity [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< EquipmentFexIdentity.AdminActionEnum>][-Fex< EquipmentFexRelationship>][-Identifier< long>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAction
-Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.
+Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.
 
 ```yaml
 Type: EquipmentFexIdentity.AdminActionEnum
@@ -61,6 +61,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EquipmentFexRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Identifier
+Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to &apos;Recommission&apos;.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

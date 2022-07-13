@@ -886,7 +886,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -942,7 +942,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Numeric Identifier assigned by the management system to the equipment."</para>
+        /// <para type="description">"Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to 'Recommission'."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2035,7 +2035,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2198,7 +2198,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2351,7 +2351,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2497,6 +2497,148 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FabricFcZonePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcZonePolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFabricFcZonePolicy : GetCmdletBase
+    {
+        public GetIntersightFabricFcZonePolicy()
+        {
+            ApiInstance = new FabricApi(Config);
+            MethodName = "GetFabricFcZonePolicyListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Type of FC zoning. Allowed values are SIST, SIMT and None.\n* `SIST` - The system automatically creates one zone for each vHBA and storage port pair. Each zone has two members.\n* `SIMT` - The system automatically creates one zone for each vHBA. Configure this type of zoning if the number of zones created is likely to exceed the maximum supported number of zones.\n* `None` - FC zoning is not configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricFcZonePolicy.FcTargetZoningTypeEnum FcTargetZoningType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
 
 
     }
@@ -6864,7 +7006,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6986,7 +7128,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7108,7 +7250,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7214,6 +7356,117 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New FabricFcZonePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcZonePolicy")]
+    public class NewIntersightFabricFcZonePolicy : NewCmdletBase
+    {
+        public NewIntersightFabricFcZonePolicy()
+        {
+            ApiInstance = new FabricApi(Config);
+            ModelObject = new FabricFcZonePolicy();
+            MethodName = "CreateFabricFcZonePolicyWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<FabricFcZoneMember> FcTargetMembers
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Type of FC zoning. Allowed values are SIST, SIMT and None.\n* `SIST` - The system automatically creates one zone for each vHBA and storage port pair. Each zone has two members.\n* `SIMT` - The system automatically creates one zone for each vHBA. Configure this type of zoning if the number of zones created is likely to exceed the maximum supported number of zones.\n* `None` - FC zoning is not configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZonePolicy.FcTargetZoningTypeEnum FcTargetZoningType
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcoeUplinkPcRole.</para>
@@ -9914,6 +10167,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove FabricFcZonePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcZonePolicy")]
+    public class RemoveIntersightFabricFcZonePolicy : RemoveCmdletBase
+    {
+        public RemoveIntersightFabricFcZonePolicy()
+        {
+            ApiInstance = new FabricApi(Config);
+            MethodName = "DeleteFabricFcZonePolicyWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcoeUplinkPcRole.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcoeUplinkPcRole")]
@@ -10523,7 +10788,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific chassis action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -10538,6 +10803,16 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to 'Recommission'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Identifier
+        {
+            get;
+            set;
+        }
 
 
 
@@ -11088,7 +11363,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11210,7 +11485,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11332,7 +11607,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO ( default ).\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps."</para>
+        /// <para type="description">"Admin configured speed for the port.\n* `16Gbps` - Admin configurable speed 16Gbps.\n* `8Gbps` - Admin configurable speed 8Gbps.\n* `32Gbps` - Admin configurable speed 32Gbps.\n* `Auto` - Admin configurable speed AUTO ( default )."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11438,6 +11713,117 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FabricFcZonePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcZonePolicy")]
+    public class SetIntersightFabricFcZonePolicy : SetCmdletBase
+    {
+        public SetIntersightFabricFcZonePolicy()
+        {
+            ApiInstance = new FabricApi(Config);
+            ModelObject = new FabricFcZonePolicy();
+            MethodName = "UpdateFabricFcZonePolicyWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<FabricFcZoneMember> FcTargetMembers
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Type of FC zoning. Allowed values are SIST, SIMT and None.\n* `SIST` - The system automatically creates one zone for each vHBA and storage port pair. Each zone has two members.\n* `SIMT` - The system automatically creates one zone for each vHBA. Configure this type of zoning if the number of zones created is likely to exceed the maximum supported number of zones.\n* `None` - FC zoning is not configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFcZonePolicy.FcTargetZoningTypeEnum FcTargetZoningType
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcoeUplinkPcRole.</para>
