@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationCloudVmNetworkConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationCloudVmNetworkConfiguration.ClassIdEnum>][-Interfaces< System.Collections.Generic.List`1[Model.VirtualizationNetworkInterface]>][-ObjectType< VirtualizationCloudVmNetworkConfiguration.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationCloudVmNetworkConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationCloudVmNetworkConfiguration.ClassIdEnum>][-Interfaces< System.Collections.Generic.List`1[Model.VirtualizationNetworkInterface]>][-ObjectType< VirtualizationCloudVmNetworkConfiguration.ObjectTypeEnum>][-VpcId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: VirtualizationCloudVmNetworkConfiguration.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VpcId
+Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you have defined.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

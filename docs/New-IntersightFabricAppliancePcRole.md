@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-EthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< FabricEthNetworkGroupPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-EthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< FabricEthNetworkGroupPolicyRelationship>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -79,6 +79,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: FabricEthNetworkGroupPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LinkAggregationPolicy
+A reference to a fabricLinkAggregationPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: FabricLinkAggregationPolicyRelationship
 Parameter Sets: (All)
 Aliases:
 

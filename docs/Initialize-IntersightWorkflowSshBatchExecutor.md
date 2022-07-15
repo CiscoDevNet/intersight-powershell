@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowSshBatchExecutor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Batch< System.Collections.Generic.List`1[Model.WorkflowApi]>][-ClassId< WorkflowSshBatchExecutor.ClassIdEnum>][-Constraints< Model.WorkflowTaskConstraints>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowSshBatchExecutor.ObjectTypeEnum>][-Outcomes< object>][-Output< object>][-RetryFromFailedApi< bool>][-SkipOnCondition< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TaskDefinition< Model.WorkflowTaskDefinitionRelationship>][-UiRenderingData< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowSshBatchExecutor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Batch< System.Collections.Generic.List`1[Model.WorkflowApi]>][-CancelAction< System.Collections.Generic.List`1[Model.WorkflowApi]>][-ClassId< WorkflowSshBatchExecutor.ClassIdEnum>][-Constraints< Model.WorkflowTaskConstraints>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowSshBatchExecutor.ObjectTypeEnum>][-Outcomes< object>][-Output< object>][-RetryFromFailedApi< bool>][-SkipOnCondition< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TaskDefinition< Model.WorkflowTaskDefinitionRelationship>][-UiRenderingData< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,6 +40,23 @@ Accept wildcard characters: False
 ```
 
 ### -Batch
+
+
+Note :- Use Initialize-IntersightWorkflowApi to create the object of complex type WorkflowApi
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.WorkflowApi]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CancelAction
 
 
 Note :- Use Initialize-IntersightWorkflowApi to create the object of complex type WorkflowApi

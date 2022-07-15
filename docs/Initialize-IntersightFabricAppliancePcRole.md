@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-ClassId< FabricAppliancePcRole.ClassIdEnum>][-EthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< Model.FabricEthNetworkGroupPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-ObjectType< FabricAppliancePcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-ClassId< FabricAppliancePcRole.ClassIdEnum>][-EthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< Model.FabricEthNetworkGroupPolicyRelationship>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-ObjectType< FabricAppliancePcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -95,6 +95,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.FabricEthNetworkGroupPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LinkAggregationPolicy
+A reference to a fabricLinkAggregationPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.FabricLinkAggregationPolicyRelationship
 Parameter Sets: (All)
 Aliases:
 

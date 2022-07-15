@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< VirtualizationStorageCapacity>][-Cluster< VirtualizationVmwareClusterRelationship>][-Clusters< System.Collections.Generic.List`1[VirtualizationVmwareClusterRelationship]>][-DatastoreCluster< VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][[-Moid]< string>][-MultipleHostAccess< bool>][-Name< string>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -78,6 +78,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: VirtualizationVmwareClusterRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Clusters
+An array of relationships to virtualizationVmwareCluster resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[VirtualizationVmwareClusterRelationship]
 Parameter Sets: (All)
 Aliases:
 

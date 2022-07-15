@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootIso< SoftwareSolutionDistributableRelationship>][-Catalog< KubernetesCatalogRelationship>][-KubernetesVersion< string>][[-Moid]< string>][-Name< string>][-OvaImageTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2NodeTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2VirtualMachineTemplate< SoftwareSolutionDistributableRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightKubernetesVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootIso< SoftwareSolutionDistributableRelationship>][-Catalog< KubernetesCatalogRelationship>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesAddonVersionReference]>][-HelmOperatorVersion< string>][-IksUtilityContainer< string>][-KubernetesVersion< string>][[-Moid]< string>][-Name< string>][-OvaImageTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2NodeTemplate< SoftwareSolutionDistributableRelationship>][-Qcow2VirtualMachineTemplate< SoftwareSolutionDistributableRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -64,6 +64,53 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: KubernetesCatalogRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EssentialAddons
+
+
+Note :- Use Initialize-IntersightKubernetesAddonVersionReference to create the object of complex type KubernetesAddonVersionReference
+
+```yaml
+Type: System.Collections.Generic.List`1[KubernetesAddonVersionReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HelmOperatorVersion
+Version of helm operator to use for this kubernetes version.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IksUtilityContainer
+The iks utility container to use for the kubernetes version.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -248,6 +295,8 @@ PS C:\> Set-IntersightKubernetesVersion
 ## RELATED LINKS
 
 [Get-IntersightKubernetesVersion](./Get-IntersightKubernetesVersion.md)
+
+[Initialize-IntersightKubernetesAddonVersionReference](./Initialize-IntersightKubernetesAddonVersionReference.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

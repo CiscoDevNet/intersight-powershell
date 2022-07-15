@@ -40,31 +40,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The email of the associated user that made the change.  In case the user is later deleted, we still have some reference to the information."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
-        public string Email
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The operation that was performed on this Managed Object.\nThe event is a compound string that includes the CRUD operation such as Create, Modify, Delete, and a string representing the Managed Object type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Event
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The instance id of AuditRecordLocal, which is used to identify if the comming AuditRecordLocal was already processed before."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string InstId
         {
             get;
             set;
@@ -130,26 +110,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The sessionId in which the user made the change. In case that the session is later deleted, we still have some reference to the information."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SessionId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The source IP of the client."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceIp
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -169,16 +129,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The userId or the email of the associated user that made the change. In case that user is later deleted, we still have some reference to the information."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string UserIdOrEmail
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -188,17 +138,9 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Email"))
-            {
-                initObject.Email = this.Email;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Event"))
             {
                 initObject.Event = this.Event;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InstId"))
-            {
-                initObject.InstId = this.InstId;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("MoDisplayNames"))
             {
@@ -221,14 +163,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Request = this.Request;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SessionId"))
-            {
-                initObject.SessionId = this.SessionId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SourceIp"))
-            {
-                initObject.SourceIp = this.SourceIp;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -236,10 +170,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TraceId"))
             {
                 initObject.TraceId = this.TraceId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("UserIdOrEmail"))
-            {
-                initObject.UserIdOrEmail = this.UserIdOrEmail;
             }
             WriteObject(initObject);
         }
@@ -298,16 +228,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The default retention period in months for audit log retention for accounts without a retention policy."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(6, 48)]
-        public long RetentionPeriod
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -331,10 +251,6 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RetentionPeriod"))
-            {
-                initObject.RetentionPeriod = this.RetentionPeriod;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

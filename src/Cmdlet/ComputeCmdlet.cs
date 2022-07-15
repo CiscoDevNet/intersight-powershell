@@ -271,6 +271,28 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The KVM server state of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool KvmServerStateEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The KVM Vendor for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string KvmVendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a equipmentLocatorLed resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -1692,6 +1714,28 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The KVM server state of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool KvmServerStateEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The KVM Vendor for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string KvmVendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The management mode of the server.\n* `IntersightStandalone` - Intersight Standalone mode of operation.\n* `UCSM` - Unified Computing System Manager mode of operation.\n* `Intersight` - Intersight managed mode of operation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2356,6 +2400,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The KVM server state of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool KvmServerStateEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The KVM Vendor for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string KvmVendor
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a equipmentLocatorLed resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -3804,6 +3870,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ComputeRackUnitIdentity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnitIdentity")]
+    public class RemoveIntersightComputeRackUnitIdentity : RemoveCmdletBase
+    {
+        public RemoveIntersightComputeRackUnitIdentity()
+        {
+            ApiInstance = new ComputeApi(Config);
+            MethodName = "DeleteComputeRackUnitIdentityWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputeServerPowerPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightComputeServerPowerPolicy")]
@@ -4088,6 +4166,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -4833,6 +4913,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>

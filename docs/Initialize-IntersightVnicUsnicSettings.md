@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Count
-Number of usNIC interfaces to be created.
+Number of usNIC interfaces to be created. Valid values are 1 to 255 when the usNIC is enabled. When the usNIC is disabled, the default value is 0.
 
 ```yaml
 Type: long

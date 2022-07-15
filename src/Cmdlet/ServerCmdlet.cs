@@ -1385,16 +1385,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public PolicyConfigChange ConfigChanges
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"The configuration state and results of the last configuration operation."</para>
@@ -1884,16 +1874,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public PolicyConfigChange ConfigChanges
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"The configuration state and results of the last configuration operation."</para>

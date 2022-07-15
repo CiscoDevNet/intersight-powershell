@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVolumeInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootable< bool>][-ClassId< VirtualizationVolumeInfo.ClassIdEnum>][-DeleteOnTermination< bool>][-Encryption< bool>][-Iops< long>][-ObjectType< VirtualizationVolumeInfo.ObjectTypeEnum>][-Order< long>][-VolumeName< string>][-VolumeSize< long>][-VolumeType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationVolumeInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootable< bool>][-ClassId< VirtualizationVolumeInfo.ClassIdEnum>][-DeleteOnTermination< bool>][-Encryption< bool>][-Iops< long>][-ObjectType< VirtualizationVolumeInfo.ObjectTypeEnum>][-Order< long>][-Throughput< long>][-VolumeName< string>][-VolumeSize< long>][-VolumeType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -131,6 +131,21 @@ Accept wildcard characters: False
 
 ### -Order
 Order of the disk attachment to the VM.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Throughput
+Throughput for the volume for applicable volume types.
 
 ```yaml
 Type: long

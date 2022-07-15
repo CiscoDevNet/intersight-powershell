@@ -178,3 +178,5 @@ PS C:\> Set-IntersightComputeRackUnitIdentity
 [Get-IntersightComputeRackUnitIdentity](./Get-IntersightComputeRackUnitIdentity.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Remove-IntersightComputeRackUnitIdentity](./Remove-IntersightComputeRackUnitIdentity.md)

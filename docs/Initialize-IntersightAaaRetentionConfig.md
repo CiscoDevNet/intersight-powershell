@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAaaRetentionConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AaaRetentionConfig.ClassIdEnum>][-Moid< string>][-ObjectType< AaaRetentionConfig.ObjectTypeEnum>][-RetentionPeriod< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAaaRetentionConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AaaRetentionConfig.ClassIdEnum>][-Moid< string>][-ObjectType< AaaRetentionConfig.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,21 +74,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: AaaRetentionConfig.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RetentionPeriod
-The default retention period in months for audit log retention for accounts without a retention policy.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

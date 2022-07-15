@@ -1540,6 +1540,90 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesAddonVersionReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesAddonVersionReference")]
+    public class InitializeIntersightKubernetesAddonVersionReference : PSCmdlet
+    {
+        public InitializeIntersightKubernetesAddonVersionReference()
+        {
+            ClassId = KubernetesAddonVersionReference.ClassIdEnum.KubernetesAddonVersionReference;
+            ObjectType = KubernetesAddonVersionReference.ObjectTypeEnum.KubernetesAddonVersionReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public KubernetesAddonVersionReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the addon to lookup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public KubernetesAddonVersionReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version number to filter the addon with."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.KubernetesAddonVersionReference initObject = new Intersight.Model.KubernetesAddonVersionReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize KubernetesBaremetalNetworkInfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightKubernetesBaremetalNetworkInfo")]
@@ -6597,6 +6681,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.InfraBaseGpuConfiguration> GpuConfig
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a kubernetesBaseInfrastructureProvider resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6788,6 +6882,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Desiredsize"))
             {
                 initObject.Desiredsize = this.Desiredsize;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuConfig"))
+            {
+                initObject.GpuConfig = this.GpuConfig;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("InfraProvider"))
             {
@@ -7311,6 +7409,202 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesNvidiaGpuProduct.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesNvidiaGpuProduct")]
+    public class InitializeIntersightKubernetesNvidiaGpuProduct : PSCmdlet
+    {
+        public InitializeIntersightKubernetesNvidiaGpuProduct()
+        {
+            ClassId = KubernetesNvidiaGpuProduct.ClassIdEnum.KubernetesNvidiaGpuProduct;
+            ObjectType = KubernetesNvidiaGpuProduct.ObjectTypeEnum.KubernetesNvidiaGpuProduct;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a kubernetesCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.KubernetesCatalogRelationship Catalog
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public KubernetesNvidiaGpuProduct.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Optional description of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Device Id of a product, which is unique within a vendor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DeviceId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Memory size of a GPU product in GB."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MemorySize
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"True if this Nvidia GPU supports MIG."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool MigCapable
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> MigProfiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Display Name of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public KubernetesNvidiaGpuProduct.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Vendor Id of a product. Each vendor has a globally unique Id, for example 0x10DE for Nvidia."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long VendorId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.KubernetesNvidiaGpuProduct initObject = new Intersight.Model.KubernetesNvidiaGpuProduct();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Catalog"))
+            {
+                initObject.Catalog = this.Catalog;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceId"))
+            {
+                initObject.DeviceId = this.DeviceId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MemorySize"))
+            {
+                initObject.MemorySize = this.MemorySize;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MigCapable"))
+            {
+                initObject.MigCapable = this.MigCapable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MigProfiles"))
+            {
+                initObject.MigProfiles = this.MigProfiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VendorId"))
+            {
+                initObject.VendorId = this.VendorId;
             }
             WriteObject(initObject);
         }
@@ -9064,6 +9358,36 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.KubernetesAddonVersionReference> EssentialAddons
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of helm operator to use for this kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HelmOperatorVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The iks utility container to use for the kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IksUtilityContainer
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Desired Kubernetes version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9160,6 +9484,18 @@ namespace Intersight.PowerShell
                 initObject.Catalog = this.Catalog;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EssentialAddons"))
+            {
+                initObject.EssentialAddons = this.EssentialAddons;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HelmOperatorVersion"))
+            {
+                initObject.HelmOperatorVersion = this.HelmOperatorVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IksUtilityContainer"))
+            {
+                initObject.IksUtilityContainer = this.IksUtilityContainer;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("KubernetesVersion"))
             {
                 initObject._KubernetesVersion = this.KubernetesVersion;
