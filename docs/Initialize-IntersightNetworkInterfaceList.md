@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkInterfaceList [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< string>][-ClassId< NetworkInterfaceList.ClassIdEnum>][-IpAddress< string>][-Mac< string>][-Moid< string>][-Mtu< long>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkInterfaceList.ObjectTypeEnum>][-OperState< string>][-PortSubType< string>][-PortType< string>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-SlotId< string>][-Speed< string>][-SpeedGroup< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vlan< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkInterfaceList [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkInterfaceList.ClassIdEnum>][-Moid< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkInterfaceList.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,21 +29,6 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminState
-Admin state of the interface list.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -69,68 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -IpAddress
-IP address of the interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Mac
-MAC address of the interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Mtu
-Maximum transmission unit of the interface list.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the interface list.
 
 ```yaml
 Type: string
@@ -177,114 +102,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -OperState
-Operational state of the interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortSubType
-Interface types supported in Network device like Subinterfaces, Breakout Interfaces.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortType
-Port type of interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SlotId
-Slot id of the interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Speed
-Port speed of the interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SpeedGroup
-Speed Group of the interface list.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -292,21 +109,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Vlan
-VLAN of the interface list.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

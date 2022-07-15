@@ -9478,6 +9478,75 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New FirmwareUpgradeValidity.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgradeValidity")]
+    public class NewIntersightFirmwareUpgradeValidity : NewCmdletBase
+    {
+        public NewIntersightFirmwareUpgradeValidity()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            ModelObject = new FirmwareUpgradeValidity();
+            MethodName = "CreateFirmwareUpgradeValidityWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePhysicalRelationship Server
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareBiosDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareBiosDescriptor")]

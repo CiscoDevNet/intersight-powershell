@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamIdp.ClassIdEnum>][-DomainName< string>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][-Name< string>][-ObjectType< IamIdp.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[Model.IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[Model.IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamIdp.ClassIdEnum>][-DomainName< string>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][-Name< string>][-ObjectType< IamIdp.ObjectTypeEnum>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[Model.IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[Model.IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -134,6 +134,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: IamIdp.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkipWarning
+When users attempt the Account URL login with an unverified Domain Name, they get a warning stating that they are logging in using an unverified Domain Name. Enable the slider if you do not wish to see the warning message.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

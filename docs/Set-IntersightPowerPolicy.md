@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocatedBudget< long>][-Description< string>][-DynamicRebalancing< PowerPolicy.DynamicRebalancingEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PowerPriority< PowerPolicy.PowerPriorityEnum>][-PowerProfiling< PowerPolicy.PowerProfilingEnum>][-PowerRestoreState< PowerPolicy.PowerRestoreStateEnum>][-PowerSaveMode< PowerPolicy.PowerSaveModeEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RedundancyMode< PowerPolicy.RedundancyModeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocatedBudget< long>][-Description< string>][-DynamicRebalancing< PowerPolicy.DynamicRebalancingEnum>][-ExtendedPowerCapacity< PowerPolicy.ExtendedPowerCapacityEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PowerPriority< PowerPolicy.PowerPriorityEnum>][-PowerProfiling< PowerPolicy.PowerProfilingEnum>][-PowerRestoreState< PowerPolicy.PowerRestoreStateEnum>][-PowerSaveMode< PowerPolicy.PowerSaveModeEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RedundancyMode< PowerPolicy.RedundancyModeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllocatedBudget
-Sets the Allocated Power Budget of the System (in Watts). This field is only supported for Cisco UCS X series Chassis.
+Sets the Allocated Power Budget of the Chassis (in Watts). This field is only supported for Cisco UCS X series Chassis.
 
 ```yaml
 Type: long
@@ -69,10 +69,25 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicRebalancing
-Sets the Dynamic Power Rebalancing of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the Dynamic Power Rebalancing mode of the Chassis. If enabled, this mode allows the chassis to dynamically reallocate the power between servers depending on their power usage. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
 
 ```yaml
 Type: PowerPolicy.DynamicRebalancingEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExtendedPowerCapacity
+Sets the Extended Power Capacity of the Chassis. If Enabled, this mode allows chassis available power to be increased by borrowing power from redundant power supplies.  This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+
+```yaml
+Type: PowerPolicy.ExtendedPowerCapacityEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -132,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerPriority
-Sets the Power Priority of the System. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High.
+Sets the Power Priority of the Server. This priority is used to determine the initial power allocation for servers. This field is only supported for Cisco UCS X series servers.\n* `Low` - Set the Power Priority to Low.\n* `Medium` - Set the Power Priority to Medium.\n* `High` - Set the Power Priority to High.
 
 ```yaml
 Type: PowerPolicy.PowerPriorityEnum
@@ -147,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerProfiling
-Sets the Power Profiling of the Server. This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the Power Profiling of the Server. If Enabled, this field allows the power manager to run power profiling  utility to determine the power needs of the server.  This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
 
 ```yaml
 Type: PowerPolicy.PowerProfilingEnum
@@ -162,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerRestoreState
-Sets the Power Restore State of the Server. This field is only supported for Cisco UCS X series servers.\n* `AlwaysOff` - Set the Power Restore Mode to Off.\n* `AlwaysOn` - Set the Power Restore Mode to On.\n* `LastState` - Set the Power Restore Mode to LastState.
+Sets the Power Restore State of the Server. In the absence of Intersight connectivity, the chassis will use this policy  to recover the host power after a power loss event.  This field is only supported for Cisco UCS X series servers.\n* `AlwaysOff` - Set the Power Restore Mode to Off.\n* `AlwaysOn` - Set the Power Restore Mode to On.\n* `LastState` - Set the Power Restore Mode to LastState.
 
 ```yaml
 Type: PowerPolicy.PowerRestoreStateEnum
@@ -177,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSaveMode
-Sets the Power Save mode of the System. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the Power Save mode of the Chassis. If the requested power budget is less than available power\u00a0capacity,  the additional PSUs not required to comply with redundancy policy are placed in Power Save mode. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
 
 ```yaml
 Type: PowerPolicy.PowerSaveModeEnum
@@ -210,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedundancyMode
-Sets the Power Redundancy of the System. N+2 mode is only supported for Cisco UCS X series Chassis.\n* `Grid` - Grid Mode requires two power sources. If one source fails, the surviving PSUs connected to the other source provides power to the chassis.\n* `NotRedundant` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements. No Redundant PSUs are maintained.\n* `N+1` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus one additional PSU for redundancy.\n* `N+2` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus two additional PSU for redundancy. This Mode is only supported for UCS X series Chassis.
+Sets the Power Redundancy Mode of the Chassis.  Redundancy Mode determines the number of PSUs the chassis keeps as redundant.  N+2 mode is only supported for Cisco UCS X series Chassis.\n* `Grid` - Grid Mode requires two power sources. If one source fails, the surviving PSUs connected to the other source provides power to the chassis.\n* `NotRedundant` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements. No Redundant PSUs are maintained.\n* `N+1` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus one additional PSU for redundancy.\n* `N+2` - Power Manager turns on the minimum number of PSUs required to support chassis power requirements plus two additional PSU for redundancy. This Mode is only supported for UCS X series Chassis.
 
 ```yaml
 Type: PowerPolicy.RedundancyModeEnum

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -78,23 +78,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EquipmentChassisRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigChanges
-Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object.
-
-Note :- Use Initialize-IntersightPolicyConfigChange to create the object of complex type PolicyConfigChange
-
-```yaml
-Type: PolicyConfigChange
 Parameter Sets: (All)
 Aliases:
 

@@ -1162,6 +1162,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Limit CPU PA to 46 Bits configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CpuPaLimitEnum CpuPaLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Enhanced CPU Performance configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CpuPerfEnhancement token.\n* `Disabled` - Value - Disabled for configuring CpuPerfEnhancement token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -4499,6 +4510,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting TPM Minimal Physical Presence configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.TpmPpiRequiredEnum TpmPpiRequired
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting TPM Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6408,6 +6430,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CpuFrequencyFloorEnum CpuFrequencyFloor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Limit CPU PA to 46 Bits configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CpuPaLimitEnum CpuPaLimit
         {
             get;
             set;
@@ -9721,6 +9754,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting TPM Minimal Physical Presence configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.TpmPpiRequiredEnum TpmPpiRequired
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting TPM Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -10904,6 +10948,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CpuFrequencyFloorEnum CpuFrequencyFloor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Limit CPU PA to 46 Bits configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CpuPaLimitEnum CpuPaLimit
         {
             get;
             set;
@@ -14211,6 +14266,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.TpmPendingOperationEnum TpmPendingOperation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting TPM Minimal Physical Presence configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.TpmPpiRequiredEnum TpmPpiRequired
         {
             get;
             set;

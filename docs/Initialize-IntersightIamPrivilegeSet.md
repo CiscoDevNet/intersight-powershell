@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamPrivilegeSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedPrivilegeSets< System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]>][-ClassId< IamPrivilegeSet.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< IamPrivilegeSet.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamPrivilegeSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamPrivilegeSet.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< IamPrivilegeSet.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,24 +29,6 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AssociatedPrivilegeSets
-An array of relationships to iamPrivilegeSet resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesNodeGroupProfile.ClassIdEnum>][-ClusterProfile< Model.KubernetesClusterProfileRelationship>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Desiredsize< long>][-InfraProvider< Model.KubernetesBaseInfrastructureProviderRelationship>][-IpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-KubernetesVersion< Model.KubernetesVersionPolicyRelationship>][-Labels< System.Collections.Generic.List`1[Model.KubernetesNodeGroupLabel]>][-Maxsize< long>][-Minsize< long>][-Moid< string>][-Name< string>][-NodeType< KubernetesNodeGroupProfile.NodeTypeEnum>][-Nodes< System.Collections.Generic.List`1[Model.KubernetesNodeProfileRelationship]>][-ObjectType< KubernetesNodeGroupProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Taints< System.Collections.Generic.List`1[Model.KubernetesNodeGroupTaint]>][-Type< KubernetesNodeGroupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesNodeGroupProfile.ClassIdEnum>][-ClusterProfile< Model.KubernetesClusterProfileRelationship>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Desiredsize< long>][-GpuConfig< System.Collections.Generic.List`1[Model.InfraBaseGpuConfiguration]>][-InfraProvider< Model.KubernetesBaseInfrastructureProviderRelationship>][-IpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-KubernetesVersion< Model.KubernetesVersionPolicyRelationship>][-Labels< System.Collections.Generic.List`1[Model.KubernetesNodeGroupLabel]>][-Maxsize< long>][-Minsize< long>][-Moid< string>][-Name< string>][-NodeType< KubernetesNodeGroupProfile.NodeTypeEnum>][-Nodes< System.Collections.Generic.List`1[Model.KubernetesNodeProfileRelationship]>][-ObjectType< KubernetesNodeGroupProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Taints< System.Collections.Generic.List`1[Model.KubernetesNodeGroupTaint]>][-Type< KubernetesNodeGroupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -141,6 +141,23 @@ Desired number of nodes in this node group, same as minsize initially and is upd
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GpuConfig
+
+
+Note :- Use Initialize-IntersightInfraBaseGpuConfiguration to create the object of complex type InfraBaseGpuConfiguration
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.InfraBaseGpuConfiguration]
 Parameter Sets: (All)
 Aliases:
 
@@ -471,6 +488,8 @@ PS C:\> Initialize-IntersightKubernetesNodeGroupProfile
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightInfraBaseGpuConfiguration](./Initialize-IntersightInfraBaseGpuConfiguration.md)
 
 [Initialize-IntersightKubernetesNodeGroupLabel](./Initialize-IntersightKubernetesNodeGroupLabel.md)
 

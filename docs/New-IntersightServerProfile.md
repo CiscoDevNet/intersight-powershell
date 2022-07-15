@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-LeasedServer< ComputePhysicalRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-LeasedServer< ComputePhysicalRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -96,23 +96,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: ResourcepoolPoolRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigChanges
-Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object.
-
-Note :- Use Initialize-IntersightPolicyConfigChange to create the object of complex type PolicyConfigChange
-
-```yaml
-Type: PolicyConfigChange
 Parameter Sets: (All)
 Aliases:
 

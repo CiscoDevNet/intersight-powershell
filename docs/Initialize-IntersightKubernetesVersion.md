@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootIso< Model.SoftwareSolutionDistributableRelationship>][-Catalog< Model.KubernetesCatalogRelationship>][-ClassId< Model.KubernetesVersion.ClassIdEnum>][-KubernetesVersion< string>][-Moid< string>][-Name< string>][-ObjectType< Model.KubernetesVersion.ObjectTypeEnum>][-OvaImageTemplate< Model.SoftwareSolutionDistributableRelationship>][-Qcow2NodeTemplate< Model.SoftwareSolutionDistributableRelationship>][-Qcow2VirtualMachineTemplate< Model.SoftwareSolutionDistributableRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootIso< Model.SoftwareSolutionDistributableRelationship>][-Catalog< Model.KubernetesCatalogRelationship>][-ClassId< Model.KubernetesVersion.ClassIdEnum>][-EssentialAddons< System.Collections.Generic.List`1[Model.KubernetesAddonVersionReference]>][-HelmOperatorVersion< string>][-IksUtilityContainer< string>][-KubernetesVersion< string>][-Moid< string>][-Name< string>][-ObjectType< Model.KubernetesVersion.ObjectTypeEnum>][-OvaImageTemplate< Model.SoftwareSolutionDistributableRelationship>][-Qcow2NodeTemplate< Model.SoftwareSolutionDistributableRelationship>][-Qcow2VirtualMachineTemplate< Model.SoftwareSolutionDistributableRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -80,6 +80,53 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: Model.KubernetesVersion.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EssentialAddons
+
+
+Note :- Use Initialize-IntersightKubernetesAddonVersionReference to create the object of complex type KubernetesAddonVersionReference
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.KubernetesAddonVersionReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HelmOperatorVersion
+Version of helm operator to use for this kubernetes version.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IksUtilityContainer
+The iks utility container to use for the kubernetes version.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -277,5 +324,7 @@ PS C:\> Initialize-IntersightKubernetesVersion
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightKubernetesAddonVersionReference](./Initialize-IntersightKubernetesAddonVersionReference.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

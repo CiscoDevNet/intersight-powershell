@@ -18,7 +18,6 @@ namespace Intersight.PowerShell
             ClassId = NetworkElement.ClassIdEnum.NetworkElement;
             ManagementMode = NetworkElement.ManagementModeEnum.IntersightStandalone;
             ObjectType = NetworkElement.ObjectTypeEnum.NetworkElement;
-            SwitchType = NetworkElement.SwitchTypeEnum.FabricInterconnect;
             Thermal = NetworkElement.ThermalEnum.Unknown;
 
         }
@@ -273,16 +272,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public NetworkElement.SwitchTypeEnum SwitchType
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"System up time of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -449,10 +438,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SupervisorCard"))
             {
                 initObject.SupervisorCard = this.SupervisorCard;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchType"))
-            {
-                initObject.SwitchType = this.SwitchType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SystemUpTime"))
             {
@@ -677,16 +662,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The admin state of the feature."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AdminState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -697,31 +672,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The number of instances of the feature."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Instance
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name to identify the feature."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
         {
             get;
             set;
@@ -747,26 +702,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The operational state of the feature."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperationalState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -784,36 +719,16 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
-            {
-                initObject.AdminState = this.AdminState;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Instance"))
-            {
-                initObject.Instance = this.Instance;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
             {
                 initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperationalState"))
-            {
-                initObject.OperationalState = this.OperationalState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
-            {
-                initObject.RegisteredDevice = this.RegisteredDevice;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -901,16 +816,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Admin state of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AdminState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -921,51 +826,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"IP address of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string IpAddress
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"MAC address of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Mac
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Maximum transmission unit of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Mtu
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
         {
             get;
             set;
@@ -991,91 +856,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Operational state of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Interface types supported in Network device like Subinterfaces, Breakout Interfaces."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PortSubType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Port type of interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PortType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Slot id of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SlotId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Port speed of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Speed
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Speed Group of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SpeedGroup
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"VLAN of the interface list."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vlan
         {
             get;
             set;
@@ -1088,71 +873,19 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
-            {
-                initObject.AdminState = this.AdminState;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IpAddress"))
-            {
-                initObject.IpAddress = this.IpAddress;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mac"))
-            {
-                initObject.Mac = this.Mac;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
-            {
-                initObject.Mtu = this.Mtu;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
             {
                 initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperState"))
-            {
-                initObject.OperState = this.OperState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortSubType"))
-            {
-                initObject.PortSubType = this.PortSubType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortType"))
-            {
-                initObject.PortType = this.PortType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
-            {
-                initObject.RegisteredDevice = this.RegisteredDevice;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
-            {
-                initObject.SlotId = this.SlotId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Speed"))
-            {
-                initObject.Speed = this.Speed;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SpeedGroup"))
-            {
-                initObject.SpeedGroup = this.SpeedGroup;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vlan"))
-            {
-                initObject.Vlan = this.Vlan;
             }
             WriteObject(initObject);
         }

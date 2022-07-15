@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< Model.EquipmentChassisRelationship>][-ClassId< ChassisProfile.ClassIdEnum>][-ConfigChanges< Model.PolicyConfigChange>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ChassisProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< Model.EquipmentChassisRelationship>][-ClassId< ChassisProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ChassisProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -94,23 +94,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ChassisProfile.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigChanges
-Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object.
-
-Note :- Use Initialize-IntersightPolicyConfigChange to create the object of complex type PolicyConfigChange
-
-```yaml
-Type: Model.PolicyConfigChange
 Parameter Sets: (All)
 Aliases:
 
@@ -359,7 +342,5 @@ PS C:\> Initialize-IntersightChassisProfile
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
-
-[Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)

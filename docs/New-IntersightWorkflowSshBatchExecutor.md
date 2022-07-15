@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowSshBatchExecutor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Batch< System.Collections.Generic.List`1[Intersight.Model.WorkflowApi]>][-Constraints< WorkflowTaskConstraints>][-Description< string>][-Moid< string>][[-Name]< string>][-Outcomes< object>][-Output< object>][-RetryFromFailedApi< bool>][-SkipOnCondition< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefinition< WorkflowTaskDefinitionRelationship>][-UiRenderingData< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowSshBatchExecutor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Batch< System.Collections.Generic.List`1[Intersight.Model.WorkflowApi]>][-CancelAction< System.Collections.Generic.List`1[Intersight.Model.WorkflowApi]>][-Constraints< WorkflowTaskConstraints>][-Description< string>][-Moid< string>][[-Name]< string>][-Outcomes< object>][-Output< object>][-RetryFromFailedApi< bool>][-SkipOnCondition< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefinition< WorkflowTaskDefinitionRelationship>][-UiRenderingData< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,6 +39,23 @@ Accept wildcard characters: False
 ```
 
 ### -Batch
+
+
+Note :- Use Initialize-IntersightIntersight.Model.WorkflowApi to create the object of complex type Intersight.Model.WorkflowApi
+
+```yaml
+Type: System.Collections.Generic.List`1[Intersight.Model.WorkflowApi]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CancelAction
 
 
 Note :- Use Initialize-IntersightIntersight.Model.WorkflowApi to create the object of complex type Intersight.Model.WorkflowApi

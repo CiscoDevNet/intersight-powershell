@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-Chassis< string>][-ClassId< NetworkElement.ClassIdEnum>][-ConfModTs< string>][-ConfModTsBackup< string>][-Console< System.Collections.Generic.List`1[Model.ConsoleConsoleConfigRelationship]>][-DefaultDomain< string>][-FaultSummary< long>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FeatureControl< System.Collections.Generic.List`1[Model.NetworkFeatureControlRelationship]>][-InterfaceList< System.Collections.Generic.List`1[Model.NetworkInterfaceListRelationship]>][-LicenseFile< System.Collections.Generic.List`1[Model.NetworkLicenseFileRelationship]>][-ManagementMode< NetworkElement.ManagementModeEnum>][-Moid< string>][-ObjectType< NetworkElement.ObjectTypeEnum>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-PortMacBindings< System.Collections.Generic.List`1[Model.PortMacBindingRelationship]>][-PreviousFru< Model.EquipmentFruRelationship>][-ProcessorUnit< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]>][-SwitchType< NetworkElement.SwitchTypeEnum>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< Model.TopSystemRelationship>][-UcsmRunningFirmware< Model.FirmwareRunningFirmwareRelationship>][-Version< string>][-Vrf< System.Collections.Generic.List`1[Model.NetworkVrfRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-Chassis< string>][-ClassId< NetworkElement.ClassIdEnum>][-ConfModTs< string>][-ConfModTsBackup< string>][-Console< System.Collections.Generic.List`1[Model.ConsoleConsoleConfigRelationship]>][-DefaultDomain< string>][-FaultSummary< long>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FeatureControl< System.Collections.Generic.List`1[Model.NetworkFeatureControlRelationship]>][-InterfaceList< System.Collections.Generic.List`1[Model.NetworkInterfaceListRelationship]>][-LicenseFile< System.Collections.Generic.List`1[Model.NetworkLicenseFileRelationship]>][-ManagementMode< NetworkElement.ManagementModeEnum>][-Moid< string>][-ObjectType< NetworkElement.ObjectTypeEnum>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-PortMacBindings< System.Collections.Generic.List`1[Model.PortMacBindingRelationship]>][-PreviousFru< Model.EquipmentFruRelationship>][-ProcessorUnit< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< Model.TopSystemRelationship>][-UcsmRunningFirmware< Model.FirmwareRunningFirmwareRelationship>][-Version< string>][-Vrf< System.Collections.Generic.List`1[Model.NetworkVrfRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -418,21 +418,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SwitchType
-The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices.
-
-```yaml
-Type: NetworkElement.SwitchTypeEnum
 Parameter Sets: (All)
 Aliases:
 

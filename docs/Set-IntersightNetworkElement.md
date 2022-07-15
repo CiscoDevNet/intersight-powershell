@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-Chassis< string>][-ConfModTs< string>][-ConfModTsBackup< string>][-Console< System.Collections.Generic.List`1[ConsoleConsoleConfigRelationship]>][-DefaultDomain< string>][-FaultSummary< long>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-FeatureControl< System.Collections.Generic.List`1[NetworkFeatureControlRelationship]>][-InterfaceList< System.Collections.Generic.List`1[NetworkInterfaceListRelationship]>][-LicenseFile< System.Collections.Generic.List`1[NetworkLicenseFileRelationship]>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-PortMacBindings< System.Collections.Generic.List`1[PortMacBindingRelationship]>][-PreviousFru< EquipmentFruRelationship>][-ProcessorUnit< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]>][-SwitchType< NetworkElement.SwitchTypeEnum>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-Version< string>][-Vrf< System.Collections.Generic.List`1[NetworkVrfRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-Chassis< string>][-ConfModTs< string>][-ConfModTsBackup< string>][-Console< System.Collections.Generic.List`1[ConsoleConsoleConfigRelationship]>][-DefaultDomain< string>][-FaultSummary< long>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-FeatureControl< System.Collections.Generic.List`1[NetworkFeatureControlRelationship]>][-InterfaceList< System.Collections.Generic.List`1[NetworkInterfaceListRelationship]>][-LicenseFile< System.Collections.Generic.List`1[NetworkLicenseFileRelationship]>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-PortMacBindings< System.Collections.Generic.List`1[PortMacBindingRelationship]>][-PreviousFru< EquipmentFruRelationship>][-ProcessorUnit< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-Version< string>][-Vrf< System.Collections.Generic.List`1[NetworkVrfRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -387,21 +387,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SwitchType
-The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices.
-
-```yaml
-Type: NetworkElement.SwitchTypeEnum
 Parameter Sets: (All)
 Aliases:
 

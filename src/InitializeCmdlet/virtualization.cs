@@ -367,6 +367,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you have defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VpcId
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -381,6 +391,10 @@ namespace Intersight.PowerShell
                 initObject.Interfaces = this.Interfaces;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpcId"))
+            {
+                initObject.VpcId = this.VpcId;
+            }
             WriteObject(initObject);
         }
 
@@ -1033,6 +1047,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you have defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VpcId
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -1047,6 +1071,10 @@ namespace Intersight.PowerShell
                 initObject.Interfaces = this.Interfaces;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpcId"))
+            {
+                initObject.VpcId = this.VpcId;
+            }
             WriteObject(initObject);
         }
 
@@ -8129,6 +8157,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to virtualizationVmwareCluster resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.VirtualizationVmwareClusterRelationship> Clusters
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a virtualizationVmwareDatastoreCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8328,6 +8366,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Cluster"))
             {
                 initObject.Cluster = this.Cluster;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Clusters"))
+            {
+                initObject.Clusters = this.Clusters;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("DatastoreCluster"))
             {
@@ -14445,6 +14487,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Throughput for the volume for applicable volume types."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Throughput
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Name assigned to the volume created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14503,6 +14555,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Order"))
             {
                 initObject.Order = this.Order;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Throughput"))
+            {
+                initObject.Throughput = this.Throughput;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("VolumeName"))
             {

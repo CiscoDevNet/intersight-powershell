@@ -3565,6 +3565,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"A reference to a kubernetesBaseInfrastructureProvider resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -3700,6 +3701,181 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public KubernetesNodeGroupProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get KubernetesNvidiaGpuProduct.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNvidiaGpuProduct", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightKubernetesNvidiaGpuProduct : GetCmdletBase
+    {
+        public GetIntersightKubernetesNvidiaGpuProduct()
+        {
+            ApiInstance = new KubernetesApi(Config);
+            MethodName = "GetKubernetesNvidiaGpuProductListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a kubernetesCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public KubernetesCatalogRelationship Catalog
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Optional description of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Device Id of a product, which is unique within a vendor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DeviceId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Memory size of a GPU product in GB."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long MemorySize
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"True if this Nvidia GPU supports MIG."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool MigCapable
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Display Name of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Vendor Id of a product. Each vendor has a globally unique Id, for example 0x10DE for Nvidia."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VendorId
         {
             get;
             set;
@@ -4456,6 +4632,29 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Version of helm operator to use for this kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string HelmOperatorVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The iks utility container to use for the kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IksUtilityContainer
         {
             get;
             set;
@@ -7620,6 +7819,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<InfraBaseGpuConfiguration> GpuConfig
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a kubernetesBaseInfrastructureProvider resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7784,6 +7994,150 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public KubernetesNodeGroupProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New KubernetesNvidiaGpuProduct.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNvidiaGpuProduct")]
+    public class NewIntersightKubernetesNvidiaGpuProduct : NewCmdletBase
+    {
+        public NewIntersightKubernetesNvidiaGpuProduct()
+        {
+            ApiInstance = new KubernetesApi(Config);
+            ModelObject = new KubernetesNvidiaGpuProduct();
+            MethodName = "CreateKubernetesNvidiaGpuProductWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a kubernetesCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public KubernetesCatalogRelationship Catalog
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Optional description of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Device Id of a product, which is unique within a vendor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DeviceId
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Memory size of a GPU product in GB."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MemorySize
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"True if this Nvidia GPU supports MIG."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool MigCapable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> MigProfiles
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Display Name of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Vendor Id of a product. Each vendor has a globally unique Id, for example 0x10DE for Nvidia."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long VendorId
         {
             get;
             set;
@@ -8105,6 +8459,39 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<KubernetesAddonVersionReference> EssentialAddons
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Version of helm operator to use for this kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HelmOperatorVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The iks utility container to use for the kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IksUtilityContainer
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Desired Kubernetes version."</para>
@@ -9115,6 +9502,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new KubernetesApi(Config);
             MethodName = "DeleteKubernetesNodeGroupProfileWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove KubernetesNvidiaGpuProduct.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNvidiaGpuProduct")]
+    public class RemoveIntersightKubernetesNvidiaGpuProduct : RemoveCmdletBase
+    {
+        public RemoveIntersightKubernetesNvidiaGpuProduct()
+        {
+            ApiInstance = new KubernetesApi(Config);
+            MethodName = "DeleteKubernetesNvidiaGpuProductWithHttpInfo";
         }
     }
     /// <summary>
@@ -11444,6 +11843,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<InfraBaseGpuConfiguration> GpuConfig
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a kubernetesBaseInfrastructureProvider resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -11608,6 +12018,150 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public KubernetesNodeGroupProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set KubernetesNvidiaGpuProduct.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNvidiaGpuProduct")]
+    public class SetIntersightKubernetesNvidiaGpuProduct : SetCmdletBase
+    {
+        public SetIntersightKubernetesNvidiaGpuProduct()
+        {
+            ApiInstance = new KubernetesApi(Config);
+            ModelObject = new KubernetesNvidiaGpuProduct();
+            MethodName = "UpdateKubernetesNvidiaGpuProductWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a kubernetesCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public KubernetesCatalogRelationship Catalog
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Optional description of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Device Id of a product, which is unique within a vendor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DeviceId
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Memory size of a GPU product in GB."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MemorySize
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"True if this Nvidia GPU supports MIG."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool MigCapable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> MigProfiles
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Display Name of a product."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Vendor Id of a product. Each vendor has a globally unique Id, for example 0x10DE for Nvidia."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long VendorId
         {
             get;
             set;
@@ -11929,6 +12483,39 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<KubernetesAddonVersionReference> EssentialAddons
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Version of helm operator to use for this kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HelmOperatorVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The iks utility container to use for the kubernetes version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IksUtilityContainer
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Desired Kubernetes version."</para>

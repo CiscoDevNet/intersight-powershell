@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< Model.VirtualizationStorageCapacity>][-ClassId< VirtualizationVmwareDatastore.ClassIdEnum>][-Cluster< Model.VirtualizationVmwareClusterRelationship>][-DatastoreCluster< Model.VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][-Moid< string>][-MultipleHostAccess< bool>][-Name< string>][-ObjectType< VirtualizationVmwareDatastore.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationVmwareDatastore [-Accessible< bool>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capacity< Model.VirtualizationStorageCapacity>][-ClassId< VirtualizationVmwareDatastore.ClassIdEnum>][-Cluster< Model.VirtualizationVmwareClusterRelationship>][-Clusters< System.Collections.Generic.List`1[Model.VirtualizationVmwareClusterRelationship]>][-DatastoreCluster< Model.VirtualizationVmwareDatastoreClusterRelationship>][-HostCount< long>][-Identity< string>][-InventoryPath< string>][-MaintenanceMode< bool>][-Moid< string>][-MultipleHostAccess< bool>][-Name< string>][-ObjectType< VirtualizationVmwareDatastore.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Status< VirtualizationVmwareDatastore.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ThinProvisioningSupported< bool>][-Type< VirtualizationVmwareDatastore.TypeEnum>][-UnCommitted< long>][-Url< string>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -94,6 +94,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.VirtualizationVmwareClusterRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Clusters
+An array of relationships to virtualizationVmwareCluster resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.VirtualizationVmwareClusterRelationship]
 Parameter Sets: (All)
 Aliases:
 

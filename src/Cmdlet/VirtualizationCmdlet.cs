@@ -4536,6 +4536,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
@@ -12947,6 +12948,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public VirtualizationVmwareClusterRelationship Cluster
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to virtualizationVmwareCluster resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<VirtualizationVmwareClusterRelationship> Clusters
         {
             get;
             set;

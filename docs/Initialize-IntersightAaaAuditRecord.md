@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAaaAuditRecord [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AaaAuditRecord.ClassIdEnum>][-Email< string>][-Event< string>][-InstId< string>][-MoDisplayNames< object>][-MoType< string>][-Moid< string>][-ObjectMoid< string>][-ObjectType< AaaAuditRecord.ObjectTypeEnum>][-Request< object>][-SessionId< string>][-SourceIp< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TraceId< string>][-UserIdOrEmail< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAaaAuditRecord [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AaaAuditRecord.ClassIdEnum>][-Event< string>][-MoDisplayNames< object>][-MoType< string>][-Moid< string>][-ObjectMoid< string>][-ObjectType< AaaAuditRecord.ObjectTypeEnum>][-Request< object>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TraceId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,38 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Email
-The email of the associated user that made the change.  In case the user is later deleted, we still have some reference to the information.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Event
 The operation that was performed on this Managed Object.\nThe event is a compound string that includes the CRUD operation such as Create, Modify, Delete, and a string representing the Managed Object type.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InstId
-The instance id of AuditRecordLocal, which is used to identify if the comming AuditRecordLocal was already processed before.
 
 ```yaml
 Type: string
@@ -193,36 +163,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SessionId
-The sessionId in which the user made the change. In case that the session is later deleted, we still have some reference to the information.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SourceIp
-The source IP of the client.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -242,21 +182,6 @@ Accept wildcard characters: False
 
 ### -TraceId
 The trace id of the request that was used to create, modify or delete a REST resource.\nA trace id is a unique identifier for one particular REST request. It may be used for troubleshooting purpose\nby the Intersight technical support team.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UserIdOrEmail
-The userId or the email of the associated user that made the change. In case that user is later deleted, we still have some reference to the information.
 
 ```yaml
 Type: string

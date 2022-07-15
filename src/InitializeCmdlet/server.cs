@@ -798,16 +798,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Pending configuration changes at the summary level. Detail changes are saved in configChangeDetails as a separate object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.PolicyConfigChange ConfigChanges
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The configuration state and results of the last configuration operation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1012,10 +1002,6 @@ namespace Intersight.PowerShell
                 initObject.AssociatedServerPool = this.AssociatedServerPool;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChanges"))
-            {
-                initObject.ConfigChanges = this.ConfigChanges;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ConfigContext"))
             {
                 initObject.ConfigContext = this.ConfigContext;

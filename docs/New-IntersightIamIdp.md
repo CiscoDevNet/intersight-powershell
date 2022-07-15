@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][[-Name]< string>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -110,6 +110,21 @@ Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -SkipWarning
+When users attempt the Account URL login with an unverified Domain Name, they get a warning stating that they are logging in using an unverified Domain Name. Enable the slider if you do not wish to see the warning message.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

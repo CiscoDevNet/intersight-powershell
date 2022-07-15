@@ -201,6 +201,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"VRF name to be used by NTP Server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string VrfName
+        {
+            get;
+            set;
+        }
+
 
     }
     /// <summary>
