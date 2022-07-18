@@ -1,4 +1,4 @@
-$account1 = Get-IntersightIamaccount -Moid '<Replace with Moid>'
+$account1 = Get-IntersightIamaccount -Name 'admin'
 
 $registered_device1 = Initialize-IntersightAssetDeviceRegistration -Moid '<Replace with Moid>'
 

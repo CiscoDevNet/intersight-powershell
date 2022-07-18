@@ -1,4 +1,4 @@
-$account = Get-IntersightIamaccount -Moid '<Replace with Moid>'
+$account = Get-IntersightIamaccount -Name 'admin'
 
 $schedule = Initialize-IntersightOnpremSchedule -TimeZone "PacificNiue" -DayOfMonth 1 -DayOfWeek 1 -MonthOfYear 1 -RepeatInterval 0 -TimeOfDay 0 -WeekOfMonth 1
 

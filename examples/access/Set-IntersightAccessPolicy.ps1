@@ -1,6 +1,3 @@
-# Get the organization.
-$organization = Get-IntersightOrganizationOrganization -Name 'default'
-
 # Get the AccessPolicy to Update
 $AccessPolicy = Get-IntersightAccessPolicy -Name AccessPolicyName
 
