@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentType
-The deployment type of the cluster.\n* `NA` - The deployment type of the cluster is not available.\n* `Datacenter` - The deployment type of a cluster consisting of UCS Fabric Interconnect-attached nodes on the same site.\n* `Stretched Cluster` - The deployment type of a cluster consisting of UCS Fabric Interconnect-attached nodes across different sites.\n* `Edge` - The deployment type of a cluster consisting of 2 or more standalone nodes.
+The deployment type of the cluster.\n* `NA` - The deployment type of the HyperFlex cluster is not available.\n* `Datacenter` - The deployment type of a HyperFlex cluster consisting of UCS Fabric Interconnect-attached nodes on the same site.\n* `Stretched Cluster` - The deployment type of a HyperFlex cluster consisting of UCS Fabric Interconnect-attached nodes across different sites.\n* `Edge` - The deployment type of a HyperFlex cluster consisting of 2 or more standalone nodes.\n* `DC-No-FI` - The deployment type of a HyperFlex cluster consisting of 3 or more standalone nodes with the required Datacenter license.
 
 ```yaml
 Type: HyperflexAppSettingConstraint.DeploymentTypeEnum
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -MgmtPlatform
-The supported management platform for the HyperFlex Cluster.\n* `FI` - The host servers used in the cluster deployment are managed by a UCS Fabric Interconnect.\n* `EDGE` - The host servers used in the cluster deployment are standalone severs.
+The supported management platform for the HyperFlex Cluster.\n* `FI` - The host servers used in the cluster deployment are managed by a UCS Fabric Interconnect.\n* `EDGE` - The host servers used in the cluster deployment are standalone severs.\n* `DC-No-FI` - The host servers used in the cluster deployment are standalone servers with the DC Advantage license.
 
 ```yaml
 Type: HyperflexAppSettingConstraint.MgmtPlatformEnum

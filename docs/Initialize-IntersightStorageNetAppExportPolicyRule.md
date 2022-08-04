@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageNetAppExportPolicyRule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppExportPolicyRule.ClassIdEnum>][-ClientMatch< System.Collections.Generic.List`1[string]>][-Index< long>][-ObjectType< StorageNetAppExportPolicyRule.ObjectTypeEnum>][-RoRule< System.Collections.Generic.List`1[string]>][-RwRule< System.Collections.Generic.List`1[string]>][-SuperUser< System.Collections.Generic.List`1[string]>][-User< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageNetAppExportPolicyRule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppExportPolicyRule.ClassIdEnum>][-ObjectType< StorageNetAppExportPolicyRule.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,101 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClientMatch
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Index
-Position of export rule in the list of rules.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: StorageNetAppExportPolicyRule.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RoRule
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RwRule
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SuperUser
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -User
-Export Policy rule that are mapped to this User ID.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

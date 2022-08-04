@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageNetAppPort [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppPort.ClassIdEnum>][-Name< string>][-NodeName< string>][-ObjectType< StorageNetAppPort.ObjectTypeEnum>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageNetAppPort [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppPort.ClassIdEnum>][-ObjectType< StorageNetAppPort.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,56 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Name associated with this port.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NodeName
-Name of the node associated with this port.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: StorageNetAppPort.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Uuid
-Unique identifier of the port.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

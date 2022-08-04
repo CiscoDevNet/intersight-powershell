@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageHitachiHost [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageHitachiHost.ClassIdEnum>][-HostGroupNumber< long>][-Moid< string>][-ObjectType< StorageHitachiHost.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageHitachiHost [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageHitachiHost.ClassIdEnum>][-Moid< string>][-ObjectType< StorageHitachiHost.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,21 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: StorageHitachiHost.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -HostGroupNumber
-Host group number for this host.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

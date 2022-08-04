@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Encryption
-If enabled, allows encryption of all Virtual Media communications. Please note that this is no longer applicable for servers running versions 4.2 and above.
+If enabled, allows encryption of all Virtual Media communications. Please note that this can no longer be disabled for servers running versions 4.2 and above.
 
 ```yaml
 Type: bool

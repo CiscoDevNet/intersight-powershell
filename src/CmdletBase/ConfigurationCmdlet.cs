@@ -6,6 +6,7 @@ using Intersight.Client;
 using System.Security;
 using System.Security.Cryptography;
 using System.Net;
+using Intersight.Api;
 
 namespace Intersight.PowerShell
 {
@@ -94,7 +95,8 @@ namespace Intersight.PowerShell
 
             Configuration config = new Configuration()
             {
-                BasePath = BasePath,
+                // BasePath = BasePath,
+                BasePath = BasePath.EndsWith("/") ? BasePath.Substring(0, BasePath.Length - 1) : BasePath,
                 HttpSigningConfiguration = httpConfig
             };
             CmdletBase.Config = config;
@@ -107,8 +109,34 @@ namespace Intersight.PowerShell
             {
                 System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             }
+
+            // This is to check either Set-IntersightConfiguration has proper configuration values
+
+            try
+            {
+                OrganizationApi api = new OrganizationApi();
+                api.Configuration = config;
+                var result = api.GetOrganizationOrganizationListWithHttpInfo();
+            }
+            catch (Exception ex)
+            {
+                //  Console.WriteLine(ex.GetType().FullName);
+                if (ex.GetType().FullName == "System.IO.InvalidDataException")
+                {
+                    throw new Exception("Error performing this operation. Check that BasePath and API Key identifier are configured correctly using the Set-IntersightConfiguration cmdlet.");
+                }
+                else if (ex.GetType().FullName == "Intersight.Client.ApiException")
+                {
+                    throw new Exception("Error performing this operation. Either invalid BasePath (No such host is known) or invalid SSL Certificates. Use 'SkipCertificateCheck = $true' in configuration for invalid SSL certificates and retry the operation.");
+                }
+                else
+                {
+                    throw ex.InnerException ?? ex;
+                }
+            }
         }
     }
+
 
     [Cmdlet(VerbsCommon.Get, "IntersightConfiguration")]
     public class GetConfigurationCmldet : PSCmdlet

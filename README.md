@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.7546
-- C# SDK version: 1.0.11.7546
+- Intersight.PowerShell version: 1.0.11.7658
+- C# SDK version: 1.0.11.7658
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.7546"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.7658"}
 ```
 or
 
@@ -655,13 +655,13 @@ Refer to [ Server Configuration ](./examples/server/serverConfiguration.ps1)
 <a name="firmware-upgrade"></a>
 ### 9.2. Example - Firmware Upgrade
 
-Refer to [Direct Firmware Upgrade](./examples/firmware/New-IntersightFirmwareUpgrade.ps1)
+Refer to [Direct Firmware Upgrade](./example/firmware/DirectFirmwareUpgrade.ps1)
 
-Refer to [Network Firmware Upgrade](./examples/firmware/New-IntersightFirmwareUpgrade.ps1)
+Refer to [Network Firmware Upgrade](./example/firmware/NetworkFirmwareUpgrade.ps1)
 
 <a name="os-install"></a>
 ### 9.3. Example - OS Install
-Refer to [OS Install](./examples/os/New-IntersightOsInstall.ps1)
+Refer to [OS Install](./example/os/InstallOS.ps1)
 
 
 <a name="targets"></a>
@@ -846,6 +846,7 @@ BulkMoMerger | [**New-IntersightBulkMoMerger**](docs/New-IntersightBulkMoMerger.
 BulkRequest | [**New-IntersightBulkRequest**](docs/New-IntersightBulkRequest.md) | Create a 'BulkRequest' resource.
 BulkExport | [**Remove-IntersightBulkExport**](docs/Remove-IntersightBulkExport.md) | Delete a 'BulkExport' resource.
 BulkExport | [**Set-IntersightBulkExport**](docs/Set-IntersightBulkExport.md) | Update a 'BulkExport' resource.
+CapabilityAdapterDeprecatedDef | [**Get-IntersightCapabilityAdapterDeprecatedDef**](docs/Get-IntersightCapabilityAdapterDeprecatedDef.md) | Read a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Get-IntersightCapabilityAdapterUnitDescriptor**](docs/Get-IntersightCapabilityAdapterUnitDescriptor.md) | Read a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityCatalog | [**Get-IntersightCapabilityCatalog**](docs/Get-IntersightCapabilityCatalog.md) | Read a 'CapabilityCatalog' resource.
 CapabilityChassisDescriptor | [**Get-IntersightCapabilityChassisDescriptor**](docs/Get-IntersightCapabilityChassisDescriptor.md) | Read a 'CapabilityChassisDescriptor' resource.
@@ -863,6 +864,7 @@ CapabilityIoCardManufacturingDef | [**Get-IntersightCapabilityIoCardManufacturin
 CapabilityPortGroupAggregationDef | [**Get-IntersightCapabilityPortGroupAggregationDef**](docs/Get-IntersightCapabilityPortGroupAggregationDef.md) | Read a 'CapabilityPortGroupAggregationDef' resource.
 CapabilityPsuDescriptor | [**Get-IntersightCapabilityPsuDescriptor**](docs/Get-IntersightCapabilityPsuDescriptor.md) | Read a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**Get-IntersightCapabilityPsuManufacturingDef**](docs/Get-IntersightCapabilityPsuManufacturingDef.md) | Read a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerDescriptor | [**Get-IntersightCapabilityServerDescriptor**](docs/Get-IntersightCapabilityServerDescriptor.md) | Read a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**Get-IntersightCapabilityServerModelsCapabilityDef**](docs/Get-IntersightCapabilityServerModelsCapabilityDef.md) | Read a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**Get-IntersightCapabilityServerSchemaDescriptor**](docs/Get-IntersightCapabilityServerSchemaDescriptor.md) | Read a 'CapabilityServerSchemaDescriptor' resource.
 CapabilitySiocModuleCapabilityDef | [**Get-IntersightCapabilitySiocModuleCapabilityDef**](docs/Get-IntersightCapabilitySiocModuleCapabilityDef.md) | Read a 'CapabilitySiocModuleCapabilityDef' resource.
@@ -871,6 +873,7 @@ CapabilitySiocModuleManufacturingDef | [**Get-IntersightCapabilitySiocModuleManu
 CapabilitySwitchCapability | [**Get-IntersightCapabilitySwitchCapability**](docs/Get-IntersightCapabilitySwitchCapability.md) | Read a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Get-IntersightCapabilitySwitchDescriptor**](docs/Get-IntersightCapabilitySwitchDescriptor.md) | Read a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**Get-IntersightCapabilitySwitchManufacturingDef**](docs/Get-IntersightCapabilitySwitchManufacturingDef.md) | Read a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityAdapterDeprecatedDef | [**New-IntersightCapabilityAdapterDeprecatedDef**](docs/New-IntersightCapabilityAdapterDeprecatedDef.md) | Create a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**New-IntersightCapabilityAdapterUnitDescriptor**](docs/New-IntersightCapabilityAdapterUnitDescriptor.md) | Create a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityChassisDescriptor | [**New-IntersightCapabilityChassisDescriptor**](docs/New-IntersightCapabilityChassisDescriptor.md) | Create a 'CapabilityChassisDescriptor' resource.
 CapabilityChassisManufacturingDef | [**New-IntersightCapabilityChassisManufacturingDef**](docs/New-IntersightCapabilityChassisManufacturingDef.md) | Create a 'CapabilityChassisManufacturingDef' resource.
@@ -887,6 +890,7 @@ CapabilityIoCardManufacturingDef | [**New-IntersightCapabilityIoCardManufacturin
 CapabilityPortGroupAggregationDef | [**New-IntersightCapabilityPortGroupAggregationDef**](docs/New-IntersightCapabilityPortGroupAggregationDef.md) | Create a 'CapabilityPortGroupAggregationDef' resource.
 CapabilityPsuDescriptor | [**New-IntersightCapabilityPsuDescriptor**](docs/New-IntersightCapabilityPsuDescriptor.md) | Create a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**New-IntersightCapabilityPsuManufacturingDef**](docs/New-IntersightCapabilityPsuManufacturingDef.md) | Create a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerDescriptor | [**New-IntersightCapabilityServerDescriptor**](docs/New-IntersightCapabilityServerDescriptor.md) | Create a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**New-IntersightCapabilityServerModelsCapabilityDef**](docs/New-IntersightCapabilityServerModelsCapabilityDef.md) | Create a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**New-IntersightCapabilityServerSchemaDescriptor**](docs/New-IntersightCapabilityServerSchemaDescriptor.md) | Create a 'CapabilityServerSchemaDescriptor' resource.
 CapabilitySiocModuleCapabilityDef | [**New-IntersightCapabilitySiocModuleCapabilityDef**](docs/New-IntersightCapabilitySiocModuleCapabilityDef.md) | Create a 'CapabilitySiocModuleCapabilityDef' resource.
@@ -895,6 +899,7 @@ CapabilitySiocModuleManufacturingDef | [**New-IntersightCapabilitySiocModuleManu
 CapabilitySwitchCapability | [**New-IntersightCapabilitySwitchCapability**](docs/New-IntersightCapabilitySwitchCapability.md) | Create a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**New-IntersightCapabilitySwitchDescriptor**](docs/New-IntersightCapabilitySwitchDescriptor.md) | Create a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**New-IntersightCapabilitySwitchManufacturingDef**](docs/New-IntersightCapabilitySwitchManufacturingDef.md) | Create a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityAdapterDeprecatedDef | [**Remove-IntersightCapabilityAdapterDeprecatedDef**](docs/Remove-IntersightCapabilityAdapterDeprecatedDef.md) | Delete a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Remove-IntersightCapabilityAdapterUnitDescriptor**](docs/Remove-IntersightCapabilityAdapterUnitDescriptor.md) | Delete a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityChassisDescriptor | [**Remove-IntersightCapabilityChassisDescriptor**](docs/Remove-IntersightCapabilityChassisDescriptor.md) | Delete a 'CapabilityChassisDescriptor' resource.
 CapabilityChassisManufacturingDef | [**Remove-IntersightCapabilityChassisManufacturingDef**](docs/Remove-IntersightCapabilityChassisManufacturingDef.md) | Delete a 'CapabilityChassisManufacturingDef' resource.
@@ -911,6 +916,7 @@ CapabilityIoCardManufacturingDef | [**Remove-IntersightCapabilityIoCardManufactu
 CapabilityPortGroupAggregationDef | [**Remove-IntersightCapabilityPortGroupAggregationDef**](docs/Remove-IntersightCapabilityPortGroupAggregationDef.md) | Delete a 'CapabilityPortGroupAggregationDef' resource.
 CapabilityPsuDescriptor | [**Remove-IntersightCapabilityPsuDescriptor**](docs/Remove-IntersightCapabilityPsuDescriptor.md) | Delete a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**Remove-IntersightCapabilityPsuManufacturingDef**](docs/Remove-IntersightCapabilityPsuManufacturingDef.md) | Delete a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerDescriptor | [**Remove-IntersightCapabilityServerDescriptor**](docs/Remove-IntersightCapabilityServerDescriptor.md) | Delete a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**Remove-IntersightCapabilityServerModelsCapabilityDef**](docs/Remove-IntersightCapabilityServerModelsCapabilityDef.md) | Delete a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**Remove-IntersightCapabilityServerSchemaDescriptor**](docs/Remove-IntersightCapabilityServerSchemaDescriptor.md) | Delete a 'CapabilityServerSchemaDescriptor' resource.
 CapabilitySiocModuleCapabilityDef | [**Remove-IntersightCapabilitySiocModuleCapabilityDef**](docs/Remove-IntersightCapabilitySiocModuleCapabilityDef.md) | Delete a 'CapabilitySiocModuleCapabilityDef' resource.
@@ -919,6 +925,7 @@ CapabilitySiocModuleManufacturingDef | [**Remove-IntersightCapabilitySiocModuleM
 CapabilitySwitchCapability | [**Remove-IntersightCapabilitySwitchCapability**](docs/Remove-IntersightCapabilitySwitchCapability.md) | Delete a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Remove-IntersightCapabilitySwitchDescriptor**](docs/Remove-IntersightCapabilitySwitchDescriptor.md) | Delete a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**Remove-IntersightCapabilitySwitchManufacturingDef**](docs/Remove-IntersightCapabilitySwitchManufacturingDef.md) | Delete a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityAdapterDeprecatedDef | [**Set-IntersightCapabilityAdapterDeprecatedDef**](docs/Set-IntersightCapabilityAdapterDeprecatedDef.md) | Update a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Set-IntersightCapabilityAdapterUnitDescriptor**](docs/Set-IntersightCapabilityAdapterUnitDescriptor.md) | Update a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityCatalog | [**Set-IntersightCapabilityCatalog**](docs/Set-IntersightCapabilityCatalog.md) | Update a 'CapabilityCatalog' resource.
 CapabilityChassisDescriptor | [**Set-IntersightCapabilityChassisDescriptor**](docs/Set-IntersightCapabilityChassisDescriptor.md) | Update a 'CapabilityChassisDescriptor' resource.
@@ -936,6 +943,7 @@ CapabilityIoCardManufacturingDef | [**Set-IntersightCapabilityIoCardManufacturin
 CapabilityPortGroupAggregationDef | [**Set-IntersightCapabilityPortGroupAggregationDef**](docs/Set-IntersightCapabilityPortGroupAggregationDef.md) | Update a 'CapabilityPortGroupAggregationDef' resource.
 CapabilityPsuDescriptor | [**Set-IntersightCapabilityPsuDescriptor**](docs/Set-IntersightCapabilityPsuDescriptor.md) | Update a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**Set-IntersightCapabilityPsuManufacturingDef**](docs/Set-IntersightCapabilityPsuManufacturingDef.md) | Update a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerDescriptor | [**Set-IntersightCapabilityServerDescriptor**](docs/Set-IntersightCapabilityServerDescriptor.md) | Update a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**Set-IntersightCapabilityServerModelsCapabilityDef**](docs/Set-IntersightCapabilityServerModelsCapabilityDef.md) | Update a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**Set-IntersightCapabilityServerSchemaDescriptor**](docs/Set-IntersightCapabilityServerSchemaDescriptor.md) | Update a 'CapabilityServerSchemaDescriptor' resource.
 CapabilitySiocModuleCapabilityDef | [**Set-IntersightCapabilitySiocModuleCapabilityDef**](docs/Set-IntersightCapabilitySiocModuleCapabilityDef.md) | Update a 'CapabilitySiocModuleCapabilityDef' resource.
@@ -1009,6 +1017,7 @@ ComputeServerPowerPolicy | [**Set-IntersightComputeServerPowerPolicy**](docs/Set
 ComputeServerSetting | [**Set-IntersightComputeServerSetting**](docs/Set-IntersightComputeServerSetting.md) | Update a 'ComputeServerSetting' resource.
 CondAlarm | [**Get-IntersightCondAlarm**](docs/Get-IntersightCondAlarm.md) | Read a 'CondAlarm' resource.
 CondAlarmAggregation | [**Get-IntersightCondAlarmAggregation**](docs/Get-IntersightCondAlarmAggregation.md) | Read a 'CondAlarmAggregation' resource.
+CondAlarmDefinition | [**Get-IntersightCondAlarmDefinition**](docs/Get-IntersightCondAlarmDefinition.md) | Read a 'CondAlarmDefinition' resource.
 CondHclStatus | [**Get-IntersightCondHclStatus**](docs/Get-IntersightCondHclStatus.md) | Read a 'CondHclStatus' resource.
 CondHclStatusDetail | [**Get-IntersightCondHclStatusDetail**](docs/Get-IntersightCondHclStatusDetail.md) | Read a 'CondHclStatusDetail' resource.
 CondHclStatusJob | [**Get-IntersightCondHclStatusJob**](docs/Get-IntersightCondHclStatusJob.md) | Read a 'CondHclStatusJob' resource.
