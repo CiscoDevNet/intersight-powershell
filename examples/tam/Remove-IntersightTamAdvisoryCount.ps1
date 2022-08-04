@@ -1,7 +1,6 @@
-
 #Get the TamAdvisoryCount to delete
-$TamAdvisoryCount = Remove-IntersightTamAdvisoryCount -Name TamAdvisoryCountName
+$TamAdvisoryCount = Get-IntersightTamAdvisoryCount -Name TamAdvisoryCountName
 $TamAdvisoryCount | Remove-IntersightTamAdvisoryCount
 
-#Remove the server profile by Moid.
-Remove-IntersightTamAdvisoryCount -Moid 123bc2222287wee
+#Remove the TamAdvisoryCount by Moid.
+Remove-IntersightTamAdvisoryCount -Moid '<Replace with Moid>'

@@ -5,7 +5,7 @@ $KubernetesNodeByName = Get-IntersightKubernetesNode -Name KubernetesNodeName
 $KubernetesNodeList = Get-IntersightKubernetesNode
 
 #Get the list of KubernetesNode under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesNodeByOrg = Get-IntersightKubernetesNode -Organization $org
 

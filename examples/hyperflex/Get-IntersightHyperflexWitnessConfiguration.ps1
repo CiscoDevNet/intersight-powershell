@@ -5,7 +5,7 @@ $HyperflexWitnessConfigurationByName = Get-IntersightHyperflexWitnessConfigurati
 $HyperflexWitnessConfigurationList = Get-IntersightHyperflexWitnessConfiguration
 
 #Get the list of HyperflexWitnessConfiguration under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexWitnessConfigurationByOrg = Get-IntersightHyperflexWitnessConfiguration -Organization $org
 

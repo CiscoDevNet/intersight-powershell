@@ -5,7 +5,7 @@ $NiatelemetryMsoContractDetailsByName = Get-IntersightNiatelemetryMsoContractDet
 $NiatelemetryMsoContractDetailsList = Get-IntersightNiatelemetryMsoContractDetails
 
 #Get the list of NiatelemetryMsoContractDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryMsoContractDetailsByOrg = Get-IntersightNiatelemetryMsoContractDetails -Organization $org
 

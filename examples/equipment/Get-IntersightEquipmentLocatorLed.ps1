@@ -5,7 +5,7 @@ $EquipmentLocatorLedByName = Get-IntersightEquipmentLocatorLed -Name EquipmentLo
 $EquipmentLocatorLedList = Get-IntersightEquipmentLocatorLed
 
 #Get the list of EquipmentLocatorLed under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentLocatorLedByOrg = Get-IntersightEquipmentLocatorLed -Organization $org
 

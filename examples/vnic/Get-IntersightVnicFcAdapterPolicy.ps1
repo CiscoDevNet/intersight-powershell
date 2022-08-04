@@ -5,7 +5,7 @@ $VnicFcAdapterPolicyByName = Get-IntersightVnicFcAdapterPolicy -Name VnicFcAdapt
 $VnicFcAdapterPolicyList = Get-IntersightVnicFcAdapterPolicy
 
 #Get the list of VnicFcAdapterPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicFcAdapterPolicyByOrg = Get-IntersightVnicFcAdapterPolicy -Organization $org
 

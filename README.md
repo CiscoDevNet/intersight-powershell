@@ -655,13 +655,13 @@ Refer to [ Server Configuration ](./examples/server/serverConfiguration.ps1)
 <a name="firmware-upgrade"></a>
 ### 9.2. Example - Firmware Upgrade
 
-Refer to [Direct Firmware Upgrade](./example/firmware/DirectFirmwareUpgrade.ps1)
+Refer to [Direct Firmware Upgrade](./examples/firmware/New-IntersightFirmwareUpgrade.ps1)
 
-Refer to [Network Firmware Upgrade](./example/firmware/NetworkFirmwareUpgrade.ps1)
+Refer to [Network Firmware Upgrade](./examples/firmware/New-IntersightFirmwareUpgrade.ps1)
 
 <a name="os-install"></a>
 ### 9.3. Example - OS Install
-Refer to [OS Install](./example/os/InstallOS.ps1)
+Refer to [OS Install](./examples/os/New-IntersightOsInstall.ps1)
 
 
 <a name="targets"></a>

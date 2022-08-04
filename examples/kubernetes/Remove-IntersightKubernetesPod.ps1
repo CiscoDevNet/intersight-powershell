@@ -1,7 +1,7 @@
 
 #Get the KubernetesPod to delete
-$KubernetesPod = Remove-IntersightKubernetesPod -Name KubernetesPodName
+$KubernetesPod = Get-IntersightKubernetesPod -Name KubernetesPodName
 $KubernetesPod | Remove-IntersightKubernetesPod
 
 #Remove the server profile by Moid.
-Remove-IntersightKubernetesPod -Moid 123bc2222287wee
+Remove-IntersightKubernetesPod -Moid '<Replace with Moid>'

@@ -5,7 +5,7 @@ $HyperflexHxapDatacenterByName = Get-IntersightHyperflexHxapDatacenter -Name Hyp
 $HyperflexHxapDatacenterList = Get-IntersightHyperflexHxapDatacenter
 
 #Get the list of HyperflexHxapDatacenter under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapDatacenterByOrg = Get-IntersightHyperflexHxapDatacenter -Organization $org
 

@@ -5,7 +5,7 @@ $ComputeBoardByName = Get-IntersightComputeBoard -Name ComputeBoardName
 $ComputeBoardList = Get-IntersightComputeBoard
 
 #Get the list of ComputeBoard under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeBoardByOrg = Get-IntersightComputeBoard -Organization $org
 

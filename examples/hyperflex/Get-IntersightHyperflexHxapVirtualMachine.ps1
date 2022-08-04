@@ -5,7 +5,7 @@ $HyperflexHxapVirtualMachineByName = Get-IntersightHyperflexHxapVirtualMachine -
 $HyperflexHxapVirtualMachineList = Get-IntersightHyperflexHxapVirtualMachine
 
 #Get the list of HyperflexHxapVirtualMachine under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapVirtualMachineByOrg = Get-IntersightHyperflexHxapVirtualMachine -Organization $org
 

@@ -5,7 +5,7 @@ $FirmwareDriverDistributableByName = Get-IntersightFirmwareDriverDistributable -
 $FirmwareDriverDistributableList = Get-IntersightFirmwareDriverDistributable
 
 #Get the list of FirmwareDriverDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareDriverDistributableByOrg = Get-IntersightFirmwareDriverDistributable -Organization $org
 

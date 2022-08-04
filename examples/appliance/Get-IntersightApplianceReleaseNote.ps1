@@ -5,7 +5,7 @@ $ApplianceReleaseNoteByName = Get-IntersightApplianceReleaseNote -Name Appliance
 $ApplianceReleaseNoteList = Get-IntersightApplianceReleaseNote
 
 #Get the list of ApplianceReleaseNote under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceReleaseNoteByOrg = Get-IntersightApplianceReleaseNote -Organization $org
 

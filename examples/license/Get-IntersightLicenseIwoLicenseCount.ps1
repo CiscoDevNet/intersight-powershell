@@ -5,7 +5,7 @@ $LicenseIwoLicenseCountByName = Get-IntersightLicenseIwoLicenseCount -Name Licen
 $LicenseIwoLicenseCountList = Get-IntersightLicenseIwoLicenseCount
 
 #Get the list of LicenseIwoLicenseCount under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LicenseIwoLicenseCountByOrg = Get-IntersightLicenseIwoLicenseCount -Organization $org
 

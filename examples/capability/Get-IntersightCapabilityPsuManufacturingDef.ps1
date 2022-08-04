@@ -5,7 +5,7 @@ $CapabilityPsuManufacturingDefByName = Get-IntersightCapabilityPsuManufacturingD
 $CapabilityPsuManufacturingDefList = Get-IntersightCapabilityPsuManufacturingDef
 
 #Get the list of CapabilityPsuManufacturingDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityPsuManufacturingDefByOrg = Get-IntersightCapabilityPsuManufacturingDef -Organization $org
 

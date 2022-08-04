@@ -5,7 +5,7 @@ $HyperflexHxapHostInterfaceByName = Get-IntersightHyperflexHxapHostInterface -Na
 $HyperflexHxapHostInterfaceList = Get-IntersightHyperflexHxapHostInterface
 
 #Get the list of HyperflexHxapHostInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapHostInterfaceByOrg = Get-IntersightHyperflexHxapHostInterface -Organization $org
 

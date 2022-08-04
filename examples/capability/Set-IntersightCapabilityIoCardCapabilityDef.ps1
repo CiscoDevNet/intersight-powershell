@@ -1,0 +1,4 @@
+
+#Get the CapabilityIoCardCapabilityDef to Update
+$CapabilityIoCardCapabilityDef = Get-IntersightCapabilityIoCardCapabilityDef -Name CapabilityIoCardCapabilityDefName
+$CapabilityIoCardCapabilityDef | Set-IntersightCapabilityIoCardCapabilityDef -Description 'Updated description'

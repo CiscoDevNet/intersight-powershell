@@ -5,7 +5,7 @@ $InventoryDeviceInfoByName = Get-IntersightInventoryDeviceInfo -Name InventoryDe
 $InventoryDeviceInfoList = Get-IntersightInventoryDeviceInfo
 
 #Get the list of InventoryDeviceInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $InventoryDeviceInfoByOrg = Get-IntersightInventoryDeviceInfo -Organization $org
 

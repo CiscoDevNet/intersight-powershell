@@ -5,7 +5,7 @@ $BootUefiShellDeviceByName = Get-IntersightBootUefiShellDevice -Name BootUefiShe
 $BootUefiShellDeviceList = Get-IntersightBootUefiShellDevice
 
 #Get the list of BootUefiShellDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootUefiShellDeviceByOrg = Get-IntersightBootUefiShellDevice -Organization $org
 

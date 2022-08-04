@@ -1,0 +1,1 @@
+$capability_equipment_physical_def1 = New-IntersightCapabilityEquipmentPhysicalDef -Name 'capability_equipment_physical_def1' -Pid 'UCS-FI-6454' -Sku 'CON-NCF4P-FI6454CH' -Depth 57.1 -Height 4.4 -MaxPower 650 -NominalPower 260 -Weight 10.1 -Width 43.9

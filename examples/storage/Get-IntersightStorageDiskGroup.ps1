@@ -5,7 +5,7 @@ $StorageDiskGroupByName = Get-IntersightStorageDiskGroup -Name StorageDiskGroupN
 $StorageDiskGroupList = Get-IntersightStorageDiskGroup
 
 #Get the list of StorageDiskGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageDiskGroupByOrg = Get-IntersightStorageDiskGroup -Organization $org
 

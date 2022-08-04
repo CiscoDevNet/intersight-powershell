@@ -5,7 +5,7 @@ $TopSystemByName = Get-IntersightTopSystem -Name TopSystemName
 $TopSystemList = Get-IntersightTopSystem
 
 #Get the list of TopSystem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TopSystemByOrg = Get-IntersightTopSystem -Organization $org
 

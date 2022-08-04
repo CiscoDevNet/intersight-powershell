@@ -5,7 +5,7 @@ $CapabilityPsuDescriptorByName = Get-IntersightCapabilityPsuDescriptor -Name Cap
 $CapabilityPsuDescriptorList = Get-IntersightCapabilityPsuDescriptor
 
 #Get the list of CapabilityPsuDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityPsuDescriptorByOrg = Get-IntersightCapabilityPsuDescriptor -Organization $org
 

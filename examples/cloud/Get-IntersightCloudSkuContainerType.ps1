@@ -5,7 +5,7 @@ $CloudSkuContainerTypeByName = Get-IntersightCloudSkuContainerType -Name CloudSk
 $CloudSkuContainerTypeList = Get-IntersightCloudSkuContainerType
 
 #Get the list of CloudSkuContainerType under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CloudSkuContainerTypeByOrg = Get-IntersightCloudSkuContainerType -Organization $org
 

@@ -5,7 +5,7 @@ $UuidpoolBlockByName = Get-IntersightUuidpoolBlock -Name UuidpoolBlockName
 $UuidpoolBlockList = Get-IntersightUuidpoolBlock
 
 #Get the list of UuidpoolBlock under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $UuidpoolBlockByOrg = Get-IntersightUuidpoolBlock -Organization $org
 

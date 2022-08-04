@@ -5,7 +5,7 @@ $AssetSubscriptionByName = Get-IntersightAssetSubscription -Name AssetSubscripti
 $AssetSubscriptionList = Get-IntersightAssetSubscription
 
 #Get the list of AssetSubscription under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetSubscriptionByOrg = Get-IntersightAssetSubscription -Organization $org
 

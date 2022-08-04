@@ -1,11 +1,11 @@
 #Get the SoftwareHyperflexBundleDistributable by Name
 $SoftwareHyperflexBundleDistributableByName = Get-IntersightSoftwareHyperflexBundleDistributable -Name SoftwareHyperflexBundleDistributableName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwareHyperflexBundleDistributable
 $SoftwareHyperflexBundleDistributableList = Get-IntersightSoftwareHyperflexBundleDistributable
 
 #Get the list of SoftwareHyperflexBundleDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareHyperflexBundleDistributableByOrg = Get-IntersightSoftwareHyperflexBundleDistributable -Organization $org
 

@@ -5,7 +5,7 @@ $NiatelemetryApicCoreFileDetailsByName = Get-IntersightNiatelemetryApicCoreFileD
 $NiatelemetryApicCoreFileDetailsList = Get-IntersightNiatelemetryApicCoreFileDetails
 
 #Get the list of NiatelemetryApicCoreFileDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicCoreFileDetailsByOrg = Get-IntersightNiatelemetryApicCoreFileDetails -Organization $org
 

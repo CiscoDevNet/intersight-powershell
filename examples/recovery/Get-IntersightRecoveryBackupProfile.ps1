@@ -5,7 +5,7 @@ $RecoveryBackupProfileByName = Get-IntersightRecoveryBackupProfile -Name Recover
 $RecoveryBackupProfileList = Get-IntersightRecoveryBackupProfile
 
 #Get the list of RecoveryBackupProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecoveryBackupProfileByOrg = Get-IntersightRecoveryBackupProfile -Organization $org
 

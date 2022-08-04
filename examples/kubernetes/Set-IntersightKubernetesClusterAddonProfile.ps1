@@ -1,0 +1,4 @@
+
+#Get the KubernetesClusterAddonProfile to Update
+$KubernetesClusterAddonProfile = Get-IntersightKubernetesClusterAddonProfile -Name KubernetesClusterAddonProfileName
+$KubernetesClusterAddonProfile | Set-IntersightKubernetesClusterAddonProfile -Description 'Updated description'

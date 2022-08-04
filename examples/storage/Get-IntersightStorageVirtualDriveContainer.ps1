@@ -5,7 +5,7 @@ $StorageVirtualDriveContainerByName = Get-IntersightStorageVirtualDriveContainer
 $StorageVirtualDriveContainerList = Get-IntersightStorageVirtualDriveContainer
 
 #Get the list of StorageVirtualDriveContainer under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageVirtualDriveContainerByOrg = Get-IntersightStorageVirtualDriveContainer -Organization $org
 

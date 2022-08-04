@@ -5,7 +5,7 @@ $NiatelemetryApicSnmpTrapDetailsByName = Get-IntersightNiatelemetryApicSnmpTrapD
 $NiatelemetryApicSnmpTrapDetailsList = Get-IntersightNiatelemetryApicSnmpTrapDetails
 
 #Get the list of NiatelemetryApicSnmpTrapDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicSnmpTrapDetailsByOrg = Get-IntersightNiatelemetryApicSnmpTrapDetails -Organization $org
 

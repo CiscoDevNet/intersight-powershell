@@ -5,7 +5,7 @@ $NiatelemetrySystemControllerDetailsByName = Get-IntersightNiatelemetrySystemCon
 $NiatelemetrySystemControllerDetailsList = Get-IntersightNiatelemetrySystemControllerDetails
 
 #Get the list of NiatelemetrySystemControllerDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetrySystemControllerDetailsByOrg = Get-IntersightNiatelemetrySystemControllerDetails -Organization $org
 

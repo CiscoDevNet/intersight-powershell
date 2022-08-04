@@ -5,7 +5,7 @@ $MemoryPersistentMemoryUnitByName = Get-IntersightMemoryPersistentMemoryUnit -Na
 $MemoryPersistentMemoryUnitList = Get-IntersightMemoryPersistentMemoryUnit
 
 #Get the list of MemoryPersistentMemoryUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryPersistentMemoryUnitByOrg = Get-IntersightMemoryPersistentMemoryUnit -Organization $org
 

@@ -5,7 +5,7 @@ $FabricLinkAggregationPolicyByName = Get-IntersightFabricLinkAggregationPolicy -
 $FabricLinkAggregationPolicyList = Get-IntersightFabricLinkAggregationPolicy
 
 #Get the list of FabricLinkAggregationPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricLinkAggregationPolicyByOrg = Get-IntersightFabricLinkAggregationPolicy -Organization $org
 

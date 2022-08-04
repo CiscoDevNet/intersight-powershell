@@ -5,7 +5,7 @@ $HyperflexExtIscsiStoragePolicyByName = Get-IntersightHyperflexExtIscsiStoragePo
 $HyperflexExtIscsiStoragePolicyList = Get-IntersightHyperflexExtIscsiStoragePolicy
 
 #Get the list of HyperflexExtIscsiStoragePolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexExtIscsiStoragePolicyByOrg = Get-IntersightHyperflexExtIscsiStoragePolicy -Organization $org
 

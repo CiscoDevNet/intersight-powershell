@@ -1,11 +1,11 @@
 #Get the SoftwareSolutionDistributable by Name
 $SoftwareSolutionDistributableByName = Get-IntersightSoftwareSolutionDistributable -Name SoftwareSolutionDistributableName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwareSolutionDistributable
 $SoftwareSolutionDistributableList = Get-IntersightSoftwareSolutionDistributable
 
 #Get the list of SoftwareSolutionDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareSolutionDistributableByOrg = Get-IntersightSoftwareSolutionDistributable -Organization $org
 

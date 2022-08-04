@@ -1,11 +1,11 @@
 #Get the VirtualizationVirtualMachine by Name
 $VirtualizationVirtualMachineByName = Get-IntersightVirtualizationVirtualMachine -Name VirtualizationVirtualMachineName
 
-#Get the List of ServerProfiles
+#Get the List of VirtualizationVirtualMachine
 $VirtualizationVirtualMachineList = Get-IntersightVirtualizationVirtualMachine
 
 #Get the list of VirtualizationVirtualMachine under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVirtualMachineByOrg = Get-IntersightVirtualizationVirtualMachine -Organization $org
 

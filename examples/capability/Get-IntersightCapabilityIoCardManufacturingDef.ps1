@@ -5,7 +5,7 @@ $CapabilityIoCardManufacturingDefByName = Get-IntersightCapabilityIoCardManufact
 $CapabilityIoCardManufacturingDefList = Get-IntersightCapabilityIoCardManufacturingDef
 
 #Get the list of CapabilityIoCardManufacturingDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityIoCardManufacturingDefByOrg = Get-IntersightCapabilityIoCardManufacturingDef -Organization $org
 

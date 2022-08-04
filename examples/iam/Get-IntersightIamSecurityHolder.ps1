@@ -5,7 +5,7 @@ $IamSecurityHolderByName = Get-IntersightIamSecurityHolder -Name IamSecurityHold
 $IamSecurityHolderList = Get-IntersightIamSecurityHolder
 
 #Get the list of IamSecurityHolder under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamSecurityHolderByOrg = Get-IntersightIamSecurityHolder -Organization $org
 

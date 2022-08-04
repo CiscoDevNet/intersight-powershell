@@ -5,7 +5,7 @@ $BootPxeDeviceByName = Get-IntersightBootPxeDevice -Name BootPxeDeviceName
 $BootPxeDeviceList = Get-IntersightBootPxeDevice
 
 #Get the list of BootPxeDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootPxeDeviceByOrg = Get-IntersightBootPxeDevice -Organization $org
 

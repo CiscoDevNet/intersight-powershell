@@ -5,7 +5,7 @@ $ApplianceBackupPolicyByName = Get-IntersightApplianceBackupPolicy -Name Applian
 $ApplianceBackupPolicyList = Get-IntersightApplianceBackupPolicy
 
 #Get the list of ApplianceBackupPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceBackupPolicyByOrg = Get-IntersightApplianceBackupPolicy -Organization $org
 

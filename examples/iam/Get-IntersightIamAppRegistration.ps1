@@ -5,7 +5,7 @@ $IamAppRegistrationByName = Get-IntersightIamAppRegistration -Name IamAppRegistr
 $IamAppRegistrationList = Get-IntersightIamAppRegistration
 
 #Get the list of IamAppRegistration under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamAppRegistrationByOrg = Get-IntersightIamAppRegistration -Organization $org
 

@@ -5,7 +5,7 @@ $VirtualizationVmwareDistributedNetworkByName = Get-IntersightVirtualizationVmwa
 $VirtualizationVmwareDistributedNetworkList = Get-IntersightVirtualizationVmwareDistributedNetwork
 
 #Get the list of VirtualizationVmwareDistributedNetwork under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareDistributedNetworkByOrg = Get-IntersightVirtualizationVmwareDistributedNetwork -Organization $org
 

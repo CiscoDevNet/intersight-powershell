@@ -5,7 +5,7 @@ $NetworkVlanPortInfoByName = Get-IntersightNetworkVlanPortInfo -Name NetworkVlan
 $NetworkVlanPortInfoList = Get-IntersightNetworkVlanPortInfo
 
 #Get the list of NetworkVlanPortInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NetworkVlanPortInfoByOrg = Get-IntersightNetworkVlanPortInfo -Organization $org
 

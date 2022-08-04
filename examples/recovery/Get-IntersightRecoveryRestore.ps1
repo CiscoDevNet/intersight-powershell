@@ -5,7 +5,7 @@ $RecoveryRestoreByName = Get-IntersightRecoveryRestore -Name RecoveryRestoreName
 $RecoveryRestoreList = Get-IntersightRecoveryRestore
 
 #Get the list of RecoveryRestore under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecoveryRestoreByOrg = Get-IntersightRecoveryRestore -Organization $org
 

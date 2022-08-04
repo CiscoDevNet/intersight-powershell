@@ -5,7 +5,7 @@ $IaasDeviceStatusByName = Get-IntersightIaasDeviceStatus -Name IaasDeviceStatusN
 $IaasDeviceStatusList = Get-IntersightIaasDeviceStatus
 
 #Get the list of IaasDeviceStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasDeviceStatusByOrg = Get-IntersightIaasDeviceStatus -Organization $org
 

@@ -5,7 +5,7 @@ $AssetDeviceConfigurationByName = Get-IntersightAssetDeviceConfiguration -Name A
 $AssetDeviceConfigurationList = Get-IntersightAssetDeviceConfiguration
 
 #Get the list of AssetDeviceConfiguration under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetDeviceConfigurationByOrg = Get-IntersightAssetDeviceConfiguration -Organization $org
 

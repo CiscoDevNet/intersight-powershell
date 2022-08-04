@@ -5,7 +5,7 @@ $NiaapiApicLatestMaintainedReleaseByName = Get-IntersightNiaapiApicLatestMaintai
 $NiaapiApicLatestMaintainedReleaseList = Get-IntersightNiaapiApicLatestMaintainedRelease
 
 #Get the list of NiaapiApicLatestMaintainedRelease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiApicLatestMaintainedReleaseByOrg = Get-IntersightNiaapiApicLatestMaintainedRelease -Organization $org
 

@@ -5,7 +5,7 @@ $StoragePureDiskByName = Get-IntersightStoragePureDisk -Name StoragePureDiskName
 $StoragePureDiskList = Get-IntersightStoragePureDisk
 
 #Get the list of StoragePureDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureDiskByOrg = Get-IntersightStoragePureDisk -Organization $org
 

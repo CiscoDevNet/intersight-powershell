@@ -1,7 +1,8 @@
 
 #Get the IaasUcsdInfo to delete
-$IaasUcsdInfo = Remove-IntersightIaasUcsdInfo -Name IaasUcsdInfoName
+$IaasUcsdInfo = Get-IntersightIaasUcsdInfo -Name IaasUcsdInfoName
 $IaasUcsdInfo | Remove-IntersightIaasUcsdInfo
 
-#Remove the server profile by Moid.
-Remove-IntersightIaasUcsdInfo -Moid 123bc2222287wee
+#Remove the IaasUcsdInfo by Moid.
+Remove-IntersightIaasUcsdInfo -Moid '<Replace with Moid>'
+

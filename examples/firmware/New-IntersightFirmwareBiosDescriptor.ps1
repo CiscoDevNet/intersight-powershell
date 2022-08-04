@@ -1,0 +1,1 @@
+$firmware_bios_descriptor1 = New-IntersightFirmwareBiosDescriptor -Description 'firmware bios descriptor' -Model 'N20-B6620-1' -Vendor 'Cisco Systems Inc' -Revision '0'

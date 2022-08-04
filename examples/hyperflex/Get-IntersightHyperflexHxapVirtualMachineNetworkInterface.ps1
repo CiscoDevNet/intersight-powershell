@@ -5,7 +5,7 @@ $HyperflexHxapVirtualMachineNetworkInterfaceByName = Get-IntersightHyperflexHxap
 $HyperflexHxapVirtualMachineNetworkInterfaceList = Get-IntersightHyperflexHxapVirtualMachineNetworkInterface
 
 #Get the list of HyperflexHxapVirtualMachineNetworkInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapVirtualMachineNetworkInterfaceByOrg = Get-IntersightHyperflexHxapVirtualMachineNetworkInterface -Organization $org
 

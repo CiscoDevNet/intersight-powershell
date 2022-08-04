@@ -5,7 +5,7 @@ $LicenseAccountLicenseDataByName = Get-IntersightLicenseAccountLicenseData -Name
 $LicenseAccountLicenseDataList = Get-IntersightLicenseAccountLicenseData
 
 #Get the list of LicenseAccountLicenseData under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LicenseAccountLicenseDataByOrg = Get-IntersightLicenseAccountLicenseData -Organization $org
 

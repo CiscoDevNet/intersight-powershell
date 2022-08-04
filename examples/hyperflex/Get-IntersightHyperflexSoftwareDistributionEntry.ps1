@@ -5,7 +5,7 @@ $HyperflexSoftwareDistributionEntryByName = Get-IntersightHyperflexSoftwareDistr
 $HyperflexSoftwareDistributionEntryList = Get-IntersightHyperflexSoftwareDistributionEntry
 
 #Get the list of HyperflexSoftwareDistributionEntry under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexSoftwareDistributionEntryByOrg = Get-IntersightHyperflexSoftwareDistributionEntry -Organization $org
 

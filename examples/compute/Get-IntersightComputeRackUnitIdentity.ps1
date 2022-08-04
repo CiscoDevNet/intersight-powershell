@@ -5,7 +5,7 @@ $ComputeRackUnitIdentityByName = Get-IntersightComputeRackUnitIdentity -Name Com
 $ComputeRackUnitIdentityList = Get-IntersightComputeRackUnitIdentity
 
 #Get the list of ComputeRackUnitIdentity under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeRackUnitIdentityByOrg = Get-IntersightComputeRackUnitIdentity -Organization $org
 

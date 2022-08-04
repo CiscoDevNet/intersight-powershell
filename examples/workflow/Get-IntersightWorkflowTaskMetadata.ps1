@@ -5,7 +5,7 @@ $WorkflowTaskMetadataByName = Get-IntersightWorkflowTaskMetadata -Name WorkflowT
 $WorkflowTaskMetadataList = Get-IntersightWorkflowTaskMetadata
 
 #Get the list of WorkflowTaskMetadata under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowTaskMetadataByOrg = Get-IntersightWorkflowTaskMetadata -Organization $org
 

@@ -5,7 +5,7 @@ $NiatelemetryDcnmTransceiverDetailsByName = Get-IntersightNiatelemetryDcnmTransc
 $NiatelemetryDcnmTransceiverDetailsList = Get-IntersightNiatelemetryDcnmTransceiverDetails
 
 #Get the list of NiatelemetryDcnmTransceiverDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryDcnmTransceiverDetailsByOrg = Get-IntersightNiatelemetryDcnmTransceiverDetails -Organization $org
 

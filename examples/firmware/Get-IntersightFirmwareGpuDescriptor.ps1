@@ -5,7 +5,7 @@ $FirmwareGpuDescriptorByName = Get-IntersightFirmwareGpuDescriptor -Name Firmwar
 $FirmwareGpuDescriptorList = Get-IntersightFirmwareGpuDescriptor
 
 #Get the list of FirmwareGpuDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareGpuDescriptorByOrg = Get-IntersightFirmwareGpuDescriptor -Organization $org
 

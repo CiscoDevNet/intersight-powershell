@@ -5,7 +5,7 @@ $HyperflexHxapNetworkByName = Get-IntersightHyperflexHxapNetwork -Name Hyperflex
 $HyperflexHxapNetworkList = Get-IntersightHyperflexHxapNetwork
 
 #Get the list of HyperflexHxapNetwork under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHxapNetworkByOrg = Get-IntersightHyperflexHxapNetwork -Organization $org
 

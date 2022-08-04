@@ -5,7 +5,7 @@ $EquipmentIoExpanderByName = Get-IntersightEquipmentIoExpander -Name EquipmentIo
 $EquipmentIoExpanderList = Get-IntersightEquipmentIoExpander
 
 #Get the list of EquipmentIoExpander under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentIoExpanderByOrg = Get-IntersightEquipmentIoExpander -Organization $org
 

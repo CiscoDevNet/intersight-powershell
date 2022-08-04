@@ -5,7 +5,7 @@ $BiosTokenSettingsByName = Get-IntersightBiosTokenSettings -Name BiosTokenSettin
 $BiosTokenSettingsList = Get-IntersightBiosTokenSettings
 
 #Get the list of BiosTokenSettings under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BiosTokenSettingsByOrg = Get-IntersightBiosTokenSettings -Organization $org
 

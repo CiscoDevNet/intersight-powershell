@@ -1,7 +1,7 @@
 
 #Get the OrganizationOrganization to delete
-$OrganizationOrganization = Remove-IntersightOrganizationOrganization -Name OrganizationOrganizationName
+$OrganizationOrganization = Get-IntersightOrganizationOrganization -Name OrganizationOrganizationName
 $OrganizationOrganization | Remove-IntersightOrganizationOrganization
 
-#Remove the server profile by Moid.
-Remove-IntersightOrganizationOrganization -Moid 123bc2222287wee
+#Remove the OrganizationOrganization by Moid.
+Remove-IntersightOrganizationOrganization -Moid '<Replace with Moid>'

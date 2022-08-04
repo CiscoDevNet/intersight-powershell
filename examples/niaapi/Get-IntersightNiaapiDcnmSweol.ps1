@@ -5,7 +5,7 @@ $NiaapiDcnmSweolByName = Get-IntersightNiaapiDcnmSweol -Name NiaapiDcnmSweolName
 $NiaapiDcnmSweolList = Get-IntersightNiaapiDcnmSweol
 
 #Get the list of NiaapiDcnmSweol under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiDcnmSweolByOrg = Get-IntersightNiaapiDcnmSweol -Organization $org
 

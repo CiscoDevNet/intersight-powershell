@@ -5,7 +5,7 @@ $BootVmediaDeviceByName = Get-IntersightBootVmediaDevice -Name BootVmediaDeviceN
 $BootVmediaDeviceList = Get-IntersightBootVmediaDevice
 
 #Get the list of BootVmediaDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootVmediaDeviceByOrg = Get-IntersightBootVmediaDevice -Organization $org
 

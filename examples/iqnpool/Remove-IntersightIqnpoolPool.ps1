@@ -1,7 +1,8 @@
 
 #Get the IqnpoolPool to delete
-$IqnpoolPool = Remove-IntersightIqnpoolPool -Name IqnpoolPoolName
+$IqnpoolPool = Get-IntersightIqnpoolPool -Name IqnpoolPoolName
 $IqnpoolPool | Remove-IntersightIqnpoolPool
 
-#Remove the server profile by Moid.
-Remove-IntersightIqnpoolPool -Moid 123bc2222287wee
+#Remove the IqnpoolPool by Moid.
+Remove-IntersightIqnpoolPool -Moid '<Replace with Moid>'
+

@@ -5,7 +5,7 @@ $FirmwareNxosDescriptorByName = Get-IntersightFirmwareNxosDescriptor -Name Firmw
 $FirmwareNxosDescriptorList = Get-IntersightFirmwareNxosDescriptor
 
 #Get the list of FirmwareNxosDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareNxosDescriptorByOrg = Get-IntersightFirmwareNxosDescriptor -Organization $org
 

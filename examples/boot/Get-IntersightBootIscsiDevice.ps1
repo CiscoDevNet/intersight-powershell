@@ -5,7 +5,7 @@ $BootIscsiDeviceByName = Get-IntersightBootIscsiDevice -Name BootIscsiDeviceName
 $BootIscsiDeviceList = Get-IntersightBootIscsiDevice
 
 #Get the list of BootIscsiDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootIscsiDeviceByOrg = Get-IntersightBootIscsiDevice -Organization $org
 

@@ -5,7 +5,7 @@ $EquipmentIoCardByName = Get-IntersightEquipmentIoCard -Name EquipmentIoCardName
 $EquipmentIoCardList = Get-IntersightEquipmentIoCard
 
 #Get the list of EquipmentIoCard under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentIoCardByOrg = Get-IntersightEquipmentIoCard -Organization $org
 

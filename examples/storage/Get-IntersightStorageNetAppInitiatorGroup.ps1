@@ -5,7 +5,7 @@ $StorageNetAppInitiatorGroupByName = Get-IntersightStorageNetAppInitiatorGroup -
 $StorageNetAppInitiatorGroupList = Get-IntersightStorageNetAppInitiatorGroup
 
 #Get the list of StorageNetAppInitiatorGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppInitiatorGroupByOrg = Get-IntersightStorageNetAppInitiatorGroup -Organization $org
 

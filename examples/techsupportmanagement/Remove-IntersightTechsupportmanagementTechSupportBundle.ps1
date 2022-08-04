@@ -1,7 +1,6 @@
-
 #Get the TechsupportmanagementTechSupportBundle to delete
-$TechsupportmanagementTechSupportBundle = Remove-IntersightTechsupportmanagementTechSupportBundle -Name TechsupportmanagementTechSupportBundleName
+$TechsupportmanagementTechSupportBundle = Get-IntersightTechsupportmanagementTechSupportBundle -Name TechsupportmanagementTechSupportBundleName
 $TechsupportmanagementTechSupportBundle | Remove-IntersightTechsupportmanagementTechSupportBundle
 
-#Remove the server profile by Moid.
-Remove-IntersightTechsupportmanagementTechSupportBundle -Moid 123bc2222287wee
+#Remove the TechsupportmanagementTechSupportBundle by Moid.
+Remove-IntersightTechsupportmanagementTechSupportBundle -Moid '<Replace with Moid>'

@@ -5,7 +5,7 @@ $WorkflowBuildTaskMetaByName = Get-IntersightWorkflowBuildTaskMeta -Name Workflo
 $WorkflowBuildTaskMetaList = Get-IntersightWorkflowBuildTaskMeta
 
 #Get the list of WorkflowBuildTaskMeta under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowBuildTaskMetaByOrg = Get-IntersightWorkflowBuildTaskMeta -Organization $org
 

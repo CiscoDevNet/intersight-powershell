@@ -5,7 +5,7 @@ $IamPrivateKeySpecByName = Get-IntersightIamPrivateKeySpec -Name IamPrivateKeySp
 $IamPrivateKeySpecList = Get-IntersightIamPrivateKeySpec
 
 #Get the list of IamPrivateKeySpec under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamPrivateKeySpecByOrg = Get-IntersightIamPrivateKeySpec -Organization $org
 

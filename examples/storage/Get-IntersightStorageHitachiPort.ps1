@@ -5,7 +5,7 @@ $StorageHitachiPortByName = Get-IntersightStorageHitachiPort -Name StorageHitach
 $StorageHitachiPortList = Get-IntersightStorageHitachiPort
 
 #Get the list of StorageHitachiPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiPortByOrg = Get-IntersightStorageHitachiPort -Organization $org
 

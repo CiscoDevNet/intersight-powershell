@@ -5,7 +5,7 @@ $ResourceLicenseResourceCountByName = Get-IntersightResourceLicenseResourceCount
 $ResourceLicenseResourceCountList = Get-IntersightResourceLicenseResourceCount
 
 #Get the list of ResourceLicenseResourceCount under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ResourceLicenseResourceCountByOrg = Get-IntersightResourceLicenseResourceCount -Organization $org
 

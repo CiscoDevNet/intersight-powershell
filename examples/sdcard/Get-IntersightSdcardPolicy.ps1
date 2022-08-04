@@ -5,7 +5,7 @@ $SdcardPolicyByName = Get-IntersightSdcardPolicy -Name SdcardPolicyName
 $SdcardPolicyList = Get-IntersightSdcardPolicy
 
 #Get the list of SdcardPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SdcardPolicyByOrg = Get-IntersightSdcardPolicy -Organization $org
 

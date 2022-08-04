@@ -1,11 +1,11 @@
 #Get the WorkflowCustomDataTypeDefinition by Name
 $WorkflowCustomDataTypeDefinitionByName = Get-IntersightWorkflowCustomDataTypeDefinition -Name WorkflowCustomDataTypeDefinitionName
 
-#Get the List of ServerProfiles
+#Get the List of WorkflowCustomDataTypeDefinition
 $WorkflowCustomDataTypeDefinitionList = Get-IntersightWorkflowCustomDataTypeDefinition
 
 #Get the list of WorkflowCustomDataTypeDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowCustomDataTypeDefinitionByOrg = Get-IntersightWorkflowCustomDataTypeDefinition -Organization $org
 

@@ -5,7 +5,7 @@ $FirmwareDriveDescriptorByName = Get-IntersightFirmwareDriveDescriptor -Name Fir
 $FirmwareDriveDescriptorList = Get-IntersightFirmwareDriveDescriptor
 
 #Get the list of FirmwareDriveDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareDriveDescriptorByOrg = Get-IntersightFirmwareDriveDescriptor -Organization $org
 

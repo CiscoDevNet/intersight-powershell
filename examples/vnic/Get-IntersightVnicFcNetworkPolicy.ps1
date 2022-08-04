@@ -5,7 +5,7 @@ $VnicFcNetworkPolicyByName = Get-IntersightVnicFcNetworkPolicy -Name VnicFcNetwo
 $VnicFcNetworkPolicyList = Get-IntersightVnicFcNetworkPolicy
 
 #Get the list of VnicFcNetworkPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicFcNetworkPolicyByOrg = Get-IntersightVnicFcNetworkPolicy -Organization $org
 

@@ -5,7 +5,7 @@ $IpmioverlanPolicyByName = Get-IntersightIpmioverlanPolicy -Name IpmioverlanPoli
 $IpmioverlanPolicyList = Get-IntersightIpmioverlanPolicy
 
 #Get the list of IpmioverlanPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IpmioverlanPolicyByOrg = Get-IntersightIpmioverlanPolicy -Organization $org
 

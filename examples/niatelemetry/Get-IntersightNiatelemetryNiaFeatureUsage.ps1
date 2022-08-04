@@ -5,7 +5,7 @@ $NiatelemetryNiaFeatureUsageByName = Get-IntersightNiatelemetryNiaFeatureUsage -
 $NiatelemetryNiaFeatureUsageList = Get-IntersightNiatelemetryNiaFeatureUsage
 
 #Get the list of NiatelemetryNiaFeatureUsage under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryNiaFeatureUsageByOrg = Get-IntersightNiatelemetryNiaFeatureUsage -Organization $org
 

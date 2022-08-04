@@ -1,0 +1,1 @@
+$firmware_pcie_descriptor1 = New-IntersightFirmwarePcieDescriptor -Description 'firmware iom descriptor' -Model 'UCSC-PCIE-IRJ45' -Vendor 'Cisco Systems, Inc' -Revision '0'

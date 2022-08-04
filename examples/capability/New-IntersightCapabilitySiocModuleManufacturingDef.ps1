@@ -1,0 +1,1 @@
+$capability_sioc_module_manufacturing_def1 = New-IntersightCapabilitySiocModuleManufacturingDef -Caption 'UCS S3260 PCIe SIOC' -Description 'UCS S3260 PCIe SIOC' -Name 'sioc0' -Pid 'UCS-S3260-PCISIOC' -ProductName 'Cisco UCS S3260 System IO Controller with VIC 1380 included' -Sku 'UCS-S3260-PCISIOC' -Vid 'V00'

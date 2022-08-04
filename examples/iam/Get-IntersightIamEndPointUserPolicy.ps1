@@ -5,7 +5,7 @@ $IamEndPointUserPolicyByName = Get-IntersightIamEndPointUserPolicy -Name IamEndP
 $IamEndPointUserPolicyList = Get-IntersightIamEndPointUserPolicy
 
 #Get the list of IamEndPointUserPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamEndPointUserPolicyByOrg = Get-IntersightIamEndPointUserPolicy -Organization $org
 

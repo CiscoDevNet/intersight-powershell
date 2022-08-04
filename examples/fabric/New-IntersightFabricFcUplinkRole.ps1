@@ -1,0 +1,1 @@
+$fabric_fc_uplink_role1 = New-IntersightFabricFcUplinkRole -AggregatePortId 0 -SlotId 4 -AdminSpeed 'Auto' -FillPattern 'Idle' -VsanId 10

@@ -5,7 +5,7 @@ $VirtualizationVmwareClusterByName = Get-IntersightVirtualizationVmwareCluster -
 $VirtualizationVmwareClusterList = Get-IntersightVirtualizationVmwareCluster
 
 #Get the list of VirtualizationVmwareCluster under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareClusterByOrg = Get-IntersightVirtualizationVmwareCluster -Organization $org
 

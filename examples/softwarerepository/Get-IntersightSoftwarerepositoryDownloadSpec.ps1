@@ -5,7 +5,7 @@ $SoftwarerepositoryDownloadSpecByName = Get-IntersightSoftwarerepositoryDownload
 $SoftwarerepositoryDownloadSpecList = Get-IntersightSoftwarerepositoryDownloadSpec
 
 #Get the list of SoftwarerepositoryDownloadSpec under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryDownloadSpecByOrg = Get-IntersightSoftwarerepositoryDownloadSpec -Organization $org
 

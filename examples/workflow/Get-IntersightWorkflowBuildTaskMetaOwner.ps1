@@ -5,7 +5,7 @@ $WorkflowBuildTaskMetaOwnerByName = Get-IntersightWorkflowBuildTaskMetaOwner -Na
 $WorkflowBuildTaskMetaOwnerList = Get-IntersightWorkflowBuildTaskMetaOwner
 
 #Get the list of WorkflowBuildTaskMetaOwner under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowBuildTaskMetaOwnerByOrg = Get-IntersightWorkflowBuildTaskMetaOwner -Organization $org
 

@@ -5,7 +5,7 @@ $IamLdapProviderByName = Get-IntersightIamLdapProvider -Name IamLdapProviderName
 $IamLdapProviderList = Get-IntersightIamLdapProvider
 
 #Get the list of IamLdapProvider under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamLdapProviderByOrg = Get-IntersightIamLdapProvider -Organization $org
 

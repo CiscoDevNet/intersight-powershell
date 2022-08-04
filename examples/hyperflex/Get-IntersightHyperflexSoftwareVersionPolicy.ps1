@@ -5,7 +5,7 @@ $HyperflexSoftwareVersionPolicyByName = Get-IntersightHyperflexSoftwareVersionPo
 $HyperflexSoftwareVersionPolicyList = Get-IntersightHyperflexSoftwareVersionPolicy
 
 #Get the list of HyperflexSoftwareVersionPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexSoftwareVersionPolicyByOrg = Get-IntersightHyperflexSoftwareVersionPolicy -Organization $org
 

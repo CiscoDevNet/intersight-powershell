@@ -5,7 +5,7 @@ $IamQualifierByName = Get-IntersightIamQualifier -Name IamQualifierName
 $IamQualifierList = Get-IntersightIamQualifier
 
 #Get the list of IamQualifier under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamQualifierByOrg = Get-IntersightIamQualifier -Organization $org
 

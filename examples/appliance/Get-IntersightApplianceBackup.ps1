@@ -5,7 +5,7 @@ $ApplianceBackupByName = Get-IntersightApplianceBackup -Name ApplianceBackupName
 $ApplianceBackupList = Get-IntersightApplianceBackup
 
 #Get the list of ApplianceBackup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceBackupByOrg = Get-IntersightApplianceBackup -Organization $org
 

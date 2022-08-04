@@ -5,7 +5,7 @@ $HclOperatingSystemVendorByName = Get-IntersightHclOperatingSystemVendor -Name H
 $HclOperatingSystemVendorList = Get-IntersightHclOperatingSystemVendor
 
 #Get the list of HclOperatingSystemVendor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HclOperatingSystemVendorByOrg = Get-IntersightHclOperatingSystemVendor -Organization $org
 

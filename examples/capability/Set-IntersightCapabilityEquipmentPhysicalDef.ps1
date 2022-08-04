@@ -1,0 +1,4 @@
+
+#Get the CapabilityEquipmentPhysicalDef to Update
+$CapabilityEquipmentPhysicalDef = Get-IntersightCapabilityEquipmentPhysicalDef -Name CapabilityEquipmentPhysicalDefName
+$CapabilityEquipmentPhysicalDef | Set-IntersightCapabilityEquipmentPhysicalDef -Description 'Updated description'

@@ -5,7 +5,7 @@ $MetaDefinitionByName = Get-IntersightMetaDefinition -Name MetaDefinitionName
 $MetaDefinitionList = Get-IntersightMetaDefinition
 
 #Get the list of MetaDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MetaDefinitionByOrg = Get-IntersightMetaDefinition -Organization $org
 

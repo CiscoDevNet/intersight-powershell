@@ -5,7 +5,7 @@ $NiaapiNibMetadataByName = Get-IntersightNiaapiNibMetadata -Name NiaapiNibMetada
 $NiaapiNibMetadataList = Get-IntersightNiaapiNibMetadata
 
 #Get the list of NiaapiNibMetadata under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiNibMetadataByOrg = Get-IntersightNiaapiNibMetadata -Organization $org
 

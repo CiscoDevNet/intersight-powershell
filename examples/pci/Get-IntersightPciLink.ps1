@@ -5,7 +5,7 @@ $PciLinkByName = Get-IntersightPciLink -Name PciLinkName
 $PciLinkList = Get-IntersightPciLink
 
 #Get the list of PciLink under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $PciLinkByOrg = Get-IntersightPciLink -Organization $org
 

@@ -5,7 +5,7 @@ $NiatelemetryApicDbgexpRsExportDestByName = Get-IntersightNiatelemetryApicDbgexp
 $NiatelemetryApicDbgexpRsExportDestList = Get-IntersightNiatelemetryApicDbgexpRsExportDest
 
 #Get the list of NiatelemetryApicDbgexpRsExportDest under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicDbgexpRsExportDestByOrg = Get-IntersightNiatelemetryApicDbgexpRsExportDest -Organization $org
 

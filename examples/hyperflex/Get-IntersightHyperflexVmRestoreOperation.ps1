@@ -5,7 +5,7 @@ $HyperflexVmRestoreOperationByName = Get-IntersightHyperflexVmRestoreOperation -
 $HyperflexVmRestoreOperationList = Get-IntersightHyperflexVmRestoreOperation
 
 #Get the list of HyperflexVmRestoreOperation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexVmRestoreOperationByOrg = Get-IntersightHyperflexVmRestoreOperation -Organization $org
 

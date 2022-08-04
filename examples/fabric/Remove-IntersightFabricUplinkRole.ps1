@@ -1,7 +1,7 @@
 
 #Get the FabricUplinkRole to delete
-$FabricUplinkRole = Remove-IntersightFabricUplinkRole -Name FabricUplinkRoleName
+$FabricUplinkRole = Get-IntersightFabricUplinkRole -Name FabricUplinkRoleName
 $FabricUplinkRole | Remove-IntersightFabricUplinkRole
 
-#Remove the server profile by Moid.
-Remove-IntersightFabricUplinkRole -Moid 123bc2222287wee
+#Remove the FabricUplinkRole by Moid.
+Remove-IntersightFabricUplinkRole -Moid '<Replace with Moid>'

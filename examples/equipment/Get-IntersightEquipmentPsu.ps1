@@ -5,7 +5,7 @@ $EquipmentPsuByName = Get-IntersightEquipmentPsu -Name EquipmentPsuName
 $EquipmentPsuList = Get-IntersightEquipmentPsu
 
 #Get the list of EquipmentPsu under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentPsuByOrg = Get-IntersightEquipmentPsu -Organization $org
 

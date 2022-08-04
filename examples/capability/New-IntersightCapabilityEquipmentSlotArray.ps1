@@ -1,0 +1,1 @@
+$capability_equipment_slot_array1 = New-IntersightCapabilityEquipmentSlotArray -Name 'capability_equipment_slot_array1' -Pid 'UCS-FI-6454' -Sku 'CON-NCF4P-FI6454CH' -Height 4.4 -Width 43.9

@@ -1,0 +1,1 @@
+Initialize-IntersightAdapterFcSettings -FipEnabled 1

@@ -1,7 +1,7 @@
 
 #Get the HyperflexSoftwareDistributionComponent to delete
-$HyperflexSoftwareDistributionComponent = Remove-IntersightHyperflexSoftwareDistributionComponent -Name HyperflexSoftwareDistributionComponentName
+$HyperflexSoftwareDistributionComponent = Get-IntersightHyperflexSoftwareDistributionComponent -Name HyperflexSoftwareDistributionComponentName
 $HyperflexSoftwareDistributionComponent | Remove-IntersightHyperflexSoftwareDistributionComponent
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexSoftwareDistributionComponent -Moid 123bc2222287wee
+#Remove the HyperflexSoftwareDistributionComponent by Moid.
+Remove-IntersightHyperflexSoftwareDistributionComponent -Moid '<Replace with Moid>'

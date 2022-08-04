@@ -5,7 +5,7 @@ $FirmwarePcieDescriptorByName = Get-IntersightFirmwarePcieDescriptor -Name Firmw
 $FirmwarePcieDescriptorList = Get-IntersightFirmwarePcieDescriptor
 
 #Get the list of FirmwarePcieDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwarePcieDescriptorByOrg = Get-IntersightFirmwarePcieDescriptor -Organization $org
 

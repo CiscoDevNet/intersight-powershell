@@ -5,7 +5,7 @@ $WorkflowTemplateFunctionMetaByName = Get-IntersightWorkflowTemplateFunctionMeta
 $WorkflowTemplateFunctionMetaList = Get-IntersightWorkflowTemplateFunctionMeta
 
 #Get the list of WorkflowTemplateFunctionMeta under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowTemplateFunctionMetaByOrg = Get-IntersightWorkflowTemplateFunctionMeta -Organization $org
 

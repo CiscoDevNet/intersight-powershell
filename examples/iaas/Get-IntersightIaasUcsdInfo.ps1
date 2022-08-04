@@ -5,7 +5,7 @@ $IaasUcsdInfoByName = Get-IntersightIaasUcsdInfo -Name IaasUcsdInfoName
 $IaasUcsdInfoList = Get-IntersightIaasUcsdInfo
 
 #Get the list of IaasUcsdInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasUcsdInfoByOrg = Get-IntersightIaasUcsdInfo -Organization $org
 

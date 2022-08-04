@@ -1,11 +1,11 @@
 #Get the WorkflowErrorResponseHandler by Name
 $WorkflowErrorResponseHandlerByName = Get-IntersightWorkflowErrorResponseHandler -Name WorkflowErrorResponseHandlerName
 
-#Get the List of ServerProfiles
+#Get the List of WorkflowErrorResponseHandler
 $WorkflowErrorResponseHandlerList = Get-IntersightWorkflowErrorResponseHandler
 
 #Get the list of WorkflowErrorResponseHandler under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowErrorResponseHandlerByOrg = Get-IntersightWorkflowErrorResponseHandler -Organization $org
 

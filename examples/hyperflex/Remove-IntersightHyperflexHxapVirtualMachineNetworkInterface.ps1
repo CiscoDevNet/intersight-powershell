@@ -1,7 +1,7 @@
 
 #Get the HyperflexHxapVirtualMachineNetworkInterface to delete
-$HyperflexHxapVirtualMachineNetworkInterface = Remove-IntersightHyperflexHxapVirtualMachineNetworkInterface -Name HyperflexHxapVirtualMachineNetworkInterfaceName
+$HyperflexHxapVirtualMachineNetworkInterface = Get-IntersightHyperflexHxapVirtualMachineNetworkInterface -Name HyperflexHxapVirtualMachineNetworkInterfaceName
 $HyperflexHxapVirtualMachineNetworkInterface | Remove-IntersightHyperflexHxapVirtualMachineNetworkInterface
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexHxapVirtualMachineNetworkInterface -Moid 123bc2222287wee
+#Remove the HyperflexHxapVirtualMachineNetworkInterface by Moid.
+Remove-IntersightHyperflexHxapVirtualMachineNetworkInterface -Moid '<Replace with Moid>'

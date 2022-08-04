@@ -5,7 +5,7 @@ $NiatelemetryApicUiPageCountsByName = Get-IntersightNiatelemetryApicUiPageCounts
 $NiatelemetryApicUiPageCountsList = Get-IntersightNiatelemetryApicUiPageCounts
 
 #Get the list of NiatelemetryApicUiPageCounts under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicUiPageCountsByOrg = Get-IntersightNiatelemetryApicUiPageCounts -Organization $org
 

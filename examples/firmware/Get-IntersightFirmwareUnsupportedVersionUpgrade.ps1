@@ -5,7 +5,7 @@ $FirmwareUnsupportedVersionUpgradeByName = Get-IntersightFirmwareUnsupportedVers
 $FirmwareUnsupportedVersionUpgradeList = Get-IntersightFirmwareUnsupportedVersionUpgrade
 
 #Get the list of FirmwareUnsupportedVersionUpgrade under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareUnsupportedVersionUpgradeByOrg = Get-IntersightFirmwareUnsupportedVersionUpgrade -Organization $org
 

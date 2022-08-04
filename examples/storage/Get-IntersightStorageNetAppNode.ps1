@@ -5,7 +5,7 @@ $StorageNetAppNodeByName = Get-IntersightStorageNetAppNode -Name StorageNetAppNo
 $StorageNetAppNodeList = Get-IntersightStorageNetAppNode
 
 #Get the list of StorageNetAppNode under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppNodeByOrg = Get-IntersightStorageNetAppNode -Organization $org
 

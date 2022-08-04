@@ -1,0 +1,1 @@
+$firmware_gpu_descriptor1 = New-IntersightFirmwareGpuDescriptor -Description 'firmware gpu descriptor' -Model 'UCSC-GPU-V340' -Vendor 'Cisco' -Revision '0'

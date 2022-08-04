@@ -5,7 +5,7 @@ $IppoolShadowPoolByName = Get-IntersightIppoolShadowPool -Name IppoolShadowPoolN
 $IppoolShadowPoolList = Get-IntersightIppoolShadowPool
 
 #Get the list of IppoolShadowPool under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IppoolShadowPoolByOrg = Get-IntersightIppoolShadowPool -Organization $org
 

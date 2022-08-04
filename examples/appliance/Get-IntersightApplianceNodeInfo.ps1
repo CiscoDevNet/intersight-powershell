@@ -5,7 +5,7 @@ $ApplianceNodeInfoByName = Get-IntersightApplianceNodeInfo -Name ApplianceNodeIn
 $ApplianceNodeInfoList = Get-IntersightApplianceNodeInfo
 
 #Get the list of ApplianceNodeInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceNodeInfoByOrg = Get-IntersightApplianceNodeInfo -Organization $org
 

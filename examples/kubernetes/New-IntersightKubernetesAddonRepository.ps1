@@ -1,0 +1,1 @@
+$kubernetes_addon_repository1 = New-IntersightKubernetesAddonRepository -InsecureSkipVerification 0 -Name 'kubernetes_addon_repository1' -Username 'admin1'

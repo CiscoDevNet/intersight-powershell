@@ -5,7 +5,7 @@ $SoftwarerepositoryCachedImageByName = Get-IntersightSoftwarerepositoryCachedIma
 $SoftwarerepositoryCachedImageList = Get-IntersightSoftwarerepositoryCachedImage
 
 #Get the list of SoftwarerepositoryCachedImage under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryCachedImageByOrg = Get-IntersightSoftwarerepositoryCachedImage -Organization $org
 

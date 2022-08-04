@@ -5,7 +5,7 @@ $KubernetesCatalogByName = Get-IntersightKubernetesCatalog -Name KubernetesCatal
 $KubernetesCatalogList = Get-IntersightKubernetesCatalog
 
 #Get the list of KubernetesCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesCatalogByOrg = Get-IntersightKubernetesCatalog -Organization $org
 

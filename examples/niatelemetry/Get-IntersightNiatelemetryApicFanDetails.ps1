@@ -5,7 +5,7 @@ $NiatelemetryApicFanDetailsByName = Get-IntersightNiatelemetryApicFanDetails -Na
 $NiatelemetryApicFanDetailsList = Get-IntersightNiatelemetryApicFanDetails
 
 #Get the list of NiatelemetryApicFanDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicFanDetailsByOrg = Get-IntersightNiatelemetryApicFanDetails -Organization $org
 

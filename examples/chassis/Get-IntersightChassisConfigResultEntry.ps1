@@ -5,7 +5,7 @@ $ChassisConfigResultEntryByName = Get-IntersightChassisConfigResultEntry -Name C
 $ChassisConfigResultEntryList = Get-IntersightChassisConfigResultEntry
 
 #Get the list of ChassisConfigResultEntry under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ChassisConfigResultEntryByOrg = Get-IntersightChassisConfigResultEntry -Organization $org
 

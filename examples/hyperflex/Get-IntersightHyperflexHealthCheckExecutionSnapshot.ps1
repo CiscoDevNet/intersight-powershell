@@ -5,7 +5,7 @@ $HyperflexHealthCheckExecutionSnapshotByName = Get-IntersightHyperflexHealthChec
 $HyperflexHealthCheckExecutionSnapshotList = Get-IntersightHyperflexHealthCheckExecutionSnapshot
 
 #Get the list of HyperflexHealthCheckExecutionSnapshot under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHealthCheckExecutionSnapshotByOrg = Get-IntersightHyperflexHealthCheckExecutionSnapshot -Organization $org
 

@@ -5,7 +5,7 @@ $EtherPortChannelByName = Get-IntersightEtherPortChannel -Name EtherPortChannelN
 $EtherPortChannelList = Get-IntersightEtherPortChannel
 
 #Get the list of EtherPortChannel under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EtherPortChannelByOrg = Get-IntersightEtherPortChannel -Organization $org
 

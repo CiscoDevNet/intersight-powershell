@@ -5,7 +5,7 @@ $IamLdapGroupByName = Get-IntersightIamLdapGroup -Name IamLdapGroupName
 $IamLdapGroupList = Get-IntersightIamLdapGroup
 
 #Get the list of IamLdapGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamLdapGroupByOrg = Get-IntersightIamLdapGroup -Organization $org
 

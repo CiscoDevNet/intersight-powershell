@@ -5,7 +5,7 @@ $VirtualizationVmwareDistributedSwitchByName = Get-IntersightVirtualizationVmwar
 $VirtualizationVmwareDistributedSwitchList = Get-IntersightVirtualizationVmwareDistributedSwitch
 
 #Get the list of VirtualizationVmwareDistributedSwitch under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareDistributedSwitchByOrg = Get-IntersightVirtualizationVmwareDistributedSwitch -Organization $org
 

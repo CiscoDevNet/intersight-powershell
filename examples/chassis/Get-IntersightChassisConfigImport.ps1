@@ -5,7 +5,7 @@ $ChassisConfigImportByName = Get-IntersightChassisConfigImport -Name ChassisConf
 $ChassisConfigImportList = Get-IntersightChassisConfigImport
 
 #Get the list of ChassisConfigImport under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ChassisConfigImportByOrg = Get-IntersightChassisConfigImport -Organization $org
 

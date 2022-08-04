@@ -5,7 +5,7 @@ $VirtualizationVmwareVirtualDiskByName = Get-IntersightVirtualizationVmwareVirtu
 $VirtualizationVmwareVirtualDiskList = Get-IntersightVirtualizationVmwareVirtualDisk
 
 #Get the list of VirtualizationVmwareVirtualDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VirtualizationVmwareVirtualDiskByOrg = Get-IntersightVirtualizationVmwareVirtualDisk -Organization $org
 

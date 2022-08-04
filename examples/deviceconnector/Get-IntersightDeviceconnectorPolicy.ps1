@@ -5,7 +5,7 @@ $DeviceconnectorPolicyByName = Get-IntersightDeviceconnectorPolicy -Name Devicec
 $DeviceconnectorPolicyList = Get-IntersightDeviceconnectorPolicy
 
 #Get the list of DeviceconnectorPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $DeviceconnectorPolicyByOrg = Get-IntersightDeviceconnectorPolicy -Organization $org
 

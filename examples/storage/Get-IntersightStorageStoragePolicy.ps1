@@ -1,11 +1,11 @@
 #Get the StorageStoragePolicy by Name
 $StorageStoragePolicyByName = Get-IntersightStorageStoragePolicy -Name StorageStoragePolicyName
 
-#Get the List of ServerProfiles
+#Get the List of StorageStoragePolicy
 $StorageStoragePolicyList = Get-IntersightStorageStoragePolicy
 
 #Get the list of StorageStoragePolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageStoragePolicyByOrg = Get-IntersightStorageStoragePolicy -Organization $org
 

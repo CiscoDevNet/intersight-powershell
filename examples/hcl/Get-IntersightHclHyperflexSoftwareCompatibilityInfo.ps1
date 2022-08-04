@@ -5,7 +5,7 @@ $HclHyperflexSoftwareCompatibilityInfoByName = Get-IntersightHclHyperflexSoftwar
 $HclHyperflexSoftwareCompatibilityInfoList = Get-IntersightHclHyperflexSoftwareCompatibilityInfo
 
 #Get the list of HclHyperflexSoftwareCompatibilityInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HclHyperflexSoftwareCompatibilityInfoByOrg = Get-IntersightHclHyperflexSoftwareCompatibilityInfo -Organization $org
 

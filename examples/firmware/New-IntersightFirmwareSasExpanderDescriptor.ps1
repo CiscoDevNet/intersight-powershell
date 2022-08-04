@@ -1,0 +1,1 @@
+$firmware_sas_expander_descriptor1 = New-IntersightFirmwareSasExpanderDescriptor -Description 'firmware sas expander descriptor' -Model 'R210-SASXPAND' -Vendor 'Cisco Systems, Inc' -Revision '0'

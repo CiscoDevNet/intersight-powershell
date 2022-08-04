@@ -1,7 +1,7 @@
 
 #Get the KvmPolicy to delete
-$KvmPolicy = Remove-IntersightKvmPolicy -Name KvmPolicyName
+$KvmPolicy = Get-IntersightKvmPolicy -Name KvmPolicyName
 $KvmPolicy | Remove-IntersightKvmPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightKvmPolicy -Moid 123bc2222287wee
+#Remove the KvmPolicy by Moid.
+Remove-IntersightKvmPolicy -Moid '<Replace with Moid>'

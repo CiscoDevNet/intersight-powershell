@@ -5,7 +5,7 @@ $CapabilityFanModuleDescriptorByName = Get-IntersightCapabilityFanModuleDescript
 $CapabilityFanModuleDescriptorList = Get-IntersightCapabilityFanModuleDescriptor
 
 #Get the list of CapabilityFanModuleDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityFanModuleDescriptorByOrg = Get-IntersightCapabilityFanModuleDescriptor -Organization $org
 

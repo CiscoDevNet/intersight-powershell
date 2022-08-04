@@ -1,7 +1,6 @@
-
 #Get the StorageStoragePolicy to delete
-$StorageStoragePolicy = Remove-IntersightStorageStoragePolicy -Name StorageStoragePolicyName
+$StorageStoragePolicy = Get-IntersightStorageStoragePolicy -Name StorageStoragePolicyName
 $StorageStoragePolicy | Remove-IntersightStorageStoragePolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightStorageStoragePolicy -Moid 123bc2222287wee
+#Remove the StorageStoragePolicy by Moid.
+Remove-IntersightStorageStoragePolicy -Moid '<Replace with Moid>'

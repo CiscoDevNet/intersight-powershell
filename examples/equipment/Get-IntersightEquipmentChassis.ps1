@@ -5,7 +5,7 @@ $EquipmentChassisByName = Get-IntersightEquipmentChassis -Name EquipmentChassisN
 $EquipmentChassisList = Get-IntersightEquipmentChassis
 
 #Get the list of EquipmentChassis under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentChassisByOrg = Get-IntersightEquipmentChassis -Organization $org
 

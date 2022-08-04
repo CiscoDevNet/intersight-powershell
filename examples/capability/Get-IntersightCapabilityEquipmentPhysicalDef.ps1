@@ -5,7 +5,7 @@ $CapabilityEquipmentPhysicalDefByName = Get-IntersightCapabilityEquipmentPhysica
 $CapabilityEquipmentPhysicalDefList = Get-IntersightCapabilityEquipmentPhysicalDef
 
 #Get the list of CapabilityEquipmentPhysicalDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityEquipmentPhysicalDefByOrg = Get-IntersightCapabilityEquipmentPhysicalDef -Organization $org
 

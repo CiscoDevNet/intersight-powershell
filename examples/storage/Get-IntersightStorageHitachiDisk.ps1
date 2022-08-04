@@ -5,7 +5,7 @@ $StorageHitachiDiskByName = Get-IntersightStorageHitachiDisk -Name StorageHitach
 $StorageHitachiDiskList = Get-IntersightStorageHitachiDisk
 
 #Get the list of StorageHitachiDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiDiskByOrg = Get-IntersightStorageHitachiDisk -Organization $org
 

@@ -5,7 +5,7 @@ $NiaapiApicSweolByName = Get-IntersightNiaapiApicSweol -Name NiaapiApicSweolName
 $NiaapiApicSweolList = Get-IntersightNiaapiApicSweol
 
 #Get the list of NiaapiApicSweol under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiApicSweolByOrg = Get-IntersightNiaapiApicSweol -Organization $org
 

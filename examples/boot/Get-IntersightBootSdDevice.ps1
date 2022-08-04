@@ -5,7 +5,7 @@ $BootSdDeviceByName = Get-IntersightBootSdDevice -Name BootSdDeviceName
 $BootSdDeviceList = Get-IntersightBootSdDevice
 
 #Get the list of BootSdDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootSdDeviceByOrg = Get-IntersightBootSdDevice -Organization $org
 

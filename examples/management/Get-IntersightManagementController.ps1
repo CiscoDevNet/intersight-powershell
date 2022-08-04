@@ -5,7 +5,7 @@ $ManagementControllerByName = Get-IntersightManagementController -Name Managemen
 $ManagementControllerList = Get-IntersightManagementController
 
 #Get the list of ManagementController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ManagementControllerByOrg = Get-IntersightManagementController -Organization $org
 

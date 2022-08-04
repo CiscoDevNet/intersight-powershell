@@ -5,7 +5,7 @@ $OsInstallByName = Get-IntersightOsInstall -Name OsInstallName
 $OsInstallList = Get-IntersightOsInstall
 
 #Get the list of OsInstall under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OsInstallByOrg = Get-IntersightOsInstall -Organization $org
 

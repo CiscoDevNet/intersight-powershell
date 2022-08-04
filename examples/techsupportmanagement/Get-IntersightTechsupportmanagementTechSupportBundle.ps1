@@ -1,11 +1,11 @@
 #Get the TechsupportmanagementTechSupportBundle by Name
 $TechsupportmanagementTechSupportBundleByName = Get-IntersightTechsupportmanagementTechSupportBundle -Name TechsupportmanagementTechSupportBundleName
 
-#Get the List of ServerProfiles
+#Get the List of TechsupportmanagementTechSupportBundle
 $TechsupportmanagementTechSupportBundleList = Get-IntersightTechsupportmanagementTechSupportBundle
 
 #Get the list of TechsupportmanagementTechSupportBundle under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TechsupportmanagementTechSupportBundleByOrg = Get-IntersightTechsupportmanagementTechSupportBundle -Organization $org
 

@@ -1,7 +1,7 @@
 
 #Get the MacpoolPool to delete
-$MacpoolPool = Remove-IntersightMacpoolPool -Name MacpoolPoolName
+$MacpoolPool = Get-IntersightMacpoolPool -Name MacpoolPoolName
 $MacpoolPool | Remove-IntersightMacpoolPool
 
-#Remove the server profile by Moid.
-Remove-IntersightMacpoolPool -Moid 123bc2222287wee
+#Remove the MacpoolPool by Moid.
+Remove-IntersightMacpoolPool -Moid '<Replace with Moid>'

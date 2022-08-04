@@ -5,7 +5,7 @@ $LicenseSmartlicenseTokenByName = Get-IntersightLicenseSmartlicenseToken -Name L
 $LicenseSmartlicenseTokenList = Get-IntersightLicenseSmartlicenseToken
 
 #Get the list of LicenseSmartlicenseToken under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LicenseSmartlicenseTokenByOrg = Get-IntersightLicenseSmartlicenseToken -Organization $org
 

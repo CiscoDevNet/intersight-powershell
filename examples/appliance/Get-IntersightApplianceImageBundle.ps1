@@ -5,7 +5,7 @@ $ApplianceImageBundleByName = Get-IntersightApplianceImageBundle -Name Appliance
 $ApplianceImageBundleList = Get-IntersightApplianceImageBundle
 
 #Get the list of ApplianceImageBundle under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceImageBundleByOrg = Get-IntersightApplianceImageBundle -Organization $org
 

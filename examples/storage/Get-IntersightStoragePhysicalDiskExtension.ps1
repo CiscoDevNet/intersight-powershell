@@ -5,7 +5,7 @@ $StoragePhysicalDiskExtensionByName = Get-IntersightStoragePhysicalDiskExtension
 $StoragePhysicalDiskExtensionList = Get-IntersightStoragePhysicalDiskExtension
 
 #Get the list of StoragePhysicalDiskExtension under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePhysicalDiskExtensionByOrg = Get-IntersightStoragePhysicalDiskExtension -Organization $org
 

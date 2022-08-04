@@ -1,7 +1,8 @@
 
 #Get the VnicEthQosPolicy to delete
-$VnicEthQosPolicy = Remove-IntersightVnicEthQosPolicy -Name VnicEthQosPolicyName
+$VnicEthQosPolicy = Get-IntersightVnicEthQosPolicy -Name VnicEthQosPolicyName
 $VnicEthQosPolicy | Remove-IntersightVnicEthQosPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightVnicEthQosPolicy -Moid 123bc2222287wee
+#Remove the VnicEthQosPolicy by Moid.
+Remove-IntersightVnicEthQosPolicy -Moid '<Replace with Moid>'
+

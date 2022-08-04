@@ -5,7 +5,7 @@ $KubernetesStatefulSetByName = Get-IntersightKubernetesStatefulSet -Name Kuberne
 $KubernetesStatefulSetList = Get-IntersightKubernetesStatefulSet
 
 #Get the list of KubernetesStatefulSet under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesStatefulSetByOrg = Get-IntersightKubernetesStatefulSet -Organization $org
 

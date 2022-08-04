@@ -1,11 +1,11 @@
 #Get the VrfVrf by Name
 $VrfVrfByName = Get-IntersightVrfVrf -Name VrfVrfName
 
-#Get the List of ServerProfiles
+#Get the List of VrfVrf
 $VrfVrfList = Get-IntersightVrfVrf
 
 #Get the list of VrfVrf under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VrfVrfByOrg = Get-IntersightVrfVrf -Organization $org
 

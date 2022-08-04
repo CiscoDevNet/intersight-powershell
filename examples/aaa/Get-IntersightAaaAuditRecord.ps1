@@ -5,7 +5,7 @@ $AaaAuditRecordByName = Get-IntersightAaaAuditRecord -Name AaaAuditRecordName
 $AaaAuditRecordList = Get-IntersightAaaAuditRecord
 
 #Get the list of AaaAuditRecord under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AaaAuditRecordByOrg = Get-IntersightAaaAuditRecord -Organization $org
 

@@ -1,0 +1,5 @@
+
+#Get the CapabilityChassisManufacturingDef to Update
+$CapabilityChassisManufacturingDef = Get-IntersightCapabilityChassisManufacturingDef -Name CapabilityChassisManufacturingDefName
+$CapabilityChassisManufacturingDef | Set-IntersightCapabilityChassisManufacturingDef -Description 'Updated description'
+

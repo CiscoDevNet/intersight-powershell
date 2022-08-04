@@ -5,7 +5,7 @@ $CapabilityEquipmentSlotArrayByName = Get-IntersightCapabilityEquipmentSlotArray
 $CapabilityEquipmentSlotArrayList = Get-IntersightCapabilityEquipmentSlotArray
 
 #Get the list of CapabilityEquipmentSlotArray under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityEquipmentSlotArrayByOrg = Get-IntersightCapabilityEquipmentSlotArray -Organization $org
 

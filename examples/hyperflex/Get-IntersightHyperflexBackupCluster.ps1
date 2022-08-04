@@ -5,7 +5,7 @@ $HyperflexBackupClusterByName = Get-IntersightHyperflexBackupCluster -Name Hyper
 $HyperflexBackupClusterList = Get-IntersightHyperflexBackupCluster
 
 #Get the list of HyperflexBackupCluster under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexBackupClusterByOrg = Get-IntersightHyperflexBackupCluster -Organization $org
 

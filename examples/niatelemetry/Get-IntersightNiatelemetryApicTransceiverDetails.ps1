@@ -5,7 +5,7 @@ $NiatelemetryApicTransceiverDetailsByName = Get-IntersightNiatelemetryApicTransc
 $NiatelemetryApicTransceiverDetailsList = Get-IntersightNiatelemetryApicTransceiverDetails
 
 #Get the list of NiatelemetryApicTransceiverDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicTransceiverDetailsByOrg = Get-IntersightNiatelemetryApicTransceiverDetails -Organization $org
 

@@ -5,7 +5,7 @@ $FabricVsanByName = Get-IntersightFabricVsan -Name FabricVsanName
 $FabricVsanList = Get-IntersightFabricVsan
 
 #Get the list of FabricVsan under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricVsanByOrg = Get-IntersightFabricVsan -Organization $org
 

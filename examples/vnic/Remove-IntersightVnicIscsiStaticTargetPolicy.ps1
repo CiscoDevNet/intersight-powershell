@@ -1,7 +1,6 @@
-
 #Get the VnicIscsiStaticTargetPolicy to delete
-$VnicIscsiStaticTargetPolicy = Remove-IntersightVnicIscsiStaticTargetPolicy -Name VnicIscsiStaticTargetPolicyName
+$VnicIscsiStaticTargetPolicy = Get-IntersightVnicIscsiStaticTargetPolicy -Name VnicIscsiStaticTargetPolicyName
 $VnicIscsiStaticTargetPolicy | Remove-IntersightVnicIscsiStaticTargetPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightVnicIscsiStaticTargetPolicy -Moid 123bc2222287wee
+#Remove the VnicIscsiStaticTargetPolicy by Moid.
+Remove-IntersightVnicIscsiStaticTargetPolicy -Moid '<Replace with Moid>'

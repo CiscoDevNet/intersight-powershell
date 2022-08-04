@@ -5,7 +5,7 @@ $AdapterExtEthInterfaceByName = Get-IntersightAdapterExtEthInterface -Name Adapt
 $AdapterExtEthInterfaceList = Get-IntersightAdapterExtEthInterface
 
 #Get the list of AdapterExtEthInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterExtEthInterfaceByOrg = Get-IntersightAdapterExtEthInterface -Organization $org
 

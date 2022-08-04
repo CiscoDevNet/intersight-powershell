@@ -5,7 +5,7 @@ $ApplianceUpgradePolicyByName = Get-IntersightApplianceUpgradePolicy -Name Appli
 $ApplianceUpgradePolicyList = Get-IntersightApplianceUpgradePolicy
 
 #Get the list of ApplianceUpgradePolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceUpgradePolicyByOrg = Get-IntersightApplianceUpgradePolicy -Organization $org
 

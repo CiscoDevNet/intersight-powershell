@@ -1,0 +1,4 @@
+
+#Get the CapabilityEquipmentSlotArray to Update
+$CapabilityEquipmentSlotArray = Get-IntersightCapabilityEquipmentSlotArray -Name CapabilityEquipmentSlotArrayName
+$CapabilityEquipmentSlotArray | Set-IntersightCapabilityEquipmentSlotArray -Description 'Updated description'

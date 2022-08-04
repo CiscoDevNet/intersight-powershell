@@ -5,7 +5,7 @@ $IamIpAccessManagementByName = Get-IntersightIamIpAccessManagement -Name IamIpAc
 $IamIpAccessManagementList = Get-IntersightIamIpAccessManagement
 
 #Get the list of IamIpAccessManagement under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamIpAccessManagementByOrg = Get-IntersightIamIpAccessManagement -Organization $org
 

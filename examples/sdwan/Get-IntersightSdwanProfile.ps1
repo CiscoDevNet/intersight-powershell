@@ -5,7 +5,7 @@ $SdwanProfileByName = Get-IntersightSdwanProfile -Name SdwanProfileName
 $SdwanProfileList = Get-IntersightSdwanProfile
 
 #Get the list of SdwanProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SdwanProfileByOrg = Get-IntersightSdwanProfile -Organization $org
 

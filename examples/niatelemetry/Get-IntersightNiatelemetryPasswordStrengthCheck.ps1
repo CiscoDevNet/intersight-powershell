@@ -5,7 +5,7 @@ $NiatelemetryPasswordStrengthCheckByName = Get-IntersightNiatelemetryPasswordStr
 $NiatelemetryPasswordStrengthCheckList = Get-IntersightNiatelemetryPasswordStrengthCheck
 
 #Get the list of NiatelemetryPasswordStrengthCheck under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryPasswordStrengthCheckByOrg = Get-IntersightNiatelemetryPasswordStrengthCheck -Organization $org
 

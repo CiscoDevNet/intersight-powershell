@@ -5,7 +5,7 @@ $EquipmentTpmByName = Get-IntersightEquipmentTpm -Name EquipmentTpmName
 $EquipmentTpmList = Get-IntersightEquipmentTpm
 
 #Get the list of EquipmentTpm under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentTpmByOrg = Get-IntersightEquipmentTpm -Organization $org
 

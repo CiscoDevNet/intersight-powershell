@@ -5,7 +5,7 @@ $IamUserGroupByName = Get-IntersightIamUserGroup -Name IamUserGroupName
 $IamUserGroupList = Get-IntersightIamUserGroup
 
 #Get the list of IamUserGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamUserGroupByOrg = Get-IntersightIamUserGroup -Organization $org
 

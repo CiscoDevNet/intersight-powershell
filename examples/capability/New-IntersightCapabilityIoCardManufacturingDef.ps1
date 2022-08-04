@@ -1,0 +1,1 @@
+$capability_io_card_manufacturing_def1 = New-IntersightCapabilityIoCardManufacturingDef -Caption 'Cisco UCS VIC 1455' -Description 'Cisco UCS VIC 1455 Quad Port 10/25G SFP28 CNA PCIE' -Name 'vic_1455' -Pid 'UCSC-PCIE-C25Q-04' -ProductName 'Cisco UCS VIC 1455 Quad Port' -Sku 'UCSC-PCIE-C25Q-04' -Vid 'V00'

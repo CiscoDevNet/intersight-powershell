@@ -5,7 +5,7 @@ $KubernetesConfigResultByName = Get-IntersightKubernetesConfigResult -Name Kuber
 $KubernetesConfigResultList = Get-IntersightKubernetesConfigResult
 
 #Get the list of KubernetesConfigResult under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesConfigResultByOrg = Get-IntersightKubernetesConfigResult -Organization $org
 

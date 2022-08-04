@@ -5,7 +5,7 @@ $BootPrecisionPolicyByName = Get-IntersightBootPrecisionPolicy -Name BootPrecisi
 $BootPrecisionPolicyList = Get-IntersightBootPrecisionPolicy
 
 #Get the list of BootPrecisionPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootPrecisionPolicyByOrg = Get-IntersightBootPrecisionPolicy -Organization $org
 

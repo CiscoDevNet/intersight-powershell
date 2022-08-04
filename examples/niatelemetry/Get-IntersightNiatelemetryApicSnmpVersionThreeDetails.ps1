@@ -5,7 +5,7 @@ $NiatelemetryApicSnmpVersionThreeDetailsByName = Get-IntersightNiatelemetryApicS
 $NiatelemetryApicSnmpVersionThreeDetailsList = Get-IntersightNiatelemetryApicSnmpVersionThreeDetails
 
 #Get the list of NiatelemetryApicSnmpVersionThreeDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicSnmpVersionThreeDetailsByOrg = Get-IntersightNiatelemetryApicSnmpVersionThreeDetails -Organization $org
 

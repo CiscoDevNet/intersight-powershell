@@ -5,7 +5,7 @@ $FabricServerRoleByName = Get-IntersightFabricServerRole -Name FabricServerRoleN
 $FabricServerRoleList = Get-IntersightFabricServerRole
 
 #Get the list of FabricServerRole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricServerRoleByOrg = Get-IntersightFabricServerRole -Organization $org
 

@@ -1,7 +1,7 @@
 
 #Get the IpmioverlanPolicy to delete
-$IpmioverlanPolicy = Remove-IntersightIpmioverlanPolicy -Name IpmioverlanPolicyName
+$IpmioverlanPolicy = Get-IntersightIpmioverlanPolicy -Name IpmioverlanPolicyName
 $IpmioverlanPolicy | Remove-IntersightIpmioverlanPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightIpmioverlanPolicy -Moid 123bc2222287wee
+#Remove the IpmioverlanPolicy by Moid.
+Remove-IntersightIpmioverlanPolicy -Moid '<Replace with Moid>'

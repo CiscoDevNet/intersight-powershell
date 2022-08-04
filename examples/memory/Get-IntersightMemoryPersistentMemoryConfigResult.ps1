@@ -5,7 +5,7 @@ $MemoryPersistentMemoryConfigResultByName = Get-IntersightMemoryPersistentMemory
 $MemoryPersistentMemoryConfigResultList = Get-IntersightMemoryPersistentMemoryConfigResult
 
 #Get the list of MemoryPersistentMemoryConfigResult under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MemoryPersistentMemoryConfigResultByOrg = Get-IntersightMemoryPersistentMemoryConfigResult -Organization $org
 

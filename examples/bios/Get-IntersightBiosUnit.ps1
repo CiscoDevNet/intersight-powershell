@@ -5,7 +5,7 @@ $BiosUnitByName = Get-IntersightBiosUnit -Name BiosUnitName
 $BiosUnitList = Get-IntersightBiosUnit
 
 #Get the list of BiosUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BiosUnitByOrg = Get-IntersightBiosUnit -Organization $org
 

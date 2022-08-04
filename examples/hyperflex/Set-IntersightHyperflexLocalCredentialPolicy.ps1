@@ -1,0 +1,4 @@
+
+#Get the HyperflexLocalCredentialPolicy to Update
+$HyperflexLocalCredentialPolicy = Get-IntersightHyperflexLocalCredentialPolicy -Name HyperflexLocalCredentialPolicyName
+$HyperflexLocalCredentialPolicy | Set-IntersightHyperflexLocalCredentialPolicy -Description 'Updated description'

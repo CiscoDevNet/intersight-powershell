@@ -5,7 +5,7 @@ $KubernetesAciCniTenantClusterAllocationByName = Get-IntersightKubernetesAciCniT
 $KubernetesAciCniTenantClusterAllocationList = Get-IntersightKubernetesAciCniTenantClusterAllocation
 
 #Get the list of KubernetesAciCniTenantClusterAllocation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesAciCniTenantClusterAllocationByOrg = Get-IntersightKubernetesAciCniTenantClusterAllocation -Organization $org
 

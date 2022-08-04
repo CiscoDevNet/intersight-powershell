@@ -5,7 +5,7 @@ $ApplianceAutoRmaPolicyByName = Get-IntersightApplianceAutoRmaPolicy -Name Appli
 $ApplianceAutoRmaPolicyList = Get-IntersightApplianceAutoRmaPolicy
 
 #Get the list of ApplianceAutoRmaPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceAutoRmaPolicyByOrg = Get-IntersightApplianceAutoRmaPolicy -Organization $org
 

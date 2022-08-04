@@ -1,11 +1,11 @@
 #Get the TamAdvisoryCount by Name
 $TamAdvisoryCountByName = Get-IntersightTamAdvisoryCount -Name TamAdvisoryCountName
 
-#Get the List of ServerProfiles
+#Get the List of TamAdvisoryCount
 $TamAdvisoryCountList = Get-IntersightTamAdvisoryCount
 
 #Get the list of TamAdvisoryCount under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TamAdvisoryCountByOrg = Get-IntersightTamAdvisoryCount -Organization $org
 

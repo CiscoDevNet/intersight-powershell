@@ -5,7 +5,7 @@ $FirmwareUpgradeImpactStatusByName = Get-IntersightFirmwareUpgradeImpactStatus -
 $FirmwareUpgradeImpactStatusList = Get-IntersightFirmwareUpgradeImpactStatus
 
 #Get the list of FirmwareUpgradeImpactStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareUpgradeImpactStatusByOrg = Get-IntersightFirmwareUpgradeImpactStatus -Organization $org
 

@@ -5,7 +5,7 @@ $NiatelemetryDcnmFexDetailsByName = Get-IntersightNiatelemetryDcnmFexDetails -Na
 $NiatelemetryDcnmFexDetailsList = Get-IntersightNiatelemetryDcnmFexDetails
 
 #Get the list of NiatelemetryDcnmFexDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryDcnmFexDetailsByOrg = Get-IntersightNiatelemetryDcnmFexDetails -Organization $org
 

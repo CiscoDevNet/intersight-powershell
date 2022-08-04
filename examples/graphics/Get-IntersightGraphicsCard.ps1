@@ -5,7 +5,7 @@ $GraphicsCardByName = Get-IntersightGraphicsCard -Name GraphicsCardName
 $GraphicsCardList = Get-IntersightGraphicsCard
 
 #Get the list of GraphicsCard under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $GraphicsCardByOrg = Get-IntersightGraphicsCard -Organization $org
 

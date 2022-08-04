@@ -1,7 +1,7 @@
 
 #Get the SoftwareHyperflexDistributable to delete
-$SoftwareHyperflexDistributable = Remove-IntersightSoftwareHyperflexDistributable -Name SoftwareHyperflexDistributableName
+$SoftwareHyperflexDistributable = Get-IntersightSoftwareHyperflexDistributable -Name SoftwareHyperflexDistributableName
 $SoftwareHyperflexDistributable | Remove-IntersightSoftwareHyperflexDistributable
 
-#Remove the server profile by Moid.
-Remove-IntersightSoftwareHyperflexDistributable -Moid 123bc2222287wee
+#Remove the SoftwareHyperflexDistributable by Moid.
+Remove-IntersightSoftwareHyperflexDistributable -Moid '<Replace with Moid>'

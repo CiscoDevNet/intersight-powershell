@@ -5,7 +5,7 @@ $FabricFlowControlPolicyByName = Get-IntersightFabricFlowControlPolicy -Name Fab
 $FabricFlowControlPolicyList = Get-IntersightFabricFlowControlPolicy
 
 #Get the list of FabricFlowControlPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricFlowControlPolicyByOrg = Get-IntersightFabricFlowControlPolicy -Organization $org
 

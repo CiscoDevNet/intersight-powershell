@@ -5,7 +5,7 @@ $CapabilityCatalogByName = Get-IntersightCapabilityCatalog -Name CapabilityCatal
 $CapabilityCatalogList = Get-IntersightCapabilityCatalog
 
 #Get the list of CapabilityCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityCatalogByOrg = Get-IntersightCapabilityCatalog -Organization $org
 

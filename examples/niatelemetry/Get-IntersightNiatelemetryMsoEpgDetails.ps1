@@ -5,7 +5,7 @@ $NiatelemetryMsoEpgDetailsByName = Get-IntersightNiatelemetryMsoEpgDetails -Name
 $NiatelemetryMsoEpgDetailsList = Get-IntersightNiatelemetryMsoEpgDetails
 
 #Get the list of NiatelemetryMsoEpgDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryMsoEpgDetailsByOrg = Get-IntersightNiatelemetryMsoEpgDetails -Organization $org
 

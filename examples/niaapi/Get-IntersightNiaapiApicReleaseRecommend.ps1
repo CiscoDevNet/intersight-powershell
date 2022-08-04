@@ -5,7 +5,7 @@ $NiaapiApicReleaseRecommendByName = Get-IntersightNiaapiApicReleaseRecommend -Na
 $NiaapiApicReleaseRecommendList = Get-IntersightNiaapiApicReleaseRecommend
 
 #Get the list of NiaapiApicReleaseRecommend under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiApicReleaseRecommendByOrg = Get-IntersightNiaapiApicReleaseRecommend -Organization $org
 

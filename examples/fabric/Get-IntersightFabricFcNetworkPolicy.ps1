@@ -5,7 +5,7 @@ $FabricFcNetworkPolicyByName = Get-IntersightFabricFcNetworkPolicy -Name FabricF
 $FabricFcNetworkPolicyList = Get-IntersightFabricFcNetworkPolicy
 
 #Get the list of FabricFcNetworkPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricFcNetworkPolicyByOrg = Get-IntersightFabricFcNetworkPolicy -Organization $org
 

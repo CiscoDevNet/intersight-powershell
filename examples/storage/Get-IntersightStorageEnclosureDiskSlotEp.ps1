@@ -5,7 +5,7 @@ $StorageEnclosureDiskSlotEpByName = Get-IntersightStorageEnclosureDiskSlotEp -Na
 $StorageEnclosureDiskSlotEpList = Get-IntersightStorageEnclosureDiskSlotEp
 
 #Get the list of StorageEnclosureDiskSlotEp under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageEnclosureDiskSlotEpByOrg = Get-IntersightStorageEnclosureDiskSlotEp -Organization $org
 

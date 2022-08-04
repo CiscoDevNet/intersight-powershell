@@ -5,7 +5,7 @@ $FirmwareFirmwareSummaryByName = Get-IntersightFirmwareFirmwareSummary -Name Fir
 $FirmwareFirmwareSummaryList = Get-IntersightFirmwareFirmwareSummary
 
 #Get the list of FirmwareFirmwareSummary under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareFirmwareSummaryByOrg = Get-IntersightFirmwareFirmwareSummary -Organization $org
 

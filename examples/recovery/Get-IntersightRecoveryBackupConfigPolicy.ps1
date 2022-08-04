@@ -5,7 +5,7 @@ $RecoveryBackupConfigPolicyByName = Get-IntersightRecoveryBackupConfigPolicy -Na
 $RecoveryBackupConfigPolicyList = Get-IntersightRecoveryBackupConfigPolicy
 
 #Get the list of RecoveryBackupConfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecoveryBackupConfigPolicyByOrg = Get-IntersightRecoveryBackupConfigPolicy -Organization $org
 

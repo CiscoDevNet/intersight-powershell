@@ -5,7 +5,7 @@ $KubernetesPodByName = Get-IntersightKubernetesPod -Name KubernetesPodName
 $KubernetesPodList = Get-IntersightKubernetesPod
 
 #Get the list of KubernetesPod under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesPodByOrg = Get-IntersightKubernetesPod -Organization $org
 

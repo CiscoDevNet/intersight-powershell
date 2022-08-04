@@ -5,7 +5,7 @@ $StorageNetAppLunByName = Get-IntersightStorageNetAppLun -Name StorageNetAppLunN
 $StorageNetAppLunList = Get-IntersightStorageNetAppLun
 
 #Get the list of StorageNetAppLun under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppLunByOrg = Get-IntersightStorageNetAppLun -Organization $org
 

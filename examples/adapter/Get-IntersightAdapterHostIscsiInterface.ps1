@@ -5,7 +5,7 @@ $AdapterHostIscsiInterfaceByName = Get-IntersightAdapterHostIscsiInterface -Name
 $AdapterHostIscsiInterfaceList = Get-IntersightAdapterHostIscsiInterface
 
 #Get the list of AdapterHostIscsiInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterHostIscsiInterfaceByOrg = Get-IntersightAdapterHostIscsiInterface -Organization $org
 

@@ -5,7 +5,7 @@ $ApplianceDeviceCertificateByName = Get-IntersightApplianceDeviceCertificate -Na
 $ApplianceDeviceCertificateList = Get-IntersightApplianceDeviceCertificate
 
 #Get the list of ApplianceDeviceCertificate under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceDeviceCertificateByOrg = Get-IntersightApplianceDeviceCertificate -Organization $org
 

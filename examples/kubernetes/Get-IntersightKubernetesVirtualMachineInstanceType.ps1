@@ -5,7 +5,7 @@ $KubernetesVirtualMachineInstanceTypeByName = Get-IntersightKubernetesVirtualMac
 $KubernetesVirtualMachineInstanceTypeList = Get-IntersightKubernetesVirtualMachineInstanceType
 
 #Get the list of KubernetesVirtualMachineInstanceType under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesVirtualMachineInstanceTypeByOrg = Get-IntersightKubernetesVirtualMachineInstanceType -Organization $org
 

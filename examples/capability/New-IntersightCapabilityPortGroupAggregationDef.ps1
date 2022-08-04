@@ -1,0 +1,1 @@
+$capability_port_group_aggregation_def1 = New-IntersightCapabilityPortGroupAggregationDef -Name 'capability_port_group_aggregation_def1' -AggregationCap 'operational' -Hw40GPortGroupCap 0

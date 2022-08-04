@@ -5,7 +5,7 @@ $StoragePhysicalDiskByName = Get-IntersightStoragePhysicalDisk -Name StoragePhys
 $StoragePhysicalDiskList = Get-IntersightStoragePhysicalDisk
 
 #Get the list of StoragePhysicalDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePhysicalDiskByOrg = Get-IntersightStoragePhysicalDisk -Organization $org
 

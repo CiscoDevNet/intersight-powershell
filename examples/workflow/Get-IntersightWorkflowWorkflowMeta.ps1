@@ -5,7 +5,7 @@ $WorkflowWorkflowMetaByName = Get-IntersightWorkflowWorkflowMeta -Name WorkflowW
 $WorkflowWorkflowMetaList = Get-IntersightWorkflowWorkflowMeta
 
 #Get the list of WorkflowWorkflowMeta under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowWorkflowMetaByOrg = Get-IntersightWorkflowWorkflowMeta -Organization $org
 

@@ -5,7 +5,7 @@ $IqnpoolUniverseByName = Get-IntersightIqnpoolUniverse -Name IqnpoolUniverseName
 $IqnpoolUniverseList = Get-IntersightIqnpoolUniverse
 
 #Get the list of IqnpoolUniverse under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IqnpoolUniverseByOrg = Get-IntersightIqnpoolUniverse -Organization $org
 

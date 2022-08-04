@@ -5,7 +5,7 @@ $ForecastDefinitionByName = Get-IntersightForecastDefinition -Name ForecastDefin
 $ForecastDefinitionList = Get-IntersightForecastDefinition
 
 #Get the list of ForecastDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ForecastDefinitionByOrg = Get-IntersightForecastDefinition -Organization $org
 

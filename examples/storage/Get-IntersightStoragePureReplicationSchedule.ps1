@@ -5,7 +5,7 @@ $StoragePureReplicationScheduleByName = Get-IntersightStoragePureReplicationSche
 $StoragePureReplicationScheduleList = Get-IntersightStoragePureReplicationSchedule
 
 #Get the list of StoragePureReplicationSchedule under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureReplicationScheduleByOrg = Get-IntersightStoragePureReplicationSchedule -Organization $org
 

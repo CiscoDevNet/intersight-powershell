@@ -5,7 +5,7 @@ $ConfigImporterByName = Get-IntersightConfigImporter -Name ConfigImporterName
 $ConfigImporterList = Get-IntersightConfigImporter
 
 #Get the list of ConfigImporter under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ConfigImporterByOrg = Get-IntersightConfigImporter -Organization $org
 

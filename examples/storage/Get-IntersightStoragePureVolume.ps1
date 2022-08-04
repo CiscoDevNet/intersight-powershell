@@ -5,7 +5,7 @@ $StoragePureVolumeByName = Get-IntersightStoragePureVolume -Name StoragePureVolu
 $StoragePureVolumeList = Get-IntersightStoragePureVolume
 
 #Get the list of StoragePureVolume under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureVolumeByOrg = Get-IntersightStoragePureVolume -Organization $org
 

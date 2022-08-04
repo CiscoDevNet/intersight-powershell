@@ -5,7 +5,7 @@ $FabricPcOperationByName = Get-IntersightFabricPcOperation -Name FabricPcOperati
 $FabricPcOperationList = Get-IntersightFabricPcOperation
 
 #Get the list of FabricPcOperation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricPcOperationByOrg = Get-IntersightFabricPcOperation -Organization $org
 

@@ -5,7 +5,7 @@ $WorkflowTaskDebugLogByName = Get-IntersightWorkflowTaskDebugLog -Name WorkflowT
 $WorkflowTaskDebugLogList = Get-IntersightWorkflowTaskDebugLog
 
 #Get the list of WorkflowTaskDebugLog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowTaskDebugLogByOrg = Get-IntersightWorkflowTaskDebugLog -Organization $org
 

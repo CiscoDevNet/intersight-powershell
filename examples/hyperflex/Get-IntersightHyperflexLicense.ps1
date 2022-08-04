@@ -5,7 +5,7 @@ $HyperflexLicenseByName = Get-IntersightHyperflexLicense -Name HyperflexLicenseN
 $HyperflexLicenseList = Get-IntersightHyperflexLicense
 
 #Get the list of HyperflexLicense under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexLicenseByOrg = Get-IntersightHyperflexLicense -Organization $org
 

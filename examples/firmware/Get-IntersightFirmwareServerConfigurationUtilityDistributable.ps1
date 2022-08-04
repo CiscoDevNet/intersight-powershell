@@ -5,7 +5,7 @@ $FirmwareServerConfigurationUtilityDistributableByName = Get-IntersightFirmwareS
 $FirmwareServerConfigurationUtilityDistributableList = Get-IntersightFirmwareServerConfigurationUtilityDistributable
 
 #Get the list of FirmwareServerConfigurationUtilityDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareServerConfigurationUtilityDistributableByOrg = Get-IntersightFirmwareServerConfigurationUtilityDistributable -Organization $org
 

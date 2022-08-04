@@ -5,7 +5,7 @@ $IaasUcsdMessagesByName = Get-IntersightIaasUcsdMessages -Name IaasUcsdMessagesN
 $IaasUcsdMessagesList = Get-IntersightIaasUcsdMessages
 
 #Get the list of IaasUcsdMessages under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IaasUcsdMessagesByOrg = Get-IntersightIaasUcsdMessages -Organization $org
 

@@ -5,7 +5,7 @@ $IamRoleByName = Get-IntersightIamRole -Name IamRoleName
 $IamRoleList = Get-IntersightIamRole
 
 #Get the list of IamRole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamRoleByOrg = Get-IntersightIamRole -Organization $org
 

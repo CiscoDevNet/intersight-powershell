@@ -5,7 +5,7 @@ $IamIpAddressByName = Get-IntersightIamIpAddress -Name IamIpAddressName
 $IamIpAddressList = Get-IntersightIamIpAddress
 
 #Get the list of IamIpAddress under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamIpAddressByOrg = Get-IntersightIamIpAddress -Organization $org
 

@@ -5,7 +5,7 @@ $CloudSkuDatabaseTypeByName = Get-IntersightCloudSkuDatabaseType -Name CloudSkuD
 $CloudSkuDatabaseTypeList = Get-IntersightCloudSkuDatabaseType
 
 #Get the list of CloudSkuDatabaseType under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CloudSkuDatabaseTypeByOrg = Get-IntersightCloudSkuDatabaseType -Organization $org
 

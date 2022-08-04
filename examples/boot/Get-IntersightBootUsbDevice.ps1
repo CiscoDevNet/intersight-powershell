@@ -5,7 +5,7 @@ $BootUsbDeviceByName = Get-IntersightBootUsbDevice -Name BootUsbDeviceName
 $BootUsbDeviceList = Get-IntersightBootUsbDevice
 
 #Get the list of BootUsbDevice under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BootUsbDeviceByOrg = Get-IntersightBootUsbDevice -Organization $org
 

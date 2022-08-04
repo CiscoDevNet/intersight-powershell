@@ -5,7 +5,7 @@ $IamTrustPointByName = Get-IntersightIamTrustPoint -Name IamTrustPointName
 $IamTrustPointList = Get-IntersightIamTrustPoint
 
 #Get the list of IamTrustPoint under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamTrustPointByOrg = Get-IntersightIamTrustPoint -Organization $org
 

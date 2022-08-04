@@ -5,7 +5,7 @@ $HyperflexServerFirmwareVersionByName = Get-IntersightHyperflexServerFirmwareVer
 $HyperflexServerFirmwareVersionList = Get-IntersightHyperflexServerFirmwareVersion
 
 #Get the list of HyperflexServerFirmwareVersion under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexServerFirmwareVersionByOrg = Get-IntersightHyperflexServerFirmwareVersion -Organization $org
 

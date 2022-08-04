@@ -5,7 +5,7 @@ $StoragePureProtectionGroupSnapshotByName = Get-IntersightStoragePureProtectionG
 $StoragePureProtectionGroupSnapshotList = Get-IntersightStoragePureProtectionGroupSnapshot
 
 #Get the list of StoragePureProtectionGroupSnapshot under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureProtectionGroupSnapshotByOrg = Get-IntersightStoragePureProtectionGroupSnapshot -Organization $org
 

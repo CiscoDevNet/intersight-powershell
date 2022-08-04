@@ -5,7 +5,7 @@ $HyperflexClusterStoragePolicyByName = Get-IntersightHyperflexClusterStoragePoli
 $HyperflexClusterStoragePolicyList = Get-IntersightHyperflexClusterStoragePolicy
 
 #Get the list of HyperflexClusterStoragePolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexClusterStoragePolicyByOrg = Get-IntersightHyperflexClusterStoragePolicy -Organization $org
 

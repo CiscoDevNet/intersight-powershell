@@ -5,7 +5,7 @@ $NetworkElementByName = Get-IntersightNetworkElement -Name NetworkElementName
 $NetworkElementList = Get-IntersightNetworkElement
 
 #Get the list of NetworkElement under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NetworkElementByOrg = Get-IntersightNetworkElement -Organization $org
 

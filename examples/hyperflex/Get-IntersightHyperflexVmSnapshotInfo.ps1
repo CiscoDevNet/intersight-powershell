@@ -5,7 +5,7 @@ $HyperflexVmSnapshotInfoByName = Get-IntersightHyperflexVmSnapshotInfo -Name Hyp
 $HyperflexVmSnapshotInfoList = Get-IntersightHyperflexVmSnapshotInfo
 
 #Get the list of HyperflexVmSnapshotInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexVmSnapshotInfoByOrg = Get-IntersightHyperflexVmSnapshotInfo -Organization $org
 

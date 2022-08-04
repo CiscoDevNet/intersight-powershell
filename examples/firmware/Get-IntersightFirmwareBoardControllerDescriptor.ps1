@@ -5,7 +5,7 @@ $FirmwareBoardControllerDescriptorByName = Get-IntersightFirmwareBoardController
 $FirmwareBoardControllerDescriptorList = Get-IntersightFirmwareBoardControllerDescriptor
 
 #Get the list of FirmwareBoardControllerDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareBoardControllerDescriptorByOrg = Get-IntersightFirmwareBoardControllerDescriptor -Organization $org
 

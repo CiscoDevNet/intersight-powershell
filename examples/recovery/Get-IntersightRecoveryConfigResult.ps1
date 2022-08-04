@@ -5,7 +5,7 @@ $RecoveryConfigResultByName = Get-IntersightRecoveryConfigResult -Name RecoveryC
 $RecoveryConfigResultList = Get-IntersightRecoveryConfigResult
 
 #Get the list of RecoveryConfigResult under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecoveryConfigResultByOrg = Get-IntersightRecoveryConfigResult -Organization $org
 

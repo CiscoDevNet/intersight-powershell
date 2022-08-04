@@ -5,7 +5,7 @@ $IamDomainGroupByName = Get-IntersightIamDomainGroup -Name IamDomainGroupName
 $IamDomainGroupList = Get-IntersightIamDomainGroup
 
 #Get the list of IamDomainGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamDomainGroupByOrg = Get-IntersightIamDomainGroup -Organization $org
 

@@ -5,7 +5,7 @@ $KubernetesAciCniProfileByName = Get-IntersightKubernetesAciCniProfile -Name Kub
 $KubernetesAciCniProfileList = Get-IntersightKubernetesAciCniProfile
 
 #Get the list of KubernetesAciCniProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesAciCniProfileByOrg = Get-IntersightKubernetesAciCniProfile -Organization $org
 

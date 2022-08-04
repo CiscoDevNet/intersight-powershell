@@ -5,7 +5,7 @@ $ServerProfileByName = Get-IntersightServerProfile -Name ServerProfileName
 $ServerProfileList = Get-IntersightServerProfile
 
 #Get the list of ServerProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ServerProfileByOrg = Get-IntersightServerProfile -Organization $org
 

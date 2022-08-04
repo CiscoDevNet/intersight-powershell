@@ -5,7 +5,7 @@ $HyperflexUcsmConfigPolicyByName = Get-IntersightHyperflexUcsmConfigPolicy -Name
 $HyperflexUcsmConfigPolicyList = Get-IntersightHyperflexUcsmConfigPolicy
 
 #Get the list of HyperflexUcsmConfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexUcsmConfigPolicyByOrg = Get-IntersightHyperflexUcsmConfigPolicy -Organization $org
 

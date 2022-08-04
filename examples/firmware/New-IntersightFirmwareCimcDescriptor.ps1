@@ -1,0 +1,1 @@
+$firmware_cimc_descriptor1 = New-IntersightFirmwareCimcDescriptor -Description 'firmware cimc descriptor' -Model 'UCSC-C240-M5L' -Vendor 'Cisco Systems Inc' -Revision '0'

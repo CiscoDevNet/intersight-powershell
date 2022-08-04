@@ -5,7 +5,7 @@ $NiatelemetryApicFlashDetailsByName = Get-IntersightNiatelemetryApicFlashDetails
 $NiatelemetryApicFlashDetailsList = Get-IntersightNiatelemetryApicFlashDetails
 
 #Get the list of NiatelemetryApicFlashDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicFlashDetailsByOrg = Get-IntersightNiatelemetryApicFlashDetails -Organization $org
 

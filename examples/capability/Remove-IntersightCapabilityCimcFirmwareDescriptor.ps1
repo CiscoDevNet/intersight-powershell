@@ -1,7 +1,7 @@
 
 #Get the CapabilityCimcFirmwareDescriptor to delete
-$CapabilityCimcFirmwareDescriptor = Remove-IntersightCapabilityCimcFirmwareDescriptor -Name CapabilityCimcFirmwareDescriptorName
+$CapabilityCimcFirmwareDescriptor = Get-IntersightCapabilityCimcFirmwareDescriptor -Name CapabilityCimcFirmwareDescriptorName
 $CapabilityCimcFirmwareDescriptor | Remove-IntersightCapabilityCimcFirmwareDescriptor
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilityCimcFirmwareDescriptor -Moid 123bc2222287wee
+#Remove the CapabilityCimcFirmwareDescriptor by Moid.
+Remove-IntersightCapabilityCimcFirmwareDescriptor -Moid '<Replace with Moid>'

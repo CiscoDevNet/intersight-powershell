@@ -5,7 +5,7 @@ $ComputeServerSettingByName = Get-IntersightComputeServerSetting -Name ComputeSe
 $ComputeServerSettingList = Get-IntersightComputeServerSetting
 
 #Get the list of ComputeServerSetting under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ComputeServerSettingByOrg = Get-IntersightComputeServerSetting -Organization $org
 

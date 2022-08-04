@@ -5,7 +5,7 @@ $ApplianceSetupInfoByName = Get-IntersightApplianceSetupInfo -Name ApplianceSetu
 $ApplianceSetupInfoList = Get-IntersightApplianceSetupInfo
 
 #Get the list of ApplianceSetupInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceSetupInfoByOrg = Get-IntersightApplianceSetupInfo -Organization $org
 

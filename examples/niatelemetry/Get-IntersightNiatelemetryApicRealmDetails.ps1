@@ -5,7 +5,7 @@ $NiatelemetryApicRealmDetailsByName = Get-IntersightNiatelemetryApicRealmDetails
 $NiatelemetryApicRealmDetailsList = Get-IntersightNiatelemetryApicRealmDetails
 
 #Get the list of NiatelemetryApicRealmDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicRealmDetailsByOrg = Get-IntersightNiatelemetryApicRealmDetails -Organization $org
 

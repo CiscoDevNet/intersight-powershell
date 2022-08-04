@@ -5,7 +5,7 @@ $HyperflexHealthCheckDefinitionByName = Get-IntersightHyperflexHealthCheckDefini
 $HyperflexHealthCheckDefinitionList = Get-IntersightHyperflexHealthCheckDefinition
 
 #Get the list of HyperflexHealthCheckDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexHealthCheckDefinitionByOrg = Get-IntersightHyperflexHealthCheckDefinition -Organization $org
 

@@ -5,7 +5,7 @@ $FirmwareSasExpanderDescriptorByName = Get-IntersightFirmwareSasExpanderDescript
 $FirmwareSasExpanderDescriptorList = Get-IntersightFirmwareSasExpanderDescriptor
 
 #Get the list of FirmwareSasExpanderDescriptor under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareSasExpanderDescriptorByOrg = Get-IntersightFirmwareSasExpanderDescriptor -Organization $org
 

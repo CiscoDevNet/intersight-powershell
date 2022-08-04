@@ -5,7 +5,7 @@ $SoftwarerepositoryCatalogByName = Get-IntersightSoftwarerepositoryCatalog -Name
 $SoftwarerepositoryCatalogList = Get-IntersightSoftwarerepositoryCatalog
 
 #Get the list of SoftwarerepositoryCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwarerepositoryCatalogByOrg = Get-IntersightSoftwarerepositoryCatalog -Organization $org
 

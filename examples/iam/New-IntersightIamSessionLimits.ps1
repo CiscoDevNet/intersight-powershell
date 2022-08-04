@@ -1,0 +1,1 @@
+$iam_session_limits1 = New-IntersightIamSessionLimits -IdleTimeOut 18000 -MaximumLimit 128 -PerUserLimit 32 -SessionTimeOut 31536000

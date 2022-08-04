@@ -5,7 +5,7 @@ $KubernetesVirtualMachineNodeProfileByName = Get-IntersightKubernetesVirtualMach
 $KubernetesVirtualMachineNodeProfileList = Get-IntersightKubernetesVirtualMachineNodeProfile
 
 #Get the list of KubernetesVirtualMachineNodeProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesVirtualMachineNodeProfileByOrg = Get-IntersightKubernetesVirtualMachineNodeProfile -Organization $org
 

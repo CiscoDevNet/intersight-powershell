@@ -5,7 +5,7 @@ $StorageNetAppAggregateByName = Get-IntersightStorageNetAppAggregate -Name Stora
 $StorageNetAppAggregateList = Get-IntersightStorageNetAppAggregate
 
 #Get the list of StorageNetAppAggregate under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppAggregateByOrg = Get-IntersightStorageNetAppAggregate -Organization $org
 

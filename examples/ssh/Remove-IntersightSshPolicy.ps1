@@ -1,7 +1,6 @@
-
 #Get the SshPolicy to delete
-$SshPolicy = Remove-IntersightSshPolicy -Name SshPolicyName
+$SshPolicy = Get-IntersightSshPolicy -Name SshPolicyName
 $SshPolicy | Remove-IntersightSshPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightSshPolicy -Moid 123bc2222287wee
+#Remove the SshPolicy by Moid.
+Remove-IntersightSshPolicy -Moid '<Replace with Moid>'

@@ -5,7 +5,7 @@ $SdwanRouterNodeByName = Get-IntersightSdwanRouterNode -Name SdwanRouterNodeName
 $SdwanRouterNodeList = Get-IntersightSdwanRouterNode
 
 #Get the list of SdwanRouterNode under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SdwanRouterNodeByOrg = Get-IntersightSdwanRouterNode -Organization $org
 

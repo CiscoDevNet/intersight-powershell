@@ -5,7 +5,7 @@ $NiatelemetryApicSysLogGrpByName = Get-IntersightNiatelemetryApicSysLogGrp -Name
 $NiatelemetryApicSysLogGrpList = Get-IntersightNiatelemetryApicSysLogGrp
 
 #Get the list of NiatelemetryApicSysLogGrp under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicSysLogGrpByOrg = Get-IntersightNiatelemetryApicSysLogGrp -Organization $org
 

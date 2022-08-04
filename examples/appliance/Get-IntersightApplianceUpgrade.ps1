@@ -5,7 +5,7 @@ $ApplianceUpgradeByName = Get-IntersightApplianceUpgrade -Name ApplianceUpgradeN
 $ApplianceUpgradeList = Get-IntersightApplianceUpgrade
 
 #Get the list of ApplianceUpgrade under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceUpgradeByOrg = Get-IntersightApplianceUpgrade -Organization $org
 

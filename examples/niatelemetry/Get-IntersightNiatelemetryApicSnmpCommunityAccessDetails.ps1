@@ -5,7 +5,7 @@ $NiatelemetryApicSnmpCommunityAccessDetailsByName = Get-IntersightNiatelemetryAp
 $NiatelemetryApicSnmpCommunityAccessDetailsList = Get-IntersightNiatelemetryApicSnmpCommunityAccessDetails
 
 #Get the list of NiatelemetryApicSnmpCommunityAccessDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicSnmpCommunityAccessDetailsByOrg = Get-IntersightNiatelemetryApicSnmpCommunityAccessDetails -Organization $org
 

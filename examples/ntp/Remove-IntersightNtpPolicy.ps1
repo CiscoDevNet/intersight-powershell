@@ -1,7 +1,7 @@
 
 #Get the NtpPolicy to delete
-$NtpPolicy = Remove-IntersightNtpPolicy -Name NtpPolicyName
+$NtpPolicy = Get-IntersightNtpPolicy -Name NtpPolicyName
 $NtpPolicy | Remove-IntersightNtpPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightNtpPolicy -Moid 123bc2222287wee
+#Remove the NtpPolicy by Moid.
+Remove-IntersightNtpPolicy -Moid '<Replace with Moid>'

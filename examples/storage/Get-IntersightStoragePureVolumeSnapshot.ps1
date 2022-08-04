@@ -5,7 +5,7 @@ $StoragePureVolumeSnapshotByName = Get-IntersightStoragePureVolumeSnapshot -Name
 $StoragePureVolumeSnapshotList = Get-IntersightStoragePureVolumeSnapshot
 
 #Get the list of StoragePureVolumeSnapshot under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureVolumeSnapshotByOrg = Get-IntersightStoragePureVolumeSnapshot -Organization $org
 

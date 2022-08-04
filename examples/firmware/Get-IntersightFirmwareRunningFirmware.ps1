@@ -5,7 +5,7 @@ $FirmwareRunningFirmwareByName = Get-IntersightFirmwareRunningFirmware -Name Fir
 $FirmwareRunningFirmwareList = Get-IntersightFirmwareRunningFirmware
 
 #Get the list of FirmwareRunningFirmware under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareRunningFirmwareByOrg = Get-IntersightFirmwareRunningFirmware -Organization $org
 

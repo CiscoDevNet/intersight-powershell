@@ -5,7 +5,7 @@ $EquipmentFruByName = Get-IntersightEquipmentFru -Name EquipmentFruName
 $EquipmentFruList = Get-IntersightEquipmentFru
 
 #Get the list of EquipmentFru under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentFruByOrg = Get-IntersightEquipmentFru -Organization $org
 

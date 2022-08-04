@@ -1,7 +1,6 @@
-
 #Get the SmtpPolicy to delete
-$SmtpPolicy = Remove-IntersightSmtpPolicy -Name SmtpPolicyName
+$SmtpPolicy = Get-IntersightSmtpPolicy -Name SmtpPolicyName
 $SmtpPolicy | Remove-IntersightSmtpPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightSmtpPolicy -Moid 123bc2222287wee
+#Remove the SmtpPolicy by Moid.
+Remove-IntersightSmtpPolicy -Moid '<Replace with Moid>'

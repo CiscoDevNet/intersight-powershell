@@ -5,7 +5,7 @@ $NetworkconfigPolicyByName = Get-IntersightNetworkconfigPolicy -Name Networkconf
 $NetworkconfigPolicyList = Get-IntersightNetworkconfigPolicy
 
 #Get the list of NetworkconfigPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NetworkconfigPolicyByOrg = Get-IntersightNetworkconfigPolicy -Organization $org
 

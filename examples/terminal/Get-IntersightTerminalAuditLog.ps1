@@ -5,7 +5,7 @@ $TerminalAuditLogByName = Get-IntersightTerminalAuditLog -Name TerminalAuditLogN
 $TerminalAuditLogList = Get-IntersightTerminalAuditLog
 
 #Get the list of TerminalAuditLog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TerminalAuditLogByOrg = Get-IntersightTerminalAuditLog -Organization $org
 

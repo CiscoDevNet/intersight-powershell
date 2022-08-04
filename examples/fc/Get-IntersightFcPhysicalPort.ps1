@@ -5,7 +5,7 @@ $FcPhysicalPortByName = Get-IntersightFcPhysicalPort -Name FcPhysicalPortName
 $FcPhysicalPortList = Get-IntersightFcPhysicalPort
 
 #Get the list of FcPhysicalPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FcPhysicalPortByOrg = Get-IntersightFcPhysicalPort -Organization $org
 

@@ -1,7 +1,7 @@
 
 #Get the FabricSystemQosPolicy to delete
-$FabricSystemQosPolicy = Remove-IntersightFabricSystemQosPolicy -Name FabricSystemQosPolicyName
+$FabricSystemQosPolicy = Get-IntersightFabricSystemQosPolicy -Name FabricSystemQosPolicyName
 $FabricSystemQosPolicy | Remove-IntersightFabricSystemQosPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightFabricSystemQosPolicy -Moid 123bc2222287wee
+#Remove the FabricSystemQosPolicy by Moid.
+Remove-IntersightFabricSystemQosPolicy -Moid '<Replace with Moid>'

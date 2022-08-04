@@ -5,7 +5,7 @@ $FcpoolLeaseByName = Get-IntersightFcpoolLease -Name FcpoolLeaseName
 $FcpoolLeaseList = Get-IntersightFcpoolLease
 
 #Get the list of FcpoolLease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FcpoolLeaseByOrg = Get-IntersightFcpoolLease -Organization $org
 

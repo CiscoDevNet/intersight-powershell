@@ -1,0 +1,1 @@
+$capability_sioc_module_capability_def1 = New-IntersightCapabilitySiocModuleCapabilityDef -DcSupported 0 -Name 'sioc0'

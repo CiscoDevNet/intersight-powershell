@@ -1,7 +1,7 @@
 
 #Get the CapabilityFanModuleDescriptor to delete
-$CapabilityFanModuleDescriptor = Remove-IntersightCapabilityFanModuleDescriptor -Name CapabilityFanModuleDescriptorName
+$CapabilityFanModuleDescriptor = Get-IntersightCapabilityFanModuleDescriptor -Name CapabilityFanModuleDescriptorName
 $CapabilityFanModuleDescriptor | Remove-IntersightCapabilityFanModuleDescriptor
 
-#Remove the server profile by Moid.
-Remove-IntersightCapabilityFanModuleDescriptor -Moid 123bc2222287wee
+#Remove the CapabilityFanModuleDescriptor by Moid.
+Remove-IntersightCapabilityFanModuleDescriptor -Moid '<Replace with Moid>'

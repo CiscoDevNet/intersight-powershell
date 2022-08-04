@@ -5,7 +5,7 @@ $EquipmentDeviceSummaryByName = Get-IntersightEquipmentDeviceSummary -Name Equip
 $EquipmentDeviceSummaryList = Get-IntersightEquipmentDeviceSummary
 
 #Get the list of EquipmentDeviceSummary under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentDeviceSummaryByOrg = Get-IntersightEquipmentDeviceSummary -Organization $org
 

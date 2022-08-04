@@ -5,7 +5,7 @@ $FabricLinkControlPolicyByName = Get-IntersightFabricLinkControlPolicy -Name Fab
 $FabricLinkControlPolicyList = Get-IntersightFabricLinkControlPolicy
 
 #Get the list of FabricLinkControlPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricLinkControlPolicyByOrg = Get-IntersightFabricLinkControlPolicy -Organization $org
 

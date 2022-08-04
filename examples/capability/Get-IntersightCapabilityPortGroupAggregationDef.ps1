@@ -5,7 +5,7 @@ $CapabilityPortGroupAggregationDefByName = Get-IntersightCapabilityPortGroupAggr
 $CapabilityPortGroupAggregationDefList = Get-IntersightCapabilityPortGroupAggregationDef
 
 #Get the list of CapabilityPortGroupAggregationDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityPortGroupAggregationDefByOrg = Get-IntersightCapabilityPortGroupAggregationDef -Organization $org
 

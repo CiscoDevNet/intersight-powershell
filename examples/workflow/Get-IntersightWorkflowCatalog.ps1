@@ -5,7 +5,7 @@ $WorkflowCatalogByName = Get-IntersightWorkflowCatalog -Name WorkflowCatalogName
 $WorkflowCatalogList = Get-IntersightWorkflowCatalog
 
 #Get the list of WorkflowCatalog under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowCatalogByOrg = Get-IntersightWorkflowCatalog -Organization $org
 

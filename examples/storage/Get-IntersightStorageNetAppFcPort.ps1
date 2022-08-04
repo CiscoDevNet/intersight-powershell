@@ -5,7 +5,7 @@ $StorageNetAppFcPortByName = Get-IntersightStorageNetAppFcPort -Name StorageNetA
 $StorageNetAppFcPortList = Get-IntersightStorageNetAppFcPort
 
 #Get the list of StorageNetAppFcPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppFcPortByOrg = Get-IntersightStorageNetAppFcPort -Organization $org
 

@@ -5,7 +5,7 @@ $HyperflexAlarmByName = Get-IntersightHyperflexAlarm -Name HyperflexAlarmName
 $HyperflexAlarmList = Get-IntersightHyperflexAlarm
 
 #Get the list of HyperflexAlarm under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexAlarmByOrg = Get-IntersightHyperflexAlarm -Organization $org
 

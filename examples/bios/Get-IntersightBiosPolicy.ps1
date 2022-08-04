@@ -5,7 +5,7 @@ $BiosPolicyByName = Get-IntersightBiosPolicy -Name BiosPolicyName
 $BiosPolicyList = Get-IntersightBiosPolicy
 
 #Get the list of BiosPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BiosPolicyByOrg = Get-IntersightBiosPolicy -Organization $org
 

@@ -5,7 +5,7 @@ $UuidpoolUuidLeaseByName = Get-IntersightUuidpoolUuidLease -Name UuidpoolUuidLea
 $UuidpoolUuidLeaseList = Get-IntersightUuidpoolUuidLease
 
 #Get the list of UuidpoolUuidLease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $UuidpoolUuidLeaseByOrg = Get-IntersightUuidpoolUuidLease -Organization $org
 

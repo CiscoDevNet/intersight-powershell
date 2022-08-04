@@ -5,7 +5,7 @@ $BiosBootModeByName = Get-IntersightBiosBootMode -Name BiosBootModeName
 $BiosBootModeList = Get-IntersightBiosBootMode
 
 #Get the list of BiosBootMode under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $BiosBootModeByOrg = Get-IntersightBiosBootMode -Organization $org
 

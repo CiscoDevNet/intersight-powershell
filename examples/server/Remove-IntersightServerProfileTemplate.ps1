@@ -1,7 +1,7 @@
 
 #Get the ServerProfileTemplate to delete
-$ServerProfileTemplate = Remove-IntersightServerProfileTemplate -Name ServerProfileTemplateName
+$ServerProfileTemplate = Get-IntersightServerProfileTemplate -Name ServerProfileTemplateName
 $ServerProfileTemplate | Remove-IntersightServerProfileTemplate
 
-#Remove the server profile by Moid.
-Remove-IntersightServerProfileTemplate -Moid 123bc2222287wee
+#Remove the ServerProfileTemplate  by Moid.
+Remove-IntersightServerProfileTemplate -Moid '<Replace with Moid>'

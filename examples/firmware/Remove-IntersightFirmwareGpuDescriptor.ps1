@@ -1,7 +1,7 @@
 
 #Get the FirmwareGpuDescriptor to delete
-$FirmwareGpuDescriptor = Remove-IntersightFirmwareGpuDescriptor -Name FirmwareGpuDescriptorName
+$FirmwareGpuDescriptor = Get-IntersightFirmwareGpuDescriptor -Name FirmwareGpuDescriptorName
 $FirmwareGpuDescriptor | Remove-IntersightFirmwareGpuDescriptor
 
-#Remove the server profile by Moid.
-Remove-IntersightFirmwareGpuDescriptor -Moid 123bc2222287wee
+#Remove the FirmwareGpuDescriptor by Moid.
+Remove-IntersightFirmwareGpuDescriptor -Moid '<Replace with Moid>'

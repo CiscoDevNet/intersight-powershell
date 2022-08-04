@@ -1,0 +1,1 @@
+$firmware_nxos_descriptor1 = New-IntersightFirmwareNxosDescriptor -Description 'firmware nxos descriptor' -Vendor 'Cisco' -Revision '0'

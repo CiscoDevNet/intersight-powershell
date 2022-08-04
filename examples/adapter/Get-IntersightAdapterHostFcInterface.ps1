@@ -5,7 +5,7 @@ $AdapterHostFcInterfaceByName = Get-IntersightAdapterHostFcInterface -Name Adapt
 $AdapterHostFcInterfaceList = Get-IntersightAdapterHostFcInterface
 
 #Get the list of AdapterHostFcInterface under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterHostFcInterfaceByOrg = Get-IntersightAdapterHostFcInterface -Organization $org
 

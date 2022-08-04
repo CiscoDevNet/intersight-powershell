@@ -1,0 +1,1 @@
+$fabric_appliance_pc_role1 = New-IntersightFabricAppliancePcRole -PcId 100 -AdminSpeed 'Auto' -Mode 'trunk' -Priority 'BestEffort'

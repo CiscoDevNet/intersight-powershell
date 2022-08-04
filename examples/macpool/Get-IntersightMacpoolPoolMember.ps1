@@ -5,7 +5,7 @@ $MacpoolPoolMemberByName = Get-IntersightMacpoolPoolMember -Name MacpoolPoolMemb
 $MacpoolPoolMemberList = Get-IntersightMacpoolPoolMember
 
 #Get the list of MacpoolPoolMember under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $MacpoolPoolMemberByOrg = Get-IntersightMacpoolPoolMember -Organization $org
 

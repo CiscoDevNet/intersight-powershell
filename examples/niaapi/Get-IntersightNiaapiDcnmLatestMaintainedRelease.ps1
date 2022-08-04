@@ -5,7 +5,7 @@ $NiaapiDcnmLatestMaintainedReleaseByName = Get-IntersightNiaapiDcnmLatestMaintai
 $NiaapiDcnmLatestMaintainedReleaseList = Get-IntersightNiaapiDcnmLatestMaintainedRelease
 
 #Get the list of NiaapiDcnmLatestMaintainedRelease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiDcnmLatestMaintainedReleaseByOrg = Get-IntersightNiaapiDcnmLatestMaintainedRelease -Organization $org
 

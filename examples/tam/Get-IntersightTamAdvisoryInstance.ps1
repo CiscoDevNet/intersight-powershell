@@ -1,11 +1,11 @@
 #Get the TamAdvisoryInstance by Name
 $TamAdvisoryInstanceByName = Get-IntersightTamAdvisoryInstance -Name TamAdvisoryInstanceName
 
-#Get the List of ServerProfiles
+#Get the List of TamAdvisoryInstance
 $TamAdvisoryInstanceList = Get-IntersightTamAdvisoryInstance
 
 #Get the list of TamAdvisoryInstance under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $TamAdvisoryInstanceByOrg = Get-IntersightTamAdvisoryInstance -Organization $org
 

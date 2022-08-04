@@ -5,7 +5,7 @@ $HyperflexAutoSupportPolicyByName = Get-IntersightHyperflexAutoSupportPolicy -Na
 $HyperflexAutoSupportPolicyList = Get-IntersightHyperflexAutoSupportPolicy
 
 #Get the list of HyperflexAutoSupportPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexAutoSupportPolicyByOrg = Get-IntersightHyperflexAutoSupportPolicy -Organization $org
 

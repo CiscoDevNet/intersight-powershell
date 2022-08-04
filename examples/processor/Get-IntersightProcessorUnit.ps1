@@ -5,7 +5,7 @@ $ProcessorUnitByName = Get-IntersightProcessorUnit -Name ProcessorUnitName
 $ProcessorUnitList = Get-IntersightProcessorUnit
 
 #Get the list of ProcessorUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ProcessorUnitByOrg = Get-IntersightProcessorUnit -Organization $org
 

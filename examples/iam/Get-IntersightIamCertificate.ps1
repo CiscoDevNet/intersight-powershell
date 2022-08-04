@@ -5,7 +5,7 @@ $IamCertificateByName = Get-IntersightIamCertificate -Name IamCertificateName
 $IamCertificateList = Get-IntersightIamCertificate
 
 #Get the list of IamCertificate under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamCertificateByOrg = Get-IntersightIamCertificate -Organization $org
 

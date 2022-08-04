@@ -1,7 +1,7 @@
 
 #Get the CertificatemanagementPolicy to delete
-$CertificatemanagementPolicy = Remove-IntersightCertificatemanagementPolicy -Name CertificatemanagementPolicyName
+$CertificatemanagementPolicy = Get-IntersightCertificatemanagementPolicy -Name CertificatemanagementPolicyName
 $CertificatemanagementPolicy | Remove-IntersightCertificatemanagementPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightCertificatemanagementPolicy -Moid 123bc2222287wee
+#Remove the CertificatemanagementPolicy by Moid.
+Remove-IntersightCertificatemanagementPolicy -Moid '<Replace with Moid>'

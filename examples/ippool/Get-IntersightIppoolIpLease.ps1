@@ -5,7 +5,7 @@ $IppoolIpLeaseByName = Get-IntersightIppoolIpLease -Name IppoolIpLeaseName
 $IppoolIpLeaseList = Get-IntersightIppoolIpLease
 
 #Get the list of IppoolIpLease under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IppoolIpLeaseByOrg = Get-IntersightIppoolIpLease -Organization $org
 

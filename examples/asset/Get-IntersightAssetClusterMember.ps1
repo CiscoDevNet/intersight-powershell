@@ -5,7 +5,7 @@ $AssetClusterMemberByName = Get-IntersightAssetClusterMember -Name AssetClusterM
 $AssetClusterMemberList = Get-IntersightAssetClusterMember
 
 #Get the list of AssetClusterMember under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetClusterMemberByOrg = Get-IntersightAssetClusterMember -Organization $org
 

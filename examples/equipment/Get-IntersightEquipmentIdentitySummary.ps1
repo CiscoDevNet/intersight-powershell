@@ -5,7 +5,7 @@ $EquipmentIdentitySummaryByName = Get-IntersightEquipmentIdentitySummary -Name E
 $EquipmentIdentitySummaryList = Get-IntersightEquipmentIdentitySummary
 
 #Get the list of EquipmentIdentitySummary under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentIdentitySummaryByOrg = Get-IntersightEquipmentIdentitySummary -Organization $org
 

@@ -5,7 +5,7 @@ $InventoryDnMoBindingByName = Get-IntersightInventoryDnMoBinding -Name Inventory
 $InventoryDnMoBindingList = Get-IntersightInventoryDnMoBinding
 
 #Get the list of InventoryDnMoBinding under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $InventoryDnMoBindingByOrg = Get-IntersightInventoryDnMoBinding -Organization $org
 

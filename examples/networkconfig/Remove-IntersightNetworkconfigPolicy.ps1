@@ -1,7 +1,8 @@
 
 #Get the NetworkconfigPolicy to delete
-$NetworkconfigPolicy = Remove-IntersightNetworkconfigPolicy -Name NetworkconfigPolicyName
+$NetworkconfigPolicy = Get-IntersightNetworkconfigPolicy -Name NetworkconfigPolicyName
 $NetworkconfigPolicy | Remove-IntersightNetworkconfigPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightNetworkconfigPolicy -Moid 123bc2222287wee
+#Remove the NetworkconfigPolicy by Moid.
+Remove-IntersightNetworkconfigPolicy -Moid '<Replace with Moid>'
+

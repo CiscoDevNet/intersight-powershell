@@ -1,11 +1,11 @@
 #Get the SoftwareUcsdDistributable by Name
 $SoftwareUcsdDistributableByName = Get-IntersightSoftwareUcsdDistributable -Name SoftwareUcsdDistributableName
 
-#Get the List of ServerProfiles
+#Get the List of SoftwareUcsdDistributable
 $SoftwareUcsdDistributableList = Get-IntersightSoftwareUcsdDistributable
 
 #Get the list of SoftwareUcsdDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareUcsdDistributableByOrg = Get-IntersightSoftwareUcsdDistributable -Organization $org
 

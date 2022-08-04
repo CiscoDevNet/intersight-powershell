@@ -5,7 +5,7 @@ $IamLocalUserPasswordPolicyByName = Get-IntersightIamLocalUserPasswordPolicy -Na
 $IamLocalUserPasswordPolicyList = Get-IntersightIamLocalUserPasswordPolicy
 
 #Get the list of IamLocalUserPasswordPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamLocalUserPasswordPolicyByOrg = Get-IntersightIamLocalUserPasswordPolicy -Organization $org
 

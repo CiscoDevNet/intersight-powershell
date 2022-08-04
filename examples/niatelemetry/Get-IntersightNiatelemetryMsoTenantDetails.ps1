@@ -5,7 +5,7 @@ $NiatelemetryMsoTenantDetailsByName = Get-IntersightNiatelemetryMsoTenantDetails
 $NiatelemetryMsoTenantDetailsList = Get-IntersightNiatelemetryMsoTenantDetails
 
 #Get the list of NiatelemetryMsoTenantDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryMsoTenantDetailsByOrg = Get-IntersightNiatelemetryMsoTenantDetails -Organization $org
 

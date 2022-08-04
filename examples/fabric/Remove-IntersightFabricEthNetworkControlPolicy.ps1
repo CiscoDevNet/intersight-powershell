@@ -1,7 +1,7 @@
 
 #Get the FabricEthNetworkControlPolicy to delete
-$FabricEthNetworkControlPolicy = Remove-IntersightFabricEthNetworkControlPolicy -Name FabricEthNetworkControlPolicyName
+$FabricEthNetworkControlPolicy = Get-IntersightFabricEthNetworkControlPolicy -Name FabricEthNetworkControlPolicyName
 $FabricEthNetworkControlPolicy | Remove-IntersightFabricEthNetworkControlPolicy
 
-#Remove the server profile by Moid.
-Remove-IntersightFabricEthNetworkControlPolicy -Moid 123bc2222287wee
+#Remove the FabricEthNetworkControlPolicy by Moid.
+Remove-IntersightFabricEthNetworkControlPolicy -Moid '<Replace with Moid>'

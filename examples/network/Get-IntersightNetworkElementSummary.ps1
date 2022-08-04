@@ -5,7 +5,7 @@ $NetworkElementSummaryByName = Get-IntersightNetworkElementSummary -Name Network
 $NetworkElementSummaryList = Get-IntersightNetworkElementSummary
 
 #Get the list of NetworkElementSummary under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NetworkElementSummaryByOrg = Get-IntersightNetworkElementSummary -Organization $org
 

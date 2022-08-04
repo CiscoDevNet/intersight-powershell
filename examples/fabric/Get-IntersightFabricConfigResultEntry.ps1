@@ -5,7 +5,7 @@ $FabricConfigResultEntryByName = Get-IntersightFabricConfigResultEntry -Name Fab
 $FabricConfigResultEntryList = Get-IntersightFabricConfigResultEntry
 
 #Get the list of FabricConfigResultEntry under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FabricConfigResultEntryByOrg = Get-IntersightFabricConfigResultEntry -Organization $org
 

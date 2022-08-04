@@ -5,7 +5,7 @@ $StoragePureArrayByName = Get-IntersightStoragePureArray -Name StoragePureArrayN
 $StoragePureArrayList = Get-IntersightStoragePureArray
 
 #Get the list of StoragePureArray under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureArrayByOrg = Get-IntersightStoragePureArray -Organization $org
 

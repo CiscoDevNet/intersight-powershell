@@ -5,7 +5,7 @@ $StoragePureHostLunByName = Get-IntersightStoragePureHostLun -Name StoragePureHo
 $StoragePureHostLunList = Get-IntersightStoragePureHostLun
 
 #Get the list of StoragePureHostLun under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureHostLunByOrg = Get-IntersightStoragePureHostLun -Organization $org
 

@@ -5,7 +5,7 @@ $AdapterUnitByName = Get-IntersightAdapterUnit -Name AdapterUnitName
 $AdapterUnitList = Get-IntersightAdapterUnit
 
 #Get the list of AdapterUnit under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AdapterUnitByOrg = Get-IntersightAdapterUnit -Organization $org
 

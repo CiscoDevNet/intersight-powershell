@@ -5,7 +5,7 @@ $HyperflexDataProtectionPeerByName = Get-IntersightHyperflexDataProtectionPeer -
 $HyperflexDataProtectionPeerList = Get-IntersightHyperflexDataProtectionPeer
 
 #Get the list of HyperflexDataProtectionPeer under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexDataProtectionPeerByOrg = Get-IntersightHyperflexDataProtectionPeer -Organization $org
 

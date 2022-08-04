@@ -5,7 +5,7 @@ $CloudSkuVolumeTypeByName = Get-IntersightCloudSkuVolumeType -Name CloudSkuVolum
 $CloudSkuVolumeTypeList = Get-IntersightCloudSkuVolumeType
 
 #Get the list of CloudSkuVolumeType under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CloudSkuVolumeTypeByOrg = Get-IntersightCloudSkuVolumeType -Organization $org
 

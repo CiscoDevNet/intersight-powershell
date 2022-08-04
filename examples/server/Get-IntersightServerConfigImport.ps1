@@ -5,7 +5,7 @@ $ServerConfigImportByName = Get-IntersightServerConfigImport -Name ServerConfigI
 $ServerConfigImportList = Get-IntersightServerConfigImport
 
 #Get the list of ServerConfigImport under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ServerConfigImportByOrg = Get-IntersightServerConfigImport -Organization $org
 

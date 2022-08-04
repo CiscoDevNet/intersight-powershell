@@ -5,7 +5,7 @@ $KvmVmConsoleByName = Get-IntersightKvmVmConsole -Name KvmVmConsoleName
 $KvmVmConsoleList = Get-IntersightKvmVmConsole
 
 #Get the list of KvmVmConsole under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KvmVmConsoleByOrg = Get-IntersightKvmVmConsole -Organization $org
 

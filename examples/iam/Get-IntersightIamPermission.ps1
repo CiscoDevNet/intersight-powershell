@@ -5,7 +5,7 @@ $IamPermissionByName = Get-IntersightIamPermission -Name IamPermissionName
 $IamPermissionList = Get-IntersightIamPermission
 
 #Get the list of IamPermission under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamPermissionByOrg = Get-IntersightIamPermission -Organization $org
 

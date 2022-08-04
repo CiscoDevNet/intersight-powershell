@@ -5,7 +5,7 @@ $ApplianceDiagSettingByName = Get-IntersightApplianceDiagSetting -Name Appliance
 $ApplianceDiagSettingList = Get-IntersightApplianceDiagSetting
 
 #Get the list of ApplianceDiagSetting under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceDiagSettingByOrg = Get-IntersightApplianceDiagSetting -Organization $org
 

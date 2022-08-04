@@ -5,7 +5,7 @@ $CapabilitySwitchManufacturingDefByName = Get-IntersightCapabilitySwitchManufact
 $CapabilitySwitchManufacturingDefList = Get-IntersightCapabilitySwitchManufacturingDef
 
 #Get the list of CapabilitySwitchManufacturingDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilitySwitchManufacturingDefByOrg = Get-IntersightCapabilitySwitchManufacturingDef -Organization $org
 

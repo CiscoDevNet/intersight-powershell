@@ -5,7 +5,7 @@ $IamResourceRolesByName = Get-IntersightIamResourceRoles -Name IamResourceRolesN
 $IamResourceRolesList = Get-IntersightIamResourceRoles
 
 #Get the list of IamResourceRoles under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamResourceRolesByOrg = Get-IntersightIamResourceRoles -Organization $org
 

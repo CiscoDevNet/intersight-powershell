@@ -5,7 +5,7 @@ $FirmwareDistributableByName = Get-IntersightFirmwareDistributable -Name Firmwar
 $FirmwareDistributableList = Get-IntersightFirmwareDistributable
 
 #Get the list of FirmwareDistributable under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareDistributableByOrg = Get-IntersightFirmwareDistributable -Organization $org
 

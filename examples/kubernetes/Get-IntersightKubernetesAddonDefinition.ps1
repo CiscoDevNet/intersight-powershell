@@ -5,7 +5,7 @@ $KubernetesAddonDefinitionByName = Get-IntersightKubernetesAddonDefinition -Name
 $KubernetesAddonDefinitionList = Get-IntersightKubernetesAddonDefinition
 
 #Get the list of KubernetesAddonDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $KubernetesAddonDefinitionByOrg = Get-IntersightKubernetesAddonDefinition -Organization $org
 

@@ -5,7 +5,7 @@ $RecommendationPhysicalItemByName = Get-IntersightRecommendationPhysicalItem -Na
 $RecommendationPhysicalItemList = Get-IntersightRecommendationPhysicalItem
 
 #Get the list of RecommendationPhysicalItem under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecommendationPhysicalItemByOrg = Get-IntersightRecommendationPhysicalItem -Organization $org
 

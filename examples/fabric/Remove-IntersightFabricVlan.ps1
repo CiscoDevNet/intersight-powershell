@@ -1,7 +1,7 @@
 
 #Get the FabricVlan to delete
-$FabricVlan = Remove-IntersightFabricVlan -Name FabricVlanName
+$FabricVlan = Get-IntersightFabricVlan -Name FabricVlanName
 $FabricVlan | Remove-IntersightFabricVlan
 
-#Remove the server profile by Moid.
-Remove-IntersightFabricVlan -Moid 123bc2222287wee
+#Remove the FabricVlan by Moid.
+Remove-IntersightFabricVlan -Moid '<Replace with Moid>'

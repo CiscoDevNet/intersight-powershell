@@ -1,7 +1,7 @@
 
 #Get the KubernetesTrustedRegistriesPolicy to delete
-$KubernetesTrustedRegistriesPolicy = Remove-IntersightKubernetesTrustedRegistriesPolicy -Name KubernetesTrustedRegistriesPolicyName
+$KubernetesTrustedRegistriesPolicy = Get-IntersightKubernetesTrustedRegistriesPolicy -Name KubernetesTrustedRegistriesPolicyName
 $KubernetesTrustedRegistriesPolicy | Remove-IntersightKubernetesTrustedRegistriesPolicy
 
 #Remove the server profile by Moid.
-Remove-IntersightKubernetesTrustedRegistriesPolicy -Moid 123bc2222287wee
+Remove-IntersightKubernetesTrustedRegistriesPolicy -Moid '<Replace with Moid>'

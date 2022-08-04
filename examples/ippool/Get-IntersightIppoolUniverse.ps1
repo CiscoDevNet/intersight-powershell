@@ -5,7 +5,7 @@ $IppoolUniverseByName = Get-IntersightIppoolUniverse -Name IppoolUniverseName
 $IppoolUniverseList = Get-IntersightIppoolUniverse
 
 #Get the list of IppoolUniverse under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IppoolUniverseByOrg = Get-IntersightIppoolUniverse -Organization $org
 

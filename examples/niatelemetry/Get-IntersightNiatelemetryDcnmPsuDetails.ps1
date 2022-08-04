@@ -5,7 +5,7 @@ $NiatelemetryDcnmPsuDetailsByName = Get-IntersightNiatelemetryDcnmPsuDetails -Na
 $NiatelemetryDcnmPsuDetailsList = Get-IntersightNiatelemetryDcnmPsuDetails
 
 #Get the list of NiatelemetryDcnmPsuDetails under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryDcnmPsuDetailsByOrg = Get-IntersightNiatelemetryDcnmPsuDetails -Organization $org
 

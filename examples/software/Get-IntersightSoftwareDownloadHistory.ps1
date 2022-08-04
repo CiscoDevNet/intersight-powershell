@@ -5,7 +5,7 @@ $SoftwareDownloadHistoryByName = Get-IntersightSoftwareDownloadHistory -Name Sof
 $SoftwareDownloadHistoryList = Get-IntersightSoftwareDownloadHistory
 
 #Get the list of SoftwareDownloadHistory under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareDownloadHistoryByOrg = Get-IntersightSoftwareDownloadHistory -Organization $org
 

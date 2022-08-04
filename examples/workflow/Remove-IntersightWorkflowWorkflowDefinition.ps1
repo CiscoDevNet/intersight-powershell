@@ -1,7 +1,6 @@
-
 #Get the WorkflowWorkflowDefinition to delete
-$WorkflowWorkflowDefinition = Remove-IntersightWorkflowWorkflowDefinition -Name WorkflowWorkflowDefinitionName
+$WorkflowWorkflowDefinition = Get-IntersightWorkflowWorkflowDefinition -Name WorkflowWorkflowDefinitionName
 $WorkflowWorkflowDefinition | Remove-IntersightWorkflowWorkflowDefinition
 
-#Remove the server profile by Moid.
-Remove-IntersightWorkflowWorkflowDefinition -Moid 123bc2222287wee
+#Remove the WorkflowWorkflowDefinition by Moid.
+Remove-IntersightWorkflowWorkflowDefinition -Moid '<Replace with Moid>'

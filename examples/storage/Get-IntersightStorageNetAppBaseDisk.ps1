@@ -5,7 +5,7 @@ $StorageNetAppBaseDiskByName = Get-IntersightStorageNetAppBaseDisk -Name Storage
 $StorageNetAppBaseDiskList = Get-IntersightStorageNetAppBaseDisk
 
 #Get the list of StorageNetAppBaseDisk under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppBaseDiskByOrg = Get-IntersightStorageNetAppBaseDisk -Organization $org
 

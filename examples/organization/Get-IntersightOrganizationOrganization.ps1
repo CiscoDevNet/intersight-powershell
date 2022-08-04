@@ -5,7 +5,7 @@ $OrganizationOrganizationByName = Get-IntersightOrganizationOrganization -Name O
 $OrganizationOrganizationList = Get-IntersightOrganizationOrganization
 
 #Get the list of OrganizationOrganization under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $OrganizationOrganizationByOrg = Get-IntersightOrganizationOrganization -Organization $org
 

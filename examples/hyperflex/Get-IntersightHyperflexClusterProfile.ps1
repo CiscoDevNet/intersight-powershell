@@ -5,7 +5,7 @@ $HyperflexClusterProfileByName = Get-IntersightHyperflexClusterProfile -Name Hyp
 $HyperflexClusterProfileList = Get-IntersightHyperflexClusterProfile
 
 #Get the list of HyperflexClusterProfile under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexClusterProfileByOrg = Get-IntersightHyperflexClusterProfile -Organization $org
 

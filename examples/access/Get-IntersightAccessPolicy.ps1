@@ -5,7 +5,7 @@ $AccessPolicyByName = Get-IntersightAccessPolicy -Name AccessPolicyName
 $AccessPolicyList = Get-IntersightAccessPolicy
 
 #Get the list of AccessPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AccessPolicyByOrg = Get-IntersightAccessPolicy -Organization $org
 

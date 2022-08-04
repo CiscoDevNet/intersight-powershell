@@ -5,7 +5,7 @@ $VnicEthAdapterPolicyByName = Get-IntersightVnicEthAdapterPolicy -Name VnicEthAd
 $VnicEthAdapterPolicyList = Get-IntersightVnicEthAdapterPolicy
 
 #Get the list of VnicEthAdapterPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $VnicEthAdapterPolicyByOrg = Get-IntersightVnicEthAdapterPolicy -Organization $org
 

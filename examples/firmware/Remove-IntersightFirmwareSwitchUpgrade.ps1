@@ -1,7 +1,7 @@
 
 #Get the FirmwareSwitchUpgrade to delete
-$FirmwareSwitchUpgrade = Remove-IntersightFirmwareSwitchUpgrade -Name FirmwareSwitchUpgradeName
+$FirmwareSwitchUpgrade = Get-IntersightFirmwareSwitchUpgrade -Name FirmwareSwitchUpgradeName
 $FirmwareSwitchUpgrade | Remove-IntersightFirmwareSwitchUpgrade
 
-#Remove the server profile by Moid.
-Remove-IntersightFirmwareSwitchUpgrade -Moid 123bc2222287wee
+#Remove the FirmwareSwitchUpgrade by Moid.
+Remove-IntersightFirmwareSwitchUpgrade -Moid '<Replace with Moid>'

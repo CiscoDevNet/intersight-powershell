@@ -5,7 +5,7 @@ $StoragePureHostGroupByName = Get-IntersightStoragePureHostGroup -Name StoragePu
 $StoragePureHostGroupList = Get-IntersightStoragePureHostGroup
 
 #Get the list of StoragePureHostGroup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StoragePureHostGroupByOrg = Get-IntersightStoragePureHostGroup -Organization $org
 

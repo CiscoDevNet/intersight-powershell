@@ -5,7 +5,7 @@ $AssetSubscriptionDeviceContractInformationByName = Get-IntersightAssetSubscript
 $AssetSubscriptionDeviceContractInformationList = Get-IntersightAssetSubscriptionDeviceContractInformation
 
 #Get the list of AssetSubscriptionDeviceContractInformation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $AssetSubscriptionDeviceContractInformationByOrg = Get-IntersightAssetSubscriptionDeviceContractInformation -Organization $org
 

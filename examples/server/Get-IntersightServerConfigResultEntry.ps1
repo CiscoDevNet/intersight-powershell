@@ -5,7 +5,7 @@ $ServerConfigResultEntryByName = Get-IntersightServerConfigResultEntry -Name Ser
 $ServerConfigResultEntryList = Get-IntersightServerConfigResultEntry
 
 #Get the list of ServerConfigResultEntry under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ServerConfigResultEntryByOrg = Get-IntersightServerConfigResultEntry -Organization $org
 

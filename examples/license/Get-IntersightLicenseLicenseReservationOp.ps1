@@ -5,7 +5,7 @@ $LicenseLicenseReservationOpByName = Get-IntersightLicenseLicenseReservationOp -
 $LicenseLicenseReservationOpList = Get-IntersightLicenseLicenseReservationOp
 
 #Get the list of LicenseLicenseReservationOp under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $LicenseLicenseReservationOpByOrg = Get-IntersightLicenseLicenseReservationOp -Organization $org
 

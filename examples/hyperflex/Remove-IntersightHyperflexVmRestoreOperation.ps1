@@ -1,7 +1,7 @@
 
 #Get the HyperflexVmRestoreOperation to delete
-$HyperflexVmRestoreOperation = Remove-IntersightHyperflexVmRestoreOperation -Name HyperflexVmRestoreOperationName
+$HyperflexVmRestoreOperation = Get-IntersightHyperflexVmRestoreOperation -Name HyperflexVmRestoreOperationName
 $HyperflexVmRestoreOperation | Remove-IntersightHyperflexVmRestoreOperation
 
-#Remove the server profile by Moid.
-Remove-IntersightHyperflexVmRestoreOperation -Moid 123bc2222287wee
+#Remove the HyperflexVmRestoreOperation by Moid.
+Remove-IntersightHyperflexVmRestoreOperation -Moid '<Replace with Moid>'

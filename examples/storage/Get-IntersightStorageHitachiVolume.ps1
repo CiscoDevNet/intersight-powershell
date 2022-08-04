@@ -5,7 +5,7 @@ $StorageHitachiVolumeByName = Get-IntersightStorageHitachiVolume -Name StorageHi
 $StorageHitachiVolumeList = Get-IntersightStorageHitachiVolume
 
 #Get the list of StorageHitachiVolume under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageHitachiVolumeByOrg = Get-IntersightStorageHitachiVolume -Organization $org
 

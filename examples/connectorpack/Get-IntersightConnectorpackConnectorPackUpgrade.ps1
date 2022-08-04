@@ -5,7 +5,7 @@ $ConnectorpackConnectorPackUpgradeByName = Get-IntersightConnectorpackConnectorP
 $ConnectorpackConnectorPackUpgradeList = Get-IntersightConnectorpackConnectorPackUpgrade
 
 #Get the list of ConnectorpackConnectorPackUpgrade under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ConnectorpackConnectorPackUpgradeByOrg = Get-IntersightConnectorpackConnectorPackUpgrade -Organization $org
 

@@ -5,7 +5,7 @@ $ApplianceFileSystemStatusByName = Get-IntersightApplianceFileSystemStatus -Name
 $ApplianceFileSystemStatusList = Get-IntersightApplianceFileSystemStatus
 
 #Get the list of ApplianceFileSystemStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceFileSystemStatusByOrg = Get-IntersightApplianceFileSystemStatus -Organization $org
 

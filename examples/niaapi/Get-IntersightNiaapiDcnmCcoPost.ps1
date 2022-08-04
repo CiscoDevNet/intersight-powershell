@@ -5,7 +5,7 @@ $NiaapiDcnmCcoPostByName = Get-IntersightNiaapiDcnmCcoPost -Name NiaapiDcnmCcoPo
 $NiaapiDcnmCcoPostList = Get-IntersightNiaapiDcnmCcoPost
 
 #Get the list of NiaapiDcnmCcoPost under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiDcnmCcoPostByOrg = Get-IntersightNiaapiDcnmCcoPost -Organization $org
 

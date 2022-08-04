@@ -5,7 +5,7 @@ $HyperflexVmBackupInfoByName = Get-IntersightHyperflexVmBackupInfo -Name Hyperfl
 $HyperflexVmBackupInfoList = Get-IntersightHyperflexVmBackupInfo
 
 #Get the list of HyperflexVmBackupInfo under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexVmBackupInfoByOrg = Get-IntersightHyperflexVmBackupInfo -Organization $org
 

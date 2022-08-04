@@ -5,7 +5,7 @@ $HyperflexVmImportOperationByName = Get-IntersightHyperflexVmImportOperation -Na
 $HyperflexVmImportOperationList = Get-IntersightHyperflexVmImportOperation
 
 #Get the list of HyperflexVmImportOperation under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexVmImportOperationByOrg = Get-IntersightHyperflexVmImportOperation -Organization $org
 

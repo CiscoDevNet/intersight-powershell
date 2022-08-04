@@ -5,7 +5,7 @@ $GraphicsControllerByName = Get-IntersightGraphicsController -Name GraphicsContr
 $GraphicsControllerList = Get-IntersightGraphicsController
 
 #Get the list of GraphicsController under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $GraphicsControllerByOrg = Get-IntersightGraphicsController -Organization $org
 

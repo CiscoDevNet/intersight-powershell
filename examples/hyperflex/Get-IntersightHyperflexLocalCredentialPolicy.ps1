@@ -5,7 +5,7 @@ $HyperflexLocalCredentialPolicyByName = Get-IntersightHyperflexLocalCredentialPo
 $HyperflexLocalCredentialPolicyList = Get-IntersightHyperflexLocalCredentialPolicy
 
 #Get the list of HyperflexLocalCredentialPolicy under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $HyperflexLocalCredentialPolicyByOrg = Get-IntersightHyperflexLocalCredentialPolicy -Organization $org
 

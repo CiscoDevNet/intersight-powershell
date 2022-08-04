@@ -5,7 +5,7 @@ $EquipmentFanModuleByName = Get-IntersightEquipmentFanModule -Name EquipmentFanM
 $EquipmentFanModuleList = Get-IntersightEquipmentFanModule
 
 #Get the list of EquipmentFanModule under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EquipmentFanModuleByOrg = Get-IntersightEquipmentFanModule -Organization $org
 

@@ -5,7 +5,7 @@ $NiaapiDcnmHweolByName = Get-IntersightNiaapiDcnmHweol -Name NiaapiDcnmHweolName
 $NiaapiDcnmHweolList = Get-IntersightNiaapiDcnmHweol
 
 #Get the list of NiaapiDcnmHweol under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiaapiDcnmHweolByOrg = Get-IntersightNiaapiDcnmHweol -Organization $org
 

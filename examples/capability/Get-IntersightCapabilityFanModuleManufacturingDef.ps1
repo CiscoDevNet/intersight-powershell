@@ -5,7 +5,7 @@ $CapabilityFanModuleManufacturingDefByName = Get-IntersightCapabilityFanModuleMa
 $CapabilityFanModuleManufacturingDefList = Get-IntersightCapabilityFanModuleManufacturingDef
 
 #Get the list of CapabilityFanModuleManufacturingDef under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CapabilityFanModuleManufacturingDefByOrg = Get-IntersightCapabilityFanModuleManufacturingDef -Organization $org
 

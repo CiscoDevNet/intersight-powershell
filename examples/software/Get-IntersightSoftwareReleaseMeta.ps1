@@ -5,7 +5,7 @@ $SoftwareReleaseMetaByName = Get-IntersightSoftwareReleaseMeta -Name SoftwareRel
 $SoftwareReleaseMetaList = Get-IntersightSoftwareReleaseMeta
 
 #Get the list of SoftwareReleaseMeta under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $SoftwareReleaseMetaByOrg = Get-IntersightSoftwareReleaseMeta -Organization $org
 

@@ -5,7 +5,7 @@ $IamPrivilegeByName = Get-IntersightIamPrivilege -Name IamPrivilegeName
 $IamPrivilegeList = Get-IntersightIamPrivilege
 
 #Get the list of IamPrivilege under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $IamPrivilegeByOrg = Get-IntersightIamPrivilege -Organization $org
 

@@ -5,7 +5,7 @@ $CloudSkuInstanceTypeByName = Get-IntersightCloudSkuInstanceType -Name CloudSkuI
 $CloudSkuInstanceTypeList = Get-IntersightCloudSkuInstanceType
 
 #Get the list of CloudSkuInstanceType under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $CloudSkuInstanceTypeByOrg = Get-IntersightCloudSkuInstanceType -Organization $org
 

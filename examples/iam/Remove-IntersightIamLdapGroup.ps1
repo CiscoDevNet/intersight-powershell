@@ -1,7 +1,7 @@
 
 #Get the IamLdapGroup to delete
-$IamLdapGroup = Remove-IntersightIamLdapGroup -Name IamLdapGroupName
+$IamLdapGroup = Get-IntersightIamLdapGroup -Name IamLdapGroupName
 $IamLdapGroup | Remove-IntersightIamLdapGroup
 
 #Remove the server profile by Moid.
-Remove-IntersightIamLdapGroup -Moid 123bc2222287wee
+Remove-IntersightIamLdapGroup -Moid '<Replace with Moid>'

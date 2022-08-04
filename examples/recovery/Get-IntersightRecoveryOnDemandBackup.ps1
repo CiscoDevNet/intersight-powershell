@@ -5,7 +5,7 @@ $RecoveryOnDemandBackupByName = Get-IntersightRecoveryOnDemandBackup -Name Recov
 $RecoveryOnDemandBackupList = Get-IntersightRecoveryOnDemandBackup
 
 #Get the list of RecoveryOnDemandBackup under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $RecoveryOnDemandBackupByOrg = Get-IntersightRecoveryOnDemandBackup -Organization $org
 

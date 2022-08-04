@@ -5,7 +5,7 @@ $StorageNetAppClusterByName = Get-IntersightStorageNetAppCluster -Name StorageNe
 $StorageNetAppClusterList = Get-IntersightStorageNetAppCluster
 
 #Get the list of StorageNetAppCluster under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $StorageNetAppClusterByOrg = Get-IntersightStorageNetAppCluster -Organization $org
 

@@ -5,7 +5,7 @@ $NiatelemetryApicDbgexpRsTsSchedulerByName = Get-IntersightNiatelemetryApicDbgex
 $NiatelemetryApicDbgexpRsTsSchedulerList = Get-IntersightNiatelemetryApicDbgexpRsTsScheduler
 
 #Get the list of NiatelemetryApicDbgexpRsTsScheduler under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $NiatelemetryApicDbgexpRsTsSchedulerByOrg = Get-IntersightNiatelemetryApicDbgexpRsTsScheduler -Organization $org
 

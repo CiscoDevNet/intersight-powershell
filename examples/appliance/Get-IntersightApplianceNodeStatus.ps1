@@ -5,7 +5,7 @@ $ApplianceNodeStatusByName = Get-IntersightApplianceNodeStatus -Name ApplianceNo
 $ApplianceNodeStatusList = Get-IntersightApplianceNodeStatus
 
 #Get the list of ApplianceNodeStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceNodeStatusByOrg = Get-IntersightApplianceNodeStatus -Organization $org
 

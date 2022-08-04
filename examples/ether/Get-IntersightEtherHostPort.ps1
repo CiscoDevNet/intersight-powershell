@@ -5,7 +5,7 @@ $EtherHostPortByName = Get-IntersightEtherHostPort -Name EtherHostPortName
 $EtherHostPortList = Get-IntersightEtherHostPort
 
 #Get the list of EtherHostPort under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $EtherHostPortByOrg = Get-IntersightEtherHostPort -Organization $org
 

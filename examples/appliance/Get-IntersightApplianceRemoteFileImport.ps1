@@ -5,7 +5,7 @@ $ApplianceRemoteFileImportByName = Get-IntersightApplianceRemoteFileImport -Name
 $ApplianceRemoteFileImportList = Get-IntersightApplianceRemoteFileImport
 
 #Get the list of ApplianceRemoteFileImport under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $ApplianceRemoteFileImportByOrg = Get-IntersightApplianceRemoteFileImport -Organization $org
 

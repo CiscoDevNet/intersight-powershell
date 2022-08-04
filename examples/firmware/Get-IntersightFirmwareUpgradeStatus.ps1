@@ -5,7 +5,7 @@ $FirmwareUpgradeStatusByName = Get-IntersightFirmwareUpgradeStatus -Name Firmwar
 $FirmwareUpgradeStatusList = Get-IntersightFirmwareUpgradeStatus
 
 #Get the list of FirmwareUpgradeStatus under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $FirmwareUpgradeStatusByOrg = Get-IntersightFirmwareUpgradeStatus -Organization $org
 

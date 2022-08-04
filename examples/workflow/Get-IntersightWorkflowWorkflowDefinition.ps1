@@ -1,11 +1,11 @@
 #Get the WorkflowWorkflowDefinition by Name
 $WorkflowWorkflowDefinitionByName = Get-IntersightWorkflowWorkflowDefinition -Name WorkflowWorkflowDefinitionName
 
-#Get the List of ServerProfiles
+#Get the List of WorkflowWorkflowDefinition
 $WorkflowWorkflowDefinitionList = Get-IntersightWorkflowWorkflowDefinition
 
 #Get the list of WorkflowWorkflowDefinition under particular organization.
-$org = Get-IntersightOrganizationOrganization -Name myOrg
+$org = Get-IntersightOrganizationOrganization -Name 'default'
 
 $WorkflowWorkflowDefinitionByOrg = Get-IntersightWorkflowWorkflowDefinition -Organization $org
 
