@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageNetAppExportPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppExportPolicy.ClassIdEnum>][-Moid< string>][-NetAppExportPolicyRule< System.Collections.Generic.List`1[Model.StorageNetAppExportPolicyRule]>][-ObjectType< StorageNetAppExportPolicy.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageNetAppExportPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppExportPolicy.ClassIdEnum>][-Moid< string>][-ObjectType< StorageNetAppExportPolicy.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,23 +59,6 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetAppExportPolicyRule
-
-
-Note :- Use Initialize-IntersightStorageNetAppExportPolicyRule to create the object of complex type StorageNetAppExportPolicyRule
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.StorageNetAppExportPolicyRule]
 Parameter Sets: (All)
 Aliases:
 
@@ -176,5 +159,3 @@ PS C:\> Initialize-IntersightStorageNetAppExportPolicy
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-IntersightStorageNetAppExportPolicyRule](./Initialize-IntersightStorageNetAppExportPolicyRule.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStoragePureProtectionGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StoragePureProtectionGroup.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< StoragePureProtectionGroup.ObjectTypeEnum>][-Prefix< string>][-ReplicationEnabled< bool>][-Size< long>][-SnapshotEnabled< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStoragePureProtectionGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StoragePureProtectionGroup.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< StoragePureProtectionGroup.ObjectTypeEnum>][-Prefix< string>][-ReplicationEnabled< bool>][-SnapshotEnabled< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,21 +119,6 @@ Flag to determine if replication is enabled. Snapshots are replicated to the tar
 
 ```yaml
 Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Size
-Overall size of all snapshots in the protection group, represented in bytes.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

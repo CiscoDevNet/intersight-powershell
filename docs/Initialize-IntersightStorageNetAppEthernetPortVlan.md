@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageNetAppEthernetPortVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BasePort< Model.StorageNetAppPort>][-ClassId< StorageNetAppEthernetPortVlan.ClassIdEnum>][-ObjectType< StorageNetAppEthernetPortVlan.ObjectTypeEnum>][-Tag< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageNetAppEthernetPortVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageNetAppEthernetPortVlan.ClassIdEnum>][-ObjectType< StorageNetAppEthernetPortVlan.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,23 +29,6 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -BasePort
-Port UUID along with readable names.
-
-Note :- Use Initialize-IntersightStorageNetAppPort to create the object of complex type StorageNetAppPort
-
-```yaml
-Type: Model.StorageNetAppPort
 Parameter Sets: (All)
 Aliases:
 
@@ -76,21 +59,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: StorageNetAppEthernetPortVlan.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tag
-The ID tag of the VLAN for this port.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -157,5 +125,3 @@ PS C:\> Initialize-IntersightStorageNetAppEthernetPortVlan
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightStorageNetAppPort](./Initialize-IntersightStorageNetAppPort.md)

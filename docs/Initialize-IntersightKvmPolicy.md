@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVideoEncryption
-If enabled, encrypts all video information sent through KVM. Please note that this is no longer applicable for servers running versions 4.2 and above.
+If enabled, encrypts all video information sent through KVM. Please note that this can no longer be disabled for servers running versions 4.2 and above.
 
 ```yaml
 Type: bool

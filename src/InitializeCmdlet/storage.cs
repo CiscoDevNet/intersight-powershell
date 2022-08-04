@@ -3396,16 +3396,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Host group number for this host."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long HostGroupNumber
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3444,10 +3434,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("HostGroupNumber"))
-            {
-                initObject.HostGroupNumber = this.HostGroupNumber;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -5668,20 +5654,8 @@ namespace Intersight.PowerShell
         public InitializeIntersightStorageNetAppEthernetPortLag()
         {
             ClassId = StorageNetAppEthernetPortLag.ClassIdEnum.StorageNetAppEthernetPortLag;
-            DistributionPolicy = StorageNetAppEthernetPortLag.DistributionPolicyEnum.None;
-            Mode = StorageNetAppEthernetPortLag.ModeEnum.None;
             ObjectType = StorageNetAppEthernetPortLag.ObjectTypeEnum.StorageNetAppEthernetPortLag;
 
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.StorageNetAppPort> ActivePorts
-        {
-            get;
-            set;
         }
         // <summary>
         /// <para type="description"></para>
@@ -5704,36 +5678,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Policy for mapping flows to ports for outbound packets through a LAG (ifgrp).\n* `none` - Default unknown distribution policy type.\n* `port` - Network traffic is distributed based on the transport layer (TCP/UDP) ports.\n* `ip` - Network traffic is distributed based on IP addresses.\n* `mac` - Network traffic is distributed based on MAC addresses.\n* `sequential` - Network traffic is distributed in round-robin fashion from the list of configured, available ports."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public StorageNetAppEthernetPortLag.DistributionPolicyEnum DistributionPolicy
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.StorageNetAppPort> MemberPorts
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Determines how the ports interact with the switch.\n* `none` - Default unknown lag mode type.\n* `multimode_lacp` - Bundle multiple member ports of the interface group using Link Aggregation Control Protocol.\n* `multimode` - Bundle multiple member ports of the interface group to act as a single trunked port.\n* `singlemode` - Provide port redundancy using member ports of the interface group for failover."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public StorageNetAppEthernetPortLag.ModeEnum Mode
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5747,27 +5691,11 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
             Intersight.Model.StorageNetAppEthernetPortLag initObject = new Intersight.Model.StorageNetAppEthernetPortLag();
-            if (this.MyInvocation.BoundParameters.ContainsKey("ActivePorts"))
-            {
-                initObject.ActivePorts = this.ActivePorts;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DistributionPolicy"))
-            {
-                initObject.DistributionPolicy = this.DistributionPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MemberPorts"))
-            {
-                initObject.MemberPorts = this.MemberPorts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -5796,16 +5724,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Port UUID along with readable names."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.StorageNetAppPort BasePort
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5825,16 +5743,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The ID tag of the VLAN for this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Tag
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -5843,16 +5751,8 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("BasePort"))
-            {
-                initObject.BasePort = this.BasePort;
-            }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tag"))
-            {
-                initObject.Tag = this.Tag;
-            }
             WriteObject(initObject);
         }
 
@@ -5900,16 +5800,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.StorageNetAppExportPolicyRule> NetAppExportPolicyRule
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5941,10 +5831,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetAppExportPolicyRule"))
-            {
-                initObject.NetAppExportPolicyRule = this.NetAppExportPolicyRule;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
@@ -5988,71 +5874,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> ClientMatch
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Position of export rule in the list of rules."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Index
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public StorageNetAppExportPolicyRule.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> RoRule
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> RwRule
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> SuperUser
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Export Policy rule that are mapped to this User ID."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string User
         {
             get;
             set;
@@ -6066,31 +5892,7 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ClientMatch"))
-            {
-                initObject.ClientMatch = this.ClientMatch;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Index"))
-            {
-                initObject.Index = this.Index;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RoRule"))
-            {
-                initObject.RoRule = this.RoRule;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RwRule"))
-            {
-                initObject.RwRule = this.RwRule;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SuperUser"))
-            {
-                initObject.SuperUser = this.SuperUser;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("User"))
-            {
-                initObject.User = this.User;
-            }
             WriteObject(initObject);
         }
 
@@ -7850,41 +7652,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name associated with this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the node associated with this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string NodeName
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public StorageNetAppPort.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Unique identifier of the port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Uuid
         {
             get;
             set;
@@ -7898,19 +7670,7 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NodeName"))
-            {
-                initObject.NodeName = this.NodeName;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uuid"))
-            {
-                initObject.Uuid = this.Uuid;
-            }
             WriteObject(initObject);
         }
 
@@ -10206,16 +9966,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Overall size of all snapshots in the protection group, represented in bytes."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Size
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Flag to determine if snapshot creation is enabled. Snapshots are created on local array if this flag is set."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -10260,10 +10010,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ReplicationEnabled"))
             {
                 initObject.ReplicationEnabled = this.ReplicationEnabled;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Size"))
-            {
-                initObject.Size = this.Size;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SnapshotEnabled"))
             {
