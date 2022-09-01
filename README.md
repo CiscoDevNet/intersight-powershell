@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.7658
-- C# SDK version: 1.0.11.7658
+- Intersight.PowerShell version: 1.0.11.7766
+- C# SDK version: 1.0.11.7766
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.7658"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.7766"}
 ```
 or
 
@@ -1141,6 +1141,7 @@ FabricUplinkPcRole | [**Get-IntersightFabricUplinkPcRole**](docs/Get-IntersightF
 FabricUplinkRole | [**Get-IntersightFabricUplinkRole**](docs/Get-IntersightFabricUplinkRole.md) | Read a 'FabricUplinkRole' resource.
 FabricVlan | [**Get-IntersightFabricVlan**](docs/Get-IntersightFabricVlan.md) | Read a 'FabricVlan' resource.
 FabricVlanInventory | [**Get-IntersightFabricVlanInventory**](docs/Get-IntersightFabricVlanInventory.md) | Read a 'FabricVlanInventory' resource.
+FabricVlanSet | [**Get-IntersightFabricVlanSet**](docs/Get-IntersightFabricVlanSet.md) | Read a 'FabricVlanSet' resource.
 FabricVsan | [**Get-IntersightFabricVsan**](docs/Get-IntersightFabricVsan.md) | Read a 'FabricVsan' resource.
 FabricVsanInventory | [**Get-IntersightFabricVsanInventory**](docs/Get-IntersightFabricVsanInventory.md) | Read a 'FabricVsanInventory' resource.
 FabricAppliancePcRole | [**New-IntersightFabricAppliancePcRole**](docs/New-IntersightFabricAppliancePcRole.md) | Create a 'FabricAppliancePcRole' resource.
@@ -1946,6 +1947,7 @@ NiatelemetryApicSysLogSrc | [**Get-IntersightNiatelemetryApicSysLogSrc**](docs/G
 NiatelemetryApicTransceiverDetails | [**Get-IntersightNiatelemetryApicTransceiverDetails**](docs/Get-IntersightNiatelemetryApicTransceiverDetails.md) | Read a 'NiatelemetryApicTransceiverDetails' resource.
 NiatelemetryApicUiPageCounts | [**Get-IntersightNiatelemetryApicUiPageCounts**](docs/Get-IntersightNiatelemetryApicUiPageCounts.md) | Read a 'NiatelemetryApicUiPageCounts' resource.
 NiatelemetryAppDetails | [**Get-IntersightNiatelemetryAppDetails**](docs/Get-IntersightNiatelemetryAppDetails.md) | Read a 'NiatelemetryAppDetails' resource.
+NiatelemetryCloudDetails | [**Get-IntersightNiatelemetryCloudDetails**](docs/Get-IntersightNiatelemetryCloudDetails.md) | Read a 'NiatelemetryCloudDetails' resource.
 NiatelemetryCommonPolicies | [**Get-IntersightNiatelemetryCommonPolicies**](docs/Get-IntersightNiatelemetryCommonPolicies.md) | Read a 'NiatelemetryCommonPolicies' resource.
 NiatelemetryDcnmFanDetails | [**Get-IntersightNiatelemetryDcnmFanDetails**](docs/Get-IntersightNiatelemetryDcnmFanDetails.md) | Read a 'NiatelemetryDcnmFanDetails' resource.
 NiatelemetryDcnmFexDetails | [**Get-IntersightNiatelemetryDcnmFexDetails**](docs/Get-IntersightNiatelemetryDcnmFexDetails.md) | Read a 'NiatelemetryDcnmFexDetails' resource.
@@ -1958,6 +1960,7 @@ NiatelemetryFabricNodeControlDetails | [**Get-IntersightNiatelemetryFabricNodeCo
 NiatelemetryFabricPodProfile | [**Get-IntersightNiatelemetryFabricPodProfile**](docs/Get-IntersightNiatelemetryFabricPodProfile.md) | Read a 'NiatelemetryFabricPodProfile' resource.
 NiatelemetryFabricPodSs | [**Get-IntersightNiatelemetryFabricPodSs**](docs/Get-IntersightNiatelemetryFabricPodSs.md) | Read a 'NiatelemetryFabricPodSs' resource.
 NiatelemetryFault | [**Get-IntersightNiatelemetryFault**](docs/Get-IntersightNiatelemetryFault.md) | Read a 'NiatelemetryFault' resource.
+NiatelemetryHcloudDetails | [**Get-IntersightNiatelemetryHcloudDetails**](docs/Get-IntersightNiatelemetryHcloudDetails.md) | Read a 'NiatelemetryHcloudDetails' resource.
 NiatelemetryHealthInsightsData | [**Get-IntersightNiatelemetryHealthInsightsData**](docs/Get-IntersightNiatelemetryHealthInsightsData.md) | Read a 'NiatelemetryHealthInsightsData' resource.
 NiatelemetryHttpsAclContractDetails | [**Get-IntersightNiatelemetryHttpsAclContractDetails**](docs/Get-IntersightNiatelemetryHttpsAclContractDetails.md) | Read a 'NiatelemetryHttpsAclContractDetails' resource.
 NiatelemetryHttpsAclContractFilterMap | [**Get-IntersightNiatelemetryHttpsAclContractFilterMap**](docs/Get-IntersightNiatelemetryHttpsAclContractFilterMap.md) | Read a 'NiatelemetryHttpsAclContractFilterMap' resource.

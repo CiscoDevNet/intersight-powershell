@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FirmwareVersion< string>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][[-Moid]< string>][-Pid< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DeviceId< string>][-FirmwareVersion< string>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][[-Moid]< string>][-Pid< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Update a &apos;PciDevice&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeviceId
+The PCI device id of the PCI device.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

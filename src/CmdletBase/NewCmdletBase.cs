@@ -43,6 +43,11 @@ namespace Intersight.PowerShell
 
                     if (this.MyInvocation.BoundParameters.ContainsKey(propName))
                     {
+                        if (propName == "Moid" || this.MyInvocation.BoundParameters[propName] == null)
+                        {
+                            continue;
+                        }
+
                         item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
                     }
                 }
@@ -78,6 +83,9 @@ namespace Intersight.PowerShell
         {
             foreach (var item in this.MyInvocation.BoundParameters)
             {
+                if (item.Value == null)
+                    continue;
+
                 var itemValue = item.Value;
                 if (itemValue.GetType().Name.EndsWith("Relationship"))
                 {

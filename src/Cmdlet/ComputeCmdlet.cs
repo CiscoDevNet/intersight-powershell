@@ -869,6 +869,18 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Chassis slot number of the manager compute server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ManagerSlotId
+        {
+            get;
+            set;
+        }
+
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
@@ -4422,6 +4434,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

@@ -317,6 +317,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The PCI device id of the PCI device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The database identifier of the registered device of an object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1471,6 +1482,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"The PCI device id of the PCI device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceId
+        {
+            get;
+            set;
+        }
 
 
 
