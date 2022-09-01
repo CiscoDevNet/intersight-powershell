@@ -4908,6 +4908,370 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryCloudDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryCloudDetails")]
+    public class InitializeIntersightNiatelemetryCloudDetails : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryCloudDetails()
+        {
+            ClassId = NiatelemetryCloudDetails.ClassIdEnum.NiatelemetryCloudDetails;
+            ObjectType = NiatelemetryCloudDetails.ObjectTypeEnum.NiatelemetryCloudDetails;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCloudDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the dn of cloudProvP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCloudDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetryCloudRegionsElement> Region
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the APIC site from which this data is being collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the vendor of the cloud."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryCloudDetails initObject = new Intersight.Model.NiatelemetryCloudDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Region"))
+            {
+                initObject.Region = this.Region;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SiteName"))
+            {
+                initObject.SiteName = this.SiteName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryCloudRegionsElement.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryCloudRegionsElement")]
+    public class InitializeIntersightNiatelemetryCloudRegionsElement : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryCloudRegionsElement()
+        {
+            ClassId = NiatelemetryCloudRegionsElement.ClassIdEnum.NiatelemetryCloudRegionsElement;
+            ObjectType = NiatelemetryCloudRegionsElement.ObjectTypeEnum.NiatelemetryCloudRegionsElement;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Return value of adminState attribute."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string AdminState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Return whether CAPIC is deployed in the cloud region or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CapicDeployed
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCloudRegionsElement.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Return whether any user deployment is configured in the cloud region or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InUse
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Return value of name of the cloud region."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCloudRegionsElement.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryCloudRegionsElement initObject = new Intersight.Model.NiatelemetryCloudRegionsElement();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
+            {
+                initObject.AdminState = this.AdminState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CapicDeployed"))
+            {
+                initObject.CapicDeployed = this.CapicDeployed;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("InUse"))
+            {
+                initObject.InUse = this.InUse;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryCloudRoutersElement.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryCloudRoutersElement")]
+    public class InitializeIntersightNiatelemetryCloudRoutersElement : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryCloudRoutersElement()
+        {
+            ClassId = NiatelemetryCloudRoutersElement.ClassIdEnum.NiatelemetryCloudRoutersElement;
+            ObjectType = NiatelemetryCloudRoutersElement.ObjectTypeEnum.NiatelemetryCloudRoutersElement;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCloudRoutersElement.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Return value of name of the cloud router."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCloudRoutersElement.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Return value of cloud router version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryCloudRoutersElement initObject = new Intersight.Model.NiatelemetryCloudRoutersElement();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryCommonPolicies.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryCommonPolicies")]
@@ -7954,6 +8318,258 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryHcloudDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryHcloudDetails")]
+    public class InitializeIntersightNiatelemetryHcloudDetails : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryHcloudDetails()
+        {
+            ClassId = NiatelemetryHcloudDetails.ClassIdEnum.NiatelemetryHcloudDetails;
+            ObjectType = NiatelemetryHcloudDetails.ObjectTypeEnum.NiatelemetryHcloudDetails;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryHcloudDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Dn for the inventories present."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total number of EPGs deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EpgCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryHcloudDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetryCloudRoutersElement> Router
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total number of Cisco Cloud Routers deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long RouterCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the APIC site from which this data is being collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the IP addresses of the subnets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SubnetsAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total number of subnets deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long SubnetsCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total number of Transit Gateways deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long TransitGatewaysCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total number of VPCs deployed in Azure/AWS platforms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long VpcCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the total number of VPCs deployed in GCP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long VpcCountGcp
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryHcloudDetails initObject = new Intersight.Model.NiatelemetryHcloudDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EpgCount"))
+            {
+                initObject.EpgCount = this.EpgCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Router"))
+            {
+                initObject.Router = this.Router;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RouterCount"))
+            {
+                initObject.RouterCount = this.RouterCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SiteName"))
+            {
+                initObject.SiteName = this.SiteName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SubnetsAddress"))
+            {
+                initObject.SubnetsAddress = this.SubnetsAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SubnetsCount"))
+            {
+                initObject.SubnetsCount = this.SubnetsCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TransitGatewaysCount"))
+            {
+                initObject.TransitGatewaysCount = this.TransitGatewaysCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpcCount"))
+            {
+                initObject.VpcCount = this.VpcCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpcCountGcp"))
+            {
+                initObject.VpcCountGcp = this.VpcCountGcp;
             }
             WriteObject(initObject);
         }
@@ -12230,6 +12846,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Returns the total number of tenants deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long CloudTenantCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Number of compute hypervisors on the fabric."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13287,6 +13913,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("CloudSecPeerCount"))
             {
                 initObject.CloudSecPeerCount = this.CloudSecPeerCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CloudTenantCount"))
+            {
+                initObject.CloudTenantCount = this.CloudTenantCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("CompHvCount"))
             {

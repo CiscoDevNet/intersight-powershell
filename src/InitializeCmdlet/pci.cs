@@ -138,6 +138,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The PCI device id of the PCI device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The running firmware version of the PCI device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -216,6 +226,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceId"))
+            {
+                initObject.DeviceId = this.DeviceId;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FirmwareVersion"))
             {
                 initObject.FirmwareVersion = this.FirmwareVersion;

@@ -8591,6 +8591,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Unique identity of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
+        public string ClusterUuid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Supported container type for NetApp disk.\n* `Unknown` - Default container type is currently unknown.\n* `Aggregate` - Disk is used as a physical disk in an aggregate.\n* `Broken` - Disk is in a broken pool.\n* `Label Maintenance` - Disk is in online label maintenance list.\n* `Foreign` - Array LUN has been marked foreign.\n* `Maintenance` - Disk is in maintenance center.\n* `Mediator` - A mediator disk is a disk used on non-shared HA systems hosted by an external node which is used to communicate the viability of the storage failover between non-shared HA nodes.\n* `Shared` - Disk is partitioned or in a storage pool.\n* `Remote` - Disk belongs to a remote cluster.\n* `Spare` - The disk is a spare disk.\n* `Unassigned` - Disk ownership has not been assigned.\n* `Unsupported` - The disk is not supported."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -9173,6 +9184,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Indicates whether or not rsh is enabled on the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RshEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"This field identifies the serial of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -9240,6 +9262,39 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The generation portion of the version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VersionGeneration
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The major portion of the version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VersionMajor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The minor portion of the version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VersionMinor
+        {
+            get;
+            set;
+        }
 
 
     }
@@ -11626,6 +11681,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The configured speed of the FC port in gigabits per second."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SpeedConfigured
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum speed supported by the FC port in gigabits per second."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SpeedMaximum
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"State of the port available in storage array.\n* `Unknown` - Default unknown port state.\n* `StartUp` - The port in the storage array is booting up.\n* `LinkNotConnected` - The port has finished initialization, but a link with the fabric is not established.\n* `Online` - The port is initialized and a link with the fabric has been established.\n* `LinkDisconnected` - The link on this port is currently not established.\n* `OfflineUser` - The port is administratively disabled.\n* `OfflineSystem` - The port is set to offline by the system. This happens when the port encounters too many errors.\n* `NodeOffline` - The state information for the port cannot be retrieved. The node is offline or inaccessible."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12881,7 +12958,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The name of the licensed package."</para>
+        /// <para type="description">"The name of the license package."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -12910,6 +12987,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Summary state of license package based on all installed licenses.\n* `Unknown` - The summary state of the license package is unknown.\n* `Compliant` - The summary state of the license package is compliant.\n* `Noncompliant` - The summary state of the license package is noncompliant.\n* `Unlicensed` - The summary state of the license package is unlicensed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public StorageNetAppLicense.StateEnum State
         {
             get;
             set;
@@ -15704,39 +15792,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool NfsEnabled
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Status for Network File System Protocol ( NFSv3 ) allowed to run on  Vservers."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool NfsV3Enabled
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Status for Network File System Protocol ( NFSv4.1 ) allowed to run on  Vservers."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool NfsV41Enabled
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Status for Network File System Protocol ( NFSv4 ) allowed to run on  Vservers."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool NfsV4Enabled
         {
             get;
             set;
@@ -25701,6 +25756,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -25711,6 +25767,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
 

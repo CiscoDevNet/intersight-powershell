@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciDevice.ClassIdEnum>][-FirmwareVersion< string>][-GraphicsCards< System.Collections.Generic.List`1[Model.GraphicsCardRelationship]>][-Moid< string>][-ObjectType< PciDevice.ObjectTypeEnum>][-Pid< string>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPciDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciDevice.ClassIdEnum>][-DeviceId< string>][-FirmwareVersion< string>][-GraphicsCards< System.Collections.Generic.List`1[Model.GraphicsCardRelationship]>][-Moid< string>][-ObjectType< PciDevice.ObjectTypeEnum>][-Pid< string>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: PciDevice.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeviceId
+The PCI device id of the PCI device.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

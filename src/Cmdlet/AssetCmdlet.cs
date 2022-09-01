@@ -2265,6 +2265,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The vendor of the managed target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -2846,6 +2857,7 @@ namespace Intersight.PowerShell
         }
 
 
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeployment.</para>
@@ -3384,6 +3396,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
     }
