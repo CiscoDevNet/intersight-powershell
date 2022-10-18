@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightUuidpoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< UuidpoolPoolMember.ClassIdEnum>][-Moid< string>][-ObjectType< UuidpoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightUuidpoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< UuidpoolPoolMember.ClassIdEnum>][-Moid< string>][-ObjectType< UuidpoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -124,21 +124,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Uuid
-UUID Prefix+Suffix of this PoolMember.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

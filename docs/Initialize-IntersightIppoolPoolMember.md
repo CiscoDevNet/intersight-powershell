@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IppoolPoolMember.ClassIdEnum>][-IpType< IppoolPoolMember.IpTypeEnum>][-IpV4Address< string>][-IpV6Address< string>][-Moid< string>][-ObjectType< IppoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IppoolPoolMember.ClassIdEnum>][-Moid< string>][-ObjectType< IppoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,51 +77,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: IppoolPoolMember.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpType
-Type of the IP address requested.\n* `IPv4` - IP V4 address type requested.\n* `IPv6` - IP V6 address type requested.
-
-```yaml
-Type: IppoolPoolMember.IpTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpV4Address
-IPv4 Address of this pool member.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpV6Address
-IPv6 Address of this pool member.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

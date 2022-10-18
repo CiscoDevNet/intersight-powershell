@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetConnectionControlMessage [-Account< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetConnectionControlMessage.ClassIdEnum>][-ConnectorVersion< string>][-DeviceId< string>][-DomainGroup< string>][-Evict< bool>][-Leadership< AssetConnectionControlMessage.LeadershipEnum>][-NewIdentity< string>][-ObjectType< AssetConnectionControlMessage.ObjectTypeEnum>][-Partition< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetConnectionControlMessage [-Account< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetConnectionControlMessage.ClassIdEnum>][-ConnectorVersion< string>][-DeviceId< string>][-Evict< bool>][-Leadership< AssetConnectionControlMessage.LeadershipEnum>][-NewIdentity< string>][-ObjectType< AssetConnectionControlMessage.ObjectTypeEnum>][-Partition< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,21 +86,6 @@ Accept wildcard characters: False
 
 ### -DeviceId
 The Moid of the device under change. Used to route the message to a device&apos;s connection.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DomainGroup
-The domain group id to which the device belongs.
 
 ```yaml
 Type: string

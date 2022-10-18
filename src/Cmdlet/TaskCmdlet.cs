@@ -1007,6 +1007,117 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New TaskNexusSystemScopedInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusSystemScopedInventory")]
+    public class NewIntersightTaskNexusSystemScopedInventory : NewCmdletBase
+    {
+        public NewIntersightTaskNexusSystemScopedInventory()
+        {
+            ApiInstance = new TaskApi(Config);
+            ModelObject = new TaskNexusSystemScopedInventory();
+            MethodName = "CreateTaskNexusSystemScopedInventoryWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A property that uniquely identifies the object to be inventoried as a part of the scoped inventory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NamingProperty
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Set of queries to identify objects to be inventoried as part of this scoped inventory action."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Queries
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Type of the object for which scoped inventory needs to be run."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Type
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Values
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskNexusVlanScopedInventory.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightTaskNexusVlanScopedInventory")]

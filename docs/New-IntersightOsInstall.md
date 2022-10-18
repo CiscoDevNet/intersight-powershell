@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightOsInstall [-AdditionalParameters< System.Collections.Generic.List`1[OsPlaceHolder]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Answers< OsAnswers>][-ConfigurationFile< OsConfigurationFileRelationship>][-Description< string>][-Image< SoftwarerepositoryOperatingSystemFileRelationship>][-InstallMethod< OsInstall.InstallMethodEnum>][-InstallTarget< OsInstallTarget>][-Moid< string>][[-Name]< string>][-OperatingSystemParameters< OsOperatingSystemParameters>][-Organization< OrganizationOrganizationRelationship>][-OsduImage< FirmwareServerConfigurationUtilityDistributableRelationship>][-Server< ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkflowInfo< WorkflowWorkflowInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightOsInstall [-AdditionalParameters< System.Collections.Generic.List`1[OsPlaceHolder]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Answers< OsAnswers>][-ConfigurationFile< OsConfigurationFileRelationship>][-Description< string>][-Image< SoftwarerepositoryOperatingSystemFileRelationship>][-InstallMethod< OsInstall.InstallMethodEnum>][-InstallTarget< OsInstallTarget>][-Moid< string>][[-Name]< string>][-OperatingSystemParameters< OsOperatingSystemParameters>][-Organization< OrganizationOrganizationRelationship>][-OsduImage< FirmwareServerConfigurationUtilityDistributableRelationship>][-OverrideSecureBoot< bool>][-Server< ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkflowInfo< WorkflowWorkflowInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -228,6 +228,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: FirmwareServerConfigurationUtilityDistributableRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OverrideSecureBoot
+ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

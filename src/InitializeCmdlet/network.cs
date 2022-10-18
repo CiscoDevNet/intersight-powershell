@@ -8,6 +8,174 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkDiscoveredNeighbor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkDiscoveredNeighbor")]
+    public class InitializeIntersightNetworkDiscoveredNeighbor : PSCmdlet
+    {
+        public InitializeIntersightNetworkDiscoveredNeighbor()
+        {
+            ClassId = NetworkDiscoveredNeighbor.ClassIdEnum.NetworkDiscoveredNeighbor;
+            ObjectType = NetworkDiscoveredNeighbor.ObjectTypeEnum.NetworkDiscoveredNeighbor;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkDiscoveredNeighbor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkDiscoveredNeighbor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkDiscoveredNeighbor initObject = new Intersight.Model.NetworkDiscoveredNeighbor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkDns.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkDns")]
+    public class InitializeIntersightNetworkDns : PSCmdlet
+    {
+        public InitializeIntersightNetworkDns()
+        {
+            ClassId = NetworkDns.ClassIdEnum.NetworkDns;
+            ObjectType = NetworkDns.ObjectTypeEnum.NetworkDns;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkDns.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkDns.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkDns initObject = new Intersight.Model.NetworkDns();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NetworkElement.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNetworkElement")]
@@ -77,6 +245,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string ConfModTsBackup
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Connection status of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ConnectionStatus
         {
             get;
             set;
@@ -331,16 +509,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"An array of relationships to networkVrf resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.NetworkVrfRelationship> Vrf
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -365,6 +533,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ConfModTsBackup"))
             {
                 initObject.ConfModTsBackup = this.ConfModTsBackup;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConnectionStatus"))
+            {
+                initObject.ConnectionStatus = this.ConnectionStatus;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Console"))
             {
@@ -462,10 +634,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject._Version = this.Version;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vrf"))
-            {
-                initObject.Vrf = this.Vrf;
             }
             WriteObject(initObject);
         }
@@ -994,16 +1162,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1057,10 +1215,6 @@ namespace Intersight.PowerShell
                 initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
-            {
-                initObject.RegisteredDevice = this.RegisteredDevice;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -1106,51 +1260,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The description of the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to fcPhysicalPort resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.FcPhysicalPortRelationship> FcPorts
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The hardware version of the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string HardwareVersion
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name of the supervisor card like Supervisor Card-1."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
         {
             get;
             set;
@@ -1166,51 +1280,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The number of ports on the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NumberOfPorts
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public NetworkSupervisorCard.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The operational status of the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The part number of the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PartNumber
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The power state of the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PowerState
         {
             get;
             set;
@@ -1226,31 +1300,93 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkSupervisorCard initObject = new Intersight.Model.NetworkSupervisorCard();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
+            {
+                initObject.NetworkElement = this.NetworkElement;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
+            {
+                initObject.PreviousFru = this.PreviousFru;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkTelemetryCheck.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkTelemetryCheck")]
+    public class InitializeIntersightNetworkTelemetryCheck : PSCmdlet
+    {
+        public InitializeIntersightNetworkTelemetryCheck()
+        {
+            ClassId = NetworkTelemetryCheck.ClassIdEnum.NetworkTelemetryCheck;
+            ObjectType = NetworkTelemetryCheck.ObjectTypeEnum.NetworkTelemetryCheck;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The status of the supervisor card."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Status
+        public NetworkTelemetryCheck.ClassIdEnum ClassId
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The identifier for the supervisor card."</para>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string SupervisorId
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkTelemetryCheck.ObjectTypeEnum ObjectType
         {
             get;
             set;
@@ -1265,89 +1401,23 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The type of the supervisor card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Type
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
-            Intersight.Model.NetworkSupervisorCard initObject = new Intersight.Model.NetworkSupervisorCard();
+            Intersight.Model.NetworkTelemetryCheck initObject = new Intersight.Model.NetworkTelemetryCheck();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcPorts"))
-            {
-                initObject.FcPorts = this.FcPorts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("HardwareVersion"))
-            {
-                initObject.HardwareVersion = this.HardwareVersion;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
-            {
-                initObject.NetworkElement = this.NetworkElement;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NumberOfPorts"))
-            {
-                initObject.NumberOfPorts = this.NumberOfPorts;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperState"))
-            {
-                initObject.OperState = this.OperState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
-            {
-                initObject.PartNumber = this.PartNumber;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PowerState"))
-            {
-                initObject.PowerState = this.PowerState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
-            {
-                initObject.PreviousFru = this.PreviousFru;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
-            {
-                initObject.RegisteredDevice = this.RegisteredDevice;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
-            {
-                initObject.Status = this.Status;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SupervisorId"))
-            {
-                initObject.SupervisorId = this.SupervisorId;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
             }
             WriteObject(initObject);
         }
@@ -1542,16 +1612,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.NetworkElementRelationship NetworkElement
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1611,10 +1671,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
-            {
-                initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))

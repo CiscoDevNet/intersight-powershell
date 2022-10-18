@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicPlacementSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicPlacementSettings.ClassIdEnum>][-Id< string>][-ObjectType< VnicPlacementSettings.ObjectTypeEnum>][-PciLink< long>][-SwitchId< VnicPlacementSettings.SwitchIdEnum>][-Uplink< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicPlacementSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoPciLink< bool>][-AutoSlotId< bool>][-ClassId< VnicPlacementSettings.ClassIdEnum>][-Id< string>][-ObjectType< VnicPlacementSettings.ObjectTypeEnum>][-PciLink< long>][-SwitchId< VnicPlacementSettings.SwitchIdEnum>][-Uplink< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,36 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoPciLink
+Enable or disable automatic assignment of the PCI Link in a dual-link adapter. This option applies only to 13xx series VICs that support dual-link. If enabled, the system determines the placement of the vNIC/vHBA on either of the PCI Links.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoSlotId
+Enable or disable automatic assignment of the VIC slot ID. If enabled and the server has only one VIC, the same VIC is chosen for all the vNICs. If enabled and the server has multiple VICs, the vNIC/vHBA are deployed on the first VIC. The Slot ID determines the first VIC. MLOM is the first Slot ID and the ID increments to 2, 3, and so on.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

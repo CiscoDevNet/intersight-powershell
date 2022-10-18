@@ -831,6 +831,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"A reference to a resourcepoolLease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1482,6 +1483,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PoolReservationReference> ReservationReferences
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -1966,6 +1978,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<PolicyAbstractPolicyRelationship> PolicyBucket
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PoolReservationReference> ReservationReferences
         {
             get;
             set;

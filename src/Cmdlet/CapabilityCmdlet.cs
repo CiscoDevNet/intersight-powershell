@@ -1929,6 +1929,125 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CapabilityFexCapabilityDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexCapabilityDef", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCapabilityFexCapabilityDef : GetCmdletBase
+    {
+        public GetIntersightCapabilityFexCapabilityDef()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "GetCapabilityFexCapabilityDefListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"FEC config on HIF port for Fabric Extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool FecConfigOnHifPortSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFexDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexDescriptor", DefaultParameterSetName = "CmdletParam")]
@@ -6154,6 +6273,84 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CapabilityFexCapabilityDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexCapabilityDef")]
+    public class NewIntersightCapabilityFexCapabilityDef : NewCmdletBase
+    {
+        public NewIntersightCapabilityFexCapabilityDef()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            ModelObject = new CapabilityFexCapabilityDef();
+            MethodName = "CreateCapabilityFexCapabilityDefWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"FEC config on HIF port for Fabric Extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool FecConfigOnHifPortSupported
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityFexDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexDescriptor")]
@@ -8557,6 +8754,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CapabilityFexCapabilityDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexCapabilityDef")]
+    public class RemoveIntersightCapabilityFexCapabilityDef : RemoveCmdletBase
+    {
+        public RemoveIntersightCapabilityFexCapabilityDef()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "DeleteCapabilityFexCapabilityDefWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityFexDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexDescriptor")]
@@ -10290,6 +10499,84 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CapabilityFexCapabilityDef.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexCapabilityDef")]
+    public class SetIntersightCapabilityFexCapabilityDef : SetCmdletBase
+    {
+        public SetIntersightCapabilityFexCapabilityDef()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            ModelObject = new CapabilityFexCapabilityDef();
+            MethodName = "UpdateCapabilityFexCapabilityDefWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"FEC config on HIF port for Fabric Extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool FecConfigOnHifPortSupported
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityFexDescriptor.</para>

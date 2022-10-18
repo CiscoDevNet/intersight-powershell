@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowInfo [-Account< Model.IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< WorkflowWorkflowInfo.ClassIdEnum>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Internal< bool>][-Message< System.Collections.Generic.List`1[Model.WorkflowMessage]>][-MetaVersion< long>][-Moid< string>][-Name< string>][-ObjectType< WorkflowWorkflowInfo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PauseReason< WorkflowWorkflowInfo.PauseReasonEnum>][-Permission< Model.IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WaitReason< WorkflowWorkflowInfo.WaitReasonEnum>][-WorkflowCtx< Model.WorkflowWorkflowCtx>][-WorkflowDefinition< Model.WorkflowWorkflowDefinitionRelationship>][-WorkflowMetaType< WorkflowWorkflowInfo.WorkflowMetaTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowInfo [-Account< Model.IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< WorkflowWorkflowInfo.ClassIdEnum>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Internal< bool>][-MetaVersion< long>][-Moid< string>][-Name< string>][-ObjectType< WorkflowWorkflowInfo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Permission< Model.IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowCtx< Model.WorkflowWorkflowCtx>][-WorkflowDefinition< Model.WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Input
-All the given inputs for the workflow.
+The input data provided for the workflow execution.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -142,23 +142,6 @@ Denotes if this workflow is internal and should be hidden from user view of runn
 
 ```yaml
 Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Message
-
-
-Note :- Use Initialize-IntersightWorkflowMessage to create the object of complex type WorkflowMessage
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.WorkflowMessage]
 Parameter Sets: (All)
 Aliases:
 
@@ -247,21 +230,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PauseReason
-Denotes the reason workflow is in paused status.\n* `None` - Pause reason is none, which indicates there is no reason for the pause state.\n* `TaskWithWarning` - Pause reason indicates the workflow is in this state due to a task that has a status as completed with warnings.\n* `SystemMaintenance` - Pause reason indicates the workflow is in this state based on actions of system admin for maintenance.
-
-```yaml
-Type: WorkflowWorkflowInfo.PauseReasonEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Permission
 A reference to a iamPermission resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -327,21 +295,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WaitReason
-Denotes the reason workflow is in waiting status.\n* `None` - Wait reason is none, which indicates there is no reason for the waiting state.\n* `GatherTasks` - Wait reason is gathering tasks, which indicates the workflow is in this state in order to gather tasks.\n* `Duplicate` - Wait reason is duplicate, which indicates the workflow is a duplicate of current running workflow.\n* `RateLimit` - Wait reason is rate limit, which indicates the workflow is rate limited by account/instance level throttling threshold.\n* `WaitTask` - Wait reason when there are one or more wait tasks in the workflow which are yet to receive a task status update.\n* `PendingRetryFailed` - Wait reason when the workflow is pending a RetryFailed action.\n* `WaitingToStart` - Workflow is waiting to start on workflow engine.
-
-```yaml
-Type: WorkflowWorkflowInfo.WaitReasonEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -WorkflowCtx
 The workflow context which contains initiator and target information.
 
@@ -367,21 +320,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.WorkflowWorkflowDefinitionRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkflowMetaType
-The type of workflow meta. Derived from the workflow meta that is used to launch this workflow instance.\n* `SystemDefined` - System defined workflow definition.\n* `UserDefined` - User defined workflow definition.\n* `Dynamic` - Dynamically defined workflow definition.
-
-```yaml
-Type: WorkflowWorkflowInfo.WorkflowMetaTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -450,8 +388,6 @@ PS C:\> Initialize-IntersightWorkflowWorkflowInfo
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-IntersightWorkflowMessage](./Initialize-IntersightWorkflowMessage.md)
 
 [Initialize-IntersightWorkflowWorkflowCtx](./Initialize-IntersightWorkflowWorkflowCtx.md)
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< FcpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolLease.ClassIdEnum>][-Moid< string>][-ObjectType< FcpoolLease.ObjectTypeEnum>][-Pool< Model.FcpoolPoolRelationship>][-PoolPurpose< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WwnId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< FcpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolLease.ClassIdEnum>][-Moid< string>][-ObjectType< FcpoolLease.ObjectTypeEnum>][-Pool< Model.FcpoolPoolRelationship>][-PoolPurpose< string>][-Reservation< Model.FcpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WwnId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -150,6 +150,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Reservation
+The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities.
+
+Note :- Use Initialize-IntersightFcpoolReservationReference to create the object of complex type FcpoolReservationReference
+
+```yaml
+Type: Model.FcpoolReservationReference
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -238,5 +255,7 @@ PS C:\> Initialize-IntersightFcpoolLease
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightFcpoolReservationReference](./Initialize-IntersightFcpoolReservationReference.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

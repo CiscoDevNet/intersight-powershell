@@ -297,6 +297,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MacpoolReservationReference Reservation
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -336,10 +346,70 @@ namespace Intersight.PowerShell
             {
                 initObject.Pool = this.Pool;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reservation"))
+            {
+                initObject.Reservation = this.Reservation;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MacpoolMemberOf.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMacpoolMemberOf")]
+    public class InitializeIntersightMacpoolMemberOf : PSCmdlet
+    {
+        public InitializeIntersightMacpoolMemberOf()
+        {
+            ClassId = MacpoolMemberOf.ClassIdEnum.MacpoolMemberOf;
+            ObjectType = MacpoolMemberOf.ObjectTypeEnum.MacpoolMemberOf;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolMemberOf.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolMemberOf.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MacpoolMemberOf initObject = new Intersight.Model.MacpoolMemberOf();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -448,6 +518,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to macpoolReservation resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MacpoolReservationRelationship> Reservations
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -490,6 +570,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reservations"))
+            {
+                initObject.Reservations = this.Reservations;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -552,16 +636,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"MAC Address of this pool member."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string MacAddress
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -608,10 +682,6 @@ namespace Intersight.PowerShell
                 initObject.AssignedToEntity = this.AssignedToEntity;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("MacAddress"))
-            {
-                initObject.MacAddress = this.MacAddress;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -620,6 +690,246 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MacpoolReservation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMacpoolReservation")]
+    public class InitializeIntersightMacpoolReservation : PSCmdlet
+    {
+        public InitializeIntersightMacpoolReservation()
+        {
+            AllocationType = MacpoolReservation.AllocationTypeEnum.Dynamic;
+            ClassId = MacpoolReservation.ClassIdEnum.MacpoolReservation;
+            ObjectType = MacpoolReservation.ObjectTypeEnum.MacpoolReservation;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the allocation for the identity in the reservation either static or dynamic (i.e. via pool).\n* `dynamic` - Identifiers to be allocated by system.\n* `static` - Identifiers are assigned by the user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolReservation.AllocationTypeEnum AllocationType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolReservation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MAC identity to be reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Identity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolReservation.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a macpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MacpoolPoolRelationship Pool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MacpoolReservation initObject = new Intersight.Model.MacpoolReservation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllocationType"))
+            {
+                initObject.AllocationType = this.AllocationType;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Identity"))
+            {
+                initObject.Identity = this.Identity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
+            {
+                initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize MacpoolReservationReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightMacpoolReservationReference")]
+    public class InitializeIntersightMacpoolReservationReference : PSCmdlet
+    {
+        public InitializeIntersightMacpoolReservationReference()
+        {
+            ClassId = MacpoolReservationReference.ClassIdEnum.MacpoolReservationReference;
+            ConsumerType = MacpoolReservationReference.ConsumerTypeEnum.Vnic;
+            ObjectType = MacpoolReservationReference.ObjectTypeEnum.MacpoolReservationReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolReservationReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The consumer name for which the reserved MAC would be used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ConsumerName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The consumer type for which the reserved MAC would be used.\n* `Vnic` - MAC reservation would be used by VNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolReservationReference.ConsumerTypeEnum ConsumerType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MacpoolReservationReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The moid of the reservation object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ReservationMoid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.MacpoolReservationReference initObject = new Intersight.Model.MacpoolReservationReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConsumerName"))
+            {
+                initObject.ConsumerName = this.ConsumerName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConsumerType"))
+            {
+                initObject.ConsumerType = this.ConsumerType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationMoid"))
+            {
+                initObject.ReservationMoid = this.ReservationMoid;
             }
             WriteObject(initObject);
         }

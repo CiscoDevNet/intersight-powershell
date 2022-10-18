@@ -785,6 +785,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool OverrideSecureBoot
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -1395,6 +1406,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FirmwareServerConfigurationUtilityDistributableRelationship OsduImage
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool OverrideSecureBoot
         {
             get;
             set;

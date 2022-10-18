@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IppoolPool.AssignmentOrderEnum>][-ClassId< IppoolPool.ClassIdEnum>][-Description< string>][-IpV4Blocks< System.Collections.Generic.List`1[Model.IppoolIpV4Block]>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Blocks< System.Collections.Generic.List`1[Model.IppoolIpV6Block]>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-Name< string>][-ObjectType< IppoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IppoolPool.AssignmentOrderEnum>][-ClassId< IppoolPool.ClassIdEnum>][-Description< string>][-IpV4Blocks< System.Collections.Generic.List`1[Model.IppoolIpV4Block]>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Blocks< System.Collections.Generic.List`1[Model.IppoolIpV6Block]>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-Name< string>][-ObjectType< IppoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Reservations< System.Collections.Generic.List`1[Model.IppoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -205,6 +205,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to ippoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IppoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

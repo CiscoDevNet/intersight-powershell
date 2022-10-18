@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< FcpoolPool.AssignmentOrderEnum>][-Description< string>][-IdBlocks< System.Collections.Generic.List`1[FcpoolBlock]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PoolPurpose< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< FcpoolPool.AssignmentOrderEnum>][-Description< string>][-IdBlocks< System.Collections.Generic.List`1[FcpoolBlock]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PoolPurpose< string>][-Reservations< System.Collections.Generic.List`1[FcpoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -138,6 +138,24 @@ Purpose of this WWN pool.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to fcpoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[FcpoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

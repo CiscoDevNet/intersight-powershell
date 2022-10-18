@@ -209,6 +209,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to uuidpoolReservation resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.UuidpoolReservationRelationship> Reservations
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -261,6 +271,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Prefix"))
             {
                 initObject.Prefix = this.Prefix;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reservations"))
+            {
+                initObject.Reservations = this.Reservations;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -356,16 +370,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"UUID Prefix+Suffix of this PoolMember."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Uuid
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -392,9 +396,214 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uuid"))
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize UuidpoolReservation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightUuidpoolReservation")]
+    public class InitializeIntersightUuidpoolReservation : PSCmdlet
+    {
+        public InitializeIntersightUuidpoolReservation()
+        {
+            AllocationType = UuidpoolReservation.AllocationTypeEnum.Dynamic;
+            ClassId = UuidpoolReservation.ClassIdEnum.UuidpoolReservation;
+            ObjectType = UuidpoolReservation.ObjectTypeEnum.UuidpoolReservation;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the allocation for the identity in the reservation either static or dynamic (i.e. via pool).\n* `dynamic` - Identifiers to be allocated by system.\n* `static` - Identifiers are assigned by the user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public UuidpoolReservation.AllocationTypeEnum AllocationType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public UuidpoolReservation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UUID identity to be reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$")]
+        public string Identity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public UuidpoolReservation.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a uuidpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.UuidpoolPoolRelationship Pool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.UuidpoolReservation initObject = new Intersight.Model.UuidpoolReservation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
-                initObject.Uuid = this.Uuid;
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllocationType"))
+            {
+                initObject.AllocationType = this.AllocationType;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Identity"))
+            {
+                initObject.Identity = this.Identity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
+            {
+                initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize UuidpoolReservationReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightUuidpoolReservationReference")]
+    public class InitializeIntersightUuidpoolReservationReference : PSCmdlet
+    {
+        public InitializeIntersightUuidpoolReservationReference()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public UuidpoolReservationReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public UuidpoolReservationReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The moid of the reservation object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ReservationMoid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.UuidpoolReservationReference initObject = new Intersight.Model.UuidpoolReservationReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationMoid"))
+            {
+                initObject.ReservationMoid = this.ReservationMoid;
             }
             WriteObject(initObject);
         }
@@ -666,6 +875,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.UuidpoolReservationReference Reservation
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -710,6 +929,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
             {
                 initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reservation"))
+            {
+                initObject.Reservation = this.Reservation;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

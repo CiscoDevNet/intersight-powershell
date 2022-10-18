@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkDevice
-Network Device where the IP address must be configured. Network Interface names and MAC address are supported.
+Network Device where the IP address must be configured. Network Interface names and MAC address are supported.\nFor SUSE Linux Enterprise Server, Network Interface name is a required input and if provided as a MAC address,\nA persistent interface name is binded to the MAC address and the interface name will be used for network configuration.\nRefer https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-configuration-installation-options.html#CreateProfile-Network-names.
 
 ```yaml
 Type: string

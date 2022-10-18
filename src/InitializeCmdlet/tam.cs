@@ -1929,6 +1929,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> OtherRefUrls
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Recommended action to resolve the security advisory."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2069,6 +2079,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("OtherRefUrls"))
+            {
+                initObject.OtherRefUrls = this.OtherRefUrls;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Recommendation"))
             {

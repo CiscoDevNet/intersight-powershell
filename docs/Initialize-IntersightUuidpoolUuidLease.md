@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightUuidpoolUuidLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< UuidpoolUuidLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< UuidpoolUuidLease.ClassIdEnum>][-Moid< string>][-ObjectType< UuidpoolUuidLease.ObjectTypeEnum>][-Pool< Model.UuidpoolPoolRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightUuidpoolUuidLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< UuidpoolUuidLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< UuidpoolUuidLease.ClassIdEnum>][-Moid< string>][-ObjectType< UuidpoolUuidLease.ObjectTypeEnum>][-Pool< Model.UuidpoolPoolRelationship>][-Reservation< Model.UuidpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -135,6 +135,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Reservation
+The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities.
+
+Note :- Use Initialize-IntersightUuidpoolReservationReference to create the object of complex type UuidpoolReservationReference
+
+```yaml
+Type: Model.UuidpoolReservationReference
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -225,3 +242,5 @@ PS C:\> Initialize-IntersightUuidpoolUuidLease
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightUuidpoolReservationReference](./Initialize-IntersightUuidpoolReservationReference.md)

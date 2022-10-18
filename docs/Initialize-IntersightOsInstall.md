@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsInstall [-AdditionalParameters< System.Collections.Generic.List`1[Model.OsPlaceHolder]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Answers< Model.OsAnswers>][-ClassId< OsInstall.ClassIdEnum>][-ConfigurationFile< Model.OsConfigurationFileRelationship>][-Description< string>][-Image< Model.SoftwarerepositoryOperatingSystemFileRelationship>][-InstallMethod< OsInstall.InstallMethodEnum>][-InstallTarget< Model.OsInstallTarget>][-Moid< string>][-Name< string>][-ObjectType< OsInstall.ObjectTypeEnum>][-OperatingSystemParameters< Model.OsOperatingSystemParameters>][-Organization< Model.OrganizationOrganizationRelationship>][-OsduImage< Model.FirmwareServerConfigurationUtilityDistributableRelationship>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowInfo< Model.WorkflowWorkflowInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOsInstall [-AdditionalParameters< System.Collections.Generic.List`1[Model.OsPlaceHolder]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Answers< Model.OsAnswers>][-ClassId< OsInstall.ClassIdEnum>][-ConfigurationFile< Model.OsConfigurationFileRelationship>][-Description< string>][-Image< Model.SoftwarerepositoryOperatingSystemFileRelationship>][-InstallMethod< OsInstall.InstallMethodEnum>][-InstallTarget< Model.OsInstallTarget>][-Moid< string>][-Name< string>][-ObjectType< OsInstall.ObjectTypeEnum>][-OperatingSystemParameters< Model.OsOperatingSystemParameters>][-Organization< Model.OrganizationOrganizationRelationship>][-OsduImage< Model.FirmwareServerConfigurationUtilityDistributableRelationship>][-OverrideSecureBoot< bool>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowInfo< Model.WorkflowWorkflowInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -259,6 +259,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.FirmwareServerConfigurationUtilityDistributableRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OverrideSecureBoot
+ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

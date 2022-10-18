@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogicalAvalabilityZoneConfig
-Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes.
+Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to HyperFlex systems with 8 or more converged nodes.
 
 Note :- Use Initialize-IntersightHyperflexLogicalAvailabilityZone to create the object of complex type HyperflexLogicalAvailabilityZone
 

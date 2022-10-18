@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStorageFlexUtilVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DriveStatus< string>][-DriveType< string>][[-Moid]< string>][-PartitionId< string>][-PartitionName< string>][-ResidentImage< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDrive< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStorageFlexUtilVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DriveStatus< string>][-DriveType< string>][-HostAccessible< string>][[-Moid]< string>][-PartitionId< string>][-PartitionName< string>][-ResidentImage< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDrive< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,6 +55,21 @@ Accept wildcard characters: False
 
 ### -DriveType
 Type of virtual drive managed by flex util controller.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HostAccessible
+Connection status of the Flex Util virtual drive to the host.
 
 ```yaml
 Type: string

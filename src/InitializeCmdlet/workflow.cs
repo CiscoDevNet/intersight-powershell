@@ -3920,7 +3920,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The platform type for which the error response handler is defined.\n* `` - The device reported an empty or unrecognized platform type.\n* `APIC` - An Application Policy Infrastructure Controller cluster.\n* `CAPIC` - A Cloud Application Policy Infrastructure Controller instance.\n* `DCNM` - A Data Center Network Manager instance. Data Center Network Manager (DCNM) is the network management platform for all NX-OS-enabled deployments, spanning new fabric architectures, IP Fabric for Media, and storage networking deployments for the Cisco Nexus-powered data center.\n* `UCSFI` - A UCS Fabric Interconnect in HA or standalone mode, which is being managed by UCS Manager (UCSM).\n* `UCSFIISM` - A UCS Fabric Interconnect in HA or standalone mode, managed directly by Intersight.\n* `IMC` - A standalone UCS Server Integrated Management Controller.\n* `IMCM4` - A standalone UCS M4 Server.\n* `IMCM5` - A standalone UCS M5 server.\n* `IMCRack` - A standalone UCS M6 and above server.\n* `UCSIOM` - An UCS Chassis IO module.\n* `HX` - A HyperFlex storage controller.\n* `HyperFlexAP` - A HyperFlex Application Platform.\n* `IWE` - An Intersight Workload Engine.\n* `UCSD` - A UCS Director virtual appliance. Cisco UCS Director automates, orchestrates, and manages Cisco and third-party hardware.\n* `IntersightAppliance` - A Cisco Intersight Connected Virtual Appliance.\n* `IntersightAssist` - A Cisco Intersight Assist.\n* `PureStorageFlashArray` - A Pure Storage FlashArray device.\n* `NexusDevice` - A generic platform type to support Nexus Network Device. This can also be extended to support all network devices later on.\n* `ACISwitch` - A platform type to support ACI Switches.\n* `NexusSwitch` - A platform type to support Cisco Nexus Switches.\n* `MDSSwitch` - A platform type to support Cisco MDS Switches.\n* `MDSDevice` - A platform type to support MDS devices.\n* `UCSC890` - A standalone Cisco UCSC890 server.\n* `RedfishServer` - A generic target type for servers that support Redfish. Current support is limited to managing HPE and Dell servers on Intersight.\n* `NetAppOntap` - A NetApp ONTAP storage system.\n* `NetAppActiveIqUnifiedManager` - A NetApp Active IQ Unified Manager.\n* `EmcScaleIo` - An EMC ScaleIO storage system.\n* `EmcVmax` - An EMC VMAX storage system.\n* `EmcVplex` - An EMC VPLEX storage system.\n* `EmcXtremIo` - An EMC XtremIO storage system.\n* `VmwareVcenter` - A VMware vCenter device that manages Virtual Machines.\n* `MicrosoftHyperV` - A Microsoft Hyper-V system that manages Virtual Machines.\n* `AppDynamics` - An AppDynamics controller that monitors applications.\n* `Dynatrace` - A software-intelligence monitoring platform that simplifies enterprise cloud complexity and accelerates digital transformation.\n* `NewRelic` - A software-intelligence monitoring platform that simplifies enterprise cloud complexity and accelerates digital transformation.\n* `ServiceNow` - A cloud-based workflow automation platform that enables enterprise organizations to improve operational efficiencies by streamlining and automating routine work tasks.\n* `ReadHatOpenStack` - An OpenStack target manages Virtual Machines, Physical Machines, Datacenters and Virtual Datacenters using different OpenStack services as administrative endpoints.\n* `CloudFoundry` - An open source cloud platform on which developers can build, deploy, run and scale applications.\n* `MicrosoftAzureApplicationInsights` - A feature of Azure Monitor, is an extensible Application Performance Management service for developers and DevOps professionals to monitor their live applications.\n* `OpenStack` - An OpenStack target manages Virtual Machines, Physical Machines, Datacenters and Virtual Datacenters using different OpenStack services as administrative endpoints.\n* `MicrosoftSqlServer` - A Microsoft SQL database server.\n* `MySqlServer` - An instance of either Oracle MySQL Database or the open source MariaDB.\n* `Kubernetes` - A Kubernetes cluster that runs containerized applications.\n* `AmazonWebService` - An Amazon web service target that discovers and monitors different services like EC2. It discovers entities like VMs, Volumes, regions etc. and monitors attributes like Mem, CPU, cost.\n* `AmazonWebServiceBilling` - An Amazon web service billing target to retrieve billing information stored in S3 bucket.\n* `MicrosoftAzureServicePrincipal` - A Microsoft Azure Service Principal target that discovers all the associated Azure subscriptions.\n* `MicrosoftAzureEnterpriseAgreement` - A Microsoft Azure Enterprise Agreement target that discovers cost, billing and RIs.\n* `DellCompellent` - A Dell Compellent storage system.\n* `HPE3Par` - A HPE 3PAR storage system.\n* `RedHatEnterpriseVirtualization` - A Red Hat Enterprise Virtualization Hypervisor system that manages Virtual Machines.\n* `NutanixAcropolis` - A Nutanix Acropolis system that combines servers and storage into a distributed infrastructure platform.\n* `HPEOneView` - A HPE Oneview management system that manages compute, storage, and networking.\n* `ServiceEngine` - Cisco Application Services Engine. Cisco Application Services Engine is a platform to deploy and manage applications.\n* `HitachiVirtualStoragePlatform` - A Hitachi Virtual Storage Platform also referred to as Hitachi VSP. It includes various storage systems designed for data centers.\n* `IMCBlade` - An Intersight managed UCS Blade Server.\n* `TerraformCloud` - A Terraform Cloud account.\n* `TerraformAgent` - A Terraform Cloud Agent that Intersight will deploy in datacenter. The agent will execute Terraform plan for Terraform Cloud workspace configured to use the agent.\n* `CustomTarget` - An external endpoint added as Target that can be accessed through its HTTP API interface in Intersight Orchestrator automation workflow.Standard HTTP authentication scheme supported: Basic.\n* `AnsibleEndpoint` - An external endpoint added as Target that can be accessed through Ansible in Intersight Cloud Orchestrator automation workflow.\n* `HTTPEndpoint` - An external endpoint added as Target that can be accessed through its HTTP API interface in Intersight Orchestrator automation workflow.Standard HTTP authentication scheme supported: Basic, Bearer Token.\n* `SSHEndpoint` - An external endpoint added as Target that can be accessed through SSH in Intersight Cloud Orchestrator automation workflow.\n* `CiscoCatalyst` - A Cisco Catalyst networking switch device.\n* `PowerShellEndpoint` - A Windows machine on which PowerShell scripts can be executed remotely."</para>
+        /// <para type="description">"The platform type for which the error response handler is defined.\n* `` - The device reported an empty or unrecognized platform type.\n* `APIC` - An Application Policy Infrastructure Controller cluster.\n* `CAPIC` - A Cloud Application Policy Infrastructure Controller instance.\n* `DCNM` - A Data Center Network Manager instance. Data Center Network Manager (DCNM) is the network management platform for all NX-OS-enabled deployments, spanning new fabric architectures, IP Fabric for Media, and storage networking deployments for the Cisco Nexus-powered data center.\n* `UCSFI` - A UCS Fabric Interconnect in HA or standalone mode, which is being managed by UCS Manager (UCSM).\n* `UCSFIISM` - A UCS Fabric Interconnect in HA or standalone mode, managed directly by Intersight.\n* `IMC` - A standalone UCS Server Integrated Management Controller.\n* `IMCM4` - A standalone UCS M4 Server.\n* `IMCM5` - A standalone UCS M5 server.\n* `IMCRack` - A standalone UCS M6 and above server.\n* `UCSIOM` - An UCS Chassis IO module.\n* `HX` - A HyperFlex storage controller.\n* `HyperFlexAP` - A HyperFlex Application Platform.\n* `IWE` - An Intersight Workload Engine.\n* `UCSD` - A UCS Director virtual appliance. Cisco UCS Director automates, orchestrates, and manages Cisco and third-party hardware.\n* `IntersightAppliance` - A Cisco Intersight Connected Virtual Appliance.\n* `IntersightAssist` - A Cisco Intersight Assist.\n* `PureStorageFlashArray` - A Pure Storage FlashArray device.\n* `NexusDevice` - A generic platform type to support Nexus Network Device. This can also be extended to support all network devices later on.\n* `ACISwitch` - A platform type to support ACI Switches.\n* `NexusSwitch` - A platform type to support Cisco Nexus Switches.\n* `MDSSwitch` - A platform type to support Cisco MDS Switches.\n* `MDSDevice` - A platform type to support MDS devices.\n* `UCSC890` - A standalone Cisco UCSC890 server.\n* `RedfishServer` - A generic target type for servers that support Redfish. Current support is limited to managing HPE and Dell servers on Intersight.\n* `NetAppOntap` - A NetApp ONTAP storage system.\n* `NetAppActiveIqUnifiedManager` - A NetApp Active IQ Unified Manager.\n* `EmcScaleIo` - An EMC ScaleIO storage system.\n* `EmcVmax` - An EMC VMAX storage system.\n* `EmcVplex` - An EMC VPLEX storage system.\n* `EmcXtremIo` - An EMC XtremIO storage system.\n* `VmwareVcenter` - A VMware vCenter device that manages Virtual Machines.\n* `MicrosoftHyperV` - A Microsoft Hyper-V system that manages Virtual Machines.\n* `AppDynamics` - An AppDynamics controller that monitors applications.\n* `Dynatrace` - A software-intelligence monitoring platform that simplifies enterprise cloud complexity and accelerates digital transformation.\n* `NewRelic` - A software-intelligence monitoring platform that simplifies enterprise cloud complexity and accelerates digital transformation.\n* `ServiceNow` - A cloud-based workflow automation platform that enables enterprise organizations to improve operational efficiencies by streamlining and automating routine work tasks.\n* `ReadHatOpenStack` - An OpenStack target manages Virtual Machines, Physical Machines, Datacenters and Virtual Datacenters using different OpenStack services as administrative endpoints.\n* `CloudFoundry` - An open source cloud platform on which developers can build, deploy, run and scale applications.\n* `MicrosoftAzureApplicationInsights` - A feature of Azure Monitor, is an extensible Application Performance Management service for developers and DevOps professionals to monitor their live applications.\n* `OpenStack` - An OpenStack target manages Virtual Machines, Physical Machines, Datacenters and Virtual Datacenters using different OpenStack services as administrative endpoints.\n* `MicrosoftSqlServer` - A Microsoft SQL database server.\n* `MySqlServer` - An instance of either Oracle MySQL Database or the open source MariaDB.\n* `OracleDatabaseServer` - The Oracle Server is a relational database management system that provides an open, comprehensive, and integrated approach to information management.\n* `IBMWebSphereApplicationServer` - WebSphere Application Server (WAS) is a software product that performs the role of a web application server. More specifically it is a software framework and middleware that hosts Java based web applications.\n* `OracleWebLogicServer` - Oracle WebLogic Server is a unified and extensible platform for developing, deploying and running enterprise applications, such as Java, for on-premises and in the cloud. WebLogic Server offers a robust, mature, and scalable implementation of Java Enterprise Edition (EE) and Jakarta EE.\n* `ApacheTomcatServer` - Apache Tomcat is a web container. It allows the users to run Servlet and JAVA Server Pages that are based on the web-applications.\n* `JavaVirtualMachine` - The Java Virtual Machine (JVM) is the runtime engine of the Java Platform, which allows any program written in Java or other language compiled into Java bytecode to run on any computer that has a native JVM.\n* `RedHatJBossApplicationServer` - JBoss Application Server is an open-source, cross-platform Java application server developed by JBoss, a division of Red Hat Inc. It is an open-source implementation of Java 2 Enterprise Edition (J2EE) that is used for implementing Java applications and other Web-based applications and software.\n* `Kubernetes` - A Kubernetes cluster that runs containerized applications.\n* `AmazonWebService` - An Amazon web service target that discovers and monitors different services like EC2. It discovers entities like VMs, Volumes, regions etc. and monitors attributes like Mem, CPU, cost.\n* `AmazonWebServiceBilling` - An Amazon web service billing target to retrieve billing information stored in S3 bucket.\n* `GoogleCloudPlatform` - Google Cloud Platform (GCP), offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail, Google Drive, and YouTube. Alongside a set of management tools, it provides a series of modular cloud services including computing, data storage, data analytics and machine learning. Google Cloud Platform provides infrastructure as a service, platform as a service, and serverless computing environments.\n* `GoogleCloudPlatformBilling` - Google Cloud Platform (GCP) offers flexible ways to set up and manage billing for your resources. A billing account is how a user pays for the resources being consumed. A billing account is associated with a method of payment and access is established using Cloud IAM roles. For a resource to be deployed in a project, the project has to be associated with a billing account. More than one project can be associated with a billing account.\n* `MicrosoftAzureServicePrincipal` - A Microsoft Azure Service Principal target that discovers all the associated Azure subscriptions.\n* `MicrosoftAzureEnterpriseAgreement` - A Microsoft Azure Enterprise Agreement target that discovers cost, billing and RIs.\n* `DellCompellent` - A Dell Compellent storage system.\n* `HPE3Par` - A HPE 3PAR storage system.\n* `RedHatEnterpriseVirtualization` - A Red Hat Enterprise Virtualization Hypervisor system that manages Virtual Machines.\n* `NutanixAcropolis` - A Nutanix Acropolis system that combines servers and storage into a distributed infrastructure platform.\n* `HPEOneView` - A HPE Oneview management system that manages compute, storage, and networking.\n* `ServiceEngine` - Cisco Application Services Engine. Cisco Application Services Engine is a platform to deploy and manage applications.\n* `HitachiVirtualStoragePlatform` - A Hitachi Virtual Storage Platform also referred to as Hitachi VSP. It includes various storage systems designed for data centers.\n* `IMCBlade` - An Intersight managed UCS Blade Server.\n* `TerraformCloud` - A Terraform Cloud account.\n* `TerraformAgent` - A Terraform Cloud Agent that Intersight will deploy in datacenter. The agent will execute Terraform plan for Terraform Cloud workspace configured to use the agent.\n* `CustomTarget` - An external endpoint added as Target that can be accessed through its HTTP API interface in Intersight Orchestrator automation workflow.Standard HTTP authentication scheme supported: Basic.\n* `AnsibleEndpoint` - An external endpoint added as Target that can be accessed through Ansible in Intersight Cloud Orchestrator automation workflow.\n* `HTTPEndpoint` - An external endpoint added as Target that can be accessed through its HTTP API interface in Intersight Orchestrator automation workflow.Standard HTTP authentication scheme supported: Basic, Bearer Token.\n* `SSHEndpoint` - An external endpoint added as Target that can be accessed through SSH in Intersight Cloud Orchestrator automation workflow.\n* `CiscoCatalyst` - A Cisco Catalyst networking switch device.\n* `PowerShellEndpoint` - A Windows machine on which PowerShell scripts can be executed remotely."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5320,7 +5320,6 @@ namespace Intersight.PowerShell
         {
             ClassId = WorkflowMessage.ClassIdEnum.WorkflowMessage;
             ObjectType = WorkflowMessage.ObjectTypeEnum.WorkflowMessage;
-            Severity = WorkflowMessage.SeverityEnum.Info;
 
         }
         // <summary>
@@ -5344,31 +5343,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An i18n message that can be translated in multiple languages to support internationalization."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Message
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public WorkflowMessage.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The severity of the Task or Workflow message warning/error/info etc.\n* `Info` - The enum represents the log level to be used to convey info message.\n* `Warning` - The enum represents the log level to be used to convey warning message.\n* `Debug` - The enum represents the log level to be used to convey debug message.\n* `Error` - The enum represents the log level to be used to convey error message."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowMessage.SeverityEnum Severity
         {
             get;
             set;
@@ -5382,15 +5361,7 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Message"))
-            {
-                initObject.Message = this.Message;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Severity"))
-            {
-                initObject.Severity = this.Severity;
-            }
             WriteObject(initObject);
         }
 
@@ -5882,7 +5853,6 @@ namespace Intersight.PowerShell
         {
             ClassId = WorkflowPendingDynamicWorkflowInfo.ClassIdEnum.WorkflowPendingDynamicWorkflowInfo;
             ObjectType = WorkflowPendingDynamicWorkflowInfo.ObjectTypeEnum.WorkflowPendingDynamicWorkflowInfo;
-            Status = WorkflowPendingDynamicWorkflowInfo.StatusEnum.GatheringTasks;
 
         }
         // <summary>
@@ -5901,16 +5871,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public WorkflowPendingDynamicWorkflowInfo.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The inputs of the workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object Input
         {
             get;
             set;
@@ -5950,87 +5910,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> PendingServices
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The src is workflow owner service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Src
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The current status of the PendingDynamicWorkflowInfo.\n* `GatheringTasks` - Dynamic workflow is gathering tasks before workflow can start execution.\n* `Waiting` - Dynamic workflow is in waiting state and not yet started execution.\n* `RateLimit` - Dynamic workflow is rate limited and hasn't started execution."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowPendingDynamicWorkflowInfo.StatusEnum Status
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
         public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When set to true workflow engine will wait for a duplicate to finish before starting a new one."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool WaitOnDuplicate
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.WorkflowDynamicWorkflowActionTaskList> WorkflowActionTaskLists
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The workflow's workflow context which contains initiator and target information."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.WorkflowWorkflowCtx WorkflowCtx
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This key contains workflow, initiator and target name. Workflow engine uses the key to do workflow dedup."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string WorkflowKey
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The metadata of the workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object WorkflowMeta
         {
             get;
             set;
@@ -6044,10 +5924,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Input"))
-            {
-                initObject.Input = this.Input;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -6057,41 +5933,9 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PendingServices"))
-            {
-                initObject.PendingServices = this.PendingServices;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Src"))
-            {
-                initObject.Src = this.Src;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
-            {
-                initObject.Status = this.Status;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WaitOnDuplicate"))
-            {
-                initObject.WaitOnDuplicate = this.WaitOnDuplicate;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowActionTaskLists"))
-            {
-                initObject.WorkflowActionTaskLists = this.WorkflowActionTaskLists;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowCtx"))
-            {
-                initObject.WorkflowCtx = this.WorkflowCtx;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowKey"))
-            {
-                initObject.WorkflowKey = this.WorkflowKey;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowMeta"))
-            {
-                initObject.WorkflowMeta = this.WorkflowMeta;
             }
             WriteObject(initObject);
         }
@@ -11425,36 +11269,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Moid of the target Intersight managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string TargetMoid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the target instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string TargetName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Object type of the target Intersight managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string TargetType
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -11465,18 +11279,6 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetMoid"))
-            {
-                initObject.TargetMoid = this.TargetMoid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetName"))
-            {
-                initObject.TargetName = this.TargetName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TargetType"))
-            {
-                initObject.TargetType = this.TargetType;
-            }
             WriteObject(initObject);
         }
 
@@ -14965,9 +14767,6 @@ namespace Intersight.PowerShell
             Action = WorkflowWorkflowInfo.ActionEnum.None;
             ClassId = WorkflowWorkflowInfo.ClassIdEnum.WorkflowWorkflowInfo;
             ObjectType = WorkflowWorkflowInfo.ObjectTypeEnum.WorkflowWorkflowInfo;
-            PauseReason = WorkflowWorkflowInfo.PauseReasonEnum.None;
-            WaitReason = WorkflowWorkflowInfo.WaitReasonEnum.None;
-            WorkflowMetaType = WorkflowWorkflowInfo.WorkflowMetaTypeEnum.SystemDefined;
 
         }
         // <summary>
@@ -15024,14 +14823,14 @@ namespace Intersight.PowerShell
         /// <para type="description">"The duration in hours after which the workflow info for failed, terminated or timed out workflow will be removed from database."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidateRange(1, 8760)]
         public long FailedWorkflowCleanupDuration
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"All the given inputs for the workflow."</para>
+        /// <para type="description">"The input data provided for the workflow execution."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15046,16 +14845,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool Internal
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.WorkflowMessage> Message
         {
             get;
             set;
@@ -15111,16 +14900,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Denotes the reason workflow is in paused status.\n* `None` - Pause reason is none, which indicates there is no reason for the pause state.\n* `TaskWithWarning` - Pause reason indicates the workflow is in this state due to a task that has a status as completed with warnings.\n* `SystemMaintenance` - Pause reason indicates the workflow is in this state based on actions of system admin for maintenance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowWorkflowInfo.PauseReasonEnum PauseReason
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"A reference to a iamPermission resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -15144,7 +14923,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The duration in hours after which the workflow info for successful workflow will be removed from database."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidateRange(1, 8760)]
         public long SuccessWorkflowCleanupDuration
         {
             get;
@@ -15156,16 +14935,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Denotes the reason workflow is in waiting status.\n* `None` - Wait reason is none, which indicates there is no reason for the waiting state.\n* `GatherTasks` - Wait reason is gathering tasks, which indicates the workflow is in this state in order to gather tasks.\n* `Duplicate` - Wait reason is duplicate, which indicates the workflow is a duplicate of current running workflow.\n* `RateLimit` - Wait reason is rate limit, which indicates the workflow is rate limited by account/instance level throttling threshold.\n* `WaitTask` - Wait reason when there are one or more wait tasks in the workflow which are yet to receive a task status update.\n* `PendingRetryFailed` - Wait reason when the workflow is pending a RetryFailed action.\n* `WaitingToStart` - Workflow is waiting to start on workflow engine."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowWorkflowInfo.WaitReasonEnum WaitReason
         {
             get;
             set;
@@ -15186,16 +14955,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.WorkflowWorkflowDefinitionRelationship WorkflowDefinition
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of workflow meta. Derived from the workflow meta that is used to launch this workflow instance.\n* `SystemDefined` - System defined workflow definition.\n* `UserDefined` - User defined workflow definition.\n* `Dynamic` - Dynamically defined workflow definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowWorkflowInfo.WorkflowMetaTypeEnum WorkflowMetaType
         {
             get;
             set;
@@ -15233,10 +14992,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Internal = this.Internal;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Message"))
-            {
-                initObject.Message = this.Message;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("MetaVersion"))
             {
                 initObject.MetaVersion = this.MetaVersion;
@@ -15254,10 +15009,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Organization = this.Organization;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PauseReason"))
-            {
-                initObject.PauseReason = this.PauseReason;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Permission"))
             {
                 initObject.Permission = this.Permission;
@@ -15274,10 +15025,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WaitReason"))
-            {
-                initObject.WaitReason = this.WaitReason;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowCtx"))
             {
                 initObject.WorkflowCtx = this.WorkflowCtx;
@@ -15285,10 +15032,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowDefinition"))
             {
                 initObject.WorkflowDefinition = this.WorkflowDefinition;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowMetaType"))
-            {
-                initObject.WorkflowMetaType = this.WorkflowMetaType;
             }
             WriteObject(initObject);
         }
@@ -15336,16 +15079,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"When true, this workflow can be retried if has not been modified for more than a period of 2 weeks."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Retryable
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -15356,10 +15089,6 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Retryable"))
-            {
-                initObject.Retryable = this.Retryable;
-            }
             WriteObject(initObject);
         }
 

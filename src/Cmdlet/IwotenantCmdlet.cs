@@ -8,6 +8,169 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IwotenantMaintenanceNotification.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantMaintenanceNotification", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIwotenantMaintenanceNotification : GetCmdletBase
+    {
+        public GetIntersightIwotenantMaintenanceNotification()
+        {
+            ApiInstance = new IwotenantApi(Config);
+            MethodName = "GetIwotenantMaintenanceNotificationListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Any i18n (internationalization) key defined the message content. If the key already exists then the  message content will be picked based on the key, otherwise provided message value will be used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string I18nKey
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The iwoId uniquely identifies a IWO tenant. The iwoId is used as part of namespace, (logical) database names, policies in vault and many others. As of now, accountMoid has to be provided as the iwoId."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IwoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The date/time from which the actual maintenance operations will be performed for a Customer's account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime MaintenanceStartTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The notification message content is to display in the UI banner after the Customer's login to inform about planned maintenance operations on IWO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NtfnMessage
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The date/time from which the maintenance banner message will be shown to the Customer after login in to  Intersight UI."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ShowFromTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The date/time until which the maintenance banner message will be shown to the Customer after login into  Intersight UI. This will also be the time actual maintenance operation is planned for the finish of a  Customer's account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ShowUntilTime
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IwotenantTenantStatus.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightIwotenantTenantStatus", DefaultParameterSetName = "CmdletParam")]
@@ -147,5 +310,139 @@ namespace Intersight.PowerShell
 
 
 
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New IwotenantMaintenanceNotification.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightIwotenantMaintenanceNotification")]
+    public class NewIntersightIwotenantMaintenanceNotification : NewCmdletBase
+    {
+        public NewIntersightIwotenantMaintenanceNotification()
+        {
+            ApiInstance = new IwotenantApi(Config);
+            ModelObject = new IwotenantMaintenanceNotification();
+            MethodName = "CreateIwotenantMaintenanceNotificationWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Any i18n (internationalization) key defined the message content. If the key already exists then the  message content will be picked based on the key, otherwise provided message value will be used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string I18nKey
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The iwoId uniquely identifies a IWO tenant. The iwoId is used as part of namespace, (logical) database names, policies in vault and many others. As of now, accountMoid has to be provided as the iwoId."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IwoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The date/time from which the actual maintenance operations will be performed for a Customer's account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime MaintenanceStartTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The notification message content is to display in the UI banner after the Customer's login to inform about planned maintenance operations on IWO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NtfnMessage
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The date/time from which the maintenance banner message will be shown to the Customer after login in to  Intersight UI."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime ShowFromTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The date/time until which the maintenance banner message will be shown to the Customer after login into  Intersight UI. This will also be the time actual maintenance operation is planned for the finish of a  Customer's account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime ShowUntilTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove IwotenantMaintenanceNotification.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantMaintenanceNotification")]
+    public class RemoveIntersightIwotenantMaintenanceNotification : RemoveCmdletBase
+    {
+        public RemoveIntersightIwotenantMaintenanceNotification()
+        {
+            ApiInstance = new IwotenantApi(Config);
+            MethodName = "DeleteIwotenantMaintenanceNotificationWithHttpInfo";
+        }
     }
 }

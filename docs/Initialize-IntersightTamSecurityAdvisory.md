@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[Model.TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[Model.TamApiDataSource]>][-BaseScore< float>][-ClassId< TamSecurityAdvisory.ClassIdEnum>][-CveIds< System.Collections.Generic.List`1[string]>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-EnvironmentalScore< float>][-ExternalUrl< string>][-Moid< string>][-Name< string>][-ObjectType< TamSecurityAdvisory.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Recommendation< string>][-Severity< Model.TamSeverity>][-State< TamSecurityAdvisory.StateEnum>][-Status< TamSecurityAdvisory.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemporalScore< float>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[Model.TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[Model.TamApiDataSource]>][-BaseScore< float>][-ClassId< TamSecurityAdvisory.ClassIdEnum>][-CveIds< System.Collections.Generic.List`1[string]>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-EnvironmentalScore< float>][-ExternalUrl< string>][-Moid< string>][-Name< string>][-ObjectType< TamSecurityAdvisory.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-OtherRefUrls< System.Collections.Generic.List`1[string]>][-Recommendation< string>][-Severity< Model.TamSeverity>][-State< TamSecurityAdvisory.StateEnum>][-Status< TamSecurityAdvisory.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemporalScore< float>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -261,6 +261,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OtherRefUrls
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

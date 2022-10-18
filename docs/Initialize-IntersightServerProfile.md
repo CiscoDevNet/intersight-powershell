@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-AssociatedServerPool< Model.ResourcepoolPoolRelationship>][-ClassId< ServerProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-LeasedServer< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< ServerProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< Model.ResourcepoolPoolRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-AssociatedServerPool< Model.ResourcepoolPoolRelationship>][-ClassId< ServerProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-LeasedServer< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< ServerProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[Model.PoolReservationReference]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< Model.ResourcepoolPoolRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -268,6 +268,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ReservationReferences
+
+
+Note :- Use Initialize-IntersightPoolReservationReference to create the object of complex type PoolReservationReference
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PoolReservationReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ServerAssignmentMode
 Source of the server assigned to the server profile. Values can be Static, Pool or None. Static is used if a server is attached directly to server profile. Pool is used if a resource pool is attached to server profile. None is used if no server or resource pool is attached to server profile.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool.
 
@@ -476,3 +493,5 @@ PS C:\> Initialize-IntersightServerProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPoolReservationReference](./Initialize-IntersightPoolReservationReference.md)

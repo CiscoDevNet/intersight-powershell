@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowMessage.ClassIdEnum>][-Message< string>][-ObjectType< WorkflowMessage.ObjectTypeEnum>][-Severity< WorkflowMessage.SeverityEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowMessage [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowMessage.ClassIdEnum>][-ObjectType< WorkflowMessage.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,41 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Message
-An i18n message that can be translated in multiple languages to support internationalization.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowMessage.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Severity
-The severity of the Task or Workflow message warning/error/info etc.\n* `Info` - The enum represents the log level to be used to convey info message.\n* `Warning` - The enum represents the log level to be used to convey warning message.\n* `Debug` - The enum represents the log level to be used to convey debug message.\n* `Error` - The enum represents the log level to be used to convey error message.
-
-```yaml
-Type: WorkflowMessage.SeverityEnum
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcPhysicalPort [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FcPhysicalPort.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Moid< string>][-NetworkSupervisorCard< Model.NetworkSupervisorCardRelationship>][-ObjectType< FcPhysicalPort.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcPhysicalPort [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FcPhysicalPort.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Moid< string>][-ObjectType< FcPhysicalPort.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,24 +77,6 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkSupervisorCard
-A reference to a networkSupervisorCard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.NetworkSupervisorCardRelationship
 Parameter Sets: (All)
 Aliases:
 

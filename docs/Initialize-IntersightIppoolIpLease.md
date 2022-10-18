@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -232,6 +232,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Reservation
+The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities.
+
+Note :- Use Initialize-IntersightIppoolReservationReference to create the object of complex type IppoolReservationReference
+
+```yaml
+Type: Model.IppoolReservationReference
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -327,5 +344,7 @@ PS C:\> Initialize-IntersightIppoolIpLease
 [Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
 
 [Initialize-IntersightIppoolIpV6Config](./Initialize-IntersightIppoolIpV6Config.md)
+
+[Initialize-IntersightIppoolReservationReference](./Initialize-IntersightIppoolReservationReference.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

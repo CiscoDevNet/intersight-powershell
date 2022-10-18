@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetScopedTargetConnection [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetScopedTargetConnection.ClassIdEnum>][-Credential< Model.AssetCredential>][-FullValidation< bool>][-ObjectType< AssetScopedTargetConnection.ObjectTypeEnum>][-Port< long>][-Scope< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetScopedTargetConnection [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetScopedTargetConnection.ClassIdEnum>][-Credential< Model.AssetCredential>][-FullValidation< bool>][-IsSecure< bool>][-ObjectType< AssetScopedTargetConnection.ObjectTypeEnum>][-Port< long>][-Scope< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Accept wildcard characters: False
 
 ### -FullValidation
 When this flag is set to true, every IWO entity in the scope targets will be checked and discovery of the scope target will be regarded as a failure when anyone of these entities cannot be connected and validated.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsSecure
+Indicates whether a connection to the target should be established using TLS.
 
 ```yaml
 Type: bool

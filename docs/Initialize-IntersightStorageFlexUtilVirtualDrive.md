@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageFlexUtilVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageFlexUtilVirtualDrive.ClassIdEnum>][-DriveStatus< string>][-DriveType< string>][-Moid< string>][-ObjectType< StorageFlexUtilVirtualDrive.ObjectTypeEnum>][-PartitionId< string>][-PartitionName< string>][-ResidentImage< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDrive< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageFlexUtilVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageFlexUtilVirtualDrive.ClassIdEnum>][-DriveStatus< string>][-DriveType< string>][-HostAccessible< string>][-Moid< string>][-ObjectType< StorageFlexUtilVirtualDrive.ObjectTypeEnum>][-PartitionId< string>][-PartitionName< string>][-ResidentImage< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDrive< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,21 @@ Accept wildcard characters: False
 
 ### -DriveType
 Type of virtual drive managed by flex util controller.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HostAccessible
+Connection status of the Flex Util virtual drive to the host.
 
 ```yaml
 Type: string

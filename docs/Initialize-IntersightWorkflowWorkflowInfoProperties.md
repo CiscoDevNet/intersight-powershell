@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowInfoProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowInfoProperties.ClassIdEnum>][-ObjectType< WorkflowWorkflowInfoProperties.ObjectTypeEnum>][-Retryable< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowInfoProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowInfoProperties.ClassIdEnum>][-ObjectType< WorkflowWorkflowInfoProperties.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,21 +59,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: WorkflowWorkflowInfoProperties.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Retryable
-When true, this workflow can be retried if has not been modified for more than a period of 2 weeks.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 

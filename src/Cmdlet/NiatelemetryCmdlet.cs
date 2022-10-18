@@ -10187,6 +10187,332 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusCloudAccount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusCloudAccount", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiatelemetryNexusCloudAccount : GetCmdletBase
+    {
+        public GetIntersightNiatelemetryNexusCloudAccount()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            MethodName = "GetNiatelemetryNexusCloudAccountListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of ACI-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long AciCount
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of NXOS-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NxosCount
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusCloudSite.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusCloudSite", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNiatelemetryNexusCloudSite : GetCmdletBase
+    {
+        public GetIntersightNiatelemetryNexusCloudSite()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            MethodName = "GetNiatelemetryNexusCloudSiteListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Advisories setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Advisories
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Anomalies setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Anomalies
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Capacity utilization setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool CapacityUtilization
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the license type of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LicenseType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the name of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a niatelemetryNexusCloudAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NiatelemetryNexusCloudAccountRelationship NexusCloudAccount
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the type of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SiteType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Software management setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool SoftwareManagement
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Uuid
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusDashboardControllerDetails.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardControllerDetails", DefaultParameterSetName = "CmdletParam")]
@@ -12638,6 +12964,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Returns if site has been onboarded to nexus cloud or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool NexusCloudMembershipStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The ID of the device being inventoried."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -12735,7 +13072,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// <para type="description">"Type of record DCNM / APIC / SE / Nexus Switch. This determines the type of platform where inventory was collected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -12828,6 +13165,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SiteName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site associated to the inventory object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Siteuuid
         {
             get;
             set;
@@ -17179,5 +17527,1160 @@ namespace Intersight.PowerShell
         }
 
 
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New NiatelemetryNexusCloudAccount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightNiatelemetryNexusCloudAccount")]
+    public class NewIntersightNiatelemetryNexusCloudAccount : NewCmdletBase
+    {
+        public NewIntersightNiatelemetryNexusCloudAccount()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            ModelObject = new NiatelemetryNexusCloudAccount();
+            MethodName = "CreateNiatelemetryNexusCloudAccountWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Count of ACI-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AciCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of NXOS-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NxosCount
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New NiatelemetryNexusCloudSite.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightNiatelemetryNexusCloudSite")]
+    public class NewIntersightNiatelemetryNexusCloudSite : NewCmdletBase
+    {
+        public NewIntersightNiatelemetryNexusCloudSite()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            ModelObject = new NiatelemetryNexusCloudSite();
+            MethodName = "CreateNiatelemetryNexusCloudSiteWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Advisories setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Advisories
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Anomalies setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Anomalies
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Capacity utilization setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool CapacityUtilization
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Returns the license type of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LicenseType
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the name of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Returns the type of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Software management setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SoftwareManagement
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uuid
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove NiatelemetryNexusCloudSite.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightNiatelemetryNexusCloudSite")]
+    public class RemoveIntersightNiatelemetryNexusCloudSite : RemoveCmdletBase
+    {
+        public RemoveIntersightNiatelemetryNexusCloudSite()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            MethodName = "DeleteNiatelemetryNexusCloudSiteWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NiatelemetryNexusCloudAccount.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNexusCloudAccount")]
+    public class SetIntersightNiatelemetryNexusCloudAccount : SetCmdletBase
+    {
+        public SetIntersightNiatelemetryNexusCloudAccount()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            ModelObject = new NiatelemetryNexusCloudAccount();
+            MethodName = "UpdateNiatelemetryNexusCloudAccountWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Count of ACI-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AciCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of NXOS-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NxosCount
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NiatelemetryNexusCloudSite.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNexusCloudSite")]
+    public class SetIntersightNiatelemetryNexusCloudSite : SetCmdletBase
+    {
+        public SetIntersightNiatelemetryNexusCloudSite()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            ModelObject = new NiatelemetryNexusCloudSite();
+            MethodName = "UpdateNiatelemetryNexusCloudSiteWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Advisories setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Advisories
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Anomalies setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Anomalies
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Capacity utilization setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool CapacityUtilization
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Returns the license type of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LicenseType
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the name of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Returns the type of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Software management setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SoftwareManagement
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uuid
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NiatelemetryNiaInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNiaInventory")]
+    public class SetIntersightNiatelemetryNiaInventory : SetCmdletBase
+    {
+        public SetIntersightNiatelemetryNiaInventory()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            ModelObject = new NiatelemetryNiaInventory();
+            MethodName = "UpdateNiatelemetryNiaInventoryWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Returns controller's IP address details."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ControllerIpAddress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"CPU usage of device being inventoried. This determines the percentage of CPU resources used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float Cpu
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Last crash reset reason of device being inventoried. This determines the last reason for a device's restart due to crash of the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CrashResetLogs
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Returns the value of the customerDeviceConnector field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CustomerDeviceConnector
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NiatelemetryFanDetails> DcnmFanDetails
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the License state of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DcnmLicenseState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the deviceDiscovery field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceDiscovery
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the device health."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DeviceHealth
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the deviceId field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of device being inventoried. The name the user assigns to the device is inventoried here."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Type of device being inventoried. This determines whether the device is a controller, leaf or spine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the device up time."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DeviceUpTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Disk Usage of device being inventoried. This determines the amount of disk usage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDiskinfo Disk
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Dn for the inventories present."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Name of the fabric of the device being inventoried."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FabricName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of fabric extendors utilized."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long FexCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of appliances as physical device that are wired into the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long InfraWiNodeCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NiatelemetryInterfaceElement> Interface
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The IP address of the device being inventoried."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IpAddress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Flag to specify if the node is virtual."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IsVirtualNode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the last reboot Time of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LastRebootTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the last reset reason of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LastResetReason
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a niatelemetryNiaLicenseState resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNiaLicenseStateRelationship LicenseState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the License type of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LicenseType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Last log in time device being inventoried. This determines the last login time on the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LogInTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Last log out time of device being inventoried. This determines the last logout time on the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LogOutTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of Macsec configured interfaces on a TOR."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MacSecCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of Macsec configured interfaces on a Spine."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MacSecFabCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of total Macsec configured interfaces for all nodes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MacsecTotalCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Memory usage of device being inventoried. This determines the percentage of memory resources used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Memory
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns if site has been onboarded to nexus cloud or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool NexusCloudMembershipStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The ID of the device being inventoried."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NodeId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns Nxos EVPN BGP details."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNxosBgpEvpn NxosBgpEvpn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosTrmConfigs field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNxosBgpMvpn NxosBgpMvpn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosBootflashDetails field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryBootflashDetails NxosBootflashDetails
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the status of dci interface configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NxosDciInterfaceStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosInterfaceBrief field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryInterface NxosInterfaceBrief
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosNveInterface field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NxosNveInterfaceStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosNvePacketCounters field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNvePacketCounters NxosNvePacketCounters
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosNveVni field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNveVni NxosNveVni
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Total number of ospf neighbors per switch in DCNM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NxosOspfNeighbors
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Total number of pim neighbors per switch in DCNM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NxosPimNeighbors
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosTelnet field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NxosTelnet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Total number of routes configured in the DCNM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NxosTotalRoutes
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the nxosVtpStatus field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNxosVtp NxosVtp
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Type of record DCNM / APIC / SE / Nexus Switch. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Total nuumber of v4 and v6 routes per node."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long RoutePrefixCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of v4 routes per node."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long RoutePrefixV4Count
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of v6 routes per node."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long RoutePrefixV6Count
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of device being invetoried. The serial number is unique per device and will be used as the key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Name of fabric domain of the controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site associated to the inventory object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Siteuuid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns the value of the smartAccountId/CustomerId field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long SmartAccountId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Last software downloaded of device being inventoried. This determines if software download API was used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SoftwareDownload
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The amount of time that the device being inventoried been up."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SystemUpTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Software version of device being inventoried. The various software version values for each device are available on cisco.com."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NiatelemetryVniStatus> VniStatus
+        {
+            get;
+            set;
+        }
     }
 }

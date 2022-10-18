@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< Model.CertificatemanagementCertificateBase>][-ClassId< ComputeServerSetting.ClassIdEnum>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][-Moid< string>][-ObjectType< ComputeServerSetting.ObjectTypeEnum>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< Model.ComputePersistentMemoryOperation>][-ServerConfig< Model.ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[Model.ComputeServerOpStatus]>][-StorageControllerOperation< Model.ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< Model.ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< Model.ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< Model.CertificatemanagementCertificateBase>][-ClassId< ComputeServerSetting.ClassIdEnum>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][-Moid< string>][-ObjectType< ComputeServerSetting.ObjectTypeEnum>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< Model.ComputePersistentMemoryOperation>][-ServerConfig< Model.ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[Model.ComputeServerOpStatus]>][-StorageControllerOperation< Model.ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< Model.ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< Model.ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TpmReset< ComputeServerSetting.TpmResetEnum>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -300,6 +300,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TpmReset
+Clear the configuration of TPM chip in the server.\n* `None` - Perform no action on the TPM.\n* `ClearTpm` - Clear the configuration and restore factory defaults of TPM chip in the server.
+
+```yaml
+Type: ComputeServerSetting.TpmResetEnum
 Parameter Sets: (All)
 Aliases:
 

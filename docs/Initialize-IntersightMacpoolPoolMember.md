@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMacpoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< MacpoolPoolMember.ClassIdEnum>][-MacAddress< string>][-Moid< string>][-ObjectType< MacpoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMacpoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< MacpoolPoolMember.ClassIdEnum>][-Moid< string>][-ObjectType< MacpoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,21 +77,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: MacpoolPoolMember.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MacAddress
-MAC Address of this pool member.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
